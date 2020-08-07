@@ -1,0 +1,31 @@
+{
+  "name": "semedocs",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "start": "nuxt start"
+  },
+  "description": "Seme Framework Documentation",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drosanda/semedocs.git"
+  },
+  "keywords": [
+    "Seme",
+    "Framework"
+  ],
+  "author": "drosanda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drosanda/semedocs/issues"
+  },
+  "homepage": "https://github.com/drosanda/semedocs#readme",
+  "dependencies": {
+    "buefy": "^0.8.20",
+    "nuxt": "^2.14.1",
+    "nuxt-buefy": "^0.3.31"
+  }
+}
