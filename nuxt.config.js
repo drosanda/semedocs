@@ -12,5 +12,6 @@ export default {
   modules: [
     'nuxt-buefy'
   ],
-  target: 'static'
+  target: 'static',
+  mode: 'spa'
 }
