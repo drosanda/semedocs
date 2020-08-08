@@ -3,7 +3,7 @@
     <div class="container">
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
-          <li class=""><Nuxt-Link href="/">Home</Nuxt-Link></li>
+          <li class=""><Nuxt-Link to="/">Home</Nuxt-Link></li>
           <li class="unavailable">Install</li>
         </ul>
       </nav>
