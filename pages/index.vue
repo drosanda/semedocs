@@ -39,14 +39,14 @@
               </ul>
             </li>
             <li>
-              <nuxt-link to="config">Configuration</nuxt-link>
+              <nuxt-link to="configuration">Configuration</nuxt-link>
               <ul>
-                <li><nuxt-link to="config-config">Config</nuxt-link></li>
-                <li><nuxt-link to="config-controller">Controller</nuxt-link></li>
-                <li><nuxt-link to="config-core">Core</nuxt-link></li>
-                <li><nuxt-link to="config-database">Database</nuxt-link></li>
-                <li><nuxt-link to="config-session">Session</nuxt-link></li>
-                <li><nuxt-link to="config-timezone">Timezone</nuxt-link></li>
+                <li><nuxt-link to="configuration/config">Config</nuxt-link></li>
+                <li><nuxt-link to="configuration/controller">Controller</nuxt-link></li>
+                <li><nuxt-link to="configuration/core">Core</nuxt-link></li>
+                <li><nuxt-link to="configuration/database">Database</nuxt-link></li>
+                <li><nuxt-link to="configuration/session">Session</nuxt-link></li>
+                <li><nuxt-link to="configuration/timezone">Timezone</nuxt-link></li>
               </ul>
             </li>
             <li><nuxt-link to="constants">Constants</nuxt-link></li>
