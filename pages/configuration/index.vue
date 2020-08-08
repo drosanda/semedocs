@@ -14,12 +14,12 @@
             <p>The configuration of Seme Framework separated on 6 files. The location in <b>app/config/</b>:</p>
             <p>
               <ul>
-                <li><Nuxt-Link to="config-config.html">Config</Nuxt-Link></li>
-                <li><Nuxt-Link to="config-controller.html">Controller</Nuxt-Link></li>
-                <li><Nuxt-Link to="config-core.html">Core</Nuxt-Link></li>
-                <li><Nuxt-Link to="config-database.html">Database</Nuxt-Link></li>
-                <li><Nuxt-Link to="config-session.html">Session</Nuxt-Link></li>
-                <li><Nuxt-Link to="config-timezone.html">Timezone</Nuxt-Link></li>
+                <li><Nuxt-Link to="configuration/config">Config</Nuxt-Link></li>
+                <li><Nuxt-Link to="configuration/controller">Controller</Nuxt-Link></li>
+                <li><Nuxt-Link to="configuration/core">Core</Nuxt-Link></li>
+                <li><Nuxt-Link to="configuration/database">Database</Nuxt-Link></li>
+                <li><Nuxt-Link to="configuration/session">Session</Nuxt-Link></li>
+                <li><Nuxt-Link to="configuration/timezone">Timezone</Nuxt-Link></li>
               </ul>
             </p>
           </div>
