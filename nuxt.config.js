@@ -11,5 +11,6 @@ export default {
   },
   modules: [
     'nuxt-buefy'
-  ]
+  ],
+  target: 'static'
 }
