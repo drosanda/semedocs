@@ -1,0 +1,46 @@
+body {
+  background-color: #f5f5f5;
+}
+aside {
+  color: #ffffff;
+  background-color: hsl(357deg 93% 76%);
+}
+aside .menu-list a {
+  color: #ffffff;
+}
+aside .menu-list a:hover, aside .menu-list a:focus {
+    background-color: #ed6f75;
+    color: #ffffff;
+}
+footer, .footer {
+  background-color: #ed6f75;
+  padding: 1.5em 0.5em 2.2em;
+}
+.main-content.columns.is-fullheight {
+  margin-bottom: 0;
+}
+.breadcrumb a:hover {
+  color: #ed6f75;
+  text-decoration: underline;
+}
+.breadcrumb a {
+  color: #ed6f75;
+}
+a:hover {
+  color: #ed6f75;
+  text-decoration: underline;
+}
+a {
+  color: #ed6f75;
+}
+hr {
+  background-color: #f4d3d5;
+}
+.button.is-link {
+  background-color: #ed6f75;
+  border-color: transparent;
+  color: white;
+}
+.button.is-link:hover, .button.is-link.is-hovered {
+    background-color: #e45259;
+}

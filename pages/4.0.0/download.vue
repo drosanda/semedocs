@@ -12,14 +12,12 @@
         <div class="column">
           <div class="content">
             <h1 class="">Download</h1>
-            <p>Seme Framework has 2 version. All of them are available on github. Visit repository here:</p>
+            <p>You can download Seme Framework through github repository:</p>
             <ul>
-              <li><a href="https://github.com/drosanda/seme-framework-v3" target="_blank">Seme Framework v3</a></li>
-              <li><a href="https://github.com/drosanda/seme-framework" target="_blank">Seme Framework v2</a></li>
+              <li><a href="https://github.com/drosanda/seme-framework" target="_blank">Seme Framework</a></li>
             </ul>
-            <h2>Download example</h2>
-            <p>Download <a href="https://github.com/drosanda/seme-framework-v3-bootstrap3" target="_blank">Seme Framework with bootstrap 3 layout</a>.</p>
-            <p>Download <a href="https://github.com/drosanda/risaikuru" target="_blank">Seme Framework with working project</a>.</p>
+            <h2>Examples</h2>
+            <p><i>There is no examples yet</i>.</p>
           </div>
         </div>
       </div>

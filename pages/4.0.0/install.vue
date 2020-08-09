@@ -12,55 +12,31 @@
         <div class="column">
           <div class="content">
             <h1 class="">Install</h1>
-            <p>Clone the repository to your directory, or Download framework on github as ZIP and then extract from archive.</p>
-            <hr>
-            <h2>Configuring</h2>
-            <p>Go to <code>app/config/config.php</code> and edit the file to suitable your choice.</p>
-            <h3>File: config.php</h3>
-            <p>There is default example for config.php in Seme Framework.</p>
-            <pre>
-$site = "http://".$_SERVER['HTTP_HOST']."/";
-$sene_method = "PATH_INFO";//REQUEST_URI,PATH_INFO,ORIG_PATH_INFO
-            </pre>
-            <h3>$site</h3>
-            <p>Change content of site variabel and then add slash on the last</p>
-            <p>Default value is <code>"http://".$_SERVER['HTTP_HOST']."/"</code>.</p>
-            <h3>$sene_method</h3>
-            <p>If under default XAMPP config PATH_INFO is your best choice. But if in your production server, usually use REQUEST_URI.</p>
-            <p>This configuration will depend on .htaccess file.</p>
-            <hr>
-            <h2>Htaccess configuration</h2>
-            <p>If you using apache web server, the apache configuration is the most important to working with this framework. Default configuration:</p>
-            <pre>
-RewriteEngine on
-RewriteCond $1 !^(index\.php|resources|robots\.txt)
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php/$1 [L,QSA]
-            </pre>
-
-            <div class="columns">
-              <div class="column">
-                <b-button tag="router-link" to="/4.0.0/download/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-                  Download
-                </b-button>
-              </div>
-              <div class="column">
-                &nbsp;
-              </div>
-              <div class="column">
-                &nbsp;
-              </div>
-              <div class="column">
-                <b-button tag="router-link" to="/4.0.0/configuration/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-                  Configuration
-                </b-button>
-              </div>
-            </div>
-
+            <p>Clone the repository with git or download the ZIP archive and then extract to your desired directory.</p>
+            <p>After that, your can proceed to configuration page</p>
           </div>
         </div>
       </div>
+
+      <div class="columns">
+        <div class="column">
+          <b-button tag="router-link" to="/4.0.0/download/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+            Download
+          </b-button>
+        </div>
+        <div class="column">
+          &nbsp;
+        </div>
+        <div class="column">
+          &nbsp;
+        </div>
+        <div class="column">
+          <b-button tag="router-link" to="/4.0.0/configuration/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+            Configuration
+          </b-button>
+        </div>
+      </div>
+
     </div>
   </div>
 </template>

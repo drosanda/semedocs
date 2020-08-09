@@ -14,12 +14,25 @@ export default {
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.svg' },
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf' },
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff' },
-      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2' }
+      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
     ]
   },
+  css: [
+    '~/css/style.css'
+  ],
   modules: [
-    'nuxt-buefy'
+    'nuxt-buefy',
+    '@nuxtjs/pwa'
   ],
   target: 'static',
-  mode: 'spa'
+  mode: 'spa',
+  sitemaps: [
+    {
+      path: 'sitemap.xml',
+      exclude: [
+
+      ],
+    }
+  ]
 }
