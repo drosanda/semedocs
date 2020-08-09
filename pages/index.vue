@@ -29,6 +29,25 @@
           </div>
         </div>
       </div>
+
+
+      <div class="columns">
+        <div class="column">
+          &nbsp;
+        </div>
+        <div class="column">
+          &nbsp;
+        </div>
+        <div class="column">
+          &nbsp;
+        </div>
+        <div class="column">
+          <b-button tag="router-link" to="/credits/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+            Credits
+          </b-button>
+        </div>
+      </div>
+
     </div>
   </div>
 </template>

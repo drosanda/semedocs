@@ -3,7 +3,8 @@
     <div class="container">
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
-          <li class=""><nuxt-link to="/">Home</nuxt-link></li>
+          <li class=""><NuxtLink to="/">Home</NuxtLink></li>
+<li class=""><NuxtLink to="/4.0.0/">4.0.0</NuxtLink></li>
           <li class="unavailable">Credits</li>
         </ul>
       </nav>
@@ -26,26 +27,12 @@
           </div>
         </div>
       </div>
-
-      <div class="columns">
-        <div class="column">
-          <b-button tag="router-link" to="/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-            Home
-          </b-button>
-        </div>
-        <div class="column">
-          &nbsp;
-        </div>
-        <div class="column">
-          &nbsp;
-        </div>
-        <div class="column">
-          <b-button tag="router-link" to="/4.0.0/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-            Version 4.0.0
-          </b-button>
-        </div>
-      </div>
-
     </div>
   </div>
 </template>
+<script>
+  export default {
+    layout: 'v4.0.0'
+    // page component definitions
+  }
+</script>

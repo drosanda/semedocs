@@ -106,3 +106,18 @@
   </div>
 
 </template>
+
+<script>
+  export default {
+    data() {
+      return {
+        title: 'Seme Framework v3.2.1'
+      }
+    },
+    head() {
+      return {
+        title: this.title,
+      }
+    }
+  }
+</script>
