@@ -12,10 +12,16 @@
         <div class="column">
           <div class="content">
             <h1>Seme Framework version 3.3.0</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..
-            </p>
-
+            <p>The main goals on version 3.3.0 is applying namespace for Seme Framework. For now, documentation is not completed yet.</p>
+            <hr>
+            <h2>Question and Answer</h2>
+            <p>Feel free to ask me on my <a href="https://instagram.com/drosanda/" target="_blank">instagram</a>, <a href="https://facebook.com/drs11/" target="_blank">facebook</a>, or open an issue on <a href="https://github.com/drosanda/semedocs/issues" target="_blank">github</a>.</p>
+            <hr>
+            <h2>Change Log</h2>
+            <ol class="1">
+              <li>Add namespace for model, view, and controller classes</li>
+              <li>Enhance index.php from version 4.0.0</li>
+            </ol>
           </div>
         </div>
       </div>
@@ -43,7 +49,7 @@
 </template>
 <script>
   export default {
-    layout: 'v3.0.0',
+    layout: 'v3.3.0',
     data() {
       return {
         title: 'Seme Framework v4.0.0 Documentation'

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="main-content columns is-fullheight">
-      <aside class="column is-2 is-narrow-mobile is-fullheight section is-hidden-mobile">
+      <aside class="column is-3 is-narrow-mobile is-fullheight section is-hidden-mobile">
         <ul class="menu-list">
           <li><nuxt-link to="/">Home</nuxt-link></li>
           <li><nuxt-link to="/credits">Credits</nuxt-link></li>
@@ -17,7 +17,7 @@
           </li>
         </ul>
       </aside>
-      <div class="container column is-10">
+      <div class="container column is-9">
         <nuxt />
       </div>
     </div>

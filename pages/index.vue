@@ -10,7 +10,7 @@
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1>Welcome to Seme Framework</h1>
+            <h1 class="is-size-1">Welcome to Seme Framework</h1>
             <p>This is official documentation for Seme Framework, the PHP MVC Framework for creating small and medium app that needed for fast delivery. At first version of Seme Framework used for building API (Middle Ware) for another Application such as android, iOS, etc. And now as increasing of requirement, Seme Framework has expand the limit for creating Small and Medium App.</p>
             <h2>Key Feature</h2>
             <p>This framework suitable for Programmer that only know about <code>Manual</code> way of code. Not like this time, everything build up automatically through console. Seme Framework has taken different way of code, <i>If you want build small app, why we need lots of library</i>. Here is the key feature of Seme Framework:</p>
@@ -23,7 +23,7 @@
             </div>
             <hr>
             <h2>License</h2>
-            <p>Seme Framework licensed under MIT</p>
+            <p>Seme Framework licensed under MIT version 2.0.</p>
             <h2>Question and Answer</h2>
             <p>Feel free to ask me on my <a href="https://instagram.com/drosanda/" target="_blank">instagram</a>, <a href="https://facebook.com/drs11/" target="_blank">facebook</a>, or open an issue on <a href="https://github.com/drosanda/semedocs/issues" target="_blank">github</a>.</p>
           </div>
@@ -35,14 +35,9 @@
         <div class="column">
           &nbsp;
         </div>
+        <div class="column is-2">&nbsp;</div>
         <div class="column">
-          &nbsp;
-        </div>
-        <div class="column">
-          &nbsp;
-        </div>
-        <div class="column">
-          <b-button tag="router-link" to="/credits/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+          <b-button tag="router-link" to="/credits/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="" expanded>
             Credits
           </b-button>
         </div>

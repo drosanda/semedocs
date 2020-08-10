@@ -11,7 +11,7 @@
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="is-size-1">Credits</h1>
+            <h1>Credits</h1>
             <p>Seme Framework was originally developed by Daeng Rosanda, at first was written for achieving Undergraduate Thesis. Time after time Seme Framework used by another project on startup and company as Mini Web or main Web Application. And now Seme Framework contribute to Open Source project.</p>
             <p>And many thanks to:</p>
             <ul type="1">
@@ -22,6 +22,8 @@
               <li>Yugie Nugraha, S.Kom</li>
               <li>Mohamad Iqbal, S.Kom</li>
               <li>The Cloud Alert Team</li>
+              <li>Reza Maulana Handinata, S.Kom</li>
+              <li>Rezza Muhammad Iqbal</li>
             </ul>
             <p>Also another person that help Seme Framework better.</p>
           </div>

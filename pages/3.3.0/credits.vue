@@ -34,10 +34,10 @@
 </template>
 <script>
   export default {
-    layout: 'v4.0.0',
+    layout: 'v3.3.0',
     data() {
       return {
-        title: 'Seme Framework v4.0.0 Documentation'
+        title: 'Seme Framework v3.3.0 Documentation'
       }
     },
     head() {

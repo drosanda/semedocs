@@ -47,7 +47,6 @@
         </div>
       </div>
 
-
       <div class="columns">
         <div class="column">
           <b-button tag="router-link" to="/credits" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
