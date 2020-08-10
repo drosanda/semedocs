@@ -30,8 +30,8 @@
 
       <div class="columns">
         <div class="column">
-          <b-button tag="router-link" to="/4.0.0/download/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-            Download
+          <b-button tag="router-link" to="/4.0.0/downloads/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+            Downloads
           </b-button>
         </div>
         <div class="column is-2">&nbsp;</div>

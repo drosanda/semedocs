@@ -14,7 +14,13 @@
           <div class="content">
             <h1 class="">Staging</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              On staging file, you can put your configuration for staging environment.
+              Like database connection, base url, etc. Also, you can put any additional config values of staging phase only.
+            </p>
+            <p>
+              You have to exclude the <code>app/config/staging.php</code> from git by adding it on <code>.gitignore</code>.
+              So, you can pull at any time in staging server.
+              But, be careful wrong configuration can deleted some files or directories.
             </p>
 
             <div class="columns">
@@ -23,12 +29,7 @@
                   Development
                 </b-button>
               </div>
-              <div class="column">
-                &nbsp;
-              </div>
-              <div class="column">
-                &nbsp;
-              </div>
+              <div class="column is-2">&nbsp;</div>
               <div class="column">
                 <b-button tag="router-link" to="/4.0.0/configuration/production" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
                   Production
@@ -48,7 +49,7 @@
     layout: 'v4.0.0',
     data() {
       return {
-        title: 'Development Phase Configuration - Seme Framework v3.2.1'
+        title: 'Staging Phase Configuration - Seme Framework v4.0.0'
       }
     },
     head() {

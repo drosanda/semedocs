@@ -273,12 +273,7 @@ $semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;
                   Install
                 </b-button>
               </div>
-              <div class="column">
-                &nbsp;
-              </div>
-              <div class="column">
-                &nbsp;
-              </div>
+              <div class="column is-2">&nbsp;</div>
               <div class="column">
                 <b-button tag="router-link" to="/4.0.0/configuration/development/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
                   Development
@@ -298,7 +293,7 @@ $semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;
     layout: 'v4.0.0',
     data() {
       return {
-        title: 'Configuration - Seme Framework v3.2.1'
+        title: 'Basic Configuration - Seme Framework v4.0.0'
       }
     },
     head() {

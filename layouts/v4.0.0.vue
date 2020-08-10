@@ -9,7 +9,7 @@
             <nuxt-link to="/4.0.0/">Version 4.0.0</nuxt-link>
           <ul>
           <li><nuxt-link to="/4.0.0/requirements">Requirements</nuxt-link></li>
-          <li><nuxt-link to="/4.0.0/download">Download</nuxt-link></li>
+          <li><nuxt-link to="/4.0.0/downloads">Downloads</nuxt-link></li>
           <li><nuxt-link to="/4.0.0/install">Install</nuxt-link></li>
           <li>
             <nuxt-link to="/4.0.0/configuration">Configuration</nuxt-link>

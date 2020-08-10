@@ -14,9 +14,9 @@
           <div class="content">
             <h1 class="">Development</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              On development file, you can put your configuration for development environment.
+              Like database connection, base url, etc. Also, you can put any additional config values of development phase only.
             </p>
-
           </div>
         </div>
       </div>
@@ -27,12 +27,7 @@
             Configuration
           </b-button>
         </div>
-        <div class="column">
-          &nbsp;
-        </div>
-        <div class="column">
-          &nbsp;
-        </div>
+        <div class="column is-2">&nbsp;</div>
         <div class="column">
           <b-button tag="router-link" to="/4.0.0/configuration/staging" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
             Staging
@@ -48,7 +43,7 @@
     layout: 'v4.0.0',
     data() {
       return {
-        title: 'Development Phase Configuration - Seme Framework v3.2.1'
+        title: 'Development Phase Configuration - Seme Framework v4.0.0'
       }
     },
     head() {
