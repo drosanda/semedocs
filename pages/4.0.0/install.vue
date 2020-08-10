@@ -13,7 +13,17 @@
           <div class="content">
             <h1 class="">Install</h1>
             <p>Clone the repository with git or download the ZIP archive and then extract to your desired directory.</p>
-            <p>After that, your can proceed to configuration page</p>
+            <h2>Installing to XAMPP (Examples)</h2>
+            <p>After download the archive, lets say put extracted files on:</p>
+            <ul>
+              <li><code>/Application/XAMPP/htdocs/seme_framework</code> on Mac, or</li>
+              <li><code>/opt/lampp/htdocs/seme_framework</code> on Linux, or</li>
+              <li><code>D:\xampp\htdocs\seme_framework</code> on Windows</li>
+            </ul>
+            <p>
+              And then running the XAMPP and open the <code>http://locahost/seme_framework/</code>.
+              If there does not show any error, then you can proceed to configuration page.
+            </p>
           </div>
         </div>
       </div>
@@ -24,12 +34,7 @@
             Download
           </b-button>
         </div>
-        <div class="column">
-          &nbsp;
-        </div>
-        <div class="column">
-          &nbsp;
-        </div>
+        <div class="column is-2">&nbsp;</div>
         <div class="column">
           <b-button tag="router-link" to="/4.0.0/configuration/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
             Configuration

@@ -12,11 +12,12 @@
         <div class="column">
           <div class="content">
             <h1 class="">Requirements</h1>
-            <p>PHP version 5.6 or newer is recommended.</p>
-            <p>It should work on 5.3.7 as well, but we strongly advise you NOT to run such old versions of PHP, because of potential security and performance issues, as well as missing features.</p>
+            <p>This framework runs fine at PHP 5.6, but PHP 7.4.x is recommended regarding to its security performance.</p>
             <p>A database is required for most web application programming. Currently supported databases are:</p>
             <ul>
-              <li>MySQL (5.1+) via the mysqli drivers</li>
+              <li>MySQL 5.1+ via the MySQLi drivers</li>
+              <li>MariaDB version 5.5.x via the MySQLi drivers</li>
+              <li>MariaDB version 10.x.x via the MySQLi drivers</li>
             </ul>
             <p>Since the framework requires the working connection to a MySQL database, it wont work unless you setup the database connection.</p>
           </div>
@@ -29,12 +30,7 @@
             Version 4.0.0
           </b-button>
         </div>
-        <div class="column">
-          &nbsp;
-        </div>
-        <div class="column">
-          &nbsp;
-        </div>
+        <div class="column is-2">&nbsp;</div>
         <div class="column">
           <b-button tag="router-link" to="/4.0.0/download/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
             Download

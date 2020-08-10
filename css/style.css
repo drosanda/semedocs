@@ -44,3 +44,13 @@ hr {
 .button.is-link:hover, .button.is-link.is-hovered {
     background-color: #e45259;
 }
+pre {
+  border: #f1c7c9 1px solid;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 6px 5px 0px rgba(251,137,143,0.6);
+  -moz-box-shadow: 0px 6px 5px 0px rgba(251,137,143,0.6);
+  box-shadow: 0px 6px 5px 0px rgba(251,137,143,0.6);
+}
+code {
+  background-color: #ffe8e9;
+}

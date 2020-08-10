@@ -16,8 +16,6 @@
             <ul>
               <li><a href="https://github.com/drosanda/seme-framework" target="_blank">Seme Framework</a></li>
             </ul>
-            <h2>Examples</h2>
-            <p><i>There is no examples yet</i>.</p>
           </div>
         </div>
       </div>
