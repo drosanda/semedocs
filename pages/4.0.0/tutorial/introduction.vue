@@ -13,15 +13,13 @@
         <div class="column">
           <div class="content">
             <h1 class="">Introduction</h1>
-            <p>
-              Before starting the tutorial, you have to do which is described on the <NuxtLink to="/4.0.0/requirements">requirements</NuxtLink> first.
-              The goals for this tutorial is, how to interacted with Model, View, And Controller.
-              Ok, lets get started!.
-            </p>
+            <p>Before starting the tutorial, you have to do which is described on the <NuxtLink to="/4.0.0/requirements">requirements</NuxtLink> first.</p>
+            <p>The goals for this tutorial is, how to interacted with Model, View, And Controller.</p>
+            <p>Ok, lets get started!.</p>
+
             <h2>Hello World!</h2>
-            <p>
-              Hello World is often used to illustrate the basic syntax of a programming language.
-              But on Seme Framework, Hello World used to checked the basic MVC purpose.
+            <p>Hello World is often used to illustrate the basic syntax of a programming language.</p>
+            <p>But on Seme Framework, Hello World used to checked the basic MVC purpose.
             </p>
             <h3>Setup the config</h3>
             <p>We assumed that you put Seme Framework which is described In the <NuxtLink to="/4.0.0/install">Install</NuxtLink> page.</p>
@@ -52,11 +50,10 @@ class Home extends SENE_Controller
 
             <h3>Model</h3>
             <p>On this tutorial we will learn, how to interacted with model from controller.</p>
-            <p>
-              First, open files located at <code>app/model/hello_model.php</code>.
-              If the file doesnt exists, create one.
-              And then, put this code on it.
-            </p>
+            <p>First, open files located at <code>app/model/hello_model.php</code>.</p>
+            <p>If the file doesnt exists, create one.</p>
+            <p>And then, put this code on it.</p>
+
             <pre>
 &#x3C;?php
 class Hello_Model extends SENE_Model
@@ -71,7 +68,8 @@ class Hello_Model extends SENE_Model
     }
 }
             </pre>
-            <p>And then, open and edit the <code>app/controller/home.php</code> again. Put model loader on constructor.</p>
+            <p>And then, open and edit the <code>app/controller/home.php</code> again.</p>
+            <p>Put model loader on constructor.</p>
             <pre>
 &#x3C;?php
 class Home extends SENE_Controller
@@ -90,35 +88,28 @@ class Home extends SENE_Controller
             <p>And then open <code>http://localhost/seme_framework</code>, it should show Hello World from model.</p>
 
             <h3>View</h3>
-            <p>On this tutorial we will learn, how to render the view and its theme and passing the data from model to view passed by controller.</p>
+            <p>On this tutorial we will learn how to render the view with theme and passing the data from model to view passed by controller.</p>
 
             <h4>Create Theme: <u>front</u>.</h4>
-            <p>
-              first of all, we will define which css to call. Open files located at <code>app/view/front/theme.json</code>.
-              If the file doesnt exists, create one.
-              And then, put this code on it.
-            </p>
+            <p>first of all, we will define which css to call. Open files located at <code>app/view/front/theme.json</code>.</p>
+            <p>If the file doesnt exists, create one. And then, put this code on it.</p>
+
             <pre>
 [
   &#x22;&#x3C;link rel=\&#x22;stylesheet\&#x22; href=\&#x22;https://fonts.googleapis.com/icon?family=Material+Icons\&#x22; \/&#x3E;&#x22;,
   &#x22;&#x3C;link rel=\&#x22;stylesheet\&#x22; href=\&#x22;https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css\&#x22; \/&#x3E;&#x22;,
 ]
             </pre>
-            <p>
-              Second, we will define the script to load. Open files located at <code>app/view/front/script.json</code>.
-              If the file doesnt exists, create one.
-              And then, put this code on it.
-            </p>
+            <p>Second, we will define the script to load. Open files located at <code>app/view/front/script.json</code>.</p>
+            <p>If the file doesnt exists, create one. And then, put this code on it.</p>
             <pre>
 [
   &#x22;&#x3C;script src=\&#x22;https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js\&#x22;&#x3E;&#x3C;\/script&#x3E;&#x22;
 ]
             </pre>
-            <p>
-              Third, create the HTML template. Open files located at <code>app/view/front/page/col-1.php</code>.
-              If the file doesnt exists, create one.
-              And then, put this code on it.
-            </p>
+            <p>Third, create the HTML template. Open files located at <code>app/view/front/page/col-1.php</code>.</p>
+            <p>If the file doesnt exists, create one. And then, put this code on it.</p>
+
             <pre>
 &#x3C;!DOCTYPE html&#x3E;
 &#x3C;html&#x3E;
@@ -141,11 +132,8 @@ class Home extends SENE_Controller
   &#x3C;/body&#x3E;
 &#x3C;/html&#x3E;
             </pre>
-            <p>
-              Fourth, we have to create separated html head. Open files located at <code>app/view/front/page/html/head.php</code>.
-              If the file doesnt exists, create one.
-              And then, put this code on it.
-            </p>
+            <p>Fourth, we have to create separated html head. Open files located at <code>app/view/front/page/html/head.php</code>.</p>
+            <p>If the file doesnt exists, create one. And then, put this code on it.</p>
             <pre>
 &#x3C;head&#x3E;
 &#x9;&#x3C;meta charset=&#x22;utf-8&#x22;&#x3E;
@@ -171,27 +159,27 @@ class Home extends SENE_Controller
 &#x9;&#x3C;?php $this-&#x3E;getAdditionalAfter()?&#x3E;
 &#x3C;/head&#x3E;
             </pre>
-            <p>
-              Fifth, we have to create main content view. Open files located at <code>app/view/front/home/home.php</code>.
-              If the file doesnt exists, create one.
-              And then, put this code on it.
-            </p>
+            <p>Fifth, we have to create main content view. Open files located at <code>app/view/front/home/home.php</code>.</p>
+            <p>If the file doesnt exists, create one.</p>
+            <p>And then, put this code on it.</p>
             <pre>
 &#x3C;h1&#x3E;&#x3C;?=$hello?&#x3E; passed to view&#x3C;/h1&#x3E;
 </pre>
 
             <p>
               Sixth, we have to create JavaScript for view specific. Open files located at <code>app/view/front/home/home_bottom.php</code>.
-              If the file doesnt exists, create one.
-              And then, put this code on it.
             </p>
+            <p>If the file doesnt exists, create one.</p>
+            <p>And then, put this code on it.</p>
             <pre>
 alert(&#x27;This is Hello World from app/view/home/home_bottom.php&#x27;);
 </pre>
 
             <p>
               Last, open and edit the <code>app/controller/home.php</code> again.
-              Put theme loader on constructor, load the view, and render it.
+            </p>
+            <p>
+              Put theme loader on constructor, load the view, set the layout and render it.
             </p>
             <pre>
 &#x3C;?php
@@ -221,10 +209,26 @@ class Home extends SENE_Controller
   }
 }
             </pre>
-            <p>And then open <code>http://localhost/seme_framework</code>, it should show an alert, view with loaded CSS, and show H1 with content Hello World from view and using theme.</p>
+            <p>And then open <code>http://localhost/seme_framework</code>.</p>
+            <p>It should show an alert, view with loaded CSS, and show H1 with content Hello World from view and using theme.</p>
           </div>
         </div>
       </div>
+
+      <div class="columns">
+        <div class="column">
+          <b-button tag="router-link" to="/4.0.0/tutorial/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+            Tutorial
+          </b-button>
+        </div>
+        <div class="column is-2">&nbsp;</div>
+        <div class="column">
+          <b-button tag="router-link" to="/4.0.0/uri_routing/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+            Uri Routing
+          </b-button>
+        </div>
+      </div>
+
     </div>
   </div>
 </template>

@@ -13,7 +13,8 @@ aside .menu-list a:hover, aside .menu-list a:focus {
     color: #ffffff;
 }
 footer, .footer {
-  background-color: #ed6f75;
+  color: #dcdcdc;
+  background-color: #bf3e44;
   padding: 1.5em 0.5em 2.2em;
 }
 .main-content.columns.is-fullheight {
@@ -45,6 +46,9 @@ hr {
     background-color: #e45259;
 }
 pre {
+  max-width: 80%;
+  white-space: pre-wrap;
+  word-break: keep-all;
   border: #f1c7c9 1px solid;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 6px 5px 0px rgba(251,137,143,0.6);

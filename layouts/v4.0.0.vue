@@ -26,9 +26,9 @@
             </ul>
           </li>
           <li>
-            <nuxt-link to="/4.0.0/uri-routing">URI Routing</nuxt-link>
+            <nuxt-link to="/4.0.0/uri_routing">URI Routing</nuxt-link>
             <ul>
-              <li><nuxt-link to="/4.0.0/uri-routing/admin">Admin Routing</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/uri_routing/admin">Admin Routing</nuxt-link></li>
             </ul>
           </li>
           <li><nuxt-link to="/4.0.0/constants">Constants</nuxt-link></li>
