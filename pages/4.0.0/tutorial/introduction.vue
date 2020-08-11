@@ -97,13 +97,14 @@ class Home extends SENE_Controller
             <pre>
 [
   &#x22;&#x3C;link rel=\&#x22;stylesheet\&#x22; href=\&#x22;https://fonts.googleapis.com/icon?family=Material+Icons\&#x22; \/&#x3E;&#x22;,
-  &#x22;&#x3C;link rel=\&#x22;stylesheet\&#x22; href=\&#x22;https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css\&#x22; \/&#x3E;&#x22;,
+  &#x22;&#x3C;link rel=\&#x22;stylesheet\&#x22; href=\&#x22;https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css\&#x22; \/&#x3E;&#x22;
 ]
             </pre>
             <p>Second, we will define the script to load. Open files located at <code>app/view/front/script.json</code>.</p>
             <p>If the file doesnt exists, create one. And then, put this code on it.</p>
             <pre>
 [
+  &#x22;&#x3C;script src=\&#x22;https://code.jquery.com/jquery-3.5.1.min.js\&#x22;&#x3E;&#x3C;\/script&#x3E;&#x22;,
   &#x22;&#x3C;script src=\&#x22;https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js\&#x22;&#x3E;&#x3C;\/script&#x3E;&#x22;
 ]
             </pre>
@@ -151,7 +152,6 @@ class Home extends SENE_Controller
 &#x9;&#x3C;link rel=&#x22;shortcut icon&#x22; href=&#x22;&#x3C;?=$this-&#x3E;getIcon()?&#x3E;&#x22;&#x3E;
 &#x9;&#x3C;!-- END Icons --&#x3E;
 
-&#x9;&#x3C;link rel=&#x22;manifest&#x22; href=&#x22;&#x3C;?=base_url()?&#x3E;manifest&#x22; /&#x3E;
 &#x9;&#x3C;meta name=&#x22;msapplication-TileColor&#x22; content=&#x22;#353769&#x22;&#x3E;
 &#x9;&#x3C;meta name=&#x22;theme-color&#x22; content=&#x22;#353769&#x22;&#x3E;
 &#x9;&#x3C;?php $this-&#x3E;getAdditionalBefore()?&#x3E;
@@ -163,8 +163,23 @@ class Home extends SENE_Controller
             <p>If the file doesnt exists, create one.</p>
             <p>And then, put this code on it.</p>
             <pre>
-&#x3C;h1&#x3E;&#x3C;?=$hello?&#x3E; passed to view&#x3C;/h1&#x3E;
-</pre>
+&#x3C;div class=&#x22;container&#x22;&#x3E;
+  &#x3C;div class=&#x22;row&#x22;&#x3E;
+    &#x3C;div class=&#x22;col m12 s12&#x22;&#x3E;
+      &#x3C;div class=&#x22;card rounded preload-any&#x22;&#x3E;
+        &#x3C;div class=&#x22;card-content &#x22;&#x3E;
+          &#x3C;span class=&#x22;card-title&#x22;&#x3E;&#x3C;?=$hello?&#x3E; passed to view&#x3C;/span&#x3E;
+          &#x3C;p&#x3E;This is from view only&#x3C;/p&#x3E;
+          &#x3C;br&#x3E;
+          &#x3C;div class=&#x22;btn-group&#x22;&#x3E;
+            &#x26;nbsp;
+          &#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+      &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+            </pre>
 
             <p>
               Sixth, we have to create JavaScript for view specific. Open files located at <code>app/view/front/home/home_bottom.php</code>.
