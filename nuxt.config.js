@@ -3,7 +3,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Seme Framework Documentation' }
+      { hid: 'description', name: 'description', content: 'Deployable and lightweight PHP MVC framework that suitable for small and medium web app' }
     ],
     link: [
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto' },

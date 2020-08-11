@@ -55,6 +55,11 @@ pre {
   -moz-box-shadow: 0px 6px 5px 0px rgba(251,137,143,0.6);
   box-shadow: 0px 6px 5px 0px rgba(251,137,143,0.6);
 }
+@media only screen and (max-width: 425px) {
+  pre {
+    max-width: 99%;
+  }
+}
 code {
   background-color: #ffe8e9;
 }

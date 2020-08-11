@@ -34,7 +34,17 @@
 </template>
 <script>
   export default {
-    layout: 'blog'
-    // page component definitions
+    data() {
+      return {
+        title: 'Seme Framework Documentation',
+        description: 'Deployable and lightweight PHP MVC framework that suitable for small and medium web app'
+      }
+    },
+    head() {
+      return {
+        title: this.title,
+        description: this.description,
+      }
+    }
   }
 </script>

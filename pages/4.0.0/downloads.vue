@@ -16,6 +16,50 @@
             <ul>
               <li><a href="https://github.com/drosanda/seme-framework" target="_blank">Seme Framework on Github</a></li>
             </ul>
+
+            <h2 class="">Install</h2>
+            <p>Clone the repository with git or download the ZIP archive and then extract to your desired directory.</p>
+            <h3>Install from archive to XAMPP (Examples)</h3>
+            <p>After download the archive and then extract to:</p>
+            <ul>
+              <li><code>/Application/XAMPP/htdocs/seme_framework</code> on Mac, or</li>
+              <li><code>/opt/lampp/htdocs/seme_framework</code> on Linux, or</li>
+              <li><code>D:\xampp\htdocs\seme_framework</code> on Windows</li>
+            </ul>
+            <p>
+              And then running the XAMPP and open the <code>http://locahost/seme_framework/</code>.
+              If there does not show any error, then you can proceed to configuration page.
+            </p>
+
+            <h3>Install using GIT CLONE on Windows</h3>
+            <p>We assumed you have install XAMPP on drive D.</p>
+            <p>Open your <code>cmd</code> or <code>cmder</code> and then execute the following commands:</p>
+            <ul>
+              <li>Goto drive D with command <code>d:</code>.</li>
+              <li>Change dir to htdocs <code>cd xampp/htdocs</code>.</li>
+              <li>List content of directory <code>ls</code> or <code>dir</code> check if directory is existed.</li>
+              <li>If directory existed delete with command <code>rm -fr seme_framework</code> or move the directory with <code>mv seme_framework sf_old</code>.</li>
+              <li>clone from repo and put on seme_framework<code>git clone https://github.com/drosanda/seme-framework.git seme_framework</code>.</li>
+            </ul>
+            <p>
+              And then running the XAMPP and open the <code>http://locahost/seme_framework/</code>.
+              If there does not show any error, then you can proceed to configuration page.
+            </p>
+
+            <h3>Install using Mac with XAMPP</h3>
+            <p>Open your <code>cmd</code> or <code>terminal</code> and then execute the following commands:</p>
+            <ul>
+              <li>Change dir to htdocs <code>cd /Applications/XAMPP/htdocs</code>.</li>
+              <li>List content of directory <code>ls</code> check if directory is existed.</li>
+              <li>If directory existed delete with command <code>rm -fr seme_framework</code> or move the directory with <code>mv seme_framework sf_old</code>.</li>
+              <li>clone from repo and put on seme_framework<code>git clone https://github.com/drosanda/seme-framework.git seme_framework</code>.</li>
+            </ul>
+            <h2>Run the framework</h2>
+            <p>
+              And then running the XAMPP and open the <code>http://locahost/seme_framework/</code>.
+              If there does not show any error, then you can proceed to configuration page.
+            </p>
+
             <h2>Working Examples</h2>
             <p>And then, if you want to use working examples instead. You can clone or download by clicking the following links:</p>
             <ul>
@@ -37,8 +81,8 @@
         </div>
         <div class="column is-2">&nbsp;</div>
         <div class="column">
-          <b-button tag="router-link" to="/4.0.0/install/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-            Install
+          <b-button tag="router-link" to="/4.0.0/configuration/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+            Configuration
           </b-button>
         </div>
       </div>
@@ -51,7 +95,7 @@
     layout: 'v4.0.0',
     data() {
       return {
-        title: 'Download - Seme Framework v4.0.0'
+        title: 'Downloads and Install - Seme Framework v4.0.0'
       }
     },
     head() {
