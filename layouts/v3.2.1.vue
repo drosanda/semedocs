@@ -2,6 +2,9 @@
   <div>
     <div class="main-content columns is-fullheight">
       <aside class="column is-3 is-narrow-mobile is-fullheight section is-hidden-mobile">
+        <figure>
+          <img src="~/static/logo.png">
+        </figure>
         <ul class="menu-list">
           <li><nuxt-link to="/">Home</nuxt-link></li>
           <li><nuxt-link to="/credits">Credits</nuxt-link></li>

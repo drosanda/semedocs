@@ -78,23 +78,46 @@
 					<h3>Debug Query</h3>
 					<p>Seme Framework has debugging feature on each Query Builder methods.</p>
 					<ul>
-						<li>$this->db->get('object',1)</li>
-						<li>$this->db->get_first('object',1)</li>
-						<li>$this->db->insert($this->tbl,$di,0,1)</li>
-						<li>$this->db->update($this->tbl,1);</li>
-						<li>$this->db->delete($this->tbl,1);</li>
+						<li>$this->db->get('object',<code>1</code>)</li>
+						<li>$this->db->get_first('object',<code>1</code>)</li>
+						<li>$this->db->insert($this->tbl,$di,0,<code>1</code>)</li>
+						<li>$this->db->update($this->tbl,<code>1</code>);</li>
+						<li>$this->db->delete($this->tbl,<code>1</code>);</li>
 					</ul>
         </div>
       </div>
 
-        </div>
+    </div>
+
+
+    <div class="columns">
+      <div class="column">
+        <b-button tag="router-link" to="/4.0.0/constants/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+          Constants
+        </b-button>
+      </div>
+      <div class="column is-2">&nbsp;</div>
+      <div class="column">
+        <b-button tag="router-link" to="/4.0.0/model/select" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+          Model::select
+        </b-button>
       </div>
     </div>
+  </div>
+</div>
 </template>
 <script>
-  export default {
-    layout: 'v4.0.0'
-    // page component definitions
+export default {
+  layout: 'v4.0.0',
+  data() {
+    return {
+      title: 'Model - Seme Framework v4.0.0'
+    }
+  },
+  head() {
+    return {
+      title: this.title,
+    }
   }
+}
 </script>
-

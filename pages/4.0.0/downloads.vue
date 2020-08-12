@@ -56,19 +56,17 @@
             </ul>
             <h2>Run the framework</h2>
             <p>
-              And then running the XAMPP and open the <code>http://locahost/seme_framework/</code>.
+              After running the XAMPP, you can open <code>http://locahost/seme_framework/</code> in your browser.
               If there does not show any error, then you can proceed to configuration page.
             </p>
 
             <h2>Working Examples</h2>
-            <p>And then, if you want to use working examples instead. You can clone or download by clicking the following links:</p>
+            <p>Here is the list of working examples using Seme Framework. You can clone or download by clicking the following links:</p>
             <ul>
               <li><a href="https://github.com/drosanda/seme_adminhtml" target="_blank">Admin HTML template</a></li>
               <li><a href="https://github.com/drosanda/seme-indonesian-address-provider-api" target="_blank">API Address Provider (ID)</a></li>
               <li><a href="https://github.com/drosanda/seme_landing" target="_blank">Landing Page</a></li>
             </ul>
-            <hr>
-            <p>Or, you can just proceed to install page.</p>
           </div>
         </div>
       </div>

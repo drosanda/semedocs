@@ -41,7 +41,7 @@
         </div>
         <div class="column is-2">&nbsp;</div>
         <div class="column">
-          <b-button tag="router-link" to="/credits/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="" expanded>
+          <b-button tag="router-link" to="/credits/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
             Credits
           </b-button>
         </div>
