@@ -16,7 +16,7 @@
           <p>The following page contains example code showing how the database class is used. For complete details please read the individual pages describing each function.</p>
 
           <h2>Initializing the Database Class</h2>
-					<p>The following code loads and initializes the database class based on your <a href="config-database.html">configuration</a> settings. Here the steps:</p>
+					<p>The following code loads and initializes the database class based on your <a href="config-database">configuration</a> settings. Here the steps:</p>
 					<ol>
 						<li>Edit and change your database connection in <b>app/config/database.php</b>.</li>
 						<li>Extend the SENE_Model class in your model.</li>

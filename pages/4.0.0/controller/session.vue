@@ -13,7 +13,7 @@
           <div class="column">
         <div class="content">
           <h1 class="">Controller: Using Session</h1>
-					<p>Seme Framework comes with bultin session manager which stored to $_SESSION array with randomize string that define through <a href="/config-session.html">configuration</a>. Method <code>setKey()</code> from Sene_controller allowed you to pass array of object or objects to save in session. And Method <code>getKey()</code> allowed to get any stored value to session. Here is the example</p>
+					<p>Seme Framework comes with bultin session manager which stored to $_SESSION array with randomize string that define through <a href="/config-session">configuration</a>. Method <code>setKey()</code> from Sene_controller allowed you to pass array of object or objects to save in session. And Method <code>getKey()</code> allowed to get any stored value to session. Here is the example</p>
 					<pre>
 class Home extends Sene_Controller{
 	public function __construct(){

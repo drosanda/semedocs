@@ -25,6 +25,7 @@
             <nuxt-link to="/4.0.0/tutorial">Tutorial</nuxt-link>
             <ul>
               <li><nuxt-link to="/4.0.0/tutorial/introduction">Introduction</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/tutorial/get-data">Get Data</nuxt-link></li>
             </ul>
           </li>
           <li>

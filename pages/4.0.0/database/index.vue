@@ -14,8 +14,8 @@
           <p>Seme Framework comes with a full-featured and very fast abstracted database class that supports both traditional structures and Query Builder patterns. The database functions offer clear, simple syntax.</p>
 
           <ul>
-            <li><a href="database-quick-start.html">Quick Start</a></li>
-            <li><a href="database-query-builder.html">Query Builder</a></li>
+            <li><a href="database-quick-start">Quick Start</a></li>
+            <li><a href="database-query-builder">Query Builder</a></li>
           </ul>
         </div>
       </div>

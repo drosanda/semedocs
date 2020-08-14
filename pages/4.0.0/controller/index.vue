@@ -83,7 +83,7 @@
               }
             </pre>
             <h2>Loading the Theme</h2>
-            <p>Theme is collection of view file that meets requirement of Seme Framework. Please refer to this <a href="/view.html">section</a> if you want learn more.</p>
+            <p>Theme is collection of view file that meets requirement of Seme Framework. Please refer to this <a href="/view">section</a> if you want learn more.</p>
 
             <pre>
               class Home extends Sene_Controller{

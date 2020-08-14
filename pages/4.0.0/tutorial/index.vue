@@ -30,7 +30,7 @@
             <p>The entire tutorial is split up over several pages. Each explaining a small part of the functionality of the Seme Framework. You’ll go through the following pages:</p>
             <ul>
               <li><NuxtLink to="tutorial/introduction">Introduction</NuxtLink>, which gives you an overview of what to expect.</li>
-              <li><NuxtLink to="tutorial/view.html">Theme and layout</NuxtLink>, which will teach you the basics of creating view using Seme Framework.</li>
+              <li><NuxtLink to="tutorial/view">Theme and layout</NuxtLink>, which will teach you the basics of creating view using Seme Framework.</li>
               <li>Building API, this will introduce more about database, controller, and model.</li>
             </ul>
             <p>Enjoy your exploration of the Seme Framework.</p>

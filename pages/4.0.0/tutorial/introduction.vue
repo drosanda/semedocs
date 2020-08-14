@@ -5,7 +5,7 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Home</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.0</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0.0/tutorial.html">Tutorial</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0.0/tutorial">Tutorial</NuxtLink></li>
           <li class="unavailable">Introduction</li>
         </ul>
       </nav>
@@ -238,8 +238,8 @@ class Home extends SENE_Controller
         </div>
         <div class="column is-2">&nbsp;</div>
         <div class="column">
-          <b-button tag="router-link" to="/4.0.0/uri_routing/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-            Uri Routing
+          <b-button tag="router-link" to="/4.0.0/tutorial/get-data/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+            Get Data
           </b-button>
         </div>
       </div>

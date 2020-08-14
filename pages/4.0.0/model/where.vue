@@ -124,7 +124,7 @@ WHERE
 	->where("email",'andre',"and",'%like%',0,1);</pre>
 
 					<h2>Advanced Where Condition</h2>
-					<p>Seme Framework has advanced where method called <a href="/model-where-as.html">where_as method</a>.</p>
+					<p>Seme Framework has advanced where method called <a href="/model-where-as">where_as method</a>.</p>
 
         </div>
       </div>

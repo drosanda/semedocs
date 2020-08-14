@@ -39,7 +39,7 @@
             <h2>Environments</h2>
             <p>Seme Framework running well by using this kind of environments:</p>
             <ul>
-              <li><a href="https://www.apachefriends.org/download.html">XAMPP</a> for Mac, Linux, and Windows</li>
+              <li><a href="https://www.apachefriends.org/download">XAMPP</a> for Mac, Linux, and Windows</li>
               <li><a href="https://hub.docker.com/r/drosanda/seme_webstack">Seme WebStack Docker Container</a></li>
               <li>Nginx with PHP-FPM 7.4.x running on Centos 7</li>
             </ul>

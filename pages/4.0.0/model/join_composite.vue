@@ -14,7 +14,7 @@
           <div class="content">
             <h1 class="">Join Composite Method</h1>
             <p>join_composite method purpose is for joining the table with multiple primary key.</p>
-            <p>We can achieved the conditions of joining multiple primary key with <a href="/model-composite_create.html">composite_create</a> method.</p>
+            <p>We can achieved the conditions of joining multiple primary key with <a href="/model-composite_create">composite_create</a> method.</p>
 
             <pre>
 class Blog_Model extends SENE_Model{

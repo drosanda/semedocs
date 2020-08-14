@@ -87,7 +87,7 @@
 					<p>Escaping value is required for string matching. Here is the example</p>
 					<pre>$this->db->where_as("$this->tbl_as.status_text",$this->db->esc("order_completed"));</pre>
 					<h2>Basic Where Condition</h2>
-					<p>For basic usage, Seme Framework has basic where method called <a href="model-where.html">where_as method</a>.</p>
+					<p>For basic usage, Seme Framework has basic where method called <a href="model-where">where_as method</a>.</p>
         </div>
       </div>
 

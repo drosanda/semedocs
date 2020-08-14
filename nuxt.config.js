@@ -23,16 +23,15 @@ export default {
   ],
   modules: [
     'nuxt-buefy',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/sitemap'
   ],
   target: 'static',
   mode: 'spa',
-  sitemaps: [
+  sitemap:
     {
-      path: 'sitemap.xml',
-      exclude: [
-
-      ],
+      hostname: 'https://seme.nyingspot.com',
+      gzip: false
     }
-  ]
+
 }
