@@ -92,13 +92,37 @@
       </div>
 
         </div>
+
+        <div class="columns">
+          <div class="column">
+            <b-button tag="router-link" to="/4.0.0/model/where" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+              Model::where
+            </b-button>
+          </div>
+          <div class="column is-2">&nbsp;</div>
+          <div class="column">
+            <b-button tag="router-link" to="/4.0.0/model/between" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+              Model::between
+            </b-button>
+          </div>
+        </div>
+
       </div>
+
     </div>
   </template>
 <script>
   export default {
-    layout: 'v4.0.0'
-    // page component definitions
+    layout: 'v4.0.0',
+    data() {
+      return {
+        title: 'Model::where_as - Seme Framework v4.0.0'
+      }
+    },
+    head() {
+      return {
+        title: this.title,
+      }
+    }
   }
 </script>
-

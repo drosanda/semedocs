@@ -35,6 +35,10 @@
             </ul>
           </li>
           <li><nuxt-link to="/4.0.0/constants">Constants</nuxt-link></li>
+          <li>
+            <nuxt-link to="/4.0.0/global">Globals</nuxt-link>
+          </li>
+
           <li><nuxt-link to="/4.0.0/model">Model</nuxt-link>
             <ul>
               <li><nuxt-link to="/4.0.0/model/select">Model::select</nuxt-link></li>
@@ -80,9 +84,6 @@
             <nuxt-link to="/4.0.0/library">Library</nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/4.0.0/global">Globals</nuxt-link>
-          </li>
-          <li>
             <nuxt-link to="/4.0.0/cli">CLI (command line interface)</nuxt-link>
           </li>
         </ul>
@@ -98,7 +99,7 @@
         <div class="container">
           <div class="content has-text-centered">
             <p class="">Copyright &copy; 2014-2020. Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
-            <p><small>Last updated on 10 Agustus 2020</small></p>
+            <p><small>Last updated on 21 Agustus 2020</small></p>
           </div>
         </div>
       </footer>

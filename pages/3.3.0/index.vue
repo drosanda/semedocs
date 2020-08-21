@@ -29,18 +29,15 @@
 
       <div class="columns">
         <div class="column">
-          <b-button tag="router-link" to="/credits" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-            Credits
+          <b-button tag="router-link" to="/4.0.0" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+            Version: 4.0.0
           </b-button>
         </div>
+        <div class="column is-2">&nbsp;</div>
         <div class="column">
-          &nbsp;
-        </div>
-        <div class="column">
-          &nbsp;
-        </div>
-        <div class="column">
-          &nbsp;
+          <b-button tag="router-link" to="/3.2.1" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+            Version: 3.2.1
+          </b-button>
         </div>
       </div>
 
@@ -48,17 +45,17 @@
   </div>
 </template>
 <script>
-  export default {
-    layout: 'v3.3.0',
-    data() {
-      return {
-        title: 'Seme Framework v4.0.0 Documentation'
-      }
-    },
-    head() {
-      return {
-        title: this.title,
-      }
+export default {
+  layout: 'v4.0.0',
+  data() {
+    return {
+      title: 'CLI - Seme Framework v4.0.0'
+    }
+  },
+  head() {
+    return {
+      title: this.title,
     }
   }
+}
 </script>

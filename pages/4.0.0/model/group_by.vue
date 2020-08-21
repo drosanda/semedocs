@@ -52,13 +52,36 @@
       </div>
 
         </div>
+
+        <div class="columns">
+          <div class="column">
+            <b-button tag="router-link" to="/4.0.0/model/group_by" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+              Model::group_by
+            </b-button>
+          </div>
+          <div class="column is-2">&nbsp;</div>
+          <div class="column">
+            <b-button tag="router-link" to="/4.0.0/model/order_by" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+              Model::order_by
+            </b-button>
+          </div>
+        </div>
+
       </div>
     </div>
   </template>
 <script>
   export default {
-    layout: 'v4.0.0'
-    // page component definitions
+    layout: 'v4.0.0',
+    data() {
+      return {
+        title: 'Model::group_by - Seme Framework v4.0.0'
+      }
+    },
+    head() {
+      return {
+        title: this.title,
+      }
+    }
   }
 </script>
-
