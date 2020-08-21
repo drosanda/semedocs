@@ -112,12 +112,20 @@
   export default {
     data() {
       return {
-        title: 'Seme Framework v4.0.0'
+        title: 'Seme Framework v4.0.0',
+        title: 'Seme Framework Documentation for version 4.0.0',
       }
     },
     head() {
       return {
         title: this.title,
+        title: this.description,
+        link: [
+          {
+            rel: 'canonical',
+            href: 'https://seme.nyingspot.com' + this.$route.path
+          }
+        ]
       }
     }
   }

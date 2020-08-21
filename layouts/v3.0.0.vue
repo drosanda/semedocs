@@ -30,12 +30,20 @@
   export default {
     data() {
       return {
-        title: 'Seme Framework v3.0.0'
+        title: 'Seme Framework v3.0.0',
+        title: 'Seme Framework Documentation for version 3.0.0 ',
       }
     },
     head() {
       return {
         title: this.title,
+        description: this.description,
+        link: [
+          {
+            rel: 'canonical',
+            href: 'https://seme.nyingspot.com' + this.$route.path
+          }
+        ]
       }
     }
   }

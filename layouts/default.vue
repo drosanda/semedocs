@@ -47,6 +47,12 @@
       return {
         title: this.title,
         description: this.description,
+        link: [
+          {
+            rel: 'canonical',
+            href: 'https://seme.nyingspot.com' + this.$route.path
+          }
+        ]
       }
     }
   }

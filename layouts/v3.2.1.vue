@@ -120,6 +120,12 @@
     head() {
       return {
         title: this.title,
+        link: [
+          {
+            rel: 'canonical',
+            href: 'https://seme.nyingspot.com' + this.$route.path
+          }
+        ]
       }
     }
   }
