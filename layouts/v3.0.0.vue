@@ -31,7 +31,7 @@
     data() {
       return {
         title: 'Seme Framework v3.0.0',
-        title: 'Seme Framework Documentation for version 3.0.0 ',
+        title: 'Seme Framework Documentation version 3.0.0',
       }
     },
     head() {

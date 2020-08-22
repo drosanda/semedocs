@@ -113,13 +113,13 @@
     data() {
       return {
         title: 'Seme Framework v4.0.0',
-        title: 'Seme Framework Documentation for version 4.0.0',
+        description: 'Seme Framework Documentation version 4.0.0'
       }
     },
     head() {
       return {
         title: this.title,
-        title: this.description,
+        description: this.description,
         link: [
           {
             rel: 'canonical',

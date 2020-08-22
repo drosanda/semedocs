@@ -114,7 +114,8 @@
   export default {
     data() {
       return {
-        title: 'Seme Framework v3.2.1'
+        title: 'Seme Framework v3.2.1',,
+        description: 'Seme Framework Documentation version 3.2.1'
       }
     },
     head() {

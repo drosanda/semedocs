@@ -30,7 +30,8 @@
   export default {
     data() {
       return {
-        title: 'Seme Framework v3.3.0'
+        title: 'Seme Framework v3.3.0',
+        description: 'Seme Framework Documentation version 3.0.0'
       }
     },
     head() {
