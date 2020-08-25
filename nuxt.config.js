@@ -28,6 +28,10 @@ export default {
   ],
   target: 'static',
   mode: 'spa',
+  build: {
+    analyze: false,
+    maxChunkSize: 300000
+  },
   sitemap:
     {
       hostname: 'https://seme.nyingspot.com',

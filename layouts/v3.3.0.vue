@@ -40,7 +40,7 @@
         link: [
           {
             rel: 'canonical',
-            href: 'https://seme.nyingspot.com' + this.$route.path
+            href: 'https://seme.nyingspot.com' + this.$route.path.replace(/\/+$/, '') + '/'
           }
         ]
       }

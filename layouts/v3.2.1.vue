@@ -114,7 +114,7 @@
   export default {
     data() {
       return {
-        title: 'Seme Framework v3.2.1',,
+        title: 'Seme Framework v3.2.1',
         description: 'Seme Framework Documentation version 3.2.1'
       }
     },
@@ -124,7 +124,7 @@
         link: [
           {
             rel: 'canonical',
-            href: 'https://seme.nyingspot.com' + this.$route.path
+            href: 'https://seme.nyingspot.com' + this.$route.path.replace(/\/+$/, '') + '/'
           }
         ]
       }
