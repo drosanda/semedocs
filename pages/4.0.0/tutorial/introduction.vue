@@ -22,7 +22,7 @@
             <p>But on Seme Framework, Hello World used to checked the basic MVC purpose.
             </p>
             <h3>Setup the config</h3>
-            <p>We assumed that you put Seme Framework which is described In the <NuxtLink to="/4.0.0/install">Install</NuxtLink> page.</p>
+            <p>We assumed that you put Seme Framework which is described In the <NuxtLink to="/4.0.0/downloads">Download &amp; Install</NuxtLink> page.</p>
             <p>After that, start the XAMPP and open <code>http://localhost/seme_framework</code>.</p>
 
             <h3>Controller</h3>

@@ -36,7 +36,7 @@
           </li>
           <li><nuxt-link to="/4.0.0/constants">Constants</nuxt-link></li>
           <li>
-            <nuxt-link to="/4.0.0/global">Globals</nuxt-link>
+            <nuxt-link to="/4.0.0/globals ">Globals</nuxt-link>
           </li>
 
           <li><nuxt-link to="/4.0.0/model">Model</nuxt-link>
@@ -65,7 +65,13 @@
               <li><nuxt-link to="/4.0.0/model/last_id">Model::last_id</nuxt-link></li>
             </ul>
           </li>
-          <li><nuxt-link to="/4.0.0/view">View</nuxt-link></li>
+          <li>
+            <nuxt-link to="/4.0.0/view">View</nuxt-link>
+            <ul>
+              <li><nuxt-link to="/4.0.0/view/creating-template">Creating Template</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/view/input">Handling Input Form</nuxt-link></li>
+            </ul>
+          </li>
           <li>
             <nuxt-link to="/4.0.0/controller">Controller</nuxt-link>
             <ul>
