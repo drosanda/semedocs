@@ -105,7 +105,7 @@
         <div class="container">
           <div class="content has-text-centered">
             <p class="">Copyright &copy; 2014-2020. Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
-            <p><small>Last updated on 21 Agustus 2020</small></p>
+            <p><small>Last updated on 9 September 2020</small></p>
           </div>
         </div>
       </footer>
@@ -118,14 +118,33 @@
   export default {
     data() {
       return {
-        title: 'Seme Framework v4.0.0',
-        description: 'Seme Framework Documentation version 4.0.0'
+        name: 'Seme Framework',
+        version: 'v4.0.0',
+        prefix: ' - ',
+        title: 'Seme Framework Documentation',
+        description: 'Learn more about Seme Framework version 4.0.0 trough this documentation'
       }
     },
     head() {
       return {
-        title: this.title,
-        description: this.description,
+        title: this.title+this.prefix+' '+this.name,
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.description
+          },
+          {
+            hid: 'og:title',
+            name: 'og:title',
+            content: this.title
+          },
+          {
+            hid: 'og:description',
+            name: 'og:description',
+            content: this.description
+          }
+        ],
         link: [
           {
             rel: 'canonical',

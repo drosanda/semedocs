@@ -22,9 +22,6 @@
               So, you can pull at any time in production server.
               But, be careful wrong configuration can deleted some files or directories.
             </p>
-
-
-
           </div>
         </div>
 
@@ -32,15 +29,14 @@
 
       <div class="columns">
         <div class="column">
-          <b-button tag="router-link" to="/4.0.0/configuration/staging/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-            Staging
-          </b-button>
-        </div>
-        <div class="column is-2">&nbsp;</div>
-        <div class="column">
-          <b-button tag="router-link" to="/4.0.0/tutorial" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-            Tutorial
-          </b-button>
+          <div class="buttons">
+            <b-button tag="router-link" to="/4.0.0/configuration/staging/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+              Configuration: Staging Phase
+            </b-button>
+            <b-button tag="router-link" to="/4.0.0/tutorial" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+              Tutorial
+            </b-button>
+          </div>
         </div>
       </div>
 
@@ -50,14 +46,10 @@
 <script>
   export default {
     layout: 'v4.0.0',
-    data() {
-      return {
-        title: 'Production Phase Configuration - Seme Framework v4.0.0'
-      }
-    },
     head() {
       return {
-        title: this.title,
+        title: 'Production Phase Configuration - Seme Framework v4.0.0 Documentation',
+        description: 'Learn more about how to configuring Seme Framework version 4.0.0 in production phase',
       }
     }
   }

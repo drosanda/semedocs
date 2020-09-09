@@ -31,15 +31,14 @@
 
       <div class="columns">
         <div class="column">
-          <b-button tag="router-link" to="/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="">
-            Home
-          </b-button>
-        </div>
-        <div class="column is-2">&nbsp;</div>
-        <div class="column">
-          <b-button tag="router-link" to="/4.0.0/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-            version 4.0.0
-          </b-button>
+          <div class="buttons">
+            <b-button tag="router-link" to="/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="">
+              Home
+            </b-button>
+            <b-button tag="router-link" to="/4.0.0/" type="is-link" icon-pack="fa" icon-right="chevron-right">
+              version 4.0.0
+            </b-button>
+          </div>
         </div>
       </div>
 
@@ -48,14 +47,34 @@
 </template>
 <script>
 export default {
-  data() {
+  data (){
     return {
-      title: 'Credits - Seme Framework'
+      name: 'Seme Framework',
+      title: 'Credits',
+      suffix: ' - Seme Framework',
+      description: 'Introducing the people behind of Seme Framework.'
     }
   },
   head() {
     return {
-      title: this.title,
+      title: this.title+this.suffix,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.name+': '+this.title
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.description
+        }
+      ]
     }
   }
 }

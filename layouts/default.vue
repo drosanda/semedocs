@@ -39,6 +39,7 @@
   export default {
     data() {
       return {
+        name: 'Seme Docs',
         title: 'Seme Framework Documentation',
         description: 'Deployable and lightweight PHP MVC framework that suitable for small and medium web app'
       }
@@ -51,6 +52,13 @@
           {
             rel: 'canonical',
             href: 'https://seme.nyingspot.com' + this.$route.path.replace(/\/+$/, '') + '/'
+          }
+        ],
+        meta: [
+          {
+            hid: 'og:description',
+            name: 'og:description',
+            content: this.description
           }
         ]
       }

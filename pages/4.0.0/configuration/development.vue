@@ -23,15 +23,14 @@
 
       <div class="columns">
         <div class="column">
-          <b-button tag="router-link" to="/4.0.0/configuration/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-            Configuration
-          </b-button>
-        </div>
-        <div class="column is-2">&nbsp;</div>
-        <div class="column">
-          <b-button tag="router-link" to="/4.0.0/configuration/staging" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-            Staging
-          </b-button>
+          <div class="buttons">
+            <b-button tag="router-link" to="/4.0.0/configuration/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+              Basic Configuration
+            </b-button>
+            <b-button tag="router-link" to="/4.0.0/configuration/staging" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+              Configuration for Staging Phase
+            </b-button>
+          </div>
         </div>
       </div>
 
@@ -41,14 +40,10 @@
 <script>
   export default {
     layout: 'v4.0.0',
-    data() {
-      return {
-        title: 'Development Phase Configuration - Seme Framework v4.0.0'
-      }
-    },
     head() {
       return {
-        title: this.title,
+        title: 'Development Phase Configuration - Seme Framework v4.0.0 Documentation',
+        description: 'Learn more about how to configuring Seme Framework version 4.0.0 in development phase',
       }
     }
   }

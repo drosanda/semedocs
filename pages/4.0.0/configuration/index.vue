@@ -266,39 +266,34 @@ $semevar[&#x27;app_name&#x27;] = &#x27;Seme Framework&#x27;;
 $semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;
 
             </pre>
+          </div>
 
-            <div class="columns">
-              <div class="column">
-                <b-button tag="router-link" to="/4.0.0/downloads/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-                  Downloads and Install
-                </b-button>
-              </div>
-              <div class="column is-2">&nbsp;</div>
-              <div class="column">
-                <b-button tag="router-link" to="/4.0.0/configuration/development/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-                  Development
-                </b-button>
-              </div>
-            </div>
+        </div>
+      </div>
 
+      <div class="columns">
+        <div class="column">
+          <div class="buttons">
+            <b-button tag="router-link" to="/4.0.0/downloads/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+              Download and Installation
+            </b-button>
+            <b-button tag="router-link" to="/4.0.0/configuration/development/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+              Setup Configuration for Development Phase
+            </b-button>
           </div>
         </div>
-
       </div>
+
     </div>
   </div>
 </template>
 <script>
   export default {
     layout: 'v4.0.0',
-    data() {
-      return {
-        title: 'Basic Configuration - Seme Framework v4.0.0'
-      }
-    },
     head() {
       return {
-        title: this.title,
+        title: 'Basic Configuration - Seme Framework v4.0.0 Documentation',
+        description: 'Learn more about how to configuring Seme Framework version 4.0.0',
       }
     }
   }

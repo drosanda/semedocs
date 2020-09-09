@@ -39,7 +39,8 @@
 
     </div>
   </div>
-</template><script>
+</template>
+<script>
 export default {
   layout: 'v3.0.0',
   data() {

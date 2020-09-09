@@ -49,15 +49,14 @@
 
       <div class="columns">
         <div class="column">
-          <b-button tag="router-link" to="/credits" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-            Credits
-          </b-button>
-        </div>
-        <div class="column is-2">&nbsp;</div>
-        <div class="column">
-          <b-button tag="router-link" to="/4.0.0/requirements/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-            Requirements
-          </b-button>
+          <div class="buttons">
+            <b-button tag="router-link" to="/credits" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+              Credits
+            </b-button>
+            <b-button tag="router-link" to="/4.0.0/requirements/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+              Requirements
+            </b-button>
+          </div>
         </div>
       </div>
 
@@ -67,14 +66,35 @@
 <script>
   export default {
     layout: 'v4.0.0',
-    data() {
+    data (){
       return {
-        title: 'Seme Framework v4.0.0 Documentation'
+        name: 'Seme Framework',
+        version: '4.0.0',
+        suffix: ' - Documentation',
+        title: 'Seme Framework v4.0.0',
+        description: 'Learn more about Seme Framework version 4.0.0 through this documentation.'
       }
     },
     head() {
       return {
-        title: this.title,
+        title: this.title+this.suffix,
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.description
+          },
+          {
+            hid: 'og:title',
+            name: 'og:title',
+            content: this.name+': '+this.title
+          },
+          {
+            hid: 'og:description',
+            name: 'og:description',
+            content: this.description
+          }
+        ]
       }
     }
   }

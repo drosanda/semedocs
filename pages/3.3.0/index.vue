@@ -46,10 +46,10 @@
 </template>
 <script>
 export default {
-  layout: 'v4.0.0',
+  layout: 'v3.3.0',
   data() {
     return {
-      title: 'CLI - Seme Framework v3.0.0'
+      title: 'Seme Framework version 3.3.0 Documentation'
     }
   },
   head() {

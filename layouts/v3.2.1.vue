@@ -114,17 +114,26 @@
   export default {
     data() {
       return {
-        title: 'Seme Framework v3.2.1',
-        description: 'Seme Framework Documentation version 3.2.1'
+        name: 'SemeDocs',
+        title: 'Seme Framework Documentation v3.2.1',
+        description: 'Deployable and lightweight PHP MVC framework that suitable for small and medium web app'
       }
     },
     head() {
       return {
         title: this.title,
+        description: this.description,
         link: [
           {
             rel: 'canonical',
             href: 'https://seme.nyingspot.com' + this.$route.path.replace(/\/+$/, '') + '/'
+          }
+        ],
+        meta: [
+          {
+            hid: 'og:description',
+            name: 'og:description',
+            content: this.description
           }
         ]
       }
