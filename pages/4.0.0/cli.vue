@@ -4,7 +4,7 @@
           <nav class="breadcrumb" aria-label="breadcrumbs">
             <ul class="breadcrumbs">
               <li class=""><NuxtLink to="/">Home</NuxtLink></li>
-<li class=""><NuxtLink to="/4.0.0/">4.0.0</NuxtLink></li>
+              <li class=""><NuxtLink to="/4.0.0/">4.0.0</NuxtLink></li>
             <li class="unavailable">Command Line Interface (CLI)</li>
           </ul>
         </nav>
@@ -47,14 +47,34 @@
   <script>
   export default {
     layout: 'v4.0.0',
-    data() {
+    data (){
       return {
-        title: 'CLI - Seme Framework v4.0.0'
+        name: 'Seme Framework v4.0.0',
+        suffix: ' - Seme Framework v4.0.0 Documentation',
+        title: 'Command Line Interface (CLI)',
+        description: 'Learn more about how to use Command Line Interface (CLI) on Seme Framework version 4.0.0 through this documentation.'
       }
     },
     head() {
       return {
-        title: this.title,
+        title: this.title+this.suffix,
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.description
+          },
+          {
+            hid: 'og:title',
+            name: 'og:title',
+            content: this.name+': '+this.title
+          },
+          {
+            hid: 'og:description',
+            name: 'og:description',
+            content: this.description
+          }
+        ]
       }
     }
   }

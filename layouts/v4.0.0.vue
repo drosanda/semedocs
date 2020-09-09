@@ -121,7 +121,7 @@
         name: 'Seme Framework',
         version: 'v4.0.0',
         prefix: ' - ',
-        title: 'Seme Framework Documentation',
+        title: 'Seme Framework v4.0.0 Documentation',
         description: 'Learn more about Seme Framework version 4.0.0 trough this documentation'
       }
     },

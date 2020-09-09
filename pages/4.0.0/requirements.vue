@@ -77,7 +77,7 @@
     layout: 'v4.0.0',
     data() {
       return {
-        name: 'Seme Framework',
+        name: 'Seme Framework v4.0.0',
         suffix: ' - Seme Framework v4.0.0 Documentation',
         title: 'Requirements',
         description: 'Learn more about Requirement of Seme Framework Documentation for version 4.0.0',

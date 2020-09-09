@@ -92,7 +92,7 @@
     layout: 'v4.0.0',
     data() {
       return {
-        name: 'Seme Framework',
+        name: 'Seme Framework v4.0.0',
         suffix: ' - Seme Framework v4.0.0 Documentation',
         title: 'Download and Install',
         description: 'Learn more about how to download Seme Framework and install Seme Framework version 4.0.0'

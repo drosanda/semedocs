@@ -290,10 +290,34 @@ $semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;
 <script>
   export default {
     layout: 'v4.0.0',
+    data (){
+      return {
+        name: 'Seme Framework v4.0.0',
+        suffix: ' - Seme Framework v4.0.0 Documentation',
+        title: 'Basic Configuration',
+        description: 'Learn more about Basic Configuration of Seme Framework version 4.0.0 through this documentation.'
+      }
+    },
     head() {
       return {
-        title: 'Basic Configuration - Seme Framework v4.0.0 Documentation',
-        description: 'Learn more about how to configuring Seme Framework version 4.0.0',
+        title: this.title+this.suffix,
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.description
+          },
+          {
+            hid: 'og:title',
+            name: 'og:title',
+            content: this.name+': '+this.title
+          },
+          {
+            hid: 'og:description',
+            name: 'og:description',
+            content: this.description
+          }
+        ]
       }
     }
   }

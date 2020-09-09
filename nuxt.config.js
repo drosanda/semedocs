@@ -7,7 +7,8 @@ export default {
       { hid: 'robots1', name: 'robots', content: 'INDEX,FOLLOW'},
       { hid: 'fbid', property: 'fb:app_id', content: '626835541386275'},
       { hid: 'theme-color', property: 'theme-color', content: '#fb898f'},
-      { hid: 'og:description', name: 'og:description', content: 'Fakboy'}
+      { hid: 'og:title', name: 'og:description', content: 'Seme Framework Documentation'},
+      { hid: 'og:description', name: 'og:description', content: 'Deployable and lightweight PHP MVC framework that suitable for small and medium web app'}
     ],
     link: [
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto' },
@@ -27,11 +28,14 @@ export default {
     meta: {
       ogHost: 'https://seme.nyingspot.com',
       ogImage: {
-        path: '~/static/carbon.png',
+        path: '/carbon.png',
         width: '1480px',
         height: '1038px',
         type: 'image/png'
       }
+    },
+    manifest: {
+      publicPath: '/'
     }
   },
   css: [
