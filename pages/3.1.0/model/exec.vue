@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Home</NuxtLink></li>
-          <li class=""><NuxtLink to="/3.1.0/">4.0.0</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.1.0/">3.1.0</NuxtLink></li>
           <li class=""><NuxtLink to="/3.1.0/model">Model</NuxtLink></li>
           <li class="unavailable">Exec Method</li>
         </ul>

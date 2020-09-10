@@ -3,13 +3,13 @@
     <nav class="breadcrumb" aria-label="breadcrumbs">
       <ul class="breadcrumbs">
         <li class=""><NuxtLink to="/">Home</NuxtLink></li>
-<li class=""><NuxtLink to="/3.2.1/">3.2.1</NuxtLink></li>
-            <li class=""><NuxtLink to="/3.2.1/database">Database</NuxtLink></li>
-            <li class="unavailable">Query Builder</li>
-          </ul>
-        </nav>
-        <div class="columns">
-          <div class="column">
+        <li class=""><NuxtLink to="/3.2.1/">3.2.1</NuxtLink></li>
+        <li class=""><NuxtLink to="/3.2.1/database">Database</NuxtLink></li>
+        <li class="unavailable">Query Builder</li>
+      </ul>
+    </nav>
+    <div class="columns">
+    <div class="column">
         <div class="content">
           <h1 class="">Query Builder</h1>
           <p>Seme Framework gives you access to a Query Builder class. This pattern allows information to be retrieved, inserted, and updated in your database with minimal scripting. In some cases only one or two lines of code are necessary to perform a database action. Seme Framework does not require that each database table be its own class file. It instead provides a more simplified interface.</p>
@@ -17,20 +17,26 @@
 
           <h2 class="">Selecting Data</h2>
           <p>The following functions allow you to build <strong>SQL SELECT</strong> statements. Selecting all column (*)</p>
-					<pre>$this->db->select(); //means select *</pre>
+					<pre>
+  $this-&#x3E;db-&#x3E;select(); //means select *
+          </pre>
 
 					<h3>Selecting Certain Columns</h3>
 					<p>For selecting some columns, you can use <b>select</b> method from db class as many as columns you want selected.</p>
 					<pre>
-$this->db->select('column_name');
-$this->db->select('column_name2');
+$this-&#x3E;db-&#x3E;select(&#x27;column_name&#x27;);
+$this-&#x3E;db-&#x3E;select(&#x27;column_name2&#x27;);
           </pre>
 					<h3>Selecting aliased Data</h3>
 					<p>For selecting aliased data, simply use select_as method.</p>
-					<pre>$this->db->select('column_name','cn');</pre>
+					<pre>
+$this-&#x3E;db-&#x3E;select(&#x27;column_name&#x27;,&#x27;cn&#x27;);
+          </pre>
 					<h3>Selecting function aliased Data</h3>
 					<p>For selecting function aliased data, simply use select_as method with add false (0) to third parameter.</p>
-					<pre>$this->db->select('CONCAT(column_name," ",column_name2)','cn',0);</pre>
+					<pre>
+            $this-&#x3E;db-&#x3E;select(&#x27;CONCAT(column_name,&#x22; &#x22;,column_name2)&#x27;,&#x27;cn&#x27;,0);
+          </pre>
 					<p>Third parameter means we do not strip any function that exist in select.</p>
 					<hr>
           <h2 class="">Choose Table</h2>
@@ -41,10 +47,10 @@ $this->db->select('column_name2');
           <h2 class="">Join Table</h2>
           <p>After selecting columns, we have to select the table using method <b>from</b>.</p>
 					<pre>
-$this->db->join('table_name2','tbl_alias2',
-'table_name2_column','table_name',
-'table_name_column',[left|right]);
-</pre>
+            $this-&#x3E;db-&#x3E;join(&#x27;table_name2&#x27;,&#x27;tbl_alias2&#x27;,
+            &#x27;table_name2_column&#x27;,&#x27;table_name&#x27;,
+            &#x27;table_name_column&#x27;,[left|right]);
+          </pre>
 					<p>Table join consist of 6 parameters:
 						<ol>
 							<li>Table to be joined</li>
@@ -52,13 +58,15 @@ $this->db->join('table_name2','tbl_alias2',
 							<li>Column of table to be joined</li>
 							<li>Main table</li>
 							<li>Main table column</li>
-							<li>Join method left, right, or none (''). Default: none.</li>
+							<li>Join method left, right, or none (&#x27;&#x27;). Default: none.</li>
 						</ol>
 					</p>
 					<hr>
           <h2 class="">Order By</h2>
           <p>Sorting the result data.</p>
-					<pre>$this->db->order_by('column_name',[asc | desc]);</pre>
+					<pre>
+            $this-&#x3E;db-&#x3E;order_by(&#x27;column_name&#x27;,[asc | desc]);
+          </pre>
 					<p>Order By consist of 2 parameters:
 						<ol>
 							<li>The column name</li>
@@ -68,18 +76,24 @@ $this->db->join('table_name2','tbl_alias2',
 					<hr>
           <h2 class="">Group By</h2>
           <p>Grouping data.</p>
-					<pre>$this->db->group_by('column_name');</pre>
+					<pre>
+            $this-&#x3E;db-&#x3E;group_by(&#x27;column_name&#x27;);
+          </pre>
 					<p>This method only take one parameter, the coloumn name you want to grouped.</p>
 					<hr>
           <h2 class="">Limit</h2>
           <p>Limiting the result.</p>
-					<pre>$this->db->limit([number of result]);</pre>
+					<pre>
+            $this-&#x3E;db-&#x3E;limit([number of result]);
+          </pre>
 					<p>This method only take one parameter, the number of result you desired.</p>
 					<hr>
 
           <h2 class="">Paging</h2>
           <p>Create ranged limit or paging.</p>
-					<pre>$this->db->page([page_number],[page size]);</pre>
+					<pre>
+            $this-&#x3E;db-&#x3E;page([page_number],[page size]);
+          </pre>
 					<p>Order By consist of 2 parameters:
 						<ol>
 							<li>Page Number, starting from 1.</li>
@@ -89,7 +103,9 @@ $this->db->join('table_name2','tbl_alias2',
 					<hr>
           <h2 class="">Get Result</h2>
           <p>By Default method get from seme framework return the array of object result.</p>
-					<pre>$this->db->get([array | object],[0 | 1]);</pre>
+					<pre>
+            $this-&#x3E;db-&#x3E;get([array | object],[0 | 1]);
+          </pre>
 					<p>Method get By consist of 2 parameters:
 						<ol>
 							<li>The type of result, array or object. Default object.</li>
@@ -98,10 +114,12 @@ $this->db->join('table_name2','tbl_alias2',
 						This method only return array of array, or array of object.
 					</p>
 					<hr>
-          
+
           <h2 class="">Get Single Result</h2>
           <p>Get only one row result, simply use get_first method.</p>
-					<pre>$this->db->get_first([array | object],[0 | 1]);</pre>
+					<pre>
+            $this-&#x3E;db-&#x3E;get_first([array | object],[0 | 1]);
+          </pre>
 					<p>Order By consist of 2 parameters:
 						<ol>
 							<li>The type of result, array or object. Default object.</li>
@@ -113,7 +131,9 @@ $this->db->join('table_name2','tbl_alias2',
 
           <h2 class="">Condition: Where</h2>
           <p>Filtered query result using where syntax SQL.</p>
-					<pre>$this->db->where($params,$params2="",$operand="AND",$comp="=",$bracket=0,$bracket2=0);</pre>
+					<pre>
+            $this-&#x3E;db-&#x3E;where($params,$params2=&#x22;&#x22;,$operand=&#x22;AND&#x22;,$comp=&#x22;=&#x22;,$bracket=0,$bracket2=0);
+          </pre>
 					<p>Method where consist of 6 parameters:
 						<ol>
 							<li>Parameter-1 contain table field (key) string or name value pair array.</li>
@@ -145,7 +165,9 @@ $this->db->join('table_name2','tbl_alias2',
 
           <h2 class="">Condition: Where_As</h2>
           <p>Filtered query result using where syntax SQL. But this query not automatically escaped query. So please be avoiding security breach by using db Escape method.</p>
-					<pre>$this->db->where_as($params,$params2="",$operand="AND",$comp="=",$bracket=0,$bracket2=0);</pre>
+					<pre>
+            $this-&#x3E;db-&#x3E;where_as($params,$params2=&#x22;&#x22;,$operand=&#x22;AND&#x22;,$comp=&#x22;=&#x22;,$bracket=0,$bracket2=0);
+          </pre>
 					<p>Method where_as consist of 6 parameters:
 						<ol>
 							<li>Parameter-1 contain table field (key) string or name value pair array.</li>
@@ -176,7 +198,9 @@ $this->db->join('table_name2','tbl_alias2',
 					<hr>
           <h2 class="">Condition: Where_In</h2>
           <p>Filtered query result using Where In SQL syntax.</p>
-					<pre>$this->db->where_in($tbl_key,$arr_values=array(),$is_not="0",$comp="AND");</pre>
+					<pre>
+            $this-&#x3E;db-&#x3E;where_in($tbl_key,$arr_values=array(),$is_not=&#x22;0&#x22;,$comp=&#x22;AND&#x22;);
+          </pre>
 					<p>Method where_in consist of 4 parameters:
 						<ol>
 							<li>Parameter-1 contain table field (key) string to be filtered in.</li>
@@ -189,30 +213,63 @@ $this->db->join('table_name2','tbl_alias2',
 					<hr>
           <h2 class="">Escape</h2>
           <p>Escapes special characters in a string for use in an SQL statement. Especially used in where_as parameter-2. Make your input charset friendly.</p>
-					<pre>$this->db->esc($str);</pre>
+					<pre>
+            $this-&#x3E;db-&#x3E;esc($str);
+          </pre>
 					<p>Consist of 1 parameters contain about unescaped string. Returned escaped string.</p>
 					<hr>
           <h2 class="">Database Character Set</h2>
           <p>Seme Framework has supported for advanced character set like UTF8MB4 which is can be applied for MySQL 5.6 or higher. Default charset connection is UTF8.</p>
 					<h3>Set Character Set</h3>
 					<p>Setup or change character set can be applied using setCharSet method.</p>
-					<pre>$this->db->setCharSet($charset);</pre>
+					<pre>
+            $this-&#x3E;db-&#x3E;setCharSet($charset);
+          </pre>
 					<p>Consist of 1 parameters contain about unescaped string. Returned true if success otherwise will triggered error.</p>
 					<h3>Get Character Set</h3>
 					<p>Get current character set.</p>
-					<pre>$this->db->getCharSet();</pre>
+					<pre>
+            $this-&#x3E;db-&#x3E;getCharSet();
+          </pre>
 					<p>Returned character set name if success otherwise will triggered error.</p>
 					<hr>
-
-      </div>
         </div>
       </div>
     </div>
+  </div>
 </template>
 <script>
   export default {
-    layout: 'v3.2.1'
-    // page component definitions
+    layout: 'v3.2.1',
+    data (){
+      return {
+        name: 'Seme Framework v3.2.1',
+        suffix: ' - Seme Framework v3.2.1 Documentation',
+        title: 'Database: Query Builder',
+        description: 'Learn more about Database Query Builder of Seme Framework version 3.2.1 through this documentation.'
+      }
+    },
+    head() {
+      return {
+        title: this.title+this.suffix,
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.description
+          },
+          {
+            hid: 'og:title',
+            name: 'og:title',
+            content: this.name+': '+this.title
+          },
+          {
+            hid: 'og:description',
+            name: 'og:description',
+            content: this.description
+          }
+        ]
+      }
+    }
   }
 </script>
-

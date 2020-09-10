@@ -39,20 +39,14 @@
 
       <div class="columns">
         <div class="column">
-          <b-button tag="router-link" to="/credits" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-            Credits
-          </b-button>
-        </div>
-        <div class="column">
-          &nbsp;
-        </div>
-        <div class="column">
-          &nbsp;
-        </div>
-        <div class="column">
-          <b-button tag="router-link" to="/3.2.1/requirements/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-            Requirements
-          </b-button>
+          <div class="buttons">
+            <b-button tag="router-link" to="/3.1.0" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+              Version: 3.1.0
+            </b-button>
+            <b-button tag="router-link" to="/3.3.0" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+              Version: 3.3.0
+            </b-button>
+          </div>
         </div>
       </div>
 
@@ -62,14 +56,34 @@
 <script>
   export default {
     layout: 'v3.2.1',
-    data() {
+    data (){
       return {
-        title: 'Seme Framework v3.2.1 Documentation'
+        name: 'Seme Framework v3.2.1',
+        suffix: ' - Documentation',
+        title: 'Seme Framework v3.2.1 Documentation',
+        description: 'Learn more about Seme Framework version 4.0.0 through this documentation.'
       }
     },
     head() {
       return {
-        title: this.title,
+        title: this.title+this.suffix,
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.description
+          },
+          {
+            hid: 'og:title',
+            name: 'og:title',
+            content: this.name+': '+this.title
+          },
+          {
+            hid: 'og:description',
+            name: 'og:description',
+            content: this.description
+          }
+        ]
       }
     }
   }

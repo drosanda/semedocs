@@ -92,15 +92,14 @@
 
     <div class="columns">
       <div class="column">
-        <b-button tag="router-link" to="/4.0.0/constants/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-          Constants
-        </b-button>
-      </div>
-      <div class="column is-2">&nbsp;</div>
-      <div class="column">
-        <b-button tag="router-link" to="/4.0.0/model/select" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-          Model::select
-        </b-button>
+        <div class="buttons">
+          <b-button tag="router-link" to="/4.0.0/globals/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+            Global
+          </b-button>
+          <b-button tag="router-link" to="/4.0.0/model/select" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+            Model::select
+          </b-button>
+        </div>
       </div>
     </div>
   </div>
@@ -109,14 +108,34 @@
 <script>
 export default {
   layout: 'v4.0.0',
-  data() {
+  data (){
     return {
-      title: 'Model - Seme Framework v4.0.0'
+      name: 'Seme Framework v4.0.0',
+      suffix: ' - Seme Framework v4.0.0 Documentation',
+      title: 'Class Model',
+      description: 'Learn more about Class Model of Seme Framework version 4.0.0 through this documentation.'
     }
   },
   head() {
     return {
-      title: this.title,
+      title: this.title+this.suffix,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.name+': '+this.title
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.description
+        }
+      ]
     }
   }
 }

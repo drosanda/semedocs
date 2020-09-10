@@ -38,15 +38,14 @@
 
       <div class="columns">
         <div class="column">
-          <b-button tag="router-link" to="/4.0.0/uri_routing/admin" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-            Uri Routing: Admin
-          </b-button>
-        </div>
-        <div class="column is-2">&nbsp;</div>
-        <div class="column">
-          <b-button tag="router-link" to="/4.0.0/model" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-            Model
-          </b-button>
+          <div class="buttons">
+            <b-button tag="router-link" to="/4.0.0/constants" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+              Constants
+            </b-button>
+            <b-button tag="router-link" to="/4.0.0/model" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+              Class Model
+            </b-button>
+          </div>
         </div>
       </div>
 
@@ -56,14 +55,34 @@
 <script>
 export default {
   layout: 'v4.0.0',
-  data() {
+  data (){
     return {
-      title: 'Global variables and functions - Seme Framework v4.0.0'
+      name: 'Seme Framework v4.0.0',
+      suffix: ' - Seme Framework v4.0.0 Documentation',
+      title: 'Global Variables and Functions',
+      description: 'Learn more about Global Variables and Functions of Seme Framework version 4.0.0 through this documentation.'
     }
   },
   head() {
     return {
-      title: this.title,
+      title: this.title+this.suffix,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.name+': '+this.title
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.description
+        }
+      ]
     }
   }
 }

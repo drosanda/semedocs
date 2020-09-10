@@ -3,7 +3,8 @@
     <div class="container">
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
-          <li class="unavailable">Home</li>
+          <li class=""><NuxtLink to="/">Home</NuxtLink></li>
+          <li class="unavailable">3.1.0</li>
         </ul>
       </nav>
 
@@ -21,20 +22,54 @@
         </div>
         </div>
       </div>
+
+      <div class="columns">
+        <div class="column">
+          <div class="buttons">
+            <b-button tag="router-link" to="/3.0.0" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+              Version: 3.0.0
+            </b-button>
+            <b-button tag="router-link" to="/3.2.1" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+              Version: 3.2.1
+            </b-button>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </template>
 <script>
   export default {
     layout: 'v3.1.0',
-    data() {
+    data (){
       return {
-        title: 'Seme Framework v3.1.0 Documentation'
+        name: 'Seme Framework v3.1.0',
+        suffix: ' - Documentation',
+        title: 'Seme Framework v3.1.0 Documentation',
+        description: 'Learn more about Seme Framework version 3.1.0 through this documentation.'
       }
     },
     head() {
       return {
-        title: this.title,
+        title: this.title+this.suffix,
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.description
+          },
+          {
+            hid: 'og:title',
+            name: 'og:title',
+            content: this.name+': '+this.title
+          },
+          {
+            hid: 'og:description',
+            name: 'og:description',
+            content: this.description
+          }
+        ]
       }
     }
   }

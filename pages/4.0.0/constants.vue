@@ -27,15 +27,14 @@
 
       <div class="columns">
         <div class="column">
-          <b-button tag="router-link" to="/4.0.0/uri_routing/admin" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-            Uri Routing: Admin
-          </b-button>
-        </div>
-        <div class="column is-2">&nbsp;</div>
-        <div class="column">
-          <b-button tag="router-link" to="/4.0.0/globals" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-            Globals
-          </b-button>
+          <div class="buttons">
+            <b-button tag="router-link" to="/4.0.0/uri_routing/admin" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+              Uri Routing: Admin
+            </b-button>
+            <b-button tag="router-link" to="/4.0.0/globals" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+              Globals
+            </b-button>
+          </div>
         </div>
       </div>
 
@@ -49,7 +48,7 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework v4.0.0 Documentation',
-      title: 'Global Variables and Constants',
+      title: 'Constants',
       description: 'Learn more about Global Variables / Constants and Methods used by Seme Framework version 4.0.0 through this documentation.'
     }
   },
