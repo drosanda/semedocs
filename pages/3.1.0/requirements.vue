@@ -4,6 +4,7 @@
         <nav class="breadcrumb" aria-label="breadcrumbs">
           <ul class="breadcrumbs">
             <li class=""><NuxtLink to="/">Home</NuxtLink></li>
+            <li class=""><NuxtLink to="/3.2.1/">3.2.1</NuxtLink></li>
             <li class="unavailable">Requirements</li>
           </ul>
         </nav>
@@ -22,8 +23,36 @@
 </template>
 <script>
   export default {
-    layout: 'v3.1.0'
-    // page component definitions
+    layout: 'v3.1.0',
+    data (){
+      return {
+        name: 'Seme Framework v3.1.0',
+        suffix: ' - Documentation',
+        title: 'Requirements',
+        description: 'Learn more about Requirements of Seme Framework version 4.0.0 through this documentation.'
+      }
+    },
+    head() {
+      return {
+        title: this.title+this.suffix,
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.description
+          },
+          {
+            hid: 'og:title',
+            name: 'og:title',
+            content: this.name+': '+this.title
+          },
+          {
+            hid: 'og:description',
+            name: 'og:description',
+            content: this.description
+          }
+        ]
+      }
+    }
   }
 </script>
-

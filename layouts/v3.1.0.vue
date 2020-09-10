@@ -12,33 +12,32 @@
             <nuxt-link to="/3.1.0/">Version 3.1.0</nuxt-link>
           <ul>
           <li><nuxt-link to="/3.1.0/requirements">Requirements</nuxt-link></li>
-          <li><nuxt-link to="/3.1.0/downloads">Downloads &amp; Install</nuxt-link></li>
-          <li>
-            <nuxt-link to="/3.1.0/configuration">Configuration</nuxt-link>
-            <ul>
-              <li><nuxt-link to="/3.1.0/configuration/development">Development</nuxt-link></li>
-              <li><nuxt-link to="/3.1.0/configuration/staging">Staging</nuxt-link></li>
-              <li><nuxt-link to="/3.1.0/configuration/production">Production</nuxt-link></li>
-            </ul>
-          </li>
+          <li><nuxt-link to="/3.1.0/download">Download</nuxt-link></li>
+          <li><nuxt-link to="/3.1.0/install">Install</nuxt-link></li>
           <li>
             <nuxt-link to="/3.1.0/tutorial">Tutorial</nuxt-link>
             <ul>
               <li><nuxt-link to="/3.1.0/tutorial/introduction">Introduction</nuxt-link></li>
-              <li><nuxt-link to="/3.1.0/tutorial/get-data">Get Data</nuxt-link></li>
             </ul>
           </li>
           <li>
-            <nuxt-link to="/3.1.0/uri_routing">URI Routing</nuxt-link>
+            <nuxt-link to="/3.1.0/uri-routing">URI Routing</nuxt-link>
             <ul>
-              <li><nuxt-link to="/3.1.0/uri_routing/admin">Admin Routing</nuxt-link></li>
+              <li><nuxt-link to="/3.1.0/uri-routing/admin">Admin Routing</nuxt-link></li>
+            </ul>
+          </li>
+          <li>
+            <nuxt-link to="/3.1.0/configuration">Configuration</nuxt-link>
+            <ul>
+              <li><nuxt-link to="/3.1.0/configuration/config">Config</nuxt-link></li>
+              <li><nuxt-link to="/3.1.0/configuration/controller">Controller</nuxt-link></li>
+              <li><nuxt-link to="/3.1.0/configuration/core">Core</nuxt-link></li>
+              <li><nuxt-link to="/3.1.0/configuration/database">Database</nuxt-link></li>
+              <li><nuxt-link to="/3.1.0/configuration/session">Session</nuxt-link></li>
+              <li><nuxt-link to="/3.1.0/configuration/timezone">Timezone</nuxt-link></li>
             </ul>
           </li>
           <li><nuxt-link to="/3.1.0/constants">Constants</nuxt-link></li>
-          <li>
-            <nuxt-link to="/3.1.0/globals ">Globals</nuxt-link>
-          </li>
-
           <li><nuxt-link to="/3.1.0/model">Model</nuxt-link>
             <ul>
               <li><nuxt-link to="/3.1.0/model/select">Model::select</nuxt-link></li>
@@ -65,13 +64,7 @@
               <li><nuxt-link to="/3.1.0/model/last_id">Model::last_id</nuxt-link></li>
             </ul>
           </li>
-          <li>
-            <nuxt-link to="/3.1.0/view">View</nuxt-link>
-            <ul>
-              <li><nuxt-link to="/3.1.0/view/creating-template">Creating Template</nuxt-link></li>
-              <li><nuxt-link to="/3.1.0/view/input">Handling Input Form</nuxt-link></li>
-            </ul>
-          </li>
+          <li><nuxt-link to="/3.1.0/view">View</nuxt-link></li>
           <li>
             <nuxt-link to="/3.1.0/controller">Controller</nuxt-link>
             <ul>
@@ -90,6 +83,9 @@
             <nuxt-link to="/3.1.0/library">Library</nuxt-link>
           </li>
           <li>
+            <nuxt-link to="/3.1.0/global">Globals</nuxt-link>
+          </li>
+          <li>
             <nuxt-link to="/3.1.0/cli">CLI (command line interface)</nuxt-link>
           </li>
         </ul>
@@ -105,7 +101,7 @@
         <div class="container">
           <div class="content has-text-centered">
             <p class="">Copyright &copy; 2014-2020. Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
-            <p><small>Last updated on 9 September 2020</small></p>
+            <p><small>Last updated on 08 Agustus 2020</small></p>
           </div>
         </div>
       </footer>
@@ -118,37 +114,26 @@
   export default {
     data() {
       return {
-        name: 'Seme Framework',
-        version: 'v3.1.0',
-        prefix: ' - ',
-        title: 'Seme Framework v3.1.0 Documentation',
-        description: 'Learn more about Seme Framework version 3.1.0 trough this documentation'
+        name: 'SemeDocs',
+        title: 'Seme Framework Documentation v3.1.0',
+        description: 'Deployable and lightweight PHP MVC framework that suitable for small and medium web app'
       }
     },
     head() {
       return {
-        title: this.title+this.prefix+' '+this.name,
-        meta: [
-          {
-            hid: 'description',
-            name: 'description',
-            content: this.description
-          },
-          {
-            hid: 'og:title',
-            name: 'og:title',
-            content: this.title
-          },
-          {
-            hid: 'og:description',
-            name: 'og:description',
-            content: this.description
-          }
-        ],
+        title: this.title,
+        description: this.description,
         link: [
           {
             rel: 'canonical',
             href: 'https://seme.nyingspot.com' + this.$route.path.replace(/\/+$/, '') + '/'
+          }
+        ],
+        meta: [
+          {
+            hid: 'og:description',
+            name: 'og:description',
+            content: this.description
           }
         ]
       }
