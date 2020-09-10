@@ -1,4 +1,9 @@
 export default {
+  modules: [
+    'nuxt-buefy',
+    '@nuxtjs/pwa',
+    '@nuxtjs/sitemap'
+  ],
   head: {
     meta: [
       { charset: 'utf-8' },
@@ -40,11 +45,6 @@ export default {
   },
   css: [
     '~/css/style.css'
-  ],
-  modules: [
-    'nuxt-buefy',
-    '@nuxtjs/pwa',
-    '@nuxtjs/sitemap'
   ],
   plugins: [
     { src: '~plugins/ga.js', mode: 'client' }

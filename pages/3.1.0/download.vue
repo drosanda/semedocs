@@ -27,7 +27,7 @@
 </template>
 <script>
   export default {
-    layout: 'blog'
+    layout: 'v3.1.0'
     // page component definitions
   }
 </script>
