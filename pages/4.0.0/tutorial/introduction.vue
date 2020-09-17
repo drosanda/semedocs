@@ -115,8 +115,6 @@ class Home extends SENE_Controller
 &#x3C;!DOCTYPE html&#x3E;
 &#x3C;html&#x3E;
   &#x3C;?php $this-&#x3E;getThemeElement(&#x27;page/html/head&#x27;, $__forward) ?&#x3E;
-  &#x3C;?php if($this-&#x3E;config-&#x3E;environment == &#x27;production&#x27;){ ?&#x3E;
-  &#x3C;?php } ?&#x3E;
   &#x3C;body&#x3E;
     &#x3C;?php $this-&#x3E;getThemeContent() ?&#x3E;
 
@@ -159,6 +157,17 @@ class Home extends SENE_Controller
 &#x9;&#x3C;?php $this-&#x3E;getAdditionalAfter()?&#x3E;
 &#x3C;/head&#x3E;
             </pre>
+
+            <b-message type="is-info">
+              <p>Seme Framework theme engine required these files to work properly:</p>
+              <ol>
+                <li><code>theme.json</code>,</li>
+                <li><code>script.json</code>,</li>
+                <li>and a layout <code>page/col-1.php</code> </li>
+              </ol>
+              <p>So, we have to put any variable that will pass into view in single array.</p>
+            </b-message>
+
             <p>Fifth, we have to create main content view. Open files located at <code>app/view/front/home/home.php</code>.</p>
             <p>If the file doesnt exists, create one.</p>
             <p>And then, put this code on it.</p>
@@ -226,6 +235,18 @@ class Home extends SENE_Controller
             </pre>
             <p>And then open <code>http://localhost/seme_framework</code>.</p>
             <p>It should show an alert, view with loaded CSS, and show H1 with content Hello World from view and using theme.</p>
+
+            <b-message type="is-info">
+              <p>There is only one variable can pass through the view from controller.</p>
+              <p>So, we have to put any variable that will pass into view in single array.</p>
+              <p>In this example we use <code>$data</code> variable in controller.</p>
+            </b-message>
+
+            <b-message type="is-info">
+              <p><code>$data[&#x27;hello&#x27;]</code> from controller, will be auto extracted into <code>$hello</code> variable in view.</p>
+              <p>As well as with the other array keys, will be auto extracted.</p>
+            </b-message>
+            <hr>
           </div>
         </div>
       </div>
