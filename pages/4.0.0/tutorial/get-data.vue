@@ -13,7 +13,7 @@
         <div class="column">
           <div class="content">
             <h1 class="">Get Data</h1>
-            <p>Get Data is most basic example to illustrate how framework getting data from database.
+            <p>Get Data is most basic example to illustrate how framework getting data from database.</p>
             <p>Get data is part of CRUD method, called Retrieve. CRUD is shortname of Create Retrieve Update and Delete.</p>
             <p>In this tutorial you will learn about how to:</p>
             <ul type="1">
@@ -176,8 +176,8 @@ class Home extends SENE_Controller
             <b-button tag="router-link" to="/4.0.0/tutorial/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
               Tutorial: Introduction
             </b-button>
-            <b-button tag="router-link" to="/4.0.0/uri_routing/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Uri Routing
+            <b-button tag="router-link" to="/4.0.0/tutorial/basic-api/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+              Tutorial: Basic API
             </b-button>
           </div>
         </div>

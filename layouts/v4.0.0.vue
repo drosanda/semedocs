@@ -26,6 +26,7 @@
             <ul>
               <li><nuxt-link to="/4.0.0/tutorial/introduction">Introduction</nuxt-link></li>
               <li><nuxt-link to="/4.0.0/tutorial/get-data">Get Data</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/tutorial/basic-api">Basic API</nuxt-link></li>
             </ul>
           </li>
           <li>
@@ -36,7 +37,7 @@
           </li>
           <li><nuxt-link to="/4.0.0/constants">Constants</nuxt-link></li>
           <li>
-            <nuxt-link to="/4.0.0/globals ">Globals</nuxt-link>
+            <nuxt-link to="/4.0.0/globals">Globals</nuxt-link>
           </li>
 
           <li><nuxt-link to="/4.0.0/model">Model</nuxt-link>
@@ -105,7 +106,7 @@
         <div class="container">
           <div class="content has-text-centered">
             <p class="">Copyright &copy; 2014-2020. Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
-            <p><small>Last updated on 9 September 2020</small></p>
+            <p><small>Last updated on 24 September 2020</small></p>
           </div>
         </div>
       </footer>

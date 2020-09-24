@@ -53,7 +53,8 @@ export default {
   mode: 'spa',
   build: {
     analyze: false,
-    maxChunkSize: 300000
+    maxChunkSize: 300000,
+    publicPath: 'https://semedocs.b-cdn.net'
   },
   sitemap:
     {
