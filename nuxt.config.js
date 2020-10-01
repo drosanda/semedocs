@@ -31,7 +31,7 @@ export default {
   },
   pwa: {
     meta: {
-      ogHost: 'https://seme.nyingspot.com',
+      ogHost: 'https://seme.framework.web.id',
       ogImage: {
         path: '/carbon.png',
         width: '1480px',
@@ -49,7 +49,10 @@ export default {
   plugins: [
     { src: '~plugins/ga.js', mode: 'client' }
   ],
-  target: 'static',
+  target: 'server',
+  server: {
+    port: 3001
+  },
   mode: 'spa',
   build: {
     analyze: false,
@@ -58,7 +61,7 @@ export default {
   },
   sitemap:
     {
-      hostname: 'https://seme.nyingspot.com',
+      hostname: 'https://seme.framework.web.id',
       gzip: false
     }
 
