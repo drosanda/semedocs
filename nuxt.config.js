@@ -57,7 +57,7 @@ export default {
   build: {
     analyze: false,
     maxChunkSize: 300000,
-    publicPath: 'https://semedocs.b-cdn.net'
+    publicPath: 'https://seme.framework.web.id'
   },
   sitemap:
     {
