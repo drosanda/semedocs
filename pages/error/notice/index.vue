@@ -5,13 +5,13 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Home</NuxtLink></li>
           <li class=""><NuxtLink to="/error/">Error &amp; Troubleshooting</NuxtLink></li>
-          <li class="unavailable">Notice</li>
+          <li class="unavailable">Error Notice</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1>Notice</h1>
+            <h1>Error Notice List</h1>
             <p>Here is the list of known error that ussually occured in Seme Framework</p>
             <ul>
               <li><NuxtLink to="/error/notice/missing-app-cache">Notice: Missing app/cache</NuxtLink></li>
@@ -20,6 +20,17 @@
           </div>
         </div>
       </div>
+
+      <div class="columns">
+        <div class="column">
+          <div class="buttons">
+            <b-button tag="router-link" to="/error/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+              Error &amp; Troubleshooting
+            </b-button>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </template>

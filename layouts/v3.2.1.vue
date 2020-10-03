@@ -102,7 +102,7 @@
         <div class="container">
           <div class="content has-text-centered">
             <p class="">Copyright &copy; 2014-2020. Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
-            <p><small>Last updated on 08 Agustus 2020</small></p>
+            <p><small>Last updated on 3 Oktober 2020</small></p>
           </div>
         </div>
       </footer>

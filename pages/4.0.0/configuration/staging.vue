@@ -34,10 +34,10 @@
         <div class="column">
           <div class="buttons">
             <b-button tag="router-link" to="/4.0.0/configuration/development/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Configuration for Development phase
+              Development phase
             </b-button>
             <b-button tag="router-link" to="/4.0.0/configuration/production" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Configuration for Production phase
+              Production phase
             </b-button>
           </div>
         </div>

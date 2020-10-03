@@ -17,6 +17,12 @@
               On development file, you can put your configuration for development environment.
               Like database connection, base url, etc. Also, you can put any additional config values of development phase only.
             </p>
+            <h2>Base URL with custom port</h2>
+            <p>Seme Framework can be running with overriden default http port e.g. <code>8080</code></p>
+            <p>Todo so, you have to edit the <code>$site</code> value on <code>app/config/development.php</code> file.</p>
+            <pre>
+$site = &#x22;http://&#x22;.$_SERVER[&#x27;HTTP_HOST&#x27;].&#x22;:8080/&#x22;;
+            </pre>
           </div>
         </div>
       </div>
@@ -28,7 +34,7 @@
               Basic Configuration
             </b-button>
             <b-button tag="router-link" to="/4.0.0/configuration/staging" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Configuration for Staging Phase
+              Staging Phase
             </b-button>
           </div>
         </div>

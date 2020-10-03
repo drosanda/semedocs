@@ -31,7 +31,7 @@
         <div class="column">
           <div class="buttons">
             <b-button tag="router-link" to="/4.0.0/configuration/staging/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Configuration: Staging Phase
+              Staging Phase
             </b-button>
             <b-button tag="router-link" to="/4.0.0/tutorial" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
               Tutorial

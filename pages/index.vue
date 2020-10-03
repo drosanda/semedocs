@@ -16,6 +16,23 @@
             <figure class="image">
               <img src="~/static/carbon.png" />
             </figure>
+
+            <div class="columns">
+              <div class="column">
+                <div class="buttons">
+                  <b-button tag="router-link" to="/4.0.0/downloads/" type="is-link">
+                    Download
+                  </b-button>
+                  <b-button tag="router-link" to="/4.0.0/tutorial/" type="is-link">
+                    Getting Started
+                  </b-button>
+                  <b-button tag="router-link" to="/error/" type="is-link">
+                    Troubleshoot
+                  </b-button>
+                </div>
+              </div>
+            </div>
+
             <h2>Key Feature</h2>
             <p>This framework suitable for Programmer that only know about <code>Manual</code> way of code. Not like this time, everything build up automatically through console. Seme Framework has taken different way of code, <i>If you want build small app, why we need lots of library</i>. Here is the key feature of Seme Framework:</p>
             <hr>

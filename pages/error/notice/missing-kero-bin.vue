@@ -16,8 +16,23 @@
             <p>Seme framework has special place for putting your batch or binary in <code>kero/bin/</code> directory.</p>
             <p>But, this directory for now is not auto generated so you have to created manually the <code>bin</code> directory.</p>
           </div>
+          <b-message type="is-info">
+            <p>This only occured on Seme Framework version 4.x.x.</p>
+          </b-message>
+
         </div>
       </div>
+
+      <div class="columns">
+        <div class="column">
+          <div class="buttons">
+            <b-button tag="router-link" to="/error/notice/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+              Error Notice List
+            </b-button>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </template>
@@ -28,8 +43,8 @@ export default {
     return {
       name: 'Seme Framework Error &amp; Troubleshooting',
       suffix: ' - Seme Framework Error Notice',
-      title: 'Seme Framework Error Notice: Missing kero/bin',
-      description: 'Learn more about Seme Framework Error Notice: Missing app/cache and how to solved it.'
+      title: 'Missing kero/bin',
+      description: 'Learn more about Seme Framework Error Notice: Missing kero/bin and how to solved it.'
     }
   },
   head() {

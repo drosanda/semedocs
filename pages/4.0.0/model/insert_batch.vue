@@ -13,7 +13,7 @@
           <div class="column">
         <div class="content">
           <h1 class="">Insert Batch Method</h1>
-					<p>Insert Batch method is alias of insert_multi method. Insert batch is part of database class builder for inserting multiple data into a table. Is alias of <a href="model-insert_multi">Insert Multi method</a>.</p>
+					<p>Insert Batch method is alias of insert_multi method. Insert batch is part of database class builder for inserting multiple data into a table. Is alias of <NuxtLink to="model-insert_multi">Insert Multi method</NuxtLink>.</p>
 					<h2>Parameters</h2>
           <p>Insert Batch method has 2 required parameters that is <b>table name</b> and <b>values</b> array of array format.</p>
 					<pre>$this->db->insert(string $table_name, array $data_inserts, [bool $is_debug=0]): bool</pre>
@@ -23,46 +23,50 @@
 					<p>Here is the examples using insert multi method. See the first of this page for full example.</p>
           <h3>Basic Usage</h3>
           <p>For example we assumed want to add new data in blog table. First, in the model:</p>
-          <pre>class Blog_Model extends SENE_Model{
-  var $tbl = 'blog';
-  var $tbl_as = 'b';
+          <pre>
+class Blog_Model extends SENE_Model{
+  var $tbl = &#x27;blog&#x27;;
+  var $tbl_as = &#x27;b&#x27;;
   public function __construct(){
-	 parent::__construct();
+&#x9; parent::__construct();
   }
   public function inserts($dis){
-    $this->db->insert_batch($ths->tbl,$dis);
+    $this-&#x3E;db-&#x3E;insert_batch($ths-&#x3E;tbl,$dis);
   }
-}</pre>
+}
+</pre>
 					<p>at the controller, we assumed has file named blog.php</p>
-          <pre>class Blog extends Sene_Controller{
+          <pre>
+class Blog extends Sene_Controller{
   public function __construct(){
     parent::__construct();
-    $this->load('blog_model','bm'); #class scope model
+    $this-&#x3E;load(&#x27;blog_model&#x27;,&#x27;bm&#x27;); #class scope model
   }
   public function index(){
     $id = 1;
     $di = array();
 
     $dis = array();
-    $dis['id'] = 1;
-    $dis['title'] = "This is new title of this blog!";
-    $dis['content'] = "This is new title of this blog!";
+    $dis[&#x27;id&#x27;] = 1;
+    $dis[&#x27;title&#x27;] = &#x22;This is new title of this blog!&#x22;;
+    $dis[&#x27;content&#x27;] = &#x22;This is new title of this blog!&#x22;;
     $di[]=$dis;
 
     $dis = array();
-    $dis['id'] = 2;
-    $dis['title'] = "Test multiple insert";
-    $dis['content'] = "This is new test for multiple insert";
+    $dis[&#x27;id&#x27;] = 2;
+    $dis[&#x27;title&#x27;] = &#x22;Test multiple insert&#x22;;
+    $dis[&#x27;content&#x27;] = &#x22;This is new test for multiple insert&#x22;;
     $di[]=$dis;
 
-    $res = $this->bm->inserts($id,$dis); //call the method on the model
+    $res = $this-&#x3E;bm-&#x3E;inserts($id,$dis); //call the method on the model
     if($res){
-      echo 'Success';
+      echo &#x27;Success&#x27;;
     }else{
-      echo 'failed';
+      echo &#x27;failed&#x27;;
     }
   }
-}</pre>
+}
+          </pre>
         </div>
       </div>
 

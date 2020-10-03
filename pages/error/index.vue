@@ -25,6 +25,20 @@
           </div>
         </div>
       </div>
+
+      <div class="columns">
+        <div class="column">
+          <div class="buttons">
+            <b-button tag="router-link" to="/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+              Seme Framework
+            </b-button>
+            <b-button tag="router-link" to="/error/Notice/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+              Notice
+            </b-button>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </template>

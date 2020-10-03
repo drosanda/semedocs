@@ -14,7 +14,7 @@
           <div class="content">
             <h1 class="">Join Composite Method</h1>
             <p>join_composite method purpose is for joining the table with multiple primary key.</p>
-            <p>We can achieved the conditions of joining multiple primary key with <a href="/model-composite_create">composite_create</a> method.</p>
+            <p>We can achieved the conditions of joining multiple primary key with <NuxtLink to="/model-composite_create">composite_create</NuxtLink> method.</p>
 
             <pre>
 class Blog_Model extends SENE_Model{
@@ -49,7 +49,11 @@ public function getByOrderId($id){
           <p>Value required from array of object from composite_create.</p>
           <h3>Join Method</h3>
           <p>Join method value. Default empty string. Value consist of, inner, outer, left, right.</p>
-          <h3>Relational Operator</h3>
+          
+          <b-message type="is-info">
+            <p>This method available from Seme Framework version &#x3E;= 3.2.1</p>
+          </b-message>
+
         </div>
       </div>
 
@@ -80,8 +84,8 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework v4.0.0 Documentation',
-      title: 'Model::insert method',
-      description: 'Learn more about get_first method on SENE_Model class from Seme Framework.'
+      title: 'Model::join_composite method',
+      description: 'Learn more about join_composite method on SENE_Model class from Seme Framework.'
     }
   },
   head() {

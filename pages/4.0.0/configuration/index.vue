@@ -278,7 +278,7 @@ $semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;
               Download and Installation
             </b-button>
             <b-button tag="router-link" to="/4.0.0/configuration/development/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Setup Configuration for Development Phase
+              Development Phase
             </b-button>
           </div>
         </div>
