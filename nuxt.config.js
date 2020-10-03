@@ -50,10 +50,10 @@ export default {
     { src: '~plugins/ga.js', mode: 'client' }
   ],
   target: 'server',
+  mode: 'universal',
   server: {
     port: 3001
   },
-  mode: 'spa',
   build: {
     analyze: false,
     maxChunkSize: 300000,
