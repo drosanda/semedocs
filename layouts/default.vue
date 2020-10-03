@@ -18,6 +18,7 @@
               <li><nuxt-link to="/3.0.0/">3.0.x</nuxt-link></li>
             </ul>
           </li>
+          <li><nuxt-link to="/error/">Error &amp; Troubleshooting</nuxt-link></li>
         </ul>
       </aside>
       <div class="container column is-9">
