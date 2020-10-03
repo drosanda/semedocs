@@ -17,7 +17,7 @@
     				<h2>Parameters</h2>
     				<p>Update method has 6 required parameters.</p>
     				<pre>
-$this->db->join(
+$this-&#x3E;db-&#x3E;join(
 string $table2,
 string $table2_alias,
 string $table2_column_to_joined,
@@ -36,20 +36,20 @@ string $join_method
             <p>For example we assumed want to add new data in blog table. First, in the model:</p>
             <pre>
 class Blog_Model extends SENE_Model{
-var $tbl = 'blog';
-var $tbl_as = 'b';
-var $tbl2 = 'user';
-var $tbl2_as = 'u';
+  var $tbl = &#x27;blog&#x27;;
+  var $tbl_as = &#x27;b&#x27;;
+  var $tbl2 = &#x27;user&#x27;;
+  var $tbl2_as = &#x27;u&#x27;;
 
-public function __construct(){
- parent::__construct();
-}
-public function getAll(){
-  $this->db->select_as("$this->tbl_as.*, $this->tbl2_as.name","author",0);
-  $this->db->from($this->tbl,$this->tbl_as);
-  $this->db->join($this->tbl2,$this->tbl2_as,"user_id",$this->tbl_as,"id","");
-  return $this->db->get();
-}
+  public function __construct(){
+   parent::__construct();
+  }
+  public function getAll(){
+    $this-&#x3E;db-&#x3E;select_as(&#x22;$this-&#x3E;tbl_as.*, $this-&#x3E;tbl2_as.name&#x22;,&#x22;author&#x22;,0);
+    $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+    $this-&#x3E;db-&#x3E;join($this-&#x3E;tbl2,$this-&#x3E;tbl2_as,&#x22;user_id&#x22;,$this-&#x3E;tbl_as,&#x22;id&#x22;,&#x22;&#x22;);
+    return $this-&#x3E;db-&#x3E;get();
+  }
 }
             </pre>
           </div>
@@ -76,14 +76,34 @@ public function getAll(){
   <script>
   export default {
     layout: 'v4.0.0',
-    data() {
+    data (){
       return {
-        title: 'Model::join - Seme Framework v4.0.0'
+        name: 'Seme Framework v4.0.0',
+        suffix: ' - Seme Framework v4.0.0 Documentation',
+        title: 'Model::join method',
+        description: 'Learn more about join method on SENE_Model class from Seme Framework.'
       }
     },
     head() {
       return {
-        title: this.title,
+        title: this.title+this.suffix,
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.description
+          },
+          {
+            hid: 'og:title',
+            name: 'og:title',
+            content: this.name+': '+this.title
+          },
+          {
+            hid: 'og:description',
+            name: 'og:description',
+            content: this.description
+          }
+        ]
       }
     }
   }

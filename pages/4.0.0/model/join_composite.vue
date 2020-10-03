@@ -18,24 +18,24 @@
 
             <pre>
 class Blog_Model extends SENE_Model{
-var $tbl = 'd_order';
-var $tbl_as = 'dor';
-var $tbl2 = 'b_seller';
-var $tbl2_as = 'bs';
+var $tbl = &#x27;d_order&#x27;;
+var $tbl_as = &#x27;dor&#x27;;
+var $tbl2 = &#x27;b_seller&#x27;;
+var $tbl2_as = &#x27;bs&#x27;;
 public function __construct(){
   parent::__construct();
-  $this->db->from($this->tbl,$this->tbl_as);
+  $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
 }
 private function __joinTbl2(){
   $composites = array();
-  $composites[] = $this->db->composite_create("$this->tbl_as.nation_code","=","$this->tbl_as.nation_code");
-  $composites[] = $this->db->composite_create("$this->tbl_as.b_seller_id","=","$this->tbl_as.id");
+  $composites[] = $this-&#x3E;db-&#x3E;composite_create(&#x22;$this-&#x3E;tbl_as.nation_code&#x22;,&#x22;=&#x22;,&#x22;$this-&#x3E;tbl_as.nation_code&#x22;);
+  $composites[] = $this-&#x3E;db-&#x3E;composite_create(&#x22;$this-&#x3E;tbl_as.b_seller_id&#x22;,&#x22;=&#x22;,&#x22;$this-&#x3E;tbl_as.id&#x22;);
   return $composites;
 }
 public function getByOrderId($id){
-  $this->db->join_composite($this->tbl2,$this->tbl2_as,$this->__joinTbl2(),"inner");
-  $this->db->where_as("$this->tbl_as.id",$this->db->esc($id));
-  return $this->db->get_first();
+  $this-&#x3E;db-&#x3E;join_composite($this-&#x3E;tbl2,$this-&#x3E;tbl2_as,$this-&#x3E;__joinTbl2(),&#x22;inner&#x22;);
+  $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;tbl_as.id&#x22;,$this-&#x3E;db-&#x3E;esc($id));
+  return $this-&#x3E;db-&#x3E;get_first();
 }
 }
           </pre>
@@ -76,14 +76,34 @@ public function getByOrderId($id){
 <script>
 export default {
   layout: 'v4.0.0',
-  data() {
+  data (){
     return {
-      title: 'Model::join_composite - Seme Framework v4.0.0'
+      name: 'Seme Framework v4.0.0',
+      suffix: ' - Seme Framework v4.0.0 Documentation',
+      title: 'Model::insert method',
+      description: 'Learn more about get_first method on SENE_Model class from Seme Framework.'
     }
   },
   head() {
     return {
-      title: this.title,
+      title: this.title+this.suffix,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.name+': '+this.title
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.description
+        }
+      ]
     }
   }
 }

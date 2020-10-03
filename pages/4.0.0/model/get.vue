@@ -4,7 +4,7 @@
           <nav class="breadcrumb" aria-label="breadcrumbs">
             <ul class="breadcrumbs">
               <li class=""><NuxtLink to="/">Home</NuxtLink></li>
-<li class=""><NuxtLink to="/4.0.0/">4.0.0</NuxtLink></li>
+              <li class=""><NuxtLink to="/4.0.0/">4.0.0</NuxtLink></li>
               <li class=""><NuxtLink to="/4.0.0/model">Model</NuxtLink></li>
             <li class="unavailable">Get Method</li>
           </ul>
@@ -25,33 +25,34 @@
           <p>For example we assumed want to add new data in blog table. First, in the model:</p>
           <pre>
 class Blog_Model extends SENE_Model{
-  var $tbl = 'blog';
-  var $tbl_as = 'b';
+  var $tbl = &#x27;blog&#x27;;
+  var $tbl_as = &#x27;b&#x27;;
   public function __construct(){
-	 parent::__construct();
+&#x9; parent::__construct();
   }
   public function getList($id){
-    $this->db->select("id");
-    $this->db->select("title");
-    $this->db->select("content");
-    $this->db->from($this->tbl,$this->tbl_as);
-    return $this->db->get();
+    $this-&#x3E;db-&#x3E;select(&#x22;id&#x22;);
+    $this-&#x3E;db-&#x3E;select(&#x22;title&#x22;);
+    $this-&#x3E;db-&#x3E;select(&#x22;content&#x22;);
+    $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+    return $this-&#x3E;db-&#x3E;get();
   }
   public function getListArray(){
-    $this->db->select("id");
-    $this->db->select("title");
-    $this->db->select("content");
-    $this->db->from($this->tbl,$this->tbl_as);
-    return $this->db->get('array');
+    $this-&#x3E;db-&#x3E;select(&#x22;id&#x22;);
+    $this-&#x3E;db-&#x3E;select(&#x22;title&#x22;);
+    $this-&#x3E;db-&#x3E;select(&#x22;content&#x22;);
+    $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+    return $this-&#x3E;db-&#x3E;get(&#x27;array&#x27;);
   }
   public function getListDebugQuery($id){
-    $this->db->select("id");
-    $this->db->select("title");
-    $this->db->select("content");
-    $this->db->from($this->tbl,$this->tbl_as);
-    return $this->db->get('array',1);
+    $this-&#x3E;db-&#x3E;select(&#x22;id&#x22;);
+    $this-&#x3E;db-&#x3E;select(&#x22;title&#x22;);
+    $this-&#x3E;db-&#x3E;select(&#x22;content&#x22;);
+    $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+    return $this-&#x3E;db-&#x3E;get(&#x27;array&#x27;,1);
   }
-}</pre>
+}
+          </pre>
         </div>
       </div>
 
@@ -76,17 +77,37 @@ class Blog_Model extends SENE_Model{
     </div>
   </template>
 <script>
-  export default {
-    layout: 'v4.0.0',
-    data() {
-      return {
-        title: 'Model::get - Seme Framework v4.0.0'
-      }
-    },
-    head() {
-      return {
-        title: this.title,
-      }
+export default {
+  layout: 'v4.0.0',
+  data (){
+    return {
+      name: 'Seme Framework v4.0.0',
+      suffix: ' - Seme Framework v4.0.0 Documentation',
+      title: 'Model::get method',
+      description: 'Learn more about get method on SENE_Model class from Seme Framework.'
+    }
+  },
+  head() {
+    return {
+      title: this.title+this.suffix,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.name+': '+this.title
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.description
+        }
+      ]
     }
   }
+}
 </script>

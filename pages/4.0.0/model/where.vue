@@ -182,14 +182,34 @@ $this-&#x3E;db
 <script>
 export default {
   layout: 'v4.0.0',
-  data() {
+  data (){
     return {
-      title: 'Model::where - Seme Framework v4.0.0'
+      name: 'Seme Framework v4.0.0',
+      suffix: ' - Seme Framework v4.0.0 Documentation',
+      title: 'Model::where method',
+      description: 'Learn more about where method on SENE_Model class from Seme Framework.'
     }
   },
   head() {
     return {
-      title: this.title,
+      title: this.title+this.suffix,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.name+': '+this.title
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.description
+        }
+      ]
     }
   }
 }

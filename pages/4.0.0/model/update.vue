@@ -4,7 +4,7 @@
           <nav class="breadcrumb" aria-label="breadcrumbs">
             <ul class="breadcrumbs">
               <li class=""><NuxtLink to="/">Home</NuxtLink></li>
-<li class=""><NuxtLink to="/4.0.0/">4.0.0</NuxtLink></li>
+              <li class=""><NuxtLink to="/4.0.0/">4.0.0</NuxtLink></li>
               <li class=""><NuxtLink to="/4.0.0/model">Model</NuxtLink></li>
             <li class="unavailable">Update Method</li>
           </ul>
@@ -24,35 +24,39 @@
 					<p>Here is the examples using insert method. See the first of this page for full example.</p>
           <h3>Basic Usage</h3>
           <p>For example we assumed want to edit title in blog table. First, in the model:</p>
-          <pre>class Blog_Model extends SENE_Model{
-  var $tbl = 'blog';
-  var $tbl_as = 'b';
+          <pre>
+class Blog_Model extends SENE_Model{
+  var $tbl = &#x27;blog&#x27;;
+  var $tbl_as = &#x27;b&#x27;;
   public function __construct(){
-	 parent::__construct();
+&#x9; parent::__construct();
   }
   public function update($id,$du){
-    $this->db->where("id",$id);
-    $this->db->update($ths->tbl,$du);
+    $this-&#x3E;db-&#x3E;where(&#x22;id&#x22;,$id);
+    $this-&#x3E;db-&#x3E;update($ths-&#x3E;tbl,$du);
   }
-}</pre>
+}
+          </pre>
 					<p>at the controller, we assumed has file named blog.php</p>
-          <pre>class Blog extends Sene_Controller{
+          <pre>
+class Blog extends Sene_Controller{
   public function __construct(){
     parent::__construct();
-    $this->load('blog_model','bm'); #class scope model
+    $this-&#x3E;load(&#x27;blog_model&#x27;,&#x27;bm&#x27;); #class scope model
   }
   public function index(){
     $id = 1;
     $du = array();
-    $du['title'] = "This is new title of this blog!";
-    $res = $this->bm->update($id,$du); //call the method on the model
+    $du[&#x27;title&#x27;] = &#x22;This is new title of this blog!&#x22;;
+    $res = $this-&#x3E;bm-&#x3E;update($id,$du); //call the method on the model
     if($res){
-      echo 'Success';
+      echo &#x27;Success&#x27;;
     }else{
-      echo 'failed';
+      echo &#x27;failed&#x27;;
     }
   }
-}</pre>
+}
+  </pre>
 
         </div>
       </div>
@@ -77,8 +81,37 @@
     </div>
   </template>
 <script>
-  export default {
-    layout: 'v4.0.0'
-    // page component definitions
+export default {
+  layout: 'v4.0.0',
+  data (){
+    return {
+      name: 'Seme Framework v4.0.0',
+      suffix: ' - Seme Framework v4.0.0 Documentation',
+      title: 'Model::update method',
+      description: 'Learn more about update method on SENE_Model class from Seme Framework.'
+    }
+  },
+  head() {
+    return {
+      title: this.title+this.suffix,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.name+': '+this.title
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.description
+        }
+      ]
+    }
   }
+}
 </script>

@@ -30,29 +30,29 @@
             <p>For example we assumed want to add new data in blog table. First, in the model:</p>
             <pre>
 class Blog_Model extends SENE_Model{
-  var $tbl = 'blog';
-  var $tbl_as = 'b';
+  var $tbl = &#x27;blog&#x27;;
+  var $tbl_as = &#x27;b&#x27;;
   public function __construct(){
     parent::__construct();
   }
   public function countList(){
-    $this->db->select_as("COUNT(*)","total",0);
-    $this->db->from($this->tbl,$this->tbl_as);
-    return $this->db->get_first();
+    $this-&#x3E;db-&#x3E;select_as(&#x22;COUNT(*)&#x22;,&#x22;total&#x22;,0);
+    $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+    return $this-&#x3E;db-&#x3E;get_first();
   }
   public function translated($id){
-    $this->db->select("id","blog_id",0);
-    $this->db->select("title","judul",0);
-    $this->db->select("content","isi",0);
-    $this->db->from($this->tbl,$this->tbl_as);
-    $this->db->where_as("id",$id);
-    return $this->db->get_first();
+    $this-&#x3E;db-&#x3E;select(&#x22;id&#x22;,&#x22;blog_id&#x22;,0);
+    $this-&#x3E;db-&#x3E;select(&#x22;title&#x22;,&#x22;judul&#x22;,0);
+    $this-&#x3E;db-&#x3E;select(&#x22;content&#x22;,&#x22;isi&#x22;,0);
+    $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+    $this-&#x3E;db-&#x3E;where_as(&#x22;id&#x22;,$id);
+    return $this-&#x3E;db-&#x3E;get_first();
   }
   public function allButModified($id){
-    $this->db->select("$this->tbl_as.*, id","blog_id",0);
-    $this->db->from($this->tbl,$this->tbl_as);
-    $this->db->where_as("id",$id);
-    return $this->db->get_first();
+    $this-&#x3E;db-&#x3E;select(&#x22;$this-&#x3E;tbl_as.*, id&#x22;,&#x22;blog_id&#x22;,0);
+    $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+    $this-&#x3E;db-&#x3E;where_as(&#x22;id&#x22;,$id);
+    return $this-&#x3E;db-&#x3E;get_first();
   }
 }
             </pre>
@@ -101,14 +101,34 @@ class Blog extends Sene_Controller{
 <script>
 export default {
   layout: 'v4.0.0',
-  data() {
+  data (){
     return {
-      title: 'Model::select_as - Seme Framework v4.0.0'
+      name: 'Seme Framework v4.0.0',
+      suffix: ' - Seme Framework v4.0.0 Documentation',
+      title: 'Model::select_as method',
+      description: 'Learn more about select_as method on SENE_Model class from Seme Framework.'
     }
   },
   head() {
     return {
-      title: this.title,
+      title: this.title+this.suffix,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.name+': '+this.title
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.description
+        }
+      ]
     }
   }
 }
