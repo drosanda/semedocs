@@ -76,6 +76,7 @@
               <li>
                 <nuxt-link to="/4.0.0/controller">Controller</nuxt-link>
                 <ul>
+                  <li><nuxt-link to="/4.0.0/controller/load">Load</nuxt-link></li>
                   <li><nuxt-link to="/4.0.0/controller/session">Using Session</nuxt-link></li>
                   <li><nuxt-link to="/4.0.0/controller/input">Handling Input Form</nuxt-link></li>
                 </ul>

@@ -15,6 +15,14 @@
             <h1>Missing app/cache</h1>
             <p>Seme framework has cache directory for store the cache under <code>app/cache/</code> directory.</p>
             <p>But, this directory for now is not auto generated so you have to created manually the <code>cache</code> directory.</p>
+            <p>Example error message</p>
+            <pre>
+Notice: Missing app/cache in /Application/xampp/htdocs/seme-frmamework
+Notice: Missing app/cache in D:\xampp\htdocs\seme-framework
+Notice: Missing app/cache in /opt/lampp/htdocs/seme-framework
+            </pre>
+            <h2>Solution</h2>
+            <p>Create manually the directory <code>app/cache</code>.</p>
           </div>
         </div>
       </div>
@@ -28,7 +36,7 @@
           </div>
         </div>
       </div>
-      
+
     </div>
   </div>
 </template>

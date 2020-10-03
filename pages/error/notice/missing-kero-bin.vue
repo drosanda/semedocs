@@ -15,10 +15,21 @@
             <h1>Missing kero/bin</h1>
             <p>Seme framework has special place for putting your batch or binary in <code>kero/bin/</code> directory.</p>
             <p>But, this directory for now is not auto generated so you have to created manually the <code>bin</code> directory.</p>
+
+            <b-message type="is-info">
+              <p>This only occured on Seme Framework version 4.x.x.</p>
+            </b-message>
+
+            <p>Example error message</p>
+            <pre>
+Notice: Missing kero/bin in /Application/xampp/htdocs/seme-frmamework
+Notice: Missing kero/bin in D:\xampp\htdocs\seme-framework
+Notice: Missing kero/bin in /opt/lampp/htdocs/seme-framework
+            </pre>
+            <h2>Solution</h2>
+            <p>Create manually the directory <code>kero/bin</code>.</p>
           </div>
-          <b-message type="is-info">
-            <p>This only occured on Seme Framework version 4.x.x.</p>
-          </b-message>
+
 
         </div>
       </div>

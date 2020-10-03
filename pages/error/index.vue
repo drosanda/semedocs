@@ -21,6 +21,12 @@
                   <li><NuxtLink to="/error/notice/missing-kero-bin">Notice: Missing kero/bin</NuxtLink></li>
                 </ul>
               </li>
+              <li>
+                <a href="#">Error</a>
+                <ul>
+                  <li><NuxtLink to="/error/could-not-find-model/">[1024] Could not find model</NuxtLink></li>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
