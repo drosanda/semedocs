@@ -27,7 +27,7 @@ app
             <p>Lets say, you have extracted Seme Framework on <code>D:\XAMPP\htdocs\seme-framework</code></p>
             <p>So, if you accessing the <code>http://localhost/seme-framework</code> the Seme Framework will load <code>home.php</code> controller.</p>
             <b-message class="is-info">
-              <p>Class <b>home</b> or <b>home.php</b> file is the default access controller from each URI even on in the sub directory.</p>
+              <p>Class <b>home</b> or <b>home.php</b> file is the default access controller from each URI even in the sub directory.</p>
             </b-message>
             <p>How if, we accessing <code>http://localhost/seme-framework/blog</code>?</p>
             <p>The answer is, Seme Framework will load controller blog.php</p>

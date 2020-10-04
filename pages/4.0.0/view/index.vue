@@ -12,12 +12,19 @@
           <div class="column">
         <div class="content">
           <h1 class="">View</h1>
-					<p>By Default, Seme Framework loaded app/view/front directory as the default skin view. Seme Framework has supported themes for creating many themes and layout without changing view. Seme Framework suitable for building small apps that need many themes in one engine. Beside that, Seme Framework allows load view manually.</p>
-					<h2>Load the View</h2>
-					<p>For loading the view, you have to create the view file first and then load it on controller. Here is the example. </p>
+					<p>By Default, Seme Framework loaded <code>app/view/front</code> directory as the default theme view.</p>
+          <p>Seme Framework has supported creation of theme for creating structured view and layout.</p>
+          <p>This theme also suitable for building small apps that need many themes in one framework.</p>
+          <p>Although load view manually is still possible.</p>
+
+					<h2>Loading the View Manually</h2>
+					<p>For loading the view, you have to create a view file first and then load it into controller.</p>
+          <p>Here is the example:</p>
+
 					<h3>Create the View File</h3>
 					<p>First create view file in app/view/template.php and fill it with this example html code.</p>
-					<pre>&lt;html&gt;
+					<pre>
+&lt;html&gt;
 &lt;head&gt;
 &lt;title&gt;Seme Framework Template&lt;/title&gt;
 &lt;/head&gt;

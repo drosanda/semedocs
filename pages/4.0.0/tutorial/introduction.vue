@@ -33,7 +33,6 @@
             </p>
             <pre>
 &#x3C;?php
-
 class Home extends SENE_Controller
 {
     public function __construct()

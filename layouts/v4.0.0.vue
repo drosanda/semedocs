@@ -69,8 +69,14 @@
               <li>
                 <nuxt-link to="/4.0.0/view">View</nuxt-link>
                 <ul>
-                  <li><nuxt-link to="/4.0.0/view/creating-template">Creating Template</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/view/input">Handling Input Form</nuxt-link></li>
+                  <li><nuxt-link to="/4.0.0/view/theme">Creating a Theme</nuxt-link></li>
+                  <li><nuxt-link to="/4.0.0/view/layout">Theme Layout</nuxt-link></li>
+                  <li>
+                    <nuxt-link to="/4.0.0/view/theme-content">Theme Content</nuxt-link>
+                    <ul>
+                      <li><nuxt-link to="/4.0.0/view/theme-content/js">Javascript</nuxt-link></li>
+                    </ul>
+                  </li>
                 </ul>
               </li>
               <li>
@@ -79,8 +85,12 @@
                   <li><nuxt-link to="/4.0.0/controller/constructor">Constructor</nuxt-link></li>
                   <li><nuxt-link to="/4.0.0/controller/load">Load</nuxt-link></li>
                   <li><nuxt-link to="/4.0.0/controller/lib">Lib</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/controller/session">Using Session</nuxt-link></li>
                   <li><nuxt-link to="/4.0.0/controller/input">Handling Input Form</nuxt-link></li>
+                  <li><nuxt-link to="/4.0.0/controller/setTheme">Set Theme</nuxt-link></li>
+                  <li><nuxt-link to="/4.0.0/controller/loadLayout">Load Theme Layout</nuxt-link></li>
+                  <li><nuxt-link to="/4.0.0/controller/putThemeContent">Load Theme Content</nuxt-link></li>
+                  <li><nuxt-link to="/4.0.0/controller/putJSContent">Load Javascript Theme Content</nuxt-link></li>
+                  <li><nuxt-link to="/4.0.0/controller/session">Using Session</nuxt-link></li>
                 </ul>
               </li>
               <li>
