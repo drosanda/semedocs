@@ -45,8 +45,8 @@
           <h2>List of Library</h2>
           <p>Here is the list of library currently exist on seme framework:</p>
           <ul>
-            <li><NuxtLink to="/3.2.1/library/seme_log">Seme Log - Logger</NuxtLink></li>
-            <li><NuxtLink to="/3.2.1/library/seme_email">Seme Email - Email Sender</NuxtLink></li>
+            <li><NuxtLink to="/4.0.0/library/seme_log">Seme Log - Logger</NuxtLink></li>
+            <li><NuxtLink to="/4.0.0/library/seme_email">Seme Email - Email Sender</NuxtLink></li>
 
           </ul>
 				</div>
@@ -62,4 +62,3 @@
     // page component definitions
   }
 </script>
-

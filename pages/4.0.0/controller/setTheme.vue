@@ -6,20 +6,53 @@
           <li class=""><NuxtLink to="/">Home</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.0</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/controller">Controller</NuxtLink></li>
-          <li class="unavailable">Set Theme</li>
+          <li class="unavailable">setTheme Method</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Controller::setTheme</h1>
+            <h1 class="">setTheme Method</h1>
             <p>This method will be loaded theme and overrides the current theme value using the new one.</p>
+            <p>The <code>$theme_name</code> value will be reffered to a directory name under <code>app/view/</code>.</p>
+
+            <h2>Theme Requirements</h2>
+            <p>The valid themes should contain these files with this directory structure.</p>
+            <pre>
+|--- theme.json
+|--- script.json
+|--- page
+|----- col-1.php
+            </pre>
             <h2>Basic Usage:</h2>
             <p>Here is the basic usage of <code>Controller::setTheme</code>.</p>
             <pre>
 Controller::setTheme(string $theme_name): ControllerObject
             </pre>
-            <p>The <code>$theme_name</code> value will be reffered to directory name under <code>app/view/</code>.</p>
+
+            <h2>Example</h2>
+            <p>Here is the example for <code>setTheme</code> method:</p>
+            <pre>
+class Home extends SENE_Controller
+{
+  public function __construct()
+  {
+    parent::__construct();
+    $this-&#x3E;setTheme(&#x27;homepage&#x27;);
+  }
+  public function index()
+  {
+    ...
+  }
+}
+            </pre>
+            <p>So, the directory <code>homepage</code> shoud be existed on the directory structure.</p>
+            <pre>
+- app
+|-- view
+|--- front
+|--- homepage
+            </pre>
           </div>
         </div>
 
@@ -27,15 +60,14 @@ Controller::setTheme(string $theme_name): ControllerObject
 
       <div class="columns">
         <div class="column">
-          <b-button tag="router-link" to="/4.0.0/controller" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-            Controller
-          </b-button>
-        </div>
-        <div class="column is-2">&nbsp;</div>
-        <div class="column">
-          <b-button tag="router-link" to="/4.0.0/controller/setLayout" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-            Controller:setLayout
-          </b-button>
+          <div class="buttons">
+            <b-button tag="router-link" to="/4.0.0/controller" type="is-link" icon-pack="fa" icon-left="chevron-left">
+              Input Method
+            </b-button>
+            <b-button tag="router-link" to="/4.0.0/controller/setLayout" type="is-link" icon-pack="fa" icon-right="chevron-right">
+              setLayout Method
+            </b-button>
+          </div>
         </div>
       </div>
 
@@ -47,14 +79,32 @@ export default {
   layout: 'v4.0.0',
   data() {
     return {
-      title: 'Controller::setTheme - Seme Framework v4.0.0',
-      description: 'Controller::setTheme reference on Seme Framework version 4.0.0'
+      name: 'Seme Framework v4.0.0',
+      suffix: ' - Seme Framework v4.0.0 Documentation',
+      title: 'setTheme Method from SENE_Controller',
+      description: 'Learn more about setTheme Method from SENE_Controller on Seme Framework version 4.0.0'
     }
   },
   head() {
     return {
-      title: this.title,
-      description: this.description
+      title: this.title+this.suffix,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.name+': '+this.title
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.description
+        }
+      ]
     }
   }
 }
