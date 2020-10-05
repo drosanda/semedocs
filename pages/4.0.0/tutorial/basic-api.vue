@@ -500,8 +500,8 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework v4.0.0 Documentation',
-      title: 'Tutorial: Get Data',
-      description: 'Learn more about obtaining data from model tutorial by Seme Framework version 4.0.0 through this documentation.'
+      title: 'Tutorial: Create basic API',
+      description: 'Learn more about creating API by using Seme Framework version 4.0.0 through this documentation.'
     }
   },
   head() {
