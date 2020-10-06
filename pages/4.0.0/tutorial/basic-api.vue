@@ -227,7 +227,7 @@ class A_ApiKey_Model extends SENE_Model
             <p>After create model, now we have to create controller for CRUD.</p>
             <pre>
 &#x3C;?php
-class Home extends SENE_Controller
+class ApiKey extends SENE_Controller
 {
   public function __construct()
   {
