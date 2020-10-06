@@ -16,6 +16,8 @@
               <li>
                 <nuxt-link to="/4.0.0/configuration">Configuration</nuxt-link>
                 <ul>
+                  <li><nuxt-link to="/4.0.0/configuration/url">URL</nuxt-link></li>
+                  <li><nuxt-link to="/4.0.0/configuration/db-connection">Database</nuxt-link></li>
                   <li><nuxt-link to="/4.0.0/configuration/development">Development</nuxt-link></li>
                   <li><nuxt-link to="/4.0.0/configuration/staging">Staging</nuxt-link></li>
                   <li><nuxt-link to="/4.0.0/configuration/production">Production</nuxt-link></li>

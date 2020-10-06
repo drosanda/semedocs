@@ -25,6 +25,10 @@
             <p>We assumed that you put Seme Framework which is described In the <NuxtLink to="/4.0.0/downloads">Download &amp; Install</NuxtLink> page.</p>
             <p>After that, start the XAMPP and open <code>http://localhost/seme_framework</code>.</p>
 
+            <figure>
+              <img src="~/assets/img/hello-world.png" >
+            </figure>
+            
             <h3>Controller</h3>
             <p>On Seme Framework, the default controller named <code>home.php</code> with its class name name <code>Home</code> too.</p>
             <p>

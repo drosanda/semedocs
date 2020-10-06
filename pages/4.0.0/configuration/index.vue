@@ -31,93 +31,25 @@
               <li><code>development.php</code></li>
             </ol>
             <p>The content of each files can be differents each others depends on your requirements.</p>
+            <b-message class="is-info">
+              <p>
+                By default Seme Framework only include <code>development.php</code> for development phase.
+                You can created new files named <code>staging.php</code> or even <code>production.php</code> later on each server.
+              </p>
+            </b-message>
             <hr>
             <h2>Basic configuration</h2>
             <p>
               By default Seme Framework only include <code>development.php</code> for development phase.
               You can created new files named <code>staging.php</code> or even <code>production.php</code> later on each server.
             </p>
-
-            <h3>Base URL</h3>
             <p>
-              The base url configuration existed on <code>$site</code>, same as version 3.x.x the value of <b>must</b> be ended by trailing slash.
+              And then the further information about basic configuration:
             </p>
-            <p>
-              Example value <code>$site = &#x22;https://localhost/seme-framework/&#x22;;</code>.
-            </p>
-
-            <h3>URL Routing Method</h3>
-            <p>
-              The url routing method existed on <code>$method</code>, same as version 3.x.x the value consists of <code>REQUEST_URI</code>,<code>PATH_INFO</code>, and <code>ORIG_PATH_INFO</code>.
-            </p>
-
-            <h4>REQUEST_URI</h4>
-            <p>
-              The REQUEST_URI value suitable for NGINX, Apache on deployment server, LiteSpeed, etc.
-            </p>
-
-            <h4>PATH_INFO</h4>
-            <p>
-              The PATH_INFO value suitable for XAMPP development environtment.
-            </p>
-
-            <h4>ORIG_PATH_INFO</h4>
-            <p>
-              The ORIG_PATH_INFO value is for another server configuration.
-            </p>
-
-            <h3>Admin Secret URL</h3>
-            <p>
-              The special base url configuration for admin that point to  <code>app/controller/admin/*</code>.
-              The default value is <code>$admin_secret_url = &#x27;admin&#x27;;</code>
-            </p>
-
-            <h3>CDN URL</h3>
-            <p>
-              The special base url for Content Delivery Network url.
-              The default value is <code>$cdn_url = &#x27;&#x27;;</code>
-            </p>
-
-            <h3>Database Connection Configuration</h3>
-            <p>
-              Database connection configuration existed on <code>$db</code> array values, separated by 7 keys.
-            </p>
-
-            <h4>$db['host']</h4>
-            <p>
-              The hostname or IP Address value of database server connection.
-            </p>
-
-            <h4>$db['user']</h4>
-            <p>
-              The user value of database server connection.
-            </p>
-
-            <h4>$db['pass']</h4>
-            <p>
-              The password value of database server connection.
-            </p>
-
-            <h4>$db['name']</h4>
-            <p>
-              The name of database using by database server connection.
-            </p>
-
-            <h4>$db['port']</h4>
-            <p>
-              The connection port used by database server connection. Default value is <code>$db[&#x27;port&#x27;] = &#x27;3306&#x27;;</code>.
-            </p>
-
-            <h4>$db['charset']</h4>
-            <p>
-              The character set used by database server connection. The value can be <code>latin1</code> or <code>utf8</code>.
-            </p>
-
-            <h4>$db['engine']</h4>
-            <p>
-              The framework database engine. In version 4 only <code>MySQLi</code> is available, so the default value is <code>$db[&#x27;engine&#x27;] = &#x27;mysqli&#x27;;</code>.
-            </p>
-
+            <ul>
+              <li><NuxtLink to="/4.0.0/configuration/url">URL Configuration</NuxtLink></li>
+              <li><NuxtLink to="/4.0.0/configuration/db-connection">Database Connection</NuxtLink></li>
+            </ul>
             <h3>Session</h3>
             <p>
               The session key configuration requires for dividing the session used by another apps.
@@ -294,8 +226,8 @@ $semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;
       return {
         name: 'Seme Framework v4.0.0',
         suffix: ' - Seme Framework v4.0.0 Documentation',
-        title: 'Basic Configuration',
-        description: 'Learn more about Basic Configuration of Seme Framework version 4.0.0 through this documentation.'
+        title: 'Configuration',
+        description: 'Learn more about Configuration of Seme Framework version 4.0.0 through this documentation.'
       }
     },
     head() {
