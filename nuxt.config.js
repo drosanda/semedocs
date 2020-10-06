@@ -56,8 +56,7 @@ export default {
   },
   build: {
     analyze: false,
-    maxChunkSize: 300000,
-    publicPath: 'https://seme.framework.web.id'
+    maxChunkSize: 300000
   },
   sitemap:
     {
