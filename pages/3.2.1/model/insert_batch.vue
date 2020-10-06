@@ -13,7 +13,7 @@
           <div class="column">
         <div class="content">
           <h1 class="">Insert Batch Method</h1>
-					<p>Insert Batch method is alias of insert_multi method. Insert batch is part of database class builder for inserting multiple data into a table. Is alias of <a href="model-insert_multi.html">Insert Multi method</a>.</p>
+					<p>Insert Batch method is alias of insert_multi method. Insert batch is part of database class builder for inserting multiple data into a table. Is alias of <NuxtLink to="/3.2.1/model/insert_multi/">Insert Multi method</NuxtLink>.</p>
 					<h2>Parameters</h2>
           <p>Insert Batch method has 2 required parameters that is <b>table name</b> and <b>values</b> array of array format.</p>
 					<pre>$this->db->insert(string $table_name, array $data_inserts, [bool $is_debug=0]): bool</pre>
@@ -76,4 +76,3 @@
     // page component definitions
   }
 </script>
-

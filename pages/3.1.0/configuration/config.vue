@@ -4,7 +4,7 @@
     <nav class="breadcrumb" aria-label="breadcrumbs">
       <ul class="breadcrumbs">
         <li class=""><nuxt-link to="/">Home</nuxt-link></li>
-        <li class=""><nuxt-link to="/configuration">Configuration</nuxt-link></li>
+        <li class=""><nuxt-link to="/3.1.0/configuration">Configuration</nuxt-link></li>
             <li class="unavailable">General</li>
           </ul>
         </nav>
@@ -20,7 +20,7 @@ $sene_method = "PATH_INFO";//REQUEST_URI,PATH_INFO,ORIG_PATH_INFO,
 </pre>
 					<p>The $site variable should have trailing slash on last char to work properly.</p>
 					<p>The $sene_method variable PATH_INFO value used on Localhost environment like on XAMPP. REQUEST_URI value used on Server Production like Nginx, Apache2, or Litespeed. This configuration also depend on <b>.htaccess</b> file and server configuration.</p>
-        
+
           <h2 class="">The .htaccess</h2>
           <p>Here is the example of .htaccess file if used on root folder.</p>
           <pre>RewriteEngine on
@@ -61,4 +61,3 @@ location / {
     // page component definitions
   }
 </script>
-

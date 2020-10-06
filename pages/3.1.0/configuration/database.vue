@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><nuxt-link to="/">Home</nuxt-link></li>
-          <li class=""><nuxt-link to="/configuration">Configuration</nuxt-link></li>
+          <li class=""><nuxt-link to="/3.1.0/configuration">Configuration</nuxt-link></li>
           <li class="unavailable">Database</li>
         </ul>
       </nav>
@@ -33,4 +33,3 @@
     // page component definitions
   }
 </script>
-

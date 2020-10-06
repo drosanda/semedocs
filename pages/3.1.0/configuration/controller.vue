@@ -4,7 +4,7 @@
         <nav class="breadcrumb" aria-label="breadcrumbs">
           <ul class="breadcrumbs">
             <li class=""><nuxt-link to="/">Home</nuxt-link></li>
-            <li class=""><nuxt-link to="/configuration">Configuration</nuxt-link></li>
+            <li class=""><nuxt-link to="/3.1.0/configuration">Configuration</nuxt-link></li>
             <li class="unavailable">Controller</li>
           </ul>
         </nav>
@@ -46,4 +46,3 @@ $routes['dukungan/syarat-ketentuan'] = 'dukungan/syarat_ketentuan';
     // page component definitions
   }
 </script>
-

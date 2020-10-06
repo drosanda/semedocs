@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><nuxt-link to="/">Home</nuxt-link></li>
-          <li class=""><nuxt-link to="/configuration">Configuration</nuxt-link></li>
+          <li class=""><nuxt-link to="/3.1.0/configuration">Configuration</nuxt-link></li>
           <li class="unavailable">Timezone</li>
         </ul>
       </nav>
@@ -15,7 +15,7 @@
             <p>The timezone configuration located at <code>app/config/timezone.php</code> please change it. The default timezone in this framework is GMT+7.</p>
           </div>
         </div>
-        
+
       </div>
     </div>
   </div>
@@ -26,4 +26,3 @@
     // page component definitions
   }
 </script>
-

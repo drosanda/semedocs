@@ -14,7 +14,7 @@
           <div class="content">
             <h1 class="">Join Composite Method</h1>
             <p>join_composite method purpose is for joining the table with multiple primary key.</p>
-            <p>We can achieved the conditions of joining multiple primary key with <NuxtLink to="/model-composite_create">composite_create</NuxtLink> method.</p>
+            <p>We can achieved the conditions of joining multiple primary key with <NuxtLink to="/4.0.0/model/composite_create/">composite_create</NuxtLink> method.</p>
 
             <pre>
 class Blog_Model extends SENE_Model{
@@ -49,7 +49,7 @@ public function getByOrderId($id){
           <p>Value required from array of object from composite_create.</p>
           <h3>Join Method</h3>
           <p>Join method value. Default empty string. Value consist of, inner, outer, left, right.</p>
-          
+
           <b-message type="is-info">
             <p>This method available from Seme Framework version &#x3E;= 3.2.1</p>
           </b-message>

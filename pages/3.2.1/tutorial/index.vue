@@ -40,7 +40,7 @@
 
       <div class="columns">
         <div class="column">
-          <b-button tag="router-link" to="/3.2.1/configuration/production/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+          <b-button tag="router-link" to="/3.2.1/configuration/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
             Configuration: production
           </b-button>
         </div>

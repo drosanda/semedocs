@@ -5,7 +5,7 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Home</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.0</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0.0/global">Global</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0.0/globals">Global</NuxtLink></li>
           <li class="unavailable">Function</li>
         </ul>
       </nav>
