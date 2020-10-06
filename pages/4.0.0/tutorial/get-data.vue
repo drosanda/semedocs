@@ -41,7 +41,7 @@
             <p>If you have run the XAMPP, then you can open <code>http://localhost/phpmyadmin/</code>.</p>
             <p>You have to create a database, named <code>seme_framework</code>.</p>
             <figure>
-              <img src="~/static/img/tutorial/phpmyadmin-db-create.png">
+              <img src="~/assets/img/tutorial/phpmyadmin-db-create.png">
             </figure>
 
             <h3>Import the example database</h3>
@@ -50,11 +50,11 @@
             <p>Before continuing the export process you have to select the database <code>seme_framework</code> which is you have created it before.</p>
             <p>Navigate to <code>export</code> and choose <code>seme_framework.sql</code> file in <code>sql</code> directory.</p>
             <figure>
-              <img src="~/static/img/tutorial/phpmyadmin-db-import.png">
+              <img src="~/assets/img/tutorial/phpmyadmin-db-import.png">
             </figure>
             <p>After importing SQL, you can see new tables already added to database.</p>
             <figure>
-              <img src="~/static/img/tutorial/phpmyadmin-db-tables.png">
+              <img src="~/assets/img/tutorial/phpmyadmin-db-tables.png">
             </figure>
 
             <h2>The Codes</h2>
@@ -163,7 +163,7 @@ class Home extends SENE_Controller
             <h2>Result</h2>
             <p>If you open the <code>http://localhost/seme_framework</code> and view same as screenshot before, so you are achieved this tutorial successfully.</p>
             <figure>
-              <img src="~/static/img/tutorial/chrome-crud-result.png">
+              <img src="~/assets/img/tutorial/chrome-crud-result.png">
             </figure>
 
           </div>

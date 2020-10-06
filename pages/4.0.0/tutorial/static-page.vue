@@ -456,19 +456,19 @@ class Home extends SENE_Controller
             <h4>Create</h4>
             <p>The test result for create data</p>
             <figure>
-              <img src="~/static/img/tutorial/basic-api/postman-create.png">
+              <img src="~/assets/img/tutorial/basic-api/postman-create.png">
             </figure>
 
             <h4>Edit</h4>
             <p>The test result for edit data</p>
             <figure>
-              <img src="~/static/img/tutorial/basic-api/postman-edit.png">
+              <img src="~/assets/img/tutorial/basic-api/postman-edit.png">
             </figure>
 
             <h4>Delete</h4>
             <p>The test result for delete data</p>
             <figure>
-              <img src="~/static/img/tutorial/basic-api/postman-delete.png">
+              <img src="~/assets/img/tutorial/basic-api/postman-delete.png">
             </figure>
 
             <p>Well done, if you facing any problem do not hestitate to open the <a href="https://github.com/drosanda/seme-framework/issues/new" target="_blank">issue</a> on our github page.</p>

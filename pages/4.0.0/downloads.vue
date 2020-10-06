@@ -39,7 +39,9 @@
               <li>Change dir to htdocs <code>cd xampp/htdocs</code>.</li>
               <li>List content of directory <code>ls</code> or <code>dir</code> check if directory is existed.</li>
               <li>If directory existed delete with command <code>rm -fr seme_framework</code> or move the directory with <code>mv seme_framework sf_old</code>.</li>
-              <li>clone from repo and put on seme_framework<code>git clone https://github.com/drosanda/seme-framework.git seme_framework</code>.</li>
+              <li>clone from repo and put on seme_framework directory.
+                <pre>git clone https://github.com/drosanda/seme-framework.git seme_framework</pre>
+              </li>
             </ul>
             <p>
               And then running the XAMPP and open the <code>http://locahost/seme_framework/</code>.
@@ -59,6 +61,9 @@
               After running the XAMPP, you can open <code>http://locahost/seme_framework/</code> in your browser.
               If there does not show any error, then you can proceed to configuration page.
             </p>
+            <figure>
+              <img src="~/assets/img/first-run.png">
+            </figure>
 
             <h2>Working Examples</h2>
             <p>Here is the list of working examples using Seme Framework. You can clone or download by clicking the following links:</p>
@@ -95,7 +100,7 @@
         name: 'Seme Framework v4.0.0',
         suffix: ' - Seme Framework v4.0.0 Documentation',
         title: 'Download and Install',
-        description: 'Learn more about how to download Seme Framework and install Seme Framework version 4.0.0'
+        description: 'Learn more about how to download and install Seme Framework version 4.0.0'
       }
     },
     head() {

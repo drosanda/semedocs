@@ -16,7 +16,7 @@
             <figure class="image">
               <img src="~/static/carbon.png" />
             </figure>
-            
+
             <div class="buttons">
               <b-button tag="router-link" to="/4.0.0/downloads/" type="is-link">
                 Download

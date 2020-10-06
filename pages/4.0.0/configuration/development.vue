@@ -21,7 +21,11 @@
             <p>Seme Framework can be running with overriden default http port e.g. <code>8080</code></p>
             <p>Todo so, you have to edit the <code>$site</code> value on <code>app/config/development.php</code> file.</p>
             <pre>
-$site = &#x22;http://&#x22;.$_SERVER[&#x27;HTTP_HOST&#x27;].&#x22;:8080/&#x22;;
+$site = &#x22;http://localhost:8080/seme-framework/&#x22;;
+            </pre>
+            <p>But if using <code>$_SERVER[&#x27;HTTP_HOST&#x27;]</code> there is no necessary to add suffix port after it.</p>
+            <pre>
+$site = &#x22;http://&#x22;.$_SERVER[&#x27;HTTP_HOST&#x27;].&#x22;/seme-framework/&#x22;;
             </pre>
           </div>
         </div>

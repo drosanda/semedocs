@@ -19,9 +19,9 @@
 
             <h2>Hello World!</h2>
             <p>Hello World is often used to illustrate the basic syntax of a programming language.</p>
-            <p>But on Seme Framework, Hello World used to checked the basic MVC purpose.
-            </p>
-            <h3>Setup the config</h3>
+            <p>But on Seme Framework, Hello World used to checked the basic MVC purpose.</p>
+
+            <h3>Configuration adjustment</h3>
             <p>We assumed that you put Seme Framework which is described In the <NuxtLink to="/4.0.0/downloads">Download &amp; Install</NuxtLink> page.</p>
             <p>After that, start the XAMPP and open <code>http://localhost/seme_framework</code>.</p>
 
