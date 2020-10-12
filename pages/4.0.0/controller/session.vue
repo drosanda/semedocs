@@ -4,63 +4,103 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Home</NuxtLink></li>
-<li class=""><NuxtLink to="/4.0.0/">4.0.0</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0.0/">4.0.0</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/controller">Controller</NuxtLink></li>
-            <li class="unavailable">Using Session</li>
-          </ul>
-        </nav>
-        <div class="columns">
-          <div class="column">
-        <div class="content">
-          <h1 class="">Controller: Using Session</h1>
-					<p>Seme Framework comes with bultin session manager which stored to $_SESSION array with randomize string that define through <a href="/config-session">configuration</a>. Method <code>setKey()</code> from Sene_controller allowed you to pass array of object or objects to save in session. And Method <code>getKey()</code> allowed to get any stored value to session. Here is the example</p>
-					<pre>
-class Home extends Sene_Controller{
-	public function __construct(){
-		parent::__construct();
-	}
-	private funtion __init(){
-		$data = array();
-		$sess = $this->getKey();
-		if(!isset($sess->user_login)) $sess->user_login = 0;
-		if(!isset($sess->user)) $sess->user = new stdClass();
-		if(isset($sess->user->id)) $sess->user_login = 1;
-		$this->setKey($sess);
-		$data['sess'] = $sess;
-		return $data;
-	}
-	public function index(){
-		$data = $this->__init();
-	}
-	public function set_logged_in(){
-		$sess = $this->getKey();
-		if(!isset($sess->user_login)) $sess->user_login = 1;
-		if(!isset($sess->user)) $sess->user = new stdClass();
-		if(!isset($sess->user->id)) $sess->user->id = 1000;
-		$this->setKey($sess);
-	}
-	public function set_logged_out(){
-		$sess = $this->getKey();
-		if(!isset($sess->user_login)) $sess->user_login = 0;
-		if(!isset($sess->user)) $sess->user = new stdClass();
-		if(!isset($sess->user->id)) $sess->user->id = 1000;
-		unset($sess->user->id);
-		$this->setKey($sess);
-	}
-
-}
-					</pre>
+          <li class="unavailable">Lib method</li>
+        </ul>
+      </nav>
+      <div class="columns">
+        <div class="column">
+          <div class="content">
+            <h1 class="">Controller: Using Session</h1>
+  					<p>Seme Framework comes with builtin session manager which stored to <code>$_SESSION</code> array with randomize string that define through <NuxtLink href="/4.0.0/configuration/session/">configuration</NuxtLink>. Method <code>setKey()</code> from Sene_controller allowed you to pass array of object or objects to save in session. And Method <code>getKey()</code> allowed to get any stored value to session. Here is the example</p>
+  					<pre>
+  class Home extends Sene_Controller{
+  &#x9;public function __construct(){
+  &#x9;&#x9;parent::__construct();
+  &#x9;}
+  &#x9;private funtion __init(){
+  &#x9;&#x9;$data = array();
+  &#x9;&#x9;$sess = $this-&#x3E;getKey();
+  &#x9;&#x9;if(!isset($sess-&#x3E;user_login)) $sess-&#x3E;user_login = 0;
+  &#x9;&#x9;if(!isset($sess-&#x3E;user)) $sess-&#x3E;user = new stdClass();
+  &#x9;&#x9;if(isset($sess-&#x3E;user-&#x3E;id)) $sess-&#x3E;user_login = 1;
+  &#x9;&#x9;$this-&#x3E;setKey($sess);
+  &#x9;&#x9;$data[&#x27;sess&#x27;] = $sess;
+  &#x9;&#x9;return $data;
+  &#x9;}
+  &#x9;public function index(){
+  &#x9;&#x9;$data = $this-&#x3E;__init();
+  &#x9;}
+  &#x9;public function set_logged_in(){
+  &#x9;&#x9;$sess = $this-&#x3E;getKey();
+  &#x9;&#x9;if(!isset($sess-&#x3E;user_login)) $sess-&#x3E;user_login = 1;
+  &#x9;&#x9;if(!isset($sess-&#x3E;user)) $sess-&#x3E;user = new stdClass();
+  &#x9;&#x9;if(!isset($sess-&#x3E;user-&#x3E;id)) $sess-&#x3E;user-&#x3E;id = 1000;
+  &#x9;&#x9;$this-&#x3E;setKey($sess);
+  &#x9;}
+  &#x9;public function set_logged_out(){
+  &#x9;&#x9;$sess = $this-&#x3E;getKey();
+  &#x9;&#x9;if(!isset($sess-&#x3E;user_login)) $sess-&#x3E;user_login = 0;
+  &#x9;&#x9;if(!isset($sess-&#x3E;user)) $sess-&#x3E;user = new stdClass();
+  &#x9;&#x9;if(!isset($sess-&#x3E;user-&#x3E;id)) $sess-&#x3E;user-&#x3E;id = 1000;
+  &#x9;&#x9;unset($sess-&#x3E;user-&#x3E;id);
+  &#x9;&#x9;$this-&#x3E;setKey($sess);
+  &#x9;}
+  }
+  					</pre>
+          </div>
         </div>
       </div>
 
+      <div class="columns">
+        <div class="column">
+          <div class="buttons">
+            <b-button tag="router-link" to="/4.0.0/controller/load" type="is-link" icon-pack="fa" icon-left="chevron-left" class="">
+              Load Method
+            </b-button>
+            <b-button tag="router-link" to="/4.0.0/controller/input" type="is-link" icon-pack="fa" icon-right="chevron-right" class="">
+              Input Method
+            </b-button>
+          </div>
         </div>
       </div>
+
     </div>
+  </div>
 </template>
 <script>
-  export default {
-    layout: 'v4.0.0'
-    // page component definitions
+export default {
+  layout: 'v4.0.0',
+  data() {
+    return {
+      name: 'Seme Framework v4.0.0',
+      suffix: ' - Seme Framework v4.0.0 Documentation',
+      title: 'Using Session from SENE_Controller',
+      description: 'Learn more about Using Session from SENE_Controller on Seme Framework version 4.0.0'
+    }
+  },
+  head() {
+    return {
+      title: this.title+this.suffix,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.name+': '+this.title
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.description
+        }
+      ]
+    }
   }
+}
 </script>
-
