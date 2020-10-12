@@ -232,15 +232,14 @@ class Home extends SENE_Controller
 
       <div class="columns">
         <div class="column">
-          <b-button tag="router-link" to="/3.2.1/tutorial/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-            Tutorial
-          </b-button>
-        </div>
-        <div class="column is-2">&nbsp;</div>
-        <div class="column">
-          <b-button tag="router-link" to="/3.2.1/uri_routing/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-            Uri Routing
-          </b-button>
+          <div class="buttons">
+            <b-button tag="router-link" to="/3.2.1/tutorial/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+              Tutorial
+            </b-button>
+            <b-button tag="router-link" to="/3.2.1/uri-routing/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+              Uri Routing
+            </b-button>
+          </div>
         </div>
       </div>
 
@@ -250,14 +249,34 @@ class Home extends SENE_Controller
 <script>
 export default {
   layout: 'v3.2.1',
-  data() {
+  data (){
     return {
-      title: 'Tutorial: Introduction - Seme Framework v3.2.1'
+      name: 'Seme Framework v3.2.1',
+      suffix: ' - Seme Framework v3.2.1',
+      title: 'Tutorial: Introduction',
+      description: 'Learn more about introduction tutorial of Seme Framework version 3.2.1 through this documentation.'
     }
   },
   head() {
     return {
-      title: this.title,
+      title: this.title+this.suffix,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.name+': '+this.title
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.description
+        }
+      ]
     }
   }
 }
