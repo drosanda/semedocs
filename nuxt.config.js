@@ -1,6 +1,7 @@
 export default {
   modules: [
     'nuxt-buefy',
+    '@nuxtjs/amp',
     '@nuxtjs/pwa',
     '@nuxtjs/sitemap'
   ],
@@ -37,10 +38,8 @@ export default {
         width: '1480px',
         height: '1038px',
         type: 'image/png'
-      }
-    },
-    manifest: {
-      publicPath: '/'
+      },
+      theme_color: '#fb898f'
     }
   },
   css: [
