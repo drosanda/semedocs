@@ -14,7 +14,7 @@
           <div class="content">
             <h1 class="">Introduction</h1>
             <p>Before starting the tutorial, you have to do which is described on the <NuxtLink to="/4.0.0/requirements">requirements</NuxtLink> first.</p>
-            <p>The goals for this tutorial is, how to interacted with Model, View, And Controller.</p>
+            <p>The goals for this tutorial is, how to interacted with View and Controller. Model interaction will be explored at next tutorial.</p>
             <p>Ok, lets get started!.</p>
 
             <h2>Hello World!</h2>
@@ -51,50 +51,10 @@ class Home extends SENE_Controller
             </figure>
 
             <hr>
-            <h3>Model</h3>
-            <p>On this tutorial we will learn, how to interacted with model from controller.</p>
-            <p>First, open files located at <code>app/model/hello_model.php</code>.</p>
-            <p>If the file doesnt exists, create one.</p>
-            <p>And then, put this code on it.</p>
 
-            <pre>
-&#x3C;?php
-class Hello_Model extends SENE_Model
-{
-    public function __construct()
-    {
-        parent::__construct();
-    }
-    public function get()
-    {
-        return &#x27;Hello World, from model&#x27;;
-    }
-}
-            </pre>
-            <p>And then, open and edit the <code>app/controller/home.php</code> again.</p>
-            <p>Put model loader on constructor.</p>
-            <pre>
-&#x3C;?php
-class Home extends SENE_Controller
-{
-  public function __construct()
-  {
-      parent::__construct();
-      $this-&#x3E;load(&#x22;hello_model&#x22;, &#x22;h&#x22;);
-  }
-  public function index()
-  {
-      echo $this-&#x3E;h-&#x3E;get();
-  }
-}
-            </pre>
-            <p>And then open <code>http://localhost/seme_framework</code>, it should show Hello World from model.</p>
-            <figure>
-              <img src="~/assets/img/hello-world-from-model.png" >
-            </figure>
 
             <h3>View</h3>
-            <p>On this tutorial we will learn how to render the view with theme and passing the data from model to view passed by controller.</p>
+            <p>On this tutorial we will learn how to render the view with theme and passing the data from controller to view passed by controller.</p>
 
             <b-message class="is-success">
               <p>This tutorial using <a href="https://materializecss.com/" target="_blank">materializeCSS</a> as the CSS Library.</p>
@@ -244,7 +204,6 @@ class Home extends SENE_Controller
   {
     parent::__construct();
     $this-&#x3E;setTheme(&#x27;front&#x27;);
-    $this-&#x3E;load(&#x22;hello_model&#x22;, &#x22;h&#x22;);
   }
   public function index()
   {
@@ -254,7 +213,7 @@ class Home extends SENE_Controller
     $this-&#x3E;setKeyword(&#x27;Seme Framework&#x27;);
     $this-&#x3E;setAuthor(&#x27;Seme Framework&#x27;);
 
-    $data[&#x27;hello&#x27;] = $this-&#x3E;h-&#x3E;get();
+    $data[&#x27;hello&#x27;] = &#x22;this is from controller&#x22;;
 
     $this-&#x3E;putThemeContent(&#x22;home/home&#x22;,$data); //pass data to view
 
@@ -285,7 +244,6 @@ class Home extends SENE_Controller
   {
     parent::__construct();
     $this-&#x3E;setTheme(&#x27;front&#x27;);
-    $this-&#x3E;load(&#x22;hello_model&#x22;, &#x22;h&#x22;);
   }
   public function index()
   {
@@ -295,7 +253,7 @@ class Home extends SENE_Controller
     $this-&#x3E;setKeyword(&#x27;Seme Framework&#x27;);
     $this-&#x3E;setAuthor(&#x27;Seme Framework&#x27;);
 
-    $data[&#x27;hello&#x27;] = $this-&#x3E;h-&#x3E;get();
+    $data[&#x27;hello&#x27;] = &#x22;this is from controller&#x22;;
 
     $this-&#x3E;putThemeContent(&#x22;home/home&#x22;,$data); //pass data to view
     $this-&#x3E;putJsContent(&#x22;home/home_bottom&#x22;,$data); //pass data to view
