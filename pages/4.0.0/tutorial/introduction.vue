@@ -9,7 +9,7 @@
           <li class="unavailable">Introduction</li>
         </ul>
       </nav>
-      <div class="columns">
+      <div class="">
         <div class="column">
           <div class="content">
             <h1 class="">Introduction</h1>
@@ -32,7 +32,7 @@
               If the file doesnt exists, create one.
             </p>
             <pre>
-&#x3C;?php
+              <code v-highlight class="php">&#x3C;?php
 class Home extends SENE_Controller
 {
     public function __construct()
@@ -43,7 +43,7 @@ class Home extends SENE_Controller
     {
         echo 'Hello World!';
     }
-}
+}</code>
             </pre>
             <p>And then open <code>http://localhost/seme_framework</code>, it should show Hello World!.</p>
             <figure>
@@ -51,7 +51,6 @@ class Home extends SENE_Controller
             </figure>
 
             <hr>
-
 
             <h3>View</h3>
             <p>On this tutorial we will learn how to render the view with theme and passing the data from controller to view passed by controller.</p>
@@ -61,8 +60,7 @@ class Home extends SENE_Controller
             </b-message>
             <h4>Create Theme: <u>front</u>.</h4>
             <p>Before start, we have to understand the theme directory structure.</p>
-            <pre>
--| app/
+            <pre><code v-highlight class="plaintext">-| app/
 ---| view/
 -----| front/
 -------| theme.json
@@ -70,8 +68,7 @@ class Home extends SENE_Controller
 -------| page/
 ---------| col-1.php
 -----------| html/
--------------| head.php
-            </pre>
+-------------| head.php</code></pre>
             <p>Check the <code>app/view/front/</code> directory, create directory if does not exists.</p>
             <p>Check the <code>app/view/front/page/</code> directory, create directory if does not exists.</p>
             <p>Check the <code>app/view/front/page/html/</code> directory, create directory if does not exists.</p>
@@ -81,27 +78,26 @@ class Home extends SENE_Controller
             <p>Open files located at <code>app/view/front/theme.json</code>.</p>
             <p>If the file does not exists, create one. And then, put this code on it.</p>
 
-            <pre>
+            <pre><code v-highlight class="json">
 [
   &#x22;&#x3C;link rel=\&#x22;stylesheet\&#x22; href=\&#x22;https://fonts.googleapis.com/icon?family=Material+Icons\&#x22; \/&#x3E;&#x22;,
   &#x22;&#x3C;link rel=\&#x22;stylesheet\&#x22; href=\&#x22;https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css\&#x22; \/&#x3E;&#x22;
-]</pre>
+]</code></pre>
             <h5>File script.json</h5>
             <p>File script.json purpose is to define the javascript that are required for creating the Theme.</p>
             <p>We will define the which scripts to load. Open files located at <code>app/view/front/script.json</code>.</p>
             <p>If the file does not exists, create one. And then, put this code on it.</p>
-            <pre>
+            <pre><code v-highlight class="json">
 [
   &#x22;&#x3C;script src=\&#x22;https://code.jquery.com/jquery-3.5.1.min.js\&#x22;&#x3E;&#x3C;\/script&#x3E;&#x22;,
   &#x22;&#x3C;script src=\&#x22;https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js\&#x22;&#x3E;&#x3C;\/script&#x3E;&#x22;
-]</pre>
+]</code></pre>
             <h5>Create HTML Main layout</h5>
             <p>Seme Framework support HTML main layout for rendering html, javascript, and content.</p>
             <p>Open files located at <code>app/view/front/page/col-1.php</code>.</p>
             <p>If the file does not exists, create one. And then, put this code on it.</p>
 
-            <pre>
-&#x3C;!DOCTYPE html&#x3E;
+            <pre><code v-highlight class="php-template">&#x3C;!DOCTYPE html&#x3E;
 &#x3C;html&#x3E;
   &#x3C;?php $this-&#x3E;getThemeElement(&#x27;page/html/head&#x27;, $__forward) ?&#x3E;
   &#x3C;body&#x3E;
@@ -119,7 +115,7 @@ class Home extends SENE_Controller
   &#x9;&#x3C;/script&#x3E;
   &#x3C;/body&#x3E;
 &#x3C;/html&#x3E;
-            </pre>
+</code></pre>
             <b-message type="is-info">
               <p>There is only one variable can pass through the view from controller.</p>
               <p>So, we have to put any variable that will pass into view in single array.</p>
@@ -130,8 +126,7 @@ class Home extends SENE_Controller
             <p>Seme Framework support separated layout element for maximizing reusable components.</p>
             <p>To do so open files located at <code>app/view/front/page/html/head.php</code>.</p>
             <p>If the file does not exists, create one. And then, put this code on it.</p>
-            <pre>
-&#x3C;head&#x3E;
+            <pre><code v-highlight class="php-template">&#x3C;head&#x3E;
 &#x9;&#x3C;meta charset=&#x22;utf-8&#x22;&#x3E;
 &#x9;&#x3C;meta name=&#x22;viewport&#x22; content=&#x22;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&#x22;&#x3E;
 
@@ -152,8 +147,7 @@ class Home extends SENE_Controller
 &#x9;&#x3C;?php $this-&#x3E;getAdditionalBefore()?&#x3E;
 &#x9;&#x3C;?php $this-&#x3E;getAdditional()?&#x3E;
 &#x9;&#x3C;?php $this-&#x3E;getAdditionalAfter()?&#x3E;
-&#x3C;/head&#x3E;
-            </pre>
+&#x3C;/head&#x3E;</code></pre>
 
             <b-message type="is-info">
               <p>Seme Framework theme engine required these files to work properly:</p>
@@ -175,8 +169,7 @@ class Home extends SENE_Controller
             <p>To do so, open files located at <code>app/view/front/home/home.php</code>.</p>
             <p>If the file does not exists, create one.</p>
             <p>And then, put this code on it.</p>
-            <pre>
-&#x3C;div class=&#x22;container&#x22;&#x3E;
+            <pre><code v-highlight class="php-template">&#x3C;div class=&#x22;container&#x22;&#x3E;
   &#x3C;div class=&#x22;row&#x22;&#x3E;
     &#x3C;div class=&#x22;col m12 s12&#x22;&#x3E;
       &#x3C;div class=&#x22;card rounded preload-any&#x22;&#x3E;
@@ -191,13 +184,11 @@ class Home extends SENE_Controller
       &#x3C;/div&#x3E;
     &#x3C;/div&#x3E;
   &#x3C;/div&#x3E;
-&#x3C;/div&#x3E;
-            </pre>
+&#x3C;/div&#x3E;</code></pre>
             <h5>Implement on the Controller</h5>
             <p>After creating a theme with its content, now we have to integrating it from controller.</p>
             <p>To do so, open <code>app/controller/home.php</code> and then change the source code with this code:</p>
-            <pre>
-&#x3C;?php
+            <pre><code v-highlight class="php-template">&#x3C;?php
 class Home extends SENE_Controller
 {
   public function __construct()
@@ -221,7 +212,7 @@ class Home extends SENE_Controller
     $this-&#x3E;render();
   }
 }
-            </pre>
+</code></pre>
             <h5>Test the Result</h5>
             <p>For testing the result, open <code>http://localhost/seme_framework</code> from browser and then lets we see what we got.</p>
             <figure>
@@ -234,10 +225,9 @@ class Home extends SENE_Controller
             <p>With the main layout that we have created before, we can include and render javascript using Seme Framework.</p>
             <p>For achieving this, first create the file <code>app/view/front/home/home_bottom.php</code>.</p>
             <p>And then, put this code on it.</p>
-            <pre>alert(&#x27;This is Hello World from app/view/home/home_bottom.php&#x27;);</pre>
+            <pre><code v-highlight class="javascript">alert(&#x27;This is Hello World from app/view/home/home_bottom.php&#x27;);</code></pre>
             <p>After that, we have to load the home bottom from <code>app/controller/home.php</code>.</p>
-            <pre>
-&#x3C;?php
+            <pre><code v-highlight class="php-template">&#x3C;?php
 class Home extends SENE_Controller
 {
   public function __construct()
@@ -261,8 +251,7 @@ class Home extends SENE_Controller
     $this-&#x3E;loadLayout(&#x22;col-1&#x22;,$data);
     $this-&#x3E;render();
   }
-}
-            </pre>
+}</code></pre>
             <p>To test it, open <code>http://localhost/seme_framework</code> using browser.</p>
             <p>It should show an alert, view with loaded CSS, and show H1 with content Hello World from view and using theme.</p>
             <figure>
