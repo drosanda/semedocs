@@ -8,7 +8,7 @@
         </ul>
       </nav>
 
-      <div class="columns">
+      <div class="">
         <div class="column">
           <div class="content">
             <h1>Seme Framework version 4.0.0</h1>

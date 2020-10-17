@@ -7,7 +7,7 @@
           <li class="unavailable">Credits</li>
         </ul>
       </nav>
-      <div class="columns">
+      <div class="">
         <div class="column">
           <div class="content">
             <h1>Credits</h1>

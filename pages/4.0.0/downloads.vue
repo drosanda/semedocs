@@ -8,7 +8,7 @@
           <li class="unavailable">Downloads</li>
         </ul>
       </nav>
-      <div class="columns">
+      <div class="">
         <div class="column">
           <div class="content">
             <h1 class="">Downloads</h1>
@@ -40,7 +40,7 @@
               <li>List content of directory <code>ls</code> or <code>dir</code> check if directory is existed.</li>
               <li>If directory existed delete with command <code>rm -fr seme_framework</code> or move the directory with <code>mv seme_framework sf_old</code>.</li>
               <li>clone from repo and put on seme_framework directory.
-                <pre>git clone https://github.com/drosanda/seme-framework.git seme_framework</pre>
+                <pre><code v-highlight class="shell"># git clone https://github.com/drosanda/seme-framework.git seme_framework</code></pre>
               </li>
             </ul>
             <p>

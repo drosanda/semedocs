@@ -8,7 +8,7 @@
           <li class="unavailable">Requirements</li>
         </ul>
       </nav>
-      <div class="columns">
+      <div class="">
         <div class="column">
           <div class="content">
             <h1 class="">Requirements</h1>
