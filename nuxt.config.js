@@ -3,7 +3,10 @@ export default {
     'nuxt-buefy',
     '@nuxtjs/amp',
     '@nuxtjs/pwa',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    ['nuxt-highlightjs', {
+      style: 'foundation'
+    }]
   ],
   head: {
     meta: [

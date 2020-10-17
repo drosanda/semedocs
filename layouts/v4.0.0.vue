@@ -98,6 +98,7 @@
               <li>
                 <nuxt-link to="/4.0.0/database">Database</nuxt-link>
                 <ul>
+                  <li><nuxt-link to="/4.0.0/database/setup">Setup</nuxt-link></li>
                   <li><nuxt-link to="/4.0.0/database/quick-start">Quick Start</nuxt-link></li>
                   <li><nuxt-link to="/4.0.0/database/query-builder">Query Builder</nuxt-link></li>
                 </ul>
