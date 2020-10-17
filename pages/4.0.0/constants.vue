@@ -8,7 +8,7 @@
           <li class="unavailable">Constants</li>
         </ul>
       </nav>
-      <div class="columns">
+      <div class="">
         <div class="column">
           <div class="content">
             <h1>Constants</h1>
