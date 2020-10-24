@@ -6,30 +6,30 @@
           <li class=""><NuxtLink to="/">Home</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">Bahasa Indonesia</NuxtLink></li>
           <li class=""><NuxtLink to="/id/tutorial">Tutorial</NuxtLink></li>
-          <li class="unavailable">Introduction</li>
+          <li class="unavailable">Pendahuluan</li>
         </ul>
       </nav>
       <div class="">
         <div class="column">
           <div class="content">
-            <h1 class="">Introduction</h1>
-            <p>Before starting the tutorial, you have to do which is described on the <NuxtLink to="/id/requirements">requirements</NuxtLink> first.</p>
-            <p>The goals for this tutorial is, how to interacted with View and Controller. Model interaction will be explored at next tutorial.</p>
-            <p>Ok, lets get started!.</p>
+            <h1 class="">Pendahuluan</h1>
+            <p>Sebelum memulai tutorial, Anda harus melakukan yang dijelaskan pada <NuxtLink to="/id/requirements">halaman persyaratan</NuxtLink>  terlebih dahulu.</p>
+            <p>Tujuan dari tutorial ini adalah, bagaimana berinteraksi dengan View dan Controller. Interaksi model akan dibahas pada tutorial berikutnya.</p>
+            <p>Baiklah kita mulai!</p>
 
             <h2>Hello World!</h2>
-            <p>Hello World is often used to illustrate the basic syntax of a programming language.</p>
-            <p>But on Seme Framework, Hello World used to checked the basic MVC purpose.</p>
+            <p>Hello World sering digunakan untuk menggambarkan sintaks dasar dari suatu bahasa pemrograman.</p>
+            <p>Tetapi pada Seme Framework, Hello World Hello World digunakan untuk memeriksa tujuan dasar MVC.</p>
 
-            <h3>Configuration adjustment</h3>
-            <p>We assumed that you put Seme Framework which is described In the <NuxtLink to="/id/downloads">Download &amp; Install</NuxtLink> page.</p>
-            <p>After that, start the XAMPP and open <code>http://localhost/seme_framework</code>.</p>
+            <h3>Penyesuaian konfigurasi</h3>
+            <p>Asumsikan Seme Framework telah di instal sesuai dengan halaman <NuxtLink to="/id/downloads">Download &amp; Install</NuxtLink>.</p>
+            <p>Setelah itu, jalankan XAMPP dan buka <code>http://localhost/seme_framework</code> melalui google chrome atau firefox.</p>
 
             <h3>Controller</h3>
-            <p>On Seme Framework, the default controller named <code>home.php</code> with its class name name <code>Home</code> too.</p>
+            <p>Seme framework memiliki default controller yang bernama <code>home.php</code> dengan nama kelas yang sama yaitu <code>Home</code>.</p>
             <p>
-              First, open files located at <code>app/controller/home.php</code>.
-              If the file doesnt exists, create one.
+              Pertama, buka file yang terletak di <code>app/controller/home.php</code>.
+              Apabila tidak ada file atau direktori tersebut, buatlah terlebih dahulu.
             </p>
             <pre>
               <code v-highlight class="php">&#x3C;?php
@@ -45,7 +45,7 @@ class Home extends SENE_Controller
     }
 }</code>
             </pre>
-            <p>And then open <code>http://localhost/seme_framework</code>, it should show Hello World!.</p>
+            <p>Kemudian buka alamat <code>http://localhost/seme_framework</code>, itu seharusnya sudah memunculkan Hello World! langsung dari kelas home.php controller.</p>
             <figure>
               <img src="~/assets/img/hello-world.png" >
             </figure>
@@ -53,13 +53,13 @@ class Home extends SENE_Controller
             <hr>
 
             <h3>View</h3>
-            <p>On this tutorial we will learn how to render the view with theme and passing the data from controller to view passed by controller.</p>
+            <p>Pada tutorial ini kita akan mempelajari cara merender tampilan dengan tema dan meneruskan data dari controller ke tampilan yang dilewatkan oleh controller.</p>
 
             <b-message class="is-success">
-              <p>This tutorial using <a href="https://materializecss.com/" target="_blank">materializeCSS</a> as the CSS Library.</p>
+              <p>Tutorial ini menggunakan <a href="https://materializecss.com/" target="_blank">materializeCSS</a> sebagai library CSS-nya.</p>
             </b-message>
-            <h4>Create Theme: <u>front</u>.</h4>
-            <p>Before start, we have to understand the theme directory structure.</p>
+            <h4>Membuat tema: <u>front</u>.</h4>
+            <p>Sebelum memulai, kita harus memahami struktur direktori tema.</p>
             <pre><code v-highlight class="plaintext">-| app/
 ---| view/
 -----| front/
@@ -69,14 +69,14 @@ class Home extends SENE_Controller
 ---------| col-1.php
 -----------| html/
 -------------| head.php</code></pre>
-            <p>Check the <code>app/view/front/</code> directory, create directory if does not exists.</p>
-            <p>Check the <code>app/view/front/page/</code> directory, create directory if does not exists.</p>
-            <p>Check the <code>app/view/front/page/html/</code> directory, create directory if does not exists.</p>
+            <p>Periksa direktori <code>app/view/front/</code> apabila belum ada, silakan buat direktori tersebut.</p>
+            <p>Periksa direktori <code>app/view/front/page/</code> apabila belum ada, silakan buat direktori tersebut.</p>
+            <p>Periksa direktori <code>app/view/front/page/html/</code> apabila belum ada, silakan buat direktori tersebut.</p>
 
             <h5>File theme.json</h5>
-            <p>File theme.json purpose is to define the css that are required for creating the Theme.</p>
-            <p>Open files located at <code>app/view/front/theme.json</code>.</p>
-            <p>If the file does not exists, create one. And then, put this code on it.</p>
+            <p>File theme.json digunakan untuk mendefinisikan css apa saja yang akan digunakan oleh tema.</p>
+            <p>Buka file yang terletak di <code>app/view/front/theme.json</code>.</p>
+            <p>apabila belum ada, silakan buat file tersebut dan <i>paste</i>-kan isinya dari kode dibawah ini.</p>
 
             <pre><code v-highlight class="json">
 [
@@ -84,18 +84,18 @@ class Home extends SENE_Controller
   &#x22;&#x3C;link rel=\&#x22;stylesheet\&#x22; href=\&#x22;https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css\&#x22; \/&#x3E;&#x22;
 ]</code></pre>
             <h5>File script.json</h5>
-            <p>File script.json purpose is to define the javascript that are required for creating the Theme.</p>
-            <p>We will define the which scripts to load. Open files located at <code>app/view/front/script.json</code>.</p>
-            <p>If the file does not exists, create one. And then, put this code on it.</p>
+            <p>File script.json digunakan untuk mendefinisikan file javascript apa saja yang akan digunakan oleh tema.</p>
+            <p>Seme Framework akan menentukan skrip mana yang akan dimuat. Buka file yang terletak di <code>app/view/front/script.json</code>.</p>
+            <p>apabila belum ada, silakan buat file tersebut dan <i>paste</i>-kan isinya dari kode dibawah ini.</p>
             <pre><code v-highlight class="json">
 [
   &#x22;&#x3C;script src=\&#x22;https://code.jquery.com/jquery-3.5.1.min.js\&#x22;&#x3E;&#x3C;\/script&#x3E;&#x22;,
   &#x22;&#x3C;script src=\&#x22;https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js\&#x22;&#x3E;&#x3C;\/script&#x3E;&#x22;
 ]</code></pre>
-            <h5>Create HTML Main layout</h5>
-            <p>Seme Framework support HTML main layout for rendering html, javascript, and content.</p>
-            <p>Open files located at <code>app/view/front/page/col-1.php</code>.</p>
-            <p>If the file does not exists, create one. And then, put this code on it.</p>
+            <h5>Membuat layout HTML utama</h5>
+            <p>Seme Framework mendukung tata letak utama HTML untuk rendering html, javascript, dan konten.</p>
+            <p>Buka file yang terletak di <code>app/view/front/page/col-1.php</code>.</p>
+            <p>apabila belum ada, silakan buat file tersebut dan <i>paste</i>-kan isinya dari kode dibawah ini.</p>
 
             <pre><code v-highlight class="php-template">&#x3C;!DOCTYPE html&#x3E;
 &#x3C;html&#x3E;
@@ -117,15 +117,15 @@ class Home extends SENE_Controller
 &#x3C;/html&#x3E;
 </code></pre>
             <b-message type="is-info">
-              <p>There is only one variable can pass through the view from controller.</p>
-              <p>So, we have to put any variable that will pass into view in single array.</p>
-              <p>In this example we use <code>$data</code> variable in controller.</p>
+              <p>Hanya ada satu variabel yang dapat melewati view dari controller.</p>
+              <p>Jadi, kita harus meletakkan variabel apa pun yang akan ditampilkan dalam array tunggal.</p>
+              <p>Dalam contoh ini Seme Framework menggunakan variabel <code>$data</code> dengan tipe data array didalam controller <code>home.php</code>.</p>
             </b-message>
 
-            <h5>Separated HTML head</h5>
-            <p>Seme Framework support separated layout element for maximizing reusable components.</p>
-            <p>To do so open files located at <code>app/view/front/page/html/head.php</code>.</p>
-            <p>If the file does not exists, create one. And then, put this code on it.</p>
+            <h5>Pemisahan bagian HEAD dari HTML</h5>
+            <p>Dengan menggunakan Seme Framework memungkinkan untuk memisahkan komponen html untuk memaksimalkan penggunaan kembali komponen HTML tersebut.</p>
+            <p>Untuk melakukannya, buka file yang terletak di <code>app/view/front/page/html/head.php</code>.</p>
+            <p>apabila belum ada, silakan buat file tersebut dan <i>paste</i>-kan isinya dari kode dibawah ini.</p>
             <pre><code v-highlight class="php-template">&#x3C;head&#x3E;
 &#x9;&#x3C;meta charset=&#x22;utf-8&#x22;&#x3E;
 &#x9;&#x3C;meta name=&#x22;viewport&#x22; content=&#x22;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&#x22;&#x3E;
@@ -150,25 +150,25 @@ class Home extends SENE_Controller
 &#x3C;/head&#x3E;</code></pre>
 
             <b-message type="is-info">
-              <p>Seme Framework theme engine required these files to work properly:</p>
+              <p>Pengaturan tema di Seme Framework membutuhkan file dibawah ini supaya dapat berjalan dengan baik:</p>
               <ol>
                 <li><code>theme.json</code>,</li>
                 <li><code>script.json</code>,</li>
-                <li>and a layout <code>page/col-1.php</code> </li>
+                <li>dan sebuah file untuk layout HTML. Contoh: <code>page/col-1.php</code> </li>
               </ol>
-              <p>So, we have to put any variable that will pass into view in single array.</p>
+              <p>Jadi, kita harus meletakkan variabel apa pun yang akan ditampilkan dalam array tunggal.</p>
             </b-message>
 
             <b-message type="is-info">
-              <p><code>$data[&#x27;hello&#x27;]</code> from controller, will be auto extracted into <code>$hello</code> variable in view.</p>
-              <p>As well as with the other array keys, will be auto extracted.</p>
+              <p><code>$data[&#x27;hello&#x27;]</code> dari controller, akan diekstraksi secara otomatis menjadi variabel <code>$hello</code> ketika berada didalam view.</p>
+              <p>Begitupun dengan nilai atau kunci lainnya, akan diekstraksi secara otomatis juga.</p>
             </b-message>
 
-            <h5>Create the Content</h5>
-            <p>Seme Framework support separated theme content. This content will be rendered on inner main layout.</p>
-            <p>To do so, open files located at <code>app/view/front/home/home.php</code>.</p>
-            <p>If the file does not exists, create one.</p>
-            <p>And then, put this code on it.</p>
+            <h5>Membuat isi tema</h5>
+            <p>Seme Framework mendukung konten tema yang terpisah. Konten ini akan dirender pada tata letak utama bagian dalam.</p>
+            <p>Untuk melakukanya, buka file yang terletak di <code>app/view/front/home/home.php</code>.</p>
+            <p>Apabila file tersebut belum ada, silakan buat file-nya dulu, kemudian <i>paste</i>-kan kode dibawah ini.</p>
+
             <pre><code v-highlight class="php-template">&#x3C;div class=&#x22;container&#x22;&#x3E;
   &#x3C;div class=&#x22;row&#x22;&#x3E;
     &#x3C;div class=&#x22;col m12 s12&#x22;&#x3E;
@@ -185,9 +185,10 @@ class Home extends SENE_Controller
     &#x3C;/div&#x3E;
   &#x3C;/div&#x3E;
 &#x3C;/div&#x3E;</code></pre>
-            <h5>Implement on the Controller</h5>
-            <p>After creating a theme with its content, now we have to integrating it from controller.</p>
-            <p>To do so, open <code>app/controller/home.php</code> and then change the source code with this code:</p>
+
+            <h5>Implementasi di Controller</h5>
+            <p>Setelah membuat tema, beserta isinya sekarang saatnya untuk integrasikan semuanya, mulai dari Controller sampai dengan view.</p>
+            <p>Untuk melakukannya, buka file <code>app/controller/home.php</code> kemudian edit isinya dengan menggunakan kode dibawah ini:</p>
             <pre><code v-highlight class="php-template">&#x3C;?php
 class Home extends SENE_Controller
 {
@@ -213,8 +214,9 @@ class Home extends SENE_Controller
   }
 }
 </code></pre>
-            <h5>Test the Result</h5>
-            <p>For testing the result, open <code>http://localhost/seme_framework</code> from browser and then lets we see what we got.</p>
+            <h5>Melihat hasilnya</h5>
+            <p>Untuk melihat hasil dari pembuatan tema ini, cukup buka alamat <code>http://localhost/seme_framework</code> melalui google chrome atau firefox.</p>
+            <p>Kemudian, kita lihat hasilnya apakah sama seperti <i>screenshot</i> dibawah ini.</p>
             <figure>
               <img src="~/assets/img/tutorial/introduction/6a.png">
             </figure>
@@ -267,10 +269,10 @@ class Home extends SENE_Controller
         <div class="column">
           <div class="buttons">
             <b-button tag="router-link" to="/id/tutorial/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Tutorials
+              Tutorial
             </b-button>
             <b-button tag="router-link" to="/id/tutorial/get-data/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Tutorial: Get Data
+              Mengambil Data
             </b-button>
           </div>
         </div>
@@ -286,8 +288,8 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Dokumentasi Seme Framework v4.0.0',
-      title: 'Tutorial: Introduction',
-      description: 'Pelajari selengkapnya tentang introduction tutorial of melalui dokumentasi Seme Framework versi 4.0.0.'
+      title: 'Tutorial: Pendahuluan',
+      description: 'Tutorial pendahuluan dari penggunaan Seme Framework versi 4.0.0.'
     }
   },
   head() {
