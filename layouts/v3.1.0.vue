@@ -127,7 +127,7 @@ export default {
       link: [
         {
           rel: 'canonical',
-          href: 'https://seme.nyingspot.com' + this.$route.path.replace(/\/+$/, '') + '/'
+          href: 'https://seme.framework.web.id' + this.$route.path.replace(/\/+$/, '') + '/'
         }
       ],
       meta: [

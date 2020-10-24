@@ -1,0 +1,216 @@
+<template>
+  <div class="section">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul class="breadcrumbs">
+          <li class=""><NuxtLink to="/">Home</NuxtLink></li>
+          <li class=""><NuxtLink to="/id/">Bahasa Indonesia</NuxtLink></li>
+          <li class=""><NuxtLink to="/id/model">Model</NuxtLink></li>
+          <li class="unavailable">Where Method</li>
+        </ul>
+      </nav>
+      <div class="columns">
+        <div class="column">
+          <div class="content">
+            <h1 class="">Where Method</h1>
+            <p>Where method is part of database class builder for filtering data compatible with WHERE Clause on SQL. This method support chained, and has flow from top to bottom while bracket are used.</p>
+            <pre>
+class Blog_Model extends SENE_Model{
+  var $tbl = &#x27;d_order&#x27;;
+  var $tbl_as = &#x27;dor&#x27;;
+  public function __construct(){
+    parent::__construct();
+    $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+  }
+  public function getById($id){
+    $this-&#x3E;db-&#x3E;where(&#x22;id&#x22;,$id,&#x22;AND&#x22;,&#x22;=&#x22;,0,0);
+    return $this-&#x3E;db-&#x3E;get_first();
+  }
+  public function getCancel(){
+    $this-&#x3E;db-&#x3E;where(&#x22;order_status&#x22;,&#x22;order_cancel&#x22;,&#x22;AND&#x22;,&#x22;=&#x22;,0,0);
+    return $this-&#x3E;db-&#x3E;get();
+  }
+  public function getCancelByUser($b_user_id){
+    $this-&#x3E;db-&#x3E;where(&#x22;order_status&#x22;,&#x22;order_cancel&#x22;,&#x22;AND&#x22;,&#x22;=&#x22;,0,0)
+    $this-&#x3E;db-&#x3E;where(&#x22;b_user_id&#x22;,$b_user_id,&#x22;AND&#x22;,&#x22;=&#x22;,0,0);
+    return $this-&#x3E;db-&#x3E;get();
+  }
+}
+            </pre>
+            <h2>Parameters</h2>
+            <p>Where method has 2 required parameters that is <b>column name</b> and <b>value</b>, another parameters are optional. Here is the completed parameters can be used by where methods.</p>
+            <ol type="1">
+              <li>COLUMN_NAME*</li>
+              <li>Combining Method*</li>
+              <li>Operator</li>
+              <li>Relational Operator</li>
+              <li>Bracket open (boolean)</li>
+              <li>Bracket close (boolean)</li>
+            </ol>
+            <pre>
+$this-&#x3E;db-&#x3E;where(
+COLUMN_NAME,
+VALUE,
+&#x22; AND | OR &#x22;,
+&#x22;= | != | &#x3C;= | &#x3E;= | &#x3C; | &#x3E; | &#x3C;&#x3E; |
+like | like% | %like | %like% |
+notlike | notlike% |%notlike | %notlike%
+&#x22;,
+OPENBRACKET,
+CLOSEBRACKET
+);
+            </pre>
+            <h3>COLUMN_NAME</h3>
+            <p>Column name required for filtering data from table. The columname should exist on selected table. This method has automatically escaped.</p>
+            <h3>VALUE</h3>
+            <p>Value required for matched with data on table. This method has automatically escaped.</p>
+            <h3>Combining Method</h3>
+            <p>Default value is AND, this parameter useful for filtering data for multiple condition. Available value <b>AND</b> or <b>OR</b>. Value of this parameter is not case sensitive.</p>
+            <h3>Relational Operator</h3>
+            <p>Value required for matched COLUMN_NAME with value. Available value:</p>
+            <ul>
+              <li>=</li>
+              <li>&lt;</li>
+              <li>&gt;</li>
+              <li>&lt;=</li>
+              <li>&gt;=</li>
+              <li>&lt;&gt;</li>
+              <li>like</li>
+              <li>like%</li>
+              <li>%like</li>
+              <li>%like%</li>
+              <li>notlike</li>
+              <li>notlike%</li>
+              <li>%notlike</li>
+              <li>%notlike%</li>
+            </ul>
+            <p>Value of this parameter is not case sensitive.</p>
+            <h3>OPEN BRACKET</h3>
+            <p>Required for adding bracket for prioritize condition filtering, default value 0. Available value <b>1</b> and <b>0</b>.</p>
+            <h3>CLOSE BRACKET</h3>
+            <p>Required for adding bracket for prioritize condition filtering, default value 0. Available value <b>1</b> and <b>0</b>.</p>
+            <hr/>
+            <h2>Example usage</h2>
+            <p>Here is the examples using where method, makes sure another from method and get method has executed for real result. See the first of this page for full example.</p>
+            <h3>Basic example</h3>
+            <p>Here is basic usage for selecting single data using SQL query:</p>
+            <pre>SELECT * FROM d_order WHERE `id` = 1</pre>
+            <p>Here is basic usage for selecting single data using query builder:</p>
+            <pre>$this->db->where("id",1);</pre>
+            <br>
+            <h3>Using AND / OR</h3>
+            <p>Using AND / OR by SQL query:</p>
+            <pre>
+SELECT *
+FROM d_order
+WHERE
+&#x60;a_company_id&#x60; = 1 OR
+&#x60;b_user_id&#x60; = 1
+            </pre>
+            <p>Using AND / OR by query builder:</p>
+            <pre>
+$this-&#x3E;db-&#x3E;where(&#x22;b_user_id&#x22;,1,&#x27;OR&#x27;)-&#x3E;where(&#x22;a_company_id&#x22;,1,&#x27;AND&#x27;);
+            </pre>
+            <br>
+            <h3>Using Relational Operator</h3>
+            <p>Using Relational Operator by query builder:</p>
+            <pre>
+SELECT *
+FROM d_order
+WHERE
+&#x60;b_user_id&#x60; = 1 AND
+&#x60;grand_total&#x60; &#x3E;= 1000 AND
+&#x60;status_text&#x60; LIKE &#x27;order_completed&#x27;
+            </pre>
+            <p>Using Relational Operator by query builder:</p>
+            <pre>
+$this-&#x3E;db
+-&#x3E;where(&#x22;b_user_id&#x22;,1)
+-&#x3E;where(&#x22;grand_total&#x22;,1000,&#x22;and&#x22;,&#x27;&#x3E;=&#x27;)
+-&#x3E;where(&#x22;status_text&#x22;,&#x27;order_completed&#x27;,&#x22;and&#x22;,&#x27;like&#x27;);
+            </pre>
+            <br>
+            <h3>Using Bracket</h3>
+            <p>Using bracket open and close by SQL query:</p>
+            <pre>
+SELECT *
+FROM b_user
+WHERE
+&#x60;status_text&#x60; LIKE &#x27;active&#x27; AND
+(
+&#x60;fname&#x60; LIKE &#x27;%andre%&#x27; OR
+&#x60;lname&#x60; LIKE &#x27;%andre%&#x27; OR
+&#x60;city&#x60; LIKE &#x27;%andre%&#x27; OR
+&#x60;email LIKE &#x27;%andre%&#x27;
+)
+            </pre>
+            <p>Using bracket open and close by query builder:</p>
+            <pre>
+$this-&#x3E;db
+-&#x3E;where(&#x22;status_text&#x22;,&#x27;active&#x27;,&#x27;and&#x27;,&#x27;like&#x27;)
+-&#x3E;where(&#x22;fname&#x22;,&#x27;andre&#x27;,&#x22;and&#x22;,&#x27;%like%&#x27;,1,0)
+-&#x3E;where(&#x22;lname&#x22;,&#x27;andre&#x27;,&#x22;and&#x22;,&#x27;%like%&#x27;,0,0)
+-&#x3E;where(&#x22;city&#x22;,&#x27;andre&#x27;,&#x22;and&#x22;,&#x27;%like%&#x27;,0,0)
+-&#x3E;where(&#x22;email&#x22;,&#x27;andre&#x27;,&#x22;and&#x22;,&#x27;%like%&#x27;,0,1);
+            </pre>
+            <hr>
+            <h2>Advanced Where Condition</h2>
+            <p>Seme Framework has advanced where method called <NuxtLink to="/model-where-as">where_as method</NuxtLink>.</p>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="columns">
+        <div class="column">
+          <b-button tag="router-link" to="/id/model/composite_create" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+            Model::composite_create
+          </b-button>
+        </div>
+        <div class="column is-2">&nbsp;</div>
+        <div class="column">
+          <b-button tag="router-link" to="/id/model/where_as" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+            Model::where_as
+          </b-button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</template>
+<script>
+export default {
+  layout: 'id',
+  data (){
+    return {
+      name: 'Seme Framework v4.0.0',
+      suffix: ' - Dokumentasi Seme Framework v4.0.0',
+      title: 'Model::where method',
+      description: 'Pelajari selengkapnya tentang where method on SENE_Model class from Seme Framework.'
+    }
+  },
+  head() {
+    return {
+      title: this.title+this.suffix,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.name+': '+this.title
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.description
+        }
+      ]
+    }
+  }
+}
+</script>

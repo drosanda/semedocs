@@ -3,14 +3,15 @@
     <div class="container">
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
-          <li class="unavailable">Home</li>
+          <li class=""><NuxtLink to="/">Halaman Utama</NuxtLink></li>
+          <li class="unavailable">Bahasa Indonesia</li>
         </ul>
       </nav>
 
       <div class="">
         <div class="column">
           <div class="content">
-            <h1 class="is-size-1">Selamat datang di dokumentasi resmi Seme Framework</h1>
+            <h1 class="is-size-1">Dokumentasi Seme Framework versi 4.0.0 dalam bahasa Indonesia</h1>
             <p>Ini adalah dokumentasi resmi untuk Seme Framework, PHP MVC Framework untuk membuat aplikasi berbasis web yang cepat. Cocok untuk membuat aplikasi yang kecil sampai menengah.</p>
             <p>Pada versi pertama Seme Framework digunakan untuk membangun API (Middleware) untuk Aplikasi lain seperti aplikasi berbasis android, iOS, dll.</p>
             <p>Sekarang ini Seme Framework sudah dapat digunakan untuk membuat aplikasi berbasis web seutuhnya.</p>
@@ -20,10 +21,10 @@
             </figure>
 
             <div class="buttons">
-              <b-button tag="router-link" to="/4.0.0/downloads/" type="is-link">
+              <b-button tag="router-link" to="/id/downloads/" type="is-link">
                 Download
               </b-button>
-              <b-button tag="router-link" to="/4.0.0/tutorial/" type="is-link">
+              <b-button tag="router-link" to="/id/tutorial/" type="is-link">
                 Mulai percobaan
               </b-button>
               <b-button tag="router-link" to="/error/" type="is-link">
@@ -47,9 +48,11 @@
             </div>
             <hr>
             <h2>Lisensi</h2>
-            <p>Seme Framework licensed under MIT version 2.0.</p>
-            <h2>Question and Answer</h2>
-            <p>Feel free to ask me on my <a href="https://instagram.com/drosanda/" target="_blank">instagram</a>, <a href="https://facebook.com/drs11/" target="_blank">facebook</a>, or open an issue on <a href="https://github.com/drosanda/semedocs/issues" target="_blank">github</a>.</p>
+            <p>Seme Framework menggunakan lisensi MIT versi 2.0.</p>
+
+            <h2>Pertanyaan dan Jawaban</h2>
+            <p>Jika bingung, ada bug, atau <i>request</i> fitur jang sungkan untuk menghubungi saya melalui <a href="https://instagram.com/drosanda/" target="_blank">instagram</a>, <a href="https://facebook.com/drs11/" target="_blank">facebook</a>, atau buat isu permasalahan baru melalui <a href="https://github.com/drosanda/semedocs/issues" target="_blank">github</a>.</p>
+            <hr>
           </div>
         </div>
       </div>
@@ -58,8 +61,8 @@
       <div class="columns">
         <div class="column">
           <div class="buttons">
-            <b-button tag="router-link" to="/credits/" type="is-link" icon-pack="fa" icon-right="chevron-right">
-              Credits
+            <b-button tag="router-link" to="/id/requirements/" type="is-link" icon-pack="fa" icon-right="chevron-right">
+              Kebutuhan
             </b-button>
           </div>
         </div>
@@ -70,12 +73,12 @@
 </template>
 <script>
   export default {
-    layout: 'default',
+    layout: 'id',
     data (){
       return {
-        title: 'Welcome to Seme Framework Documentation',
-        suffix: ' - The Lightweight and Deployable PHP MVC Framework',
-        description: 'Seme Framework is lightweight and deployable PHP MVC Framework that you can learn more through this documentation.'
+        title: 'Dokumentasi Resmi Seme Framework Bahasa Indonesia',
+        suffix: ' - Framework PHP yang Ringan untuk dikembangkan',
+        description: 'Seme Framework adalah Framework dengan konsep MVC untuk PHP yang ringan untuk dikembangkan.'
       }
     },
     head() {

@@ -38,7 +38,7 @@ export default {
       link: [
         {
           rel: 'canonical',
-          href: 'https://www.cenah.co.id/' + this.$route.path.replace(/\/+$/, '') + '/'
+          href: 'https://seme.framework.web.id/' + this.$route.path.replace(/\/+$/, '') + '/'
         }
       ]
     }
