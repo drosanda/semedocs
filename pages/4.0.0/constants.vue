@@ -31,8 +31,16 @@
                   <td>Point to <code>kero/lib</code> directory</td>
                 </tr>
                 <tr>
-                  <td>SEMEVERSION</td>
+                  <td>SEME_VERSION</td>
                   <td>Current version value of Seme Framework</td>
+                </tr>
+                <tr>
+                  <td>SEME_START</td>
+                  <td>Return the microtime value of first (initial) script.</td>
+                </tr>
+                <tr>
+                  <td>DS</td>
+                  <td>Return the current (system) directory separator.</td>
                 </tr>
               </tbody>
             </table>
