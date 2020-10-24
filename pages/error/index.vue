@@ -4,13 +4,13 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Home</NuxtLink></li>
-          <li class="unavailable">Error &amp; Troubleshooting</li>
+          <li class="unavailable">Notice, Error &amp; Troubleshooting</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1>Error &amp; Troubleshooting</h1>
+            <h1>Notice, Error &amp; Troubleshooting</h1>
             <p>Like other framework, Seme Framework has builtin error message.</p>
             <p>Here is the list of known error that ussually occured in Seme Framework</p>
             <ul>
@@ -25,6 +25,12 @@
                 <a href="#">Error</a>
                 <ul>
                   <li><NuxtLink to="/error/could-not-find-model/">[1024] Could not find model</NuxtLink></li>
+                </ul>
+              </li>
+              <li>
+                <NuxtLink to="/error/troubleshooting/">Troubleshooting</NuxtLink>
+                <ul>
+                  <li><NuxtLink to="/error/troubleshooting/log-all-query">How to log all query</NuxtLink></li>
                 </ul>
               </li>
             </ul>

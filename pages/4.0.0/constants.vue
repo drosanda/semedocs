@@ -12,15 +12,32 @@
         <div class="column">
           <div class="content">
             <h1>Constants</h1>
-            <p>Seme Framework contains some constant that can help during development progress.</p>
+            <p>Seme Framework contains some constant that can help during coding phase.</p>
             <p>Here is the list of constant:</p>
-            <ul type="1">
-              <li>SEMEROOT: points to root directory</li>
-              <li>SEMELIB: points to root kero/lib directory</li>
-              <li>SEMEVERSION: contains about the version of framework</li>
-            </ul>
-            <p>And for view scope, Seme Framework has variable that can be passed initialize data to another view (unantended).</p>
-            <p><code>$__forward</code> are globally reserved for re-passing the data in view to another view.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Constant</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>SEMEROOT</td>
+                  <td>Point to Seme Framework root directory</td>
+                </tr>
+                <tr>
+                  <td>SEMELIB</td>
+                  <td>Point to <code>kero/lib</code> directory</td>
+                </tr>
+                <tr>
+                  <td>SEMEVERSION</td>
+                  <td>Current version value of Seme Framework</td>
+                </tr>
+              </tbody>
+            </table>
+
+
           </div>
         </div>
       </div>

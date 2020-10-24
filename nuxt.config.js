@@ -49,6 +49,7 @@ export default {
     '~/css/style.css'
   ],
   plugins: [
+    { src: '~plugins/fb.js', mode: 'client' },
     { src: '~plugins/ga.js', mode: 'client' }
   ],
   target: 'server',
