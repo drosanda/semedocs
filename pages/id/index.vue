@@ -62,7 +62,7 @@
         <div class="column">
           <div class="buttons">
             <b-button tag="router-link" to="/id/requirements/" type="is-link" icon-pack="fa" icon-right="chevron-right">
-              Kebutuhan
+              Persyaratan
             </b-button>
           </div>
         </div>
@@ -76,8 +76,8 @@
     layout: 'id',
     data (){
       return {
-        title: 'Dokumentasi Resmi Seme Framework Bahasa Indonesia',
-        suffix: ' - Framework PHP yang Ringan untuk dikembangkan',
+        title: 'Dokumentasi Resmi Bahasa Indonesia',
+        suffix: ' - Seme Framework versi 4.0.0',
         description: 'Seme Framework adalah Framework dengan konsep MVC untuk PHP yang ringan untuk dikembangkan.'
       }
     },

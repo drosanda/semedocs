@@ -5,6 +5,9 @@
         <figure>
           <img src="~/static/logo.png">
         </figure>
+        <div class="badges">
+          <img src='https://travis-ci.org/drosanda/seme-framework.svg?branch=master' alt="build status">
+        </div>
         <ul class="menu-list">
           <li><nuxt-link to="/id/requirements">Persyaratan</nuxt-link></li>
           <li><nuxt-link to="/id/downloads">Download &amp; Install</nuxt-link></li>
@@ -12,7 +15,7 @@
             <nuxt-link to="/id/configuration">Pengaturan</nuxt-link>
             <ul>
               <li><nuxt-link to="/id/configuration/url">URL</nuxt-link></li>
-              <li><nuxt-link to="/id/configuration/db-connection">Database</nuxt-link></li>
+              <li><nuxt-link to="/id/configuration/db-connection">Koneksi DB</nuxt-link></li>
               <li><nuxt-link to="/id/configuration/development">Development</nuxt-link></li>
               <li><nuxt-link to="/id/configuration/staging">Staging</nuxt-link></li>
               <li><nuxt-link to="/id/configuration/production">Production</nuxt-link></li>

@@ -5,6 +5,9 @@
         <figure>
           <img src="~/static/logo.png">
         </figure>
+        <div class="badges">
+          <img src='https://travis-ci.org/drosanda/seme-framework.svg?branch=master' alt="build status">
+        </div>
         <ul class="menu-list">
           <li><nuxt-link to="/">Home</nuxt-link></li>
           <li><nuxt-link to="/credits">Credits</nuxt-link></li>

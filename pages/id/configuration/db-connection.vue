@@ -6,53 +6,51 @@
           <li class=""><NuxtLink to="/">Home</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">Bahasa Indonesia</NuxtLink></li>
           <li class=""><NuxtLink to="/id/configuration">Pengaturan</NuxtLink></li>
-          <li class="unavailable">Database Connection</li>
+          <li class="unavailable">Koneksi Database</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Database Connection Configuration</h1>
+            <h1 class="">Pengaturan Koneksi Database</h1>
             <p>
-              Seme Framework has ability for open connection to database.
-            </p>
-            <p>
-              Database connection configuration existed on <code>$db</code> array values, separated by 7 keys.
+              Seme Framework memiliki kemampuan untuk membuka sambungan langsung terhadap aplikasi database seperti MySQL atau Maria DB melalui ekstensi MySQLi.
+              Pengaturan koneksi database ada di dalam <code>app/config/development.php</code> pada array <code>$db</code>, yang terdiri atas 7 kunci pengaturan.
             </p>
 
             <h2>$db['host']</h2>
             <p>
-              The hostname or IP Address value of database server connection.
+              Alamat aplikasi database server yang digunakan untuk membuka koneksi ke aplikasi database. Dapat diisi dengan <code>localhost</code> atau <code>127.0.01</code> atau dengan alamat lainnya sesuai dengan pengaturan database.
             </p>
 
             <h2>$db['user']</h2>
             <p>
-              The user value of database server connection.
+              Nama pengguna yang digunakan untuk membuka koneksi ke aplikasi database.
             </p>
 
             <h2>$db['pass']</h2>
             <p>
-              The password value of database server connection.
+              Kata sandi atau <i>password</i> yang digunakan untuk membuka koneksi ke aplikasi database.
             </p>
 
             <h2>$db['name']</h2>
             <p>
-              The name of database using by database server connection.
+              Nama database yang akan digunakan didalam aplikasi database server.
             </p>
 
             <h2>$db['port']</h2>
             <p>
-              The connection port used by database server connection. Default value is <code>$db[&#x27;port&#x27;] = &#x27;3306&#x27;;</code>.
+              Aplikasi database menggunakan <i>PORT</i> tertentu pada TCP sebagai jalur komunikasi data. Nilai default dari array key ini adalah <code>$db[&#x27;port&#x27;] = &#x27;3306&#x27;;</code>.
             </p>
 
             <h2>$db['charset']</h2>
             <p>
-              The character set used by database server connection. The value can be <code>latin1</code> or <code>utf8</code>.
+              Set karakter atau pengkodean yang digunakan untuk koneksi database. Pengaturan ini sangat penting, terutama untuk penyimpan data <i>multibyte</i>, seperti untuk menyimpan tulisan arab atau jepang. Isi dari array key ini dapat berupa <code>latin1</code> atau <code>utf8</code> sesuai dengan kebutuhan setelan karakternya.
             </p>
 
             <h2>$db['engine']</h2>
             <p>
-              The framework database engine. In version 4 only <code>MySQLi</code> is available, so the default value is <code>$db[&#x27;engine&#x27;] = &#x27;mysqli&#x27;;</code>.
+              <i>Database Engine</i>, pada versi 4 hanya menggunakan ekstensi <code>MySQLi</code>, jadi nilai dari array kunci ini hanya <code>$db[&#x27;engine&#x27;] = &#x27;mysqli&#x27;;</code>.
             </p>
 
             <hr>
@@ -66,11 +64,11 @@
       <div class="columns">
         <div class="column">
           <div class="buttons">
-            <b-button tag="router-link" to="/id/downloads/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Download and Installation
+            <b-button tag="router-link" to="/id/configuration/url/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+              Pengaturan URL
             </b-button>
             <b-button tag="router-link" to="/id/configuration/development/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Development Phase
+              Fase development
             </b-button>
           </div>
         </div>
@@ -86,8 +84,8 @@
       return {
         name: 'Seme Framework v4.0.0',
         suffix: ' - Dokumentasi Seme Framework v4.0.0',
-        title: 'Database Connection',
-        description: 'Pelajari selengkapnya tentang Database Connection Configuration of melalui dokumentasi Seme Framework versi 4.0.0.'
+        title: 'Pengaturan koneksi DB',
+        description: 'Pelajari selengkapnya tentang pengaturan konesi database untuk Seme Framework versi 4.0.0.'
       }
     },
     head() {

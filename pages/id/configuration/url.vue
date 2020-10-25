@@ -12,33 +12,35 @@
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">URL</h1>
-            <p>Seme Framework has some configuration for Uniform Resource Locator (URL).</p>
+            <h1 class="">Pengaturan URL</h1>
+            <p>Pengaturan URL atau <i>Uniform Resource Locator</i> ada dalam Seme Framework karena berhubungan dengan bagaimana cara Seme Framework akan dibuka atau dijalankan.</p>
+
             <h2>Base URL</h2>
             <p>
-              Base URL is required for avoiding mismatch target to a page, image, etc.
+              Pengaturan Base URL diperlukan untuk menentukan URL dasar dari sebuah Web yang dibangun diatas Seme Framework. Base URL ini akan jadi acuan untuk setiap URL yang akan ditempatkan dalam respon yang dihasilkan.
             </p>
             <p>
-              The base url configuration existed on <code>$site</code> variable.
+              Pengaturan base URL ini ada di <code>app/config/development.php</code> dibagian variabel <code>$site</code>.
             </p>
+            <b-message class="is-danger">
+              <p><b>Pehatian</b></p>
+              <p>Mulai dari Seme Framework versi 3.0.0, isi dari nilai <code>$site</code> harus diberi akhiran garis miring &#x22;/&#x22;.</p>
+            </b-message>
             <p>
-              Same as version 3.x.x the value of <b>must</b> be ended by trailing slash.
-            </p>
-            <p>
-              Example:
+              Contoh penggunaan:
             </p>
             <pre>$site = &#x22;http://localhost/seme-framework/&#x22;;</pre>
             <pre>$site = &#x22;https://www.example.com/&#x22;;</pre>
             <pre>$site = &#x22;http://localhost:8080/&#x22;;</pre>
 
             <b-message class="is-info">
-              <p><b>Base URL with custom port</b></p>
-              <p>if using <code>$_SERVER[&#x27;HTTP_HOST&#x27;]</code> there is no necessary to add suffix port after it.</p>
+              <p><b>Pengaturan Base URL dengan Port Custom</b></p>
+              <p>Jika menggunakan nilai <code>$_SERVER[&#x27;HTTP_HOST&#x27;]</code> pada <code>$site</code> tidak perlu untuk menambahkan akhiran &#x22;:PORT&#x22; pada setiap pengaturannya.</p>
             </b-message>
 
             <b-message class="is-info">
-              <p><b>Accessing base URL (<code>$site</code>) value</b></p>
-              <p>The <NuxtLink to="/id/globals/functions/">base_url()</NuxtLink> global function is for returning value of <code>$site</code>.</p>
+              <p><b>Mendapatkan nilai base URL (<code>$site</code>)</b></p>
+              <p>Untuk mendapatkan nilai dari base URL dapat menggunakan fungsi global <NuxtLink to="/id/globals/functions/">base_url()</NuxtLink> yang membalikan base URL sebagai string.</p>
             </b-message>
 
             <h2>Admin Secret URL</h2>
@@ -102,10 +104,10 @@
         <div class="column">
           <div class="buttons">
             <b-button tag="router-link" to="/id/downloads/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Download and Installation
+              Download dan Instal
             </b-button>
-            <b-button tag="router-link" to="/id/configuration/development/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Development Phase
+            <b-button tag="router-link" to="/id/configuration/db-connection/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+              Koneksi DB
             </b-button>
           </div>
         </div>

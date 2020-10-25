@@ -39,10 +39,10 @@
             <hr>
             <h2>License</h2>
             <p>Seme Framework licensed under MIT.</p>
-            <hr>
             <h2>Question and Answer</h2>
             <p>Feel free to ask me on my <a href="https://instagram.com/drosanda/" target="_blank">instagram</a>, <a href="https://facebook.com/drs11/" target="_blank">facebook</a>, or open an issue on <a href="https://github.com/drosanda/seme-framework/issues" target="_blank">github</a>.</p>
 
+            <hr>
           </div>
         </div>
       </div>
