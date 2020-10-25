@@ -11,7 +11,7 @@
           <img src='https://img.shields.io/badge/lang-en-e9bd2e' alt="version">
         </div>
         <ul class="menu-list">
-          <li><nuxt-link to="/">Home</nuxt-link></li>
+          <li><nuxt-link to="/">Seme Framework</nuxt-link></li>
           <li><nuxt-link to="/credits">Credits</nuxt-link></li>
           <li>
             <nuxt-link to="/4.0.0/">Version 4.0.0</nuxt-link>

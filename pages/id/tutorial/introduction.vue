@@ -6,17 +6,23 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.0 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/tutorial">Tutorial</NuxtLink></li>
-          <li class="unavailable">Pendahuluan</li>
+          <li class="unavailable">Perkenalan</li>
         </ul>
       </nav>
       <div class="">
         <div class="column">
           <div class="content">
-            <h1 class="">Pendahuluan</h1>
+            <h1 class="">Perkenalan penggunaan Seme Framework</h1>
             <p>Sebelum memulai tutorial, Anda harus melakukan yang dijelaskan pada <NuxtLink to="/id/requirements">halaman persyaratan</NuxtLink>  terlebih dahulu.</p>
             <p>Tujuan dari tutorial ini adalah, bagaimana berinteraksi dengan View dan Controller. Interaksi model akan dibahas pada tutorial berikutnya.</p>
-            <p>Baiklah kita mulai!</p>
 
+            <figure class="image">
+              <img src="~/assets/img/tutorial/introduction/hello-world.png" alt="Seme Framework hello world controller" />
+            </figure>
+
+            <p>Baiklah kita mulai!</p>
+            <hr>
+            
             <h2>Hello World!</h2>
             <p>Hello World sering digunakan untuk menggambarkan sintaks dasar dari suatu bahasa pemrograman.</p>
             <p>Tetapi pada Seme Framework, Hello World Hello World digunakan untuk memeriksa tujuan dasar MVC.</p>
@@ -288,8 +294,8 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Dokumentasi Seme Framework v4.0.0',
-      title: 'Tutorial: Pendahuluan',
-      description: 'Tutorial pendahuluan dari penggunaan Seme Framework versi 4.0.0.'
+      title: 'Perkenalan penggunaan',
+      description: 'Perkenalan penggunaan dasar penggunaan Seme Framework versi 4.0.0.'
     }
   },
   head() {

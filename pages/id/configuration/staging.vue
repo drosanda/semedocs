@@ -60,7 +60,7 @@
         name: 'Seme Framework v4.0.0',
         suffix: ' - Dokumentasi Seme Framework v4.0.0',
         title: 'Pengaturan Fase Staging',
-        description: 'Pelajari selengkapnya tentang how to configuring Seme Framework version 4.0.0 in staging phase'
+        description: 'Pelajari selengkapnya tentang Pengaturan Seme Framework untuk Fase Staging'
       }
     },
     head() {

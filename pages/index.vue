@@ -13,7 +13,7 @@
             <h1 class="is-size-1">Welcome to Seme Framework</h1>
 
             <figure class="image">
-              <img src="~/static/carbon.png" />
+              <img src="~/static/carbon.png" alt="Seme Framework code example" />
             </figure>
 
             <div class="buttons is-centered">

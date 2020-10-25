@@ -11,6 +11,7 @@
           <img src='https://img.shields.io/badge/lang-id-e9bd2e' alt="version">
         </div>
         <ul class="menu-list">
+          <li><nuxt-link to="/">Seme Framework</nuxt-link></li>
           <li><nuxt-link to="/id/requirements">Persyaratan</nuxt-link></li>
           <li><nuxt-link to="/id/downloads">Download &amp; Install</nuxt-link></li>
           <li>

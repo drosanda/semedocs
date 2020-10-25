@@ -41,10 +41,10 @@
         <div class="column">
           <div class="buttons">
             <b-button tag="router-link" to="/id/configuration/production/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Fase Prodctuin
+              Fase Production
             </b-button>
             <b-button tag="router-link" to="/id/tutorial/introduction" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Tutorial: Pendahuluan
+              Perkenalan
             </b-button>
           </div>
         </div>
@@ -60,8 +60,8 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Dokumentasi Seme Framework v4.0.0',
-      title: 'Tutorials',
-      description: 'Pelajari selengkapnya tentang some real world tutorial of melalui dokumentasi Seme Framework versi 4.0.0.'
+      title: 'Tutorial penggunaan',
+      description: 'Pelajari selengkapnya tentang penggunaan Seme Framework di dunia nyata.'
     }
   },
   head() {

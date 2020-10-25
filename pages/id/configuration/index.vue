@@ -69,7 +69,7 @@
             <h2>Source Codes</h2>
             <p>Beriku ini adalah kode sumber default untuk pengaturan Seme Framework pada tahap <code>development.php</code>.</p>
             <pre>
-&#x3C;?php
+              <code v-highlight class="php">&#x3C;?php
 /**
  * Configuration file for Development version
  *   You can create one for:
@@ -189,8 +189,7 @@ $semevar[&#x27;site_name&#x27;] = &#x27;Seme Framework&#x27;;
 $semevar[&#x27;email_from&#x27;] = &#x27;noreply@thecloudalert.com&#x27;;
 $semevar[&#x27;email_reply&#x27;] = &#x27;hi@thecloudalert.com&#x27;;
 $semevar[&#x27;app_name&#x27;] = &#x27;Seme Framework&#x27;;
-$semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;
-
+$semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;</code>
             </pre>
           </div>
 
@@ -204,7 +203,7 @@ $semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;
               Download dan Install
             </b-button>
             <b-button tag="router-link" to="/id/configuration/development/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Tahap pengembangan
+              Fase Development
             </b-button>
           </div>
         </div>

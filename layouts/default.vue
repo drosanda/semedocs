@@ -6,10 +6,10 @@
           <img src="~/static/logo.png">
         </figure>
         <ul class="menu-list">
-          <li><nuxt-link to="/">Home</nuxt-link></li>
+          <li><nuxt-link to="/">Seme Framework</nuxt-link></li>
           <li><nuxt-link to="/credits">Credits</nuxt-link></li>
           <li>
-            <a href="#">Version</a>
+            <nuxt-link to="/version/">Version</nuxt-link>
             <ul>
               <li><nuxt-link to="/4.0.0/">4.0.0 (English)</nuxt-link></li>
               <li><nuxt-link to="/id/">4.0.0 (Bahasa)</nuxt-link></li>

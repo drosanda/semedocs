@@ -3,7 +3,7 @@
     <div class="main-content columns is-fullheight">
       <aside class="column is-3 is-narrow-mobile is-fullheight section is-hidden-mobile">
         <ul class="menu-list">
-          <li><nuxt-link to="/">Home</nuxt-link></li>
+          <li><nuxt-link to="/">Seme Framework</nuxt-link></li>
           <li><nuxt-link to="/credits">Credits</nuxt-link></li>
           <li><nuxt-link to="/3.0.0/">Version 3.0.0</nuxt-link></li>
         </ul>

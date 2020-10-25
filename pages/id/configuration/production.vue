@@ -12,16 +12,23 @@
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Production</h1>
+            <h1 class="">Fase Production</h1>
+            <p>Fase production adalah tahapan dimana aplikasi dipakai secara nyata, tidak untuk diubah-ubah lagi atau dicoba-coba lagi. Ketika terjadi error atau bug di tahap production sudah menjadi kesalahan yang fatal.</p>
             <p>
-              On staging file, you can put your configuration for staging environment.
-              Like database connection, base url, etc. Also, you can put any additional config values of staging phase only.
+              Dengan menggunakan Seme Framework memungkinkan untuk fase production ini memiliki pengaturannya tersendiri dan mungkin saja berbeda dengan pengaturan untuk yaitu fase <i>development</i> dan fase <i>staging</i>.
             </p>
             <p>
-              You have to exclude the <code>app/config/production.php</code> from git by adding it on <code>.gitignore</code>.
-              So, you can pull at any time in production server.
-              But, be careful wrong configuration can deleted some files or directories.
+              Pengaturan khusus untuk fase <i>production</i> ini ada di <code>app/config/production.php</code>.
             </p>
+            <b-message class="is-success">
+              <p><b>Tips</b></p>
+              <p>Jika ingin melakukan auto deploy dengan git, pastikan <code>app/config/staging.php</code> dan <code>app/config/production.php</code> sudah dikecualikan di dalam file <code>.gitignore</code>.</p>
+            </b-message>
+            <b-message class="is-warning">
+              <p><b>Perhatian</b></p>
+              <p>Hati-hati dalam penggunaan <code>.gitignore</code> karena dapat menyebabkan file tidak terindeks ke dalam repositori.</p>
+              <p>Pastikan untuk selalu melakukan pengecekan ganda untuk penggunaan .gitignore di dalam repositori.</p>
+            </b-message>
           </div>
         </div>
 
@@ -31,7 +38,7 @@
         <div class="column">
           <div class="buttons">
             <b-button tag="router-link" to="/id/configuration/staging/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Staging Phase
+              Fase Staging
             </b-button>
             <b-button tag="router-link" to="/id/tutorial" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
               Tutorial
@@ -50,8 +57,8 @@
       return {
         name: 'Seme Framework v4.0.0',
         suffix: ' - Dokumentasi Seme Framework v4.0.0',
-        title: 'Production Phase Configuration',
-        description: 'Pelajari selengkapnya tentang how to configuring Seme Framework version 4.0.0 in production phase'
+        title: 'Pengaturan untuk Fase Production',
+        description: 'Pelajari selengkapnya tentang Pengaturan Seme Framework untuk Fase Production'
       }
     },
     head() {
