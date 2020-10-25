@@ -3,8 +3,8 @@
     <div class="container">
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
-          <li class=""><NuxtLink to="/">Home</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/">Bahasa Indonesia</NuxtLink></li>
+          <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
+          <li class=""><NuxtLink to="/id/">4.0.0 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/controller">Controller</NuxtLink></li>
           <li class="unavailable">Load method</li>
         </ul>

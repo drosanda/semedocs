@@ -3,7 +3,7 @@
       <div class="container">
         <nav class="breadcrumb" aria-label="breadcrumbs">
           <ul class="breadcrumbs">
-            <li class=""><NuxtLink to="/">Home</NuxtLink></li>
+            <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
                 <li class=""><NuxtLink to="/database">Database</NuxtLink></li>
             <li class="unavailable">Quick Start</li>
           </ul>

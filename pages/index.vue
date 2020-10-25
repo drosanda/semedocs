@@ -1,7 +1,7 @@
 <template>
   <div class="section">
     <div class="container">
-      <nav class="breadcrumb" aria-label="breadcrumbs">
+      <nav class="breadcrumb" aria-label="breadcrumbs" style="display: none;">
         <ul class="breadcrumbs">
           <li class="unavailable">Home</li>
         </ul>
@@ -11,13 +11,12 @@
         <div class="column">
           <div class="content">
             <h1 class="is-size-1">Welcome to Seme Framework</h1>
-            <p>This is official documentation for Seme Framework, the PHP MVC Framework for creating small and medium app that needed for fast delivery. At first version of Seme Framework used for building API (Middle Ware) for another Application such as android, iOS, etc. And now as increasing of requirement, Seme Framework has expand the limit for creating Small and Medium App.</p>
 
             <figure class="image">
               <img src="~/static/carbon.png" />
             </figure>
 
-            <div class="buttons">
+            <div class="buttons is-centered">
               <b-button tag="router-link" to="/4.0.0/downloads/" type="is-link">
                 Download
               </b-button>
@@ -27,7 +26,11 @@
               <b-button tag="router-link" to="/error/" type="is-link">
                 Troubleshoot
               </b-button>
+              <b-button tag="router-link" to="/id/" type="is-link">
+                Bahasa Indonesia
+              </b-button>
             </div>
+            <p>This is official documentation for Seme Framework, the PHP MVC Framework for creating small and medium app that needed for fast delivery. At first version of Seme Framework used for building API (Middle Ware) for another Application such as android, iOS, etc. And now as increasing of requirement, Seme Framework has expand the limit for creating Small and Medium App.</p>
 
             <h2>Key Feature</h2>
             <p>This framework suitable for Programmer that only know about <code>Manual</code> way of code. Not like this time, everything build up automatically through console. Seme Framework has taken different way of code, <i>If you want build small app, why we need lots of library</i>. Here is the key feature of Seme Framework:</p>

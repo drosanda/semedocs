@@ -11,7 +11,8 @@
           <li>
             <a href="#">Version</a>
             <ul>
-              <li><nuxt-link to="/4.0.0/">4.0.0</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/">4.0.0 (English)</nuxt-link></li>
+              <li><nuxt-link to="/id/">4.0.0 (Bahasa)</nuxt-link></li>
               <li><nuxt-link to="/3.3.0/">3.3.0</nuxt-link></li>
               <li><nuxt-link to="/3.2.1/">3.2.1</nuxt-link></li>
               <li><nuxt-link to="/3.1.0/">3.1.x</nuxt-link></li>

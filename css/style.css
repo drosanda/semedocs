@@ -63,3 +63,9 @@ pre {
 code {
   background-color: #ffe8e9;
 }
+.breadcrumb a {
+  padding-right: 0.4em;
+}
+.breadcrumb li.unavailable::before {
+  padding-right: 0.25em;
+}

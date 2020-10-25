@@ -3,15 +3,22 @@
     <div class="container">
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
-          <li class=""><NuxtLink to="/">Halaman Utama</NuxtLink></li>
-          <li class="unavailable">Bahasa Indonesia</li>
+          <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
+          <li class="unavailable">4.0.0 (Bahasa)</li>
         </ul>
       </nav>
 
       <div class="">
         <div class="column">
           <div class="content">
-            <h1 class="is-size-1">Dokumentasi Seme Framework versi 4.0.0 dalam bahasa Indonesia</h1>
+            <h1 class="is-size-1">Seme Framework versi 4.0.0</h1>
+            <h2 style="margin: 0.5em 0; padding: 0; line-height: 1;">Dokumentasi dalam Bahasa Indonesia</h2>
+            <div class="badges">
+              <img src='https://img.shields.io/badge/version-4.0.0-ed6f75' alt="version">
+              <img src='https://travis-ci.org/drosanda/seme-framework.svg?branch=master' alt="build status">
+              <img src='https://img.shields.io/badge/lang-id-e9bd2e' alt="version">
+            </div>
+
             <p>Ini adalah dokumentasi resmi untuk Seme Framework, PHP MVC Framework untuk membuat aplikasi berbasis web yang cepat. Cocok untuk membuat aplikasi yang kecil sampai menengah.</p>
             <p>Pada versi pertama Seme Framework digunakan untuk membangun API (Middleware) untuk Aplikasi lain seperti aplikasi berbasis android, iOS, dll.</p>
             <p>Sekarang ini Seme Framework sudah dapat digunakan untuk membuat aplikasi berbasis web seutuhnya.</p>
@@ -20,7 +27,7 @@
               <img src="~/static/carbon.png" />
             </figure>
 
-            <div class="buttons">
+            <div class="buttons is-centered">
               <b-button tag="router-link" to="/id/downloads/" type="is-link">
                 Download
               </b-button>

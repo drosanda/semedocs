@@ -6,7 +6,9 @@
           <img src="~/static/logo.png">
         </figure>
         <div class="badges">
+          <img src='https://img.shields.io/badge/version-4.0.0-ed6f75' alt="version">
           <img src='https://travis-ci.org/drosanda/seme-framework.svg?branch=master' alt="build status">
+          <img src='https://img.shields.io/badge/lang-en-e9bd2e' alt="version">
         </div>
         <ul class="menu-list">
           <li><nuxt-link to="/">Home</nuxt-link></li>
