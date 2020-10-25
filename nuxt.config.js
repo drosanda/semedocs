@@ -1,7 +1,6 @@
 export default {
   modules: [
     'nuxt-buefy',
-    '@nuxtjs/amp',
     '@nuxtjs/pwa',
     '@nuxtjs/sitemap',
     ['nuxt-highlightjs', {
