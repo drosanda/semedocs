@@ -6,30 +6,26 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.0 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/model">Model</NuxtLink></li>
-          <li class="unavailable">Limit Method</li>
+          <li class="unavailable">Page Method</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Limit Method</h1>
-            <p>Limit method digunakan untuk membatasi jumlah baris dari hasil query.</p>
-            <b-message class="is-success">
-              <p>Limit method ini cocok untuk diaplikasikan dengan DataTable.</p>
-            </b-message>
-            <p>Dengan fungsi ini memungkinkan untuk mengatur banyaknya jumlah data dan akan tampil pada halaman ke berapa.</p>
+            <h1 class="">Page Method</h1>
+  					<p>Page method digunakan untuk membatasi jumlah baris dari hasil query. Dengan fungsi ini memungkinkan untuk mengatur banyaknya jumlah data dan akan tampil pada halaman ke berapa.</p>
             <p>Metode ini akan menghasilkan query seperti ini:</p>
             <code v-highlight class="sql">SELECT * FROM table WHERE 1 LIMIT [A],[B]</code>
 
   					<h2>Parameter</h2>
-  					<p>Limit method membutuhkan 2 parameter yaitu <b>offset</b> dan <b>count</b>.</p>
-  					<code v-highlight class="php">$this-&gt;db-&gt;limit(int $offset, int $count): dbObject</code>
+  					<p>Page method membutuhkan 2 parameter yaitu <b>page</b> dan <b>pagesize</b>.</p>
+  					<code v-highlight class="php">$this-&gt;db-&gt;limit(int $page, int $pagesize): dbObject</code>
 
-            <h3>$offset</h3>
-            <p><b>Offset</b> can be zero or positive integer for specifying the offset of the first row to be returned.</p>
+            <h3>$page</h3>
+            <p>Parameter <b>Page</b> digunakan untuk menentukan halaman pada $pagesize tertentu.</p>
 
-            <h3>$count</h3>
-            <p><b>Count</b> can be zero or positive integer for specifying the maximum number of rows to be returned.</p>
+            <h3>$pagesize</h3>
+            <p>Parameter <b>Pagesize</b> digunakan untuk menentukan banyaknya jumlah baris per hasil data.</p>
 
   					<h2>Example usage</h2>
   					<p>Here is the examples using limit method. See the first of this page for full example.</p>
@@ -43,22 +39,21 @@ class Blog_Model extends SENE_Model{
   public function __construct(){
 	 parent::__construct();
   }
-  public function latest(){
+  public function halamanKe2dari25Baris(){
     $this-&gt;db-&gt;select(&quot;*&quot;);
     $this-&gt;db-&gt;from($this-&gt;tbl,$this-&gt;tbl_as);
     $this-&gt;db-&gt;order_by(&quot;date_create&quot;,&quot;desc&quot;);
-    $this-&gt;db-&gt;limit(0,5);
+    $this-&gt;db-&gt;page(2,25);
     return $this-&gt;db-&gt;get();
   }
-  public function latest3ExceptOne(){
+  public function halamanKe1Per10Baris(){
     $this-&gt;db-&gt;select(&quot;*&quot;);
     $this-&gt;db-&gt;from($this-&gt;tbl,$this-&gt;tbl_as);
     $this-&gt;db-&gt;order_by(&quot;date_create&quot;,&quot;desc&quot;);
-    $this-&gt;db-&gt;limit(1,4);
+    $this-&gt;db-&gt;page(1,10);
     return $this-&gt;db-&gt;get();
   }
 }</code></pre>
-
             <b-message class="is-info">
               <p><b>page method v.s. limit method</b></p>
               <p>Page method used for limiting by page and page size</p>
@@ -74,8 +69,8 @@ class Blog_Model extends SENE_Model{
             <b-button tag="router-link" to="/id/model/order_by" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
               Model::order_by
             </b-button>
-            <b-button tag="router-link" to="/id/model/get" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Model::get
+            <b-button tag="router-link" to="/id/model/query" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+              Model::query
             </b-button>
           </div>
         </div>
@@ -90,8 +85,8 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework v4.0.0 Documentation',
-      title: 'Model::limit',
-      description: 'Pelajari selengkapnya tentang penggunaan limit method pada kelas Model di Seme Framework.'
+      title: 'Model::page',
+      description: 'Pelajari selengkapnya tentang penggunaan page method pada kelas Model di Seme Framework.'
     }
   },
   head() {
