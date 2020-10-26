@@ -70,7 +70,8 @@
                   <li><nuxt-link to="/4.0.0/model/delete">Model::delete</nuxt-link></li>
                   <li><nuxt-link to="/4.0.0/model/exec">Model::exec</nuxt-link></li>
                   <li><nuxt-link to="/4.0.0/model/query">Model::query</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/model/last_id">Model::last_id</nuxt-link></li>
+                  <li><nuxt-link to="/4.0.0/model/limit">Model::limit</nuxt-link></li>
+                  <li><nuxt-link to="/4.0.0/model/page">Model::page</nuxt-link></li>
                 </ul>
               </li>
               <li>

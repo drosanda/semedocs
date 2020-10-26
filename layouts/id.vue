@@ -67,6 +67,7 @@
               <li><nuxt-link to="/id/model/exec">Model::exec</nuxt-link></li>
               <li><nuxt-link to="/id/model/query">Model::query</nuxt-link></li>
               <li><nuxt-link to="/id/model/last_id">Model::last_id</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/model/page">Model::page</nuxt-link></li>
             </ul>
           </li>
           <li>
