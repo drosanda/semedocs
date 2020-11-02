@@ -99,6 +99,7 @@
                   <li><nuxt-link to="/4.0.0/controller/putThemeContent">Load Theme Content</nuxt-link></li>
                   <li><nuxt-link to="/4.0.0/controller/putJSContent">Load Javascript Theme Content</nuxt-link></li>
                   <li><nuxt-link to="/4.0.0/controller/session">Using Session</nuxt-link></li>
+                  <li><nuxt-link to="/4.0.0/controller/loadcss">loadCss</nuxt-link></li>
                 </ul>
               </li>
               <li>

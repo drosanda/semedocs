@@ -94,7 +94,8 @@
               <li><nuxt-link to="/id/controller/loadLayout">Load Theme Layout</nuxt-link></li>
               <li><nuxt-link to="/id/controller/putThemeContent">Load Theme Content</nuxt-link></li>
               <li><nuxt-link to="/id/controller/putJSContent">Load Javascript Theme Content</nuxt-link></li>
-              <li><nuxt-link to="/id/controller/session">Using Session</nuxt-link></li>
+              <li><nuxt-link to="/id/controller/session">Menggunakan Session</nuxt-link></li>
+              <li><nuxt-link to="/id/controller/loadcss">loadCss</nuxt-link></li>
             </ul>
           </li>
           <li>
