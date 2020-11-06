@@ -86,16 +86,18 @@
           <li>
             <nuxt-link to="/id/controller">Controller</nuxt-link>
             <ul>
-              <li><nuxt-link to="/id/controller/constructor">Constructor</nuxt-link></li>
-              <li><nuxt-link to="/id/controller/load">Load</nuxt-link></li>
-              <li><nuxt-link to="/id/controller/lib">Lib</nuxt-link></li>
-              <li><nuxt-link to="/id/controller/input">Handling Input Form</nuxt-link></li>
-              <li><nuxt-link to="/id/controller/setTheme">Set Theme</nuxt-link></li>
-              <li><nuxt-link to="/id/controller/loadLayout">Load Theme Layout</nuxt-link></li>
-              <li><nuxt-link to="/id/controller/putThemeContent">Load Theme Content</nuxt-link></li>
-              <li><nuxt-link to="/id/controller/putJSContent">Load Javascript Theme Content</nuxt-link></li>
-              <li><nuxt-link to="/id/controller/session">Menggunakan Session</nuxt-link></li>
+              <li><nuxt-link to="/id/controller/constructor">constructor</nuxt-link></li>
+              <li><nuxt-link to="/id/controller/getkey">getKey</nuxt-link></li>
+              <li><nuxt-link to="/id/controller/input">input</nuxt-link></li>
+              <li><nuxt-link to="/id/controller/lib">lib</nuxt-link></li>
+              <li><nuxt-link to="/id/controller/load">load</nuxt-link></li>
               <li><nuxt-link to="/id/controller/loadcss">loadCss</nuxt-link></li>
+              <li><nuxt-link to="/id/controller/loadlayout">loadLayout</nuxt-link></li>
+              <li><nuxt-link to="/id/controller/putthemecontent">putThemeContent</nuxt-link></li>
+              <li><nuxt-link to="/id/controller/putjscontent">putJsContent</nuxt-link></li>
+              <li><nuxt-link to="/id/controller/session">session</nuxt-link></li>
+              <li><nuxt-link to="/id/controller/setKey">setKey</nuxt-link></li>
+              <li><nuxt-link to="/id/controller/settheme">setTheme</nuxt-link></li>
             </ul>
           </li>
           <li>

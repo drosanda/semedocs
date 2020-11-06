@@ -94,10 +94,10 @@
                   <li><nuxt-link to="/4.0.0/controller/load">Load</nuxt-link></li>
                   <li><nuxt-link to="/4.0.0/controller/lib">Lib</nuxt-link></li>
                   <li><nuxt-link to="/4.0.0/controller/input">Handling Input Form</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/controller/setTheme">Set Theme</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/controller/loadLayout">Load Theme Layout</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/controller/putThemeContent">Load Theme Content</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/controller/putJSContent">Load Javascript Theme Content</nuxt-link></li>
+                  <li><nuxt-link to="/4.0.0/controller/settheme">Set Theme</nuxt-link></li>
+                  <li><nuxt-link to="/4.0.0/controller/loadlayout">Load Theme Layout</nuxt-link></li>
+                  <li><nuxt-link to="/4.0.0/controller/putthemecontent">Load Theme Content</nuxt-link></li>
+                  <li><nuxt-link to="/4.0.0/controller/putjscontent">Load Javascript Theme Content</nuxt-link></li>
                   <li><nuxt-link to="/4.0.0/controller/session">Using Session</nuxt-link></li>
                   <li><nuxt-link to="/4.0.0/controller/loadcss">loadCss</nuxt-link></li>
                 </ul>

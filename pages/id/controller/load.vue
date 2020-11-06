@@ -13,72 +13,51 @@
         <div class="column">
           <div class="content">
             <h1 class="">Load method</h1>
-            <p>Load method from class SENE_Controller is for loading a model class into controller.</p>
-            <p>The model will be instantiate as part of properties on SENE_Controller.</p>
-            <p>Without an alias, the instantiate model object will be same as filename without extension php.</p>
-            <h2>Parameters</h2>
-            <p>Load method has 2 parameter, there is the <code>model filename</code> and <code>model alias</code>.</p>
-            <pre>
-$this-&#x3E;load(string $filename_location[, string $alias])
-            </pre>
-            <h3>$filename_location</h3>
-            <p>The method load location always relatives to <code>app/model</code> directory.</p>
-            <p>So, if we have a model class under <code>app/model/api/hello_model.php</code></p>
-            <p>We have to fill the first parameter with <code>api/hello_model</code>.</p>
-            <p>Here is the example:</p>
-            <pre>
-$this-&#x3E;load('api/hello_model');
-            </pre>
-            <p>With this example the hello_model will be part of SENE_Controller class as <code>hello_model</code> object</p>
-            <p>Here is the full example:</p>
-            <pre>
-&#x3C;?php
+            <p><code>SENE_Controller::load</code> digunakan untuk memanggil model kedalam controller menjadi sebuah properti didalam controller tersebut.</p>
+
+            <h2>Parameter</h2>
+            <p>Metode load terdiri dari 2 parameter yaitu <code>model_location</code> dan <code>$alias</code>.</p>
+            <code v-highlight class="php">$this-&#x3E;load(string $model_location[, string $alias])</code>
+
+            <h3>$model_location</h3>
+            <p>Lokasi file model selalu relatif ke direktori <code>app/model</code>.</p>
+            <p>Jadi, jika ingin memanggil model <code>api/hello_model</code> maka lokasinya ada di <code>app/model/api/hello_model.php</code>.</p>
+            <p>Dan, didalam controller akan ada properti baru bernama <code>hello_model</code> yang sama dengan nama file model namun tanpa akhiran <code>.php</code>.</p>
+
+            <h3>$model_alias</h3>
+            <p>
+              Model alias digunakan untuk merubah nama properti yang dibuat secara otomatis melalui metode <code>load</code> yang ada didalam controller.
+              Jadi, jika ingin menyederhanakan properti <code>hello_model</code> menjadi <code>h</code> saja, cukup tambahkan parameter ke-2 didalam methode load.
+            </p>
+
+            <p>Berikut ini adalah contoh pemanggilan model dengan menggunakan alias</p>
+            <pre><code v-highlight class="php">$this-&#x3E;load('api/hello_model','h');</code></pre>
+
+            <h2>Contoh Penggunaan</h2>
+            <p>Berikut ini adalah contoh lengkap penggunaan metode load dari SENE_Controller.</p>
+            <pre><code v-highlight class="php">&#x3C;?php
   class Blog extends SENE_Controller {
     public function __construct(){
-    parent::__construct();
-    $this-&#x3E;load(&#x27;api/hello_model&#x27;);
-  }
-  public function index(){
-    //executing the hello_model object
-    print_r($this-&#x3E;hello_model-&#x3E;get());
-    die();
-  }
-}
-            </pre>
-            <b-message type="is-info">
-              <p>While loading the model from sub directory, the path prefix will not instantiate as object model name.</p>
-              <p>So, be careful for choosing the naming class model or alias.</p>
-              <p>If necessary, you can duplicate a model class to avoid conflict with extra suffix with number.</p>
-              <p>example, <code>app/model/api/hello_model2.php</code> and then the class name <code>Hello_Model2</code>.</p>
-            </b-message>
-
-            <h3>$alias</h3>
-            <p>The alias purpose is for shorting the name of model that we create into SENE_Controller.</p>
-            <p>Alias can contain any alphanumeric and underscore.</p>
-            <p>Here is the example:</p>
-            <pre>
-$this-&#x3E;load('api/hello_model','h');
-            </pre>
-            <p>With this example the hello_model will be part of SENE_Controller class as <code>h</code> object</p>
-            <p>Here is the full example:</p>
-<pre>
-&#x3C;?php
-class Blog extends SENE_Controller {
-  public function __construct(){
     parent::__construct();
     $this-&#x3E;load(&#x27;api/hello_model&#x27;,&#x27;h&#x27;);
   }
   public function index(){
-    //executing the hello_model object
+    //menjalankan metode get dari hello_model
     print_r($this-&#x3E;h-&#x3E;get());
     die();
   }
-}
-            </pre>
+}</code></pre>
+            <b-message type="is-info">
+              <p><b>Perhatian</b></p>
+              <p>Pastikan untuk selalu memakai alias yang unik untuk setiap pemanggilan model.</p>
+              <p>Apabila ada alias yang sama, maka bisa menyebabkan akan mendapatkan hasil yang tidak diinginkan.</p>
+            </b-message>
+
             <b-message type="is-success">
               <p><b>Tips</b></p>
-              <p>If you confused how to fill the alias name, you can get from first letter of each class name.</p>
-              <p>example, <code>app/model/api/hello_detail_model2.php</code> and then the alias will be <code>hdm2</code>.</p>
+              <p>Jika bingung menentukan alias, gunakan alias dengan awalan nama kelasnya masing-masing.</p>
+              <p>Dan, apabila ada yang sama, berikan akhiran nomor pada akhir aliasnya.</p>
+              <p>Contoh, <code>app/model/api/hello_detail_model2.php</code> dan aliasnya akan lebih baik jika dinamakan <code>hdm2</code>.</p>
             </b-message>
           </div>
         </div>
@@ -107,8 +86,8 @@ class Blog extends SENE_Controller {
       return {
         name: 'Seme Framework v4.0.0',
         suffix: ' - Dokumentasi Seme Framework v4.0.0',
-        title: 'load Method from SENE_Controller',
-        description: 'Pelajari selengkapnya tentang load Method from SENE_Controller on Seme Framework versi 4.0.0'
+        title: 'Metode load dari SENE_Controller',
+        description: 'Metode load dari kelas SENE_Controller dalam SEME Framework versi 4.0.0 digunakan untuk memanggil model kedalam kelas controller'
       }
     },
     head() {

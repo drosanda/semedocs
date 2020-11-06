@@ -13,30 +13,16 @@
         <div class="column">
           <div class="content">
             <h1 class="">putJsContent Method</h1>
-            <p>This method will be loaded a theme with javascript content from a theme file.</p>
-            <p>The <code>$content_location</code> value will be reffered to a file name under <code>app/view/THEME/</code>.</p>
-            <p>This value also can contain path prefix of subdirectory before the filename.</p>
+            <p>SENE_Controller::putJsContent digunakan untuk memanggil isi dari file javascript kedalam template html.</p>
+            <p>Supaya dapat berjalan dengan baik, metode ini membutuhkan <code>getJsContent()</code> yang diapit didalam tag script.</p>
 
-            <h2>Content Location Requirements</h2>
-            <p>The valid content should only put inside in a directory beneath current selected theme directory.</p>
-            <pre>
-|- app
-|-- view
-|--- front
-|---- home
-|----- home.php
-|----- home_bottom.php
-            </pre>
+            <h2>Penggunaan dasar</h2>
+            <p>Berikut ini adalah contoh pengunaan dari methode putJsContent.</p>
+            <code v-highlight class="php">SENE_Controllers::putJsContent(string $js_location[, array $data]): object SENE_Controller</code>
 
-            <h2>Basic Usage:</h2>
-            <p>Here is the basic usage of <code>Controller::putThemeContent</code>.</p>
-            <pre>
-Controller::putJsContent(string $content_location[, array $data]): ControllerObject
-            </pre>
-
-            <h2>Example</h2>
+            <h2>Contoh Penggunaan lengkap</h2>
             <p>Here is the example for <code>putThemeContent</code> method:</p>
-            <pre>
+            <pre><code v-highlight class="php">&#x3C;?php
 class Home extends SENE_Controller
 {
   public function __construct()
@@ -52,8 +38,7 @@ class Home extends SENE_Controller
     $this-&#x3E;putJsContent(&#x27;home/home_bottom&#x27;,$data);
     $this-&#x3E;loadLayout(&#x27;col-1&#x27;,$data);
   }
-}
-            </pre>
+}</code></pre>
             <p>So, the <code>homepage</code> theme, <code>col-1</code> layout and <code>home_bottom.php</code> content should be existed on the directory structure.</p>
             <pre>
 - app
