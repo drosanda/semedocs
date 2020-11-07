@@ -6,22 +6,21 @@
             <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
             <li class=""><NuxtLink to="/3.1.0/">3.1.0</NuxtLink></li>
             <li class=""><NuxtLink to="/3.1.0/configuration">Configuration</NuxtLink></li>
-            <li class="unavailable">Core</li>
+            <li class="unavailable">core.php</li>
           </ul>
         </nav>
         <div class="columns">
           <div class="column">
             <div class="content">
-              <h1 class="">Configuration: Core</h1>
+              <h1 class="">Configuration: core.php</h1>
               <p>Core configuration purpose for registering your core component on Seme Framework. Core controller allowed you to extend the default class to your default core. Like SENE_Controller to JI_Controller for example. This configuration applies to core controller and core model.</p>
-              <pre>
+              <pre><code v-highlight class="php">&#x3C;?php
 //register your core
 //core folder app/core/
 //all value in lower case
 $core_prefix = &#x27;ji_&#x27;;
 $core_controller = &#x27;controller&#x27;;
-$core_model = &#x27;&#x27;;
-              </pre>
+$core_model = &#x27;&#x27;;</code></pre>
             </div>
           </div>
 
@@ -31,10 +30,10 @@ $core_model = &#x27;&#x27;;
           <div class="column">
             <div class="buttons">
               <b-button tag="router-link" to="/3.1.0/configuration/controller/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-                Configuration for Controller Class
+                Configuration: controller
               </b-button>
               <b-button tag="router-link" to="/3.1.0/configuration/database/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-                Configuration for Database Class
+                Configuration: database.php
               </b-button>
             </div>
           </div>
@@ -51,7 +50,7 @@ $core_model = &#x27;&#x27;;
         name: 'Seme Framework v3.1.0',
         suffix: ' - Seme Framework v3.1.0 Documentation',
         title: 'Configuration: Core Class Helper',
-        description: 'Learn more about Configuration Core Class Helper of Seme Framework version 3.1.0 through this documentation.'
+        description: 'Learn more about Configuration Core Class Helper of Seme Framework version 3.x through this documentation.'
       }
     },
     head() {
