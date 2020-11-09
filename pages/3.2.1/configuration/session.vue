@@ -11,9 +11,14 @@
     <div class="columns">
       <div class="column">
         <div class="content">
-          <h1 class="">Configuration: Session</h1>
-          <p>Session configuration define the Session key is used by framework. If you installed 2 framework on same server with same login method and same session key, so if you logged in one of web you can automatically logged in in another web. Off course, this is can be trouble. You have to change this manually if you wont collide between your app.</p>
-          <p>The session configuration located at <code>app/config/session.php</code> please change it.</p>
+          <h1 class="">Configuration: session.php</h1>
+          <p>Session configuration define the <code>$_SESSION[$key]</code> used by framework.</p>
+          <p>If you installed 2 framework on same server with same login method and same session key, the app will be share same session.</p>
+          <p>If you want to separated it, simply fill the session key value uniquely.</p>
+          <p>The session configuration located at <code>app/config/session.php</code>.</p>
+          <h2>Example</h2>
+          <pre><code v-highlight class="php">&#x3C;?php
+$saltkey = 's3M3Fr321$';</code></pre>
         </div>
       </div>
 
@@ -22,8 +27,36 @@
 </template>
 <script>
   export default {
-    layout: 'v3.2.1'
-    // page component definitions
+    layout: 'v3.2.1',
+    data() {
+      return {
+        name: 'Seme Framework v3.2.1',
+        suffix: ' - Seme Framework v3.2.1 Documentation',
+        title: 'Configuration: session.php',
+        description: 'File session.php for Seme Framework version 3.x session setting'
+      }
+    },
+    head() {
+      return {
+        title: this.title+this.suffix,
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.description
+          },
+          {
+            hid: 'og:title',
+            name: 'og:title',
+            content: this.name+': '+this.title
+          },
+          {
+            hid: 'og:description',
+            name: 'og:description',
+            content: this.description
+          }
+        ]
+      }
+    }
   }
 </script>
-

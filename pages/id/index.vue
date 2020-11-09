@@ -54,8 +54,27 @@
               <div class="column"><i>Tampilan Tematik</i>. Seme Framework memiliki fitur yang dapat mengisi langsung kedalam layout tampilan. Programmer bebas untuk mengatur gaya maupun tema tanpa merubah tema yang ada.</div>
             </div>
             <hr>
+
+            <h2>Sekilas tentang MVC</h2>
+            <p><b>MVC</b> atau <b>Model View Controller</b> merupakan suatu metode pembangunan perangkat lunak yang memisahkan logika aplikasi menjadi beberapa bagian yang dasarkan pada fungsi suatu bagian tertentu.</p>
+            <h3>Apa itu Model?</h3>
+            <p><b>Model</b> merupakan bagian kode khusus yang berfungsi untuk melakukan komunikasi dari kode yang kita bangun terhadap database. Adapun isi dari model ini biasanya, untuk menarik data, menyimpan data, dan menghapus data dari database.</p>
+            <h3>Apa itu View?</h3>
+            <p><b>View</b> merupakan kumpulan kode yang khusus digunakan untuk mengeluarkan tampilan. Biasanya pada view ini berisi HTML, JavaScript, CSS, dan sedikit PHP yang hanya digunakan untuk mengeluarkan datanya saja.</p>
+            <h3>Apa itu Controller?</h3>
+            <p><b>Controller</b> merupakan kode yang berisi sebagai jembatan dari <b>Model &amp; View</b>. Pada bagian ini biasanya berisikan kode PHP beserta logika didalamnya. Controller juga bisa diartikan sebagai identitas dari <i>HTTP Request</i> untuk sebuah halaman web.
+            <br>
+            <p>Dengan pemecahan kode berdasarkan metode MVC, diharapkan pembangunan aplikasi dapat lebih jelas dan sederhana sehingga lebih mudah untuk dikembangkan dan dikelola dari sisi kode maupun sisi alur proses.</p>
+            <hr>
+            <figure class="image">
+              <img src="https://nyingspot.b-cdn.net/wp-content/uploads/2016/11/konsep-mvc-nyingspot.com_.png" />
+            </figure>
+            <hr>
+
             <h2>Lisensi</h2>
             <p>Seme Framework menggunakan lisensi MIT versi 2.0.</p>
+
+            <hr>
 
             <h2>Pertanyaan dan Jawaban</h2>
             <p>Jika bingung, ada bug, atau <i>request</i> fitur jang sungkan untuk menghubungi saya melalui <a href="https://instagram.com/drosanda/" target="_blank">instagram</a>, <a href="https://facebook.com/drs11/" target="_blank">facebook</a>, atau buat isu permasalahan baru melalui <a href="https://github.com/drosanda/semedocs/issues" target="_blank">github</a>.</p>

@@ -117,7 +117,8 @@ export default {
     return {
       name: 'SemeDocs',
       title: 'Seme Framework Documentation v3.2.1',
-      description: 'Deployable and lightweight PHP MVC framework that suitable for small and medium web app'
+      description: 'Deployable and lightweight PHP MVC framework that suitable for small and medium web app',
+      keyword: ''
     }
   },
   head() {
