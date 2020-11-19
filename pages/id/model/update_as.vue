@@ -14,7 +14,7 @@
         <div class="content">
           <h1 class="">Metode Update AS</h1>
 					<p>Metode update_as dari kelas SENE_MySQLi_Model merupakan metode yang sama dengan metode Update, namun nilai updatenya tidak <b><i>auto escaped</i></b>. Metode ini cocok untuk melakukan update nilai dari kolom ke kolom didalam tabel yang sama.</p>
-          <p>This method is available from SEME Framework version 4.0.2.</p>
+          <p>Metode ini tersedia sejak Seme Framework 4.0.2.</p>
 
           <b-message class="is-warning">
             <p><b>Perhatian</b></p>

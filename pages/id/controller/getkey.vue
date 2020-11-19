@@ -21,8 +21,36 @@
 
             <h2>Pengunaan dasar</h2>
             <p>Berikut ini adalah penggunaan dasar dari metode getKey</p>
-            <code v-highlight class="php">$this-&#x3E;getKey()</code>
-            <p>&nbsp;</p>
+            <code v-highlight class="php">SENE_Controller::getKey(): mixed</code>
+
+            <h2>Contoh Penggunaan</h2>
+            <p>Berikut ini adalah contoh penggunaannya untuk memeriksa user sudah login atau belum.</p>
+            <pre><code v-highlight class="php">&#x3C;?php
+class Login extends SENE_Controller{
+&nbsp;public function __construct(){
+&nbsp;&nbsp;parent::__construct();
+&nbsp;&nbsp;$this-&#x3E;setTheme(&#x27;front&#x27;);
+&nbsp;&nbsp;$this-&#x3E;load(&#x27;front/b_user_model&#x27;,&#x27;bum&#x27;);
+&nbsp;}
+&nbsp;public function index(){
+&nbsp;&nbsp;//check sudah login atau belum
+&nbsp;&nbsp;$data = $this-&#x3E;getKey();
+&nbsp;&nbsp;if(isset($data->user->id)){
+&nbsp;&nbsp;&nbsp;//sudah login, alihkan ke halaman utama
+&nbsp;&nbsp;&nbsp;&nbsp;redir(base_url());
+&nbsp;&nbsp;&nbsp;&nbsp;die();
+&nbsp;&nbsp;}
+
+&nbsp;&nbsp;//tampilkan halaman untuk login
+&nbsp;&nbsp;$this-&#x3E;setTitle(&#x27;Login &#x27;.$this-&#x3E;config-&#x3E;semevar-&#x3E;site_suffix);
+&nbsp;&nbsp;$this-&#x3E;setDescription(&#x22;Silahkan login anda sebelum dapat melakukan pelayanan&#x22;);
+&nbsp;&nbsp;$this-&#x3E;setKeyword(&#x22;login&#x22;);
+&nbsp;&nbsp;$this-&#x3E;putThemeContent(&#x22;login/home&#x22;,$data); //pass data to view
+&nbsp;&nbsp;$this-&#x3E;putJsContent(&#x22;login/home_bottom&#x22;,$data); //pass data to view
+&nbsp;&nbsp;$this-&#x3E;loadLayout(&#x22;col-1-login&#x22;,$data);
+&nbsp;&nbsp;$this-&#x3E;render();
+&nbsp;}
+}</code></pre>
             <b-message type="is-info">
               <p><b>Perhatian</b></p>
               <p>Pastikan pengaturan <code>$saltkey</code> telah diubah dan bersifat unik antara 1 projek dengan projek lainnya.</p>

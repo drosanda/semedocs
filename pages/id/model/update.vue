@@ -1,30 +1,37 @@
 <template>
-    <div class="section">
-        <div class="container">
-          <nav class="breadcrumb" aria-label="breadcrumbs">
-            <ul class="breadcrumbs">
-              <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-              <li class=""><NuxtLink to="/id/">4.0.0 (Bahasa)</NuxtLink></li>
-              <li class=""><NuxtLink to="/id/model">Model</NuxtLink></li>
-            <li class="unavailable">Update Method</li>
-          </ul>
-        </nav>
-        <div class="columns">
-          <div class="column">
+  <div class="section">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul class="breadcrumbs">
+          <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0.0/">4.0.0 (bahasa)</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0.0/model">Model</NuxtLink></li>
+        <li class="unavailable">update_as</li>
+      </ul>
+    </nav>
+    <div class="columns">
+      <div class="column">
         <div class="content">
-          <h1 class="">Update Method</h1>
-					<p>Update method is part of database class builder for updating a table.</p>
+          <h1 class="">Metode Update</h1>
+					<p>Metode update digunakan untuk memperbarui nilai dari sebuah tabel yang ada di database.</p>
 
-					<h2>Parameters</h2>
-					<p>Update method has 2 required parameters that is <b>column name</b> and <b>value</b>, another parameters are optional. Here is the completed parameters can be used by where methods</p>
-					<pre>$this->db->update(string $table_name, array $data_update, [bool $is_debug=0]): bool</pre>
+					<h2>Parameter</h2>
+					<p>Metode update memiliki2 parameter wajib, yaitu <b>nama tabel</b> dan <b>pasangan kunci nilai</b> dalam array</p>
+					<code v-highlight class="php">$this->db->update(string $table_name, array $data_update, [bool $is_debug=0]): bool</code>
+          <h3>$table_name</h3>
+          <p>Diisi dengan nama tabel yang akan diupdate.</p>
           <h3>$data_update</h3>
-          <p><b>Data update</b> is key value pair in an array. The key refer to column name of the table.</p>
-					<h2>Example usage</h2>
-					<p>Here is the examples using insert method. See the first of this page for full example.</p>
-          <h3>Basic Usage</h3>
-          <p>For example we assumed want to edit title in blog table. First, in the model:</p>
-          <pre>
+          <p>Berisikan <b>array</b> 1 dimensi yang didalamnya terdiri dari atas kunci dan nilainya. Kunci untuk nama kolom, sementara nilai berisikan nilai baru yang akan diedit.</p>
+          <h3>$is_debug</h3>
+          <p>Flag untuk mengaktifkan mode debug.</p>
+
+          <h2>Contoh Penggunaan</h2>
+          <p>Berikut ini adalah beberapa contoh penggunaan didalam model beserta pemanggilannya di controller.</p>
+
+          <h3>Penggunaan pada Model</h3>
+					<p>Berikut ini adalah contoh pengunaannya didalam sebuah model.</p>
+
+          <pre><code v-highlight class="php">&#x3C;?php
 class Blog_Model extends SENE_Model{
   var $tbl = &#x27;blog&#x27;;
   var $tbl_as = &#x27;b&#x27;;
@@ -35,14 +42,15 @@ class Blog_Model extends SENE_Model{
     $this-&#x3E;db-&#x3E;where(&#x22;id&#x22;,$id);
     $this-&#x3E;db-&#x3E;update($ths-&#x3E;tbl,$du);
   }
-}
-          </pre>
-					<p>at the controller, we assumed has file named blog.php</p>
-          <pre>
+}</code></pre>
+
+          <h3>Penggunaan di Conrtoller</h3>
+          <p>Contoh penggunaan method update yang dipanggil di dalam Controller.</p>
+          <pre><code v-highlight class="php">&#x3C;?php
 class Blog extends Sene_Controller{
   public function __construct(){
     parent::__construct();
-    $this-&#x3E;load(&#x27;blog_model&#x27;,&#x27;bm&#x27;); #class scope model
+    $this-&#x3E;load(&#x27;blog_model&#x27;,&#x27;bm&#x27;);
   }
   public function index(){
     $id = 1;
@@ -55,8 +63,7 @@ class Blog extends Sene_Controller{
       echo &#x27;failed&#x27;;
     }
   }
-}
-  </pre>
+}</code></pre>
 
         </div>
       </div>

@@ -97,7 +97,7 @@
               <li><nuxt-link to="/id/controller/putthemecontent">putThemeContent</nuxt-link></li>
               <li><nuxt-link to="/id/controller/putjscontent">putJsContent</nuxt-link></li>
               <li><nuxt-link to="/id/controller/session">session</nuxt-link></li>
-              <li><nuxt-link to="/id/controller/setKey">setKey</nuxt-link></li>
+              <li><nuxt-link to="/id/controller/setkey">setKey</nuxt-link></li>
               <li><nuxt-link to="/id/controller/settheme">setTheme</nuxt-link></li>
             </ul>
           </li>
