@@ -57,6 +57,7 @@
                   <li><nuxt-link to="/3.2.1/model/insert">Model::insert</nuxt-link></li>
                   <li><nuxt-link to="/3.2.1/model/insert_multi">Model::insert_multi</nuxt-link></li>
                   <li><nuxt-link to="/3.2.1/model/insert_batch">Model::insert_batch</nuxt-link></li>
+                  <li><nuxt-link to="/3.2.1/model/update_as">Model::update_as</nuxt-link></li>
                   <li><nuxt-link to="/3.2.1/model/update">Model::update</nuxt-link></li>
                   <li><nuxt-link to="/3.2.1/model/delete">Model::delete</nuxt-link></li>
                   <li><nuxt-link to="/3.2.1/model/exec">Model::exec</nuxt-link></li>

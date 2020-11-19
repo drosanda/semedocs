@@ -63,11 +63,12 @@
               <li><nuxt-link to="/id/model/insert_multi">Model::insert_multi</nuxt-link></li>
               <li><nuxt-link to="/id/model/insert_batch">Model::insert_batch</nuxt-link></li>
               <li><nuxt-link to="/id/model/update">Model::update</nuxt-link></li>
+              <li><nuxt-link to="/id/model/update_as">Model::update_as</nuxt-link></li>
               <li><nuxt-link to="/id/model/delete">Model::delete</nuxt-link></li>
               <li><nuxt-link to="/id/model/exec">Model::exec</nuxt-link></li>
               <li><nuxt-link to="/id/model/query">Model::query</nuxt-link></li>
               <li><nuxt-link to="/id/model/last_id">Model::last_id</nuxt-link></li>
-              <li><nuxt-link to="/4.0.0/model/page">Model::page</nuxt-link></li>
+              <li><nuxt-link to="/id/model/page">Model::page</nuxt-link></li>
             </ul>
           </li>
           <li>
