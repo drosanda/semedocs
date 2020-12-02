@@ -16,6 +16,10 @@
             <ul>
               <li><NuxtLink to="/error/notice/missing-app-cache">Notice: Missing app/cache</NuxtLink></li>
               <li><NuxtLink to="/error/notice/missing-kero-bin">Notice: Missing kero/bin</NuxtLink></li>
+              <li><NuxtLink to="/error/notice/could-not-find-model">Error: Could not find model</NuxtLink></li>
+              <li><NuxtLink to="/error/notice/missing-theme-directory-for-theme-name">Error: Missing theme directory for THEME NAME</NuxtLink></li>
+              <li><NuxtLink to="/error/notice/could-not-find-library">Could not find library LIBRARY NAME</NuxtLink></li>
+              <li><NuxtLink to="/error/notice/unable-to-load-library-on">Unable to load library on LIBRARY NAME</NuxtLink></li>
             </ul>
           </div>
         </div>
