@@ -17,6 +17,9 @@
               <img src='https://img.shields.io/badge/version-4.0.0-ed6f75' alt="version">
               <img src='https://travis-ci.org/drosanda/seme-framework.svg?branch=master' alt="build status">
               <img src='https://img.shields.io/badge/lang-id-e9bd2e' alt="version">
+              <a href="https://codecov.io/gh/drosanda/seme-framework">
+                <img src="https://codecov.io/gh/drosanda/seme-framework/branch/master/graph/badge.svg?token=3WRW0SNO41"/>
+              </a>
             </div>
 
             <p>Ini adalah dokumentasi resmi untuk Seme Framework, PHP MVC Framework untuk membuat aplikasi berbasis web yang cepat. Cocok untuk membuat aplikasi yang kecil sampai menengah.</p>

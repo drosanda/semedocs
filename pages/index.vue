@@ -11,7 +11,7 @@
         <div class="column">
           <div class="content">
             <h1 class="is-size-1">Welcome to Seme Framework</h1>
-
+            <h2 class="tagline">The Lightweight PHP MVC Framework</h2>
             <figure class="image">
               <img src="~/static/carbon.png" alt="Seme Framework code example" />
             </figure>
@@ -41,6 +41,32 @@
               <div class="column"><i>Admin Friendly</i>. Seme Framework has re-routing feature for admin page, without refactoring the MVC.</div>
               <div class="column"><i>Theme Engine</i>. Seme Framework has feature who can <i>PUSH</i> the content inside the layout view. Also support theming engine, if you want change the Style, you just clone the original one and modified safely.</div>
             </div>
+            <hr>
+            <h2>Status</h2>
+            <p>Here is the badges of project status:</p>
+            <div class="badges">
+              <img src='https://img.shields.io/badge/version-4.0.0-ed6f75' alt="version">
+              <img src='https://travis-ci.org/drosanda/seme-framework.svg?branch=master' alt="build status">
+              <img src='https://img.shields.io/badge/lang-en-e9bd2e' alt="version">
+              <a href="https://codecov.io/gh/drosanda/seme-framework">
+                <img src="https://codecov.io/gh/drosanda/seme-framework/branch/master/graph/badge.svg?token=3WRW0SNO41" alt="Code coverage" />
+              </a>
+              <img src="https://sonarcloud.io/api/project_badges/measure?project=drosanda_seme-framework&metric=bugs" alt="Bugs" />
+              <img src="https://sonarcloud.io/api/project_badges/measure?project=drosanda_seme-framework&metric=ncloc" alt="Lines of codes" />
+              <img src="https://sonarcloud.io/api/project_badges/measure?project=drosanda_seme-framework&metric=sqale_rating" alt="Maintainability rating" />
+              <img src="https://sonarcloud.io/api/project_badges/measure?project=drosanda_seme-framework&metric=reliability_rating" alt="Reliability rating" />
+              <img src="https://sonarcloud.io/api/project_badges/measure?project=drosanda_seme-framework&metric=security_rating" alt="Security rating" />
+              <img src="https://sonarcloud.io/api/project_badges/measure?project=drosanda_seme-framework&metric=vulnerabilities" alt="Vulnerabilities rating" />
+            </div>
+            <br>
+            <p>
+              Status badges credit:
+              <ul>
+                <li>Continous integration (CI) by TravisCI,</li>
+                <li>Code coverage measurements by codecov.io, and</li>
+                <li>The rest measurements by sonarcloud.io.</li>
+              </ul>
+            </p>
             <hr>
             <h2>License</h2>
             <p>Seme Framework licensed under MIT version 2.0.</p>
