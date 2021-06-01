@@ -37,8 +37,8 @@
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/4.0.0/" class="btn">
-            version 4.0.0
+          <nuxt-link to="/version/" class="btn">
+            Versions
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
@@ -49,6 +49,7 @@
 </template>
 <script>
 export default {
+  layout: 'default',
   data (){
     return {
       name: 'Seme Framework',

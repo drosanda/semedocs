@@ -57,9 +57,15 @@
 
 
       <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/version/" class="btn">
+          <i class="fa fa-chevron-left"></i>
+            Versions
+          </nuxt-link>
+        </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/4.0.0/credits/" class="btn">
-            Credits
+          <nuxt-link to="/4.0.0/requirements/" class="btn">
+            Requirements
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>

@@ -173,12 +173,13 @@ blockquote, body, dd, dl, dt, fieldset, figure, h1, h2, h3, h4, h5, h6, hr, html
  height: 15px;
  display:block;
  cursor: pointer;
- border: 5px solid #000;
+ border: 5px solid #f44336;
  border-width: 5px 0;
  position: fixed;
  top: 1.5em;
  right: 1.5em;
  z-index: 1;
+ border-radius: 3px;
 }
 
 .hamburger:before {
@@ -489,14 +490,15 @@ Monokai style - ported by Luigi Maselli - http://grigio.org
   font-weight: bold;
 }
 
+.hljs.php {
+  color: rgb(255, 128, 191);
+}
+
 .hljs-comment {
   color: #af3e36;
 }
 .hljs-variable {
   color: #55b5db;
-}
-.hljs.php {
-  color: rgb(255, 128, 191);
 }
 .hljs-meta {
   color: #56b6c2;;
@@ -630,3 +632,23 @@ Monokai style - ported by Luigi Maselli - http://grigio.org
 
 .macwindow .maccontent {
 }
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+th {
+  text-align: left;
+  font-weight: bolder;
+}
+
+th,
+td {
+  padding: 0.25em 0.25em;
+  line-height: inherit;
+}
+
+th { vertical-align: bottom }
+td { vertical-align: top }

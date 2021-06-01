@@ -31,14 +31,8 @@
               <li><code>development.php</code></li>
             </ol>
             <p>The content of each files can be differents each others depends on your requirements.</p>
-            <div class="message is-info">
-  <div class="message-body">
-              <p>
-                By default Seme Framework only include <code>development.php</code> for development phase.
-                You can created new files named <code>staging.php</code> or even <code>production.php</code> later on each server.
-              </p>
-            </div></div>
             <hr>
+            
             <h2>Basic configuration</h2>
             <p>
               By default Seme Framework only include <code>development.php</code> for development phase.
@@ -74,7 +68,8 @@
             </p>
             <hr>
             <h2>Source Codes</h2>
-            <p>Here is the default content of development.php</p>
+            <p>Here is the default content for development.php file.</p>
+
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">

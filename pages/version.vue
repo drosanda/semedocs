@@ -4,15 +4,16 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class="unavailable">Version</li>
+          <li class="unavailable">Versions</li>
         </ul>
       </nav>
       <div class="">
         <div class="column">
           <div class="content">
-            <h1>Version</h1>
+            <h1>Versions</h1>
             <p>Here is the list version of Seme Framework and its documentation support.</p>
-            <table>
+
+            <table class="striped">
               <thead>
                 <tr>
                   <th>Version</th>
@@ -73,16 +74,19 @@
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/credits" type="is-link" icon-pack="fa" icon-left="chevron-left" class="">
-              Credits
-            </b-button>
-            <b-button tag="router-link" to="/4.0.0/" type="is-link" icon-pack="fa" icon-right="chevron-right">
-              version 4.0.0
-            </b-button>
-          </div>
+
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/credits/" class="btn">
+          <i class="fa fa-chevron-left"></i>
+            Credits
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/4.0.0/" class="btn">
+            Version 4.0.0
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 
@@ -91,10 +95,11 @@
 </template>
 <script>
 export default {
+  layout: 'default',
   data (){
     return {
       name: 'Seme Framework',
-      title: 'Version',
+      title: 'Versions',
       suffix: ' - Seme Framework',
       description: 'Here is the Seme Framework version list with its documentation status and support.'
     }

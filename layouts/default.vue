@@ -2,24 +2,17 @@
   <amp-body>
     <div class="main-content columns is-fullheight">
       <amp-sidebar id="sidebar1" layout="nodisplay" side="left" on="sidebarOpen:focusOnMe.focus">
-        <amp-img
-          alt="Seme Framework Logo"
-          :src="logo"
-          layout="responsive"
-          width="240"
-          height="40"
-        >
-        </amp-img>
+        <amp-img layout="responsive" width="240" height="40" alt="Seme Framework Logo" :src="logo"></amp-img>
         <div class="badges">
-          <amp-img layout="fixed" width="90px" height="20px" src=src='https://img.shields.io/badge/version-4.0.0-ed6f75' alt="version"></amp-img>
-          <amp-img layout="fixed" width="90px" height="20px" src=src='https://travis-ci.org/drosanda/seme-framework.svg?branch=master' alt="build status"></amp-img>
-          <amp-img layout="fixed" width="90px" height="20px" src=src='https://img.shields.io/badge/lang-en-e9bd2e' alt="version"></amp-img>
+          <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/version-4.0.0-ed6f75' alt="version"></amp-img>
+          <amp-img layout="fixed" width="90px" height="20px" src='https://travis-ci.org/drosanda/seme-framework.svg?branch=master' alt="build status"></amp-img>
+          <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/lang-en-e9bd2e' alt="version"></amp-img>
         </div>
         <ul>
           <li><nuxt-link to="/">Seme Framework</nuxt-link></li>
-          <li><nuxt-link to="/credits">Credits</nuxt-link></li>
+          <li><nuxt-link to="/credits/">Credits</nuxt-link></li>
           <li>
-            <nuxt-link to="/version/">Version</nuxt-link>
+            <nuxt-link to="/version/">Versions</nuxt-link>
             <ul>
               <li><nuxt-link to="/4.0.0/">4.0.0 (English)</nuxt-link></li>
               <li><nuxt-link to="/id/">4.0.0 (Bahasa)</nuxt-link></li>
