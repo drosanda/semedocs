@@ -45,12 +45,13 @@ $this-&#x3E;load('api/hello_model');
   }
 }
             </pre>
-            <b-message type="is-info">
+            <div class="message is-info">
+<div class="message-body">
               <p>While loading the model from sub directory, the path prefix will not instantiate as object model name.</p>
               <p>So, be careful for choosing the naming class model or alias.</p>
               <p>If necessary, you can duplicate a model class to avoid conflict with extra suffix with number.</p>
               <p>example, <code>app/model/api/hello_model2.php</code> and then the class name <code>Hello_Model2</code>.</p>
-            </b-message>
+            </div></div>
 
             <h3>$alias</h3>
             <p>The alias purpose is for shorting the name of model that we create into SENE_Controller.</p>
@@ -75,11 +76,12 @@ class Blog extends SENE_Controller {
   }
 }
             </pre>
-            <b-message type="is-success">
+            <div class="message is-success">
+<div class="message-body">
               <p><b>Tips</b></p>
               <p>If you confused how to fill the alias name, you can get from first letter of each class name.</p>
               <p>example, <code>app/model/api/hello_detail_model2.php</code> and then the alias will be <code>hdm2</code>.</p>
-            </b-message>
+            </div></div>
           </div>
         </div>
       </div>

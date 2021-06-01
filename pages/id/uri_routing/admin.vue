@@ -48,7 +48,36 @@
 </template>
 <script>
 export default {
-  layout: 'v4.0.0'
-  // page component definitions
+  layout: 'id',
+  data (){
+    return {
+      name: 'Seme Framework v4.0.0',
+      suffix: ' - Dokumentasi Seme Framework v4.0.0',
+      title: 'URI Routing',
+      description: 'Pelajari selengkapnya tentang the URI Routing of melalui dokumentasi Seme Framework versi 4.0.0.'
+    }
+  },
+  head() {
+    return {
+      title: this.title+this.suffix,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.name+': '+this.title
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.description
+        }
+      ]
+    }
+  }
 }
 </script>

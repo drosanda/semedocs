@@ -28,16 +28,18 @@
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/4.0.0/downloads/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Download and Installation
-            </b-button>
-            <b-button tag="router-link" to="/4.0.0/configuration/development/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Development Phase
-            </b-button>
-          </div>
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/4.0.0/configuration/db-connection/" class="btn">
+          <i class="fa fa-chevron-left"></i>
+            Database Connection
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/4.0.0/configuration/" class="btn">
+            Basic Configuration
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 

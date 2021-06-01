@@ -14,9 +14,10 @@
           <div class="content">
             <h1 class="">Limit Method</h1>
             <p>Limit method digunakan untuk membatasi jumlah baris dari hasil query.</p>
-            <b-message class="is-success">
+            <div class="message is-success">
+  <div class="message-body">
               <p>Limit method ini cocok untuk diaplikasikan dengan DataTable.</p>
-            </b-message>
+            </div></div>
             <p>Dengan fungsi ini memungkinkan untuk mengatur banyaknya jumlah data dan akan tampil pada halaman ke berapa.</p>
             <p>Metode ini akan menghasilkan query seperti ini:</p>
             <code v-highlight class="sql">SELECT * FROM table WHERE 1 LIMIT [A],[B]</code>
@@ -59,11 +60,12 @@ class Blog_Model extends SENE_Model{
   }
 }</code></pre>
 
-            <b-message class="is-info">
+            <div class="message is-info">
+  <div class="message-body">
               <p><b>page method v.s. limit method</b></p>
               <p>Page method used for limiting by page and page size</p>
               <p>Limit method used for limiting data by MySQL traditional limit method</p>
-            </b-message>
+            </div></div>
           </div>
         </div>
       </div>

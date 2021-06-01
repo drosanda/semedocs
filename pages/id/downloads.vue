@@ -89,6 +89,22 @@
         </div>
       </div>
 
+
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/id/requirements/" class="btn">
+          <i class="fa fa-chevron-left"></i>
+            Persyaratan
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/id/configuration/" class="btn">
+            Pengaturan
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
+        </div>
+      </div>
+
     </div>
   </div>
 </template>

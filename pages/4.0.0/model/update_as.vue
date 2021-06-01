@@ -16,12 +16,13 @@
   					<p>Update AS method is like update method but with <b>unescaped</b> key value pair. This method suitable for update column to column in a table.</p>
             <p>This methode is available from SEME Framework version 4.0.2.</p>
 
-            <b-message class="is-warning">
+            <div class="message is-warning">
+  <div class="message-body">
               <p><b>Warning</b></p>
               <p>
                 Maybe using <i>escape</i> methode (<code>$this->db->esc('NILAI')</code>) for key value pair is required for prevent <b>SQL injection</b>.
               </p>
-            </b-message>
+            </div></div>
 
   					<h2>Parameters</h2>
   					<p>Update method has 2 required parameters that is <b>table name</b> and <b>key value pair in array</b>, another parameters are optional. Here is the completed parameters can be used by where methods</p>

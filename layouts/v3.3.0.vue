@@ -1,29 +1,47 @@
 <template>
-  <div>
+  <amp-body>
     <div class="main-content columns is-fullheight">
-      <aside class="column is-3 is-narrow-mobile is-fullheight section is-hidden-mobile">
-        <ul class="menu-list">
+      <amp-sidebar id="sidebar1" layout="nodisplay" side="left" on="sidebarOpen:focusOnMe.focus">
+        <amp-img
+          alt="Seme Framework Logo"
+          :src="logo"
+          layout="responsive"
+          width="240"
+          height="40"
+        >
+        </amp-img>
+        <div class="badges">
+          <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/version-3.3.0-ed6f75' alt="version"></amp-img>
+          <amp-img layout="fixed" width="90px" height="20px" src='https://travis-ci.org/drosanda/seme-framework.svg?branch=master' alt="build status"></amp-img>
+          <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/lang-en-e9bd2e' alt="language"></amp-img>
+        </div>
+        <ul>
           <li><nuxt-link to="/">Seme Framework</nuxt-link></li>
           <li><nuxt-link to="/credits">Credits</nuxt-link></li>
           <li><nuxt-link to="/3.3.0/">Version 3.3.0</nuxt-link></li>
           <li><nuxt-link to="/error/">Error &amp; Troubleshooting</nuxt-link></li>
         </ul>
-      </aside>
+      </amp-sidebar>
+      <button
+        class="hamburger"
+        on='tap:sidebar1.toggle'
+        aria-label="Click to open sidebar"
+        >
+        <div class="hamburger"></div>
+      </button>
       <div class="container column is-9">
         <nuxt />
       </div>
     </div>
     <footer class="footer">
-      <footer class="footer">
-        <div class="container">
-          <div class="content has-text-centered">
-            <p class="">Copyright &copy; 2014-2020. Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
-            <p><small>Last updated on 3 Oktober 2020</small></p>
-          </div>
+      <div class="container">
+        <div class="content has-text-centered">
+          <p class="">Copyright &copy; 2014-2021. Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
+          <p><small>Last updated on 30 May 2021</small></p>
         </div>
-      </footer>
+      </div>
     </footer>
-  </div>
+  </amp-body>
 
 </template>
 
@@ -40,12 +58,6 @@ export default {
     return {
       title: this.title,
       description: this.description,
-      link: [
-        {
-          rel: 'canonical',
-          href: 'https://seme.framework.web.id' + this.$route.path.replace(/\/+$/, '') + '/'
-        }
-      ],
       meta: [
         {
           hid: 'og:description',

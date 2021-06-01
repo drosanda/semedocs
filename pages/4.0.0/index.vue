@@ -55,16 +55,13 @@
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/credits" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Credits
-            </b-button>
-            <b-button tag="router-link" to="/4.0.0/requirements/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Requirements
-            </b-button>
-          </div>
+
+      <div class="nav-bottom">
+        <div class="nav-bottom-right">
+          <nuxt-link to="/4.0.0/credits/" class="btn">
+            Credits
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 

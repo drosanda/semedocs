@@ -24,13 +24,17 @@
   },
   "homepage": "https://github.com/drosanda/semedocs#readme",
   "dependencies": {
-    "@nuxtjs/amp": "^0.4.0",
-    "@nuxtjs/pwa": "^3.0.0-beta.20",
+    "@nuxt/content": "^1.14.0",
+    "@nuxtjs/amp": "^0.5.4",
+    "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/sitemap": "^2.4.0",
-    "buefy": "^0.8.20",
-    "nuxt": "^2.14.1",
-    "nuxt-buefy": "^0.3.31",
+    "core-js": "^3.9.1",
+    "dotenv": "^9.0.2",
+    "nuxt": "^2.15.3",
     "nuxt-highlightjs": "^1.0.1",
-    "nuxt-i18n": "^6.15.3"
+    "vue-highlight.js": "^4.0.1-beta"
+  },
+  "devDependencies": {
+    "highlight.js": "^10.7.2"
   }
 }

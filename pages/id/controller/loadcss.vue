@@ -49,7 +49,8 @@ class Blog extends SENE_Controller {
   }
 }</code></pre>
 
-            <b-message type="is-warning">
+            <div class="message is-warning">
+<div class="message-body">
               <p><b>Perhatian</b></p>
               <p>Supaya metode loadCss dapat berjalan dengan baik, pastikan sudah memanggil:</p>
               <ul>
@@ -59,7 +60,7 @@ class Blog extends SENE_Controller {
               </ul>
               <p>Didalam templet header tema.</p>
 
-            </b-message>
+            </div></div>
 
           </div>
         </div>

@@ -59,9 +59,10 @@
   &#x22;data&#x22;: []
 }
             </pre>
-            <b-message type="is-info">
+            <div class="message is-info">
+<div class="message-body">
               <p>While creating API, we doesn&#x27;t need the view, because API result will be rendered on controller.</p>
-            </b-message>
+            </div></div>
 
             <h2>Coding Phase</h2>
             <p>After understranding the structure, its time to implement the codes.</p>
@@ -444,9 +445,10 @@ class ApiKey extends SENE_Controller
             <h2>Test the API</h2>
             <p>After Completed the code, we can test the code by using <a href="https://www.postman.com/downloads/" target="_blank">Postman</a> or create own test runner.</p>
 
-            <b-message type="is-info">
+            <div class="message is-info">
+<div class="message-body">
               <p>Seme Framework has supported for creating own test runner for testing the API.</p>
-            </b-message>
+            </div></div>
 
             <h3>Test apikey List</h3>
             <p>To test apikey list, you can open url directly in your browser to <code>http://localhost/seme_framework/api/apikey/</code>.</p>
@@ -455,21 +457,15 @@ class ApiKey extends SENE_Controller
 
             <h4>Create</h4>
             <p>The test result for create data</p>
-            <figure>
-              <img src="~/assets/img/tutorial/basic-api/postman-create.png">
-            </figure>
+            <amp-img layout="responsive" width="1336px" height="1106px" alt="postman create" src="~~/assets/img/tutorial/basic-api/postman-create.png"></amp-img>
 
             <h4>Edit</h4>
             <p>The test result for edit data</p>
-            <figure>
-              <img src="~/assets/img/tutorial/basic-api/postman-edit.png">
-            </figure>
+            <amp-img layout="responsive" width="1336px" height="1106px" alt="postman edit" src="~~/assets/img/tutorial/basic-api/postman-edit.png"></amp-img>
 
             <h4>Delete</h4>
             <p>The test result for delete data</p>
-            <figure>
-              <img src="~/assets/img/tutorial/basic-api/postman-delete.png">
-            </figure>
+            <amp-img layout="responsive" width="1336px" height="1106px" alt="postman delete" src="~~/assets/img/tutorial/basic-api/postman-delete.png"></amp-img>
 
             <p>Well done, if you facing any problem do not hestitate to open the <a href="https://github.com/drosanda/seme-framework/issues/new" target="_blank">issue</a> on our github page.</p>
             <hr>

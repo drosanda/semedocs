@@ -20,30 +20,34 @@
             <p>
               Pengaturan khusus untuk fase <i>production</i> ini ada di <code>app/config/production.php</code>.
             </p>
-            <b-message class="is-success">
+            <div class="message is-success">
+  <div class="message-body">
               <p><b>Tips</b></p>
               <p>Jika ingin melakukan auto deploy dengan git, pastikan <code>app/config/staging.php</code> dan <code>app/config/production.php</code> sudah dikecualikan di dalam file <code>.gitignore</code>.</p>
-            </b-message>
-            <b-message class="is-warning">
+            </div></div>
+            <div class="message is-warning">
+  <div class="message-body">
               <p><b>Perhatian</b></p>
               <p>Hati-hati dalam penggunaan <code>.gitignore</code> karena dapat menyebabkan file tidak terindeks ke dalam repositori.</p>
               <p>Pastikan untuk selalu melakukan pengecekan ganda untuk penggunaan .gitignore di dalam repositori.</p>
-            </b-message>
+            </div></div>
           </div>
         </div>
 
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/id/configuration/staging/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Fase Staging
-            </b-button>
-            <b-button tag="router-link" to="/id/tutorial" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Tutorial
-            </b-button>
-          </div>
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/id/configuration/staging/" class="btn">
+            <i class="fa fa-chevron-left"></i>
+            Fase Staging
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/id/tutorial/" class="btn">
+            Tutorial
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 

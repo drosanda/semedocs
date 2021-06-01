@@ -15,9 +15,10 @@
             <h1 class="">Constructor method</h1>
             <p>The Constructor method will loaded all parent class that required for a controller.</p>
             <p>This is method is very important for Seme Framework Controller.</p>
-            <b-message class="is-info">
+            <div class="message is-info">
+  <div class="message-body">
               <p>If the constructor method is missed, you maybe get unexpected result.</p>
-            </b-message>
+            </div></div>
             <p>Ussually the parent constructor are executed after class constructor</p>
             <h2>Basic Usage</h2>
             <p>The basic usage for this method is:</p>

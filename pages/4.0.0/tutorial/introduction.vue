@@ -55,9 +55,10 @@ class Home extends SENE_Controller
             <h3>View</h3>
             <p>On this tutorial we will learn how to render the view with theme and passing the data from controller to view passed by controller.</p>
 
-            <b-message class="is-success">
+            <div class="message is-success">
+  <div class="message-body">
               <p>This tutorial using <a href="https://materializecss.com/" target="_blank">materializeCSS</a> as the CSS Library.</p>
-            </b-message>
+            </div></div>
             <h4>Create Theme: <u>front</u>.</h4>
             <p>Before start, we have to understand the theme directory structure.</p>
             <pre><code v-highlight class="plaintext">-| app/
@@ -116,11 +117,12 @@ class Home extends SENE_Controller
   &#x3C;/body&#x3E;
 &#x3C;/html&#x3E;
 </code></pre>
-            <b-message type="is-info">
+            <div class="message is-info">
+<div class="message-body">
               <p>There is only one variable can pass through the view from controller.</p>
               <p>So, we have to put any variable that will pass into view in single array.</p>
               <p>In this example we use <code>$data</code> variable in controller.</p>
-            </b-message>
+            </div></div>
 
             <h5>Separated HTML head</h5>
             <p>Seme Framework support separated layout element for maximizing reusable components.</p>
@@ -149,7 +151,8 @@ class Home extends SENE_Controller
 &#x9;&#x3C;?php $this-&#x3E;getAdditionalAfter()?&#x3E;
 &#x3C;/head&#x3E;</code></pre>
 
-            <b-message type="is-info">
+            <div class="message is-info">
+<div class="message-body">
               <p>Seme Framework theme engine required these files to work properly:</p>
               <ol>
                 <li><code>theme.json</code>,</li>
@@ -157,12 +160,13 @@ class Home extends SENE_Controller
                 <li>and a layout <code>page/col-1.php</code> </li>
               </ol>
               <p>So, we have to put any variable that will pass into view in single array.</p>
-            </b-message>
+            </div></div>
 
-            <b-message type="is-info">
+            <div class="message is-info">
+<div class="message-body">
               <p><code>$data[&#x27;hello&#x27;]</code> from controller, will be auto extracted into <code>$hello</code> variable in view.</p>
               <p>As well as with the other array keys, will be auto extracted.</p>
-            </b-message>
+            </div></div>
 
             <h5>Create the Content</h5>
             <p>Seme Framework support separated theme content. This content will be rendered on inner main layout.</p>

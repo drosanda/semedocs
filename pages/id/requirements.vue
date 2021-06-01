@@ -56,16 +56,18 @@
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/id/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Bahasa Indonesia
-            </b-button>
-            <b-button tag="router-link" to="/id/downloads/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Download dan Instal
-            </b-button>
-          </div>
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/id/" class="btn">
+          <i class="fa fa-chevron-left"></i>
+            Bahasa Indonesia
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/id/downloads/" class="btn">
+            Download dan Instal
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 

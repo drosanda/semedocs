@@ -20,15 +20,18 @@
             <p>
               Pengaturan lingkungan yang terpisah untuk fase staging memungkinkan untuk memiliki pengaturan yang berbeda dari fase development seperti koneksi database, base url, dan pengaturan tambahan lainnya.
             </p>
-            <b-message class="is-success">
+            <div class="message is-success">
+  <div class="message-body">
               <p><b>Tips</b></p>
               <p>Jika ingin melakukan auto deploy dengan git, pastikan <code>app/config/staging.php</code> dan <code>app/config/production.php</code> sudah dikecualikan di dalam file <code>.gitignore</code>.</p>
-            </b-message>
-            <b-message class="is-warning">
-              <p><b>Perhatian</b></p>
-              <p>Hati-hati dalam penggunaan <code>.gitignore</code> karena dapat menyebabkan file tidak terindeks ke dalam repositori.</p>
-              <p>Pastikan untuk selalu melakukan pengecekan ganda untuk penggunaan .gitignore di dalam repositori.</p>
-            </b-message>
+            </div></div>
+            <div class="message is-warning">
+              <div class="message-body">
+                <p><b>Perhatian</b></p>
+                <p>Hati-hati dalam penggunaan <code>.gitignore</code> karena dapat menyebabkan file tidak terindeks ke dalam repositori.</p>
+                <p>Pastikan untuk selalu melakukan pengecekan ganda untuk penggunaan .gitignore di dalam repositori.</p>
+              </div>
+            </div>
 
 
           </div>
@@ -36,16 +39,18 @@
 
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/id/configuration/development/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Fase Development
-            </b-button>
-            <b-button tag="router-link" to="/id/configuration/production" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Fase Production
-            </b-button>
-          </div>
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/id/configuration/development/" class="btn">
+            <i class="fa fa-chevron-left"></i>
+            Fase Development
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/id/configuration/production/" class="btn">
+            Fase Production
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 

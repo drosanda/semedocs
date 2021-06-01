@@ -10,25 +10,30 @@
       <div class="">
         <div class="column">
           <div class="content">
-            <h1 class="is-size-1">Welcome to Seme Framework</h1>
+            <h1 class="is-size-1">Welcome to <span>Seme Framework</span></h1>
             <h2 class="tagline">The Lightweight PHP MVC Framework</h2>
-            <figure class="image">
-              <img src="~/static/carbon.png" alt="Seme Framework code example" />
-            </figure>
+            <amp-img
+              alt="Seme Framework code example"
+              :src="homeGroup"
+              layout="responsive"
+              height="1480"
+              width="1308"
+            >
+            </amp-img>
 
             <div class="buttons is-centered">
-              <b-button tag="router-link" to="/4.0.0/downloads/" type="is-link">
+              <nuxt-link to="/4.0.0/downloads/" class="btn">
                 Download
-              </b-button>
-              <b-button tag="router-link" to="/4.0.0/tutorial/" type="is-link">
+              </nuxt-link>
+              <nuxt-link to="/4.0.0/tutorial/" class="btn">
                 Getting Started
-              </b-button>
-              <b-button tag="router-link" to="/error/" type="is-link">
+              </nuxt-link>
+              <nuxt-link to="/error/" class="btn">
                 Troubleshoot
-              </b-button>
-              <b-button tag="router-link" to="/id/" type="is-link">
+              </nuxt-link>
+              <nuxt-link to="/id/" class="btn">
                 Bahasa Indonesia
-              </b-button>
+              </nuxt-link>
             </div>
             <p>This is official documentation for Seme Framework, the PHP MVC Framework for creating small and medium app that needed for fast delivery. At first version of Seme Framework used for building API (Middle Ware) for another Application such as android, iOS, etc. And now as increasing of requirement, Seme Framework has expand the limit for creating Small and Medium App.</p>
 
@@ -45,18 +50,16 @@
             <h2>Status</h2>
             <p>Here is the badges of project status:</p>
             <div class="badges">
-              <img src='https://img.shields.io/badge/version-4.0.0-ed6f75' alt="version">
-              <img src='https://travis-ci.org/drosanda/seme-framework.svg?branch=master' alt="build status">
-              <img src='https://img.shields.io/badge/lang-en-e9bd2e' alt="version">
-              <a href="https://codecov.io/gh/drosanda/seme-framework">
-                <img src="https://codecov.io/gh/drosanda/seme-framework/branch/master/graph/badge.svg?token=3WRW0SNO41" alt="Code coverage" />
-              </a>
-              <img src="https://sonarcloud.io/api/project_badges/measure?project=drosanda_seme-framework&metric=bugs" alt="Bugs" />
-              <img src="https://sonarcloud.io/api/project_badges/measure?project=drosanda_seme-framework&metric=ncloc" alt="Lines of codes" />
-              <img src="https://sonarcloud.io/api/project_badges/measure?project=drosanda_seme-framework&metric=sqale_rating" alt="Maintainability rating" />
-              <img src="https://sonarcloud.io/api/project_badges/measure?project=drosanda_seme-framework&metric=reliability_rating" alt="Reliability rating" />
-              <img src="https://sonarcloud.io/api/project_badges/measure?project=drosanda_seme-framework&metric=security_rating" alt="Security rating" />
-              <img src="https://sonarcloud.io/api/project_badges/measure?project=drosanda_seme-framework&metric=vulnerabilities" alt="Vulnerabilities rating" />
+              <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/version-4.0.0-ed6f75' alt="version"></amp-img>
+              <amp-img layout="fixed" width="90px" height="20px" src='https://travis-ci.org/drosanda/seme-framework.svg?branch=master' alt="build status"></amp-img>
+              <amp-img layout="fixed" width="56px" height="20px" src='https://img.shields.io/badge/lang-en-e9bd2e' alt="version"></amp-img>
+              <amp-img layout="fixed" width="113px" height="20px" src="https://codecov.io/gh/drosanda/seme-framework/branch/master/graph/badge.svg?token=3WRW0SNO41" alt="Code coverage"></amp-img>
+              <amp-img layout="fixed" width="78px" height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=drosanda_seme-framework&metric=bugs" alt="Bugs"></amp-img>
+              <amp-img layout="fixed" width="138px" height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=drosanda_seme-framework&metric=ncloc" alt="Lines of codes"></amp-img>
+              <amp-img layout="fixed" width="133px" height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=drosanda_seme-framework&metric=sqale_rating" alt="Maintainability rating"></amp-img>
+              <amp-img layout="fixed" width="102" height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=drosanda_seme-framework&metric=reliability_rating" alt="Reliability rating"></amp-img>
+              <amp-img layout="fixed" width="94px" height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=drosanda_seme-framework&metric=security_rating" alt="Security rating"></amp-img>
+              <amp-img layout="fixed" width="127px" height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=drosanda_seme-framework&metric=vulnerabilities" alt="Vulnerabilities rating"></amp-img>
             </div>
             <br>
             <p>
@@ -77,13 +80,12 @@
       </div>
 
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/credits/" type="is-link" icon-pack="fa" icon-right="chevron-right">
-              Credits
-            </b-button>
-          </div>
+      <div class="nav-bottom">
+        <div class="nav-bottom-right">
+          <nuxt-link to="/credits/" class="btn">
+            Credits
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 
@@ -97,7 +99,8 @@
       return {
         title: 'Welcome to Seme Framework Documentation',
         suffix: ' - The Lightweight and Deployable PHP MVC Framework',
-        description: 'Seme Framework is lightweight and deployable PHP MVC Framework that you can learn more through this documentation.'
+        description: 'Seme Framework is lightweight and deployable PHP MVC Framework that you can learn more through this documentation.',
+        homeGroup: require('~/static/carbon.png'),
       }
     },
     head() {

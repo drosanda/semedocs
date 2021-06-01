@@ -1,122 +1,32 @@
 <template>
-  <div>
+  <amp-body>
     <div class="main-content columns is-fullheight">
-      <aside class="column is-3 is-narrow-mobile is-fullheight section is-hidden-mobile">
-        <figure>
-          <img src="~/static/logo.png">
-        </figure>
+      <amp-sidebar id="sidebar1" layout="nodisplay" side="left" on="sidebarOpen:focusOnMe.focus">
+        <amp-img
+          alt="Seme Framework Logo"
+          :src="logo"
+          layout="responsive"
+          width="240"
+          height="40"
+        >
+        </amp-img>
         <div class="badges">
-          <img src='https://img.shields.io/badge/version-4.0.0-ed6f75' alt="version">
-          <img src='https://travis-ci.org/drosanda/seme-framework.svg?branch=master' alt="build status">
-          <img src='https://img.shields.io/badge/lang-en-e9bd2e' alt="version">
+          <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/version-4.0.0-ed6f75' alt="version"></amp-img>
+          <amp-img layout="fixed" width="90px" height="20px" src='https://travis-ci.org/drosanda/seme-framework.svg?branch=master' alt="build status"></amp-img>
+          <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/lang-en-e9bd2e' alt="language"></amp-img>
         </div>
-        <ul class="menu-list">
+        <ul>
           <li><nuxt-link to="/">Seme Framework</nuxt-link></li>
-          <li><nuxt-link to="/credits">Credits</nuxt-link></li>
+          <li><nuxt-link to="/credits">Credits xxx</nuxt-link></li>
           <li>
-            <nuxt-link to="/4.0.0/">Version 4.0.0</nuxt-link>
+            <nuxt-link to="/version/">Version</nuxt-link>
             <ul>
-              <li><nuxt-link to="/4.0.0/requirements">Requirements</nuxt-link></li>
-              <li><nuxt-link to="/4.0.0/downloads">Downloads &amp; Install</nuxt-link></li>
-              <li>
-                <nuxt-link to="/4.0.0/configuration">Configuration</nuxt-link>
-                <ul>
-                  <li><nuxt-link to="/4.0.0/configuration/url">URL</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/configuration/db-connection">Database</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/configuration/development">Development</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/configuration/staging">Staging</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/configuration/production">Production</nuxt-link></li>
-                </ul>
-              </li>
-              <li>
-                <nuxt-link to="/4.0.0/tutorial">Tutorial</nuxt-link>
-                <ul>
-                  <li><nuxt-link to="/4.0.0/tutorial/introduction">Introduction</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/tutorial/get-data">Get Data</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/tutorial/basic-api">Basic API</nuxt-link></li>
-                </ul>
-              </li>
-              <li>
-                <nuxt-link to="/4.0.0/uri_routing">URI Routing</nuxt-link>
-                <ul>
-                  <li><nuxt-link to="/4.0.0/uri_routing/admin">Admin Routing</nuxt-link></li>
-                </ul>
-              </li>
-              <li><nuxt-link to="/4.0.0/constants">Constants</nuxt-link></li>
-              <li>
-                <nuxt-link to="/4.0.0/globals">Globals</nuxt-link>
-              </li>
-
-              <li><nuxt-link to="/4.0.0/model">Model</nuxt-link>
-                <ul>
-                  <li><nuxt-link to="/4.0.0/model/select">Model::select</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/model/select_as">Model::select_as</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/model/from">Model::from</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/model/join">Model::join</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/model/join_composite">Model::join_composite</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/model/composite_create">Model::composite_create</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/model/where">Model::where</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/model/where_as">Model::where_as</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/model/between">Model::between</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/model/group_by">Model::group_by</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/model/order_by">Model::order_by</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/model/limit">Model::limit</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/model/get">Model::get</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/model/get_first">Model::get_first</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/model/insert">Model::insert</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/model/insert_multi">Model::insert_multi</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/model/insert_batch">Model::insert_batch</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/model/update">Model::update</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/model/update_as">Model::update_as</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/model/delete">Model::delete</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/model/exec">Model::exec</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/model/query">Model::query</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/model/limit">Model::limit</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/model/page">Model::page</nuxt-link></li>
-                </ul>
-              </li>
-              <li>
-                <nuxt-link to="/4.0.0/view">View</nuxt-link>
-                <ul>
-                  <li><nuxt-link to="/4.0.0/view/theme">Creating a Theme</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/view/layout">Theme Layout</nuxt-link></li>
-                  <li>
-                    <nuxt-link to="/4.0.0/view/theme-content">Theme Content</nuxt-link>
-                    <ul>
-                      <li><nuxt-link to="/4.0.0/view/theme-content/js">Javascript</nuxt-link></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <nuxt-link to="/4.0.0/controller">Controller</nuxt-link>
-                <ul>
-                  <li><nuxt-link to="/4.0.0/controller/constructor">Constructor</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/controller/load">Load</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/controller/lib">Lib</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/controller/input">Handling Input Form</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/controller/settheme">Set Theme</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/controller/loadlayout">Load Theme Layout</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/controller/putthemecontent">Load Theme Content</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/controller/putjscontent">Load Javascript Theme Content</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/controller/session">Using Session</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/controller/loadcss">loadCss</nuxt-link></li>
-                </ul>
-              </li>
-              <li>
-                <nuxt-link to="/4.0.0/database">Database</nuxt-link>
-                <ul>
-                  <li><nuxt-link to="/4.0.0/database/setup">Setup</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/database/quick-start">Quick Start</nuxt-link></li>
-                  <li><nuxt-link to="/4.0.0/database/query-builder">Query Builder</nuxt-link></li>
-                </ul>
-              </li>
-              <li>
-                <nuxt-link to="/4.0.0/library">Library</nuxt-link>
-              </li>
-              <li>
-                <nuxt-link to="/4.0.0/cli">CLI (command line interface)</nuxt-link>
-              </li>
+              <li><nuxt-link to="/4.0.0/">4.0.0 (English)</nuxt-link></li>
+              <li><nuxt-link to="/id/">4.0.0 (Bahasa)</nuxt-link></li>
+              <li><nuxt-link to="/3.3.0/">3.3.0</nuxt-link></li>
+              <li><nuxt-link to="/3.2.1/">3.2.1</nuxt-link></li>
+              <li><nuxt-link to="/3.1.0/">3.1.x</nuxt-link></li>
+              <li><nuxt-link to="/3.0.0/">3.0.x</nuxt-link></li>
             </ul>
           </li>
           <li>
@@ -131,26 +41,40 @@
             </ul>
           </li>
         </ul>
-      </aside>
+      </amp-sidebar>
+      <button
+        class="hamburger"
+        on='tap:sidebar1.toggle'
+        aria-label="Click to open sidebar"
+        >
+        <div class="hamburger"></div>
+      </button>
       <div class="container column is-9">
         <nuxt />
       </div>
     </div>
     <footer class="footer">
-      <footer class="footer">
-        <div class="container">
-          <div class="content has-text-centered">
-            <p class="">Copyright &copy; 2014-2020. Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
-            <p><small>Last updated on 3 Oktober 2020</small></p>
-          </div>
+      <div class="container">
+        <div class="content has-text-centered">
+          <p class="">Copyright &copy; 2014-2021. Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
+          <p><small>Last updated on 30 May 2021</small></p>
         </div>
-      </footer>
+      </div>
     </footer>
-  </div>
+  </amp-body>
 
 </template>
 
 <script>
+import VueHighlightJS from "vue-highlight.js";
+
+import javascript from "highlight.js/lib/languages/javascript";
+import scss from "highlight.js/lib/languages/scss";
+import xml from "highlight.js/lib/languages/xml";
+
+import "highlight.js/styles/dracula.css";
+
+
 export default {
   data() {
     return {
@@ -158,7 +82,8 @@ export default {
       version: 'v4.0.0',
       prefix: ' - ',
       title: 'Seme Framework v4.0.0 Documentation',
-      description: 'Learn more about Seme Framework version 4.0.0 trough this documentation'
+      description: 'Learn more about Seme Framework version 4.0.0 trough this documentation',
+      logo: require('~/static/logo.png')
     }
   },
   head() {
@@ -179,12 +104,6 @@ export default {
           hid: 'og:description',
           name: 'og:description',
           content: this.description
-        }
-      ],
-      link: [
-        {
-          rel: 'canonical',
-          href: 'https://seme.framework.web.id' + this.$route.path.replace(/\/+$/, '') + '/'
         }
       ]
     }

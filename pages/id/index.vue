@@ -14,32 +14,35 @@
             <h1 class="is-size-1">Seme Framework versi 4.0.0</h1>
             <h2 style="margin: 0.5em 0; padding: 0; line-height: 1;">Dokumentasi dalam Bahasa Indonesia</h2>
             <div class="badges">
-              <img src='https://img.shields.io/badge/version-4.0.0-ed6f75' alt="version">
-              <img src='https://travis-ci.org/drosanda/seme-framework.svg?branch=master' alt="build status">
-              <img src='https://img.shields.io/badge/lang-id-e9bd2e' alt="version">
-              <a href="https://codecov.io/gh/drosanda/seme-framework">
-                <img src="https://codecov.io/gh/drosanda/seme-framework/branch/master/graph/badge.svg?token=3WRW0SNO41"/>
-              </a>
+              <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/version-4.0.0-ed6f75' alt="version"></amp-img>
+              <amp-img layout="fixed" width="90px" height="20px" src='https://travis-ci.org/drosanda/seme-framework.svg?branch=master' alt="build status"></amp-img>
+              <amp-img layout="fixed" width="53px" height="20px" src='https://img.shields.io/badge/lang-id-e9bd2e' alt="version"></amp-img>
+              <amp-img layout="fixed" width="113px" height="20px" src="https://codecov.io/gh/drosanda/seme-framework/branch/master/graph/badge.svg?token=3WRW0SNO41" alt="code coverage"></amp-img>
             </div>
 
             <p>Ini adalah dokumentasi resmi untuk Seme Framework, PHP MVC Framework untuk membuat aplikasi berbasis web yang cepat. Cocok untuk membuat aplikasi yang kecil sampai menengah.</p>
             <p>Pada versi pertama Seme Framework digunakan untuk membangun API (Middleware) untuk Aplikasi lain seperti aplikasi berbasis android, iOS, dll.</p>
             <p>Sekarang ini Seme Framework sudah dapat digunakan untuk membuat aplikasi berbasis web seutuhnya.</p>
 
-            <figure class="image">
-              <img src="~/static/carbon.png" />
-            </figure>
+            <amp-img
+              alt="Seme Framework code example"
+              :src="semecarbon"
+              layout="responsive"
+              height="1480"
+              width="1308"
+            >
+            </amp-img>
 
             <div class="buttons is-centered">
-              <b-button tag="router-link" to="/id/downloads/" type="is-link">
+              <nuxt-link class="btn" to="/id/downloads/" type="is-link">
                 Download
-              </b-button>
-              <b-button tag="router-link" to="/id/tutorial/" type="is-link">
+              </nuxt-link>
+              <nuxt-link class="btn" to="/id/tutorial/" type="is-link">
                 Mulai percobaan
-              </b-button>
-              <b-button tag="router-link" to="/error/" type="is-link">
+              </nuxt-link>
+              <nuxt-link class="btn" to="/error/" type="is-link">
                 <i>Troubleshoot</i>
-              </b-button>
+              </nuxt-link>
             </div>
 
             <h2>Kenapa harus Seme Framework?</h2>
@@ -69,9 +72,7 @@
             <br>
             <p>Dengan pemecahan kode berdasarkan metode MVC, diharapkan pembangunan aplikasi dapat lebih jelas dan sederhana sehingga lebih mudah untuk dikembangkan dan dikelola dari sisi kode maupun sisi alur proses.</p>
             <hr>
-            <figure class="image">
-              <img src="https://nyingspot.b-cdn.net/wp-content/uploads/2016/11/konsep-mvc-nyingspot.com_.png" />
-            </figure>
+            <amp-img layout="responsive" width="837px" height="458px" src="https://nyingspot.b-cdn.net/wp-content/uploads/2016/11/konsep-mvc-nyingspot.com_.png"></amp-img>
             <hr>
 
             <h2>Lisensi</h2>
@@ -87,13 +88,11 @@
       </div>
 
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/id/requirements/" type="is-link" icon-pack="fa" icon-right="chevron-right">
-              Persyaratan
-            </b-button>
-          </div>
+      <div class="nav-bottom">
+        <div class="nav-bottom-right">
+          <nuxt-link class="btn" to="/id/requirements/">
+            Persyaratan
+          </nuxt-link>
         </div>
       </div>
 
@@ -107,7 +106,8 @@
       return {
         title: 'Dokumentasi Resmi Bahasa Indonesia',
         suffix: ' - Seme Framework versi 4.0.0',
-        description: 'Seme Framework adalah Framework dengan konsep MVC untuk PHP yang ringan untuk dikembangkan.'
+        description: 'Seme Framework adalah Framework dengan konsep MVC untuk PHP yang ringan untuk dikembangkan.',
+        semecarbon: require('~/static/carbon.png')
       }
     },
     head() {

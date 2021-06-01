@@ -22,10 +22,11 @@
             <p>
               Pengaturan base URL ini ada di <code>app/config/development.php</code> dibagian variabel <code>$site</code>.
             </p>
-            <b-message class="is-danger">
+            <div class="message is-danger">
+  <div class="message-body">
               <p><b>Pehatian</b></p>
               <p>Mulai dari Seme Framework versi 3.0.0, isi dari nilai <code>$site</code> harus diberi akhiran garis miring &#x22;/&#x22;.</p>
-            </b-message>
+            </div></div>
             <p>
               Contoh penggunaan:
             </p>
@@ -33,15 +34,17 @@
             <pre>$site = &#x22;https://www.example.com/&#x22;;</pre>
             <pre>$site = &#x22;http://localhost:8080/&#x22;;</pre>
 
-            <b-message class="is-info">
+            <div class="message is-info">
+  <div class="message-body">
               <p><b>Pengaturan Base URL dengan Port Custom</b></p>
               <p>Jika menggunakan nilai <code>$_SERVER[&#x27;HTTP_HOST&#x27;]</code> pada <code>$site</code> tidak perlu untuk menambahkan akhiran &#x22;:PORT&#x22; pada setiap pengaturannya.</p>
-            </b-message>
+            </div></div>
 
-            <b-message class="is-info">
+            <div class="message is-info">
+  <div class="message-body">
               <p><b>Mendapatkan nilai base URL (<code>$site</code>)</b></p>
               <p>Untuk mendapatkan nilai dari base URL dapat menggunakan fungsi global <NuxtLink to="/id/globals/functions/">base_url()</NuxtLink> yang membalikan base URL sebagai string.</p>
-            </b-message>
+            </div></div>
 
             <h2>Admin Secret URL</h2>
             <p>The special base url configuration for admin that point to  <code>app/controller/admin/*</code>.</p>
@@ -54,10 +57,11 @@
             <pre>$admin_secret_url = &#x22;boss&#x22;;</pre>
             <pre>$admin_secret_url = &#x22;manajer&#x22;;</pre>
 
-            <b-message class="is-info">
+            <div class="message is-info">
+  <div class="message-body">
               <p><b>Accessing the secret admin URL (<code>$admin_secret_url</code>) value</b></p>
               <p>The <NuxtLink to="/id/globals/functions/">base_url_admin()</NuxtLink> global function is for returning value of <code>$site.$admin_secret_url</code>.</p>
-            </b-message>
+            </div></div>
 
             <h2>URL Routing Method</h2>
             <p>
@@ -87,10 +91,11 @@
             </p>
             <pre>$cdn_url = &#x22;http://cdn.cenah.co.id/seme-framework/&#x22;;</pre>
 
-            <b-message class="is-info">
+            <div class="message is-info">
+  <div class="message-body">
               <p><b>Accessing the CDN URL (<code>$cdn_url</code>) value</b></p>
               <p>The <NuxtLink to="/id/globals/functions/">$this->cdn_url()</NuxtLink> method form <code>SENE_Controller</code> class is for returning value of <code>$cdn_url</code> value.</p>
-            </b-message>
+            </div></div>
 
             <hr>
 

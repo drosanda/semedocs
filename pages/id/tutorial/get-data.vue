@@ -40,18 +40,14 @@
             <p>This tool allowed you to do almost anything to your MySQL or MariaDB powered database.</p>
             <p>If you have run the XAMPP, then you can open <code>http://localhost/phpmyadmin/</code>.</p>
             <p>You have to create a database, named <code>seme_framework</code>.</p>
-            <figure>
-              <img src="~/assets/img/tutorial/phpmyadmin-db-create.png">
-            </figure>
+            <amp-img layout="responsive" width="1086px" height="694px" alt="PMA DB Create" :src="dbCreate"></amp-img>
 
             <h3>Import the example database</h3>
             <p>After create a database, you have to import the database.</p>
             <p>We have already save some sql files in your <code>sql</code> directory.</p>
             <p>Before continuing the export process you have to select the database <code>seme_framework</code> which is you have created it before.</p>
             <p>Navigate to <code>export</code> and choose <code>seme_framework.sql</code> file in <code>sql</code> directory.</p>
-            <figure>
-              <img src="~/assets/img/tutorial/phpmyadmin-db-import.png">
-            </figure>
+            <amp-img layout="responsive" width="1086px" height="694px" alt="PMA DB Create" :src="dbImport"></amp-img>
             <p>After importing SQL, you can see new tables already added to database.</p>
             <figure>
               <img src="~/assets/img/tutorial/phpmyadmin-db-tables.png">
@@ -170,16 +166,18 @@ class Home extends SENE_Controller
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/id/tutorial/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Tutorial: Introduction
-            </b-button>
-            <b-button tag="router-link" to="/id/tutorial/basic-api/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Tutorial: Basic API
-            </b-button>
-          </div>
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/id/tutorial/basic-api/" class="btn">
+          <i class="fa fa-chevron-left"></i>
+            Tutorial: Introduction
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/id/tutorial/basic-api/" class="btn">
+            Tutorial: Basic API
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 
@@ -194,7 +192,9 @@ export default {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Dokumentasi Seme Framework v4.0.0',
       title: 'Tutorial: Get Data',
-      description: 'Pelajari selengkapnya tentang obtaining data from model tutorial by melalui dokumentasi Seme Framework versi 4.0.0.'
+      description: 'Pelajari selengkapnya tentang obtaining data from model tutorial by melalui dokumentasi Seme Framework versi 4.0.0.',
+      dbCreate: require('~/assets/img/tutorial/phpmyadmin-db-create.png'),
+      dbImport: require('~/assets/img/tutorial/phpmyadmin-db-import.png'),
     }
   },
   head() {

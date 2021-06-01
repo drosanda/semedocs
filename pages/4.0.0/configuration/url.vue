@@ -31,15 +31,17 @@
             <pre>$site = &#x22;https://www.example.com/&#x22;;</pre>
             <pre>$site = &#x22;http://localhost:8080/&#x22;;</pre>
 
-            <b-message class="is-info">
+            <div class="message is-info">
+  <div class="message-body">
               <p><b>Base URL with custom port</b></p>
               <p>if using <code>$_SERVER[&#x27;HTTP_HOST&#x27;]</code> there is no necessary to add suffix port after it.</p>
-            </b-message>
+            </div></div>
 
-            <b-message class="is-info">
+            <div class="message is-info">
+  <div class="message-body">
               <p><b>Accessing base URL (<code>$site</code>) value</b></p>
               <p>The <NuxtLink to="/4.0.0/globals/functions/">base_url()</NuxtLink> global function is for returning value of <code>$site</code>.</p>
-            </b-message>
+            </div></div>
 
             <h2>Admin Secret URL</h2>
             <p>The special base url configuration for admin that point to  <code>app/controller/admin/*</code>.</p>
@@ -52,10 +54,11 @@
             <pre>$admin_secret_url = &#x22;boss&#x22;;</pre>
             <pre>$admin_secret_url = &#x22;manajer&#x22;;</pre>
 
-            <b-message class="is-info">
+            <div class="message is-info">
+  <div class="message-body">
               <p><b>Accessing the secret admin URL (<code>$admin_secret_url</code>) value</b></p>
               <p>The <NuxtLink to="/4.0.0/globals/functions/">base_url_admin()</NuxtLink> global function is for returning value of <code>$site.$admin_secret_url</code>.</p>
-            </b-message>
+            </div></div>
 
             <h2>URL Routing Method</h2>
             <p>
@@ -85,10 +88,11 @@
             </p>
             <pre>$cdn_url = &#x22;http://cdn.cenah.co.id/seme-framework/&#x22;;</pre>
 
-            <b-message class="is-info">
+            <div class="message is-info">
+  <div class="message-body">
               <p><b>Accessing the CDN URL (<code>$cdn_url</code>) value</b></p>
               <p>The <NuxtLink to="/4.0.0/globals/functions/">$this->cdn_url()</NuxtLink> method form <code>SENE_Controller</code> class is for returning value of <code>$cdn_url</code> value.</p>
-            </b-message>
+            </div></div>
 
             <hr>
 
@@ -98,16 +102,18 @@
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/4.0.0/downloads/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Download and Installation
-            </b-button>
-            <b-button tag="router-link" to="/4.0.0/configuration/development/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Development Phase
-            </b-button>
-          </div>
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/4.0.0/configuration/" class="btn">
+          <i class="fa fa-chevron-left"></i>
+            Basic Configuration
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/4.0.0/configuration/db-connection/" class="btn">
+            Database Connection
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 

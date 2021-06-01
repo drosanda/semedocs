@@ -17,10 +17,11 @@
             <p>The library will be instantiate as part of properties on SENE_Controller.</p>
             <p>Without an alias, the instantiate library object will be same as filename without extension php.</p>
 
-            <b-message type="is-warning">
+            <div class="message is-warning">
+<div class="message-body">
               <p>This <b>lib</b> method only affected for single file class library.</p>
               <p>For using 3rd party library like from <code>composer</code> you can read it from <NuxtLink to="/4.0.0/library/3rd-party">3rd library section</NuxtLink>.</p>
-            </b-message>
+            </div></div>
 
             <h2>Parameters</h2>
             <p>Load method has 3 parameter, there is the <code>library filename</code>, <code>library alias</code> and <code>embeeding type</code>.</p>
@@ -51,12 +52,13 @@ $this-&#x3E;load('seme_email');
   }
 }
             </pre>
-            <b-message type="is-info">
+            <div class="message is-info">
+<div class="message-body">
               <p>While loading the library from sub directory, the path prefix will not instantiate as object model name.</p>
               <p>So, be careful for choosing the naming class library or alias.</p>
               <p>If necessary, you can duplicate a library class to avoid conflict with extra suffix with number.</p>
               <p>example, <code>kero/lib/seme_email2.php</code> and then the class name <code>Seme_Email2</code>.</p>
-            </b-message>
+            </div></div>
 
             <h3>$alias</h3>
             <p>The alias purpose is for shorting the name of model that we create into SENE_Controller.</p>
@@ -81,11 +83,12 @@ class Blog extends SENE_Controller {
   }
 }
             </pre>
-            <b-message type="is-success">
+            <div class="message is-success">
+<div class="message-body">
               <p><b>Tips</b></p>
               <p>If you confused how to fill the alias name, you can get from first letter of each class name.</p>
               <p>example, <code>kero/lib/seme_email.php</code> and then the alias will be <code>se</code>.</p>
-            </b-message>
+            </div></div>
 
             <h3>$embeeding_type</h3>
             <p>The embeeding_type purpose is for enable autoinstantiate object or not.</p>
@@ -112,9 +115,10 @@ class Blog extends SENE_Controller {
   }
 }
             </pre>
-            <b-message type="is-info">
+            <div class="message is-info">
+<div class="message-body">
               <p>If <code>$embeeding_type</code> value is not equal to <code>lib</code>, the second parameter will ignored.</p>
-            </b-message>
+            </div></div>
           </div>
         </div>
       </div>

@@ -50,9 +50,10 @@ public function getByOrderId($id){
           <h3>Join Method</h3>
           <p>Join method value. Default empty string. Value consist of, inner, outer, left, right.</p>
 
-          <b-message type="is-info">
+          <div class="message is-info">
+<div class="message-body">
             <p>This method available from Seme Framework version &#x3E;= 3.2.1</p>
-          </b-message>
+          </div></div>
 
         </div>
       </div>

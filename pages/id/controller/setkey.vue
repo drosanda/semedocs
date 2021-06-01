@@ -68,15 +68,17 @@ public function index(){
 }
 }</code></pre>
             <p>&nbsp;</p>
-            <b-message type="is-info">
+            <div class="message is-info">
+<div class="message-body">
               <p><b>Perhatian</b></p>
               <p>Pastikan pengaturan <code>$saltkey</code> telah diubah dan bersifat unik antara 1 projek dengan projek lainnya.</p>
-            </b-message>
+            </div></div>
 
-            <b-message type="is-success">
+            <div class="message is-success">
+<div class="message-body">
               <p><b>Tips</b></p>
               <p>Jika bingung menentukan <code>$saltkey</code>, gunakan nama singkat proyek dan akhiri dengan tahun.</p>
-            </b-message>
+            </div></div>
           </div>
         </div>
       </div>

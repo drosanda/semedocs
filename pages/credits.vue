@@ -29,16 +29,18 @@
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="">
-              Home
-            </b-button>
-            <b-button tag="router-link" to="/4.0.0/" type="is-link" icon-pack="fa" icon-right="chevron-right">
-              version 4.0.0
-            </b-button>
-          </div>
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/" class="btn">
+            <i class="fa fa-chevron-left"></i>
+            Home
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/4.0.0/" class="btn">
+            version 4.0.0
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 
