@@ -32,7 +32,7 @@
             </ol>
             <p>The content of each files can be differents each others depends on your requirements.</p>
             <hr>
-            
+
             <h2>Basic configuration</h2>
             <p>
               By default Seme Framework only include <code>development.php</code> for development phase.
@@ -56,7 +56,7 @@
             <p>
               The timezone value required by some apps that requiring timezone precisions.
               The default value is <code>$timezone = &#x27;Asia/Jakarta&#x27;;</code>.
-              For the values, please refer to <a href="https://www.php.net/manual/en/timezones.php">List of Supported Timezones</a> on PHP Manual website.
+              For the values, please refer to <a href="https://www.php.net/manual/en/timezones.php" target="_blank">List of Supported Timezones <i class="fa fa-external-link"></i></a> on PHP Manual website.
             </p>
 
             <h3>Additional Configuration</h3>

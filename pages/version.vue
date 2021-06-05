@@ -28,8 +28,8 @@
                     <NuxtLink to="/4.0.0/">English</NuxtLink> <NuxtLink to="/id/">Bahasa</NuxtLink>
                   </td>
                   <td>
-                    <img src='https://img.shields.io/badge/langID-22%25-d6cfcf' alt="documentation coverage">
-                    <img src='https://img.shields.io/badge/langEN-60%25-ffc107' alt="documentation coverage">
+                    <amp-img layout="responsive" width="90px" height="20px" src='https://img.shields.io/badge/langID-22%25-d6cfcf' alt="documentation coverage Bahasa"></amp-img>
+                    <amp-img layout="responsive" width="90px" height="20px" src='https://img.shields.io/badge/langEN-60%25-ffc107' alt="documentation coverage English"></amp-img>
                   </td>
                 </tr>
                 <tr>
@@ -38,32 +38,32 @@
                     <NuxtLink to="/3.3.0/">English</NuxtLink>
                   </td>
                   <td>
-                    <img src='https://img.shields.io/badge/langID-0%25-f1f1f1' alt="documentation coverage for Bahasa">
-                    <img src='https://img.shields.io/badge/langEN-1%25-eaeaea' alt="documentation coverage for English">
+                    <amp-img layout="responsive" width="90px" height="20px" src='https://img.shields.io/badge/langID-0%25-f1f1f1' alt="documentation coverage for Bahasa"></amp-img>
+                    <amp-img layout="responsive" width="90px" height="20px" src='https://img.shields.io/badge/langEN-1%25-eaeaea' alt="documentation coverage for English"></amp-img>
                   </td>
                 </tr>
                 <tr>
                   <td>3.2.1</td>
                   <td><NuxtLink to="/3.2.1/">English</NuxtLink></td>
                   <td>
-                    <img src='https://img.shields.io/badge/langID-0%25-f1f1f1' alt="documentation coverage for Bahasa">
-                    <img src='https://img.shields.io/badge/langEN-27%25-efe4ae' alt="documentation coverage for English">
+                    <amp-img layout="responsive" width="90px" height="20px" src='https://img.shields.io/badge/langID-0%25-f1f1f1' alt="documentation coverage for Bahasa"></amp-img>
+                    <amp-img layout="responsive" width="90px" height="20px" src='https://img.shields.io/badge/langEN-27%25-efe4ae' alt="documentation coverage for English"></amp-img>
                   </td>
                 </tr>
                 <tr>
                   <td>3.1.0</td>
                   <td><NuxtLink to="/3.1.0/">English</NuxtLink></td>
                   <td>
-                    <img src='https://img.shields.io/badge/langID-0%25-f1f1f1' alt="documentation coverage for Bahasa">
-                    <img src='https://img.shields.io/badge/langEN-12%25-eaeaea' alt="documentation coverage for English">
+                    <amp-img layout="responsive" width="90px" height="20px" src='https://img.shields.io/badge/langID-0%25-f1f1f1' alt="documentation coverage for Bahasa"></amp-img>
+                    <amp-img layout="responsive" width="90px" height="20px" src='https://img.shields.io/badge/langEN-12%25-eaeaea' alt="documentation coverage for English"></amp-img>
                   </td>
                 </tr>
                 <tr>
                   <td>3.0.0</td>
                   <td><NuxtLink to="/3.0.0/">English</NuxtLink></td>
                   <td>
-                    <img src='https://img.shields.io/badge/langID-0%25-f1f1f1' alt="documentation coverage for Bahasa">
-                    <img src='https://img.shields.io/badge/langEN-8%25-eaeaea' alt="documentation coverage for English">
+                    <amp-img layout="responsive" width="90px" height="20px" src='https://img.shields.io/badge/langID-0%25-f1f1f1' alt="documentation coverage for Bahasa"></amp-img>
+                    <amp-img layout="responsive" width="90px" height="20px" src='https://img.shields.io/badge/langEN-8%25-eaeaea' alt="documentation coverage for English"></amp-img>
                   </td>
                 </tr>
               </tbody>

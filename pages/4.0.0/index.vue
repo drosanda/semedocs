@@ -11,14 +11,12 @@
       <div class="">
         <div class="column">
           <div class="content">
-            <h1 class="is-size-1">Seme Framework version 4.0.0</h1>
+            <h1 class="is-size-1">Seme Framework <span>version 4.0.0</span></h1>
             <div class="badges">
-              <img src='https://img.shields.io/badge/version-4.0.0-ed6f75' alt="version">
-              <img src='https://travis-ci.org/drosanda/seme-framework.svg?branch=master' alt="build status">
-              <img src='https://img.shields.io/badge/lang-en-e9bd2e' alt="version">
-              <a href="https://codecov.io/gh/drosanda/seme-framework">
-                <img src="https://codecov.io/gh/drosanda/seme-framework/branch/master/graph/badge.svg?token=3WRW0SNO41" alt="code coverage" />
-              </a>
+              <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/version-4.0.0-ed6f75' alt="version"></amp-img>
+              <amp-img layout="fixed" width="90px" height="20px" src='https://travis-ci.org/drosanda/seme-framework.svg?branch=master' alt="build status"></amp-img>
+              <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/lang-en-e9bd2e' alt="version"></amp-img>
+              <amp-img layout="fixed" width="90px" height="20px" src="https://codecov.io/gh/drosanda/seme-framework/branch/master/graph/badge.svg?token=3WRW0SNO41" alt="code coverage"></amp-img>
             </div>
             <p>
               In version 4.0.0 Seme Framework has main target for providing deployable apps.

@@ -11,7 +11,7 @@
       <div class="">
         <div class="column">
           <div class="content">
-            <h1 class="is-size-1">Seme Framework versi 4.0.0</h1>
+            <h1 class="is-size-1">Seme Framework <span>versi 4.0.0</span></h1>
             <h2 style="margin: 0.5em 0; padding: 0; line-height: 1;">Dokumentasi dalam Bahasa Indonesia</h2>
             <div class="badges">
               <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/version-4.0.0-ed6f75' alt="version"></amp-img>
@@ -89,9 +89,16 @@
 
 
       <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/version/" class="btn">
+          <i class="fa fa-chevron-left"></i>
+            Versions
+          </nuxt-link>
+        </div>
         <div class="nav-bottom-right">
           <nuxt-link class="btn" to="/id/requirements/">
             Persyaratan
+            <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
       </div>

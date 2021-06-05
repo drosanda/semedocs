@@ -138,7 +138,7 @@
       <div class="container">
         <div class="content has-text-centered">
           <p class="">Copyright &copy; 2014-2021. Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
-          <p><small>Last updated on 30 May 2021</small></p>
+          <p><small>Last updated on May 30, 2021</small></p>
         </div>
       </div>
     </footer>
