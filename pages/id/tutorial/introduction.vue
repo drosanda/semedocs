@@ -457,7 +457,7 @@ class Home extends SENE_Controller
             </div>
             <p>To test it, open <code>http://localhost/seme_framework</code> using browser.</p>
             <p>It should show an alert, view with loaded CSS, and show H1 with content Hello World from view and using theme.</p>
-            <amp-img layout="reponsive" width="100px" height="100px" :src="tutor7"></amp-img>
+            <amp-img layout="responsive" width="100px" height="100px" :src="tutor7"></amp-img>
 
             <hr>
           </div>
