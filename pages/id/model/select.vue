@@ -91,12 +91,33 @@ export default {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Dokumentasi Seme Framework v4.0.0',
       title: 'Model::select method',
-      description: 'Pelajari selengkapnya tentang select method on SENE_Model class from Seme Framework.'
+      description: 'Pelajari selengkapnya tentang select method on SENE_Model class from Seme Framework.',
+      breadcrumbs: [
+        {
+          url: process.env.ORIGIN_URL || 'http://localhost:3001',
+          text: 'home',
+        },
+        {
+          url: (process.env.ORIGIN_URL || 'http://localhost:3001')+'/id/',
+          text: 'ID',
+        },
+        {
+          url: (process.env.ORIGIN_URL || 'http://localhost:3001')+'/id/tutorial/',
+          text: 'Model',
+        },
+        {
+          url: (process.env.ORIGIN_URL || 'http://localhost:3001')+'/id/tutorial/introduction/',
+          text: 'Select',
+        },
+      ],
     }
   },
   head() {
     return {
-      title: this.title+this.suffix,
+      htmlAttrs: {
+        lang: 'id'
+      },
+      title: this.title+' - '+this.name,
       meta: [
         {
           hid: 'description',
@@ -106,7 +127,7 @@ export default {
         {
           hid: 'og:title',
           name: 'og:title',
-          content: this.name+': '+this.title
+          content: this.title
         },
         {
           hid: 'og:description',
@@ -115,6 +136,62 @@ export default {
         }
       ]
     }
+  },
+  jsonld() {
+    const items = this.breadcrumbs.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@id': item.url,
+        name: item.text,
+      },
+    }));
+    return [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: items,
+      },
+      {
+        "@type": "NewsArticle",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": (process.env.ORIGIN_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+        },
+        "headline": (this.headline || this.title),
+        "image": [
+          this.logo
+        ],
+        "dateCreated": "2020-06-11T10:12:00+07:00",
+        "datePublished": "2020-06-11T10:12:00+07:00",
+        "dateModified": "2021-06-11T01:04:00+07:00",
+        "author": {
+          "@type": "Person",
+          "gender": "Male",
+          "name": "Daeng Rosanda, S.Kom",
+          "alternateName": "Daeng Rosanda",
+          "jobTitle": "Founder",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Cipta Esensi Merenah",
+            "email": "hi@cenah.co.id"
+          }
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Cipta Esensi Merenah",
+          "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+          "logo": {
+            "@type": "ImageObject",
+            "name": "logo Cipta Esensi Merenah",
+            "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+            "width": "256px",
+            "height": "62px"
+          }
+        },
+        "description": this.description
+      }
+    ];
   }
 }
 </script>

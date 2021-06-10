@@ -76,20 +76,6 @@
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/id/requirements/" icon-pack="fa" icon-left="chevron-left">
-              Persyaratan
-            </b-button>
-            <b-button tag="router-link" to="/id/configuration/" icon-pack="fa" icon-right="chevron-right">
-              Pengaturan
-            </b-button>
-          </div>
-        </div>
-      </div>
-
-
       <div class="nav-bottom">
         <div class="nav-bottom-left">
           <nuxt-link to="/id/requirements/" class="btn">
@@ -116,12 +102,29 @@
         name: 'Seme Framework v4.0.0',
         suffix: ' - Dokumentasi Seme Framework v4.0.0',
         title: 'Download dan Instal',
-        description: 'Pelajari selengkapnya tentang cara download dan instal Seme Framework versi 4.0.0'
+        description: 'Pelajari selengkapnya tentang cara download dan instal Seme Framework versi 4.0.0',
+        breadcrumbs: [
+          {
+            url: process.env.ORIGIN_URL || 'http://localhost:3001',
+            text: 'home',
+          },
+          {
+            url: (process.env.ORIGIN_URL || 'http://localhost:3001')+'/id/',
+            text: 'ID',
+          },
+          {
+            url: (process.env.ORIGIN_URL || 'http://localhost:3001')+'/id/configuration/',
+            text: 'Download dan Install',
+          }
+        ]
       }
     },
     head() {
       return {
-        title: this.title+this.suffix,
+        htmlAttrs: {
+          lang: 'id'
+        },
+        title: this.title+' - '+this.name,
         meta: [
           {
             hid: 'description',
@@ -131,7 +134,7 @@
           {
             hid: 'og:title',
             name: 'og:title',
-            content: this.name+': '+this.title
+            content: this.title
           },
           {
             hid: 'og:description',
@@ -140,6 +143,62 @@
           }
         ]
       }
+    },
+    jsonld() {
+      const items = this.breadcrumbs.map((item, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@id': item.url,
+          name: item.text,
+        },
+      }));
+      return [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: items,
+        },
+        {
+          "@type": "NewsArticle",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": (process.env.ORIGIN_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+          },
+          "headline": (this.headline || this.title),
+          "image": [
+            this.logo
+          ],
+          "dateCreated": "2020-06-11T10:12:00+07:00",
+          "datePublished": "2020-06-11T10:12:00+07:00",
+          "dateModified": "2021-06-11T01:04:00+07:00",
+          "author": {
+            "@type": "Person",
+            "gender": "Male",
+            "name": "Daeng Rosanda, S.Kom",
+            "alternateName": "Daeng Rosanda",
+            "jobTitle": "Founder",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Cipta Esensi Merenah",
+              "email": "hi@cenah.co.id"
+            }
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Cipta Esensi Merenah",
+            "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+            "logo": {
+              "@type": "ImageObject",
+              "name": "logo Cipta Esensi Merenah",
+              "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+              "width": "256px",
+              "height": "62px"
+            }
+          },
+          "description": this.description
+        }
+      ];
     }
   }
 </script>
