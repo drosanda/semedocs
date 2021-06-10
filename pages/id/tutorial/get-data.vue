@@ -48,9 +48,9 @@
             <p>Kami telah menyimpan file sql pada direktori <code>sql</code>.</p>
             <p>Sebelum melanjutkan proses ekspor Anda harus memilih database <code>seme_framework</code> yang telah Anda buat sebelumnya.</p>
             <p>Navigasikan ke tab <code>export</code> dan pilih file <code>seme_framework.sql</code> didalam direktori <code>sql</code>.</p>
-            <amp-img layout="responsive" width="1086px" height="694px" alt="PMA DB Create" :src="dbImport"></amp-img>
+            <amp-img layout="responsive" width="1486px" height="1260px" alt="PMA DB Import" :src="dbImport"></amp-img>
             <p>Setelah mengimpor SQL, Anda dapat melihat tabel baru yang sudah ditambahkan ke database.</p>
-            <amp-img layout="responsive" width="1086px" height="694px" alt="PMA DB Create" :src="dbTblList"></amp-img>
+            <amp-img layout="responsive" width="1862px" height="984px" alt="PMA DB table List" :src="dbTblList"></amp-img>
 
             <h2>Penysunan Kode (<em>Ngoding</em>)</h2>
             <p>Setelah setup database, saatnya untuk coding. Hal pertama yang harus kita periksa kembali adalah file konfigurasi yang terletak di <code>app/config/development.php</code>. Pastikan konfigurasi koneksi database berfungsi.</p>
@@ -59,6 +59,7 @@
             <p>Model pada MVC framework digunakan untuk menjembatani framework dan tabel database. Dan kemudian jika kita telah memisahkan model, tingkat reusability meningkat karena model dapat digunakan berulang kali beberapa kali pada banyak controller.</p>
 
             <p>Mari kita buat file baru bernama <code>a_apikey_model.php</code> untuk tabel <b>a_apikey</b> didalam direktori <code>app/model/</code>, dan kemudian masukkan kode ini ke file Anda.</p>
+
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -117,10 +118,30 @@ class A_ApiKey_Model extends SENE_Model
               </div>
             </div>
 
-            <h3>Edit Controller</h3>
-            <p>From the first tutorial, we have created a controller located at <code>app/controller/home.php</code>. For achieving this tutorial, we have to modified the codes.</p>
-            <p>First, we have to load new file that we created before <code>a_apikey_model</code>. After that, we have to get the data and put into a variable named <code>$data[&#x27;aakm&#x27;]</code>.</p>
-            <pre>
+            <h3>Edit File Controller</h3>
+            <p>Dari tutorial pertama, kami telah membuat pengontrol yang terletak di dalam direktori <code>app/controller/home.php</code>. Untuk menyelesaikan tutorial ini, kita harus menambahkan dan merubah beberapa dengan kode-kode tertentu.</p>
+
+            <p>Pertama, kita harus buka file <code>home.php</code> yang ada di dalam direktori <code>app/controller</code>. Setelah itu, kita harus mendapatkan data dan memasukkannya ke dalam variabel bernama <code>$data[&#x27;aakm&#x27;]</code>.</p>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
 &#x3C;?php
 class Home extends SENE_Controller
 {
@@ -147,12 +168,33 @@ class Home extends SENE_Controller
     $this-&#x3E;render();
   }
 }
-            </pre>
+                </highlight-code>
+              </div>
+            </div>
 
             <h3>Edit View</h3>
-            <p>From the first tutorial, we have created view located at <code>app/view/front/home/home.php</code>. For achieving this tutorial, we have to modified the codes for vieweing the data properly.</p>
-            <p>First, we have to iterating the array of <code>$aakm</code> and put result on card type html.</p>
-            <pre>
+            <p>Dari tutorial pertama, kami telah membuat tampilan yang terletak di <code>app/view/front/home/home.php</code>. Kemudian edit kode yang ada didalam file tersebut supaya bisa menampilkan data.</p>
+            <p>Pertama, kita harus menelusuri array yang berisi dari variabel <code>$aakm</code> dan letakkan hasilnya dalam template html. Template html ini nantinya akan dibuat menjadi tampilan <a href="https://materializecss.com/cards.html" target="_blank">kartu / card dari MaterializeCSS</a>.</p>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
 &#x3C;div class=&#x22;container&#x22;&#x3E;
   &#x3C;div class=&#x22;row&#x22;&#x3E;
     &#x3C;?php foreach($aakm as $aak) { ?&#x3E;
@@ -173,13 +215,13 @@ class Home extends SENE_Controller
   &#x3C;/div&#x3E;
 &#x3C;/div&#x3E;
 
-            </pre>
+                </highlight-code>
+              </div>
+            </div>
 
-            <h2>Result</h2>
-            <p>If you open the <code>http://localhost/seme_framework</code> and view same as screenshot before, so you are achieved this tutorial successfully.</p>
-            <figure>
-              <img src="~/assets/img/tutorial/chrome-crud-result.png">
-            </figure>
+            <h2>Hasil Akhir</h2>
+            <p>Apabila kita buka alamat <code>http://localhost/seme_framework/</code> melalui browser, maka akan menampilkan seperti apa yang ada didalam screenshot dibawah ini. Apabila tampilannya sudah sama persis, maka tutorial ini sudah berhasil dikuasai.</p>
+            <amp-img layout="responsive" width="888px" height="782px" alt="hasil akhir tutorial" :src="getDataResult"></amp-img>
 
           </div>
         </div>
@@ -215,6 +257,7 @@ export default {
       dbCreate: require('~/assets/img/tutorial/phpmyadmin-db-create.png'),
       dbImport: require('~/assets/img/tutorial/phpmyadmin-db-import.png'),
       dbTblList: require('~/assets/img/tutorial/phpmyadmin-db-tables.png'),
+      getDataResult: require('~/assets/img/tutorial/chrome-crud-result.png'),
     }
   },
   head() {
