@@ -34,13 +34,13 @@
             </amp-img>
 
             <div class="buttons is-centered">
-              <nuxt-link class="btn" to="/id/downloads/" type="is-link">
+              <nuxt-link class="btn" to="/id/downloads/">
                 Download
               </nuxt-link>
-              <nuxt-link class="btn" to="/id/tutorial/" type="is-link">
+              <nuxt-link class="btn" to="/id/tutorial/">
                 Mulai percobaan
               </nuxt-link>
-              <nuxt-link class="btn" to="/error/" type="is-link">
+              <nuxt-link class="btn" to="/error/">
                 <i>Troubleshoot</i>
               </nuxt-link>
             </div>
