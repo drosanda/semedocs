@@ -40,22 +40,19 @@
             <p>This tool allowed you to do almost anything to your MySQL or MariaDB powered database.</p>
             <p>If you have run the XAMPP, then you can open <code>http://localhost/phpmyadmin/</code>.</p>
             <p>You have to create a database, named <code>seme_framework</code>.</p>
-            <figure>
-              <img src="~/assets/img/tutorial/phpmyadmin-db-create.png">
-            </figure>
+
+            <amp-img layout="responsive" width="1086px" height="694px" alt="PMA DB Create" :src="dbCreate"></amp-img>
 
             <h3>Import the example database</h3>
             <p>After create a database, you have to import the database.</p>
             <p>We have already save some sql files in your <code>sql</code> directory.</p>
             <p>Before continuing the export process you have to select the database <code>seme_framework</code> which is you have created it before.</p>
+
             <p>Navigate to <code>export</code> and choose <code>seme_framework.sql</code> file in <code>sql</code> directory.</p>
-            <figure>
-              <img src="~/assets/img/tutorial/phpmyadmin-db-import.png">
-            </figure>
+            <amp-img layout="responsive" width="1486px" height="1260px" alt="PMA DB Import" :src="dbImport"></amp-img>
+
             <p>After importing SQL, you can see new tables already added to database.</p>
-            <figure>
-              <img src="~/assets/img/tutorial/phpmyadmin-db-tables.png">
-            </figure>
+            <amp-img layout="responsive" width="1862px" height="984px" alt="PMA DB table List" :src="dbTblList"></amp-img>
 
             <h2>The Codes</h2>
             <p>After setup the database, its time for coding. First thing we have to recheck the configuration file located at <code>app/config/development.php</code>. Please make sure the database connection configuration is working.</p>
@@ -162,9 +159,7 @@ class Home extends SENE_Controller
 
             <h2>Result</h2>
             <p>If you open the <code>http://localhost/seme_framework</code> and view same as screenshot before, so you are achieved this tutorial successfully.</p>
-            <figure>
-              <img src="~/assets/img/tutorial/chrome-crud-result.png">
-            </figure>
+            <amp-img layout="responsive" width="888px" height="782px" alt="final result of this tutorial" :src="getDataResult"></amp-img>
 
           </div>
         </div>
@@ -194,7 +189,10 @@ export default {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework v4.0.0 Documentation',
       title: 'Tutorial: Get Data',
-      description: 'Learn more about obtaining data from model tutorial by Seme Framework version 4.0.0 through this documentation.'
+      description: 'Learn more about obtaining data from model tutorial by Seme Framework version 4.0.0 through this documentation.',dbCreate: require('~/assets/img/tutorial/phpmyadmin-db-create.png'),
+      dbImport: require('~/assets/img/tutorial/phpmyadmin-db-import.png'),
+      dbTblList: require('~/assets/img/tutorial/phpmyadmin-db-tables.png'),
+      getDataResult: require('~/assets/img/tutorial/chrome-crud-result.png'),
     }
   },
   head() {

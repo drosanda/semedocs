@@ -24,7 +24,7 @@
               <li>Test the API.</li>
             </ul>
 
-            <h2>Prerequisited</h2>
+            <h2>Prerequisites</h2>
             <p>For best result of this tutorial, you have to setup or installed the followings item:</p>
             <ul>
               <li>Running Apache and MySQL</li>
