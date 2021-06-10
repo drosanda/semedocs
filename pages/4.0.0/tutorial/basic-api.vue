@@ -13,7 +13,7 @@
         <div class="column">
           <div class="content">
             <h1 class="">Basic API</h1>
-            <p>Application Programming Interface (API) ussually built by developer for bridging frontend and backend.</p>
+            <p>Application Programming Interface (API) usually built by developer for bridging frontend and backend.</p>
             <p>Seme Framework has functionality that can support for building API.</p>
             <p>In this tutorial you will learn about how to:</p>
             <ul type="1">
