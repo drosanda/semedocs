@@ -1,15 +1,20 @@
+require('dotenv').config()
+
 export default {
+  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
+  buildModules: [
+  ],
+
   modules: [
-    'nuxt-buefy',
+    // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    '@nuxtjs/sitemap',
-    ['nuxt-highlightjs', {
-      style: 'foundation'
-    }]
+    // https://go.nuxtjs.dev/content
+    '@nuxt/content',
+    '@nuxtjs/amp',
+    '@nuxtjs/sitemap'
   ],
   head: {
     meta: [
-      { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Deployable and lightweight PHP MVC framework that suitable for small and medium web app' },
       { hid: 'robots1', name: 'robots', content: 'INDEX,FOLLOW'},
@@ -19,24 +24,16 @@ export default {
       { hid: 'og:description', name: 'og:description', content: 'Deployable and lightweight PHP MVC framework that suitable for small and medium web app'}
     ],
     link: [
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto' },
-      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' },
-      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css.map' },
-      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/FontAwesome.otf' },
-      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.eot' },
-      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.svg' },
-      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf' },
-      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff' },
-      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2' },
+      { rel: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
       { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico'}
     ]
   },
   pwa: {
     meta: {
-      ogHost: 'https://seme.framework.web.id',
+      ogHost: process.env.ORIGIN_URL || 'http://localhost:3000',
       ogImage: {
-        path: '/carbon.png',
+        path: '~/static/carbon.png',
         width: '1480px',
         height: '1038px',
         type: 'image/png'
@@ -45,14 +42,16 @@ export default {
     }
   },
   css: [
-    '~/css/style.css'
+
   ],
   plugins: [
-    { src: '~plugins/fb.js', mode: 'client' },
-    { src: '~plugins/ga.js', mode: 'client' }
+    { src: '@/plugins/hl' },
+    { src: '~/plugins/fb.js', mode: 'client' },
+    { src: '~/plugins/ga.js', mode: 'client' }
   ],
+
   target: 'server',
-  mode: 'universal',
+
   server: {
     port: 3001
   },
@@ -60,10 +59,14 @@ export default {
     analyze: false,
     maxChunkSize: 300000
   },
-  sitemap:
-    {
-      hostname: 'https://seme.framework.web.id',
-      gzip: false
-    }
+  amp: {
+    origin: process.env.ORIGIN_URL || 'http://localhost:3000',
+    mode: 'only', //could use `only` or `false` as well,
+    css: '~/css/app.amp.css'
+  },
+  sitemap: {
+    hostname: process.env.ORIGIN_URL || 'http://localhost:3000',
+    gzip: false
+  }
 
 }

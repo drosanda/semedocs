@@ -88,9 +88,10 @@ app
 
             <p>Anggap saja kita sudah mengekstrak atau clone Seme Framework ke dalam direktori <code>D:\XAMPP\htdocs\seme_framework</code>.</p>
             <p>Jadi ketika kita membuka <code>http://localhost/seme_framework</code> maka Seme Framework akan membuka kelas controller yang ada di <code>app/controller/home.php</code>.</p>
-            <b-message class="is-info">
+            <div class="message is-info">
+  <div class="message-body">
               <p>Nama kelas <b>home</b> atau nama file <b>home.php</b> adalah kelas dasar (<i>default</i>) yang akan selalu diakses jika akar URL seperti <code>https://example.com</code>.</p>
-            </b-message>
+            </div></div>
             <p>Bagaimana seandainya kita akan membuka alamat URL  <code>http://localhost/seme_framework/blog</code>, apakah akan muncul?</p>
             <p>Jawabannya adalah Seme Framework akan memamnggil file controller <code>app/controller/blog.php</code> jika ada.</p>
             <p>Seme Framework will only load controller with filename and its class name are matched.</p>
@@ -128,14 +129,16 @@ class Notfound extends SENE_Controller{
   }
 }</code></pre>
 
-            <b-message class="is-info">
+            <div class="message is-info">
+  <div class="message-body">
               <p><b>Perhatian</b></p>
               <p>Pastikan bahwa nama kelas dan nama file telah identik. Apabila nama file dan nama kelas sudah identik, tapi tidak sama dengan alamat URL yang diminta maka akan menghasilkan error 404 (not found).</p>
-            </b-message>
-            <b-message class="is-danger">
+            </div></div>
+            <div class="message is-danger">
+  <div class="message-body">
               <p><b>Perhatian</b></p>
               <p>Apabila nama file cocok dengan permintaan alamat url, tapi tidak cocok dengan nama kelas. Maka akan menimbulkan error 500.</p>
-            </b-message>
+            </div></div>
 
             <h2>Pembatasan akses pada method dan properti</h2>
             <p>Seme Framework telah mendukung deklrasi untuk private method, private properti, protected method dan protected properti.</p>
@@ -154,12 +157,14 @@ class Home extends SENE_Controller{
     echo &#039;not found&#039;
   }
 }</code></pre>
-            <b-message class="is-info">
+            <div class="message is-info">
+  <div class="message-body">
               <p>Private method dalam Seme Framework diawali dengan underscore 2 kali (__).</p>
-            </b-message>
-            <b-message class="is-success">
+            </div></div>
+            <div class="message is-success">
+  <div class="message-body">
               <p>Private method tidak dapat diakses oleh alamat URL langsung.</p>
-            </b-message>
+            </div></div>
 
           </div>
         </div>

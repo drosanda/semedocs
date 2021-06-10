@@ -9,20 +9,18 @@
           <li class="unavailable">Perkenalan</li>
         </ul>
       </nav>
-      <div class="">
+      <div>
         <div class="column">
           <div class="content">
             <h1 class="">Perkenalan penggunaan Seme Framework</h1>
             <p>Sebelum memulai tutorial, Anda harus melakukan yang dijelaskan pada <NuxtLink to="/id/requirements">halaman persyaratan</NuxtLink>  terlebih dahulu.</p>
             <p>Tujuan dari tutorial ini adalah, bagaimana berinteraksi dengan View dan Controller. Interaksi model akan dibahas pada tutorial berikutnya.</p>
 
-            <figure class="image">
-              <img src="~/assets/img/tutorial/introduction/hello-world.png" alt="Seme Framework hello world controller" />
-            </figure>
+            <amp-img layout="responsive" width="874" height="804px" :src="helloWorld" alt="Seme Framework hello world controller"></amp-img>
 
             <p>Baiklah kita mulai!</p>
             <hr>
-            
+
             <h2>Hello World!</h2>
             <p>Hello World sering digunakan untuk menggambarkan sintaks dasar dari suatu bahasa pemrograman.</p>
             <p>Tetapi pada Seme Framework, Hello World Hello World digunakan untuk memeriksa tujuan dasar MVC.</p>
@@ -52,18 +50,18 @@ class Home extends SENE_Controller
 }</code>
             </pre>
             <p>Kemudian buka alamat <code>http://localhost/seme_framework</code>, itu seharusnya sudah memunculkan Hello World! langsung dari kelas home.php controller.</p>
-            <figure>
-              <img src="~/assets/img/hello-world.png" >
-            </figure>
+            <amp-img layout="responsive" width="774px" height="262px" alt="Hello World" :src="hellowWorld2" ></amp-img>
 
             <hr>
 
             <h3>View</h3>
             <p>Pada tutorial ini kita akan mempelajari cara merender tampilan dengan tema dan meneruskan data dari controller ke tampilan yang dilewatkan oleh controller.</p>
 
-            <b-message class="is-success">
-              <p>Tutorial ini menggunakan <a href="https://materializecss.com/" target="_blank">materializeCSS</a> sebagai library CSS-nya.</p>
-            </b-message>
+            <div class="message is-success">
+              <div class="message-body">
+                <p>Tutorial ini menggunakan <a href="https://materializecss.com/" target="_blank">materializeCSS</a> sebagai library CSS-nya.</p>
+              </div>
+            </div>
             <h4>Membuat tema: <u>front</u>.</h4>
             <p>Sebelum memulai, kita harus memahami struktur direktori tema.</p>
             <pre><code v-highlight class="plaintext">-| app/
@@ -122,11 +120,12 @@ class Home extends SENE_Controller
   &#x3C;/body&#x3E;
 &#x3C;/html&#x3E;
 </code></pre>
-            <b-message type="is-info">
+            <div class="message is-info">
+<div class="message-body">
               <p>Hanya ada satu variabel yang dapat melewati view dari controller.</p>
               <p>Jadi, kita harus meletakkan variabel apa pun yang akan ditampilkan dalam array tunggal.</p>
               <p>Dalam contoh ini Seme Framework menggunakan variabel <code>$data</code> dengan tipe data array didalam controller <code>home.php</code>.</p>
-            </b-message>
+            </div></div>
 
             <h5>Pemisahan bagian HEAD dari HTML</h5>
             <p>Dengan menggunakan Seme Framework memungkinkan untuk memisahkan komponen html untuk memaksimalkan penggunaan kembali komponen HTML tersebut.</p>
@@ -154,21 +153,23 @@ class Home extends SENE_Controller
 &#x9;&#x3C;?php $this-&#x3E;getAdditional()?&#x3E;
 &#x9;&#x3C;?php $this-&#x3E;getAdditionalAfter()?&#x3E;
 &#x3C;/head&#x3E;</code></pre>
-
-            <b-message type="is-info">
-              <p>Pengaturan tema di Seme Framework membutuhkan file dibawah ini supaya dapat berjalan dengan baik:</p>
-              <ol>
-                <li><code>theme.json</code>,</li>
-                <li><code>script.json</code>,</li>
-                <li>dan sebuah file untuk layout HTML. Contoh: <code>page/col-1.php</code> </li>
-              </ol>
-              <p>Jadi, kita harus meletakkan variabel apa pun yang akan ditampilkan dalam array tunggal.</p>
-            </b-message>
-
-            <b-message type="is-info">
-              <p><code>$data[&#x27;hello&#x27;]</code> dari controller, akan diekstraksi secara otomatis menjadi variabel <code>$hello</code> ketika berada didalam view.</p>
-              <p>Begitupun dengan nilai atau kunci lainnya, akan diekstraksi secara otomatis juga.</p>
-            </b-message>
+<div class="message is-info">
+  <div class="message-body">
+                <p>Pengaturan tema di Seme Framework membutuhkan file dibawah ini supaya dapat berjalan dengan baik:</p>
+                <ol>
+                  <li><code>theme.json</code>,</li>
+                  <li><code>script.json</code>,</li>
+                  <li>dan sebuah file untuk layout HTML. Contoh: <code>page/col-1.php</code> </li>
+                </ol>
+                <p>Jadi, kita harus meletakkan variabel apa pun yang akan ditampilkan dalam array tunggal.</p>
+              </div>
+            </div>
+            <div class="message is-info">
+                <div class="message-body">
+                  <p><code>$data[&#x27;hello&#x27;]</code> dari controller, akan diekstraksi secara otomatis menjadi variabel <code>$hello</code> ketika berada didalam view.</p>
+                  <p>Begitupun dengan nilai atau kunci lainnya, akan diekstraksi secara otomatis juga.</p>
+              </div>
+            </div>
 
             <h5>Membuat isi tema</h5>
             <p>Seme Framework mendukung konten tema yang terpisah. Konten ini akan dirender pada tata letak utama bagian dalam.</p>
@@ -223,9 +224,7 @@ class Home extends SENE_Controller
             <h5>Melihat hasilnya</h5>
             <p>Untuk melihat hasil dari pembuatan tema ini, cukup buka alamat <code>http://localhost/seme_framework</code> melalui google chrome atau firefox.</p>
             <p>Kemudian, kita lihat hasilnya apakah sama seperti <i>screenshot</i> dibawah ini.</p>
-            <figure>
-              <img src="~/assets/img/tutorial/introduction/6a.png">
-            </figure>
+            <amp-img layout="responsive" width="2268px" height="618px" :src="tutor6a"></amp-img>
 
             <hr>
 
@@ -262,25 +261,25 @@ class Home extends SENE_Controller
 }</code></pre>
             <p>To test it, open <code>http://localhost/seme_framework</code> using browser.</p>
             <p>It should show an alert, view with loaded CSS, and show H1 with content Hello World from view and using theme.</p>
-            <figure>
-              <img src="~/assets/img/tutorial/introduction/7.png">
-            </figure>
+            <amp-img layout="reponsive" width="100px" height="100px" :src="tutor7"></amp-img>
 
             <hr>
           </div>
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/id/tutorial/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Tutorial
-            </b-button>
-            <b-button tag="router-link" to="/id/tutorial/get-data/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Mengambil Data
-            </b-button>
-          </div>
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/id/tutorial/" class="btn">
+          <i class="fa fa-chevron-left"></i>
+            Tutorial
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/id/tutorial/get-data/" class="btn">
+            Tutorial: Ambil Data
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 
@@ -295,7 +294,11 @@ export default {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Dokumentasi Seme Framework v4.0.0',
       title: 'Perkenalan penggunaan',
-      description: 'Perkenalan penggunaan dasar penggunaan Seme Framework versi 4.0.0.'
+      description: 'Perkenalan penggunaan dasar penggunaan Seme Framework versi 4.0.0.',
+      helloWorld: require('~/assets/img/tutorial/introduction/hello-world.png'),
+      hellowWorld2: require('~/assets/img/hello-world.png'),
+      tutor6a: require('~/assets/img/tutorial/introduction/6a.png'),
+      tutor7: require('~/assets/img/tutorial/introduction/7.png'),
     }
   },
   head() {

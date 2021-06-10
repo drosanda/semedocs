@@ -4,15 +4,16 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class="unavailable">Version</li>
+          <li class="unavailable">Versions</li>
         </ul>
       </nav>
       <div class="">
         <div class="column">
           <div class="content">
-            <h1>Version</h1>
+            <h1>Versions</h1>
             <p>Here is the list version of Seme Framework and its documentation support.</p>
-            <table>
+
+            <table class="striped">
               <thead>
                 <tr>
                   <th>Version</th>
@@ -27,8 +28,8 @@
                     <NuxtLink to="/4.0.0/">English</NuxtLink> <NuxtLink to="/id/">Bahasa</NuxtLink>
                   </td>
                   <td>
-                    <img src='https://img.shields.io/badge/langID-22%25-d6cfcf' alt="documentation coverage">
-                    <img src='https://img.shields.io/badge/langEN-60%25-ffc107' alt="documentation coverage">
+                    <amp-img layout="responsive" width="90px" height="20px" src='https://img.shields.io/badge/langID-22%25-d6cfcf' alt="documentation coverage Bahasa"></amp-img>
+                    <amp-img layout="responsive" width="90px" height="20px" src='https://img.shields.io/badge/langEN-60%25-ffc107' alt="documentation coverage English"></amp-img>
                   </td>
                 </tr>
                 <tr>
@@ -37,32 +38,32 @@
                     <NuxtLink to="/3.3.0/">English</NuxtLink>
                   </td>
                   <td>
-                    <img src='https://img.shields.io/badge/langID-0%25-f1f1f1' alt="documentation coverage for Bahasa">
-                    <img src='https://img.shields.io/badge/langEN-1%25-eaeaea' alt="documentation coverage for English">
+                    <amp-img layout="responsive" width="90px" height="20px" src='https://img.shields.io/badge/langID-0%25-f1f1f1' alt="documentation coverage for Bahasa"></amp-img>
+                    <amp-img layout="responsive" width="90px" height="20px" src='https://img.shields.io/badge/langEN-1%25-eaeaea' alt="documentation coverage for English"></amp-img>
                   </td>
                 </tr>
                 <tr>
                   <td>3.2.1</td>
                   <td><NuxtLink to="/3.2.1/">English</NuxtLink></td>
                   <td>
-                    <img src='https://img.shields.io/badge/langID-0%25-f1f1f1' alt="documentation coverage for Bahasa">
-                    <img src='https://img.shields.io/badge/langEN-27%25-efe4ae' alt="documentation coverage for English">
+                    <amp-img layout="responsive" width="90px" height="20px" src='https://img.shields.io/badge/langID-0%25-f1f1f1' alt="documentation coverage for Bahasa"></amp-img>
+                    <amp-img layout="responsive" width="90px" height="20px" src='https://img.shields.io/badge/langEN-27%25-efe4ae' alt="documentation coverage for English"></amp-img>
                   </td>
                 </tr>
                 <tr>
                   <td>3.1.0</td>
                   <td><NuxtLink to="/3.1.0/">English</NuxtLink></td>
                   <td>
-                    <img src='https://img.shields.io/badge/langID-0%25-f1f1f1' alt="documentation coverage for Bahasa">
-                    <img src='https://img.shields.io/badge/langEN-12%25-eaeaea' alt="documentation coverage for English">
+                    <amp-img layout="responsive" width="90px" height="20px" src='https://img.shields.io/badge/langID-0%25-f1f1f1' alt="documentation coverage for Bahasa"></amp-img>
+                    <amp-img layout="responsive" width="90px" height="20px" src='https://img.shields.io/badge/langEN-12%25-eaeaea' alt="documentation coverage for English"></amp-img>
                   </td>
                 </tr>
                 <tr>
                   <td>3.0.0</td>
                   <td><NuxtLink to="/3.0.0/">English</NuxtLink></td>
                   <td>
-                    <img src='https://img.shields.io/badge/langID-0%25-f1f1f1' alt="documentation coverage for Bahasa">
-                    <img src='https://img.shields.io/badge/langEN-8%25-eaeaea' alt="documentation coverage for English">
+                    <amp-img layout="responsive" width="90px" height="20px" src='https://img.shields.io/badge/langID-0%25-f1f1f1' alt="documentation coverage for Bahasa"></amp-img>
+                    <amp-img layout="responsive" width="90px" height="20px" src='https://img.shields.io/badge/langEN-8%25-eaeaea' alt="documentation coverage for English"></amp-img>
                   </td>
                 </tr>
               </tbody>
@@ -73,16 +74,19 @@
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/credits" type="is-link" icon-pack="fa" icon-left="chevron-left" class="">
-              Credits
-            </b-button>
-            <b-button tag="router-link" to="/4.0.0/" type="is-link" icon-pack="fa" icon-right="chevron-right">
-              version 4.0.0
-            </b-button>
-          </div>
+
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/credits/" class="btn">
+          <i class="fa fa-chevron-left"></i>
+            Credits
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/4.0.0/" class="btn">
+            Version 4.0.0
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 
@@ -91,10 +95,11 @@
 </template>
 <script>
 export default {
+  layout: 'default',
   data (){
     return {
       name: 'Seme Framework',
-      title: 'Version',
+      title: 'Versions',
       suffix: ' - Seme Framework',
       description: 'Here is the Seme Framework version list with its documentation status and support.'
     }

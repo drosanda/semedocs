@@ -16,12 +16,13 @@
 					<p>Metode update_as dari kelas SENE_MySQLi_Model merupakan metode yang sama dengan metode Update, namun nilai updatenya tidak <b><i>auto escaped</i></b>. Metode ini cocok untuk melakukan update nilai dari kolom ke kolom didalam tabel yang sama.</p>
           <p>Metode ini tersedia sejak Seme Framework 4.0.2.</p>
 
-          <b-message class="is-warning">
+          <div class="message is-warning">
+  <div class="message-body">
             <p><b>Perhatian</b></p>
             <p>
               Pastikan untuk memeriksa dan menggunakan fungsi <i>escape</i> (<code>$this->db->esc('NILAI')</code>) pada pasangan kunci dan nilai untuk mencegah <b>SQL injection</b>.
             </p>
-          </b-message>
+          </div></div>
 
 					<h2>Parameter</h2>
 					<p>Update AS memiliki 3 parameter yaitu <b>nama tabel</b> dan <b>pasangan kunci dan nilai</b> untuk bahan updatenya.</p>

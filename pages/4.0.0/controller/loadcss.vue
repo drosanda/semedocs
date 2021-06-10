@@ -50,7 +50,8 @@ class Blog extends SENE_Controller {
   }
 }</code></pre>
 
-            <b-message type="is-warning">
+            <div class="message is-warning">
+<div class="message-body">
               <p><b>Caution</b></p>
               <p>Please make sure this method has been loaded from header template:</p>
               <ul>
@@ -58,7 +59,7 @@ class Blog extends SENE_Controller {
                 <li>&#x9;&#x3C;?php $this-&#x3E;getAdditional()?&#x3E;</li>
                 <li>&#x9;&#x3C;?php $this-&#x3E;getAdditionalAfter()?&#x3E;</li>
               </ul>
-            </b-message>
+            </div></div>
 
           </div>
         </div>

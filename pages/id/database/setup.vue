@@ -41,7 +41,8 @@
             <p>After importing the dabase, we have to edit the configuration file.</p>
             <p>Open <code>app/config/development.php</code> wit atom or another text editor.</p>
             <p>And then change the value of each configration fit with you system requirements.</p>
-            <b-message class="is-info">
+            <div class="message is-info">
+  <div class="message-body">
               <p>On this configuration we will use:</p>
               <ul>
                 <li>database host <b>localhost</b></li>
@@ -49,7 +50,7 @@
                 <li>password <b>empty string</b> </li>
                 <li>database name <b>seme_framework</b></li>
               </ul>
-            </b-message>
+            </div></div>
             <pre>
 ...
 /********************************/
@@ -66,9 +67,10 @@ $db[&#x27;charset&#x27;] = &#x27;latin1&#x27;;
 $db[&#x27;engine&#x27;] = &#x27;mysqli&#x27;;
 ...
             </pre>
-            <b-message class="is-warning">
+            <div class="message is-warning">
+  <div class="message-body">
               <p>You may override this value to fit your system requirements.</p>
-            </b-message>
+            </div></div>
 
           </div>
         </div>

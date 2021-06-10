@@ -82,9 +82,10 @@ $res = $this-&#x3E;aakm-&#x3E;set($di);
 ...
             </pre>
 
-            <b-message type="is-info">
+            <div class="message is-info">
+<div class="message-body">
               <p>You can see the full of source code on <NuxtLink to="/4.0.0/tutorial/basic-api/">Tutorial: Basic API</NuxtLink>.</p>
-            </b-message>
+            </div></div>
           </div>
         </div>
 

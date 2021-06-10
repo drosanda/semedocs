@@ -52,11 +52,12 @@ class Blog_Model extends SENE_Model{
     return $this-&gt;db-&gt;get();
   }
 }</code></pre>
-            <b-message class="is-info">
+            <div class="message is-info">
+  <div class="message-body">
               <p><b>page method v.s. limit method</b></p>
               <p>Page method used for limiting by page and page size</p>
               <p>Limit method used for limiting data by MySQL traditional limit method</p>
-            </b-message>
+            </div></div>
           </div>
         </div>
       </div>

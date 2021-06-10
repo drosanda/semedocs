@@ -29,12 +29,13 @@
               <li><code>development.php</code></li>
             </ol>
             <p>Isi dari setiap file dapat berbeda satu sama lain tergantung pada kebutuhan Anda.</p>
-            <b-message class="is-info">
+            <div class="message is-info">
+  <div class="message-body">
               <p>
                 Secara default Seme Framework hanya menyertakan <code>development.php</code> untuk tahap pengembangan.
                 Anda dapat membuat file baru dengan nama <code>staging.php</code> atau bahkan <code>production.php</code> di server <i>production</i>.
               </p>
-            </b-message>
+            </div></div>
             <hr>
             <h2>Pengaturan Dasar</h2>
             <p>
@@ -196,16 +197,18 @@ $semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;</code>
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/id/downloads/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Download dan Install
-            </b-button>
-            <b-button tag="router-link" to="/id/configuration/development/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Fase Development
-            </b-button>
-          </div>
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/id/downloads/" class="btn">
+          <i class="fa fa-chevron-left"></i>
+            Download dan Install
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/id/configuration/development/" class="btn">
+            Fase Development
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 

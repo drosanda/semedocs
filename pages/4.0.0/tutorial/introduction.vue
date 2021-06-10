@@ -31,8 +31,26 @@
               First, open files located at <code>app/controller/home.php</code>.
               If the file doesnt exists, create one.
             </p>
-            <pre>
-              <code v-highlight class="php">&#x3C;?php
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">&#x3C;?php
 class Home extends SENE_Controller
 {
     public function __construct()
@@ -43,24 +61,44 @@ class Home extends SENE_Controller
     {
         echo 'Hello World!';
     }
-}</code>
-            </pre>
+}
+                </highlight-code>
+              </div>
+            </div>
+
             <p>And then open <code>http://localhost/seme_framework</code>, it should show Hello World!.</p>
-            <figure>
-              <img src="~/assets/img/hello-world.png" >
-            </figure>
+            <amp-img layout="responsive" width="774px" height="262px" :src="hlWorld" alt="hello world result"></amp-img>
 
             <hr>
 
             <h3>View</h3>
             <p>On this tutorial we will learn how to render the view with theme and passing the data from controller to view passed by controller.</p>
 
-            <b-message class="is-success">
+            <div class="message is-success">
+  <div class="message-body">
               <p>This tutorial using <a href="https://materializecss.com/" target="_blank">materializeCSS</a> as the CSS Library.</p>
-            </b-message>
+            </div></div>
             <h4>Create Theme: <u>front</u>.</h4>
             <p>Before start, we have to understand the theme directory structure.</p>
-            <pre><code v-highlight class="plaintext">-| app/
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="plaintext">-| app/
 ---| view/
 -----| front/
 -------| theme.json
@@ -68,7 +106,10 @@ class Home extends SENE_Controller
 -------| page/
 ---------| col-1.php
 -----------| html/
--------------| head.php</code></pre>
+-------------| head.php
+              </highlight-code>
+              </div>
+            </div>
             <p>Check the <code>app/view/front/</code> directory, create directory if does not exists.</p>
             <p>Check the <code>app/view/front/page/</code> directory, create directory if does not exists.</p>
             <p>Check the <code>app/view/front/page/html/</code> directory, create directory if does not exists.</p>
@@ -78,26 +119,91 @@ class Home extends SENE_Controller
             <p>Open files located at <code>app/view/front/theme.json</code>.</p>
             <p>If the file does not exists, create one. And then, put this code on it.</p>
 
-            <pre><code v-highlight class="json">
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="javascript">
 [
   &#x22;&#x3C;link rel=\&#x22;stylesheet\&#x22; href=\&#x22;https://fonts.googleapis.com/icon?family=Material+Icons\&#x22; \/&#x3E;&#x22;,
   &#x22;&#x3C;link rel=\&#x22;stylesheet\&#x22; href=\&#x22;https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css\&#x22; \/&#x3E;&#x22;
-]</code></pre>
+]
+                </highlight-code>
+              </div>
+            </div>
+
             <h5>File script.json</h5>
             <p>File script.json purpose is to define the javascript that are required for creating the Theme.</p>
             <p>We will define the which scripts to load. Open files located at <code>app/view/front/script.json</code>.</p>
             <p>If the file does not exists, create one. And then, put this code on it.</p>
-            <pre><code v-highlight class="json">
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="javascript">
 [
   &#x22;&#x3C;script src=\&#x22;https://code.jquery.com/jquery-3.5.1.min.js\&#x22;&#x3E;&#x3C;\/script&#x3E;&#x22;,
   &#x22;&#x3C;script src=\&#x22;https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js\&#x22;&#x3E;&#x3C;\/script&#x3E;&#x22;
-]</code></pre>
+]
+                </highlight-code>
+              </div>
+            </div>
+
             <h5>Create HTML Main layout</h5>
             <p>Seme Framework support HTML main layout for rendering html, javascript, and content.</p>
             <p>Open files located at <code>app/view/front/page/col-1.php</code>.</p>
             <p>If the file does not exists, create one. And then, put this code on it.</p>
 
-            <pre><code v-highlight class="php-template">&#x3C;!DOCTYPE html&#x3E;
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+&#x3C;!DOCTYPE html&#x3E;
 &#x3C;html&#x3E;
   &#x3C;?php $this-&#x3E;getThemeElement(&#x27;page/html/head&#x27;, $__forward) ?&#x3E;
   &#x3C;body&#x3E;
@@ -115,18 +221,43 @@ class Home extends SENE_Controller
   &#x9;&#x3C;/script&#x3E;
   &#x3C;/body&#x3E;
 &#x3C;/html&#x3E;
-</code></pre>
-            <b-message type="is-info">
-              <p>There is only one variable can pass through the view from controller.</p>
-              <p>So, we have to put any variable that will pass into view in single array.</p>
-              <p>In this example we use <code>$data</code> variable in controller.</p>
-            </b-message>
+                </highlight-code>
+              </div>
+            </div>
+
+            <div class="message is-info">
+              <div class="message-body">
+                <p>There is only one variable can pass through the view from controller.</p>
+                <p>So, we have to put any variable that will pass into view in single array.</p>
+                <p>In this example we use <code>$data</code> variable in controller.</p>
+              </div>
+            </div>
 
             <h5>Separated HTML head</h5>
             <p>Seme Framework support separated layout element for maximizing reusable components.</p>
             <p>To do so open files located at <code>app/view/front/page/html/head.php</code>.</p>
             <p>If the file does not exists, create one. And then, put this code on it.</p>
-            <pre><code v-highlight class="php-template">&#x3C;head&#x3E;
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  &#x3C;head&#x3E;
 &#x9;&#x3C;meta charset=&#x22;utf-8&#x22;&#x3E;
 &#x9;&#x3C;meta name=&#x22;viewport&#x22; content=&#x22;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&#x22;&#x3E;
 
@@ -147,9 +278,13 @@ class Home extends SENE_Controller
 &#x9;&#x3C;?php $this-&#x3E;getAdditionalBefore()?&#x3E;
 &#x9;&#x3C;?php $this-&#x3E;getAdditional()?&#x3E;
 &#x9;&#x3C;?php $this-&#x3E;getAdditionalAfter()?&#x3E;
-&#x3C;/head&#x3E;</code></pre>
+&#x3C;/head&#x3E;
+                </highlight-code>
+              </div>
+            </div>
 
-            <b-message type="is-info">
+            <div class="message is-info">
+<div class="message-body">
               <p>Seme Framework theme engine required these files to work properly:</p>
               <ol>
                 <li><code>theme.json</code>,</li>
@@ -157,19 +292,40 @@ class Home extends SENE_Controller
                 <li>and a layout <code>page/col-1.php</code> </li>
               </ol>
               <p>So, we have to put any variable that will pass into view in single array.</p>
-            </b-message>
+            </div></div>
 
-            <b-message type="is-info">
+            <div class="message is-info">
+<div class="message-body">
               <p><code>$data[&#x27;hello&#x27;]</code> from controller, will be auto extracted into <code>$hello</code> variable in view.</p>
               <p>As well as with the other array keys, will be auto extracted.</p>
-            </b-message>
+            </div></div>
 
             <h5>Create the Content</h5>
             <p>Seme Framework support separated theme content. This content will be rendered on inner main layout.</p>
             <p>To do so, open files located at <code>app/view/front/home/home.php</code>.</p>
             <p>If the file does not exists, create one.</p>
             <p>And then, put this code on it.</p>
-            <pre><code v-highlight class="php-template">&#x3C;div class=&#x22;container&#x22;&#x3E;
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php-template">
+                  &#x3C;div class=&#x22;container&#x22;&#x3E;
   &#x3C;div class=&#x22;row&#x22;&#x3E;
     &#x3C;div class=&#x22;col m12 s12&#x22;&#x3E;
       &#x3C;div class=&#x22;card rounded preload-any&#x22;&#x3E;
@@ -184,11 +340,35 @@ class Home extends SENE_Controller
       &#x3C;/div&#x3E;
     &#x3C;/div&#x3E;
   &#x3C;/div&#x3E;
-&#x3C;/div&#x3E;</code></pre>
+&#x3C;/div&#x3E;
+                </highlight-code>
+              </div>
+            </div>
+
             <h5>Implement on the Controller</h5>
             <p>After creating a theme with its content, now we have to integrating it from controller.</p>
             <p>To do so, open <code>app/controller/home.php</code> and then change the source code with this code:</p>
-            <pre><code v-highlight class="php-template">&#x3C;?php
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  &#x3C;?php
 class Home extends SENE_Controller
 {
   public function __construct()
@@ -212,12 +392,12 @@ class Home extends SENE_Controller
     $this-&#x3E;render();
   }
 }
-</code></pre>
+                </highlight-code>
+              </div>
+            </div>
             <h5>Test the Result</h5>
             <p>For testing the result, open <code>http://localhost/seme_framework</code> from browser and then lets we see what we got.</p>
-            <figure>
-              <img src="~/assets/img/tutorial/introduction/6a.png">
-            </figure>
+            <amp-img layout="responsive" width="2248px" height="618px" :src="intro6a"></amp-img>
 
             <hr>
 
@@ -227,7 +407,27 @@ class Home extends SENE_Controller
             <p>And then, put this code on it.</p>
             <pre><code v-highlight class="javascript">alert(&#x27;This is Hello World from app/view/home/home_bottom.php&#x27;);</code></pre>
             <p>After that, we have to load the home bottom from <code>app/controller/home.php</code>.</p>
-            <pre><code v-highlight class="php-template">&#x3C;?php
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  &#x3C;?php
 class Home extends SENE_Controller
 {
   public function __construct()
@@ -251,28 +451,34 @@ class Home extends SENE_Controller
     $this-&#x3E;loadLayout(&#x22;col-1&#x22;,$data);
     $this-&#x3E;render();
   }
-}</code></pre>
+}
+                </highlight-code>
+              </div>
+            </div>
+
             <p>To test it, open <code>http://localhost/seme_framework</code> using browser.</p>
             <p>It should show an alert, view with loaded CSS, and show H1 with content Hello World from view and using theme.</p>
-            <figure>
-              <img src="~/assets/img/tutorial/introduction/7.png">
-            </figure>
 
+            <amp-img layout="responsive" width="2178px" height="598px" :src="intro7" alt="screenshot result from bonus task"></amp-img>
             <hr>
+
           </div>
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/4.0.0/tutorial/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Tutorials
-            </b-button>
-            <b-button tag="router-link" to="/4.0.0/tutorial/get-data/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Tutorial: Get Data
-            </b-button>
-          </div>
+
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/4.0.0/tutorial/" class="btn">
+          <i class="fa fa-chevron-left"></i>
+            Tutorials
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/4.0.0/tutorial/get-data/" class="btn">
+            Tutorial: Get Data
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 
@@ -287,7 +493,10 @@ export default {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework v4.0.0 Documentation',
       title: 'Tutorial: Introduction',
-      description: 'Learn more about introduction tutorial of Seme Framework version 4.0.0 through this documentation.'
+      description: 'Learn more about introduction tutorial of Seme Framework version 4.0.0 through this documentation.',
+      hlWorld: require('~/assets/img/hello-world.png'),
+      intro6a: require('~/assets/img/tutorial/introduction/6a.png'),
+      intro7: require('~/assets/img/tutorial/introduction/7.png'),
     }
   },
   head() {

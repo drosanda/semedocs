@@ -59,9 +59,10 @@
   &#x22;data&#x22;: []
 }
             </pre>
-            <b-message type="is-info">
+            <div class="message is-info">
+<div class="message-body">
               <p>While creating API, we doesn&#x27;t need the view, because API result will be rendered on controller.</p>
-            </b-message>
+            </div></div>
 
             <h2>Coding Phase</h2>
             <p>After understranding the structure, its time to implement the codes.</p>
@@ -444,9 +445,10 @@ class Home extends SENE_Controller
             <h2>Test the API</h2>
             <p>After Completed the code, we can test the code by using <a href="https://www.postman.com/downloads/" target="_blank">Postman</a> or create own test runner.</p>
 
-            <b-message type="is-info">
+            <div class="message is-info">
+<div class="message-body">
               <p>Seme Framework has supported for creating own test runner for testing the API.</p>
-            </b-message>
+            </div></div>
 
             <h3>Test apikey List</h3>
             <p>To test apikey list, you can open url directly in your browser to <code>http://localhost/seme_framework/api/apikey/</code>.</p>

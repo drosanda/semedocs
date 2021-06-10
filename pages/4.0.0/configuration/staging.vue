@@ -29,17 +29,20 @@
         </div>
 
       </div>
+      
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/4.0.0/configuration/development/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Development phase
-            </b-button>
-            <b-button tag="router-link" to="/4.0.0/configuration/production" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Production phase
-            </b-button>
-          </div>
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/4.0.0/configuration/development/" class="btn">
+          <i class="fa fa-chevron-left"></i>
+            Development phase
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/4.0.0/configuration/production/" class="btn">
+            Production phase
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 

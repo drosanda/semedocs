@@ -26,7 +26,7 @@
               <li>Libraries</li>
               <li>and APIs</li>
             </ul>
-            <p>TSeluruh tutorial dibagi menjadi beberapa halaman. Masing-masing menjelaskan sebagian kecil dari fungsionalitas Seme Framework. Anda akan membuka halaman-halaman berikut:</p>
+            <p>Seluruhtutorial dibagi menjadi beberapa halaman. Masing-masing menjelaskan sebagian kecil dari fungsionalitas Seme Framework. Anda akan membuka halaman-halaman berikut:</p>
             <ul>
               <li><NuxtLink to="/id/tutorial/introduction">Pendahuluan</NuxtLink>, yang memberi Anda gambaran umum tentang apa yang diharapkan.</li>
               <li><NuxtLink to="/id/tutorial/introduction">Tema dan tata letak</NuxtLink>, yang akan mengajarkan Anda dasar-dasar membuat tampilan menggunakan Seme Framework.</li>
@@ -37,16 +37,18 @@
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/id/configuration/production/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Fase Production
-            </b-button>
-            <b-button tag="router-link" to="/id/tutorial/introduction" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Perkenalan
-            </b-button>
-          </div>
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/id/configuration/production/" class="btn">
+            <i class="fa fa-chevron-left"></i>
+            Fase Production
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/id/tutorial/introduction/" class="btn">
+            Perkenalan
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 

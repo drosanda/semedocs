@@ -16,9 +16,10 @@
             <p>Seme framework has special place for putting your batch or binary in <code>kero/bin/</code> directory.</p>
             <p>But, this directory for now is not auto generated so you have to created manually the <code>bin</code> directory.</p>
 
-            <b-message type="is-info">
+            <div class="message is-info">
+<div class="message-body">
               <p>This only occured on Seme Framework version 4.x.x.</p>
-            </b-message>
+            </div></div>
 
             <p>Example error message</p>
             <pre>

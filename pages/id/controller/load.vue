@@ -47,18 +47,20 @@
     die();
   }
 }</code></pre>
-            <b-message type="is-info">
+            <div class="message is-info">
+<div class="message-body">
               <p><b>Perhatian</b></p>
               <p>Pastikan untuk selalu memakai alias yang unik untuk setiap pemanggilan model.</p>
               <p>Apabila ada alias yang sama, maka bisa menyebabkan akan mendapatkan hasil yang tidak diinginkan.</p>
-            </b-message>
+            </div></div>
 
-            <b-message type="is-success">
+            <div class="message is-success">
+<div class="message-body">
               <p><b>Tips</b></p>
               <p>Jika bingung menentukan alias, gunakan alias dengan awalan nama kelasnya masing-masing.</p>
               <p>Dan, apabila ada yang sama, berikan akhiran nomor pada akhir aliasnya.</p>
               <p>Contoh, <code>app/model/api/hello_detail_model2.php</code> dan aliasnya akan lebih baik jika dinamakan <code>hdm2</code>.</p>
-            </b-message>
+            </div></div>
           </div>
         </div>
       </div>

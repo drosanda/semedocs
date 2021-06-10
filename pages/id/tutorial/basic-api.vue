@@ -59,9 +59,11 @@
   &#x22;data&#x22;: []
 }
             </pre>
-            <b-message type="is-info">
+            <div class="message is-info">
+<div class="message-body">
               <p>While creating API, we doesn&#x27;t need the view, because API result will be rendered on controller.</p>
-            </b-message>
+            </div>
+          </div>
 
             <h2>Coding Phase</h2>
             <p>After understranding the structure, its time to implement the codes.</p>
@@ -443,10 +445,11 @@ class ApiKey extends SENE_Controller
 
             <h2>Test the API</h2>
             <p>After Completed the code, we can test the code by using <a href="https://www.postman.com/downloads/" target="_blank">Postman</a> or create own test runner.</p>
-
-            <b-message type="is-info">
-              <p>Seme Framework has supported for creating own test runner for testing the API.</p>
-            </b-message>
+            <div class="message is-info">
+              <div class="message-body">
+                <p>Seme Framework has supported for creating own test runner for testing the API.</p>
+              </div>
+            </div>
 
             <h3>Test apikey List</h3>
             <p>To test apikey list, you can open url directly in your browser to <code>http://localhost/seme_framework/api/apikey/</code>.</p>
@@ -455,21 +458,15 @@ class ApiKey extends SENE_Controller
 
             <h4>Create</h4>
             <p>The test result for create data</p>
-            <figure>
-              <img src="~/assets/img/tutorial/basic-api/postman-create.png">
-            </figure>
+            <amp-img layout="responsive" width="1682px" height="1166px" alt="postman create" :src="pCreate"></amp-img>
 
             <h4>Edit</h4>
             <p>The test result for edit data</p>
-            <figure>
-              <img src="~/assets/img/tutorial/basic-api/postman-edit.png">
-            </figure>
+            <amp-img layout="responsive" width="1340px" height="1116px" alt="postman edit" :src="pEdit"></amp-img>
 
             <h4>Delete</h4>
             <p>The test result for delete data</p>
-            <figure>
-              <img src="~/assets/img/tutorial/basic-api/postman-delete.png">
-            </figure>
+            <amp-img layout="responsive" width="1336px" height="1106px" alt="postman delete" :src="pDel"></amp-img>
 
             <p>Well done, if you facing any problem do not hestitate to open the <a href="https://github.com/drosanda/seme-framework/issues/new" target="_blank">issue</a> on our github page.</p>
             <hr>
@@ -477,16 +474,18 @@ class ApiKey extends SENE_Controller
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/id/tutorial/get-data" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Tutorial: Get Data
-            </b-button>
-            <b-button tag="router-link" to="/id/uri_routing/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Uri Routing
-            </b-button>
-          </div>
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/id/tutorial/get-data/" class="btn">
+            <i class="fa fa-chevron-left"></i>
+            Tutorial: Get Data
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/id/uri_routing/" class="btn">
+            Uri Routing
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 
@@ -501,7 +500,10 @@ export default {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Dokumentasi Seme Framework v4.0.0',
       title: 'Tutorial: Create basic API',
-      description: 'Pelajari selengkapnya tentang creating API by using melalui dokumentasi Seme Framework versi 4.0.0.'
+      description: 'Pelajari selengkapnya tentang creating API by using melalui dokumentasi Seme Framework versi 4.0.0.',
+      pCreate: require('~/assets/img/tutorial/basic-api/postman-create.png'),
+      pEdit: require('~/assets/img/tutorial/basic-api/postman-edit.png'),
+      pDel: require('~/assets/img/tutorial/basic-api/postman-delete.png'),
     }
   },
   head() {

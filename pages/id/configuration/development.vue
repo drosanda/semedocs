@@ -24,16 +24,19 @@
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/id/configuration/db-connection" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Koneksi DB
-            </b-button>
-            <b-button tag="router-link" to="/id/configuration/staging" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Fase Staging
-            </b-button>
-          </div>
+
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/id/configuration/db-connection/" class="btn">
+            <i class="fa fa-chevron-left"></i>
+            Koneksi DB
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/id/configuration/staging/" class="btn">
+            Fase Staging
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 

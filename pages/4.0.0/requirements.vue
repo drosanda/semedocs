@@ -56,16 +56,18 @@
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/4.0.0/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Version 4.0.0
-            </b-button>
-            <b-button tag="router-link" to="/4.0.0/downloads/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Download and Installation
-            </b-button>
-          </div>
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/4.0.0/credits/" class="btn">
+          <i class="fa fa-chevron-left"></i>
+            Credits
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/4.0.0/downloads/" class="btn">
+            Download and Installation
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 

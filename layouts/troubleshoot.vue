@@ -2,9 +2,7 @@
   <div>
     <div class="main-content columns is-fullheight">
       <aside class="column is-3 is-narrow-mobile is-fullheight section is-hidden-mobile">
-        <figure>
-          <img src="~/static/logo.png">
-        </figure>
+        <amp-img layout="responsive" width="240px" height="40px" alt="Seme Framework Logo" :src="logo"></amp-img>
         <ul class="menu-list">
           <li><nuxt-link to="/">Seme Framework</nuxt-link></li>
           <li><nuxt-link to="/credits">Credits</nuxt-link></li>
@@ -41,8 +39,8 @@
   <footer class="footer">
     <div class="container">
       <div class="content has-text-centered">
-        <p class="">Copyright &copy; 2014-2020. Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
-        <p><small>Last updated on 3 Oktober 2020</small></p>
+        <p class="">Copyright &copy; 2014-2021. Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
+        <p><small>Last updated on 30 May 2021</small></p>
       </div>
     </div>
   </footer>
@@ -59,7 +57,8 @@ export default {
       version: 'v4.0.0',
       prefix: ' - ',
       title: 'Seme Framework v4.0.0 Documentation',
-      description: 'Learn more about Seme Framework version 4.0.0 trough this documentation'
+      description: 'Learn more about Seme Framework version 4.0.0 trough this documentation',
+      logo: require('~/static/logo.png')
     }
   },
   head() {
@@ -80,12 +79,6 @@ export default {
           hid: 'og:description',
           name: 'og:description',
           content: this.description
-        }
-      ],
-      link: [
-        {
-          rel: 'canonical',
-          href: 'https://seme.framework.web.id' + this.$route.path.replace(/\/+$/, '') + '/'
         }
       ]
     }

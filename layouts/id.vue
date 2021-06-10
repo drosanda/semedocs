@@ -1,17 +1,23 @@
 <template>
-  <div>
+  <amp-body>
     <div class="main-content columns is-fullheight">
-      <aside class="column is-3 is-narrow-mobile is-fullheight section is-hidden-mobile">
-        <figure>
-          <img src="~/static/logo.png">
-        </figure>
+      <amp-sidebar id="sidebar1" layout="nodisplay" side="left" on="sidebarOpen:focusOnMe.focus">
+        <amp-img
+          alt="Seme Framework Logo"
+          :src="logo"
+          layout="responsive"
+          width="240"
+          height="40"
+        >
+        </amp-img>
         <div class="badges">
-          <img src='https://img.shields.io/badge/version-4.0.0-ed6f75' alt="version">
-          <img src='https://travis-ci.org/drosanda/seme-framework.svg?branch=master' alt="build status">
-          <img src='https://img.shields.io/badge/lang-id-e9bd2e' alt="version">
+          <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/version-4.0.0-ed6f75' alt="version"></amp-img>
+          <amp-img layout="fixed" width="90px" height="20px" src='https://travis-ci.org/drosanda/seme-framework.svg?branch=master' alt="build status"></amp-img>
+          <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/lang-id-e9bd2e' alt="language"></amp-img>
         </div>
+
         <ul class="menu-list">
-          <li><nuxt-link to="/">Seme Framework</nuxt-link></li>
+          <li><nuxt-link to="/id/">Seme Framework</nuxt-link></li>
           <li><nuxt-link to="/id/requirements">Persyaratan</nuxt-link></li>
           <li><nuxt-link to="/id/downloads">Download &amp; Install</nuxt-link></li>
           <li>
@@ -116,7 +122,15 @@
             <nuxt-link to="/id/cli">CLI (command line interface)</nuxt-link>
           </li>
         </ul>
-      </aside>
+      </amp-sidebar>
+
+      <button
+        class="hamburger"
+        on='tap:sidebar1.toggle'
+        aria-label="Click to open sidebar"
+        >
+        <div class="hamburger"></div>
+      </button>
       <div class="container column is-9">
         <nuxt />
       </div>
@@ -125,13 +139,13 @@
       <footer class="footer">
         <div class="container">
           <div class="content has-text-centered">
-            <p class="">Copyright &copy; 2014-2020. Dibuat sepenuh cinta di Bandung, Indonesia oleh Daeng Rosanda, S.Kom.</p>
-            <p><small>Last updated on 24 Oktober 2020</small></p>
+            <p class="">Copyright &copy; 2014-2021. Dibuat sepenuh cinta di Bandung, Indonesia oleh Daeng Rosanda, S.Kom.</p>
+            <p><small>Diperbarui tanggal 1 Juni 2021</small></p>
           </div>
         </div>
       </footer>
     </footer>
-  </div>
+  </amp-body>
 
 </template>
 
@@ -139,11 +153,14 @@
 export default {
   data() {
     return {
+      query: '',
+      articles: [],
       name: 'Seme Framework',
       version: 'v4.0.0',
       prefix: ' - ',
       title: 'Dokumentasi Seme Framework versi 4.0.0',
-      description: 'Pelajari Seme Framework versi 4.0.0 bahasa indonesia'
+      description: 'Pelajari Seme Framework versi 4.0.0 bahasa indonesia',
+      logo: require('~/static/logo.png')
     }
   },
   head() {
@@ -167,12 +184,6 @@ export default {
           hid: 'og:description',
           name: 'og:description',
           content: this.description
-        }
-      ],
-      link: [
-        {
-          rel: 'canonical',
-          href: 'https://seme.framework.web.id' + this.$route.path.replace(/\/+$/, '') + '/'
         }
       ]
     }

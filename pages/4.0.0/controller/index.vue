@@ -26,9 +26,10 @@ app
             </pre>
             <p>Lets say, you have extracted Seme Framework on <code>D:\XAMPP\htdocs\seme-framework</code></p>
             <p>So, if you accessing the <code>http://localhost/seme-framework</code> the Seme Framework will load <code>home.php</code> controller.</p>
-            <b-message class="is-info">
+            <div class="message is-info">
+  <div class="message-body">
               <p>Class <b>home</b> or <b>home.php</b> file is the default access controller from each URI even in the sub directory.</p>
-            </b-message>
+            </div></div>
             <p>How if, we accessing <code>http://localhost/seme-framework/blog</code>?</p>
             <p>The answer is, Seme Framework will load controller blog.php</p>
             <p>Seme Framework will only load controller with filename and its class name are matched.</p>
@@ -67,16 +68,19 @@ class Notfound extends Sene_Controller{
   }
 }
             </pre>
-            <b-message class="is-info">
+            <div class="message is-info">
+  <div class="message-body">
               <p>Please make sure your class name are match with filename.</p>
-            </b-message>
-            <b-message class="is-info">
+            </div></div>
+            <div class="message is-info">
+  <div class="message-body">
               <p>Undefined file name will be throw 404 error.</p>
-            </b-message>
-            <b-message class="is-danger">
+            </div></div>
+            <div class="message is-danger">
+  <div class="message-body">
               <p><b>Caution</b></p>
               <p>Mismatched classname with filename will be throw 500 error.</p>
-            </b-message>
+            </div></div>
 
             <h2>Access Methods</h2>
             <p>Seme Framework supported access method for public and private declaration.</p>
@@ -97,12 +101,14 @@ class Home extends Sene_Controller{
   }
 }
             </pre>
-            <b-message class="is-info">
+            <div class="message is-info">
+  <div class="message-body">
               <p>The private method or private properties on Seme Framework are always prefixed with double underscore.</p>
-            </b-message>
-            <b-message class="is-success">
+            </div></div>
+            <div class="message is-success">
+  <div class="message-body">
               <p>The private method is inaccessible from URI request.</p>
-            </b-message>
+            </div></div>
 
           </div>
         </div>

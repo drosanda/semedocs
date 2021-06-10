@@ -39,6 +39,21 @@
         </div>
       </div>
 
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/id/library/" class="btn">
+          <i class="fa fa-chevron-left"></i>
+            Library
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/3.3.0" class="btn">
+            Version: 3.3.0
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
+        </div>
+      </div>
+
     </div>
   </div>
 </template>

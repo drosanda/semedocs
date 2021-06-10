@@ -56,9 +56,10 @@ class Home extends SENE_Controller
             <pre>
 alert(&#x27;Hi, this is from home_bottom&#x27;);
             </pre>
-            <b-message class="is-info">
+            <div class="message is-info">
+  <div class="message-body">
               <p>For further information about home_bottom.php and layout, please refer to <NuxtLink to="/id/view/theme-content/js/">Javascript Theme Content</NuxtLink>.</p>
-            </b-message>
+            </div></div>
           </div>
         </div>
 

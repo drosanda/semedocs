@@ -31,13 +31,8 @@
               <li><code>development.php</code></li>
             </ol>
             <p>The content of each files can be differents each others depends on your requirements.</p>
-            <b-message class="is-info">
-              <p>
-                By default Seme Framework only include <code>development.php</code> for development phase.
-                You can created new files named <code>staging.php</code> or even <code>production.php</code> later on each server.
-              </p>
-            </b-message>
             <hr>
+
             <h2>Basic configuration</h2>
             <p>
               By default Seme Framework only include <code>development.php</code> for development phase.
@@ -47,21 +42,21 @@
               And then the further information about basic configuration:
             </p>
             <ul>
-              <li><NuxtLink to="/4.0.0/configuration/url">URL Configuration</NuxtLink></li>
-              <li><NuxtLink to="/4.0.0/configuration/db-connection">Database Connection</NuxtLink></li>
+              <li><NuxtLink to="/4.0.0/configuration/url/">URL Configuration</NuxtLink></li>
+              <li><NuxtLink to="/4.0.0/configuration/db-connection/">Database Connection</NuxtLink></li>
             </ul>
             <h3>Session</h3>
             <p>
               The session key configuration requires for dividing the session used by another apps.
               This value is mandatory, the filling value can be random or the desired value as long as has unique value.
-              Example <code>$saltkey = &#x27;s3mEFr4&#x27;;</code>.
+              Example <code>$saltkey = &#x27;s3mEFr4&#x27;;</code>. Learn more about <NuxtLink to="/4.0.0/configuration/session/">session configuration</NuxtLink>.
             </p>
 
             <h3>Timezone</h3>
             <p>
               The timezone value required by some apps that requiring timezone precisions.
               The default value is <code>$timezone = &#x27;Asia/Jakarta&#x27;;</code>.
-              For the values, please refer to <a href="https://www.php.net/manual/en/timezones.php">List of Supported Timezones</a> on PHP Manual website.
+              For the values, please refer to <a href="https://www.php.net/manual/en/timezones.php" target="_blank">List of Supported Timezones <i class="fa fa-external-link"></i></a> on PHP Manual website.
             </p>
 
             <h3>Additional Configuration</h3>
@@ -73,8 +68,27 @@
             </p>
             <hr>
             <h2>Source Codes</h2>
-            <p>Here is the default content of development.php</p>
-            <pre>
+            <p>Here is the default content for development.php file.</p>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
 &#x3C;?php
 /**
  * Configuration file for Development version
@@ -196,23 +210,26 @@ $semevar[&#x27;email_from&#x27;] = &#x27;noreply@thecloudalert.com&#x27;;
 $semevar[&#x27;email_reply&#x27;] = &#x27;hi@thecloudalert.com&#x27;;
 $semevar[&#x27;app_name&#x27;] = &#x27;Seme Framework&#x27;;
 $semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;
-
-            </pre>
+                </highlight-code>
+              </div>
+            </div>
           </div>
 
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/4.0.0/downloads/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Download and Installation
-            </b-button>
-            <b-button tag="router-link" to="/4.0.0/configuration/development/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Development Phase
-            </b-button>
-          </div>
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/4.0.0/downloads/" class="btn">
+          <i class="fa fa-chevron-left"></i>
+            Download and Installation
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/4.0.0/configuration/development/" class="btn">
+            Development Phase
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 
