@@ -13,7 +13,7 @@
         <div class="column">
           <div class="content">
             <h1 class="">Perkenalan penggunaan Seme Framework</h1>
-            <p>Sebelum memulai tutorial, Anda harus melakukan yang dijelaskan pada <NuxtLink to="/id/requirements">halaman persyaratan</NuxtLink>  terlebih dahulu.</p>
+            <p>Sebelum memulai tutorial, Anda harus melakukan apa yang dijelaskan pada <NuxtLink to="/id/requirements/">halaman persyaratan</NuxtLink> terlebih dahulu.</p>
             <p>Tujuan dari tutorial ini adalah, bagaimana berinteraksi dengan View dan Controller. Interaksi model akan dibahas pada tutorial berikutnya.</p>
 
             <amp-img layout="responsive" width="874" height="804px" :src="helloWorld" alt="Seme Framework hello world controller"></amp-img>
@@ -207,7 +207,7 @@ class Home extends SENE_Controller
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="php">&#x3C;!DOCTYPE html&#x3E;
+                <highlight-code lang="html">&#x3C;!DOCTYPE html&#x3E;
 &#x3C;html&#x3E;
   &#x3C;?php $this-&#x3E;getThemeElement(&#x27;page/html/head&#x27;, $__forward) ?&#x3E;
   &#x3C;body&#x3E;
@@ -260,7 +260,7 @@ class Home extends SENE_Controller
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="php">&#x3C;head&#x3E;
+                <highlight-code lang="html">&#x3C;head&#x3E;
 &#x9;&#x3C;meta charset=&#x22;utf-8&#x22;&#x3E;
 &#x9;&#x3C;meta name=&#x22;viewport&#x22; content=&#x22;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&#x22;&#x3E;
 
@@ -326,7 +326,7 @@ class Home extends SENE_Controller
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="php">&#x3C;div class=&#x22;container&#x22;&#x3E;
+                <highlight-code lang="html">&#x3C;div class=&#x22;container&#x22;&#x3E;
   &#x3C;div class=&#x22;row&#x22;&#x3E;
     &#x3C;div class=&#x22;col m12 s12&#x22;&#x3E;
       &#x3C;div class=&#x22;card rounded preload-any&#x22;&#x3E;

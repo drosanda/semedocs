@@ -12,34 +12,55 @@
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Basic API</h1>
-            <p>Application Programming Interface (API) ussually built by developer for bridging frontend and backend.</p>
-            <p>Seme Framework has functionality that can support for building API.</p>
-            <p>In this tutorial you will learn about how to:</p>
-            <ul type="1">
-              <li>Setup the json output using library.</li>
-              <li>Create core controller for reusable function.</li>
-              <li>Collect and input from form data and URI request.</li>
-              <li>Do the Create, Retrieve, Update and Delete (CRUD) process to database.</li>
-              <li>Test the API.</li>
-            </ul>
-
-            <h2>Prerequisited</h2>
-            <p>For best result of this tutorial, you have to setup or installed the followings item:</p>
+            <h1 class="">Dasar-dasar Pembuatan Application Programming Interface (API)</h1>
+            <p>Application Programming Interface (API) biasanya dibangun oleh pengembang untuk menjembatani frontend dan backend.</p>
+            <p>Seme Framework memiliki fungsionalitas yang dapat mendukung untuk membangun API.</p>
+            <p>Dalam tutorial ini Anda akan belajar tentang bagaimana:</p>
             <ul>
-              <li>Running Apache and MySQL</li>
-              <li>An IDE or Text Editor</li>
-              <li>A Browser</li>
-              <li><NuxtLink to="/id/tutorial/introduction">Completed the first tutorial</NuxtLink></li>
-              <li><NuxtLink to="/id/tutorial/get-data">Completed the Get Data tutorial</NuxtLink></li>
+              <li>Mempersiapkan hasil keluaran berupa JSON dengan menggunakan library SEME_JSON.</li>
+              <li>Membuat file Core controller supaya pembuatan kode yang berulang bisa dikurangi.</li>
+              <li>Mengumpulkan dan memasukkan data formulir dan permintaan URI.</li>
+              <li>Lakukan proses Create, Retrieve, Update and Delete (CRUD) ke database.</li>
+              <li>Pengujian hasil dari pembuatan API</li>
             </ul>
-            <p>Okay, lets get started!</p>
 
-            <h2>The Structure</h2>
-            <p>Before we proceed to coding phase, we have to learn about the directory and api result structure that we used to building the API.</p>
-            <h3>Directory Structure</h3>
-            <p>Here is the structure that we have to use.</p>
-            <pre>
+            <h2>Prasyarat</h2>
+            <p>Untuk hasil terbaik dari tutorial ini, Anda harus mengatur atau menginstal item berikut:</p>
+            <ul>
+              <li>Menjalankan Apache dan MySQL melalui XAMPP</li>
+              <li>IDE atau Editor Teks sudah terinstall dan bisa digunakan</li>
+              <li>Peramban / Browser seperti Chrome atau Firefox</li>
+              <li>Download dan Install <a href="https://www.postman.com/downloads/" target="_blank">Postman</a> untuk melakukan pengujian API</li>
+              <li><NuxtLink to="/id/tutorial/introduction/">Menyelesaikan tutorial pertama</NuxtLink></li>
+              <li><NuxtLink to="/id/tutorial/get-data/">Menyelesaikan tutorial kedua</NuxtLink></li>
+            </ul>
+            <p>Jika sudah yakin, mari kita mulai!</p>
+
+            <h2>Struktur file dan direktori</h2>
+            <p>Sebelum kita melanjutkan ke tahap coding, kita harus belajar tentang direktori dan struktur hasil api yang kita gunakan untuk membangun API.</p>
+
+            <h3>Struktur Direktori</h3>
+            <p>Berikut adalah struktur yang harus kita ketahui dan digunakan.</p>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
 - app
 -- controller
 --- api
@@ -48,30 +69,76 @@
 -- model
 --- api
 ---- a_apikey_model.php
-</pre>
-            <p>We have to separated controller and the model too for avoiding mistake by add new directory to model and controller.</p>
-            <h3>API response structure</h3>
-            <p>There is many standard format for API response structure, but we use the most basic API structure on this tutorial.</p>
-            <pre>
+                </highlight-code>
+              </div>
+            </div>
+
+            <p>Kita harus memisahkan controller dan model juga untuk menghindari kesalahan dengan menambahkan direktori baru ke model dan controller.</p>
+
+            <h3>Struktur respons API </h3>
+            <p>Ada banyak format standar untuk struktur respons API, tetapi kami menggunakan struktur API paling dasar pada tutorial ini.</p>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
 {
   &#x22;status&#x22;: 200,
   &#x22;message&#x22;: &#x22;Success&#x22;,
   &#x22;data&#x22;: []
 }
-            </pre>
-            <div class="message is-info">
-<div class="message-body">
-              <p>While creating API, we doesn&#x27;t need the view, because API result will be rendered on controller.</p>
+            </highlight-code>
             </div>
-          </div>
+            </div>
 
-            <h2>Coding Phase</h2>
-            <p>After understranding the structure, its time to implement the codes.</p>
+            <div class="message is-info">
+              <div class="message-body">
+                <p>Saat membuat API, kita tidak membutuhkan view, karena hasil API atau tampilan akan diproses langsung melalui kelas controller.</p>
+              </div>
+            </div>
 
-            <h3>Create the default API</h3>
-            <p>First thing first we have to create default API response for test basic functionality and basic api result structure.</p>
-            <p>Create new directory under <code>app/controller/</code> named <code>api</code> and then create a file named <code>home.php</code>.</p>
-            <pre>
+            <h2>Fase Pengkodean (<em>Ngoding</em>)</h2>
+            <p>Setelah memahami strukturnya, saatnya mengimplementasikan kode-kode tersebut.</p>
+
+            <h3>Menentukan Respon atau hasil keluaran API</h3>
+            <p>Pertama-tama kita harus membuat respons API default untuk menguji fungsionalitas dasar dan struktur hasil api dasar.</p>
+            <p>Buat direktori baru bernama <code>api</code> di dalam <code>app/controller/</code>.</p>
+            <p>Kemudian setelah itu dalam direktori baru tadi buat file baru bernama <code>home.php</code>.</p>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
 &#x3C;?php
 class Home extends SENE_Controller
 {
@@ -88,14 +155,36 @@ class Home extends SENE_Controller
     $this-&#x3E;json-&#x3E;out($data);
   }
 }
-            </pre>
-            <p>To test the functionality, just open <code>http://localhost/seme_framework/api/</code>.</p>
+                </highlight-code>
+              </div>
+            </div>
+            <p>Kelas controller yang berisi kode ini merupakan kelas yang disusun dengan kode dasar untuk pembuatan API.</p>
+            <p>Untuk menguji fungsionalitasnya, cukup buka <code>http://localhost/seme_framework/api/</code> melalui browser dan akan menghasilkan respon <code>not found</code> dengan <code>status 404</code>.</p>
 
-            <h3>Create the model</h3>
-            <p>We have to create the model for communicating between PHP Server and Database server.</p>
-            <p>Create new directory under <code>model</code> named <code>api</code>, and then create a file named <code>a_apikey_model.php</code>.</p>
-            <p>In the model we have to add some method such as insert, update, delete, get by id, get all data.</p>
-            <pre>
+            <h3>Membuat kelas Model</h3>
+            <p>Kita harus membuat model untuk berkomunikasi antara PHP Server dan Database server.</p>
+            <p>Buat direktori baru bernama <code>api</code> di dalam <code>app/model/</code>. Kemudian buat file baru bernama <code>a_apikey_model.php</code> di dalam direktori baru tersebut.</p>
+            <p>Dalam model kita harus menambahkan beberapa metode seperti <strong>insert</strong>, <strong>update</strong>, <strong>delete</strong>, <strong>get by id</strong>, <strong>get all data</strong>, dan metode lainnya.</p>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
 &#x3C;?php
 class A_ApiKey_Model extends SENE_Model
 {
@@ -223,11 +312,40 @@ class A_ApiKey_Model extends SENE_Model
     return $this-&#x3E;db-&#x3E;get_first();
   }
 }
-            </pre>
+                </highlight-code>
+              </div>
+            </div>
 
-            <h3>Create the controller for apikey</h3>
-            <p>After create model, now we have to create controller for CRUD.</p>
-            <pre>
+            <h3>Membuat kelas Controller</h3>
+            <p>Setelah membuat kelas model, sekarang kita akan mencoba membuat kelas controller. Kelas controller ini nantinya akan digunakan untuk mengeksekusi CRUD.</p>
+
+            <div class="message is-info">
+              <div class="message-body">
+                <p><strong>Tentang CRUD</strong></p>
+                <p>CRUD merupakan istilah untuk Create, Retrieve, Update, Delete. Biasanya diartikan sebagai proses dasar dalam penarikan / penampilan data, penghapusan data, perubahan data ataupun penghapusan data.</p>
+                <p>CRUD juga biasanya digunakan sebagai fungsi dasar dalam pengoperasian aplikasi atau pembuatan aplikasi.</p>
+              </div>
+            </div>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
 &#x3C;?php
 class ApiKey extends SENE_Controller
 {
@@ -441,34 +559,38 @@ class ApiKey extends SENE_Controller
     $this-&#x3E;json-&#x3E;out($data);
   }
 }
-            </pre>
-
-            <h2>Test the API</h2>
-            <p>After Completed the code, we can test the code by using <a href="https://www.postman.com/downloads/" target="_blank">Postman</a> or create own test runner.</p>
-            <div class="message is-info">
-              <div class="message-body">
-                <p>Seme Framework has supported for creating own test runner for testing the API.</p>
+                </highlight-code>
               </div>
             </div>
 
-            <h3>Test apikey List</h3>
-            <p>To test apikey list, you can open url directly in your browser to <code>http://localhost/seme_framework/api/apikey/</code>.</p>
-            <p>But, for another another function you have to tested it by using runner.</p>
-            <p>Here is some example for testing API through Postman.</p>
+            <h2>Menguji hasil pembuatan API</h2>
+            <p>Setelah menyelesaikan kode, kita dapat menguji kode dengan menggunakan Postman. Apabila anda sudah memiliki kemapuan berlebih, bisa juga dicoba dengan menggunakan runner test sendiri ataupun aplikasi testing API lainnya.</p>
 
-            <h4>Create</h4>
-            <p>The test result for create data</p>
+            <div class="message is-info">
+              <div class="message-body">
+                <p>Seme Framework telah mendukung pembuatan test runner sendiri untuk menguji API.</p>
+              </div>
+            </div>
+
+            <h3>Menguji API untuk List Data</h3>
+            <p>Untuk menguji daftar kunci api, Anda dapat membuka url langsung di browser Anda untuk <code>http://localhost/seme_framework/api/apikey/</code>.</p>
+            <p>Tapi, untuk fungsi lain anda harus mengujinya dengan menggunakan runner atau postman.</p>
+            <p>Berikut adalah beberapa contoh untuk menguji API melalui Postman.</p>
+
+            <h4>Create (Menambahkan Data)</h4>
+            <p>Untuk menambahkan data dengan menggunakan postman, dapat dilihat dari screenshot dibawah ini.</p>
             <amp-img layout="responsive" width="1682px" height="1166px" alt="postman create" :src="pCreate"></amp-img>
 
-            <h4>Edit</h4>
-            <p>The test result for edit data</p>
+            <h4>Edit (Perubahan data)</h4>
+            <p>Untuk melakukan perubahan data dengan menggunakan postman, dapat dilihat dari screenshot dibawah ini.</p>
             <amp-img layout="responsive" width="1340px" height="1116px" alt="postman edit" :src="pEdit"></amp-img>
 
-            <h4>Delete</h4>
-            <p>The test result for delete data</p>
+            <h4>Delete (Menghapus data)</h4>
+            <p>Untuk melakukan penghapus data dengan menggunakan postman, dapat dilihat dari screenshot dibawah ini.</p>
             <amp-img layout="responsive" width="1336px" height="1106px" alt="postman delete" :src="pDel"></amp-img>
 
-            <p>Well done, if you facing any problem do not hestitate to open the <a href="https://github.com/drosanda/seme-framework/issues/new" target="_blank">issue</a> on our github page.</p>
+            <p>Selamat, tutorial dasar API sudah selesai.</p>
+            <p>Jika Anda menghadapi masalah, jangan ragu untuk membuat  <a href="https://github.com/drosanda/seme-framework/issues/new" target="_blank">issue di Github Seme Framework</a> atau menghubungi saya secara langsung.</p>
             <hr>
           </div>
         </div>

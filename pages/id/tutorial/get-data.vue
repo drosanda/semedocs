@@ -27,9 +27,9 @@
             <p>Untuk hasil terbaik dari tutorial ini, Anda harus mengatur atau menginstal item berikut:</p>
             <ul>
               <li>Menjalankan Apache dan MySQL melalui XAMPP</li>
-              <li>IDE atau Editor Teks</li>
-              <li>Peramban / Browser</li>
-              <li><NuxtLink to="/id/tutorial/introduction">Menyelesaikan tutorial pertama</NuxtLink></li>
+              <li>IDE atau Editor Teks sudah terinstall dan bisa digunakan</li>
+              <li>Peramban / Browser seperti Chrome atau Firefox</li>
+              <li><NuxtLink to="/id/tutorial/introduction/">Menyelesaikan tutorial pertama</NuxtLink></li>
             </ul>
             <p>Oke, mari kita mulai!</p>
 
@@ -194,7 +194,7 @@ class Home extends SENE_Controller
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="php">
+                <highlight-code lang="html">
 &#x3C;div class=&#x22;container&#x22;&#x3E;
   &#x3C;div class=&#x22;row&#x22;&#x3E;
     &#x3C;?php foreach($aakm as $aak) { ?&#x3E;
