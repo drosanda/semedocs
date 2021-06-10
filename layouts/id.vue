@@ -34,8 +34,8 @@
             <nuxt-link to="/id/tutorial">Tutorial</nuxt-link>
             <ul>
               <li><nuxt-link to="/id/tutorial/introduction">Perkenalan</nuxt-link></li>
-              <li><nuxt-link to="/id/tutorial/get-data">Menarik data</nuxt-link></li>
-              <li><nuxt-link to="/id/tutorial/basic-api">dasar-dasar API</nuxt-link></li>
+              <li><nuxt-link to="/id/tutorial/get-data">Get data</nuxt-link></li>
+              <li><nuxt-link to="/id/tutorial/basic-api">Pembuatan API</nuxt-link></li>
             </ul>
           </li>
           <li>
@@ -153,39 +153,7 @@
 export default {
   data() {
     return {
-      query: '',
-      articles: [],
-      name: 'Seme Framework',
-      version: 'v4.0.0',
-      prefix: ' - ',
-      title: 'Dokumentasi Seme Framework versi 4.0.0',
-      description: 'Pelajari Seme Framework versi 4.0.0 bahasa indonesia',
-      logo: require('~/static/logo.png')
-    }
-  },
-  head() {
-    return {
-      htmlAttrs: {
-        lang: 'id'
-      },
-      title: this.title+this.prefix+' '+this.name,
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: this.description
-        },
-        {
-          hid: 'og:title',
-          name: 'og:title',
-          content: this.title
-        },
-        {
-          hid: 'og:description',
-          name: 'og:description',
-          content: this.description
-        }
-      ]
+      logo: require('~/static/logo.png'),
     }
   }
 }
