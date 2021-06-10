@@ -416,6 +416,9 @@ pre code {
     font-size: 2.2rem;
     border-size: 0.08em;
   }
+  code {
+    font-size: 0.5em;
+  }
 }
 
 /*
