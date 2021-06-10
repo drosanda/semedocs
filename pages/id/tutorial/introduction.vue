@@ -402,12 +402,12 @@ class Home extends SENE_Controller
 
             <hr>
 
-            <h4>Bonus Mission</h4>
-            <p>With the main layout that we have created before, we can include and render javascript using Seme Framework.</p>
-            <p>For achieving this, first create the file <code>app/view/front/home/home_bottom.php</code>.</p>
-            <p>And then, put this code on it.</p>
+            <h4>Bonus Tambahan</h4>
+            <p>Dengan layout utama yang telah kita buat sebelumnya, kita dapat memasukkan dan merender javascript menggunakan Seme Framework.</p>
+            <p>Untuk mencapai ini, pertama buat file <code>app/view/front/home/home_bottom.php</code>.</p>
+            <p>Dan kemudian tambahkan kode ini di atasnya.</p>
             <pre><code v-highlight class="javascript">alert(&#x27;This is Hello World from app/view/home/home_bottom.php&#x27;);</code></pre>
-            <p>After that, we have to load the home bottom from <code>app/controller/home.php</code>.</p>
+            <p>Setelah itu, kita harus memuat tombol beranda dari <code>app/controller/home.php</code>.</p>
 
             <div class="macwindow">
               <div class="titlebar">
@@ -455,9 +455,9 @@ class Home extends SENE_Controller
                 </highlight-code>
               </div>
             </div>
-            <p>To test it, open <code>http://localhost/seme_framework</code> using browser.</p>
-            <p>It should show an alert, view with loaded CSS, and show H1 with content Hello World from view and using theme.</p>
-            <amp-img layout="responsive" width="100px" height="100px" :src="tutor7"></amp-img>
+            <p>Untuk mengujinya, buka <code>http://localhost/seme_framework</code> menggunakan browser.</p>
+            <p>Itu harus menunjukkan peringatan, melihat dengan CSS yang dimuat, dan menunjukkan H1 dengan konten Hello World dari tampilan dan menggunakan tema.</p>
+            <amp-img layout="responsive" width="2178px" height="598px" :src="tutor7"></amp-img>
 
             <hr>
           </div>

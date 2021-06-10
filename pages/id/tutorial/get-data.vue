@@ -12,55 +12,72 @@
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Get Data</h1>
-            <p>Get Data is most basic example to illustrate how framework getting data from database.</p>
-            <p>Get data is part of CRUD method, called Retrieve. CRUD is shortname of Create Retrieve Update and Delete.</p>
-            <p>In this tutorial you will learn about how to:</p>
-            <ul type="1">
-              <li>Setup the database by creating the database and importing the SQL file.</li>
-              <li>Check connection and configuration from framework.</li>
-              <li>Create a model.</li>
-              <li>Modify controller and view.</li>
-            </ul>
-
-            <h2>Prerequisited</h2>
-            <p>For best result of this tutorial, you have to setup or installed the followings item:</p>
+            <h1 class="">Dapatkan Data</h1>
+            <p>Get Data adalah contoh paling dasar untuk menggambarkan bagaimana framework mendapatkan data dari database.</p>
+            <p>Get data adalah bagian dari metode CRUD, yang disebut Retrieve. CRUD adalah nama pendek dari Create Retrieve Update and Delete.</p>
+            <p>Dalam tutorial ini Anda akan belajar tentang bagaimana:</p>
             <ul>
-              <li>Running Apache and MySQL</li>
-              <li>An IDE or Text Editor</li>
-              <li>A Browser</li>
-              <li><NuxtLink to="/id/tutorial/introduction">Completed the first tutorial</NuxtLink></li>
+              <li>Mengatur database dengan membuat database dan mengimpor file SQL.</li>
+              <li>Periksa koneksi dan konfigurasi dari framework.</li>
+              <li>Buat model.</li>
+              <li>Ubah controller dan view.</li>
             </ul>
-            <p>Okay, lets get started!</p>
 
-            <h2>Setup the database</h2>
-            <p>Before we proceed to code with Seme Framework, we have to setup the database for working connection between Seme Framework and Database.</p>
-            <h3>Create the database using PhpMyAdmin</h3>
-            <p>PhpMyAdmin is web based database management interface.</p>
-            <p>This tool allowed you to do almost anything to your MySQL or MariaDB powered database.</p>
-            <p>If you have run the XAMPP, then you can open <code>http://localhost/phpmyadmin/</code>.</p>
-            <p>You have to create a database, named <code>seme_framework</code>.</p>
+            <h2>Prasyarat</h2>
+            <p>Untuk hasil terbaik dari tutorial ini, Anda harus mengatur atau menginstal item berikut:</p>
+            <ul>
+              <li>Menjalankan Apache dan MySQL melalui XAMPP</li>
+              <li>IDE atau Editor Teks</li>
+              <li>Peramban / Browser</li>
+              <li><NuxtLink to="/id/tutorial/introduction">Menyelesaikan tutorial pertama</NuxtLink></li>
+            </ul>
+            <p>Oke, mari kita mulai!</p>
+
+            <h2>Siapkan database</h2>
+            <p>Sebelum kita melanjutkan ke kode dengan Seme Framework, kita harus menyiapkan database untuk koneksi yang berfungsi antara Seme Framework dan Database.</p>
+
+            <h3>Buat database menggunakan PhpMyAdmin</h3>
+            <p>PhpMyAdmin adalah antarmuka manajemen basis data berbasis web. PhpMyAdmin sudah ada pada bawaan <a href="https://www.apachefriends.org/download.html" target="_blank">XAMPP</a>.</p>
+            <p>PhpMyAdmin ini memungkinkan Anda untuk melakukan hampir semua hal ke database yang didukung MySQL atau MariaDB.</p>
+            <p>Jika Anda telah menjalankan XAMPP, maka Anda dapat membuka <code>http://localhost/phpmyadmin/</code>.</p>
+            <p>Anda harus membuat database, bernama <code>seme_framework</code>.</p>
             <amp-img layout="responsive" width="1086px" height="694px" alt="PMA DB Create" :src="dbCreate"></amp-img>
 
-            <h3>Import the example database</h3>
-            <p>After create a database, you have to import the database.</p>
-            <p>We have already save some sql files in your <code>sql</code> directory.</p>
-            <p>Before continuing the export process you have to select the database <code>seme_framework</code> which is you have created it before.</p>
-            <p>Navigate to <code>export</code> and choose <code>seme_framework.sql</code> file in <code>sql</code> directory.</p>
+            <h3>Impor database contoh</h3>
+            <p>Setelah membuat database, Anda harus mengimpor database.</p>
+            <p>Kami telah menyimpan file sql pada direktori <code>sql</code>.</p>
+            <p>Sebelum melanjutkan proses ekspor Anda harus memilih database <code>seme_framework</code> yang telah Anda buat sebelumnya.</p>
+            <p>Navigasikan ke tab <code>export</code> dan pilih file <code>seme_framework.sql</code> didalam direktori <code>sql</code>.</p>
             <amp-img layout="responsive" width="1086px" height="694px" alt="PMA DB Create" :src="dbImport"></amp-img>
-            <p>After importing SQL, you can see new tables already added to database.</p>
-            <figure>
-              <img src="~/assets/img/tutorial/phpmyadmin-db-tables.png">
-            </figure>
+            <p>Setelah mengimpor SQL, Anda dapat melihat tabel baru yang sudah ditambahkan ke database.</p>
+            <amp-img layout="responsive" width="1086px" height="694px" alt="PMA DB Create" :src="dbTblList"></amp-img>
 
-            <h2>The Codes</h2>
-            <p>After setup the database, its time for coding. First thing we have to recheck the configuration file located at <code>app/config/development.php</code>. Please make sure the database connection configuration is working.</p>
+            <h2>Penysunan Kode (<em>Ngoding</em>)</h2>
+            <p>Setelah setup database, saatnya untuk coding. Hal pertama yang harus kita periksa kembali adalah file konfigurasi yang terletak di <code>app/config/development.php</code>. Pastikan konfigurasi koneksi database berfungsi.</p>
 
-            <h3>Create Model</h3>
-            <p>The model on MVC framework used for bridging framework and database table. And then if we have separated the model, the rates of reusability increased because a model can be used repeatedly multiple times on many controllers.</p>
+            <h3>Buat Model</h3>
+            <p>Model pada MVC framework digunakan untuk menjembatani framework dan tabel database. Dan kemudian jika kita telah memisahkan model, tingkat reusability meningkat karena model dapat digunakan berulang kali beberapa kali pada banyak controller.</p>
 
-            <p>Lets created new file named <code>a_apikey_model.php</code> for <b>table a_apikey</b> under <code>app/model/</code>, and then put this codes to your file.</p>
-            <pre>
+            <p>Mari kita buat file baru bernama <code>a_apikey_model.php</code> untuk tabel <b>a_apikey</b> didalam direktori <code>app/model/</code>, dan kemudian masukkan kode ini ke file Anda.</p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
 &#x3C;?php
 class A_ApiKey_Model extends SENE_Model
 {
@@ -96,7 +113,9 @@ class A_ApiKey_Model extends SENE_Model
         return $this-&#x3E;db-&#x3E;get_first();
     }
 }
-            </pre>
+                </highlight-code>
+              </div>
+            </div>
 
             <h3>Edit Controller</h3>
             <p>From the first tutorial, we have created a controller located at <code>app/controller/home.php</code>. For achieving this tutorial, we have to modified the codes.</p>
@@ -195,6 +214,7 @@ export default {
       description: 'Pelajari selengkapnya tentang obtaining data from model tutorial by melalui dokumentasi Seme Framework versi 4.0.0.',
       dbCreate: require('~/assets/img/tutorial/phpmyadmin-db-create.png'),
       dbImport: require('~/assets/img/tutorial/phpmyadmin-db-import.png'),
+      dbTblList: require('~/assets/img/tutorial/phpmyadmin-db-tables.png'),
     }
   },
   head() {
