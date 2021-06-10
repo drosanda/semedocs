@@ -27,10 +27,10 @@ $db['engine']= "mysqli"; //available mysqli only</code></pre>
       <div class="columns">
         <div class="column">
           <div class="buttons">
-            <b-button tag="router-link" to="/3.2.1/configuration/core/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+            <b-button tag="router-link" to="/3.2.1/configuration/core/" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
               Configuration: core.php
             </b-button>
-            <b-button tag="router-link" to="/3.2.1/configuration/session/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+            <b-button tag="router-link" to="/3.2.1/configuration/session/" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
               Configuration: session.php
             </b-button>
           </div>

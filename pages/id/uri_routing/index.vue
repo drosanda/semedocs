@@ -96,10 +96,10 @@
       <div class="columns">
         <div class="column">
           <div class="buttons">
-            <b-button tag="router-link" to="/id/tutorial/introduction" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+            <b-button tag="router-link" to="/id/tutorial/introduction" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
               Tutorial: Introduction
             </b-button>
-            <b-button tag="router-link" to="/id/uri_routing/admin" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+            <b-button tag="router-link" to="/id/uri_routing/admin" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
               Uri Routing: Admin
             </b-button>
           </div>

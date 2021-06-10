@@ -193,10 +193,10 @@ class Home extends SENE_Controller{
         <div class="columns">
           <div class="column">
             <div class="buttons">
-              <b-button tag="router-link" to="/4.0.0/model/last_id" type="is-link" icon-pack="fa" icon-left="chevron-left">
+              <b-button tag="router-link" to="/4.0.0/model/last_id" icon-pack="fa" icon-left="chevron-left">
                 Model::last_id
               </b-button>
-              <b-button tag="router-link" to="/4.0.0/view/theme/" type="is-link" icon-pack="fa" icon-right="chevron-right">
+              <b-button tag="router-link" to="/4.0.0/view/theme/" icon-pack="fa" icon-right="chevron-right">
                 Create a Theme
               </b-button>
             </div>

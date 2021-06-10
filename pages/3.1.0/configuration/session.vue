@@ -27,10 +27,10 @@ $saltkey = 's3M3Fr31$';</code></pre>
     <div class="columns">
       <div class="column">
         <div class="buttons">
-          <b-button tag="router-link" to="/3.1.0/configuration/database/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+          <b-button tag="router-link" to="/3.1.0/configuration/database/" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
             Configuration: database.php
           </b-button>
-          <b-button tag="router-link" to="/3.1.0/configuration/timezone/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+          <b-button tag="router-link" to="/3.1.0/configuration/timezone/" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
             Configuration: timezone.php
           </b-button>
         </div>

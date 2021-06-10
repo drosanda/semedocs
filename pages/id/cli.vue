@@ -29,10 +29,10 @@
       <div class="columns">
         <div class="column">
           <div class="buttons">
-            <b-button tag="router-link" to="/id/library" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+            <b-button tag="router-link" to="/id/library" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
               Library
             </b-button>
-            <b-button tag="router-link" to="/3.3.0" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+            <b-button tag="router-link" to="/3.3.0" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
               Version: 3.3.0
             </b-button>
           </div>

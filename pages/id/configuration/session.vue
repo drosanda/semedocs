@@ -31,10 +31,10 @@
       <div class="columns">
         <div class="column">
           <div class="buttons">
-            <b-button tag="router-link" to="/id/downloads/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+            <b-button tag="router-link" to="/id/downloads/" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
               Download and Installation
             </b-button>
-            <b-button tag="router-link" to="/id/configuration/development/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+            <b-button tag="router-link" to="/id/configuration/development/" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
               Development Phase
             </b-button>
           </div>

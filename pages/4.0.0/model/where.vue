@@ -289,13 +289,13 @@ $this-&#x3E;db
 
       <div class="columns">
         <div class="column">
-          <b-button tag="router-link" to="/4.0.0/model/composite_create" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+          <b-button tag="router-link" to="/4.0.0/model/composite_create" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
             Model::composite_create
           </b-button>
         </div>
         <div class="column is-2">&nbsp;</div>
         <div class="column">
-          <b-button tag="router-link" to="/4.0.0/model/where_as" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+          <b-button tag="router-link" to="/4.0.0/model/where_as" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
             Model::where_as
           </b-button>
         </div>

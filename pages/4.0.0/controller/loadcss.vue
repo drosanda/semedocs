@@ -68,10 +68,10 @@ class Blog extends SENE_Controller {
       <div class="columns">
         <div class="column">
           <div class="buttons">
-            <b-button tag="router-link" to="/4.0.0/controller/session" type="is-link" icon-pack="fa" icon-left="chevron-left" class="">
+            <b-button tag="router-link" to="/4.0.0/controller/session" icon-pack="fa" icon-left="chevron-left" class="">
               Using Session
             </b-button>
-            <b-button tag="router-link" to="/4.0.0/database" type="is-link" icon-pack="fa" icon-right="chevron-right" class="">
+            <b-button tag="router-link" to="/4.0.0/database" icon-pack="fa" icon-right="chevron-right" class="">
               Database
             </b-button>
           </div>

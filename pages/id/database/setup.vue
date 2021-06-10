@@ -79,10 +79,10 @@ $db[&#x27;engine&#x27;] = &#x27;mysqli&#x27;;
       <div class="columns">
         <div class="column">
           <div class="buttons">
-            <b-button tag="router-link" to="/id/database/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+            <b-button tag="router-link" to="/id/database/" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
               Database
             </b-button>
-            <b-button tag="router-link" to="/id/database/quick-start/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+            <b-button tag="router-link" to="/id/database/quick-start/" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
               Quick Start
             </b-button>
           </div>

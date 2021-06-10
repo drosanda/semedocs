@@ -62,10 +62,10 @@ class Home extends SENE_Controller
       <div class="columns">
         <div class="column">
           <div class="buttons">
-            <b-button tag="router-link" to="/id/controller/setTheme" type="is-link" icon-pack="fa" icon-left="chevron-left">
+            <b-button tag="router-link" to="/id/controller/setTheme" icon-pack="fa" icon-left="chevron-left">
               setTheme Method
             </b-button>
-            <b-button tag="router-link" to="/id/controller/putThemeContent" type="is-link" icon-pack="fa" icon-right="chevron-right">
+            <b-button tag="router-link" to="/id/controller/putThemeContent" icon-pack="fa" icon-right="chevron-right">
               putThemeContent Method
             </b-button>
           </div>

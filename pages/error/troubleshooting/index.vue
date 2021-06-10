@@ -23,7 +23,7 @@
       <div class="columns">
         <div class="column">
           <div class="buttons">
-            <b-button tag="router-link" to="/error/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+            <b-button tag="router-link" to="/error/" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
               Error &amp; Troubleshooting
             </b-button>
           </div>

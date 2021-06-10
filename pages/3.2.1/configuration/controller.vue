@@ -41,10 +41,10 @@ $routes[&#x27;dukungan/syarat-ketentuan&#x27;] = &#x27;dukungan/syarat_ketentuan
       <div class="columns">
         <div class="column">
           <div class="buttons">
-            <b-button tag="router-link" to="/3.2.1/configuration/config/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+            <b-button tag="router-link" to="/3.2.1/configuration/config/" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
               Config: config.php
             </b-button>
-            <b-button tag="router-link" to="/3.2.1/configuration/core/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+            <b-button tag="router-link" to="/3.2.1/configuration/core/" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
               Config: core.php
             </b-button>
           </div>

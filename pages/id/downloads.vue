@@ -79,10 +79,10 @@
       <div class="columns">
         <div class="column">
           <div class="buttons">
-            <b-button tag="router-link" to="/id/requirements/" type="is-link" icon-pack="fa" icon-left="chevron-left">
+            <b-button tag="router-link" to="/id/requirements/" icon-pack="fa" icon-left="chevron-left">
               Persyaratan
             </b-button>
-            <b-button tag="router-link" to="/id/configuration/" type="is-link" icon-pack="fa" icon-right="chevron-right">
+            <b-button tag="router-link" to="/id/configuration/" icon-pack="fa" icon-right="chevron-right">
               Pengaturan
             </b-button>
           </div>

@@ -53,10 +53,10 @@
       <div class="columns">
         <div class="column">
           <div class="buttons">
-            <b-button tag="router-link" to="/4.0.0/uri_routing/admin" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+            <b-button tag="router-link" to="/4.0.0/uri_routing/admin" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
               Uri Routing: Admin
             </b-button>
-            <b-button tag="router-link" to="/4.0.0/globals" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+            <b-button tag="router-link" to="/4.0.0/globals" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
               Globals
             </b-button>
           </div>

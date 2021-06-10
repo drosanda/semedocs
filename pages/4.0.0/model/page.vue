@@ -65,10 +65,10 @@ class Blog_Model extends SENE_Model{
       <div class="columns">
         <div class="column">
           <div class="buttons">
-            <b-button tag="router-link" to="/4.0.0/model/order_by" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+            <b-button tag="router-link" to="/4.0.0/model/order_by" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
               Model::order_by
             </b-button>
-            <b-button tag="router-link" to="/4.0.0/model/query" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+            <b-button tag="router-link" to="/4.0.0/model/query" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
               Model::query
             </b-button>
           </div>

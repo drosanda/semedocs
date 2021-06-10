@@ -86,10 +86,10 @@ public function index(){
       <div class="columns">
         <div class="column">
           <div class="buttons">
-            <b-button tag="router-link" to="/id/controller/session" type="is-link" icon-pack="fa" icon-left="chevron-left" class="">
+            <b-button tag="router-link" to="/id/controller/session" icon-pack="fa" icon-left="chevron-left" class="">
               session
             </b-button>
-            <b-button tag="router-link" to="/id/controller/settheme" type="is-link" icon-pack="fa" icon-right="chevron-right" class="">
+            <b-button tag="router-link" to="/id/controller/settheme" icon-pack="fa" icon-right="chevron-right" class="">
               setTheme
             </b-button>
           </div>

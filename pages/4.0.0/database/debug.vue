@@ -23,10 +23,10 @@
       <div class="columns">
         <div class="column">
           <div class="buttons">
-            <b-button tag="router-link" to="/4.0.0/database/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+            <b-button tag="router-link" to="/4.0.0/database/" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
               Database
             </b-button>
-            <b-button tag="router-link" to="/4.0.0/globals/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+            <b-button tag="router-link" to="/4.0.0/globals/" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
               Globals
             </b-button>
           </div>

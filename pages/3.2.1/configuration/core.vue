@@ -30,10 +30,10 @@ $core_model = &#x27;&#x27;;</code></pre>
       <div class="columns">
         <div class="column">
           <div class="buttons">
-            <b-button tag="router-link" to="/3.2.1/configuration/controller/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+            <b-button tag="router-link" to="/3.2.1/configuration/controller/" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
               Configuration: controller.php
             </b-button>
-            <b-button tag="router-link" to="/3.2.1/configuration/database/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+            <b-button tag="router-link" to="/3.2.1/configuration/database/" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
               Configuration: database.php
             </b-button>
           </div>

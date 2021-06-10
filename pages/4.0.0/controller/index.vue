@@ -118,10 +118,10 @@ class Home extends Sene_Controller{
       <div class="columns">
         <div class="column">
           <div class="buttons">
-            <b-button tag="router-link" to="/4.0.0/view" type="is-link" icon-pack="fa" icon-left="chevron-left" class="">
+            <b-button tag="router-link" to="/4.0.0/view" icon-pack="fa" icon-left="chevron-left" class="">
               View
             </b-button>
-            <b-button tag="router-link" to="/4.0.0/controller/constructor" type="is-link" icon-pack="fa" icon-right="chevron-right" class="">
+            <b-button tag="router-link" to="/4.0.0/controller/constructor" icon-pack="fa" icon-right="chevron-right" class="">
               Controller: __construct
             </b-button>
           </div>

@@ -96,7 +96,7 @@ $sl-&gt;write(&#039;SENE_MySQLi::exec -- &#039;.$sql);
       <div class="columns">
         <div class="column">
           <div class="buttons">
-            <b-button tag="router-link" to="/error/troubleshooting/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+            <b-button tag="router-link" to="/error/troubleshooting/" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
               Troubleshooting
             </b-button>
           </div>

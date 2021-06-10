@@ -42,10 +42,10 @@ class Blog_Model extends SENE_Model{
     </div>
 
     <div class="buttons">
-      <b-button tag="router-link" to="/4.0.0/model/group_by" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+      <b-button tag="router-link" to="/4.0.0/model/group_by" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
         Model::group_by
       </b-button>
-      <b-button tag="router-link" to="/4.0.0/model/limit" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+      <b-button tag="router-link" to="/4.0.0/model/limit" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
         Model::limit
       </b-button>
     </div>

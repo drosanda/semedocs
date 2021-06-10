@@ -69,10 +69,10 @@ class Login extends SENE_Controller{
       <div class="columns">
         <div class="column">
           <div class="buttons">
-            <b-button tag="router-link" to="/id/controller/constructor" type="is-link" icon-pack="fa" icon-left="chevron-left" class="">
+            <b-button tag="router-link" to="/id/controller/constructor" icon-pack="fa" icon-left="chevron-left" class="">
               Constructor
             </b-button>
-            <b-button tag="router-link" to="/id/controller/input" type="is-link" icon-pack="fa" icon-right="chevron-right" class="">
+            <b-button tag="router-link" to="/id/controller/input" icon-pack="fa" icon-right="chevron-right" class="">
               Input
             </b-button>
           </div>

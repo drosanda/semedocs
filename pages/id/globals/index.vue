@@ -80,10 +80,10 @@ header.php <----- navbar.php</pre>
       <div class="columns">
         <div class="column">
           <div class="buttons">
-            <b-button tag="router-link" to="/id/constants" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+            <b-button tag="router-link" to="/id/constants" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
               Konstanta
             </b-button>
-            <b-button tag="router-link" to="/id/model" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+            <b-button tag="router-link" to="/id/model" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
               Model
             </b-button>
           </div>

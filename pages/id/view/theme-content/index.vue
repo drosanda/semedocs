@@ -23,10 +23,10 @@
       <div class="columns">
         <div class="column">
           <div class="buttons">
-            <b-button tag="router-link" to="/id/view/layout/" type="is-link" icon-pack="fa" icon-left="chevron-left">
+            <b-button tag="router-link" to="/id/view/layout/" icon-pack="fa" icon-left="chevron-left">
               Layout
             </b-button>
-            <b-button tag="router-link" to="/id/view/theme-content/js" type="is-link" icon-pack="fa" icon-right="chevron-right">
+            <b-button tag="router-link" to="/id/view/theme-content/js" icon-pack="fa" icon-right="chevron-right">
               Javascript Theme Content
             </b-button>
           </div>

@@ -38,7 +38,7 @@ Notice: Missing kero/bin in /opt/lampp/htdocs/seme-framework
       <div class="columns">
         <div class="column">
           <div class="buttons">
-            <b-button tag="router-link" to="/error/notice/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+            <b-button tag="router-link" to="/error/notice/" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
               Error Notice List
             </b-button>
           </div>

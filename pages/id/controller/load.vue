@@ -68,10 +68,10 @@
       <div class="columns">
         <div class="column">
           <div class="buttons">
-            <b-button tag="router-link" to="/id/controller/constructor" type="is-link" icon-pack="fa" icon-left="chevron-left" class="">
+            <b-button tag="router-link" to="/id/controller/constructor" icon-pack="fa" icon-left="chevron-left" class="">
               Constructor
             </b-button>
-            <b-button tag="router-link" to="/id/controller/lib" type="is-link" icon-pack="fa" icon-right="chevron-right" class="">
+            <b-button tag="router-link" to="/id/controller/lib" icon-pack="fa" icon-right="chevron-right" class="">
               Lib Method
             </b-button>
           </div>

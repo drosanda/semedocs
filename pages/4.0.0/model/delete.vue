@@ -43,13 +43,13 @@
 
         <div class="columns">
           <div class="column">
-            <b-button tag="router-link" to="/4.0.0/model/update" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+            <b-button tag="router-link" to="/4.0.0/model/update" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
               Model::update
             </b-button>
           </div>
           <div class="column is-2">&nbsp;</div>
           <div class="column">
-            <b-button tag="router-link" to="/4.0.0/model/exec" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+            <b-button tag="router-link" to="/4.0.0/model/exec" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
               Model::exec
             </b-button>
           </div>

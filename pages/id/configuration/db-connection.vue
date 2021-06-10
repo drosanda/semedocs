@@ -64,10 +64,10 @@
       <div class="columns">
         <div class="column">
           <div class="buttons">
-            <b-button tag="router-link" to="/id/configuration/url/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+            <b-button tag="router-link" to="/id/configuration/url/" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
               Pengaturan URL
             </b-button>
-            <b-button tag="router-link" to="/id/configuration/development/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+            <b-button tag="router-link" to="/id/configuration/development/" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
               Fase development
             </b-button>
           </div>

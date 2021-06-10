@@ -89,10 +89,10 @@ class Blog extends SENE_Controller {
       <div class="columns">
         <div class="column">
           <div class="buttons">
-            <b-button tag="router-link" to="/4.0.0/controller/constructor" type="is-link" icon-pack="fa" icon-left="chevron-left" class="">
+            <b-button tag="router-link" to="/4.0.0/controller/constructor" icon-pack="fa" icon-left="chevron-left" class="">
               Constructor
             </b-button>
-            <b-button tag="router-link" to="/4.0.0/controller/lib" type="is-link" icon-pack="fa" icon-right="chevron-right" class="">
+            <b-button tag="router-link" to="/4.0.0/controller/lib" icon-pack="fa" icon-right="chevron-right" class="">
               Lib Method
             </b-button>
           </div>

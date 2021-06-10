@@ -173,10 +173,10 @@ class Home extends SENE_Controller
       <div class="columns">
         <div class="column">
           <div class="buttons">
-            <b-button tag="router-link" to="/4.0.0/tutorial/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+            <b-button tag="router-link" to="/4.0.0/tutorial/" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
               Tutorial: Introduction
             </b-button>
-            <b-button tag="router-link" to="/4.0.0/tutorial/basic-api/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+            <b-button tag="router-link" to="/4.0.0/tutorial/basic-api/" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
               Tutorial: Basic API
             </b-button>
           </div>

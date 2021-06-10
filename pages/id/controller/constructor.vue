@@ -46,10 +46,10 @@ parent::__construct();
       <div class="columns">
         <div class="column">
           <div class="buttons">
-            <b-button tag="router-link" to="/id/controller/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="">
+            <b-button tag="router-link" to="/id/controller/" icon-pack="fa" icon-left="chevron-left" class="">
               Controller
             </b-button>
-            <b-button tag="router-link" to="/id/controller/load" type="is-link" icon-pack="fa" icon-right="chevron-right" class="">
+            <b-button tag="router-link" to="/id/controller/load" icon-pack="fa" icon-right="chevron-right" class="">
               Load Method
             </b-button>
           </div>

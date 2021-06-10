@@ -83,10 +83,10 @@ alert(&#x27;Hi, this is from home_bottom&#x27;);
       <div class="columns">
         <div class="column">
           <div class="buttons">
-            <b-button tag="router-link" to="/4.0.0/controller/loadLayout" type="is-link" icon-pack="fa" icon-left="chevron-left">
+            <b-button tag="router-link" to="/4.0.0/controller/loadLayout" icon-pack="fa" icon-left="chevron-left">
               loadLayout Method
             </b-button>
-            <b-button tag="router-link" to="/4.0.0/controller/putJsContent" type="is-link" icon-pack="fa" icon-right="chevron-right">
+            <b-button tag="router-link" to="/4.0.0/controller/putJsContent" icon-pack="fa" icon-right="chevron-right">
               putJsContent Method
             </b-button>
           </div>

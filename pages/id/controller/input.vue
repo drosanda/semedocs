@@ -221,10 +221,10 @@ if($sc-&#x3E;status == 200){
       <div class="columns">
         <div class="column">
           <div class="buttons">
-            <b-button tag="router-link" to="/id/controller/lib" type="is-link" icon-pack="fa" icon-left="chevron-left" class="">
+            <b-button tag="router-link" to="/id/controller/lib" icon-pack="fa" icon-left="chevron-left" class="">
               Lib Method
             </b-button>
-            <b-button tag="router-link" to="/id/controller/setTheme" type="is-link" icon-pack="fa" icon-right="chevron-right" class="">
+            <b-button tag="router-link" to="/id/controller/setTheme" icon-pack="fa" icon-right="chevron-right" class="">
               setTheme Method
             </b-button>
           </div>

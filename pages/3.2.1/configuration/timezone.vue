@@ -26,10 +26,10 @@ date_default_timezone_set(&#x27;Asia/Jakarta&#x27;);</code></pre>
       <div class="columns">
         <div class="column">
           <div class="buttons">
-            <b-button tag="router-link" to="/3.2.1/configuration/session/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+            <b-button tag="router-link" to="/3.2.1/configuration/session/" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
               Configuration: session.php
             </b-button>
-            <b-button tag="router-link" to="/3.2.1/controller/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+            <b-button tag="router-link" to="/3.2.1/controller/" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
               Controller
             </b-button>
           </div>

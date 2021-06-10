@@ -58,10 +58,10 @@
             <div class="columns">
               <div class="column">
                 <div class="buttons">
-                  <b-button tag="router-link" to="/id/tutorial/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+                  <b-button tag="router-link" to="/id/tutorial/" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
                     Tutorials
                   </b-button>
-                  <b-button tag="router-link" to="/id/tutorial/get-data/" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+                  <b-button tag="router-link" to="/id/tutorial/get-data/" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
                     Tutorial: Get Data
                   </b-button>
                 </div>

@@ -24,10 +24,10 @@
       <div class="columns">
         <div class="column">
           <div class="buttons">
-            <b-button tag="router-link" to="/4.0.0/view/theme-content/" type="is-link" icon-pack="fa" icon-left="chevron-left">
+            <b-button tag="router-link" to="/4.0.0/view/theme-content/" icon-pack="fa" icon-left="chevron-left">
               Theme Content
             </b-button>
-            <b-button tag="router-link" to="/4.0.0/controller/" type="is-link" icon-pack="fa" icon-right="chevron-right">
+            <b-button tag="router-link" to="/4.0.0/controller/" icon-pack="fa" icon-right="chevron-right">
               Controller
             </b-button>
           </div>
