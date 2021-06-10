@@ -14,7 +14,26 @@
           <div class="content">
             <h1 class="">Where Method</h1>
             <p>Where method is part of database class builder for filtering data compatible with WHERE Clause on SQL. This method support chained, and has flow from top to bottom while bracket are used.</p>
-            <pre>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
 class Blog_Model extends SENE_Model{
   var $tbl = &#x27;d_order&#x27;;
   var $tbl_as = &#x27;dor&#x27;;
@@ -36,7 +55,9 @@ class Blog_Model extends SENE_Model{
     return $this-&#x3E;db-&#x3E;get();
   }
 }
-            </pre>
+                </highlight-code>
+              </div>
+            </div>
             <h2>Parameters</h2>
             <p>Where method has 2 required parameters that is <b>column name</b> and <b>value</b>, another parameters are optional. Here is the completed parameters can be used by where methods.</p>
             <ol type="1">
@@ -47,7 +68,26 @@ class Blog_Model extends SENE_Model{
               <li>Bracket open (boolean)</li>
               <li>Bracket close (boolean)</li>
             </ol>
-            <pre>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
 $this-&#x3E;db-&#x3E;where(
 COLUMN_NAME,
 VALUE,
@@ -59,7 +99,10 @@ notlike | notlike% |%notlike | %notlike%
 OPENBRACKET,
 CLOSEBRACKET
 );
-            </pre>
+
+                </highlight-code>
+              </div>
+            </div>
             <h3>COLUMN_NAME</h3>
             <p>Column name required for filtering data from table. The columname should exist on selected table. This method has automatically escaped.</p>
             <h3>VALUE</h3>
@@ -94,45 +137,125 @@ CLOSEBRACKET
             <p>Here is the examples using where method, makes sure another from method and get method has executed for real result. See the first of this page for full example.</p>
             <h3>Basic example</h3>
             <p>Here is basic usage for selecting single data using SQL query:</p>
-            <pre>SELECT * FROM d_order WHERE `id` = 1</pre>
+            <code>SELECT * FROM d_order WHERE `id` = 1</code>
             <p>Here is basic usage for selecting single data using query builder:</p>
-            <pre>$this->db->where("id",1);</pre>
+            <code>$this->db->where("id",1);</code>
             <br>
             <h3>Using AND / OR</h3>
             <p>Using AND / OR by SQL query:</p>
-            <pre>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="sql_more">
 SELECT *
 FROM d_order
 WHERE
 &#x60;a_company_id&#x60; = 1 OR
 &#x60;b_user_id&#x60; = 1
-            </pre>
+                </highlight-code>
+              </div>
+            </div>
             <p>Using AND / OR by query builder:</p>
-            <pre>
+            <code>
 $this-&#x3E;db-&#x3E;where(&#x22;b_user_id&#x22;,1,&#x27;OR&#x27;)-&#x3E;where(&#x22;a_company_id&#x22;,1,&#x27;AND&#x27;);
-            </pre>
+            </code>
             <br>
             <h3>Using Relational Operator</h3>
             <p>Using Relational Operator by query builder:</p>
-            <pre>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="sql_more">
 SELECT *
 FROM d_order
 WHERE
 &#x60;b_user_id&#x60; = 1 AND
 &#x60;grand_total&#x60; &#x3E;= 1000 AND
 &#x60;status_text&#x60; LIKE &#x27;order_completed&#x27;
-            </pre>
+                </highlight-code>
+              </div>
+            </div>
             <p>Using Relational Operator by query builder:</p>
-            <pre>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
 $this-&#x3E;db
 -&#x3E;where(&#x22;b_user_id&#x22;,1)
 -&#x3E;where(&#x22;grand_total&#x22;,1000,&#x22;and&#x22;,&#x27;&#x3E;=&#x27;)
 -&#x3E;where(&#x22;status_text&#x22;,&#x27;order_completed&#x27;,&#x22;and&#x22;,&#x27;like&#x27;);
-            </pre>
+                </highlight-code>
+              </div>
+            </div>
             <br>
             <h3>Using Bracket</h3>
             <p>Using bracket open and close by SQL query:</p>
-            <pre>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="sql_more">
 SELECT *
 FROM b_user
 WHERE
@@ -143,7 +266,9 @@ WHERE
 &#x60;city&#x60; LIKE &#x27;%andre%&#x27; OR
 &#x60;email LIKE &#x27;%andre%&#x27;
 )
-            </pre>
+                </highlight-code>
+              </div>
+            </div>
             <p>Using bracket open and close by query builder:</p>
             <pre>
 $this-&#x3E;db

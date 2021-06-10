@@ -4,7 +4,7 @@
         <nav class="breadcrumb" aria-label="breadcrumbs">
           <ul class="breadcrumbs">
             <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-<li class=""><NuxtLink to="/id/">4.0.0 (Bahasa)</NuxtLink></li>
+            <li class=""><NuxtLink to="/id/">4.0.0 (Bahasa)</NuxtLink></li>
             <li class="unavailable">Model</li>
           </ul>
         </nav>
@@ -12,9 +12,33 @@
           <div class="column">
         <div class="content">
           <h1 class="">Model</h1>
-					<p>Model is a class contain about communication from framework to database. Model is a bridge for data that can be fetch or push to database from controller. The method of model can only executed from controller class.</p>
+					<p>
+            Model merupakan sebuah kelas yang berisi kode untuk berkomunikasi antara PHP dengan Database.
+            Dari kelas ini dapat digunakan untuk mengambil data, menghapus data, dan merubah data terhadap tabel tertentu yang ada didalam database.
+            Denga dipisahnya antara kode logika dengan logika khusus pada database, diharapkan proses pengkodean dapat rapih.
+            Kelas ini hanya dapat dipanggil dari kelas Controller.
+            Kelas model ini secara <em>default</em> berada ada didalam direktori <code>app/model</code>.
+          </p>
 
-					<pre>
+          <div class="macwindow">
+            <div class="titlebar">
+              <div class="buttons">
+                <div class="close">
+                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                  <!-- close button link -->
+                </div>
+                <div class="minimize">
+                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                  <!-- minimize button link -->
+                </div>
+                <div class="zoom">
+                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                  <!-- zoom button link -->
+                </div>
+              </div>
+            </div>
+            <div class="maccontent">
+              <highlight-code lang="php">&#x3C;?php
 class Blog_Model extends SENE_Model{
 &#x9;var $tbl = &#x27;blog&#x27;;
 &#x9;var $tbl_as = &#x27;b&#x27;;
@@ -23,13 +47,40 @@ class Blog_Model extends SENE_Model{
 &#x9;&#x9;$this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
 &#x9;}
 }
-					</pre>
-					<h2>Composition</h2>
-					<p>Model contain about class name which is match with its file name. Filename only use lower case, but there is no restriction on class name for using uppercase or camel case. Method only Extended by Sene_Model or extending from core model that extend sene_model before. Same as controller, class model have to re-executed their parent constructor using <code>parent::__construct();</code> to get all functional of model.</p>
-					<h3>Naming Standard</h3>
-					<p>Actually this not a requirement, but Seme Framework has recommendation for naming model. Model on Seme Framework located at <code>app/model/</code> you create your new file model inside that folder. But, if you have bigger apps you can start considering separated model inside folder. Seme Framework recommend the folder splitted by Major Use for creating folder, such as Front stand for frontend, admin stands for admin page, api stands for API development etc.</p>
-					<p>Different from directory name, Seme Framework suggest give name of model like exactly table name in your working database fill it with suffix model for avoiding colision with controller class name. Here is the example scheme.</p>
-					<pre>
+              </highlight-code>
+            </div>
+          </div>
+
+					<h2>Kompisisi Kode Kelas Model</h2>
+					<p>
+            Kelas model biasanya memiliki nama kelas yang sama dengan nama tabel yang akan dibuat modelnya untuk menghindari nama yang ambigu.
+            Contoh kelas model untuk tabel <code>b_user</code>, maka nama kelas modelnya <code>B_User_Model</code>, sementara untuk nama filenya <code>b_user_model.php</code> yang disimpan didalam direktori <code>app/model/</code>.
+          </p>
+
+          <h3>Standar Penamaan</h3>
+					<p>
+            Seme Framework sebetulnya tidak membutuhkan nama khusus untuk pembuatan model, namun kami menyarankan penamaan model sama dengan nama tabel yang akan dibuatkan modelnya yang diikuti dengan akhiran <code>_model</code>.
+            Kemudian untuk membuat aplikasi yang cukup besar, model juga bisa dipishkan berdasarkan sudut pandang aplikasi, contoh <code>app/model/api/</code>, <code>app/model/front/</code> dan sebagainya.
+          </p>
+					<div class="macwindow">
+            <div class="titlebar">
+              <div class="buttons">
+                <div class="close">
+                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                  <!-- close button link -->
+                </div>
+                <div class="minimize">
+                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                  <!-- minimize button link -->
+                </div>
+                <div class="zoom">
+                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                  <!-- zoom button link -->
+                </div>
+              </div>
+            </div>
+            <div class="maccontent">
+              <highlight-code lang="php">
 app/model/
 -front/
 --user_model.php
@@ -37,11 +88,36 @@ app/model/
 -admin/
 --user_model.php
 --blog_model.php
-					</pre>
-					<h2>Using Query Builder</h2>
-					<p>Seme Framework model allowed you to use our query builder method that can help reuse your code in for another model. So, you can simply use copy-paste and change the <code>$tbl</code> properties of your class model. Here is the example:</p>
+              </highlight-code>
+            </div>
+          </div>
 
-					<pre>
+					<h2>Menggunakan Query Builder</h2>
+
+          <p>
+            Kelas model di Seme Framework telah memiliki query builder atau penyusun query dengan kode PHP sehingga tidak perlu menghafal struktur SQL untuk mengambil data atau menghapus, atau mengedit data ke database.
+            Dengan adanya query builder ini diharapkan dapat mempercepat dan mempermudah proses pembuatan kelas model di Seme Framework.
+          </p>
+
+          <div class="macwindow">
+            <div class="titlebar">
+              <div class="buttons">
+                <div class="close">
+                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                  <!-- close button link -->
+                </div>
+                <div class="minimize">
+                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                  <!-- minimize button link -->
+                </div>
+                <div class="zoom">
+                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                  <!-- zoom button link -->
+                </div>
+              </div>
+            </div>
+            <div class="maccontent">
+              <highlight-code lang="php">&#x3C;?php
 class Blog_Model extends SENE_Model{
 &#x9;var $tbl = &#x27;blog&#x27;;
 &#x9;var $tbl_as = &#x27;b&#x27;;
@@ -77,9 +153,12 @@ class Blog_Model extends SENE_Model{
 &#x9;&#x9;return $this-&#x3E;db-&#x3E;delete($this-&#x3E;tbl);
 &#x9;}
 }
-					</pre>
+              </highlight-code>
+            </div>
+          </div>
+          
 					<h3>Debug Query</h3>
-					<p>Seme Framework has debugging feature on each Query Builder methods.</p>
+					<p>Seme Framework memiliki fitur atau penanda (flag) untuk melakukan debug terhadap query yang dilakukan. Cukup menambahkan penanda 1 pada akhir parameter dari setiap metode yang digunakan.</p>
 					<ul>
 						<li>$this-&#x3E;db-&#x3E;get(&#x27;object&#x27;,<code>1</code>)</li>
 						<li>$this-&#x3E;db-&#x3E;get_first(&#x27;object&#x27;,<code>1</code>)</li>
@@ -92,19 +171,21 @@ class Blog_Model extends SENE_Model{
 
     </div>
 
-
-    <div class="columns">
-      <div class="column">
-        <div class="buttons">
-          <b-button tag="router-link" to="/id/globals/" type="is-link" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-            Global
-          </b-button>
-          <b-button tag="router-link" to="/id/model/select" type="is-link" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-            Model::select
-          </b-button>
-        </div>
+    <div class="nav-bottom">
+      <div class="nav-bottom-left">
+        <nuxt-link to="/id/globals/" class="btn">
+        <i class="fa fa-chevron-left"></i>
+          Variabel Global
+        </nuxt-link>
+      </div>
+      <div class="nav-bottom-right">
+        <nuxt-link to="/id/model/select/" class="btn">
+          Model::select
+          <i class="fa fa-chevron-right"></i>
+        </nuxt-link>
       </div>
     </div>
+
   </div>
 </div>
 </template>
