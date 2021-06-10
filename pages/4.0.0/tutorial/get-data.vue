@@ -135,7 +135,7 @@ class Home extends SENE_Controller
             </pre>
 
             <h3>Edit View</h3>
-            <p>From the first tutorial, we have created view located at <code>app/view/front/home/home.php</code>. For achieving this tutorial, we have to modified the codes for vieweing the data properly.</p>
+            <p>From the first tutorial, we have created view located at <code>app/view/front/home/home.php</code>. For achieving this tutorial, we have to modified the codes for viewing the data properly.</p>
             <p>First, we have to iterating the array of <code>$aakm</code> and put result on card type html.</p>
             <pre>
 &#x3C;div class=&#x22;container&#x22;&#x3E;
