@@ -28,9 +28,9 @@
             </ul>
             <p>Seluruhtutorial dibagi menjadi beberapa halaman. Masing-masing menjelaskan sebagian kecil dari fungsionalitas Seme Framework. Anda akan membuka halaman-halaman berikut:</p>
             <ul>
-              <li><NuxtLink to="/id/tutorial/introduction">Pendahuluan</NuxtLink>, yang memberi Anda gambaran umum tentang apa yang diharapkan.</li>
-              <li><NuxtLink to="/id/tutorial/introduction">Tema dan tata letak</NuxtLink>, yang akan mengajarkan Anda dasar-dasar membuat tampilan menggunakan Seme Framework.</li>
-              <li><NuxtLink to="/id/tutorial/basic-api">Building API</NuxtLink>, ni akan memperkenalkan lebih banyak tentang database, controller, dan model.</li>
+              <li><NuxtLink to="/id/tutorial/introduction/">Pendahuluan</NuxtLink>, yang memberi Anda gambaran umum tentang apa yang diharapkan.</li>
+              <li><NuxtLink to="/id/tutorial/get-data/">Tema dan tata letak</NuxtLink>, yang akan mengajarkan Anda dasar-dasar membuat tampilan menggunakan Seme Framework.</li>
+              <li><NuxtLink to="/id/tutorial/basic-api/">Building API</NuxtLink>, ni akan memperkenalkan lebih banyak tentang database, controller, dan model.</li>
             </ul>
             <p>Nikmati pengalaman eksplorasi dengan menggunakan Seme Framework.</p>
           </div>
