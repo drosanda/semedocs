@@ -35,8 +35,25 @@
               Pertama, buka file yang terletak di <code>app/controller/home.php</code>.
               Apabila tidak ada file atau direktori tersebut, buatlah terlebih dahulu.
             </p>
-            <pre>
-              <code v-highlight class="php">&#x3C;?php
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">&#x3C;?php
 class Home extends SENE_Controller
 {
     public function __construct()
@@ -47,8 +64,11 @@ class Home extends SENE_Controller
     {
         echo 'Hello World!';
     }
-}</code>
-            </pre>
+}
+                </highlight-code>
+              </div>
+            </div>
+
             <p>Kemudian buka alamat <code>http://localhost/seme_framework</code>, itu seharusnya sudah memunculkan Hello World! langsung dari kelas home.php controller.</p>
             <amp-img layout="responsive" width="774px" height="262px" alt="Hello World" :src="hellowWorld2" ></amp-img>
 
@@ -64,7 +84,27 @@ class Home extends SENE_Controller
             </div>
             <h4>Membuat tema: <u>front</u>.</h4>
             <p>Sebelum memulai, kita harus memahami struktur direktori tema.</p>
-            <pre><code v-highlight class="plaintext">-| app/
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+-| app/
 ---| view/
 -----| front/
 -------| theme.json
@@ -72,7 +112,11 @@ class Home extends SENE_Controller
 -------| page/
 ---------| col-1.php
 -----------| html/
--------------| head.php</code></pre>
+-------------| head.php
+                </highlight-code>
+              </div>
+            </div>
+
             <p>Periksa direktori <code>app/view/front/</code> apabila belum ada, silakan buat direktori tersebut.</p>
             <p>Periksa direktori <code>app/view/front/page/</code> apabila belum ada, silakan buat direktori tersebut.</p>
             <p>Periksa direktori <code>app/view/front/page/html/</code> apabila belum ada, silakan buat direktori tersebut.</p>
@@ -82,26 +126,88 @@ class Home extends SENE_Controller
             <p>Buka file yang terletak di <code>app/view/front/theme.json</code>.</p>
             <p>apabila belum ada, silakan buat file tersebut dan <i>paste</i>-kan isinya dari kode dibawah ini.</p>
 
-            <pre><code v-highlight class="json">
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="json">
 [
   &#x22;&#x3C;link rel=\&#x22;stylesheet\&#x22; href=\&#x22;https://fonts.googleapis.com/icon?family=Material+Icons\&#x22; \/&#x3E;&#x22;,
   &#x22;&#x3C;link rel=\&#x22;stylesheet\&#x22; href=\&#x22;https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css\&#x22; \/&#x3E;&#x22;
-]</code></pre>
+]
+                </highlight-code>
+              </div>
+            </div>
+
             <h5>File script.json</h5>
             <p>File script.json digunakan untuk mendefinisikan file javascript apa saja yang akan digunakan oleh tema.</p>
             <p>Seme Framework akan menentukan skrip mana yang akan dimuat. Buka file yang terletak di <code>app/view/front/script.json</code>.</p>
             <p>apabila belum ada, silakan buat file tersebut dan <i>paste</i>-kan isinya dari kode dibawah ini.</p>
-            <pre><code v-highlight class="json">
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="json">
 [
   &#x22;&#x3C;script src=\&#x22;https://code.jquery.com/jquery-3.5.1.min.js\&#x22;&#x3E;&#x3C;\/script&#x3E;&#x22;,
   &#x22;&#x3C;script src=\&#x22;https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js\&#x22;&#x3E;&#x3C;\/script&#x3E;&#x22;
-]</code></pre>
+]
+                </highlight-code>
+              </div>
+            </div>
             <h5>Membuat layout HTML utama</h5>
             <p>Seme Framework mendukung tata letak utama HTML untuk rendering html, javascript, dan konten.</p>
             <p>Buka file yang terletak di <code>app/view/front/page/col-1.php</code>.</p>
             <p>apabila belum ada, silakan buat file tersebut dan <i>paste</i>-kan isinya dari kode dibawah ini.</p>
 
-            <pre><code v-highlight class="php-template">&#x3C;!DOCTYPE html&#x3E;
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">&#x3C;!DOCTYPE html&#x3E;
 &#x3C;html&#x3E;
   &#x3C;?php $this-&#x3E;getThemeElement(&#x27;page/html/head&#x27;, $__forward) ?&#x3E;
   &#x3C;body&#x3E;
@@ -119,19 +225,42 @@ class Home extends SENE_Controller
   &#x9;&#x3C;/script&#x3E;
   &#x3C;/body&#x3E;
 &#x3C;/html&#x3E;
-</code></pre>
+                </highlight-code>
+              </div>
+            </div>
+
             <div class="message is-info">
-<div class="message-body">
-              <p>Hanya ada satu variabel yang dapat melewati view dari controller.</p>
-              <p>Jadi, kita harus meletakkan variabel apa pun yang akan ditampilkan dalam array tunggal.</p>
-              <p>Dalam contoh ini Seme Framework menggunakan variabel <code>$data</code> dengan tipe data array didalam controller <code>home.php</code>.</p>
-            </div></div>
+              <div class="message-body">
+                <p>Hanya ada satu variabel yang dapat melewati view dari controller.</p>
+                <p>Jadi, kita harus meletakkan variabel apa pun yang akan ditampilkan dalam array tunggal.</p>
+                <p>Dalam contoh ini Seme Framework menggunakan variabel <code>$data</code> dengan tipe data array didalam controller <code>home.php</code>.</p>
+              </div>
+            </div>
 
             <h5>Pemisahan bagian HEAD dari HTML</h5>
             <p>Dengan menggunakan Seme Framework memungkinkan untuk memisahkan komponen html untuk memaksimalkan penggunaan kembali komponen HTML tersebut.</p>
             <p>Untuk melakukannya, buka file yang terletak di <code>app/view/front/page/html/head.php</code>.</p>
             <p>apabila belum ada, silakan buat file tersebut dan <i>paste</i>-kan isinya dari kode dibawah ini.</p>
-            <pre><code v-highlight class="php-template">&#x3C;head&#x3E;
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">&#x3C;head&#x3E;
 &#x9;&#x3C;meta charset=&#x22;utf-8&#x22;&#x3E;
 &#x9;&#x3C;meta name=&#x22;viewport&#x22; content=&#x22;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&#x22;&#x3E;
 
@@ -152,9 +281,12 @@ class Home extends SENE_Controller
 &#x9;&#x3C;?php $this-&#x3E;getAdditionalBefore()?&#x3E;
 &#x9;&#x3C;?php $this-&#x3E;getAdditional()?&#x3E;
 &#x9;&#x3C;?php $this-&#x3E;getAdditionalAfter()?&#x3E;
-&#x3C;/head&#x3E;</code></pre>
-<div class="message is-info">
-  <div class="message-body">
+&#x3C;/head&#x3E;
+                </highlight-code>
+              </div>
+            </div>
+            <div class="message is-info">
+              <div class="message-body">
                 <p>Pengaturan tema di Seme Framework membutuhkan file dibawah ini supaya dapat berjalan dengan baik:</p>
                 <ol>
                   <li><code>theme.json</code>,</li>
@@ -165,9 +297,9 @@ class Home extends SENE_Controller
               </div>
             </div>
             <div class="message is-info">
-                <div class="message-body">
-                  <p><code>$data[&#x27;hello&#x27;]</code> dari controller, akan diekstraksi secara otomatis menjadi variabel <code>$hello</code> ketika berada didalam view.</p>
-                  <p>Begitupun dengan nilai atau kunci lainnya, akan diekstraksi secara otomatis juga.</p>
+              <div class="message-body">
+                <p><code>$data[&#x27;hello&#x27;]</code> dari controller, akan diekstraksi secara otomatis menjadi variabel <code>$hello</code> ketika berada didalam view.</p>
+                <p>Begitupun dengan nilai atau kunci lainnya, akan diekstraksi secara otomatis juga.</p>
               </div>
             </div>
 
@@ -176,7 +308,25 @@ class Home extends SENE_Controller
             <p>Untuk melakukanya, buka file yang terletak di <code>app/view/front/home/home.php</code>.</p>
             <p>Apabila file tersebut belum ada, silakan buat file-nya dulu, kemudian <i>paste</i>-kan kode dibawah ini.</p>
 
-            <pre><code v-highlight class="php-template">&#x3C;div class=&#x22;container&#x22;&#x3E;
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">&#x3C;div class=&#x22;container&#x22;&#x3E;
   &#x3C;div class=&#x22;row&#x22;&#x3E;
     &#x3C;div class=&#x22;col m12 s12&#x22;&#x3E;
       &#x3C;div class=&#x22;card rounded preload-any&#x22;&#x3E;
@@ -191,12 +341,34 @@ class Home extends SENE_Controller
       &#x3C;/div&#x3E;
     &#x3C;/div&#x3E;
   &#x3C;/div&#x3E;
-&#x3C;/div&#x3E;</code></pre>
+&#x3C;/div&#x3E;
+</highlight-code>
+</div>
+</div>
 
             <h5>Implementasi di Controller</h5>
             <p>Setelah membuat tema, beserta isinya sekarang saatnya untuk integrasikan semuanya, mulai dari Controller sampai dengan view.</p>
             <p>Untuk melakukannya, buka file <code>app/controller/home.php</code> kemudian edit isinya dengan menggunakan kode dibawah ini:</p>
-            <pre><code v-highlight class="php-template">&#x3C;?php
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">&#x3C;?php
 class Home extends SENE_Controller
 {
   public function __construct()
@@ -220,7 +392,9 @@ class Home extends SENE_Controller
     $this-&#x3E;render();
   }
 }
-</code></pre>
+                </highlight-code>
+              </div>
+            </div>
             <h5>Melihat hasilnya</h5>
             <p>Untuk melihat hasil dari pembuatan tema ini, cukup buka alamat <code>http://localhost/seme_framework</code> melalui google chrome atau firefox.</p>
             <p>Kemudian, kita lihat hasilnya apakah sama seperti <i>screenshot</i> dibawah ini.</p>
@@ -234,7 +408,26 @@ class Home extends SENE_Controller
             <p>And then, put this code on it.</p>
             <pre><code v-highlight class="javascript">alert(&#x27;This is Hello World from app/view/home/home_bottom.php&#x27;);</code></pre>
             <p>After that, we have to load the home bottom from <code>app/controller/home.php</code>.</p>
-            <pre><code v-highlight class="php-template">&#x3C;?php
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">&#x3C;?php
 class Home extends SENE_Controller
 {
   public function __construct()
@@ -258,7 +451,10 @@ class Home extends SENE_Controller
     $this-&#x3E;loadLayout(&#x22;col-1&#x22;,$data);
     $this-&#x3E;render();
   }
-}</code></pre>
+}
+                </highlight-code>
+              </div>
+            </div>
             <p>To test it, open <code>http://localhost/seme_framework</code> using browser.</p>
             <p>It should show an alert, view with loaded CSS, and show H1 with content Hello World from view and using theme.</p>
             <amp-img layout="reponsive" width="100px" height="100px" :src="tutor7"></amp-img>

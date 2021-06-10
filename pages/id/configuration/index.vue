@@ -30,12 +30,13 @@
             </ol>
             <p>Isi dari setiap file dapat berbeda satu sama lain tergantung pada kebutuhan Anda.</p>
             <div class="message is-info">
-  <div class="message-body">
-              <p>
-                Secara default Seme Framework hanya menyertakan <code>development.php</code> untuk tahap pengembangan.
-                Anda dapat membuat file baru dengan nama <code>staging.php</code> atau bahkan <code>production.php</code> di server <i>production</i>.
-              </p>
-            </div></div>
+                <div class="message-body">
+                  <p>
+                    Secara default Seme Framework hanya menyertakan <code>development.php</code> untuk tahap pengembangan.
+                    Anda dapat membuat file baru dengan nama <code>staging.php</code> atau bahkan <code>production.php</code> di server <i>production</i>.
+                  </p>
+              </div>
+            </div>
             <hr>
             <h2>Pengaturan Dasar</h2>
             <p>
@@ -67,10 +68,28 @@
             </p>
             <hr>
 
-            <h2>Source Codes</h2>
-            <p>Beriku ini adalah kode sumber default untuk pengaturan Seme Framework pada tahap <code>development.php</code>.</p>
-            <pre>
-              <code v-highlight class="php">&#x3C;?php
+            <h2>Kode Sumber (<em>Source Codes</em>)</h2>
+            <p>Berikut ini adalah kode sumber default untuk pengaturan Seme Framework pada tahap <code>development.php</code>.</p>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">&#x3C;?php
 /**
  * Configuration file for Development version
  *   You can create one for:
@@ -190,10 +209,12 @@ $semevar[&#x27;site_name&#x27;] = &#x27;Seme Framework&#x27;;
 $semevar[&#x27;email_from&#x27;] = &#x27;noreply@thecloudalert.com&#x27;;
 $semevar[&#x27;email_reply&#x27;] = &#x27;hi@thecloudalert.com&#x27;;
 $semevar[&#x27;app_name&#x27;] = &#x27;Seme Framework&#x27;;
-$semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;</code>
-            </pre>
-          </div>
+$semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;
+                </highlight-code>
+              </div>
+            </div>
 
+          </div>
         </div>
       </div>
 
