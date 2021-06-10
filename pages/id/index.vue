@@ -118,7 +118,7 @@
         breadcrumbs: [
           {
             url: process.env.ORIGIN_URL || 'http://localhost:3001',
-            text: 'home',
+            text: 'Seme Framework',
           },
           {
             url: (process.env.ORIGIN_URL || 'http://localhost:3001')+'/id/',

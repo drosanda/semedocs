@@ -248,7 +248,7 @@ $semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;
         breadcrumbs: [
           {
             url: process.env.ORIGIN_URL || 'http://localhost:3001',
-            text: 'home',
+            text: 'Seme Framework',
           },
           {
             url: (process.env.ORIGIN_URL || 'http://localhost:3001')+'/id/',
