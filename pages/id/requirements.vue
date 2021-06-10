@@ -129,6 +129,7 @@
         '@type': 'ListItem',
         position: index + 1,
         item: {
+          "@type": "WebPage",
           '@id': item.url,
           name: item.text,
         },

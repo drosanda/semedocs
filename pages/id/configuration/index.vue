@@ -291,6 +291,7 @@ $semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;
         '@type': 'ListItem',
         position: index + 1,
         item: {
+          "@type": "WebPage",
           '@id': item.url,
           name: item.text,
         },
