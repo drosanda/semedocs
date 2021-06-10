@@ -11,7 +11,7 @@
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">URI Routing</h1>
+            <h1 class="">Perutean URI (<em>URI Routing</em>)</h1>
             <p>Typically there is a one-to-one relationship between a URL string and its corresponding controller class/method. The segments in a URI normally follow this pattern:</p>
             <ul>
               <li><code>example.com/class/method/id/</code></li>
@@ -100,21 +100,23 @@
               </div>
             </div>
 
-            <p>Another reserved route is admin secret route. Please refer to <NuxtLink to="/id/uri_routing/admin">this docs</NuxtLink> for using admin secret routing.</p>
+            <p>Another reserved route is admin secret route. Please refer to <NuxtLink to="/id/uri_routing/admin/">this docs</NuxtLink> for using admin secret routing.</p>
           </div>
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/id/tutorial/introduction/" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Tutorial: Introduction
-            </b-button>
-            <b-button tag="router-link" to="/id/uri_routing/admin/" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Uri Routing: Admin
-            </b-button>
-          </div>
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/id/tutorial/" class="btn">
+          <i class="fa fa-chevron-left"></i>
+            Tutorial
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/id/uri_routing/admin/" class="btn">
+            Uri Routing: Admin
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 

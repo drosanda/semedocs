@@ -12,7 +12,7 @@
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">URI Routing for Admin Pages</h1>
+            <h1 class="">Perutean URI (<em>URI Routing</em>) untuk admin</h1>
             <p>Seme Framework has default feature to overide all routes below <b>app/controller/admin</b>. This feature comes when user need some extra security for securing admin pages. Not only re-routes, Seme Framework has another base_url function for compatibilty routing between admin page. The function is <b>base_url_admin()</b>.</p>
             <h2>Condition</h2>
             <p>For using this feature, Seme Framework has some condition to meet such as:</p>
@@ -29,17 +29,18 @@
       </div>
 
 
-      <div class="columns">
-        <div class="column">
-          <b-button tag="router-link" to="/id/uri_routing/" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/id/uri_routing/" class="btn">
+          <i class="fa fa-chevron-left"></i>
             Uri Routing
-          </b-button>
+          </nuxt-link>
         </div>
-        <div class="column is-2">&nbsp;</div>
-        <div class="column">
-          <b-button tag="router-link" to="/id/constants" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-            Constants
-          </b-button>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/id/uri_routing/constants/" class="btn">
+            Konstanta
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 
