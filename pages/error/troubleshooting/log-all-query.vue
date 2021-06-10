@@ -93,13 +93,12 @@ $sl-&gt;write(&#039;SENE_MySQLi::exec -- &#039;.$sql);
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/error/troubleshooting/" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Troubleshooting
-            </b-button>
-          </div>
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/error/" class="btn">
+          <i class="fa fa-chevron-left"></i>
+            Error &amp; Troubleshooting
+          </nuxt-link>
         </div>
       </div>
 

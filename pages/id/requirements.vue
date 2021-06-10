@@ -65,7 +65,7 @@
         </div>
         <div class="nav-bottom-right">
           <nuxt-link to="/id/downloads/" class="btn">
-            Download dan Instal
+            Download &amp; Instal
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>

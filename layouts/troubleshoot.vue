@@ -1,8 +1,15 @@
 <template>
-  <div>
+  <amp-body>
     <div class="main-content columns is-fullheight">
-      <aside class="column is-3 is-narrow-mobile is-fullheight section is-hidden-mobile">
-        <amp-img layout="responsive" width="240px" height="40px" alt="Seme Framework Logo" :src="logo"></amp-img>
+      <amp-sidebar id="sidebar1" layout="nodisplay" side="left" on="sidebarOpen:focusOnMe.focus">
+        <amp-img
+          alt="Seme Framework Logo"
+          :src="logo"
+          layout="responsive"
+          width="240"
+          height="40"
+        >
+        </amp-img>
         <ul class="menu-list">
           <li><nuxt-link to="/">Seme Framework</nuxt-link></li>
           <li><nuxt-link to="/credits">Credits</nuxt-link></li>
@@ -30,23 +37,27 @@
         </ul>
       </li>
     </ul>
-  </aside>
-  <div class="container column is-9">
-    <nuxt />
-  </div>
-</div>
-<footer class="footer">
-  <footer class="footer">
-    <div class="container">
-      <div class="content has-text-centered">
-        <p class="">Copyright &copy; 2014-2021. Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
-        <p><small>Last updated on 30 May 2021</small></p>
+      </amp-sidebar>
+      <button
+        class="hamburger"
+        on='tap:sidebar1.toggle'
+        aria-label="Click to open sidebar"
+        >
+        <div class="hamburger"></div>
+      </button>
+      <div class="container column is-9">
+        <nuxt />
       </div>
     </div>
-  </footer>
-</footer>
-</div>
-
+    <footer class="footer">
+      <div class="container">
+        <div class="content has-text-centered">
+          <p class="">Copyright &copy; 2014-2021. Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
+          <p><small>Last updated on June 10, 2021</small></p>
+        </div>
+      </div>
+    </footer>
+  </amp-body>
 </template>
 
 <script>

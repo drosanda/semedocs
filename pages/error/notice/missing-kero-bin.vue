@@ -35,13 +35,12 @@ Notice: Missing kero/bin in /opt/lampp/htdocs/seme-framework
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/error/notice/" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Error Notice List
-            </b-button>
-          </div>
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/error/" class="btn">
+          <i class="fa fa-chevron-left"></i>
+            Error &amp; Troubleshooting
+          </nuxt-link>
         </div>
       </div>
 

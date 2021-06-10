@@ -52,13 +52,12 @@ Error: [1024] could not find model hello_model on /Applications/XAMPP/xamppfiles
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/error/" icon-pack="fa" icon-left="chevron-left" class="">
-              Error List
-            </b-button>
-          </div>
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/error/" class="btn">
+          <i class="fa fa-chevron-left"></i>
+            Error List
+          </nuxt-link>
         </div>
       </div>
 
