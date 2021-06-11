@@ -633,11 +633,11 @@ export default {
         },
         {
           url: (process.env.ORIGIN_URL || 'http://localhost:3001')+'/id/',
-          text: 'id',
+          text: 'ID',
         },
         {
           url: (process.env.ORIGIN_URL || 'http://localhost:3001')+'/id/tutorial/',
-          text: 'tutorial',
+          text: 'Tutorial',
         },
         {
           url: (process.env.ORIGIN_URL || 'http://localhost:3001')+'/id/tutorial/basic-api/',
@@ -676,6 +676,7 @@ export default {
       '@type': 'ListItem',
       position: index + 1,
       item: {
+        '@type': "WebPage",
         '@id': item.url,
         name: item.text,
       },

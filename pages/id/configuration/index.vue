@@ -30,11 +30,11 @@
             </ol>
             <p>Isi dari setiap file dapat berbeda satu sama lain tergantung pada kebutuhan Anda.</p>
             <div class="message is-info">
-                <div class="message-body">
-                  <p>
-                    Secara default Seme Framework hanya menyertakan <code>development.php</code> untuk tahap pengembangan.
-                    Anda dapat membuat file baru dengan nama <code>staging.php</code> atau bahkan <code>production.php</code> di server <i>production</i>.
-                  </p>
+              <div class="message-body">
+                <p>
+                  Secara default Seme Framework hanya menyertakan <code>development.php</code> untuk tahap pengembangan.
+                  Anda dapat membuat file baru dengan nama <code>staging.php</code> atau bahkan <code>production.php</code> di server <i>production</i>.
+                </p>
               </div>
             </div>
             <hr>
