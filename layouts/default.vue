@@ -54,6 +54,8 @@
         </div>
       </div>
     </footer>
+    <amp-analytics type="googleanalytics" id="analytics1" :config="ga">
+    </amp-analytics>
   </amp-body>
 
 </template>
@@ -65,6 +67,7 @@
         title: 'Seme Framework Documentation',
         description: 'Deployable and lightweight PHP MVC framework that suitable for small and medium web app',
         logo: require('~/static/logo.png'),
+        ga: (process.env.ORIGIN_URL || 'http://localhost:3001')+'/static/ga.json',
         breadcrumbs: [
           {
             url: (process.env.ORIGIN_URL || 'http://localhost:3001')+'/',

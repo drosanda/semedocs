@@ -145,8 +145,9 @@
         </div>
       </footer>
     </footer>
+    <amp-analytics type="googleanalytics" id="analytics1" :config="ga">
+    </amp-analytics>
   </amp-body>
-
 </template>
 
 <script>
@@ -154,6 +155,7 @@ export default {
   data() {
     return {
       logo: require('~/static/logo.png'),
+      ga: (process.env.ORIGIN_URL || 'http://localhost:3001')+'/static/ga.json',
     }
   }
 }
