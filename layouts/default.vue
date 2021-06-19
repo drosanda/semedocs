@@ -67,7 +67,7 @@
         title: 'Seme Framework Documentation',
         description: 'Deployable and lightweight PHP MVC framework that suitable for small and medium web app',
         logo: require('~/static/logo.png'),
-        ga: (process.env.ORIGIN_URL || 'http://localhost:3001')+'/static/ga.json',
+        ga: process.env.BASE_URL+'ga.json',
         breadcrumbs: [
           {
             url: (process.env.ORIGIN_URL || 'http://localhost:3001')+'/',

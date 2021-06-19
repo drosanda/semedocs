@@ -57,6 +57,8 @@
         </div>
       </div>
     </footer>
+    <amp-analytics type="googleanalytics" id="analytics1" :config="ga">
+    </amp-analytics>
   </amp-body>
 </template>
 
@@ -69,7 +71,8 @@ export default {
       prefix: ' - ',
       title: 'Seme Framework v4.0.0 Documentation',
       description: 'Learn more about Seme Framework version 4.0.0 trough this documentation',
-      logo: require('~/static/logo.png')
+      logo: require('~/static/logo.png'),
+      ga: process.env.BASE_URL+'ga.json',
     }
   },
   head() {
