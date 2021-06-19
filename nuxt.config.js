@@ -46,9 +46,7 @@ export default {
   ],
   plugins: [
     { src: '@/plugins/hl' },
-    { src: '@/plugins/jsonld' },
-    { src: '~/plugins/fb.js', mode: 'client' },
-    { src: '~/plugins/ga.js', mode: 'client' }
+    { src: '@/plugins/jsonld' }
   ],
 
   ssr: true,
