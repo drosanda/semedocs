@@ -3,8 +3,8 @@ require('dotenv').config()
 export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxtjs/google-analytics'
   ],
-
   modules: [
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
@@ -61,6 +61,12 @@ export default {
     analyze: false,
     maxChunkSize: 300000
   },
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID,
+    autoTracking: {
+      screenview: true
+    }
+  },
   amp: {
     origin: process.env.ORIGIN_URL || 'http://localhost:3000',
     mode: 'only', //could use `only` or `false` as well,
@@ -70,5 +76,4 @@ export default {
     hostname: process.env.ORIGIN_URL || 'http://localhost:3000',
     gzip: false
   }
-
 }

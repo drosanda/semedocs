@@ -37,6 +37,7 @@
     "vue-highlight.js": "^4.0.1-beta"
   },
   "devDependencies": {
+    "@nuxtjs/google-analytics": "^2.4.0",
     "highlight.js": "^10.7.2"
   }
 }
