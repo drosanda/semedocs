@@ -43,16 +43,19 @@ parent::__construct();
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/4.0.0/controller/" icon-pack="fa" icon-left="chevron-left" class="">
-              Controller
-            </b-button>
-            <b-button tag="router-link" to="/4.0.0/controller/load" icon-pack="fa" icon-right="chevron-right" class="">
-              Load Method
-            </b-button>
-          </div>
+      
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/4.0.0/controller/" class="btn">
+          <i class="fa fa-chevron-left"></i>
+            Controller
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/4.0.0/controller/load/" class="btn">
+            Load Method
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 

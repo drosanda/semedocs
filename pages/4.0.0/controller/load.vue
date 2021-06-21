@@ -85,17 +85,20 @@ class Blog extends SENE_Controller {
           </div>
         </div>
       </div>
+      
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/4.0.0/controller/constructor" icon-pack="fa" icon-left="chevron-left" class="">
-              Constructor
-            </b-button>
-            <b-button tag="router-link" to="/4.0.0/controller/lib" icon-pack="fa" icon-right="chevron-right" class="">
-              Lib Method
-            </b-button>
-          </div>
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/4.0.0/controller/constructor/" class="btn">
+          <i class="fa fa-chevron-left"></i>
+            Constructor
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/4.0.0/controller/lib/" class="btn">
+            Lib Method
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 

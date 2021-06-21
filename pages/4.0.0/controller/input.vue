@@ -217,17 +217,19 @@ if($sc-&#x3E;status == 200){
         </div>
 
       </div>
-
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/4.0.0/controller/lib" icon-pack="fa" icon-left="chevron-left" class="">
-              Lib Method
-            </b-button>
-            <b-button tag="router-link" to="/4.0.0/controller/setTheme" icon-pack="fa" icon-right="chevron-right" class="">
-              setTheme Method
-            </b-button>
-          </div>
+      
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/4.0.0/controller/lib/" class="btn">
+          <i class="fa fa-chevron-left"></i>
+            Lib Method
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/4.0.0/controller/setTheme/" class="btn">
+            setTheme Method
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 

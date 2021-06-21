@@ -40,31 +40,32 @@
 		$this->sene_json->out($data);
 	}
 }
-</pre>
-					<p>After that you can open your base_url on browser and see what you get.</p>
-          <h2>List of Library</h2>
-          <p>Here is the list of library currently exist on seme framework:</p>
-          <ul>
-            <li><NuxtLink to="/4.0.0/library/seme_log">Seme Log - Logger</NuxtLink></li>
-            <li><NuxtLink to="/4.0.0/library/seme_email">Seme Email - Email Sender</NuxtLink></li>
+    </pre>
+    					<p>After that you can open your base_url on browser and see what you get.</p>
+              <h2>List of Library</h2>
+              <p>Here is the list of library currently exist on seme framework:</p>
+              <ul>
+                <li><NuxtLink to="/4.0.0/library/seme_log">Seme Log - Logger</NuxtLink></li>
+                <li><NuxtLink to="/4.0.0/library/seme_email">Seme Email - Email Sender</NuxtLink></li>
 
-          </ul>
-				</div>
-      </div>
+              </ul>
+    				</div>
+          </div>
 
         </div>
 
-        <div class="columns">
-          <div class="column">
-            <b-button tag="router-link" to="/4.0.0/controller" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+        <div class="nav-bottom">
+          <div class="nav-bottom-left">
+            <nuxt-link to="/4.0.0/controller/" class="btn">
+            <i class="fa fa-chevron-left"></i>
               Controller
-            </b-button>
+            </nuxt-link>
           </div>
-          <div class="column is-2">&nbsp;</div>
-          <div class="column">
-            <b-button tag="router-link" to="/4.0.0/cli" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+          <div class="nav-bottom-right">
+            <nuxt-link to="/4.0.0/cli/" class="btn">
               CLI
-            </b-button>
+              <i class="fa fa-chevron-right"></i>
+            </nuxt-link>
           </div>
         </div>
 

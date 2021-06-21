@@ -115,16 +115,18 @@ class Home extends Sene_Controller{
 
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/4.0.0/view" icon-pack="fa" icon-left="chevron-left" class="">
-              View
-            </b-button>
-            <b-button tag="router-link" to="/4.0.0/controller/constructor" icon-pack="fa" icon-right="chevron-right" class="">
-              Controller: __construct
-            </b-button>
-          </div>
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/4.0.0/view/" class="btn">
+          <i class="fa fa-chevron-left"></i>
+            Download and Installation
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/4.0.0/controller/constructor/" class="btn">
+            Controller: __construct
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 

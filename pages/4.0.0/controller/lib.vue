@@ -123,16 +123,19 @@ class Blog extends SENE_Controller {
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/4.0.0/controller/load" icon-pack="fa" icon-left="chevron-left" class="">
-              Load Method
-            </b-button>
-            <b-button tag="router-link" to="/4.0.0/controller/input" icon-pack="fa" icon-right="chevron-right" class="">
-              Input Method
-            </b-button>
-          </div>
+      
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/4.0.0/controller/load/" class="btn">
+          <i class="fa fa-chevron-left"></i>
+            Load Method
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/4.0.0/controller/input/" class="btn">
+            Input Method
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 

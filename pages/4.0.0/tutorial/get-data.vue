@@ -16,7 +16,7 @@
             <p>Get Data is most basic example to illustrate how framework getting data from database.</p>
             <p>Get data is part of CRUD method, called Retrieve. CRUD is shortname of Create Retrieve Update and Delete.</p>
             <p>In this tutorial you will learn about how to:</p>
-            <ul type="1">
+            <ul>
               <li>Setup the database by creating the database and importing the SQL file.</li>
               <li>Check connection and configuration from framework.</li>
               <li>Create a model.</li>

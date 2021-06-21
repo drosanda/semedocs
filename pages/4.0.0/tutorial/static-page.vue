@@ -16,7 +16,7 @@
             <p>Application Programming Interface (API) ussually built by developer for bridging frontend and backend.</p>
             <p>Seme Framework has functionality that can support for building API.</p>
             <p>In this tutorial you will learn about how to:</p>
-            <ul type="1">
+            <ul>
               <li>Setup the json output using library.</li>
               <li>Create core controller for reusable function.</li>
               <li>Collect and input from form data and URI request.</li>

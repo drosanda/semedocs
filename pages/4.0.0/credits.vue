@@ -13,7 +13,7 @@
             <h1>Credits</h1>
             <p>Seme Framework was originally developed by Daeng Rosanda, at first was written for achieving Undergraduate Thesis. Time after time Seme Framework used by another project on startup and company as Mini Web or main Web Application. And now Seme Framework contribute to Open Source project.</p>
             <p>And many thanks to:</p>
-            <ul type="1">
+            <ul>
               <li>Allah SWT</li>
               <li>Adam Mukharil Bachtiar, S.Kom, M.T.</li>
               <li>Ray Rizaldy, S.T.</li>
