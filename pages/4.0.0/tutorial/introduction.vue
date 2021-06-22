@@ -75,11 +75,14 @@ class Home extends SENE_Controller
             <p>On this tutorial we will learn how to render the view with theme and passing the data from controller to view passed by controller.</p>
 
             <div class="message is-success">
-  <div class="message-body">
-              <p>This tutorial using <a href="https://materializecss.com/" target="_blank">materializeCSS</a> as the CSS Library.</p>
-            </div></div>
+              <div class="message-body">
+                <p>This tutorial using <a href="https://materializecss.com/" target="_blank">materializeCSS</a> as the CSS Library.</p>
+              </div>
+            </div>
+
             <h4>Create Theme: <u>front</u>.</h4>
             <p>Before start, we have to understand the theme directory structure.</p>
+
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -496,7 +499,21 @@ export default {
       description: 'Learn more about introduction tutorial of Seme Framework version 4.0.0 through this documentation.',
       hlWorld: require('~/assets/img/hello-world.png'),
       intro6a: require('~/assets/img/tutorial/introduction/6a.png'),
-      intro7: require('~/assets/img/tutorial/introduction/7.png'),
+      intro7: require('~/assets/img/tutorial/introduction/7.png'),,
+      breadcrumbs: [
+        {
+          url: process.env.BASE_URL || 'http://localhost:3001',
+          text: 'Seme Framework',
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/',
+          text: '4.0.0',
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/tutorial/',
+          text: 'Tutorial',
+        }
+      ]
     }
   },
   head() {
@@ -520,6 +537,63 @@ export default {
         }
       ]
     }
+  },
+  jsonld() {
+    const items = this.breadcrumbs.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        "@type": "WebPage",
+        '@id': item.url,
+        name: item.text,
+      },
+    }));
+    return [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: items,
+      },
+      {
+        "@type": "NewsArticle",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+        },
+        "headline": (this.headline || this.title),
+        "image": [
+          (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
+        ],
+        "dateCreated": "2020-06-11T10:12:00+07:00",
+        "datePublished": "2020-06-11T10:12:00+07:00",
+        "dateModified": "2021-06-11T01:04:00+07:00",
+        "author": {
+          "@type": "Person",
+          "gender": "Male",
+          "name": "Daeng Rosanda, S.Kom",
+          "alternateName": "Daeng Rosanda",
+          "jobTitle": "Founder",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Cipta Esensi Merenah",
+            "email": "hi@cenah.co.id"
+          }
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Cipta Esensi Merenah",
+          "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+          "logo": {
+            "@type": "ImageObject",
+            "name": "logo Cipta Esensi Merenah",
+            "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+            "width": "256px",
+            "height": "62px"
+          }
+        },
+        "description": this.description
+      }
+    ];
   }
 }
 </script>
