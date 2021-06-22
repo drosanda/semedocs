@@ -56,6 +56,7 @@ export default {
     port: 3001
   },
   build: {
+    buildPath: process.env.CDN_URL || 'http://localhost:3000',
     analyze: false,
     maxChunkSize: 300000
   },
