@@ -29,7 +29,7 @@
               <li>Running Apache and MySQL</li>
               <li>An IDE or Text Editor</li>
               <li>A Browser</li>
-              <li><NuxtLink to="/4.0.0/tutorial/introduction">Completed the first tutorial</NuxtLink></li>
+              <li><NuxtLink to="/4.0.0/tutorial/introduction/">Completed the first tutorial</NuxtLink></li>
             </ul>
             <p>Okay, lets get started!</p>
 
@@ -61,8 +61,26 @@
             <p>The model on MVC framework used for bridging framework and database table. And then if we have separated the model, the rates of reusability increased because a model can be used repeatedly multiple times on many controllers.</p>
 
             <p>Lets created new file named <code>a_apikey_model.php</code> for <b>table a_apikey</b> under <code>app/model/</code>, and then put this codes to your file.</p>
-            <pre>
-&#x3C;?php
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">&#x3C;?php
 class A_ApiKey_Model extends SENE_Model
 {
     public $tbl = &#x27;a_apikey&#x27;;
@@ -97,12 +115,33 @@ class A_ApiKey_Model extends SENE_Model
         return $this-&#x3E;db-&#x3E;get_first();
     }
 }
-            </pre>
+</highlight-code>
+</div>
+</div>
 
             <h3>Edit Controller</h3>
             <p>From the first tutorial, we have created a controller located at <code>app/controller/home.php</code>. For achieving this tutorial, we have to modified the codes.</p>
             <p>First, we have to load new file that we created before <code>a_apikey_model</code>. After that, we have to get the data and put into a variable named <code>$data[&#x27;aakm&#x27;]</code>.</p>
-            <pre>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
 &#x3C;?php
 class Home extends SENE_Controller
 {
@@ -129,12 +168,33 @@ class Home extends SENE_Controller
     $this-&#x3E;render();
   }
 }
-            </pre>
+</highlight-code>
+</div>
+</div>
 
             <h3>Edit View</h3>
             <p>From the first tutorial, we have created view located at <code>app/view/front/home/home.php</code>. For achieving this tutorial, we have to modified the codes for viewing the data properly.</p>
             <p>First, we have to iterating the array of <code>$aakm</code> and put result on card type html.</p>
-            <pre>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="html">
 &#x3C;div class=&#x22;container&#x22;&#x3E;
   &#x3C;div class=&#x22;row&#x22;&#x3E;
     &#x3C;?php foreach($aakm as $aak) { ?&#x3E;
@@ -155,7 +215,9 @@ class Home extends SENE_Controller
   &#x3C;/div&#x3E;
 &#x3C;/div&#x3E;
 
-            </pre>
+</highlight-code>
+</div>
+</div>
 
             <h2>Result</h2>
             <p>If you open the <code>http://localhost/seme_framework</code> and view same as screenshot before, so you are achieved this tutorial successfully.</p>
@@ -165,16 +227,18 @@ class Home extends SENE_Controller
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/4.0.0/tutorial/" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Tutorial: Introduction
-            </b-button>
-            <b-button tag="router-link" to="/4.0.0/tutorial/basic-api/" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Tutorial: Basic API
-            </b-button>
-          </div>
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/4.0.0/tutorial/" class="btn">
+          <i class="fa fa-chevron-left"></i>
+            Tutorial: Introduction
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/4.0.0/tutorial/basic-api/" class="btn">
+            Tutorial: Basic API
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 
@@ -193,6 +257,20 @@ export default {
       dbImport: require('~/assets/img/tutorial/phpmyadmin-db-import.png'),
       dbTblList: require('~/assets/img/tutorial/phpmyadmin-db-tables.png'),
       getDataResult: require('~/assets/img/tutorial/chrome-crud-result.png'),
+      breadcrumbs: [
+        {
+          url: process.env.BASE_URL || 'http://localhost:3001',
+          text: 'Seme Framework',
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/',
+          text: '4.0.0',
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/tutorial/',
+          text: 'Tutorial',
+        }
+      ]
     }
   },
   head() {
@@ -216,6 +294,63 @@ export default {
         }
       ]
     }
+  },
+  jsonld() {
+    const items = this.breadcrumbs.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        "@type": "WebPage",
+        '@id': item.url,
+        name: item.text,
+      },
+    }));
+    return [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: items,
+      },
+      {
+        "@type": "NewsArticle",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+        },
+        "headline": (this.headline || this.title),
+        "image": [
+          (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
+        ],
+        "dateCreated": "2020-06-11T10:12:00+07:00",
+        "datePublished": "2020-06-11T10:12:00+07:00",
+        "dateModified": "2021-06-11T01:04:00+07:00",
+        "author": {
+          "@type": "Person",
+          "gender": "Male",
+          "name": "Daeng Rosanda, S.Kom",
+          "alternateName": "Daeng Rosanda",
+          "jobTitle": "Founder",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Cipta Esensi Merenah",
+            "email": "hi@cenah.co.id"
+          }
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Cipta Esensi Merenah",
+          "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+          "logo": {
+            "@type": "ImageObject",
+            "name": "logo Cipta Esensi Merenah",
+            "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+            "width": "256px",
+            "height": "62px"
+          }
+        },
+        "description": this.description
+      }
+    ];
   }
 }
 </script>

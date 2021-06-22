@@ -117,11 +117,11 @@
         semecarbon: require('~/static/carbon.png'),
         breadcrumbs: [
           {
-            url: process.env.ORIGIN_URL || 'http://localhost:3001/',
+            url: process.env.BASE_URL || 'http://localhost:3001',
             text: 'Seme Framework',
           },
           {
-            url: (process.env.ORIGIN_URL || 'http://localhost:3001/')+'id/',
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/',
             text: 'ID',
           }
         ]

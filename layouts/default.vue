@@ -60,7 +60,6 @@
 
 </template>
 <script>
-require('dotenv').config()
 
 export default {
   data() {
@@ -156,9 +155,6 @@ export default {
         "description": this.description
       }
     ];
-  },
-  mounted(){
-    console.log('ENV',process.env);
   }
 }
 </script>
