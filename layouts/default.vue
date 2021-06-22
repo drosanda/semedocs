@@ -72,7 +72,7 @@ export default {
       ga: (process.env.ORIGIN_URL || 'http://localhost:3001/')+'ga.json',
       breadcrumbs: [
         {
-          url: (process.env.ORIGIN_URL || 'http://localhost:3001')+'/',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/',
           text: 'home',
         }
       ],
@@ -120,7 +120,7 @@ export default {
         "@type": "NewsArticle",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": (process.env.ORIGIN_URL || 'http://localhost:3001')+ '/'+this.$route.path.replace(/\/+$/, '') + '/'
+          "@id": (process.env.BASE_URL || 'http://localhost:3001')+ '/'+this.$route.path.replace(/\/+$/, '') + '/'
         },
         "headline": (this.headline || this.title),
         "image": [

@@ -92,19 +92,19 @@
         description: 'Metode load dari kelas SENE_Controller dalam SEME Framework versi 4.0.0 digunakan untuk memanggil model kedalam kelas controller',
         breadcrumbs: [
           {
-            url: process.env.ORIGIN_URL || 'http://localhost:3001',
+            url: process.env.BASE_URL || 'http://localhost:3001',
             text: 'Seme Framework',
           },
           {
-            url: (process.env.ORIGIN_URL || 'http://localhost:3001')+'/id/',
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/',
             text: 'ID',
           },
           {
-            url: (process.env.ORIGIN_URL || 'http://localhost:3001')+'/id/controller/',
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/controller/',
             text: 'Controller',
           },
           {
-            url: (process.env.ORIGIN_URL || 'http://localhost:3001')+'/id/controller/load/',
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/controller/load/',
             text: 'Load',
           }
         ],
@@ -159,7 +159,7 @@
           },
           "headline": (this.headline || this.title),
           "image": [
-            (process.env.CDN_URL || 'http://localhost:3001').'/logo.png'
+            (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
           ],
           "dateCreated": "2020-06-11T10:12:00+07:00",
           "datePublished": "2020-06-11T10:12:00+07:00",

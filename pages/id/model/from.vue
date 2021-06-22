@@ -71,19 +71,19 @@ class Blog_Model extends SENE_Model{
         description: 'Pelajari selengkapnya tentang from method on SENE_Model class from Seme Framework.',
         breadcrumbs: [
           {
-            url: process.env.ORIGIN_URL || 'http://localhost:3001',
+            url: process.env.BASE_URL || 'http://localhost:3001',
             text: 'Seme Framework',
           },
           {
-            url: (process.env.ORIGIN_URL || 'http://localhost:3001')+'/id/',
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/',
             text: 'ID',
           },
           {
-            url: (process.env.ORIGIN_URL || 'http://localhost:3001')+'/id/tutorial/',
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/tutorial/',
             text: 'Model',
           },
           {
-            url: (process.env.ORIGIN_URL || 'http://localhost:3001')+'/id/tutorial/introduction/',
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/tutorial/introduction/',
             text: 'From',
           },
         ],
@@ -137,7 +137,7 @@ class Blog_Model extends SENE_Model{
           },
           "headline": (this.headline || this.title),
           "image": [
-            (process.env.CDN_URL || 'http://localhost:3001').'/logo.png'
+            (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
           ],
           "dateCreated": "2020-06-11T10:12:00+07:00",
           "datePublished": "2020-06-11T10:12:00+07:00",

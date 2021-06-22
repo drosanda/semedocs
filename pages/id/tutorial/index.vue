@@ -66,15 +66,15 @@ export default {
       description: 'Pelajari selengkapnya tentang penggunaan Seme Framework di dunia nyata.',
       breadcrumbs: [
         {
-          url: process.env.ORIGIN_URL || 'http://localhost:3001',
+          url: process.env.BASE_URL || 'http://localhost:3001',
           text: 'Seme Framework',
         },
         {
-          url: (process.env.ORIGIN_URL || 'http://localhost:3001')+'/id/',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/',
           text: 'ID',
         },
         {
-          url: (process.env.ORIGIN_URL || 'http://localhost:3001')+'/id/tutorial/',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/tutorial/',
           text: 'Tutorial',
         }
       ]
@@ -129,7 +129,7 @@ export default {
         },
         "headline": (this.headline || this.title),
         "image": [
-          (process.env.CDN_URL || 'http://localhost:3001').'/logo.png'
+          (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
         "dateCreated": "2020-06-11T10:12:00+07:00",
         "datePublished": "2020-06-11T10:12:00+07:00",

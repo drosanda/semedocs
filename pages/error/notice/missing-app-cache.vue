@@ -16,11 +16,32 @@
             <p>Seme framework has cache directory for store the cache under <code>app/cache/</code> directory.</p>
             <p>But, this directory for now is not auto generated so you have to created manually the <code>cache</code> directory.</p>
             <p>Example error message</p>
-            <pre>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
 Notice: Missing app/cache in /Application/xampp/htdocs/seme-frmamework
 Notice: Missing app/cache in D:\xampp\htdocs\seme-framework
 Notice: Missing app/cache in /opt/lampp/htdocs/seme-framework
-            </pre>
+</highlight-code>
+</div>
+</div>
             <h2>Solution</h2>
             <p>Create manually the directory <code>app/cache</code>.</p>
           </div>
@@ -40,6 +61,7 @@ Notice: Missing app/cache in /opt/lampp/htdocs/seme-framework
   </div>
 </template>
 <script>
+
 export default {
   layout: 'troubleshoot',
   data (){
@@ -47,7 +69,21 @@ export default {
       name: 'Seme Framework Error &amp; Troubleshooting',
       suffix: ' - Seme Framework Error Notice',
       title: 'Missing app/cache',
-      description: 'Learn more about Seme Framework Error Notice: Missing app/cache and how to solved it.'
+      description: 'Learn more about Seme Framework Error Notice: Missing app/cache and how to solved it.',
+      breadcrumbs: [
+        {
+          url: process.env.BASE_URL || 'http://localhost:3001',
+          text: 'Seme Framework',
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/error/',
+          text: 'Error',
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/error/notice/',
+          text: 'Notice',
+        }
+      ]
     }
   },
   head() {
@@ -71,6 +107,63 @@ export default {
         }
       ]
     }
+  },
+  jsonld() {
+    const items = this.breadcrumbs.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        "@type": "WebPage",
+        '@id': item.url,
+        name: item.text,
+      },
+    }));
+    return [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: items,
+      },
+      {
+        "@type": "NewsArticle",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+        },
+        "headline": (this.headline || this.title),
+        "image": [
+          (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
+        ],
+        "dateCreated": "2020-06-11T10:12:00+07:00",
+        "datePublished": "2020-06-11T10:12:00+07:00",
+        "dateModified": "2021-06-11T01:04:00+07:00",
+        "author": {
+          "@type": "Person",
+          "gender": "Male",
+          "name": "Daeng Rosanda, S.Kom",
+          "alternateName": "Daeng Rosanda",
+          "jobTitle": "Founder",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Cipta Esensi Merenah",
+            "email": "hi@cenah.co.id"
+          }
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Cipta Esensi Merenah",
+          "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+          "logo": {
+            "@type": "ImageObject",
+            "name": "logo Cipta Esensi Merenah",
+            "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+            "width": "256px",
+            "height": "62px"
+          }
+        },
+        "description": this.description
+      }
+    ]
   }
 }
 </script>

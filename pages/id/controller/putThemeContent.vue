@@ -97,19 +97,19 @@ export default {
       description: 'Pelajari selengkapnya tentang putThemeContent Method from SENE_Controller on Seme Framework versi 4.0.0',
       breadcrumbs: [
         {
-          url: process.env.ORIGIN_URL || 'http://localhost:3001',
+          url: process.env.BASE_URL || 'http://localhost:3001',
           text: 'Seme Framework',
         },
         {
-          url: (process.env.ORIGIN_URL || 'http://localhost:3001')+'/id/',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/',
           text: 'ID',
         },
         {
-          url: (process.env.ORIGIN_URL || 'http://localhost:3001')+'/id/controller/',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/controller/',
           text: 'Controller',
         },
         {
-          url: (process.env.ORIGIN_URL || 'http://localhost:3001')+'/id/controller/putthemecontent/',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/controller/putthemecontent/',
           text: 'putThemeContent',
         }
       ],
@@ -164,7 +164,7 @@ export default {
         },
         "headline": (this.headline || this.title),
         "image": [
-          (process.env.CDN_URL || 'http://localhost:3001').'/logo.png'
+          (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
         "dateCreated": "2020-06-11T10:12:00+07:00",
         "datePublished": "2020-06-11T10:12:00+07:00",
