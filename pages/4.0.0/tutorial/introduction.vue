@@ -499,7 +499,7 @@ export default {
       description: 'Learn more about introduction tutorial of Seme Framework version 4.0.0 through this documentation.',
       hlWorld: require('~/assets/img/hello-world.png'),
       intro6a: require('~/assets/img/tutorial/introduction/6a.png'),
-      intro7: require('~/assets/img/tutorial/introduction/7.png'),,
+      intro7: require('~/assets/img/tutorial/introduction/7.png'),
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
