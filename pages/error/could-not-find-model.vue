@@ -13,14 +13,36 @@
           <div class="content">
             <h1>[1024] could not find model</h1>
             <p>Could not find model [model_name] it was occured when model file cannot be loaded from controller.</p>
+
             <p>Example error message</p>
-            <pre>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
 File: /Applications/XAMPP/xamppfiles/htdocs/seme-framework/kero/sine/SENE_Controller.php
 
 Line: 156
 
 Error: [1024] could not find model hello_model on /Applications/XAMPP/xamppfiles/htdocs/seme-framework/app/model/hello_model.php
-            </pre>
+</highlight-code>
+</div>
+</div>
+
             <h2>Solution</h2>
             <p>Here is some options that can be done for solving this error.</p>
             <h3>Check the file name</h3>
@@ -72,7 +94,17 @@ export default {
       name: 'Seme Framework Error &amp; Troubleshooting',
       suffix: ' - Seme Framework Error Notice',
       title: 'Error: [1024] Could not find model',
-      description: 'Learn more about Seme Framework Error: [1024] Could not find model and how to solved it.'
+      description: 'Learn more about Seme Framework Error: [1024] Could not find model and how to solved it.',
+      breadcrumbs: [
+        {
+          url: process.env.BASE_URL || 'http://localhost:3001',
+          text: 'Seme Framework',
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/ertroror/',
+          text: 'Error',
+        }
+      ]
     }
   },
   head() {
@@ -96,6 +128,63 @@ export default {
         }
       ]
     }
+  },
+  jsonld() {
+    const items = this.breadcrumbs.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        "@type": "WebPage",
+        '@id': item.url,
+        name: item.text,
+      },
+    }));
+    return [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: items,
+      },
+      {
+        "@type": "NewsArticle",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+        },
+        "headline": (this.headline || this.title),
+        "image": [
+          (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
+        ],
+        "dateCreated": "2020-06-11T10:12:00+07:00",
+        "datePublished": "2020-06-11T10:12:00+07:00",
+        "dateModified": "2021-06-11T01:04:00+07:00",
+        "author": {
+          "@type": "Person",
+          "gender": "Male",
+          "name": "Daeng Rosanda, S.Kom",
+          "alternateName": "Daeng Rosanda",
+          "jobTitle": "Founder",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Cipta Esensi Merenah",
+            "email": "hi@cenah.co.id"
+          }
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Cipta Esensi Merenah",
+          "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+          "logo": {
+            "@type": "ImageObject",
+            "name": "logo Cipta Esensi Merenah",
+            "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+            "width": "256px",
+            "height": "62px"
+          }
+        },
+        "description": this.description
+      }
+    ]
   }
 }
 </script>

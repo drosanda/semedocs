@@ -17,12 +17,31 @@
             <p>But, this directory for now is not auto generated so you have to created manually the <code>bin</code> directory.</p>
 
             <div class="message is-info">
-<div class="message-body">
-              <p>This only occured on Seme Framework version 4.x.x.</p>
-            </div></div>
+              <div class="message-body">
+                <p>This only occured on Seme Framework version 4.x.x.</p>
+              </div>
+            </div>
 
             <p>Example error message</p>
-            <pre>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
 Notice: Missing kero/bin in /Application/xampp/htdocs/seme-frmamework
 Notice: Missing kero/bin in D:\xampp\htdocs\seme-framework
 Notice: Missing kero/bin in /opt/lampp/htdocs/seme-framework

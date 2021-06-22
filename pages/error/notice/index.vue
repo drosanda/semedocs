@@ -5,14 +5,14 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/error/">Error &amp; Troubleshooting</NuxtLink></li>
-          <li class="unavailable">Error Notice</li>
+          <li class="unavailable">Notice</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1>Error Notice List</h1>
-            <p>Here is the list of known error that ussually occured in Seme Framework</p>
+            <h1>Notice List</h1>
+            <p>Here is the list of known notice message that ussually occured in Seme Framework</p>
             <ul>
               <li><NuxtLink to="/error/notice/missing-app-cache">Notice: Missing app/cache</NuxtLink></li>
               <li><NuxtLink to="/error/notice/missing-kero-bin">Notice: Missing kero/bin</NuxtLink></li>
@@ -30,6 +30,12 @@
           <nuxt-link to="/error/" class="btn">
           <i class="fa fa-chevron-left"></i>
             Error &amp; Troubleshooting
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/error/troubleshooting/" class="btn">
+            Troubleshooting
+            <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
       </div>
