@@ -9,7 +9,7 @@
           <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/lang-id-e9bd2e' alt="language"></amp-img>
         </div>
 
-        <ul class="menu-list">
+        <ul>
           <li><nuxt-link to="/id/">Seme Framework</nuxt-link></li>
           <li><nuxt-link to="/id/requirements/">Persyaratan</nuxt-link></li>
           <li><nuxt-link to="/id/downloads/">Download &amp; Install</nuxt-link></li>
@@ -117,11 +117,7 @@
         </ul>
       </amp-sidebar>
 
-      <button
-        class="hamburger"
-        on='tap:sidebar1.toggle'
-        aria-label="Click to open sidebar"
-        >
+      <button class="hamburger" on='tap:sidebar1.toggle' aria-label="Click to open sidebar" >
         <div class="hamburger"></div>
       </button>
       <div class="container column is-9">
@@ -129,14 +125,12 @@
       </div>
     </div>
     <footer class="footer">
-      <footer class="footer">
-        <div class="container">
-          <div class="content has-text-centered">
-            <p class="">Copyright &copy; 2014-2021. Dibuat sepenuh cinta di Bandung, Indonesia oleh Daeng Rosanda, S.Kom.</p>
-            <p><small>Diperbarui tanggal 1 Juni 2021</small></p>
-          </div>
+      <div class="container">
+        <div class="content has-text-centered">
+          <p class="">Copyright &copy; 2014-2021. Dibuat sepenuh cinta di Bandung, Indonesia oleh Daeng Rosanda, S.Kom.</p>
+          <p><small>Diperbarui tanggal 1 Juni 2021</small></p>
         </div>
-      </footer>
+      </div>
     </footer>
     <amp-analytics type="googleanalytics" id="analytics1" :config="ga">
     </amp-analytics>

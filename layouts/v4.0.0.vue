@@ -116,28 +116,24 @@
           </li>
         </ul>
       </amp-sidebar>
-      <button
-      class="hamburger"
-      on='tap:sidebar1.toggle'
-      aria-label="Click to open sidebar"
-      >
-      <div class="hamburger"></div>
-    </button>
-    <div class="container column is-9">
-      <nuxt />
-    </div>
-  </div>
-  <footer class="footer">
-    <div class="container">
-      <div class="content has-text-centered">
-        <p class="">Copyright &copy; 2014-2021. Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
-        <p><small>Last updated on May 30, 2021</small></p>
+      <button class="hamburger" on='tap:sidebar1.toggle' aria-label="Click to open sidebar" >
+        <div class="hamburger"></div>
+      </button>
+      <div class="container column is-9">
+        <nuxt />
       </div>
     </div>
-  </footer>
-  <amp-analytics type="googleanalytics" id="analytics1" :config="ga">
-  </amp-analytics>
-</amp-body>
+    <footer class="footer">
+      <div class="container">
+        <div class="content has-text-centered">
+          <p class="">Copyright &copy; 2014-2021. Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
+          <p><small>Last updated on May 30, 2021</small></p>
+        </div>
+      </div>
+    </footer>
+    <amp-analytics type="googleanalytics" id="analytics1" :config="ga">
+    </amp-analytics>
+  </amp-body>
 
 </template>
 

@@ -2,17 +2,10 @@
   <amp-body>
     <div class="main-content columns is-fullheight">
       <amp-sidebar id="sidebar1" layout="nodisplay" side="left" on="sidebarOpen:focusOnMe.focus">
-        <amp-img
-          alt="Seme Framework Logo"
-          :src="logo"
-          layout="responsive"
-          width="240"
-          height="40"
-        >
-        </amp-img>
-        <ul class="menu-list">
+        <amp-img :src="logo" width="240" height="40" layout="responsive" alt="Seme Framework Logo"></amp-img>
+        <ul>
           <li><nuxt-link to="/">Seme Framework</nuxt-link></li>
-          <li><nuxt-link to="/credits">Credits</nuxt-link></li>
+          <li><nuxt-link to="/credits/">Credits</nuxt-link></li>
           <li>
             <a href="#">Version</a>
             <ul>
@@ -38,11 +31,7 @@
       </li>
     </ul>
       </amp-sidebar>
-      <button
-        class="hamburger"
-        on='tap:sidebar1.toggle'
-        aria-label="Click to open sidebar"
-        >
+      <button class="hamburger" on='tap:sidebar1.toggle' aria-label="Click to open sidebar" >
         <div class="hamburger"></div>
       </button>
       <div class="container column is-9">
@@ -69,8 +58,8 @@ export default {
       name: 'Seme Framework',
       version: 'v4.0.0',
       prefix: ' - ',
-      title: 'Seme Framework v4.0.0 Documentation',
-      description: 'Learn more about Seme Framework version 4.0.0 trough this documentation',
+      title: 'Seme Framework Troubleshooting',
+      description: 'Learn more about Seme Framework Troubleshooting trough this documentation',
       logo: require('~/static/logo.png'),
       ga: (process.env.ORIGIN_URL || 'http://localhost:3001/')+'ga.json',
     }
