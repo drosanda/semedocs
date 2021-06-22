@@ -14,12 +14,35 @@
           <div class="content">
             <h1>Could not find model PATH_MODEL_NAME</h1>
             <p>Seme framework has theme directory under <code>app/model</code>, so you have to checked it for supplied model name or path with its model name are exist.</p>
-            <p>Example error message</p>
-            <pre>
+
+            <p><strong>Example error message</strong></p>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
 could not find model b_user_model on D:/XAMPP/htdocs/seme_framework/app/model/b_user_model.php
 could not find model api/b_user_model on D:/XAMPP/htdocs/seme_framework/app/model/api/b_user_model.php
 could not find model admin/b_user_model on D:/XAMPP/htdocs/seme_framework/app/model/admin/b_user_model.php
-            </pre>
+</highlight-code>
+</div>
+</div>
+
             <h2>Solution</h2>
             <p>Create manually the model file same as model name name under<code>app/model/</code>.</p>
             <p>If the model loader has path, you have to checked the directory are existed or not.</p>
@@ -31,9 +54,9 @@ could not find model admin/b_user_model on D:/XAMPP/htdocs/seme_framework/app/mo
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/error/" class="btn">
-          <i class="fa fa-chevron-left"></i>
-            Error &amp; Troubleshooting
+          <nuxt-link to="/error/notice/" class="btn">
+            <i class="fa fa-chevron-left"></i>
+            Notice
           </nuxt-link>
         </div>
       </div>

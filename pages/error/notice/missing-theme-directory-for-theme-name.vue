@@ -14,12 +14,34 @@
           <div class="content">
             <h1>Missing theme directory for THEME_NAME</h1>
             <p>Seme framework has theme directory under <code>app/view</code>, so you have to checked it for supplied theme name existed or not.</p>
+
             <p>Example error message</p>
-            <pre>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
 Missing theme directory for front
 Missing theme directory for admin
 Missing theme directory for frontend
-            </pre>
+</highlight-code>
+</div>
+</div>
+
             <h2>Solution</h2>
             <p>Create manually the directory same as theme name name under<code>app/view/</code>.</p>
           </div>
@@ -28,9 +50,9 @@ Missing theme directory for frontend
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/error/" class="btn">
-          <i class="fa fa-chevron-left"></i>
-            Error &amp; Troubleshooting
+          <nuxt-link to="/error/notice/" class="btn">
+            <i class="fa fa-chevron-left"></i>
+            Notice
           </nuxt-link>
         </div>
       </div>
@@ -83,64 +105,64 @@ export default {
           content: this.description
         }
       ]
-    },
-    jsonld() {
-      const items = this.breadcrumbs.map((item, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        item: {
+    }
+  },
+  jsonld() {
+    const items = this.breadcrumbs.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        "@type": "WebPage",
+        '@id': item.url,
+        name: item.text,
+      },
+    }));
+    return [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: items,
+      },
+      {
+        "@type": "NewsArticle",
+        "mainEntityOfPage": {
           "@type": "WebPage",
-          '@id': item.url,
-          name: item.text,
+          "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
         },
-      }));
-      return [
-        {
-          '@context': 'https://schema.org',
-          '@type': 'BreadcrumbList',
-          itemListElement: items,
-        },
-        {
-          "@type": "NewsArticle",
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
-          },
-          "headline": (this.headline || this.title),
-          "image": [
-            (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
-          ],
-          "dateCreated": "2020-06-11T10:12:00+07:00",
-          "datePublished": "2020-06-11T10:12:00+07:00",
-          "dateModified": "2021-06-11T01:04:00+07:00",
-          "author": {
-            "@type": "Person",
-            "gender": "Male",
-            "name": "Daeng Rosanda, S.Kom",
-            "alternateName": "Daeng Rosanda",
-            "jobTitle": "Founder",
-            "worksFor": {
-              "@type": "Organization",
-              "name": "Cipta Esensi Merenah",
-              "email": "hi@cenah.co.id"
-            }
-          },
-          "publisher": {
+        "headline": (this.headline || this.title),
+        "image": [
+          (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
+        ],
+        "dateCreated": "2020-06-11T10:12:00+07:00",
+        "datePublished": "2020-06-11T10:12:00+07:00",
+        "dateModified": "2021-06-11T01:04:00+07:00",
+        "author": {
+          "@type": "Person",
+          "gender": "Male",
+          "name": "Daeng Rosanda, S.Kom",
+          "alternateName": "Daeng Rosanda",
+          "jobTitle": "Founder",
+          "worksFor": {
             "@type": "Organization",
             "name": "Cipta Esensi Merenah",
-            "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
-            "logo": {
-              "@type": "ImageObject",
-              "name": "logo Cipta Esensi Merenah",
-              "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
-              "width": "256px",
-              "height": "62px"
-            }
-          },
-          "description": this.description
-        }
-      ]
-    }
+            "email": "hi@cenah.co.id"
+          }
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Cipta Esensi Merenah",
+          "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+          "logo": {
+            "@type": "ImageObject",
+            "name": "logo Cipta Esensi Merenah",
+            "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+            "width": "256px",
+            "height": "62px"
+          }
+        },
+        "description": this.description
+      }
+    ]
   }
 }
 </script>

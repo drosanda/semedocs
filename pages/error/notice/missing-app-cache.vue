@@ -50,9 +50,9 @@ Notice: Missing app/cache in /opt/lampp/htdocs/seme-framework
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/error/" class="btn">
-          <i class="fa fa-chevron-left"></i>
-            Error &amp; Troubleshooting
+          <nuxt-link to="/error/notice/" class="btn">
+            <i class="fa fa-chevron-left"></i>
+            Notice
           </nuxt-link>
         </div>
       </div>

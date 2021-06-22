@@ -15,23 +15,16 @@
             <p>Here is the list of known error that ussually occured in Seme Framework</p>
             <ul>
               <li>
-                <NuxtLink to="/error/notice/">Notice</NuxtLink>
-                <ul>
-                  <li><NuxtLink to="/error/notice/missing-app-cache">Notice: Missing app/cache</NuxtLink></li>
-                  <li><NuxtLink to="/error/notice/missing-kero-bin">Notice: Missing kero/bin</NuxtLink></li>
-                </ul>
-              </li>
-              <li>
                 <a href="#">Error</a>
                 <ul>
                   <li><NuxtLink to="/error/could-not-find-model/">[1024] Could not find model</NuxtLink></li>
                 </ul>
               </li>
               <li>
+                <NuxtLink to="/error/notice/">Notice</NuxtLink>
+              </li>
+              <li>
                 <NuxtLink to="/error/troubleshooting/">Troubleshooting</NuxtLink>
-                <ul>
-                  <li><NuxtLink to="/error/troubleshooting/log-all-query">How to log all query</NuxtLink></li>
-                </ul>
               </li>
             </ul>
           </div>
