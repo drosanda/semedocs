@@ -9,7 +9,7 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
-    '@nuxt/content',
+    '@nuxtjs/dotenv',
     '@nuxtjs/amp',
     '@nuxtjs/sitemap'
   ],
