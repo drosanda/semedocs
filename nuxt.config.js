@@ -25,13 +25,13 @@ export default {
     ],
     link: [
       { rel: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' },
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
-      { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico'}
+      { rel: 'icon', type: 'image/x-icon', href: (process.env.CDN_URL || 'http://localhost:3001')+'/favicon.ico'},
+      { rel: 'shortcut icon', type: 'image/x-icon', href: (process.env.CDN_URL || 'http://localhost:3001')+'/favicon.ico'}
     ]
   },
   pwa: {
     meta: {
-      ogHost: process.env.ORIGIN_URL || 'http://localhost:3000',
+      ogHost: process.env.ORIGIN_URL || 'http://localhost:3001',
       ogImage: {
         path: '~/static/carbon.png',
         width: '1480px',
@@ -56,9 +56,21 @@ export default {
     port: 3001
   },
   build: {
-    buildPath: process.env.CDN_URL || 'http://localhost:3000',
+    buildPath: process.env.CDN_URL || 'http://localhost:3001',
     analyze: false,
-    maxChunkSize: 300000
+    maxChunkSize: 300000,
+    extend(config, ctx) {
+      config.node = {
+        fs: 'empty'
+      },
+      config.module.rules.push({
+        test: /\.(ogg|mp3|wav|mpe?g)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]'
+        }
+      })
+    }
   },
   googleAnalytics: {
     id: process.env.GOOGLE_ANALYTICS_ID,
@@ -67,12 +79,12 @@ export default {
     }
   },
   amp: {
-    origin: process.env.ORIGIN_URL || 'http://localhost:3000',
+    origin: process.env.ORIGIN_URL || 'http://localhost:3001',
     mode: 'only', //could use `only` or `false` as well,
     css: '~/css/app.amp.css'
   },
   sitemap: {
-    hostname: process.env.ORIGIN_URL || 'http://localhost:3000',
+    hostname: process.env.ORIGIN_URL || 'http://localhost:3001',
     gzip: false
   }
 }

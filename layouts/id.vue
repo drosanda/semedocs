@@ -155,7 +155,7 @@ export default {
   data() {
     return {
       logo: require('~/static/logo.png'),
-      ga: process.env.BASE_URL+'ga.json',
+      ga: (process.env.ORIGIN_URL || 'http://localhost:3001/')+'ga.json',
     }
   }
 }
