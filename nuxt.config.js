@@ -11,8 +11,7 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxtjs/dotenv',
     '@nuxtjs/amp',
-    '@nuxtjs/sitemap',
-    ['nuxt-canonical', { baseUrl: process.env.BASE_URL || 'http://localhost:3001' }]
+    '@nuxtjs/sitemap'
   ],
   head: {
     meta: [
@@ -80,7 +79,7 @@ export default {
     }
   },
   amp: {
-    origin: process.env.ORIGIN_URL || 'http://localhost:3001',
+    origin: process.env.BASE_URL || 'http://localhost:3001',
     mode: 'only', //could use `only` or `false` as well,
     css: '~/css/app.amp.css'
   },
