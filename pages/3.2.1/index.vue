@@ -64,15 +64,15 @@
         name: 'Seme Framework v3.2.1',
         suffix: ' - Documentation',
         title: 'Seme Framework v3.2.1 Documentation',
-        description: 'Learn more about Seme Framework version 4.0.0 through this documentation.',
+        description: 'Learn more about Seme Framework version 3.2.1 through this documentation.',
         breadcrumbs: [
           {
             url: process.env.ORIGIN_URL || 'http://localhost:3001/',
             text: 'Seme Framework',
           },
           {
-            url: (process.env.ORIGIN_URL || 'http://localhost:3001/')+'3.3.0/',
-            text: '3.3.0',
+            url: (process.env.ORIGIN_URL || 'http://localhost:3001/')+'3.2.1/',
+            text: '3.2.1',
           }
         ]
       }
@@ -119,11 +119,11 @@
           "@type": "NewsArticle",
           "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": (process.env.ORIGIN_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+            "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
           },
           "headline": (this.headline || this.title),
           "image": [
-            (process.env.CDN_URL || 'http://localhost:3001')+require('~/static/logo.png')
+            (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
           ],
           "dateCreated": "2020-06-11T10:12:00+07:00",
           "datePublished": "2020-06-11T10:12:00+07:00",
