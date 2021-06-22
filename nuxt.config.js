@@ -11,7 +11,8 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxtjs/dotenv',
     '@nuxtjs/amp',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    ['nuxt-canonical', { baseUrl: process.env.BASE_URL || 'http://localhost:3001' }]
   ],
   head: {
     meta: [

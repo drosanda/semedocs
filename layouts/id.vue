@@ -2,14 +2,7 @@
   <amp-body>
     <div class="main-content columns is-fullheight">
       <amp-sidebar id="sidebar1" layout="nodisplay" side="left" on="sidebarOpen:focusOnMe.focus">
-        <amp-img
-          alt="Seme Framework Logo"
-          :src="logo"
-          layout="responsive"
-          width="240"
-          height="40"
-        >
-        </amp-img>
+        <amp-img :src="logo" width="240" height="40" layout="responsive" alt="Seme Framework Logo"></amp-img>
         <div class="badges">
           <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/version-4.0.0-ed6f75' alt="version"></amp-img>
           <amp-img layout="fixed" width="90px" height="20px" src='https://travis-ci.org/drosanda/seme-framework.svg?branch=master' alt="build status"></amp-img>
@@ -157,6 +150,29 @@ export default {
       logo: require('~/static/logo.png'),
       ga: (process.env.ORIGIN_URL || 'http://localhost:3001/')+'ga.json',
     }
-  }
+  },
+  head() {
+    return {
+      title: this.title,
+      description: this.description,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.title
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.description
+        }
+      ]
+    }
+  },
 }
 </script>

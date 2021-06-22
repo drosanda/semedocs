@@ -2,14 +2,7 @@
   <amp-body>
     <div class="main-content columns is-fullheight">
       <amp-sidebar id="sidebar1" layout="nodisplay" side="left" on="sidebarOpen:focusOnMe.focus">
-        <amp-img
-          alt="Seme Framework Logo"
-          :src="logo"
-          layout="responsive"
-          width="240"
-          height="40"
-        >
-        </amp-img>
+        <amp-img :src="logo" width="240" height="40" layout="responsive" alt="Seme Framework Logo"></amp-img>
         <div class="badges">
           <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/version-3.3.0-ed6f75' alt="version"></amp-img>
           <amp-img layout="fixed" width="90px" height="20px" src='https://travis-ci.org/drosanda/seme-framework.svg?branch=master' alt="build status"></amp-img>
@@ -51,7 +44,8 @@ export default {
     return {
       name: 'SemeDocs',
       title: 'Seme Framework Documentation v3.3.0',
-      description: 'Deployable and lightweight PHP MVC framework that suitable for small and medium web app'
+      description: 'Deployable and lightweight PHP MVC framework that suitable for small and medium web app',
+      logo: require('~/static/logo.png'),
     }
   },
   head() {

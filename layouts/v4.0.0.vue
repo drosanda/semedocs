@@ -2,14 +2,7 @@
   <amp-body>
     <div class="main-content columns is-fullheight">
       <amp-sidebar id="sidebar1" layout="nodisplay" side="left" on="sidebarOpen:focusOnMe.focus">
-        <amp-img
-          alt="Seme Framework Logo"
-          :src="logo"
-          layout="responsive"
-          width="240"
-          height="40"
-        >
-        </amp-img>
+        <amp-img :src="logo" width="240" height="40" layout="responsive" alt="Seme Framework Logo"></amp-img>
         <div class="badges">
           <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/version-4.0.0-ed6f75' alt="version"></amp-img>
           <amp-img layout="fixed" width="90px" height="20px" src='https://travis-ci.org/drosanda/seme-framework.svg?branch=master' alt="build status"></amp-img>
@@ -22,7 +15,7 @@
           <li>
             <nuxt-link to="/4.0.0/configuration/">Configuration</nuxt-link>
             <ul>
-            <li><nuxt-link to="/4.0.0/configuration/db-connection/">Database Connection</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/configuration/db-connection/">Database Connection</nuxt-link></li>
               <li><nuxt-link to="/4.0.0/configuration/url/">URL Routing</nuxt-link></li>
               <li><nuxt-link to="/4.0.0/configuration/session/">Session</nuxt-link></li>
               <li><nuxt-link to="/4.0.0/configuration/development/">Development</nuxt-link></li>
@@ -124,27 +117,27 @@
         </ul>
       </amp-sidebar>
       <button
-        class="hamburger"
-        on='tap:sidebar1.toggle'
-        aria-label="Click to open sidebar"
-        >
-        <div class="hamburger"></div>
-      </button>
-      <div class="container column is-9">
-        <nuxt />
+      class="hamburger"
+      on='tap:sidebar1.toggle'
+      aria-label="Click to open sidebar"
+      >
+      <div class="hamburger"></div>
+    </button>
+    <div class="container column is-9">
+      <nuxt />
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p class="">Copyright &copy; 2014-2021. Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
+        <p><small>Last updated on May 30, 2021</small></p>
       </div>
     </div>
-    <footer class="footer">
-      <div class="container">
-        <div class="content has-text-centered">
-          <p class="">Copyright &copy; 2014-2021. Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
-          <p><small>Last updated on May 30, 2021</small></p>
-        </div>
-      </div>
-    </footer>
-    <amp-analytics type="googleanalytics" id="analytics1" :config="ga">
-    </amp-analytics>
-  </amp-body>
+  </footer>
+  <amp-analytics type="googleanalytics" id="analytics1" :config="ga">
+  </amp-analytics>
+</amp-body>
 
 </template>
 

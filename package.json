@@ -32,6 +32,7 @@
     "core-js": "^3.9.1",
     "dotenv": "^9.0.2",
     "nuxt": "^2.15.3",
+    "nuxt-canonical": "^1.0.6",
     "nuxt-highlightjs": "^1.0.1",
     "nuxt-jsonld": "^1.5.1",
     "vue-highlight.js": "^4.0.1-beta"
