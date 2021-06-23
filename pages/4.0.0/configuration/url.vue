@@ -32,16 +32,18 @@
             <pre>$site = &#x22;http://localhost:8080/&#x22;;</pre>
 
             <div class="message is-info">
-  <div class="message-body">
-              <p><b>Base URL with custom port</b></p>
-              <p>if using <code>$_SERVER[&#x27;HTTP_HOST&#x27;]</code> there is no necessary to add suffix port after it.</p>
-            </div></div>
+              <div class="message-body">
+                <p><b>Base URL with custom port</b></p>
+                <p>if using <code>$_SERVER[&#x27;HTTP_HOST&#x27;]</code> there is no necessary to add suffix port after it.</p>
+              </div>
+            </div>
 
             <div class="message is-info">
-  <div class="message-body">
-              <p><b>Accessing base URL (<code>$site</code>) value</b></p>
-              <p>The <NuxtLink to="/4.0.0/globals/functions/">base_url()</NuxtLink> global function is for returning value of <code>$site</code>.</p>
-            </div></div>
+              <div class="message-body">
+                <p><b>Accessing base URL (<code>$site</code>) value</b></p>
+                <p>The <NuxtLink to="/4.0.0/globals/functions/">base_url()</NuxtLink> global function is for returning value of <code>$site</code>.</p>
+              </div>
+            </div>
 
             <h2>Admin Secret URL</h2>
             <p>The special base url configuration for admin that point to  <code>app/controller/admin/*</code>.</p>
@@ -55,10 +57,11 @@
             <pre>$admin_secret_url = &#x22;manajer&#x22;;</pre>
 
             <div class="message is-info">
-  <div class="message-body">
-              <p><b>Accessing the secret admin URL (<code>$admin_secret_url</code>) value</b></p>
-              <p>The <NuxtLink to="/4.0.0/globals/functions/">base_url_admin()</NuxtLink> global function is for returning value of <code>$site.$admin_secret_url</code>.</p>
-            </div></div>
+              <div class="message-body">
+                <p><b>Accessing the secret admin URL (<code>$admin_secret_url</code>) value</b></p>
+                <p>The <NuxtLink to="/4.0.0/globals/functions/">base_url_admin()</NuxtLink> global function is for returning value of <code>$site.$admin_secret_url</code>.</p>
+              </div>
+            </div>
 
             <h2>URL Routing Method</h2>
             <p>
@@ -89,10 +92,11 @@
             <pre>$cdn_url = &#x22;http://cdn.cenah.co.id/seme-framework/&#x22;;</pre>
 
             <div class="message is-info">
-  <div class="message-body">
-              <p><b>Accessing the CDN URL (<code>$cdn_url</code>) value</b></p>
-              <p>The <NuxtLink to="/4.0.0/globals/functions/">$this->cdn_url()</NuxtLink> method form <code>SENE_Controller</code> class is for returning value of <code>$cdn_url</code> value.</p>
-            </div></div>
+              <div class="message-body">
+                <p><b>Accessing the CDN URL (<code>$cdn_url</code>) value</b></p>
+                <p>The <NuxtLink to="/4.0.0/globals/functions/">$this->cdn_url()</NuxtLink> method form <code>SENE_Controller</code> class is for returning value of <code>$cdn_url</code> value.</p>
+              </div>
+            </div>
 
             <hr>
 
@@ -105,7 +109,7 @@
       <div class="nav-bottom">
         <div class="nav-bottom-left">
           <nuxt-link to="/4.0.0/configuration/" class="btn">
-          <i class="fa fa-chevron-left"></i>
+            <i class="fa fa-chevron-left"></i>
             Basic Configuration
           </nuxt-link>
         </div>
@@ -121,37 +125,108 @@
   </div>
 </template>
 <script>
-  export default {
-    layout: 'v4.0.0',
-    data (){
-      return {
-        name: 'Seme Framework v4.0.0',
-        suffix: ' - Seme Framework 4',
-        title: 'URL Configuration',
-        description: 'Learn more about URL Configuration of Seme Framework version 4.0.0 through this documentation.'
-      }
-    },
-    head() {
-      return {
-        title: this.title+this.suffix,
-        meta: [
-          {
-            hid: 'description',
-            name: 'description',
-            content: this.description
-          },
-          {
-            hid: 'og:title',
-            name: 'og:title',
-            content: this.name+': '+this.title
-          },
-          {
-            hid: 'og:description',
-            name: 'og:description',
-            content: this.description
-          }
-        ]
-      }
+export default {
+  layout: 'v4.0.0',
+  data (){
+    return {
+      name: 'Seme Framework v4.0.0',
+      suffix: ' - Seme Framework 4',
+      title: 'URL Configuration',
+      description: 'Learn more about URL Configuration of Seme Framework version 4.0.0 through this documentation.',
+      breadcrumbs: [
+        {
+          url: process.env.BASE_URL || 'http://localhost:3001',
+          text: 'Seme Framework',
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/',
+          text: '4.0.0',
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/configuration/',
+          text: 'Configuration',
+        }
+      ]
     }
+  },
+  head() {
+    return {
+      title: this.title+this.suffix,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.name+': '+this.title
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.description
+        }
+      ]
+    }
+  },
+  jsonld() {
+    const items = this.breadcrumbs.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        "@type": "WebPage",
+        '@id': item.url,
+        name: item.text,
+      },
+    }));
+    return [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: items,
+      },
+      {
+        "@type": "NewsArticle",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+        },
+        "headline": (this.headline || this.title),
+        "image": [
+          (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
+        ],
+        "dateCreated": "2020-06-11T10:12:00+07:00",
+        "datePublished": "2020-06-11T10:12:00+07:00",
+        "dateModified": "2021-06-23T19:27:17+07:00",
+        "author": {
+          "@type": "Person",
+          "gender": "Male",
+          "name": "Daeng Rosanda, S.Kom",
+          "alternateName": "Daeng Rosanda",
+          "jobTitle": "Founder",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Cipta Esensi Merenah",
+            "email": "hi@cenah.co.id"
+          }
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Cipta Esensi Merenah",
+          "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+          "logo": {
+            "@type": "ImageObject",
+            "name": "logo Cipta Esensi Merenah",
+            "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+            "width": "256px",
+            "height": "62px"
+          }
+        },
+        "description": this.description
+      }
+    ];
   }
+}
 </script>

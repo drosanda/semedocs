@@ -164,7 +164,7 @@ class Blog_Model extends SENE_Model{
           ],
           "dateCreated": "2020-06-11T10:12:00+07:00",
           "datePublished": "2020-06-11T10:12:00+07:00",
-          "dateModified": "2021-06-32T15:26:17+07:00",
+          "dateModified": "2021-06-23T15:26:17+07:00",
           "author": {
             "@type": "Person",
             "gender": "Male",
