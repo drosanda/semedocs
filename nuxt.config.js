@@ -22,7 +22,7 @@ export default {
       { hid: 'theme-color', property: 'theme-color', content: '#fb898f'},
       { hid: 'og:title', name: 'og:description', content: 'Seme Framework Documentation'},
       { hid: 'og:description', name: 'og:description', content: 'Deployable and lightweight PHP MVC framework that suitable for small and medium web app'},
-      { hid: 'og:image', name: 'og:image', content: (process.env.CDN_URL || 'http://localhost:3001')+'/static/fbshare.png'}
+      { hid: 'og:image', name: 'og:image', content: (process.env.CDN_URL || 'http://localhost:3001')+'/fbshare.png'}
     ],
     link: [
       { rel: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' },
@@ -34,7 +34,7 @@ export default {
     meta: {
       ogHost: process.env.ORIGIN_URL || 'http://localhost:3001',
       ogImage: {
-        path: (process.env.CDN_URL || 'http://localhost:3001')+'/static/carbon.png',
+        path: (process.env.CDN_URL || 'http://localhost:3001')+'/carbon.png',
         width: '1480px',
         height: '1038px',
         type: 'image/png'
