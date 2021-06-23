@@ -18,10 +18,11 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Deployable and lightweight PHP MVC framework that suitable for small and medium web app' },
       { hid: 'robots1', name: 'robots', content: 'INDEX,FOLLOW'},
-      { hid: 'fbid', property: 'fb:app_id', content: '626835541386275'},
+      { hid: 'fbid', property: 'fb:app_id', content: '918859565356038'},
       { hid: 'theme-color', property: 'theme-color', content: '#fb898f'},
       { hid: 'og:title', name: 'og:description', content: 'Seme Framework Documentation'},
-      { hid: 'og:description', name: 'og:description', content: 'Deployable and lightweight PHP MVC framework that suitable for small and medium web app'}
+      { hid: 'og:description', name: 'og:description', content: 'Deployable and lightweight PHP MVC framework that suitable for small and medium web app'},
+      { hid: 'og:image', name: 'og:image', content: (process.env.CDN_URL || 'http://localhost:3001')+'/static/fbshare.png'}
     ],
     link: [
       { rel: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' },
@@ -33,7 +34,7 @@ export default {
     meta: {
       ogHost: process.env.ORIGIN_URL || 'http://localhost:3001',
       ogImage: {
-        path: '~/static/carbon.png',
+        path: (process.env.CDN_URL || 'http://localhost:3001')+'/static/carbon.png',
         width: '1480px',
         height: '1038px',
         type: 'image/png'

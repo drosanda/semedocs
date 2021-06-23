@@ -152,7 +152,7 @@ class Blog extends SENE_Controller {
         ]
       }
     },
-    jsonld() {
+    jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
       const items = this.breadcrumbs.map((item, index) => ({
         '@type': 'ListItem',
         position: index + 1,
