@@ -32,9 +32,8 @@ export default {
   },
   pwa: {
     meta: {
-      ogHost: process.env.ORIGIN_URL || 'http://localhost:3001',
       ogImage: {
-        path: (process.env.CDN_URL || 'http://localhost:3001')+'/carbon.png',
+        path: (process.env.CDN_URL || 'http://localhost:3001')+'/icon.png',
         width: '1480px',
         height: '1038px',
         type: 'image/png'
