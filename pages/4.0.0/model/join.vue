@@ -79,7 +79,7 @@ class Blog_Model extends SENE_Model{
     data (){
       return {
         name: 'Seme Framework v4.0.0',
-        suffix: ' - Seme Framework v4.0.0 Documentation',
+        suffix: ' - Seme Framework 4',
         title: 'Model::join method',
         description: 'Learn more about join method on SENE_Model class from Seme Framework.'
       }

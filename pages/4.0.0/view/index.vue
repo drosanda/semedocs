@@ -212,7 +212,7 @@ class Home extends SENE_Controller{
     data() {
       return {
         name: 'Seme Framework v4.0.0',
-        suffix: ' - Seme Framework v4.0.0 Documentation',
+        suffix: ' - Seme Framework 4',
         title: 'View from SENE_Controller',
         description: 'Learn more about View from SENE_Controller on Seme Framework version 4.0.0'
       }

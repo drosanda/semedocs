@@ -60,7 +60,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework v4.0.0',
-      suffix: ' - Seme Framework v4.0.0 Documentation',
+      suffix: ' - Seme Framework 4',
       title: 'Model::order_by method',
       description: 'Learn more about order_by method on SENE_Model class from Seme Framework.'
     }

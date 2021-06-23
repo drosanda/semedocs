@@ -251,7 +251,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework v4.0.0',
-      suffix: ' - Seme Framework v4.0.0 Documentation',
+      suffix: ' - Seme Framework 4',
       title: 'Tutorial: Get Data',
       description: 'Learn more about obtaining data from model tutorial by Seme Framework version 4.0.0 through this documentation.',dbCreate: require('~/assets/img/tutorial/phpmyadmin-db-create.png'),
       dbImport: require('~/assets/img/tutorial/phpmyadmin-db-import.png'),

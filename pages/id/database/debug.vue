@@ -41,8 +41,8 @@ export default {
   layout: 'id',
   data (){
     return {
-      name: 'Seme Framework v4.0.0',
-      suffix: ' - Seme Framework Bahasa Indonesia',
+      name: 'Seme Framework Bahasa Indonesia',
+      suffix: ' - Seme Framework v4',
       title: 'Debug Query Database',
       description: 'Pelajari selengkapnya tentang how to debug query from query builder using melalui dokumentasi Seme Framework versi 4.0.0.'
     }

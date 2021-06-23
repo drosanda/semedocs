@@ -86,8 +86,8 @@
     layout: 'id',
     data() {
       return {
-        name: 'Seme Framework v4.0.0',
-        suffix: ' - Seme Framework Bahasa Indonesia',
+        name: 'Seme Framework Bahasa Indonesia',
+        suffix: ' - Seme Framework v4',
         title: 'Metode load dari SENE_Controller',
         description: 'Metode load dari kelas SENE_Controller dalam SEME Framework versi 4.0.0 digunakan untuk memanggil model kedalam kelas controller',
         breadcrumbs: [

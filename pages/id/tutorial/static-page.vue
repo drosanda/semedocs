@@ -500,8 +500,8 @@ export default {
   layout: 'id',
   data (){
     return {
-      name: 'Seme Framework v4.0.0',
-      suffix: ' - Seme Framework Bahasa Indonesia',
+      name: 'Seme Framework Bahasa Indonesia',
+      suffix: ' - Seme Framework v4',
       title: 'Tutorial: Static Page',
       description: 'Pelajari selengkapnya tentang creating a static page using Seme Framework version 4.0.0.'
     }

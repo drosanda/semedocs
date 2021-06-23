@@ -242,7 +242,7 @@ if($sc-&#x3E;status == 200){
     data() {
       return {
         name: 'Seme Framework v4.0.0',
-        suffix: ' - Seme Framework v4.0.0 Documentation',
+        suffix: ' - Seme Framework 4',
         title: 'Input Method from SENE_Controller',
         description: 'Learn more about Input Method like $_GET, $_POST, $_REQUEST from SENE_Controller on Seme Framework version 4.0.0'
       }

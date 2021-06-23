@@ -82,7 +82,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework v4.0.0',
-      suffix: ' - Seme Framework v4.0.0 Documentation',
+      suffix: ' - Seme Framework 4',
       title: 'Model::get method',
       description: 'Learn more about get method on SENE_Model class from Seme Framework.'
     }

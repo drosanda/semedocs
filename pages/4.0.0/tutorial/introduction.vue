@@ -494,7 +494,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework v4.0.0',
-      suffix: ' - Seme Framework v4.0.0 Documentation',
+      suffix: ' - Seme Framework 4',
       title: 'Tutorial: Introduction',
       description: 'Learn more about introduction tutorial of Seme Framework version 4.0.0 through this documentation.',
       hlWorld: require('~/assets/img/hello-world.png'),

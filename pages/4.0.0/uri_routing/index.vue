@@ -115,7 +115,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework v4.0.0',
-      suffix: ' - Seme Framework v4.0.0 Documentation',
+      suffix: ' - Seme Framework 4',
       title: 'URI Routing',
       description: 'Learn more about the URI Routing of Seme Framework version 4.0.0 through this documentation.'
     }

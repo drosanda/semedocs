@@ -41,8 +41,8 @@ export default {
   layout: 'id',
   data() {
     return {
-      name: 'Seme Framework v4.0.0',
-      suffix: ' - Seme Framework Bahasa Indonesia',
+      name: 'Seme Framework Bahasa Indonesia',
+      suffix: ' - Seme Framework v4',
       title: 'Membuat Tema',
       description: 'Pelajari selengkapnya tentang Theme View untuk Seme Framework versi 4.0.0',
       breadcrumbs: [

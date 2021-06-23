@@ -85,7 +85,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework v4.0.0',
-      suffix: ' - Seme Framework v4.0.0 Documentation',
+      suffix: ' - Seme Framework 4',
       title: 'Model::limit',
       description: 'Learn more about limit method from Seme Framework model class version 4.0.0 through this documentation.'
     }

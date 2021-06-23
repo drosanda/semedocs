@@ -358,8 +358,8 @@ class Home extends SENE_Controller{
     layout: 'id',
     data() {
       return {
-        name: 'Seme Framework v4.0.0',
-        suffix: ' - Seme Framework Bahasa Indonesia',
+        name: 'Seme Framework Bahasa Indonesia',
+        suffix: ' - Seme Framework v4',
         title: 'View',
         description: 'Pelajari selengkapnya tentang konsep View di Seme Framework versi 4.0.0',
         breadcrumbs: [

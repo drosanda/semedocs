@@ -79,8 +79,7 @@
     layout: 'id',
     data() {
       return {
-        name: 'Seme Framework v4.0.0',
-        suffix: ' - Seme Framework Bahasa Indonesia',
+        name: 'Seme Framework Bahasa Indonesia',
         title: 'Persyarataan',
         description: 'Pelajari selengkapnya tentang Persyarataan penggunaan Seme Framework untuk versi 4.0.0',
         breadcrumbs: [

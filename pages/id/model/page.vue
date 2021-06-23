@@ -84,7 +84,7 @@ export default {
   layout: 'id',
   data (){
     return {
-      name: 'Seme Framework v4.0.0',
+      name: 'Seme Framework Bahasa Indonesia',
       suffix: ' - Seme Framework v4.0.0 Documentation',
       title: 'Model::page',
       description: 'Pelajari selengkapnya tentang penggunaan page method pada kelas Model di Seme Framework.'

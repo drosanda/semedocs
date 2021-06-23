@@ -242,7 +242,7 @@ $semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;
     data (){
       return {
         name: 'Seme Framework v4.0.0',
-        suffix: ' - Seme Framework v4.0.0 Documentation',
+        suffix: ' - Seme Framework 4',
         title: 'Configuration',
         description: 'Learn more about Configuration of Seme Framework version 4.0.0 through this documentation.'
       }

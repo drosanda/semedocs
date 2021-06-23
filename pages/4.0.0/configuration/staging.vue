@@ -55,7 +55,7 @@
     data() {
       return {
         name: 'Seme Framework v4.0.0',
-        suffix: ' - Seme Framework v4.0.0 Documentation',
+        suffix: ' - Seme Framework 4',
         title: 'Staging Phase Configuration',
         description: 'Learn more about how to configuring Seme Framework version 4.0.0 in staging phase'
       }

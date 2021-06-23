@@ -104,8 +104,8 @@ public function index(){
     layout: 'id',
     data() {
       return {
-        name: 'Seme Framework v4.0.0',
-        suffix: ' - Seme Framework Bahasa Indonesia',
+        name: 'Seme Framework Bahasa Indonesia',
+        suffix: ' - Seme Framework v4',
         title: 'Metode setKey dari SENE_Controller',
         description: 'Metode setKey dari kelas SENE_Controller dalam SEME Framework versi 4.0.0 digunakan untuk memanggil variabel yang tersimpan didalam $_SESSION.'
       }

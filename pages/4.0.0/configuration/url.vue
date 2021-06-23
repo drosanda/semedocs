@@ -126,7 +126,7 @@
     data (){
       return {
         name: 'Seme Framework v4.0.0',
-        suffix: ' - Seme Framework v4.0.0 Documentation',
+        suffix: ' - Seme Framework 4',
         title: 'URL Configuration',
         description: 'Learn more about URL Configuration of Seme Framework version 4.0.0 through this documentation.'
       }

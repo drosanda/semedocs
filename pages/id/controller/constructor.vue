@@ -85,8 +85,8 @@ parent::__construct();
     layout: 'id',
     data() {
       return {
-        name: 'Seme Framework v4.0.0',
-        suffix: ' - Seme Framework Bahasa Indonesia',
+        name: 'Seme Framework Bahasa Indonesia',
+        suffix: ' - Seme Framework v4',
         title: 'Construtor Kelas Controller',
         description: 'Pelajari selengkapnya tentang __construct Method from SENE_Controller on Seme Framework versi 4.0.0',
         breadcrumbs: [

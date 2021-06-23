@@ -97,7 +97,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework v4.0.0',
-      suffix: ' - Seme Framework v4.0.0 Documentation',
+      suffix: ' - Seme Framework 4',
       title: 'Database: Setup',
       description: 'Learn more about setup database connection using Seme Framework version 4.0.0.'
     }
