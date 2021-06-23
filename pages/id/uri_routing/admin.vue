@@ -13,15 +13,15 @@
         <div class="column">
           <div class="content">
             <h1 class="">Perutean URI (<em>URI Routing</em>) untuk admin</h1>
-            <p>Seme Framework has default feature to overide all routes below <b>app/controller/admin</b>. This feature comes when user need some extra security for securing admin pages. Not only re-routes, Seme Framework has another base_url function for compatibilty routing between admin page. The function is <b>base_url_admin()</b>.</p>
-            <h2>Condition</h2>
-            <p>For using this feature, Seme Framework has some condition to meet such as:</p>
+            <p>Seme Framework memiliki fitur default untuk mengganti semua rute di bawah <b>app/controller/admin</b>. Fitur ini hadir ketika pengguna membutuhkan keamanan ekstra untuk mengamankan halaman admin. Tidak hanya re-route, Seme Framework memiliki fungsi base_url lain untuk kompabilitas routing antar halaman admin. Fungsinya adalah <b>base_url_admin()</b>.</p>
+            <h2>Kondisi</h2>
+            <p>Untuk menggunakan fitur ini, Seme Framework memiliki beberapa syarat yang harus dipenuhi seperti:</p>
             <ol>
-              <li><code>$site_url</code> have to fill correclty on each file configurations, e.g. <code>app/config/development.php</code>.</li>
-              <li><code>$admin_secret_url</code> on admin routing section in each file configuration is set. Default value <b>admin</b>.</li>
-              <li>Only work on controller below <code>app/controller/admin</code> folder.</li>
-              <li>If there is a controller folder match with <code>$admin_secret_url</code> value, the controller under matched will be ignored.</li>
-              <li>Use <code>base_url_admin</code> respectively instead of <code>base_url()</code>.</li>
+              <li><code>$site_url</code> harus diisi dengan benar pada setiap konfigurasi file, mis. <code>app/config/development.php</code>.</li>
+              <li><code>$admin_secret_url</code> pada bagian perutean admin di setiap konfigurasi file disetel. Nilai default <b>admin</b>.</li>
+              <li>Hanya bekerja pada pengontrol di bawah folder <code>app/controller/admin</code>.</li>
+              <li>Jika ada folder pengontrol yang cocok dengan nilai <code>$admin_secret_url</code>, pengontrol di bawah yang cocok akan diabaikan.</li>
+              <li>Gunakan <code>base_url_admin</code> masing-masing sebagai ganti <code>base_url()</code>.</li>
             </ol>
           </div>
         </div>
@@ -37,7 +37,7 @@
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/id/uri_routing/constants/" class="btn">
+          <nuxt-link to="/id/constants/" class="btn">
             Konstanta
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
@@ -52,8 +52,8 @@ export default {
   layout: 'id',
   data (){
     return {
-      name: 'Seme Framework Bahasa Indonesia',
-      suffix: ' - Seme Framework v4',
+      name: 'Seme Framework 4',
+      suffix: ' - Seme Framework 4 Bahasa Indonesia',
       title: 'Perutean URI untuk Admin',
       description: 'Pelajari selengkapnya tentang the URI Routing of melalui dokumentasi Seme Framework versi 4.0.0.',
       breadcrumbs: [
@@ -68,10 +68,6 @@ export default {
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/uri_routing/',
           text: 'Perutean URI',
-        },
-        {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/uri_routing/admin/',
-          text: 'Admin',
         }
       ]
     }
@@ -81,7 +77,7 @@ export default {
       htmlAttrs: {
         lang: 'id'
       },
-      title: this.title+' - '+this.name,
+      title: this.title+this.suffix,
       meta: [
         {
           hid: 'description',
@@ -91,7 +87,7 @@ export default {
         {
           hid: 'og:title',
           name: 'og:title',
-          content: this.title
+          content: this.name+': '+this.title
         },
         {
           hid: 'og:description',
@@ -129,7 +125,7 @@ export default {
         ],
         "dateCreated": "2020-06-11T10:12:00+07:00",
         "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-11T01:04:00+07:00",
+        "dateModified": "2021-06-23T15:54:10+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

@@ -79,8 +79,8 @@ export default {
   layout: 'id',
   data() {
     return {
-      name: 'Seme Framework Bahasa Indonesia',
-      suffix: ' - Seme Framework v4',
+      name: 'Seme Framework 4',
+      suffix: ' - Seme Framework 4 Bahasa Indonesia',
       title: 'setTheme Method from SENE_Controller',
       description: 'Pelajari selengkapnya tentang setTheme Method from SENE_Controller on Seme Framework versi 4.0.0'
     }

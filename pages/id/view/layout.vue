@@ -41,8 +41,8 @@ export default {
   layout: 'id',
   data() {
     return {
-      name: 'Seme Framework Bahasa Indonesia',
-      suffix: ' - Seme Framework v4',
+      name: 'Seme Framework 4',
+      suffix: ' - Seme Framework 4 Bahasa Indonesia',
       title: 'Membuat layout',
       description: 'Pelajari selengkapnya tentang membuat view theme layout di Seme Framework versi 4.0.0',
       breadcrumbs: [

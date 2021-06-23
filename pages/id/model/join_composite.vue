@@ -83,8 +83,8 @@ export default {
   layout: 'id',
   data (){
     return {
-      name: 'Seme Framework Bahasa Indonesia',
-      suffix: ' - Seme Framework v4',
+      name: 'Seme Framework 4',
+      suffix: ' - Seme Framework 4 Bahasa Indonesia',
       title: 'Model::join_composite method',
       description: 'Pelajari selengkapnya tentang join_composite method on SENE_Model class from Seme Framework.'
     }

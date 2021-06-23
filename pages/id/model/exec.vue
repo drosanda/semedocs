@@ -67,7 +67,7 @@ export default {
   layout: 'id',
   data (){
     return {
-      name: 'Seme Framework Bahasa Indonesia',
+      name: 'Seme Framework 4',
       suffix: ' - Documentation',
       title: 'Model::exec',
       description: 'Pelajari selengkapnya tentang Model::exec on melalui dokumentasi Seme Framework versi 4.0.0.'

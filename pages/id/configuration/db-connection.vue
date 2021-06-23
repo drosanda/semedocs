@@ -85,8 +85,8 @@
     layout: 'id',
     data (){
       return {
-        name: 'Seme Framework Bahasa Indonesia',
-        suffix: ' - Seme Framework v4',
+        name: 'Seme Framework 4',
+        suffix: ' - Seme Framework 4 Bahasa Indonesia',
         title: 'Pengaturan koneksi DB',
         description: 'Pelajari selengkapnya tentang pengaturan koneksi database untuk Seme Framework versi 4.0.0.',
         breadcrumbs: [
@@ -101,10 +101,6 @@
           {
             url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/configuration/',
             text: 'Pengaturan',
-          },
-          {
-            url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/configuration/db-connection/',
-            text: 'Koneksi DB',
           }
         ]
       }
@@ -114,7 +110,7 @@
         htmlAttrs: {
           lang: 'id'
         },
-        title: this.title+' - '+this.name,
+        title: this.title+this.suffix,
         meta: [
           {
             hid: 'description',
@@ -124,7 +120,7 @@
           {
             hid: 'og:title',
             name: 'og:title',
-            content: this.title
+            content: this.name+': '+this.title
           },
           {
             hid: 'og:description',
@@ -162,7 +158,7 @@
           ],
           "dateCreated": "2020-06-11T10:12:00+07:00",
           "datePublished": "2020-06-11T10:12:00+07:00",
-          "dateModified": "2021-06-11T01:04:00+07:00",
+          "dateModified": "2021-06-23T01:04:00+07:00",
           "author": {
             "@type": "Person",
             "gender": "Male",

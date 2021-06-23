@@ -100,7 +100,8 @@
     data() {
       return {
         fr: require('~/assets/img/first-run.png'),
-        name: 'Seme Framework Bahasa Indonesia',
+        name: 'Seme Framework 4',
+        suffix: ' - Seme Framework 4 Bahasa Indonesia',
         title: 'Download dan Instal',
         description: 'Pelajari selengkapnya tentang cara download dan instal Seme Framework versi 4.0.0',
         breadcrumbs: [
@@ -120,7 +121,7 @@
         htmlAttrs: {
           lang: 'id'
         },
-        title: this.title+' - '+this.name,
+        title: this.title+this.suffix,
         meta: [
           {
             hid: 'description',
@@ -130,7 +131,7 @@
           {
             hid: 'og:title',
             name: 'og:title',
-            content: this.title
+            content: this.name+': '+this.title
           },
           {
             hid: 'og:description',

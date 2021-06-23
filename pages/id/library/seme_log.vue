@@ -108,8 +108,8 @@
     layout: 'id',
     data() {
       return {
-        name: 'Seme Framework Bahasa Indonesia',
-        suffix: ' - Seme Framework v4',
+        name: 'Seme Framework 4',
+        suffix: ' - Seme Framework 4 Bahasa Indonesia',
         title: 'Perpustakaan Seme Log',
         description: 'Pelajari selengkapnya tentang Perpustakaan (library) Seme_Log di Seme Framework versi 4.0.0',
         breadcrumbs: [

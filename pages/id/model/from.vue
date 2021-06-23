@@ -65,8 +65,8 @@ class Blog_Model extends SENE_Model{
     layout: 'id',
     data (){
       return {
-        name: 'Seme Framework Bahasa Indonesia',
-        suffix: ' - Seme Framework v4',
+        name: 'Seme Framework 4',
+        suffix: ' - Seme Framework 4 Bahasa Indonesia',
         title: 'Model::from method',
         description: 'Pelajari selengkapnya tentang from method on SENE_Model class from Seme Framework.',
         breadcrumbs: [
@@ -94,7 +94,7 @@ class Blog_Model extends SENE_Model{
         htmlAttrs: {
           lang: 'id'
         },
-        title: this.title+' - '+this.name,
+        title: this.title+this.suffix,
         meta: [
           {
             hid: 'description',
@@ -104,7 +104,7 @@ class Blog_Model extends SENE_Model{
           {
             hid: 'og:title',
             name: 'og:title',
-            content: this.title
+            content: this.name+': '+this.title
           },
           {
             hid: 'og:description',

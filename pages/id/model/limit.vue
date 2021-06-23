@@ -90,7 +90,7 @@ export default {
   layout: 'id',
   data (){
     return {
-      name: 'Seme Framework Bahasa Indonesia',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework v4.0.0 Documentation',
       title: 'Model::limit',
       description: 'Pelajari selengkapnya tentang penggunaan limit method pada kelas Model di Seme Framework.'

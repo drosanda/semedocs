@@ -79,9 +79,10 @@
     layout: 'id',
     data() {
       return {
-        name: 'Seme Framework Bahasa Indonesia',
-        title: 'Persyarataan',
-        description: 'Pelajari selengkapnya tentang Persyarataan penggunaan Seme Framework untuk versi 4.0.0',
+        name: 'Seme Framework 4',
+        suffix: ' - Seme Framework 4 Bahasa Indonesia',
+        title: 'Persyaratan',
+        description: 'Pelajari selengkapnya tentang Persyaratan penggunaan Seme Framework untuk versi 4.0.0',
         breadcrumbs: [
           {
             url: process.env.BASE_URL || 'http://localhost:3001',
@@ -99,7 +100,7 @@
         htmlAttrs: {
           lang: 'id'
         },
-        title: this.title+' - '+this.name,
+        title: this.title+this.suffix,
         meta: [
           {
             hid: 'description',
@@ -109,7 +110,7 @@
           {
             hid: 'og:title',
             name: 'og:title',
-            content: this.title
+            content: this.name+': '+this.title
           },
           {
             hid: 'og:description',

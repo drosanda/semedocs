@@ -129,8 +129,8 @@
     layout: 'id',
     data (){
       return {
-        name: 'Seme Framework Bahasa Indonesia',
-        suffix: ' - Seme Framework v4',
+        name: 'Seme Framework 4',
+        suffix: ' - Seme Framework 4 Bahasa Indonesia',
         title: 'Pengaturan Rute URL',
         description: 'Pelajari selengkapnya tentang Pengaturan Rute URL dalam dokumentasi Seme Framework versi 4.0.0.',
         breadcrumbs: [
@@ -145,10 +145,6 @@
           {
             url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/configuration/',
             text: 'Pengaturan',
-          },
-          {
-            url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/configuration/url/',
-            text: 'Pengaturan URL',
           }
         ]
       }
@@ -158,7 +154,7 @@
         htmlAttrs: {
           lang: 'id'
         },
-        title: this.title+' - '+this.name,
+        title: this.title+this.suffix,
         meta: [
           {
             hid: 'description',
@@ -168,7 +164,7 @@
           {
             hid: 'og:title',
             name: 'og:title',
-            content: this.title
+            content: this.name+': '+this.title
           },
           {
             hid: 'og:description',

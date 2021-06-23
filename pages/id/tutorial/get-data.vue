@@ -250,8 +250,8 @@ export default {
   layout: 'id',
   data (){
     return {
-      name: 'Seme Framework Bahasa Indonesia',
-      suffix: ' - Seme Framework v4',
+      name: 'Seme Framework 4',
+      suffix: ' - Seme Framework 4 Bahasa Indonesia',
       title: 'Tutorial: Get Data',
       description: 'Pelajari selengkapnya tentang obtaining data from model tutorial by melalui dokumentasi Seme Framework versi 4.0.0.',
       dbCreate: require('~/assets/img/tutorial/phpmyadmin-db-create.png'),
@@ -270,11 +270,7 @@ export default {
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/tutorial/',
           text: 'tutorial',
-        },
-        {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/tutorial/get-data/',
-          text: 'Get data',
-        },
+        }
       ],
     }
   },
@@ -283,7 +279,7 @@ export default {
       htmlAttrs: {
         lang: 'id'
       },
-      title: this.title+' - '+this.name,
+      title: this.title+this.suffix,
       meta: [
         {
           hid: 'description',
@@ -293,7 +289,7 @@ export default {
         {
           hid: 'og:title',
           name: 'og:title',
-          content: this.title
+          content: this.name+': '+this.title
         },
         {
           hid: 'og:description',

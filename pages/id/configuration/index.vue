@@ -241,8 +241,8 @@ $semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;
     layout: 'id',
     data (){
       return {
-        name: 'Seme Framework Bahasa Indonesia',
-        suffix: ' - Seme Framework v4',
+        name: 'Seme Framework 4',
+        suffix: ' - Seme Framework 4 Bahasa Indonesia',
         title: 'Pengaturan',
         description: 'Pelajari selengkapnya tentang pengaturan melalui dokumentasi Seme Framework versi 4.0.0.',
         breadcrumbs: [
@@ -262,7 +262,7 @@ $semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;
         htmlAttrs: {
           lang: 'id'
         },
-        title: this.title+' - '+this.name,
+        title: this.title+this.suffix,
         meta: [
           {
             hid: 'description',
@@ -272,7 +272,7 @@ $semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;
           {
             hid: 'og:title',
             name: 'og:title',
-            content: this.title
+            content: this.name+': '+this.title
           },
           {
             hid: 'og:description',

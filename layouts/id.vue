@@ -101,14 +101,6 @@
             </ul>
           </li>
           <li>
-            <nuxt-link to="/id/database/">Database</nuxt-link>
-            <ul>
-              <li><nuxt-link to="/id/database/setup/">Setup</nuxt-link></li>
-              <li><nuxt-link to="/id/database/quick-start/">Memulai</nuxt-link></li>
-              <li><nuxt-link to="/id/database/query-builder/">Query Builder</nuxt-link></li>
-            </ul>
-          </li>
-          <li>
             <nuxt-link to="/id/library/">Library</nuxt-link>
           </li>
           <li>

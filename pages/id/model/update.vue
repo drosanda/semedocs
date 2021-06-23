@@ -92,8 +92,8 @@ export default {
   layout: 'id',
   data (){
     return {
-      name: 'Seme Framework Bahasa Indonesia',
-      suffix: ' - Seme Framework v4',
+      name: 'Seme Framework 4',
+      suffix: ' - Seme Framework 4 Bahasa Indonesia',
       title: 'Model::update method',
       description: 'Pelajari selengkapnya tentang update method on SENE_Model class from Seme Framework.',
       breadcrumbs: [
@@ -121,7 +121,7 @@ export default {
       htmlAttrs: {
         lang: 'id'
       },
-      title: this.title+' - '+this.name,
+      title: this.title+this.suffix,
       meta: [
         {
           hid: 'description',
@@ -131,7 +131,7 @@ export default {
         {
           hid: 'og:title',
           name: 'og:title',
-          content: this.title
+          content: this.name+': '+this.title
         },
         {
           hid: 'og:description',
