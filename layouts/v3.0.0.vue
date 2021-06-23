@@ -90,6 +90,11 @@
             hid: 'og:description',
             name: 'og:description',
             content: this.description
+          },
+          {
+            hid: 'og:url',
+            name: 'og:url',
+            content: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
           }
         ]
       }

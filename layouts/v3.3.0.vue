@@ -50,13 +50,27 @@ export default {
   },
   head() {
     return {
-      title: this.title,
-      description: this.description,
+      title: this.title+this.prefix+' '+this.name,
       meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.title
+        },
         {
           hid: 'og:description',
           name: 'og:description',
           content: this.description
+        },
+        {
+          hid: 'og:url',
+          name: 'og:url',
+          content: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
         }
       ]
     }

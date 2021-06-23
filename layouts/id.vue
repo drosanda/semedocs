@@ -133,14 +133,18 @@
 export default {
   data() {
     return {
+      name: 'Seme Framework',
+      version: 'v4.0.0',
+      prefix: ' - ',
+      title: 'Seme Framework 4 Bahasa Indonesia',
+      description: 'Dokumentasi Seme Framework 4 Bahasa Indonesia',
       logo: require('~/static/logo.png'),
       ga: (process.env.ORIGIN_URL || 'http://localhost:3001/')+'ga.json',
     }
   },
   head() {
     return {
-      title: this.title,
-      description: this.description,
+      title: this.title+this.prefix+' '+this.name,
       meta: [
         {
           hid: 'description',
@@ -156,9 +160,14 @@ export default {
           hid: 'og:description',
           name: 'og:description',
           content: this.description
+        },
+        {
+          hid: 'og:url',
+          name: 'og:url',
+          content: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
         }
       ]
     }
-  },
+  }
 }
 </script>

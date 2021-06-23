@@ -126,6 +126,7 @@ export default {
     return {
       name: 'SemeDocs',
       title: 'Seme Framework Documentation v3.1.0',
+      prefix: ' - ',
       description: 'Deployable and lightweight PHP MVC framework that suitable for small and medium web app',
       logo: require('~/static/logo.png'),
       ga: (process.env.ORIGIN_URL || 'http://localhost:3001/')+'ga.json',
@@ -133,19 +134,27 @@ export default {
   },
   head() {
     return {
-      title: this.title,
-      description: this.description,
-      link: [
-        {
-          rel: 'canonical',
-          href: 'https://seme.framework.web.id' + this.$route.path.replace(/\/+$/, '') + '/'
-        }
-      ],
+      title: this.title+this.prefix+' '+this.name,
       meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.title
+        },
         {
           hid: 'og:description',
           name: 'og:description',
           content: this.description
+        },
+        {
+          hid: 'og:url',
+          name: 'og:url',
+          content: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
         }
       ]
     }
