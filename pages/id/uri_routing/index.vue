@@ -129,7 +129,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework v4.0.0',
-      suffix: ' - Dokumentasi Seme Framework v4.0.0',
+      suffix: ' - Seme Framework Bahasa Indonesia',
       title: 'Perutean URI',
       description: 'Pelajari selengkapnya tentang the URI Routing of melalui dokumentasi Seme Framework versi 4.0.0.',
       breadcrumbs: [

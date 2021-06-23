@@ -49,7 +49,7 @@
     data() {
       return {
         name: 'Seme Framework v4.0.0',
-        suffix: ' - Dokumentasi Seme Framework v4.0.0',
+        suffix: ' - Seme Framework Bahasa Indonesia',
         title: 'Pengaturan untuk Fase Development',
         description: 'Pelajari selengkapnya tentang Pengaturan Seme Framework untuk Fase Development'
       }

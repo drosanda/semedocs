@@ -20,7 +20,7 @@
 					<pre>$this->lib('seme_email');</pre>
 					<p>You can put libary loader in constructor of controller or on each method in your controller.</p>
           <h2>Basic Usage</h2>
-          <p>Seme Log only have one method called <b>write</b> for writting log into file log. Here is the example:</p>
+          <p>Seme Email has some method, here is the list of common methods:</p>
           <pre>Class Product extends SEME_Controller{
   public function __construct(){
     $this->lib('seme_log');
@@ -40,18 +40,16 @@
         $this->seme_email->send();
   }
 }</pre>
-          <h2>Methods</h2>
-          <p>Seme Email has several methods that can used for sending email properly.</p>
-          <h3>From Method</h3>
-          <p>This method mandatory for declare origin of email. Required two parameter, first parameter is email and the second parameter is name of sender.</p>
-          <h3>Subject Method</h3>
-          <p>This method mandatory for declare title of email. Required one parameter contained about your summary.</p>
-          <h3>Subject Method</h3>
-          <p>This method mandatory for declare title of email. Required one parameter contained about your title or summary from email content.</p>
-          <h3>To Method</h3>
-          <p>This method mandatory for declare target of email. Required two parameter, first parameter is email and the second parameter is name of sender. Can be called more than once for sending multiple email address.</p>
-          <h3>Template Method</h3>
-          <p>This method only required if you one to create html formatted email. Default location about this file is in kero/lib/seme_email/template/. You can replace the string with "replacer" for creating dynamic email. Here is the example:</p>
+<p>Seme Email has several methods that can used for sending email properly.</p>
+<h3>From Method</h3>
+<p>This method mandatory for declare origin of email. Required two parameter, first parameter is email and the second parameter is name of sender.</p>
+<h3>Subject Method</h3>
+<p>This method mandatory for declare title of email. Required one parameter contained about your summary.</p>
+<h3>To Method</h3>
+<p>This method mandatory for declare target of email. Required two parameter, first parameter is email and the second parameter is name of sender. Can be called more than once for sending multiple email address.</p>
+<h3>Template Method</h3>
+<p>This method only required if you one to create html formatted email. Default location about this file is in kero/lib/seme_email/template/. You can replace the string with "replacer" for creating dynamic email. Here is the example:</p>
+
           <pre>&#x3C;html&#x3E;
   &#x3C;body&#x3E;
     &#x3C;p&#x3E;Hi {{first_name}},&#x3C;/p&#x3E;
@@ -91,4 +89,3 @@ $this->seme_email->replacer($replacer);</pre>
     // page component definitions
   }
 </script>
-

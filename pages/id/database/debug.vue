@@ -42,7 +42,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework v4.0.0',
-      suffix: ' - Dokumentasi Seme Framework v4.0.0',
+      suffix: ' - Seme Framework Bahasa Indonesia',
       title: 'Debug Query Database',
       description: 'Pelajari selengkapnya tentang how to debug query from query builder using melalui dokumentasi Seme Framework versi 4.0.0.'
     }

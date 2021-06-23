@@ -111,18 +111,15 @@
     layout: 'id',
     data (){
       return {
+        name: 'Seme Framework v4.0.0',
         title: 'Dokumentasi Resmi Bahasa Indonesia',
-        suffix: ' - Seme Framework versi 4.0.0',
+        suffix: ' - Seme Framework v4.0.0',
         description: 'Seme Framework adalah Framework dengan konsep MVC untuk PHP yang ringan untuk dikembangkan.',
         semecarbon: require('~/static/carbon.png'),
         breadcrumbs: [
           {
             url: process.env.BASE_URL || 'http://localhost:3001',
             text: 'Seme Framework',
-          },
-          {
-            url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/',
-            text: 'ID',
           }
         ]
       }

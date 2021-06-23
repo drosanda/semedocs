@@ -78,7 +78,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework v4.0.0',
-      suffix: ' - Dokumentasi Seme Framework v4.0.0',
+      suffix: ' - Seme Framework Bahasa Indonesia',
       title: 'Konstanta',
       description: 'Pelajari selengkapnya tentang Konstanta yang ada pada Seme Framework versi 4.0.0.'
     }

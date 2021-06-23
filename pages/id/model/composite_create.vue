@@ -80,7 +80,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework v4.0.0',
-      suffix: ' - Dokumentasi Seme Framework v4.0.0',
+      suffix: ' - Seme Framework Bahasa Indonesia',
       title: 'Model::composite_create method',
       description: 'Pelajari selengkapnya tentang composite_create method on SENE_Model class from Seme Framework.'
     }

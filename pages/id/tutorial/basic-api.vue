@@ -620,7 +620,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework v4.0.0',
-      suffix: ' - Dokumentasi Seme Framework v4.0.0',
+      suffix: ' - Seme Framework Bahasa Indonesia',
       title: 'Tutorial: Create basic API',
       description: 'Pelajari selengkapnya tentang creating API by using melalui dokumentasi Seme Framework versi 4.0.0.',
       pCreate: require('~/assets/img/tutorial/basic-api/postman-create.png'),

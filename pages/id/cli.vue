@@ -63,7 +63,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework v4.0.0',
-      suffix: ' - Dokumentasi Seme Framework v4.0.0',
+      suffix: ' - Seme Framework Bahasa Indonesia',
       title: 'Command Line Interface (CLI)',
       description: 'Pelajari selengkapnya tentang how to use Command Line Interface (CLI) on melalui dokumentasi Seme Framework versi 4.0.0.'
     }

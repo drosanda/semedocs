@@ -471,7 +471,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework v4.0.0',
-      suffix: ' - Dokumentasi Seme Framework v4.0.0',
+      suffix: ' - Seme Framework Bahasa Indonesia',
       title: 'Kelas Controller',
       description: 'Pelajari selengkapnya tentang controller class of melalui dokumentasi Seme Framework versi 4.0.0.',
       breadcrumbs: [

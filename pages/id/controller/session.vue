@@ -75,7 +75,7 @@ export default {
   data() {
     return {
       name: 'Seme Framework v4.0.0',
-      suffix: ' - Dokumentasi Seme Framework v4.0.0',
+      suffix: ' - Seme Framework Bahasa Indonesia',
       title: 'Menggunakan Session',
       description: 'Pelajari selengkapnya tentang Using Session from SENE_Controller on Seme Framework versi 4.0.0',
       breadcrumbs: [

@@ -242,7 +242,7 @@ $semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;
     data (){
       return {
         name: 'Seme Framework v4.0.0',
-        suffix: ' - Dokumentasi Seme Framework v4.0.0',
+        suffix: ' - Seme Framework Bahasa Indonesia',
         title: 'Pengaturan',
         description: 'Pelajari selengkapnya tentang pengaturan melalui dokumentasi Seme Framework versi 4.0.0.',
         breadcrumbs: [

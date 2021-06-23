@@ -88,7 +88,7 @@ class Login extends SENE_Controller{
     data() {
       return {
         name: 'Seme Framework v4.0.0',
-        suffix: ' - Dokumentasi Seme Framework v4.0.0',
+        suffix: ' - Seme Framework Bahasa Indonesia',
         title: 'Metode getKey dari SENE_Controller',
         description: 'Metode getKey dari kelas SENE_Controller dalam SEME Framework versi 4.0.0 digunakan untuk memanggil variabel yang tersimpan didalam $_SESSION.'
       }

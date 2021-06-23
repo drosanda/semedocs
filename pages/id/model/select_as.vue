@@ -104,7 +104,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework v4.0.0',
-      suffix: ' - Dokumentasi Seme Framework v4.0.0',
+      suffix: ' - Seme Framework Bahasa Indonesia',
       title: 'Model::select_as method',
       description: 'Pelajari selengkapnya tentang select_as method on SENE_Model class from Seme Framework.'
     }

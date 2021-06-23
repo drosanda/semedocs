@@ -86,7 +86,7 @@
     data (){
       return {
         name: 'Seme Framework v4.0.0',
-        suffix: ' - Dokumentasi Seme Framework v4.0.0',
+        suffix: ' - Seme Framework Bahasa Indonesia',
         title: 'Pengaturan koneksi DB',
         description: 'Pelajari selengkapnya tentang pengaturan koneksi database untuk Seme Framework versi 4.0.0.',
         breadcrumbs: [

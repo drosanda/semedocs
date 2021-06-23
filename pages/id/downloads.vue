@@ -100,7 +100,7 @@
     data() {
       return {
         name: 'Seme Framework v4.0.0',
-        suffix: ' - Dokumentasi Seme Framework v4.0.0',
+        suffix: ' - Seme Framework Bahasa Indonesia',
         title: 'Download dan Instal',
         description: 'Pelajari selengkapnya tentang cara download dan instal Seme Framework versi 4.0.0',
         breadcrumbs: [
@@ -111,10 +111,6 @@
           {
             url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/',
             text: 'ID',
-          },
-          {
-            url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/configuration/',
-            text: 'Download dan Install',
           }
         ]
       }

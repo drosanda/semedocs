@@ -488,7 +488,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework v4.0.0',
-      suffix: ' - Dokumentasi Seme Framework v4.0.0',
+      suffix: ' - Seme Framework Bahasa Indonesia',
       title: 'Perkenalan penggunaan',
       description: 'Perkenalan penggunaan dasar penggunaan Seme Framework versi 4.0.0.',
       helloWorld: require('~/assets/img/tutorial/introduction/hello-world.png'),

@@ -66,7 +66,7 @@ class Blog_Model extends SENE_Model{
     data (){
       return {
         name: 'Seme Framework v4.0.0',
-        suffix: ' - Dokumentasi Seme Framework v4.0.0',
+        suffix: ' - Seme Framework Bahasa Indonesia',
         title: 'Model::from method',
         description: 'Pelajari selengkapnya tentang from method on SENE_Model class from Seme Framework.',
         breadcrumbs: [

@@ -80,7 +80,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework v4.0.0',
-      suffix: ' - Dokumentasi Seme Framework v4.0.0',
+      suffix: ' - Seme Framework Bahasa Indonesia',
       title: 'Tutorial: Hello from Model',
       description: 'Pelajari selengkapnya tentang basic usage of Seme Framework model version 4.0.0 through this documentation.'
     }

@@ -244,7 +244,7 @@ $this-&#x3E;db-&#x3E;select(&#x27;column_name&#x27;,&#x27;cn&#x27;);
     data (){
       return {
         name: 'Seme Framework v4.0.0',
-        suffix: ' - Dokumentasi Seme Framework v4.0.0',
+        suffix: ' - Seme Framework Bahasa Indonesia',
         title: 'Database: Query Builder',
         description: 'Pelajari selengkapnya tentang Database Query Builder of melalui dokumentasi Seme Framework versi 4.0.0.'
       }

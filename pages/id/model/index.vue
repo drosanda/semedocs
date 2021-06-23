@@ -195,7 +195,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework v4.0.0',
-      suffix: ' - Dokumentasi Seme Framework v4.0.0',
+      suffix: ' - Seme Framework Bahasa Indonesia',
       title: 'Kelas Model',
       description: 'Pelajari selengkapnya tentang Kelas Model of melalui dokumentasi Seme Framework versi 4.0.0.',
       breadcrumbs: [

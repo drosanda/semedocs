@@ -130,7 +130,7 @@
     data (){
       return {
         name: 'Seme Framework v4.0.0',
-        suffix: ' - Dokumentasi Seme Framework v4.0.0',
+        suffix: ' - Seme Framework Bahasa Indonesia',
         title: 'Pengaturan Rute URL',
         description: 'Pelajari selengkapnya tentang Pengaturan Rute URL dalam dokumentasi Seme Framework versi 4.0.0.',
         breadcrumbs: [

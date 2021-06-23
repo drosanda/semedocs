@@ -240,7 +240,7 @@ if($sc-&#x3E;status == 200){
     data() {
       return {
         name: 'Seme Framework v4.0.0',
-        suffix: ' - Dokumentasi Seme Framework v4.0.0',
+        suffix: ' - Seme Framework Bahasa Indonesia',
         title: 'Input Method from SENE_Controller',
         description: 'Pelajari selengkapnya tentang Input Method like $_GET, $_POST, $_REQUEST from SENE_Controller on Seme Framework versi 4.0.0'
       }

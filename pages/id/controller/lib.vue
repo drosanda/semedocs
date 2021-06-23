@@ -145,7 +145,7 @@ class Blog extends SENE_Controller {
     data() {
       return {
         name: 'Seme Framework v4.0.0',
-        suffix: ' - Dokumentasi Seme Framework v4.0.0',
+        suffix: ' - Seme Framework Bahasa Indonesia',
         title: 'Lib Method from SENE_Controller',
         description: 'Pelajari selengkapnya tentang lib Method from SENE_Controller on Seme Framework versi 4.0.0'
       }
