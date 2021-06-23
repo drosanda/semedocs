@@ -61,8 +61,8 @@ export default {
   data (){
     return {
       name: 'Seme Framework v3.0.0',
-      suffix: ' - Documentation',
-      title: 'Seme Framework v3.0.0 Documentation',
+      suffix: ' - Seme Framework 3.0.0',
+      title: 'Welcome',
       description: 'Learn more about Seme Framework version 3.0.0 through this documentation.',
       breadcrumbs: [
         {

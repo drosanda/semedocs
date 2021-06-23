@@ -99,9 +99,19 @@ class Blog_Model extends SENE_Model{
     data (){
       return {
         name: 'Seme Framework v3.2.1',
-        suffix: ' - Seme Framework v3.2.1 Documentation',
-        title: 'Class Model',
-        description: 'Learn more about Class Model of Seme Framework version 3.2.1 through this documentation.'
+        suffix: ' - Seme Framework 3.2.1',
+        title: 'Model',
+        description: 'Learn more about Class Model of Seme Framework version 3.2.1 through this documentation.',
+        breadcrumbs: [
+          {
+            url: process.env.BASE_URL || 'http://localhost:3001',
+            text: 'Seme Framework',
+          },
+          {
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2.1/',
+            text: '3.2.1',
+          }
+        ]
       }
     },
     head() {
@@ -125,6 +135,63 @@ class Blog_Model extends SENE_Model{
           }
         ]
       }
+    },
+    jsonld() {
+      const items = this.breadcrumbs.map((item, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          "@type": "WebPage",
+          '@id': item.url,
+          name: item.text,
+        },
+      }));
+      return [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: items,
+        },
+        {
+          "@type": "NewsArticle",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+          },
+          "headline": (this.headline || this.title),
+          "image": [
+            (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
+          ],
+          "dateCreated": "2020-06-11T10:12:00+07:00",
+          "datePublished": "2020-06-11T10:12:00+07:00",
+          "dateModified": "2021-06-11T14:48:32+07:00",
+          "author": {
+            "@type": "Person",
+            "gender": "Male",
+            "name": "Daeng Rosanda, S.Kom",
+            "alternateName": "Daeng Rosanda",
+            "jobTitle": "Founder",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Cipta Esensi Merenah",
+              "email": "hi@cenah.co.id"
+            }
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Cipta Esensi Merenah",
+            "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+            "logo": {
+              "@type": "ImageObject",
+              "name": "logo Cipta Esensi Merenah",
+              "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+              "width": "256px",
+              "height": "62px"
+            }
+          },
+          "description": this.description
+        }
+      ];
     }
   }
 </script>

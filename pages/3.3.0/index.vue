@@ -50,17 +50,13 @@ export default {
   data (){
     return {
       name: 'Seme Framework v3.3.0',
-      suffix: ' - Documentation',
-      title: 'Seme Framework v3.3.0 Documentation',
+      suffix: ' - Seme Framework 3.3.0',
+      title: 'Welcome',
       description: 'Learn more about Seme Framework version 3.3.0 through this documentation.',
       breadcrumbs: [
         {
           url: process.env.ORIGIN_URL || 'http://localhost:3001/',
           text: 'Seme Framework',
-        },
-        {
-          url: (process.env.ORIGIN_URL || 'http://localhost:3001/')+'3.3.0/',
-          text: '3.3.0',
         }
       ]
     }

@@ -50,7 +50,8 @@
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="php">&#x3C;?php
+                <highlight-code lang="php">
+&#x3C;?php
 class Home extends SENE_Controller
 {
     public function __construct()
@@ -101,7 +102,8 @@ class Home extends SENE_Controller
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="plaintext">-| app/
+                <highlight-code lang="plaintext">
+-| app/
 ---| view/
 -----| front/
 -------| theme.json
@@ -371,7 +373,7 @@ class Home extends SENE_Controller
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  &#x3C;?php
+&#x3C;?php
 class Home extends SENE_Controller
 {
   public function __construct()
@@ -430,7 +432,7 @@ class Home extends SENE_Controller
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  &#x3C;?php
+&#x3C;?php
 class Home extends SENE_Controller
 {
   public function __construct()

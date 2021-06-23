@@ -90,10 +90,6 @@
           {
             url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/',
             text: 'ID',
-          },
-          {
-            url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/configuration/',
-            text: 'Persyaratan',
           }
         ]
       }

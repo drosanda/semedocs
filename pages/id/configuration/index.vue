@@ -253,10 +253,6 @@ $semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;
           {
             url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/',
             text: 'ID',
-          },
-          {
-            url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/configuration/',
-            text: 'Pengaturan',
           }
         ]
       }
@@ -314,7 +310,7 @@ $semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;
           ],
           "dateCreated": "2020-06-11T10:12:00+07:00",
           "datePublished": "2020-06-11T10:12:00+07:00",
-          "dateModified": "2021-06-11T01:04:00+07:00",
+          "dateModified": "2021-06-23T01:04:00+07:00",
           "author": {
             "@type": "Person",
             "gender": "Male",
