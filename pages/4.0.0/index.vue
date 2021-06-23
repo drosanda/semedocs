@@ -78,17 +78,13 @@
     data (){
       return {
         name: 'Seme Framework v4.0.0',
-        suffix: ' - Documentation',
-        title: 'Seme Framework v4.0.0 Documentation',
+        suffix: ' - Seme Framework 4 Documentation',
+        title: 'Welcome',
         description: 'Learn more about Seme Framework version 4.0.0 through this documentation.',
         breadcrumbs: [
           {
             url: process.env.BASE_URL || 'http://localhost:3001',
             text: 'Seme Framework',
-          },
-          {
-            url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/',
-            text: '4.0.0',
           }
         ]
       }

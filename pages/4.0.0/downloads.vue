@@ -160,31 +160,6 @@
         ]
       }
     },
-    head() {
-      return {
-        htmlAttrs: {
-          lang: 'id'
-        },
-        title: this.title+' - '+this.name,
-        meta: [
-          {
-            hid: 'description',
-            name: 'description',
-            content: this.description
-          },
-          {
-            hid: 'og:title',
-            name: 'og:title',
-            content: this.title
-          },
-          {
-            hid: 'og:description',
-            name: 'og:description',
-            content: this.description
-          }
-        ]
-      }
-    },
     jsonld() {
       const items = this.breadcrumbs.map((item, index) => ({
         '@type': 'ListItem',
