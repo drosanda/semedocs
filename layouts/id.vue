@@ -106,6 +106,13 @@
           <li>
             <nuxt-link to="/id/cli/">CLI (command line interface)</nuxt-link>
           </li>
+          <li>
+            <nuxt-link to="/4.0.0/core/">Core</nuxt-link>
+            <ul>
+              <li><nuxt-link to="/4.0.0/core/controller/">Controller</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/core/model/">Model</nuxt-link></li>
+            </ul>
+          </li>
         </ul>
       </amp-sidebar>
 
