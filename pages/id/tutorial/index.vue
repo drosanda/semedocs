@@ -17,7 +17,7 @@
               Tujuan dari tutorial ini adalah bagaimana menggunakan kerangka kerja dengan contoh kehidupan nyata. Sehingga developer dapat mengimplementasikan semua fitur yang ada pada Seme Framework seperti:
             </p>
             <ul>
-              <li>Dasar-dasar Model-View-Controller (MVC)</li>
+              <li><NuxtLink to="/id/tutorial/basic-mvc/">Dasar-dasar Model-View-Controller (MVC)</NuxtLink></li>
               <li>Dasar-dasar Routing basics</li>
               <li>Form validation</li>
               <li>Performing basic database queries using Query Builder</li>
