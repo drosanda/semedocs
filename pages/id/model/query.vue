@@ -74,19 +74,19 @@
                 <highlight-code lang="php">
                   &#x3C;?php
                   class Blog_Model extends SENE_Model{
-                    var $tbl = &#x26;#x27;d_order&#x26;#x27;;
-                    var $tbl_as = &#x26;#x27;dor&#x26;#x27;;
+                    var $tbl = &#x27;d_blog&#x27;;
+                    var $tbl_as = &#x27;dbl&#x27;;
                     public function __construct(){
                       parent::__construct();
-                      $this-&#x26;#x3E;db-&#x26;#x3E;from($this-&#x26;#x3E;tbl,$this-&#x26;#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
                     }
-                    public function getReported($id){
-                      $sql = &#x26;#x27;SELECT bk.name AS category
-                      FROM blog
+                    public function getLatePublish($id){
+                      $sql = &#x27;SELECT `title`, `pubdt` AS 'datePublished'
+                      FROM &#x27;.$this-&#x3E;tbl.&#x27; &#x27;.$this-&#x3E;tbl_as.&#x27;
                       WHERE is_published = 1
-                      ORDER BY created_date DESC
-                      LIMIT 0,1;&#x26;#x27;;
-                      return $this-&#x26;#x3E;db-&#x26;#x3E;query($sql);
+                      ORDER BY cdate DESC
+                      LIMIT 0,1;&#x27;;
+                      return $this-&#x3E;db-&#x3E;query($sql);
                     }
                   }
                 </highlight-code>
