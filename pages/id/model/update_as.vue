@@ -128,8 +128,8 @@ export default {
   layout: 'id',
   data (){
     return {
-      name: 'Seme Framework v4.0.x',
-      suffix: ' - Dokumentasi Seme Framework v4.0.x ',
+      name: 'Seme Framework 4',
+      suffix: ' - Seme Framework 4 Bahasa Indonesia',
       title: 'Model::update_as method',
       description: 'Pelajari selengkapnya tentang method update_as di Seme Framework versi 4.0.0',
       breadcrumbs: [

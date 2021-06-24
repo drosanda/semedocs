@@ -1,169 +1,260 @@
 <template>
-    <div class="section">
-        <div class="container">
-          <nav class="breadcrumb" aria-label="breadcrumbs">
-            <ul class="breadcrumbs">
-              <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-<li class=""><NuxtLink to="/4.0.0/">4.0.0</NuxtLink></li>
-              <li class=""><NuxtLink to="/4.0.0/model">Model</NuxtLink></li>
-            <li class="unavailable">Between Method</li>
-          </ul>
-        </nav>
-        <div class="columns">
-          <div class="column">
-        <div class="content">
-          <h1 class="">Between Method</h1>
-					<p>Between method is part of database class builder for filtering data compatible with BETWEEN Clause on SQL. This method support chained, and has flow from top to bottom while bracket are used.</p>
+  <div class="section">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul class="breadcrumbs">
+          <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0.0/">4.0.0</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0.0/model">Model</NuxtLink></li>
+          <li class="unavailable">Between Method</li>
+        </ul>
+      </nav>
+      <div class="columns">
+        <div class="column">
+          <div class="content">
+            <h1 class="">Between Method</h1>
+            <p>
+              Between is a method of the DB object in the model class to be used as a <strong>Query Builder</strong>.
+               The purpose of this method is to filter data that is compatible with the BETWEEN command in SQL.
+             </p>
 
-					<pre>
-class Blog_Model extends SENE_Model{
-	var $tbl = 'd_order';
-	var $tbl_as = 'dor';
-	public function __construct(){
-		parent::__construct();
-		$this->db->from($this->tbl,$this->tbl_as);
-	}
-	public function getById($id){
-		$this->db->where("id",$id,"AND","=",0,0);
-		return $this->db->get_first();
-	}
-	public function getCancel(){
-		$this->db->where("order_status","order_cancel","AND","=",0,0);
-		return $this->db->get();
-	}
-	public function getCancelByUser($b_user_id){
-		$this->db->where("order_status","order_cancel","AND","=",0,0)
-		$this->db->where("b_user_id",$b_user_id,"AND","=",0,0);
-		return $this->db->get();
-	}
-}
-					</pre>
-					<h2>Parameters</h2>
-					<p>Where method has 2 required parameters that is <b>column name</b> and <b>value</b>, another parameters are optional. Here is the completed parameters can be used by where methods</p>
-					<pre>$this->db->where(
-	COLUMN_NAME,
-	VALUE,
-	" AND | OR ",
-	"= | != | <= | >= | < | > | <> |
-	like | like% | %like | %like% |
-	notlike | notlike% |%notlike | %notlike%
-	",
-	OPENBRACKET,
-	CLOSEBRACKET
-);</pre>
-					<h3>COLUMN_NAME</h3>
-					<p>Column name required for filtering data from table. The columname should exist on selected table. This method has automatically escaped.</p>
-					<h3>VALUE</h3>
-					<p>Value required for matched with data on table. This method has automatically escaped.</p>
-					<h3>Combining Method</h3>
-					<p>Default value is AND, this parameter useful for filtering data for multiple condition. Available value <b>AND</b> or <b>OR</b>. Value of this parameter is not case sensitive.</p>
-					<h3>Relational Operator</h3>
-					<p>Value required for matched COLUMN_NAME with value. Available value:</p>
-					<ul>
-					<li>=</li>
-					<li>&lt;</li>
-					<li>&gt;</li>
-					<li>&lt;=</li>
-					<li>&gt;=</li>
-					<li>&lt;&gt;</li>
-					<li>like</li>
-					<li>like%</li>
-					<li>%like</li>
-					<li>%like%</li>
-					<li>notlike</li>
-					<li>notlike%</li>
-					<li>%notlike</li>
-					<li>%notlike%</li>
-					</ul>
-					<p>Value of this parameter is not case sensitive.</p>
-					<h3>OPEN BRACKET</h3>
-					<p>Required for adding bracket for prioritize condition filtering, default value 0. Available value <b>1</b> and <b>0</b>.</p>
-					<h3>CLOSE BRACKET</h3>
-					<p>Required for adding bracket for prioritize condition filtering, default value 0. Available value <b>1</b> and <b>0</b>.</p>
-					<h2>Example usage</h2>
-					<p>Here is the examples using where method, makes sure another from method and get method has executed for real result. See the first of this page for full example.</p>
-					<p>Basic example</p>
-					<pre>SELECT * FROM d_order WHERE `id` = 1</pre>
-					<pre>$this->db->where("id",1);</pre>
-					<br>
-					<p>Using AND / OR</p>
-					<pre>SELECT *
-FROM d_order
-WHERE
-	`a_company_id` = 1 OR
-	`b_user_id` = 1</pre>
-					<pre>$this->db->where("b_user_id",1,'OR')->where("a_company_id",1,'AND');</pre>
-					<br>
-					<p>Using Relational Operator</p>
-					<pre>SELECT *
-FROM d_order
-WHERE
-	`b_user_id` = 1 AND
-	`grand_total` >= 1000 AND
-	`status_text` LIKE 'order_completed'</pre>
-					<pre>$this->db
-	->where("b_user_id",1)
-	->where("grand_total",1000,"and",'>=')
-	->where("status_text",'order_completed',"and",'like');</pre>
-					<br>
-					<p>Using Bracket</p>
-					<pre>SELECT *
-FROM b_user
-WHERE
-	`status_text` LIKE 'active' AND
-	(
-		`fname` LIKE '%andre%' OR
-		`lname` LIKE '%andre%' OR
-		`city` LIKE '%andre%' OR
-		`email LIKE '%andre%'
-	)</pre>
-					<pre>$this->db
-	->where("status_text",'active','and','like')
-	->where("fname",'andre',"and",'%like%',1,0)
-	->where("lname",'andre',"and",'%like%',0,0)
-	->where("city",'andre',"and",'%like%',0,0)
-	->where("email",'andre',"and",'%like%',0,1);</pre>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  &#x3C;?php
+                  class Blog_Model extends SENE_Model{
+                    var $tbl = 'd_order';
+                    var $tbl_as = 'dor';
+                    public function __construct(){
+                      parent::__construct();
+                      $this->db->from($this->tbl,$this->tbl_as);
+                    }
 
-					<h2>Advanced Where Condition</h2>
-					<p>Seme Framework has advanced where method called <NuxtLink to="/model-where-as">where_as method</NuxtLink>.</p>
+                    /**
+                    * Get blog post by creation date (not date time)
+                    * @param  string  $sdate  &#x9;&#x9;String date format YYYY-MM-DD
+                    * @param  string  $edate  &#x9;&#x9;String date format YYYY-MM-DD
+                    * @return array           &#x9;&#x9;Result array of object
+                    */
+                    public function getByDateRange($sdate,$edate){
+                      if (strlen($sdate)==10 &#x26;&#x26; strlen($edate)==10) {
+                        $this-&#x3E;db-&#x3E;between(&#x22;$this-&#x3E;tbl_as.cdate&#x22;, &#x22;&#x27;$sdate&#x27;&#x22;, &#x22;&#x27;$edate 23:59:59&#x27;&#x22;);
+                      }elseif(strlen($sdate)==10 &#x26;&#x26; strlen($edate)!=10){
+                        $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;tbl_as.cdate&#x22;, &#x22;&#x27;$sdate&#x27;&#x22;, &#x22;AND&#x22;, &#x27;&#x3C;=&#x27;);
+                      }elseif(strlen($sdate)!=10 &#x26;&#x26; strlen($edate)==10){
+                        $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;tbl_as.cdate&#x22;, &#x22;&#x27;$edate&#x27;&#x22;, &#x22;AND&#x22;, &#x27;&#x3E;=&#x27;);
+                      }
+                      return $this-&#x3E;db-&#x3E;get();
+                    }
 
-        </div>
-      </div>
+                    /**
+                    * Get blog post by publish date time
+                    * @param  string  $sdate  &#x9;&#x9;String date format YYYY-MM-DD
+                    * @param  string  $edate  &#x9;&#x9;String date format YYYY-MM-DD
+                    * @return array           &#x9;&#x9;Result array of object
+                    */
+                    public function getByDateTimeRange($sdate,$edate){
+                      if (strlen($sdate)==10 &#x26;&#x26; strlen($edate)==10) {
+                        $this-&#x3E;db-&#x3E;between(&#x22;$this-&#x3E;tbl_as.pubdt&#x22;, &#x22;(&#x27;$sdate 00:00:00&#x27;)&#x22;, &#x22;(&#x27;$edate 23:59:59&#x27;)&#x22;);
+                      }elseif(strlen($sdate)==10 &#x26;&#x26; strlen($edate)!=10){
+                        $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;tbl_as.pubdt&#x22;, &#x22;(&#x27;$sdate 00:00:00&#x27;)&#x22;, &#x22;AND&#x22;, &#x27;&#x3C;=&#x27;);
+                      }elseif(strlen($sdate)!=10 &#x26;&#x26; strlen($edate)==10){
+                        $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;tbl_as.pubdt&#x22;, &#x22;(&#x27;$edate 23:59:59&#x27;)&#x22;, &#x22;AND&#x22;, &#x27;&#x3E;=&#x27;);
+                      }
+                      return $this-&#x3E;db-&#x3E;get();
+                    }
+                  }
+                </highlight-code>
+              </div>
+            </div>
 
-        </div>
+            <h2>Parameters</h2>
+            <p>Where method has 2 required parameters that is <b>column name</b> and <b>value</b>, another parameters are optional. Here is the completed parameters can be used by where methods</p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  $this->db->between( COLUMN_NAME, VALUE_FROM, VALUE_TO): $this->db
+                </highlight-code>
+              </div>
+            </div>
 
-        <div class="columns">
-          <div class="column">
-            <b-button tag="router-link" to="/4.0.0/model/where_as" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Model::where_as
-            </b-button>
-          </div>
-          <div class="column is-2">&nbsp;</div>
-          <div class="column">
-            <b-button tag="router-link" to="/4.0.0/model/group_by" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Model::group_by
-            </b-button>
+            <h3>COLUMN_NAME</h3>
+            <p>Column name required for filtering data from table. The columname should exist on selected table. This method has automatically escaped.</p>
+            <h3>VALUE_FROM</h3>
+            <p>Value required for matched with data against COLUMN_NAME.</p>
+            <h3>VALUE_TO</h3>
+            <p>Value required for matched with data against COLUMN_NAME.</p>
+
+            <div class="message is-info">
+               <div class="message-body">
+                 <p><b>Tips</b></p>
+                 <p>
+                   This method can be chained with other <b>Query Builder</b> methods, because it returns the same object value (<em>return object</em>) as <code>$this->db</code> in the class Model.
+                 </p>
+               </div>
+             </div>
+
           </div>
         </div>
 
       </div>
 
-
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/4.0.0/model/where_as/" class="btn">
+            <i class="fa fa-chevron-left"></i>
+            Model::where_as
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/4.0.0/model/group_by/" class="btn">
+            Model::group_by
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
+        </div>
+      </div>
 
     </div>
-  </template>
+
+
+
+  </div>
+</template>
 <script>
-  export default {
-    layout: 'v4.0.0',
-    data() {
-      return {
-        title: 'Model::between - Seme Framework v4.0.0'
-      }
-    },
-    head() {
-      return {
-        title: this.title,
-      }
+export default {
+  layout: 'v4.0.0',
+  data (){
+    return {
+      name: 'Seme Framework v4.0.0',
+      suffix: ' - Seme Framework 4',
+      title: 'Model::between',
+      description: 'Learn more about Model::between method Seme Framework version 4.0.0 through this documentation.',
+      breadcrumbs: [
+        {
+          url: process.env.BASE_URL || 'http://localhost:3001',
+          text: 'Seme Framework',
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/',
+          text: '4.0.0',
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/model/',
+          text: 'Model',
+        }
+      ]
     }
-  }
+  },
+  head() {
+    return {
+      title: this.title+this.suffix,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.name+': '+this.title
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.description
+        }
+      ]
+    }
+  },
+  jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+  const items = this.breadcrumbs.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    item: {
+      "@type": "WebPage",
+      '@id': item.url,
+      name: item.text,
+    },
+  }));
+  return [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: items,
+    },
+    {
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+      },
+      "headline": (this.headline || this.title),
+      "image": [
+        (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
+      ],
+      "dateCreated": "2020-06-11T10:12:00+07:00",
+      "datePublished": "2020-06-11T10:12:00+07:00",
+      "dateModified": "2021-06-24T12:59:47+07:00",
+      "author": {
+        "@type": "Person",
+        "gender": "Male",
+        "name": "Daeng Rosanda, S.Kom",
+        "alternateName": "Daeng Rosanda",
+        "jobTitle": "Founder",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Cipta Esensi Merenah",
+          "email": "hi@cenah.co.id"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Cipta Esensi Merenah",
+        "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+        "logo": {
+          "@type": "ImageObject",
+          "name": "logo Cipta Esensi Merenah",
+          "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+          "width": "256px",
+          "height": "62px"
+        }
+      },
+      "description": this.description
+    }
+  ];
+}
+}
 </script>
