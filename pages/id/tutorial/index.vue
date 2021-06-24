@@ -141,7 +141,7 @@ export default {
         ],
         "dateCreated": "2020-06-11T10:12:00+07:00",
         "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-24T23:43:00+07:00",
+        "dateModified": "2021-06-25T00:54:04+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
