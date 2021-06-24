@@ -558,6 +558,9 @@ Monokai style - ported by Luigi Maselli - http://grigio.org
   -o-user-select: none;
   cursor: default;
 }
+.macwindow .titlebar .title p {
+  color: #efefef;
+}
 
 .macwindow .buttons {
   margin: 0;

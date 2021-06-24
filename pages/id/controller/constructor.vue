@@ -141,10 +141,6 @@ export default {
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/controller/',
           text: 'Controller',
-        },
-        {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/controller/constructor/',
-          text: 'Constructor',
         }
       ],
     }

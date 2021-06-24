@@ -17,8 +17,8 @@
             <p>Tujuan dari tutorial ini adalah, bagaimana berinteraksi dengan View dan Controller. Interaksi model akan dibahas pada tutorial berikutnya.</p>
 
             <amp-img layout="responsive" width="874" height="804px" :src="helloWorld" alt="Seme Framework hello world controller"></amp-img>
-
-            <p>Baiklah kita mulai!</p>
+            <hr>
+            <p><b>Baiklah kita mulai!</b></p>
             <hr>
 
             <h2>Hello World!</h2>
@@ -368,7 +368,8 @@ class Home extends SENE_Controller
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="php">&#x3C;?php
+                <highlight-code lang="php">
+&#x3C;?php
 class Home extends SENE_Controller
 {
   public function __construct()
@@ -406,7 +407,31 @@ class Home extends SENE_Controller
             <p>Dengan layout utama yang telah kita buat sebelumnya, kita dapat memasukkan dan merender javascript menggunakan Seme Framework.</p>
             <p>Untuk mencapai ini, pertama buat file <code>app/view/front/home/home_bottom.php</code>.</p>
             <p>Dan kemudian tambahkan kode ini di atasnya.</p>
-            <pre><code v-highlight class="javascript">alert(&#x27;This is Hello World from app/view/home/home_bottom.php&#x27;);</code></pre>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  alert(&#x27;This is Hello World from app/view/home/home_bottom.php&#x27;);
+                </highlight-code>
+              </div>
+            </div>
+
             <p>Setelah itu, kita harus memuat tombol beranda dari <code>app/controller/home.php</code>.</p>
 
             <div class="macwindow">
@@ -427,7 +452,8 @@ class Home extends SENE_Controller
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="php">&#x3C;?php
+                <highlight-code lang="php">
+&#x3C;?php
 class Home extends SENE_Controller
 {
   public function __construct()
