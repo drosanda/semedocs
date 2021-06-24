@@ -42,7 +42,8 @@
 export default {
   data() {
     return {
-      name: 'SemeDocs',
+      name: 'Seme Framework',
+      prefix: ' - ',
       title: 'Seme Framework Documentation v3.3.0',
       description: 'Deployable and lightweight PHP MVC framework that suitable for small and medium web app',
       logo: require('~/static/logo.png'),

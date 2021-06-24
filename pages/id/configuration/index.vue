@@ -89,7 +89,8 @@
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="php">&#x3C;?php
+                <highlight-code lang="php">
+&#x3C;?php
 /**
  * Configuration file for Development version
  *   You can create one for:

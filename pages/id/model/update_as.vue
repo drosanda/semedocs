@@ -17,16 +17,41 @@
           <p>Metode ini tersedia sejak Seme Framework 4.0.2.</p>
 
           <div class="message is-warning">
-  <div class="message-body">
+            <div class="message-body">
             <p><b>Perhatian</b></p>
             <p>
               Pastikan untuk memeriksa dan menggunakan fungsi <i>escape</i> (<code>$this->db->esc('NILAI')</code>) pada pasangan kunci dan nilai untuk mencegah <b>SQL injection</b>.
             </p>
-          </div></div>
+          </div>
+        </div>
 
 					<h2>Parameter</h2>
 					<p>Update AS memiliki 3 parameter yaitu <b>nama tabel</b> dan <b>pasangan kunci dan nilai</b> untuk bahan updatenya.</p>
-					<code v-highlight class="php">$this->db->update_as(string $table_name, array $data_update, [bool $is_debug=0]): bool</code>
+
+          <div class="macwindow">
+            <div class="titlebar">
+              <div class="buttons">
+                <div class="close">
+                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                  <!-- close button link -->
+                </div>
+                <div class="minimize">
+                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                  <!-- minimize button link -->
+                </div>
+                <div class="zoom">
+                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                  <!-- zoom button link -->
+                </div>
+              </div>
+            </div>
+            <div class="maccontent">
+              <highlight-code lang="php">
+                $this->db->update_as(string $table_name, array $data_update, [bool $is_debug=0]): bool
+              </highlight-code>
+            </div>
+          </div>
+
 
           <h3>$table_name</h3>
           <p>Diisi dengan nama tabel yang akan diupdate.</p>
@@ -38,7 +63,26 @@
           <h2>Contoh Penggunaan</h2>
 					<p>Berikut ini adalah contoh pengunaannya</p>
 
-          <pre><code v-highlight class="php">&#x3C;?php
+          <div class="macwindow">
+            <div class="titlebar">
+              <div class="buttons">
+                <div class="close">
+                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                  <!-- close button link -->
+                </div>
+                <div class="minimize">
+                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                  <!-- minimize button link -->
+                </div>
+                <div class="zoom">
+                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                  <!-- zoom button link -->
+                </div>
+              </div>
+            </div>
+            <div class="maccontent">
+              <highlight-code lang="php">
+&#x3C;?php
 class Blog_Model extends SENE_Model{
   var $tbl = &#x27;blog&#x27;;
   var $tbl_as = &#x27;b&#x27;;
@@ -51,25 +95,28 @@ class Blog_Model extends SENE_Model{
     $this-&#x3E;db-&#x3E;where(&#x22;id&#x22;,1);
     $this-&#x3E;db-&#x3E;update_as($ths-&#x3E;tbl,$du);
   }
-}</code></pre>
-
-
+}
+</highlight-code>
+</div>
+</div>
 
           </div>
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <b-button tag="router-link" to="/4.0.0/model/select" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
+
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/id/model/select/" class="btn">
+          <i class="fa fa-chevron-left"></i>
             Model::select
-          </b-button>
+          </nuxt-link>
         </div>
-        <div class="column is-2">&nbsp;</div>
-        <div class="column">
-          <b-button tag="router-link" to="/4.0.0/model/update" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
+        <div class="nav-bottom-right">
+          <nuxt-link to="/id/model/update/" class="btn">
             Model::update
-          </b-button>
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 
@@ -84,11 +131,28 @@ export default {
       name: 'Seme Framework v4.0.x',
       suffix: ' - Dokumentasi Seme Framework v4.0.x ',
       title: 'Model::update_as method',
-      description: 'Pelajari selengkapnya tentang method update_as di Seme Framework versi 4.0.0'
+      description: 'Pelajari selengkapnya tentang method update_as di Seme Framework versi 4.0.0',
+      breadcrumbs: [
+        {
+          url: process.env.BASE_URL || 'http://localhost:3001',
+          text: 'Seme Framework',
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/',
+          text: 'ID',
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/model/',
+          text: 'Model',
+        }
+      ],
     }
   },
   head() {
     return {
+      htmlAttrs: {
+        lang: 'id'
+      },
       title: this.title+this.suffix,
       meta: [
         {
@@ -108,6 +172,62 @@ export default {
         }
       ]
     }
+  },
+  jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+    const items = this.breadcrumbs.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@id': item.url,
+        name: item.text,
+      },
+    }));
+    return [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: items,
+      },
+      {
+        "@type": "NewsArticle",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+        },
+        "headline": (this.headline || this.title),
+        "image": [
+          (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
+        ],
+        "dateCreated": "2020-06-11T10:12:00+07:00",
+        "datePublished": "2020-06-11T10:12:00+07:00",
+        "dateModified": "2021-06-24T12:04:00+07:00",
+        "author": {
+          "@type": "Person",
+          "gender": "Male",
+          "name": "Daeng Rosanda, S.Kom",
+          "alternateName": "Daeng Rosanda",
+          "jobTitle": "Founder",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Cipta Esensi Merenah",
+            "email": "hi@cenah.co.id"
+          }
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Cipta Esensi Merenah",
+          "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+          "logo": {
+            "@type": "ImageObject",
+            "name": "logo Cipta Esensi Merenah",
+            "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+            "width": "256px",
+            "height": "62px"
+          }
+        },
+        "description": this.description
+      }
+    ];
   }
 }
 </script>
