@@ -12,27 +12,35 @@
         <div class="column">
           <div class="content">
             <h1 class="">Tutorial</h1>
-            <p>Tutorial ini dimaksudkan untuk memperkenalkan Anda pada Kerangka Seme dan prinsip dasar arsitektur MVC. Ini akan menunjukkan kepada Anda bagaimana aplikasi Kerangka Seme dasar dibangun selangkah demi selangkah.</p>
             <p>
-              Tujuan dari tutorial ini adalah bagaimana menggunakan kerangka kerja dengan contoh kehidupan nyata. Sehingga developer dapat mengimplementasikan semua fitur yang ada pada Seme Framework seperti:
+              Tutorial ini dimaksudkan untuk memperkenalkan Anda pada Seme Framework.
+              Tutorial ini terbagi kedalam 2 bagian, yaitu konsep dasar teori dan penggunaan secara praktis.
+              Nikmati pengalaman baru anda saat menjelajahi tutorial ini.
+            </p>
+            <h2>Konsep Dasar</h2>
+            <p>
+              Berikut ini adalah daftar materi untuk pengenalan konsep dasar Seme Framework secara teori:
             </p>
             <ul>
               <li><NuxtLink to="/id/tutorial/basic-mvc/">Dasar-dasar Model-View-Controller (MVC)</NuxtLink></li>
-              <li>Dasar-dasar Routing basics</li>
-              <li>Form validation</li>
-              <li>Performing basic database queries using Query Builder</li>
-              <li>Theming</li>
-              <li>Admin</li>
-              <li>Libraries</li>
-              <li>and APIs</li>
+              <li><NuxtLink to="/id/tutorial/basic-routing/">Dasar-dasar Perutean</NuxtLink></li>
+              <li>Penggunaan Form HTML dan Prosesnya</li>
+              <li>Menggunakan Query Builder</li>
+              <li>Pembuatan Tema Tampilan (<em>Theme</em>)</li>
+              <li>Pembuatan Fitur Admin</li>
+              <li>Kelas Pustaka (<em>Library</em>)</li>
+              <li>dan Application Programming Interface (API)</li>
             </ul>
-            <p>Seluruhtutorial dibagi menjadi beberapa halaman. Masing-masing menjelaskan sebagian kecil dari fungsionalitas Seme Framework. Anda akan membuka halaman-halaman berikut:</p>
+            <h2>Tutorial Praktek</h2>
+            <p>
+              Berikut ini adalah daftar tutorial praktek Seme Framework. Diharapkan dengan mempelajari tutorial daftar tutorial dibawah ini, anda telah memahami teori konsep dasar Seme Framework.
+            </p>
             <ul>
               <li><NuxtLink to="/id/tutorial/introduction/">Pendahuluan</NuxtLink>, yang memberi Anda gambaran umum tentang apa yang diharapkan.</li>
               <li><NuxtLink to="/id/tutorial/get-data/">Tema dan tata letak</NuxtLink>, yang akan mengajarkan Anda dasar-dasar membuat tampilan menggunakan Seme Framework.</li>
               <li><NuxtLink to="/id/tutorial/basic-api/">Building API</NuxtLink>, ni akan memperkenalkan lebih banyak tentang database, controller, dan model.</li>
             </ul>
-            <p>Nikmati pengalaman eksplorasi dengan menggunakan Seme Framework.</p>
+
           </div>
         </div>
       </div>
@@ -133,7 +141,7 @@ export default {
         ],
         "dateCreated": "2020-06-11T10:12:00+07:00",
         "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-11T01:04:00+07:00",
+        "dateModified": "2021-06-24T23:43:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

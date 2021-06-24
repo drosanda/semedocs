@@ -21,7 +21,7 @@
               <div class="message-body">
                 <p><b>Perhatian</b></p>
                 <p>Dalam penjelasan ini mungkin ada yang tidak sesuai dengan kaidah atau teori Pemrograman Berorientasi Objek (PBO).</p>
-                <p>Penjelasan ini hanyalah penjelasan singkat tentang penggunaan (<em>Best Practice</em>) Seme Framework yang menggunakan konsep Kelas dan Objek.</p>
+                <p>Penjelasan ini hanyalah penjelasan singkat tentang penggunaan (<em>Best Practice</em>) dari Seme Framework yang menggunakan konsep Kelas dan Objek.</p>
               </div>
             </div>
             <p>
@@ -209,7 +209,10 @@
             </h4>
             <p>
               Dalam Seme Framework ada kelas <code>SENE_Controller</code>, yang mana kelas ini sudah dibuat sedemikian rupa supaya dapat digunakan kembali.
-              Contoh:
+            </p>
+            <p>
+              Berikut ini adalah contoh kelas <code>SENE_Controller</code> yang sudah ada didalam Seme Framework dan akan dijadikan orang tua (<em>parent class</em>) oleh kelas <code>Home</code>.
+              Silahkan pahami potongan sebagian kodenya.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -230,28 +233,28 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-&#x3C;?php
-class SENE_Controller {
-  .
-  .
-  .
-  public function load($model_file_name){
-    if(file_exists(SEMEROOT.&#x27;app/model/&#x27;.$model_file_name.&#x27;.php&#x27;)){
-      require_once SEMEROOT.&#x27;app/model/&#x27;.$model_file_name.&#x27;.php&#x27;;
-    }else{
-      trigger_error(&#x27;could not find require_once library &#x27;.$item.&#x27;&#x27;);
-    }
-  }
-  .
-  .
-  .
-}
+                  &#x3C;?php
+                  class SENE_Controller {
+                    .
+                    .
+                    .
+                    public function load($model_file_name){
+                      if(file_exists(SEMEROOT.&#x27;app/model/&#x27;.$model_file_name.&#x27;.php&#x27;)){
+                        require_once SEMEROOT.&#x27;app/model/&#x27;.$model_file_name.&#x27;.php&#x27;;
+                      }else{
+                        trigger_error(&#x27;could not find require_once library &#x27;.$item.&#x27;&#x27;);
+                      }
+                    }
+                    .
+                    .
+                    .
+                  }
                 </highlight-code>
               </div>
             </div>
 
             <p>
-              Kemudian kelas ini akan diturunkan menjadi kelas <code>Home</code> untuk menampilkan halaman utama menggunakan Seme Framework.
+              Kemudian kelas <code>SENE_Controller</code> ini akan diturunkan menjadi kelas <code>Home</code> untuk menampilkan halaman utama menggunakan Seme Framework.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -272,33 +275,42 @@ class SENE_Controller {
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-&#x3C;?php
-class Home extends SENE_Controller {
-  public function index(){
-    $this->load('d_blog_model');
-    // ini memanggil metode load dari SENE_Controller
-    // tanpa harus ngoding lagi
-  }
-}
+                  &#x3C;?php
+                  class Home extends SENE_Controller {
+                    public function index(){
+                      $this-&#x3E;load(&#x27;d_blog_model&#x27;);
+                      // ini memanggil metode load dari SENE_Controller
+                      // tanpa harus ngoding lagi
+                    }
+                  }
                 </highlight-code>
               </div>
             </div>
 
-            <h3>Kata Kunci <code>$this</code></h3>
+            <h3>Kode <code>$this</code></h3>
             <p>
-              Kata kunci <code>$this</code> ketika sedang dalam <code>konteks</code> kelas controller, maka itu akan mengacu ke kelas <code>Home</code> dan kelas yang di <code>extends</code>-nya, yaitu kelas <code>SENE_Controller</code>.
-              Konteks disini berarti, penggunaan perintah <code>$this</code> didalam suatu kelas.
+              Penulisan kode <code>$this</code> ketika sedang dalam kelas controller, maka itu akan mengacu ke kelas controller.
+              Begitupun ketika dalam kelas model, maka akan mengacu kedalam kelas model tersebut.
+              Kode <code>$this</code> ini bisa memiliki banyak arti tergantung dimana kode ini dituliskan.
+              Kondisi penulisan kode <code>$this</code> ini disebut dengan penulisan kode kontekstual.
+              Dimana kode <code>$this</code> akan bergantung terhadap posisi penulisan kode ini berada.
+            </p>
+            <p>
+              Dalam penjelasan saat ini kita akan fokus terhadap kelas <code>Home</code> dan kelas <code>SENE_Controller</code> yang mana sudah dijelaskan dalam potongan kode diatas.
+              Konteks <code>$this</code> dalam contoh kode diatas akan mengacu pada <b>method</b> atau <b>properti</b> baik dalam kelas <code>Home</code> maupun kelas <code>SENE_Controller</code>.
+            </p>
+            <p>
               Setiap perintah <code>$this</code> isinya akan berbeda-beda tergantung kelas utama dan kelas yang di <code>extends</code>-nya.
+              Yang mebedakannya adalah akan mengacu terhadap properti apabila tidak diakhiri dengan simbol kurung <code>()</code>.
+              Dan akan mengarah ke metode apabila diakhiri dengan simbol kurung <code>()</code>.
             </p>
             <p>
-              Perintah $<code>$this</code> juga dapat mengacu kedalam properti kelas maupun metode.
-              Yang mebedakannya adalah, kalau properti tidak diakhiri dengan simbol kurung <code>()</code>.
-              Sementara, kalau metode diakhiri dengan simbol kurung <code>()</code>.
+              Untuk lebih jelasnya mari kita perhatikan dengan baik contoh penulisan kode <code>$this</code> dalam 2 konteks yang berbeda.
             </p>
 
             <h4>Contoh koding <code>$this</code> dalam konteks Controller</h4>
             <p>
-              Berikut ini adalah contoh koding dalam konteks Controller
+              Berikut ini adalah contoh koding dalam konteks Controller.
             </p>
 
             <div class="macwindow">
@@ -332,7 +344,7 @@ class Home extends SENE_Controller {
               </div>
             </div>
             <p>
-              Dalam contoh konteks ini, <code>$this-&#x3E;load</code> mengacu pada metode yang ada pada <code>SENE_Controller</code>.
+              Dalam contoh konteks ini, kode <code>$this-&#x3E;load</code> mengacu pada metode yang ada pada <code>SENE_Controller</code>.
             </p>
 
             <h4>Contoh koding <code>$this</code> dalam konteks Model</h4>
@@ -366,8 +378,8 @@ class Home extends SENE_Controller {
                     public function tambah_data(){
                       $data_baru = array(&#x27;nama&#x27;=&#x3E;&#x27;Sandi&#x27;,&#x27;Kelas&#x27;=&#x3E;&#x27;2c&#x27;);
                       return $this-&#x3E;db-&#x3E;insert(
-                        $this-&#x3E;nama_tabel,
-                        $data_baru
+                      $this-&#x3E;nama_tabel,
+                      $data_baru
                       );
                     }
                   }
@@ -379,19 +391,27 @@ class Home extends SENE_Controller {
             </p>
             <ol>
               <li>
-               <p>
-                 <code>$this</code> yang pertama mengacu pada properti <code>$db</code> yang ada di dalam <code>SENE_Model</code>.
-               </p>
-               <p>
-                 Properti <code>$db</code> tidak ada dalam kelas <code>B_User_Model</code> karena properti tersebut adanya di <code>SENE_Model</code>.
-               </p>
-               <p>
-                 Begitu juga kodingan <code>$this-&#x3E;db-&#x3E;insert</code>, isi kodenya ada didalam <code>SENE_MySQLi_Engine</code> yang mana kelas tersebut menjadi properti dalam kelas <code>SENE_Model</code>.
-               </p>
+                <p>
+                  <code>$this</code> yang pertama mengacu pada properti <code>$db</code> yang ada di dalam <code>SENE_Model</code>.
+                </p>
+                <p>
+                  Properti <code>$db</code> tidak ada dalam kelas <code>B_User_Model</code> karena properti tersebut adanya di <code>SENE_Model</code>.
+                </p>
+                <p>
+                  Kemudian, properti <code>$db</code> itu mengacu terhadap kelas <code>SENE_MySQLi_Engine</code>.
+                  Jadi, <code>SENE_Model</code> itu memiliki properti <code>$db</code> yang berisi <code>SENE_MySQLi_Engine</code>.
+                </p>
+                <p>
+                  Begitu juga kodingan <code>$this-&#x3E;db-&#x3E;insert</code>, isi kodenya ada di dalam <code>SENE_MySQLi_Engine</code> bukan di dalam kelas <code>SENE_Model</code>.
+                </p>
+                <p>&nbsp;</p>
               </li>
               <li>
                 <p>
                   Sementara pada <code>$this</code> kedua, pada kodingan <code>$this-&#x3E;nama_tabel</code> mengacu pada properti <code>$nama_tabel</code> yang ada di dalam kelas <code>B_User_Model</code>. Kodingnya pun bisa kita lihat, karena ada didalam kelas yang sama.
+                </p>
+                <p>
+                  Jadi, properti <code>$nama_tabel</code> itu tidak ada di dalam <code>SENE_Model</code> maupun <code>SENE_MySQLi_Engine</code>.
                 </p>
               </li>
             </ol>
@@ -408,8 +428,8 @@ class Home extends SENE_Controller {
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/id/tutorial/introduction/" class="btn">
-            Tutorial: Intro
+          <nuxt-link to="/id/tutorial/basic-routing/" class="btn">
+            Basic Routing
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
@@ -468,62 +488,63 @@ export default {
       ]
     }
   },
-  jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
-  const items = this.breadcrumbs.map((item, index) => ({
-    '@type': 'ListItem',
-    position: index + 1,
-    item: {
-      '@type': "WebPage",
-      '@id': item.url,
-      name: item.text,
-    },
-  }));
-  return [
-    {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: items,
-    },
-    {
-      "@type": "NewsArticle",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+    const items = this.breadcrumbs.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': "WebPage",
+        '@id': item.url,
+        name: item.text,
       },
-      "headline": (this.headline || this.title),
-      "image": [
-        (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
-      ],
-      "dateCreated": "2020-06-11T10:12:00+07:00",
-      "datePublished": "2020-06-11T10:12:00+07:00",
-      "dateModified": "2021-06-24T23:21:00+07:00",
-      "author": {
-        "@type": "Person",
-        "gender": "Male",
-        "name": "Daeng Rosanda, S.Kom",
-        "alternateName": "Daeng Rosanda",
-        "jobTitle": "Founder",
-        "worksFor": {
+    }));
+    return [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: items,
+      },
+      {
+        "@type": "NewsArticle",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+        },
+        "headline": (this.headline || this.title),
+        "image": [
+          (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
+        ],
+        "dateCreated": "2020-06-24T22:43:31+07:00",
+        "datePublished": "2020-06-24T22:43:39+07:00",
+        "dateModified": "2021-06-25T00:03:00+07:00",
+        "author": {
+          "@type": "Person",
+          "gender": "Male",
+          "name": "Daeng Rosanda, S.Kom",
+          "alternateName": "Daeng Rosanda",
+          "jobTitle": "Founder",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Cipta Esensi Merenah",
+            "email": "hi@cenah.co.id"
+          }
+        },
+        "publisher": {
           "@type": "Organization",
           "name": "Cipta Esensi Merenah",
-          "email": "hi@cenah.co.id"
-        }
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Cipta Esensi Merenah",
-        "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
-        "logo": {
-          "@type": "ImageObject",
-          "name": "logo Cipta Esensi Merenah",
-          "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
-          "width": "256px",
-          "height": "62px"
-        }
-      },
-      "description": this.description
-    }
-  ];
-}
+          "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+          "logo": {
+            "@type": "ImageObject",
+            "name": "logo Cipta Esensi Merenah",
+            "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+            "width": "256px",
+            "height": "62px"
+          }
+        },
+        "description": this.description
+      }
+    ];
+  }
 }
 </script>
