@@ -110,8 +110,8 @@
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/id/controller/load/" class="btn">
-            Controller: Load Method
+          <nuxt-link to="/id/controller/getKey/" class="btn">
+            Controller: getKey
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
@@ -198,7 +198,7 @@ export default {
       ],
       "dateCreated": "2020-06-11T10:12:00+07:00",
       "datePublished": "2020-06-11T10:12:00+07:00",
-      "dateModified": "2021-06-11T01:04:00+07:00",
+      "dateModified": "2021-06-25T09:23:00+07:00",
       "author": {
         "@type": "Person",
         "gender": "Male",

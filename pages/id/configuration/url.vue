@@ -23,79 +23,150 @@
               Pengaturan base URL ini ada di <code>app/config/development.php</code> dibagian variabel <code>$site</code>.
             </p>
             <div class="message is-danger">
-  <div class="message-body">
-              <p><b>Pehatian</b></p>
-              <p>Mulai dari Seme Framework versi 3.0.0, isi dari nilai <code>$site</code> harus diberi akhiran garis miring &#x22;/&#x22;.</p>
-            </div></div>
+              <div class="message-body">
+                <p><b>Pehatian</b></p>
+                <p>Mulai dari Seme Framework versi 3.0.0, isi dari nilai <code>$site</code> harus diberi akhiran garis miring &#x22;/&#x22;.</p>
+              </div>
+            </div>
             <p>
-              Contoh penggunaan:
+              Contoh pengisian <code>$site</code> dalam potongan kode:
             </p>
-            <pre>$site = &#x22;http://localhost/seme-framework/&#x22;;</pre>
-            <pre>$site = &#x22;https://www.example.com/&#x22;;</pre>
-            <pre>$site = &#x22;http://localhost:8080/&#x22;;</pre>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  $site = &#x22;http://localhost/seme-framework/&#x22;;
+                  $site = &#x22;https://www.example.com/&#x22;;
+                  $site = &#x22;http://localhost:8080/&#x22;;
+                </highlight-code>
+              </div>
+            </div>
 
             <div class="message is-info">
-  <div class="message-body">
-              <p><b>Pengaturan Base URL dengan Port Custom</b></p>
-              <p>Jika menggunakan nilai <code>$_SERVER[&#x27;HTTP_HOST&#x27;]</code> pada <code>$site</code> tidak perlu untuk menambahkan akhiran &#x22;:PORT&#x22; pada setiap pengaturannya.</p>
-            </div></div>
+              <div class="message-body">
+                <p><b>Pengaturan Base URL dengan Port Custom</b></p>
+                <p>Jika menggunakan nilai <code>$_SERVER[&#x27;HTTP_HOST&#x27;]</code> pada <code>$site</code> tidak perlu untuk menambahkan akhiran &#x22;:PORT&#x22; pada setiap pengaturannya.</p>
+              </div>
+            </div>
 
             <div class="message is-info">
-  <div class="message-body">
-              <p><b>Mendapatkan nilai base URL (<code>$site</code>)</b></p>
-              <p>Untuk mendapatkan nilai dari base URL dapat menggunakan fungsi global <NuxtLink to="/id/globals/functions/">base_url()</NuxtLink> yang membalikan base URL sebagai string.</p>
-            </div></div>
+              <div class="message-body">
+                <p><b>Mendapatkan nilai base URL (<code>$site</code>)</b></p>
+                <p>Untuk mendapatkan nilai dari base URL dapat menggunakan fungsi global <NuxtLink to="/id/globals/#fungsi_base_url">base_url()</NuxtLink> yang membalikan base URL sebagai string.</p>
+              </div>
+            </div>
 
-            <h2>Admin Secret URL</h2>
-            <p>The special base url configuration for admin that point to  <code>app/controller/admin/*</code>.</p>
-            <p>The default value is <code>$admin_secret_url = &#x27;admin&#x27;;</code>.</p>
-            <p>This is will relative to <code>$site</code> value.</p>
+            <h2>URL Rahasia Admin</h2>
+            <p>Konfigurasi url dasar khusus untuk admin yang mengarah ke <code>app/controller/admin/*</code>.</p>
+            <p>Nilai defaultnya adalah <code>$admin_secret_url = &#x27;admin&#x27;;</code>.</p>
+            <p>Ini akan relatif terhadap nilai <code>$site</code>.</p>
             <p>
-              Example:
+              Contoh dalam kode:
             </p>
-            <pre>$admin_secret_url = &#x22;admin&#x22;;</pre>
-            <pre>$admin_secret_url = &#x22;boss&#x22;;</pre>
-            <pre>$admin_secret_url = &#x22;manajer&#x22;;</pre>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  $admin_secret_url = &#x22;admin&#x22;;
+                  $admin_secret_url = &#x22;boss&#x22;;
+                  $admin_secret_url = &#x22;manajer&#x22;;
+                </highlight-code>
+              </div>
+            </div>
 
             <div class="message is-info">
-  <div class="message-body">
-              <p><b>Accessing the secret admin URL (<code>$admin_secret_url</code>) value</b></p>
-              <p>The <NuxtLink to="/id/globals/functions/">base_url_admin()</NuxtLink> global function is for returning value of <code>$site.$admin_secret_url</code>.</p>
-            </div></div>
+              <div class="message-body">
+                <p><b>Mengakses nilai URL admin rahasia (<code>$admin_secret_url</code>)</b></p>
+                <p>Fungsi global <NuxtLink to="/id/globals/functions/">base_url_admin()</NuxtLink> adalah untuk mengembalikan nilai <code>$site.$admin_secret_url</code>.</p>
+              </div>
+            </div>
 
-            <h2>URL Routing Method</h2>
+            <h2>UMetode Perutean URL</h2>
             <p>
-              The url routing method existed on <code>$method</code>, same as version 3.x.x the value consists of <code>REQUEST_URI</code>,<code>PATH_INFO</code>, and <code>ORIG_PATH_INFO</code>.
+              Metode perutean url ada pada <code>$method</code>, sama seperti versi 3.xx nilainya terdiri dari <code>REQUEST_URI</code>,<code>PATH_INFO</code>, dan <code>ORIG_PATH_INFO</code>.
             </p>
 
             <h3>REQUEST_URI</h3>
             <p>
-              The REQUEST_URI value suitable for NGINX, Apache on deployment server, LiteSpeed, etc.
+              Nilai REQUEST_URI cocok untuk NGINX, Apache di server penerapan, LiteSpeed, dll.
             </p>
 
             <h3>PATH_INFO</h3>
             <p>
-              The PATH_INFO value suitable for XAMPP development environtment.
+              Nilai PATH_INFO cocok untuk lingkungan pengembangan XAMPP.
             </p>
 
             <h3>ORIG_PATH_INFO</h3>
             <p>
-              The ORIG_PATH_INFO value is for another server configuration.
+              Nilai ORIG_PATH_INFO adalah untuk konfigurasi server lain.
             </p>
 
             <h2>CDN URL</h2>
-            <p>The special base url for Content Delivery Network url.</p>
-            <p>The default value is <code>$cdn_url = &#x27;&#x27;;</code></p>
+            <p>URL dasar khusus untuk URL Jaringan Pengiriman Konten.</p>
+            <p>Nilai defaultnya adalah <code>$cdn_url = &#x27;&#x27;;</code></p>
             <p>
-              Example:
+              Contoh:
             </p>
-            <pre>$cdn_url = &#x22;http://cdn.cenah.co.id/seme-framework/&#x22;;</pre>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  $cdn_url = &#x22;http://cdn.cenah.co.id/seme-framework/&#x22;;
+                </highlight-code>
+              </div>
+            </div>
 
             <div class="message is-info">
-  <div class="message-body">
-              <p><b>Accessing the CDN URL (<code>$cdn_url</code>) value</b></p>
-              <p>The <NuxtLink to="/id/globals/functions/">$this->cdn_url()</NuxtLink> method form <code>SENE_Controller</code> class is for returning value of <code>$cdn_url</code> value.</p>
-            </div></div>
+              <div class="message-body">
+                <p><b>Mengakses nilai URL CDN (<code>$cdn_url</code>)</b></p>
+                <p>Bentuk metode <NuxtLink to="/id/controller/cdn_url/">$this->cdn_url()</NuxtLink> kelas <code>SENE_Controller</code> adalah untuk mengembalikan nilai <code>$cdn_url</code > nilai.</p>
+              </div>
+            </div>
 
             <hr>
 
@@ -108,9 +179,9 @@
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/id/configuration/db-connection/" class="btn">
-          <i class="fa fa-chevron-left"></i>
-            Koneksi Database
+          <nuxt-link to="/id/configuration/session/" class="btn">
+            <i class="fa fa-chevron-left"></i>
+            Session
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
@@ -125,111 +196,112 @@
   </div>
 </template>
 <script>
-  export default {
-    layout: 'id',
-    data (){
-      return {
-        name: 'Seme Framework 4',
-        suffix: ' - Seme Framework 4 Bahasa Indonesia',
-        title: 'Pengaturan Rute URL',
-        description: 'Pelajari selengkapnya tentang Pengaturan Rute URL dalam dokumentasi Seme Framework versi 4.0.0.',
-        breadcrumbs: [
-          {
-            url: process.env.BASE_URL || 'http://localhost:3001',
-            text: 'Seme Framework',
-          },
-          {
-            url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/',
-            text: 'ID',
-          },
-          {
-            url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/configuration/',
-            text: 'Pengaturan',
-          }
-        ]
-      }
-    },
-    head() {
-      return {
-        htmlAttrs: {
-          lang: 'id'
+export default {
+  layout: 'id',
+  data (){
+    return {
+      name: 'Seme Framework 4',
+      suffix: ' - Seme Framework 4 Bahasa Indonesia',
+      title: 'URL',
+      description: 'Pelajari selengkapnya tentang Pengaturan Rute URL dalam dokumentasi Seme Framework versi 4.0.0.',
+      breadcrumbs: [
+        {
+          url: process.env.BASE_URL || 'http://localhost:3001',
+          text: 'Seme Framework',
         },
-        title: this.title+this.suffix,
-        meta: [
-          {
-            hid: 'description',
-            name: 'description',
-            content: this.description
-          },
-          {
-            hid: 'og:title',
-            name: 'og:title',
-            content: this.name+': '+this.title
-          },
-          {
-            hid: 'og:description',
-            name: 'og:description',
-            content: this.description
-          }
-        ]
-      }
-    },
-    jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
-      const items = this.breadcrumbs.map((item, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        item: {
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/',
+          text: 'ID',
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/configuration/',
+          text: 'Pengaturan',
+        }
+      ]
+    }
+  },
+  head() {
+    return {
+      htmlAttrs: {
+        lang: 'id'
+      },
+      title: this.title+this.suffix,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.name+': '+this.title
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.description
+        }
+      ]
+    }
+  },
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+    const items = this.breadcrumbs.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        "@type": "WebPage",
+        '@id': item.url,
+        name: item.text,
+      },
+    }));
+    return [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: items,
+      },
+      {
+        "@type": "NewsArticle",
+        "mainEntityOfPage": {
           "@type": "WebPage",
-          '@id': item.url,
-          name: item.text,
+          "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
         },
-      }));
-      return [
-        {
-          '@context': 'https://schema.org',
-          '@type': 'BreadcrumbList',
-          itemListElement: items,
-        },
-        {
-          "@type": "NewsArticle",
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
-          },
-          "headline": (this.headline || this.title),
-          "image": [
-            (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
-          ],
-          "dateCreated": "2020-06-11T10:12:00+07:00",
-          "datePublished": "2020-06-11T10:12:00+07:00",
-          "dateModified": "2021-06-11T01:04:00+07:00",
-          "author": {
-            "@type": "Person",
-            "gender": "Male",
-            "name": "Daeng Rosanda, S.Kom",
-            "alternateName": "Daeng Rosanda",
-            "jobTitle": "Founder",
-            "worksFor": {
-              "@type": "Organization",
-              "name": "Cipta Esensi Merenah",
-              "email": "hi@cenah.co.id"
-            }
-          },
-          "publisher": {
+        "headline": (this.headline || this.title),
+        "image": [
+          (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
+        ],
+        "dateCreated": "2020-06-11T10:12:00+07:00",
+        "datePublished": "2020-06-11T10:12:00+07:00",
+        "dateModified": "2021-06-25T09:19:03+07:00",
+        "author": {
+          "@type": "Person",
+          "gender": "Male",
+          "name": "Daeng Rosanda, S.Kom",
+          "alternateName": "Daeng Rosanda",
+          "jobTitle": "Founder",
+          "worksFor": {
             "@type": "Organization",
             "name": "Cipta Esensi Merenah",
-            "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
-            "logo": {
-              "@type": "ImageObject",
-              "name": "logo Cipta Esensi Merenah",
-              "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
-              "width": "256px",
-              "height": "62px"
-            }
-          },
-          "description": this.description
-        }
-      ];
-    }
+            "email": "hi@cenah.co.id"
+          }
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Cipta Esensi Merenah",
+          "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+          "logo": {
+            "@type": "ImageObject",
+            "name": "logo Cipta Esensi Merenah",
+            "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+            "width": "256px",
+            "height": "62px"
+          }
+        },
+        "description": this.description
+      }
+    ];
   }
+}
 </script>

@@ -416,6 +416,12 @@
               </li>
             </ol>
 
+            <div class="message is-info">
+              <div class="message-body">
+                Pelajari selengkapnya tentang perutean di halaman <NuxtLink to="/id/uri_routing/">URI Routing</NuxtLink>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>

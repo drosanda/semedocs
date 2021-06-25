@@ -16,7 +16,7 @@
               Ada beberapa variabel dan fungsi yang ada sudah tersedia secara global pada Seme Framework. Fungsi atau variabel ini akan mempermudah pada saat pengkodean aplikasi.
             </p>
 
-            <h2>Fungsi base_url()</h2>
+            <h2 id="fungsi_base_url">Fungsi base_url()</h2>
             <p>Fungsi global <code>base_url()</code> digunakan untuk mengeluarkan nilai URL dasar yang telah di setel pada <NuxtLink to="/id/configuration/url/">pengaturan URL Seme Framework</NuxtLink>.</p>
 
             <h3>Parameter</h3>
@@ -361,7 +361,8 @@ export default {
       ]
     }
   },
-  jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
     const items = this.breadcrumbs.map((item, index) => ({
       '@type': 'ListItem',
       position: index + 1,
@@ -389,7 +390,7 @@ export default {
         ],
         "dateCreated": "2020-06-11T10:12:00+07:00",
         "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-23T16:13:00+07:00",
+        "dateModified": "2021-06-25T09:17:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

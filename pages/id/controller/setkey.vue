@@ -12,7 +12,7 @@
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">setKey method</h1>
+            <h1 class="">Metode setKey</h1>
             <p>Metode <code>SENE_Controller::setKey</code> digunakan untuk menyimpan nilai didalam $_SESSION.</p>
             <p>Metode biasanya ini digunakan untuk menyimpan data setelah proses login berhasil.</p>
 
@@ -21,78 +21,141 @@
 
             <h2>Pengunaan dasar</h2>
             <p>Berikut ini adalah penggunaan dasar dari metode setKey</p>
-            <code v-highlight class="php">SENE_Controller::setKey(mixed $values): object</code>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  SENE_Controller::setKey(mixed $values): object
+                </highlight-code>
+              </div>
+            </div>
 
             <h2>Contoh Penggunaan</h2>
             <p>Berikut ini adalah contoh penggunaannya untuk API dalam proses otentifikasi pengguna (login).</p>
-            <pre><code v-highlight class="php">&#x3C;?php
-class Login extends SENE_Controller{
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  &#x3C;?php
+                  class Login extends SENE_Controller {
+                    public function __construct(){
+                      parent::__construct();
+                      $this-&#x3E;setTheme(&#x27;front&#x27;);
+                      $this-&#x3E;load(&#x27;front/b_user_model&#x27;,&#x27;bum&#x27;);
+                    }
+                    .
+                    .
+                    .
+                    public function proses(){
+                      // ambil input yang dibutuhkan untuk login
+                      // biasanya email dan password
+                      $email = $this-&#x3E;input-&#x3E;post(&#x22;email&#x22;);
+                      $password = $this-&#x3E;input-&#x3E;post(&#x22;password&#x22;);
 
-public function __construct(){
-&nbsp;parent::__construct();
-&nbsp;$this-&#x3E;setTheme(&#x27;front&#x27;);
-&nbsp;$this-&#x3E;load(&#x27;front/b_user_model&#x27;,&#x27;bum&#x27;);
-}
-public function index(){
-&nbsp;//check sudah login atau belum
-&nbsp;$data = $this-&#x3E;getKey();
-&nbsp;if(isset($data->user->id)){
-&nbsp;&nbsp;//sudah login
-&nbsp;&nbsp;&nbsp;$this-&#x3E;status = 303;
-&nbsp;&nbsp;&nbsp;$this-&#x3E;message = &#x27;Sudah login, silakan refresh halaman&#x27;;
-&nbsp;&nbsp;&nbsp;$this-&#x3E;__json_out($data);
-&nbsp;&nbsp;&nbsp;die();
-&nbsp;}
-&nbsp;$this-&#x3E;status = 1709;
-&nbsp;$this-&#x3E;message = &#x27;Kombinasi email dan/atau password salah&#x27;;
-&nbsp;$username = $this-&#x3E;input-&#x3E;request(&#x27;username&#x27;);
-&nbsp;$res = $this-&#x3E;bum-&#x3E;auth($username);
-&nbsp;if (isset($res-&#x3E;id)) {
-&nbsp;&nbsp;$password = $this-&#x3E;input-&#x3E;request(&#x27;password&#x27;);
-&nbsp;&nbsp;if (!password_verify($password, $res-&#x3E;password)) {
-&nbsp;&nbsp;&nbsp;$this-&#x3E;status = 1707;
-&nbsp;&nbsp;&nbsp;$this-&#x3E;message = &#x27;Kombinasi email dan/atau password salah&#x27;;
-&nbsp;&nbsp;&nbsp;$this-&#x3E;__json_out($data);
-&nbsp;&nbsp;&nbsp;die();
-&nbsp;&nbsp;}
-&nbsp;&nbsp;
-&nbsp;&nbsp;$sess = new stdClass();
-&nbsp;&nbsp;if (isset($dt[&#x27;sess&#x27;])) $sess = $dt[&#x27;sess&#x27;];
-&nbsp;&nbsp;if (!is_object($sess)) $sess = new stdClass();
-&nbsp;&nbsp;if (!isset($sess-&#x3E;user)) $sess-&#x3E;user = new stdClass();
-&nbsp;&nbsp;$sess-&#x3E;user = $res;
-&nbsp;&nbsp;$this-&#x3E;setKey($sess);
-&nbsp;}
-&nbsp;
-&nbsp;$this-&#x3E;__json_out($data);
-}
-}</code></pre>
+                      // validasi email
+                      // ambil data user berdasarkan email
+                      // dari database melalui model bum
+                      // untuk melihat model bum ini di bagian metode constructor
+                      $user = $this-&#x3E;bum-&#x3E;getByEmail($email);
+                      if(isset($user-&#x3E;id)){
+                        //validasi password
+                        if(!password_verify($password, $user-&#x3E;password)){
+                          $this-&#x3E;status = 1707;
+                          $this-&#x3E;message = &#x27;Invalid email or password&#x27;;
+                          $this-&#x3E;__json_out($data);
+                          return false;
+                        }
+                        // kalau password cocok dengan yang ada di DB
+                        // maka user dianggap sudah berhasil login
+                        // karena sudah melewati 2 tahap ini
+
+                        // sekarang tinggal simpan data user ke session
+                        // dengan metode setKey();
+
+                        //buat variabel $sess dulu, berisikan standar kelas kosong
+                        $sess = new stdClass();
+
+                        // buat object user,
+                        // kemudian isi object tersebut dengan data user
+                        // yang telah diambil sebelumnya
+                        // dari database
+                        $sess-&#x3E;user = $user;
+
+                        // barulah setelah itu
+                        // masukan variabel $sess
+                        // kedalam parameter metode setKey()
+                        $this-&#x3E;setKey($sess);
+                      }else{
+                        $this-&#x3E;status = 1707;
+                        $this-&#x3E;message = &#x27;Invalid email or password&#x27;;
+                        $this-&#x3E;__json_out($data);
+                        return false;
+                      }
+                    }
+                    .
+                    .
+                    .
+                  }
+                </highlight-code>
+              </div>
+            </div>
             <p>&nbsp;</p>
-            <div class="message is-info">
-<div class="message-body">
-              <p><b>Perhatian</b></p>
-              <p>Pastikan pengaturan <code>$saltkey</code> telah diubah dan bersifat unik antara 1 projek dengan projek lainnya.</p>
-            </div></div>
 
-            <div class="message is-success">
-<div class="message-body">
-              <p><b>Tips</b></p>
-              <p>Jika bingung menentukan <code>$saltkey</code>, gunakan nama singkat proyek dan akhiri dengan tahun.</p>
-            </div></div>
+            <div class="message is-info">
+              <div class="message-body">
+                <p><b>Tips</b></p>
+                <p>Baik <code>setKey()</code> maupun <code>getKey()</code> membutuhkan pengaturan <code>$saltkey</code> untuk berfungsi dengan baik.</p>
+                <p>Pelajari tentang pengaturan <code>$saltkey</code> di halaman <NuxtLink to="/id/configuration/session/">Pengaturan Session</NuxtLink>.</p>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/id/controller/session" icon-pack="fa" icon-left="chevron-left" class="">
-              session
-            </b-button>
-            <b-button tag="router-link" to="/id/controller/settheme" icon-pack="fa" icon-right="chevron-right" class="">
-              setTheme
-            </b-button>
-          </div>
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/id/controller/session/" class="btn">
+            <i class="fa fa-chevron-left"></i>
+            Session
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/id/controller/settheme/" class="btn">
+            setTheme
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 
@@ -100,37 +163,112 @@ public function index(){
   </div>
 </template>
 <script>
-  export default {
-    layout: 'id',
-    data() {
-      return {
-        name: 'Seme Framework 4',
-        suffix: ' - Seme Framework 4 Bahasa Indonesia',
-        title: 'Metode setKey dari SENE_Controller',
-        description: 'Metode setKey dari kelas SENE_Controller dalam SEME Framework versi 4.0.0 digunakan untuk memanggil variabel yang tersimpan didalam $_SESSION.'
-      }
-    },
-    head() {
-      return {
-        title: this.title+this.suffix,
-        meta: [
-          {
-            hid: 'description',
-            name: 'description',
-            content: this.description
-          },
-          {
-            hid: 'og:title',
-            name: 'og:title',
-            content: this.name+': '+this.title
-          },
-          {
-            hid: 'og:description',
-            name: 'og:description',
-            content: this.description
-          }
-        ]
-      }
+export default {
+  layout: 'id',
+  data() {
+    return {
+      name: 'Seme Framework 4',
+      suffix: ' - Seme Framework 4 Bahasa Indonesia',
+      title: 'Metode setKey dari SENE_Controller',
+      description: 'Metode setKey dari kelas SENE_Controller dalam SEME Framework versi 4.0.0 digunakan untuk memanggil variabel yang tersimpan didalam $_SESSION.',
+      breadcrumbs: [
+        {
+          url: process.env.BASE_URL || 'http://localhost:3001',
+          text: 'Seme Framework',
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/',
+          text: 'ID',
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/controller/',
+          text: 'Controller',
+        }
+      ]
     }
+  },
+  head() {
+    return {
+      htmlAttrs: {
+        lang: 'id'
+      },
+      title: this.title+this.suffix,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.name+': '+this.title
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.description
+        }
+      ]
+    }
+  },
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+    const items = this.breadcrumbs.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        "@type": "WebPage",
+        '@id': item.url,
+        name: item.text,
+      },
+    }));
+    return [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: items,
+      },
+      {
+        "@type": "NewsArticle",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+        },
+        "headline": (this.headline || this.title),
+        "image": [
+          (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
+        ],
+        "dateCreated": "2020-06-11T10:12:00+07:00",
+        "datePublished": "2020-06-11T10:12:00+07:00",
+        "dateModified": "2021-06-25T08:29:40+07:00",
+        "author": {
+          "@type": "Person",
+          "gender": "Male",
+          "name": "Daeng Rosanda, S.Kom",
+          "alternateName": "Daeng Rosanda",
+          "jobTitle": "Founder",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Cipta Esensi Merenah",
+            "email": "hi@cenah.co.id"
+          }
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Cipta Esensi Merenah",
+          "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+          "logo": {
+            "@type": "ImageObject",
+            "name": "logo Cipta Esensi Merenah",
+            "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+            "width": "256px",
+            "height": "62px"
+          }
+        },
+        "description": this.description
+      }
+    ];
   }
+}
 </script>
