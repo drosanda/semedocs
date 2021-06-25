@@ -13,25 +13,63 @@
           <div class="content">
             <h1 class="">Controller Class</h1>
             <p>Controller is the main actor in Seme Framework life cycle.</p>
-            <p>A Controller is simply a class file that is named in a way that can be associated with an URI.</p>
-            <p>The controller class relatives to <code>app/controller</code> directory.</p>
-            <p>The controller filename and class name can only have alphanumeric with underscore.</p>
+            <p>A Controller is simply a class that have file name and class name same as with the requested URI.</p>
+            <p>If nothing related to class name, Seme Framework will automatically load filename <code>home.php</code> calling class named <code>Home</code> and its <code>index()</code> method.</p>
+            <p>Or just simply, load the <code>notfound</code> class in controller by default.</p>
+            <p>Before going further, we have to find out the condition for Seme Framework to meet its controller requirements.</p>
+            <h2>Conditions</h2>
+            <p>The following are the conditions when you want to use the Controller class correctly so that it can run properly:</p>
+            <ul>
+              <li>All Controller classes are stored in the <code>app/controller</code> directory,</li>
+              <li>The controller class must be <code>extends</code> from <code>SENE_Controller</code> OR</li>
+              <li>If using core controller, the core controller class must be <code>extends</code> from <code>SENE_Controller</code>,</li>
+              <li>The naming of the controller file name and controller class name can only be started by a letter, then followed by letters and or numbers, and an underscore.</li>
+              <li>The controller class file name must be in lower case and file extension is <code>.php</code>.</li>
+              <li>The class name and file name must be identical but may not be uppercase or lowercase (not case sensitive)</li>
+            </ul>
             <h2>Example</h2>
-            <p>Here is the basic example for a controller structure:</p>
-            <pre>
-              app
-              |-- controller
-              |---- home.php
-              |---- blog.php
-            </pre>
-            <p>Lets say, you have extracted Seme Framework on <code>D:\XAMPP\htdocs\seme-framework</code></p>
-            <p>So, if you accessing the <code>http://localhost/seme-framework</code> the Seme Framework will load <code>home.php</code> controller.</p>
+            <p>Lets say, you have extracted Seme Framework on <code>D:\XAMPP\htdocs\seme_framework</code></p>
+            <p>So, if you accessing the <code>http://localhost/seme_framework</code> the Seme Framework will load <code>home.php</code> controller inside <code>app/controller</code>.</p>
             <div class="message is-info">
               <div class="message-body">
                 <p>Class <b>home</b> or <b>home.php</b> file is the default access controller from each URI even in the sub directory.</p>
               </div>
             </div>
-            <p>How if, we accessing <code>http://localhost/seme-framework/blog</code>?</p>
+            <p>Here is the basic example for a controller structure.</p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+app/
+|- controller/
+|-- blog.php
+|-- product/
+|--- home.php
+|--- detail.php
+                </highlight-code>
+              </div>
+            </div>
+            <p>
+              Inside controller directory, can contain a directory (folder) or file. But, the directory tree level only support 2 level. So, be wise using the directory structure.
+            </p>
+
+
+            <p>How if, we accessing <code>http://localhost/seme_framework/blog</code>?</p>
             <p>The answer is, Seme Framework will load controller blog.php</p>
             <p>Seme Framework will only load controller with filename and its class name are matched.</p>
 
@@ -62,7 +100,7 @@
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="html">
+                <highlight-code lang="php">
                   &#x3C;?php
                   class Home extends Sene_Controller{
                     public function __construct(){
@@ -97,7 +135,7 @@
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="html">
+                <highlight-code lang="php">
                   &#x3C;?php
                   class Notfound extends Sene_Controller{
                     public function __construct(){
@@ -274,7 +312,7 @@ export default {
         ],
         "dateCreated": "2020-06-11T10:12:00+07:00",
         "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-23T15:26:17+07:00",
+        "dateModified": "2021-06-25T22:24:17+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
