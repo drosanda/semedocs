@@ -75,12 +75,18 @@
           </div>
         </div>
       </div>
-
+      
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/4.0.0/library/" class="btn">
+          <nuxt-link to="/4.0.0/uri_routing/admin/" class="btn">
           <i class="fa fa-chevron-left"></i>
-            Library
+            Uri Routing: Admin
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/4.0.0/globals/" class="btn">
+            Globals
+            <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
       </div>
