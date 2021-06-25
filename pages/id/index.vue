@@ -120,6 +120,10 @@
           {
             url: process.env.BASE_URL || 'http://localhost:3001',
             text: 'Seme Framework',
+          },
+          {
+            url: process.env.BASE_URL || 'http://localhost:3001/id/',
+            text: 'ID',
           }
         ]
       }
@@ -149,7 +153,7 @@
         ]
       }
     },
-    jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title }); this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+    jsonld() {
       const items = this.breadcrumbs.map((item, index) => ({
         '@type': 'ListItem',
         position: index + 1,
@@ -177,7 +181,7 @@
           ],
           "dateCreated": "2020-06-11T10:12:00+07:00",
           "datePublished": "2020-06-11T10:12:00+07:00",
-          "dateModified": "2021-06-11T01:04:00+07:00",
+          "dateModified": "2021-06-25T13:38:00+07:00",
           "author": {
             "@type": "Person",
             "gender": "Male",
