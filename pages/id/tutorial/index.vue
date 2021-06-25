@@ -24,6 +24,7 @@
             <ul>
               <li><NuxtLink to="/id/tutorial/basic-mvc/">Dasar-dasar Model-View-Controller (MVC)</NuxtLink></li>
               <li><NuxtLink to="/id/tutorial/basic-routing/">Dasar-dasar Perutean</NuxtLink></li>
+              <li><NuxtLink to="/id/tutorial/basic-static/">Pembuatan dan Perpindahan antar halaman statis</NuxtLink></li>
               <li>Penggunaan Form HTML dan Prosesnya</li>
               <li>Menggunakan Query Builder</li>
               <li>Pembuatan Tema Tampilan (<em>Theme</em>)</li>
@@ -141,7 +142,7 @@ export default {
         ],
         "dateCreated": "2020-06-11T10:12:00+07:00",
         "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-25T00:54:04+07:00",
+        "dateModified": "2021-06-25T13:34:04+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

@@ -152,8 +152,8 @@
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/id/tutorial/basic-routing/" class="btn">
-            Basic Routing
+          <nuxt-link to="/id/tutorial/basic-static/" class="btn">
+            Basic Static Page
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
@@ -242,7 +242,7 @@ export default {
         ],
         "dateCreated": "2020-06-25T00:51:01+07:00",
         "datePublished": "2020-06-25T00:51:42+07:00",
-        "dateModified": "2021-06-25T11:58:39+07:00",
+        "dateModified": "2021-06-25T13:34:39+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
