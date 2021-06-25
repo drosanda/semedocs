@@ -21,7 +21,7 @@
 
             <p>
               Dalam tutorial ini, tidak ada praktek ngoding.
-              Hanya ada pembahasan teori bagaimana cara pembuatan halaman di Seme Framework supaya tidak bertanya-tanya bagaimana cara membuat halaman menggunakan Seme Framework.
+              Hanya ada pembahasan teori bagaimana cara pembuatan halaman di Seme Framework supaya tidak bertanya-tanya bagaimana hubungan antara URL dengan kelas Controller di Seme Framework.
               Dan juga, dalam tutorial ini akan dibahas bagaimana halaman dapat menerima <b>suatu Nilai</b> dari parameter yang di lewatkan melalui alamat rute.
             </p>
 
@@ -105,6 +105,40 @@
             </p>
             <p>
               Jadi dalam istilah bahasa pemrogramannya, Seme Framework akan menggunakan <b>Alternatif ke-2</b> kemudian <b>Alternatif ke-1</b> akan digunakan sebagai <code>fallback</code>.
+            </p>
+
+            <h2>Mengenal nama lain dari Alamat Rute</h2>
+            <p>
+              Alamat rute di pada ruang lingkup aplikasi berbasis web seringkali diistilahkan dengan <code>URL</code> atau <code>URI</code>.
+              URL atau URI ini merupakan penyebutan nama lain dari Alamat Rute yang digunakan oleh Browser.
+              Tetapi, antara URI dan URL ada bedanya. Berikut ini adalah perbedaanya.
+            </p>
+            <h3>Apa itu URL?</h3>
+            <p>
+              URL atau <em>Uniform Resource Locator</em> adalah alamat yang digunakan oleh browser untuk mengidentifikasi sumber daya yang ada di internet yang dituliskan dalam satu baris teks.
+            </p>
+            <p>
+              URL merupakan bagian dari URI.
+            </p>
+            <p>
+              URL menunjuk ke suatu halaman web yang menggunakan <code>scheme</code> tanpa menggunakan code fragment.
+            </p>
+            <p>
+              Contoh: <a href="https://seme.framework.web.id/id/globals" target="_blank">https://seme.framework.web.id/id/globals</a>.
+            </p>
+
+            <h3>Apa itu URI?</h3>
+            <p>
+              URI atau <em>Uniform Resurce Identifier</em> digunakan browser untuk mengidentifikasi dokumen tunggal dan dituliskan dalam satu baris teks.
+            </p>
+            <p>
+              URI digunakan untuk mengidentifikasi suatu <em>resource</em> dengan lokasi atau nama, ataupun keduanya.
+            </p>
+            <p>
+              URL menunjuk ke suatu halaman web yang menggunakan <code>scheme</code> tanpa menggunakan code fragment.
+            </p>
+            <p>
+              Contoh: <a href="https://seme.framework.web.id/id/globals/#fungsi_base_url" target="_blank">https://seme.framework.web.id/id/globals/#fungsi_base_url</a>.
             </p>
           </div>
         </div>
@@ -208,7 +242,7 @@ export default {
         ],
         "dateCreated": "2020-06-25T00:51:01+07:00",
         "datePublished": "2020-06-25T00:51:42+07:00",
-        "dateModified": "2021-06-25T00:52:29+07:00",
+        "dateModified": "2021-06-25T11:58:39+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
