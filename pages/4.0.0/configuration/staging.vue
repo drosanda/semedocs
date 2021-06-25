@@ -23,8 +23,6 @@
               But, be careful wrong configuration can deleted some files or directories.
             </p>
 
-
-
           </div>
         </div>
 
@@ -56,7 +54,7 @@
       return {
         name: 'Seme Framework v4.0.0',
         suffix: ' - Seme Framework 4',
-        title: 'Staging Phase Configuration',
+        title: 'Configuration for  Staging',
         description: 'Learn more about how to configuring Seme Framework version 4.0.0 in staging phase',
         breadcrumbs: [
           {

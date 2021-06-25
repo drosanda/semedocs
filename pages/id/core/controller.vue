@@ -20,9 +20,25 @@
                 <p>Dokumentasi ini masih dalam proses pembuatan.</p>
               </div>
             </div>
-            
+
           </div>
         </div>
+
+        <div class="nav-bottom">
+          <div class="nav-bottom-left">
+            <nuxt-link to="/id/core/" class="btn">
+            <i class="fa fa-chevron-left"></i>
+              Core
+            </nuxt-link>
+          </div>
+          <div class="nav-bottom-right">
+            <nuxt-link to="/id/core/model/" class="btn">
+              Core: Model
+              <i class="fa fa-chevron-right"></i>
+            </nuxt-link>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -104,9 +120,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2020-06-11T10:12:00+07:00",
-        "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-11T01:04:00+07:00",
+        "dateCreated": "2020-06-25T17:16:01+07:00",
+        "datePublished": "2020-06-25T17:17:10+07:00",
+        "dateModified": "2021-06-25T17:19:02+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

@@ -113,7 +113,7 @@
       return {
         name: 'Seme Framework 4',
         suffix: ' - Seme Framework 4 Bahasa Indonesia',
-        title: 'Dokumentasi Resmi ',
+        title: 'Beranda Dokumen ',
         description: 'Seme Framework adalah Framework dengan konsep MVC untuk PHP yang ringan untuk dikembangkan.',
         semecarbon: require('~/static/carbon.png'),
         breadcrumbs: [
@@ -181,7 +181,7 @@
           ],
           "dateCreated": "2020-06-11T10:12:00+07:00",
           "datePublished": "2020-06-11T10:12:00+07:00",
-          "dateModified": "2021-06-25T13:38:00+07:00",
+          "dateModified": "2021-06-25T17:01:00+07:00",
           "author": {
             "@type": "Person",
             "gender": "Male",

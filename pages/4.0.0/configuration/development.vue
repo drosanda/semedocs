@@ -98,7 +98,7 @@ $site = &#x22;http://&#x22;.$_SERVER[&#x27;HTTP_HOST&#x27;].&#x22;/seme-framewor
       return {
         name: 'Seme Framework v4.0.0',
         suffix: ' - Seme Framework 4',
-        title: 'Development Phase Configuration',
+        title: 'Configuration for Development',
         description: 'Learn more about how to configuring Seme Framework version 4.0.0 in development phase',
         breadcrumbs: [
           {

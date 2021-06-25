@@ -84,14 +84,14 @@
 
               <div class="nav-bottom">
                 <div class="nav-bottom-left">
-                  <nuxt-link to="/id/library/" class="btn">
+                  <nuxt-link to="/id/library/seme_email/" class="btn">
                     <i class="fa fa-chevron-left"></i>
-                    Library
+                    Seme_Email
                   </nuxt-link>
                 </div>
                 <div class="nav-bottom-right">
-                  <nuxt-link to="/id/cli/" class="btn">
-                    CLI
+                  <nuxt-link to="/id/library/wideimage/" class="btn">
+                    WideImage
                     <i class="fa fa-chevron-right"></i>
                   </nuxt-link>
                 </div>
@@ -178,7 +178,7 @@
           ],
           "dateCreated": "2020-06-11T10:12:00+07:00",
           "datePublished": "2020-06-11T10:12:00+07:00",
-          "dateModified": "2021-06-23T01:04:00+07:00",
+          "dateModified": "2021-06-25T17:13:00+07:00",
           "author": {
             "@type": "Person",
             "gender": "Male",

@@ -13,15 +13,65 @@
           <div class="content">
             <h1 class="">Command Line Interface</h1>
             <p>Seme Framework now supporting command line interface (CLI) for executing the framework through the CLI.</p>
+
             <h2>Basic Usage</h2>
             <p>Please make sure you are in same directory with root framework directory</p>
-            <pre>php index.php [controller | [directory in controller [controller]]] [method] [param1] [param2]...[paramN]</pre>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  php index.php [controller | [directory in controller [controller]]] [method] [param1] [param2]...[paramN]
+                </highlight-code>
+              </div>
+            </div>
+
             <h2>Example</h2>
-            <p>In the example we will introduce how Seme Framework can be integrated with Cron Job<p>
+            <p>
+              In the example we will introduce how Seme Framework can be integrated with Cron Job
+            </p>
+
             <h3>CronJob</h3>
             <p>If you want integrating with cron job executed every 4am and want to executed method fix in class home inside api_cron directory.</p>
-            <pre>0 4 * * * /usr/bin/php /var/www/html/index.php api_cron home fix</pre>
-            <p>You can adjusted the <i>/usr/bin/php</i> depends on your system.</p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  0 4 * * * /usr/bin/php /var/www/html/index.php api_cron home fix
+                </highlight-code>
+              </div>
+            </div>
+            <p>You can adjusted the <code>/usr/bin/php</code> depends on your system.</p>
           </div>
         </div>
       </div>
@@ -31,12 +81,6 @@
           <nuxt-link to="/4.0.0/library/" class="btn">
           <i class="fa fa-chevron-left"></i>
             Library
-          </nuxt-link>
-        </div>
-        <div class="nav-bottom-right">
-          <nuxt-link to="/3.3.0/" class="btn">
-            Version: 3.3.0
-            <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
       </div>
@@ -87,7 +131,8 @@ export default {
       ]
     }
   },
-  jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
     const items = this.breadcrumbs.map((item, index) => ({
       '@type': 'ListItem',
       position: index + 1,
@@ -115,7 +160,7 @@ export default {
         ],
         "dateCreated": "2020-06-11T10:12:00+07:00",
         "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-11T14:48:32+07:00",
+        "dateModified": "2021-06-25T16:58:12+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

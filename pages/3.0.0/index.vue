@@ -62,15 +62,15 @@ export default {
     return {
       name: 'Seme Framework v3.0.0',
       suffix: ' - Seme Framework 3.0.0',
-      title: 'Welcome',
+      title: 'Main Page',
       description: 'Learn more about Seme Framework version 3.0.0 through this documentation.',
       breadcrumbs: [
         {
-          url: process.env.ORIGIN_URL || 'http://localhost:3001/',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/',
           text: 'Seme Framework',
         },
         {
-          url: (process.env.ORIGIN_URL || 'http://localhost:3001/')+'3.0.0/',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.0.0/',
           text: '3.0.0',
         }
       ]
@@ -98,7 +98,7 @@ export default {
       ]
     }
   },
-  jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+  jsonld() {
     const items = this.breadcrumbs.map((item, index) => ({
       '@type': 'ListItem',
       position: index + 1,

@@ -52,7 +52,7 @@
       return {
         name: 'Seme Framework v4.0.0',
         suffix: ' - Seme Framework 4',
-        title: 'Production Phase Configuration',
+        title: 'Configuration for Production',
         description: 'Learn more about how to configuring Seme Framework version 4.0.0 in production phase',
         breadcrumbs: [
           {

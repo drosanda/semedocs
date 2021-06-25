@@ -22,6 +22,22 @@
 
           </div>
         </div>
+
+        <div class="nav-bottom">
+          <div class="nav-bottom-left">
+            <nuxt-link to="/id/cli/" class="btn">
+            <i class="fa fa-chevron-left"></i>
+              CLI
+            </nuxt-link>
+          </div>
+          <div class="nav-bottom-right">
+            <nuxt-link to="/id/core/controller/" class="btn">
+              Core: Controller
+              <i class="fa fa-chevron-right"></i>
+            </nuxt-link>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -99,9 +115,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2020-06-11T10:12:00+07:00",
-        "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-11T01:04:00+07:00",
+        "dateCreated": "2020-06-25T17:12:00+07:00",
+        "datePublished": "2020-06-25T17:13:00+07:00",
+        "dateModified": "2021-06-25T17:16:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

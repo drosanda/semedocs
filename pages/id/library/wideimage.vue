@@ -25,8 +25,8 @@
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
-                <nuxt-link to="/id/library/" class="btn">
-                  Library
+                <nuxt-link to="/id/cli/" class="btn">
+                  CLI
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
@@ -115,7 +115,7 @@
           ],
           "dateCreated": "2020-06-25T11:37:00+07:00",
           "datePublished": "2020-06-25T11:37:20+07:00",
-          "dateModified": "2021-06-25T11:39:00+07:00",
+          "dateModified": "2021-06-25T17:12:00+07:00",
           "author": {
             "@type": "Person",
             "gender": "Male",

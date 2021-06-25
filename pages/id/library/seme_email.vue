@@ -156,8 +156,8 @@
               </nuxt-link>
             </div>
             <div class="nav-bottom-right">
-              <nuxt-link to="/id/cli/" class="btn">
-                CLI
+              <nuxt-link to="/id/seme_log/" class="btn">
+                Seme_Log
                 <i class="fa fa-chevron-right"></i>
               </nuxt-link>
             </div>
@@ -217,7 +217,8 @@ export default {
       ]
     }
   },
-  jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
     const items = this.breadcrumbs.map((item, index) => ({
       '@type': 'ListItem',
       position: index + 1,
@@ -245,7 +246,7 @@ export default {
         ],
         "dateCreated": "2020-06-11T10:12:00+07:00",
         "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-23T01:04:00+07:00",
+        "dateModified": "2021-06-25T17:13:04+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

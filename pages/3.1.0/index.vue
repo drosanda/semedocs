@@ -48,15 +48,15 @@
       return {
         name: 'Seme Framework v3.1.0',
         suffix: ' - Seme Framework 3.1.0',
-        title: 'Welcome',
+        title: 'Main Page',
         description: 'Learn more about Seme Framework version 3.1.0 through this documentation.',
         breadcrumbs: [
           {
-            url: process.env.ORIGIN_URL || 'http://localhost:3001/',
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/',
             text: 'Seme Framework',
           },
           {
-            url: (process.env.ORIGIN_URL || 'http://localhost:3001/')+'3.1.0/',
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1.0/',
             text: '3.1.0',
           }
         ]
@@ -84,7 +84,7 @@
         ]
       }
     },
-    jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+    jsonld() {
       const items = this.breadcrumbs.map((item, index) => ({
         '@type': 'ListItem',
         position: index + 1,
@@ -112,7 +112,7 @@
           ],
           "dateCreated": "2020-06-11T10:12:00+07:00",
           "datePublished": "2020-06-11T10:12:00+07:00",
-          "dateModified": "2021-06-11T01:04:00+07:00",
+          "dateModified": "2021-06-25T6:42:01+07:00",
           "author": {
             "@type": "Person",
             "gender": "Male",

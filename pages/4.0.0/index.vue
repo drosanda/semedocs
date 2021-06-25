@@ -78,13 +78,17 @@
     data (){
       return {
         name: 'Seme Framework v4.0.0',
-        suffix: ' - Seme Framework 4 Documentation',
-        title: 'Welcome',
+        suffix: ' - Seme Framework 4',
+        title: 'Main page',
         description: 'Learn more about Seme Framework version 4.0.0 through this documentation.',
         breadcrumbs: [
           {
             url: process.env.BASE_URL || 'http://localhost:3001',
             text: 'Seme Framework',
+          },
+          {
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/',
+            text: '4.0.0',
           }
         ]
       }
@@ -112,7 +116,6 @@
       }
     },
     jsonld() {
-      this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
       const items = this.breadcrumbs.map((item, index) => ({
         '@type': 'ListItem',
         position: index + 1,
@@ -140,7 +143,7 @@
           ],
           "dateCreated": "2020-06-11T10:12:00+07:00",
           "datePublished": "2020-06-11T10:12:00+07:00",
-          "dateModified": "2021-06-25T09:26:12+07:00",
+          "dateModified": "2021-06-25T16:40:12+07:00",
           "author": {
             "@type": "Person",
             "gender": "Male",

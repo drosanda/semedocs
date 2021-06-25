@@ -4,69 +4,75 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class="unavailable">3.3.0</li>
+          <li class=""><NuxtLink to="/id/">4.0.0 (Bahasa)</NuxtLink></li>
+          <li class=""><NuxtLink to="/id/core/">Core</NuxtLink></li>
+          <li class="unavailable">Kelas Model</li>
         </ul>
       </nav>
-
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1>Seme Framework version 3.3.0</h1>
-            <p>The main goals on version 3.3.0 is applying namespace for Seme Framework. For now, documentation is not completed yet.</p>
-            <hr>
-            <h2>Question and Answer</h2>
-            <p>Feel free to ask me on my <a href="https://instagram.com/drosanda/" target="_blank">instagram</a>, <a href="https://facebook.com/drs11/" target="_blank">facebook</a>, or open an issue on <a href="https://github.com/drosanda/semedocs/issues" target="_blank">github</a>.</p>
-            <hr>
-            <h2>Change Log</h2>
-            <ol class="1">
-              <li>Add namespace for model, view, and controller classes</li>
-              <li>Enhance index.php from version 4.0.0</li>
-            </ol>
+            <h1 class="">Kelas Model untuk Core</h1>
+
+            <div class="message is-info">
+              <div class="message-body">
+                <p><b>Masih dibuat</b></p>
+                <p>Dokumentasi ini masih dalam proses pembuatan.</p>
+              </div>
+            </div>
+
           </div>
         </div>
-      </div>
 
-      <div class="nav-bottom">
-        <div class="nav-bottom-left">
-          <nuxt-link to="/3.2.1/" class="btn">
+        <div class="nav-bottom">
+          <div class="nav-bottom-left">
+            <nuxt-link to="/id/core/controller/" class="btn">
             <i class="fa fa-chevron-left"></i>
-            Version: 3.2.1
-          </nuxt-link>
+              Core: Controller
+            </nuxt-link>
+          </div>
+          <div class="nav-bottom-right">
+            <nuxt-link to="/id/" class="btn">
+              Beranda Dokumen
+              <i class="fa fa-chevron-right"></i>
+            </nuxt-link>
+          </div>
         </div>
-        <div class="nav-bottom-right">
-          <nuxt-link to="/4.0.0/" class="btn">
-            Version: 4.0.0
-            <i class="fa fa-chevron-right"></i>
-          </nuxt-link>
-        </div>
-      </div>
 
+      </div>
     </div>
   </div>
 </template>
 <script>
 export default {
-  layout: 'v3.3.0',
+  layout: 'id',
   data (){
     return {
-      name: 'Seme Framework v3.3.0',
-      suffix: ' - Seme Framework 3.3.0',
-      title: 'Main page',
-      description: 'Learn more about Seme Framework version 3.3.0 through this documentation.',
+      name: 'Seme Framework 4',
+      suffix: ' - Seme Framework 4 Bahasa Indonesia',
+      title: 'Kelas Core Controller',
+      description: 'Pelajari selengkapnya tentang Kelas Core Controller melalui dokumentasi Seme Framework versi 4.0.0.',
       breadcrumbs: [
         {
-          url: process.env.ORIGIN_URL || 'http://localhost:3001/',
+          url: process.env.BASE_URL || 'http://localhost:3001',
           text: 'Seme Framework',
         },
         {
-          url: (process.env.ORIGIN_URL || 'http://localhost:3001')+'/3.0.0/',
-          text: '3.0.0',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/',
+          text: 'ID',
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/core/',
+          text: 'Core',
         }
-      ]
+      ],
     }
   },
   head() {
     return {
+      htmlAttrs: {
+        lang: 'id'
+      },
       title: this.title+this.suffix,
       meta: [
         {
@@ -88,11 +94,12 @@ export default {
     }
   },
   jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
     const items = this.breadcrumbs.map((item, index) => ({
       '@type': 'ListItem',
       position: index + 1,
       item: {
-        "@type": "WebPage",
+        '@type': "WebPage",
         '@id': item.url,
         name: item.text,
       },
@@ -113,9 +120,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2020-06-11T10:12:00+07:00",
-        "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-25T16:41:12+07:00",
+        "dateCreated": "2020-06-25T17:18:01+07:00",
+        "datePublished": "2020-06-25T17:18:10+07:00",
+        "dateModified": "2021-06-25T17:19:12+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
