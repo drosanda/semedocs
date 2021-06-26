@@ -22,7 +22,7 @@
               Berikut ini adalah daftar materi untuk pengenalan konsep dasar Seme Framework secara teori:
             </p>
             <ul>
-              <li><NuxtLink to="/id/tutorial/basic-php/">Belajar Cepat PHP Dasar</NuxtLink></li>
+              <li><NuxtLink to="/id/tutorial/basic-php/">Belajar Singkat PHP</NuxtLink></li>
               <li><NuxtLink to="/id/tutorial/basic-mvc/">Dasar-dasar Model-View-Controller (MVC)</NuxtLink></li>
               <li><NuxtLink to="/id/tutorial/basic-routing/">Dasar-dasar Perutean</NuxtLink></li>
               <li><NuxtLink to="/id/tutorial/basic-static/">Pembuatan dan Perpindahan antar halaman statis</NuxtLink></li>
@@ -56,7 +56,7 @@
         </div>
         <div class="nav-bottom-right">
           <nuxt-link to="/id/tutorial/introduction/" class="btn">
-            Belajar PHP
+            Belajar Singkat PHP
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>

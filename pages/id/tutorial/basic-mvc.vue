@@ -79,6 +79,64 @@
             <p>
               Properti pada kelas merupakan tempat penyimpanan nilai dari kelas tersebut. Properti kalau dalam pemrograman biasa, sering disebut dengan variabel.
             </p>
+            <h4>Perbedaan Properti dengan Variabel</h4>
+            <p>
+              Properti adalah variabel yang tergabung dengan kelas itu sendiri.
+              Sementara, variabel ketika didalam kelas hanya dapat digunakan dalam metode sebuah kelas.
+            </p>
+            <p>
+              Contoh potongan kode untuk membedakan properti dan variabel.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  &#x3C;?php
+                  class Nama_Kelas_Panjang_Sekali {
+                    var $ini_properti;
+
+                    public function metode1(){
+                      $ini_variabel = 'Hello';
+                      $this->ini_properti = $ini_variabel;
+                    }
+
+                    public function metode2(){
+                      $this->ini_properti = $ini_variabel;
+                      //akan menimbulkan error,
+                      //karena $ini_variabel hanya ada dalam
+                      //ruang lingkup metode1
+                    }
+                  }
+
+                  //dapat ditulis juga sama dengan
+
+                  public class Nama_Kelas_Panjang_Sekali {
+                    public $properti_ke1;
+                    public $properti_ke2;
+
+                    public function nama_metode(){
+                      //isi kode php
+                    }
+                  }
+                </highlight-code>
+              </div>
+            </div>
+
             <h3>Apa itu Metode pada kelas?</h3>
             <p>
               Metode dapat berisikan kumpulan kode atau logika yang ada pada suatu kelas.
@@ -523,7 +581,7 @@ export default {
         ],
         "dateCreated": "2020-06-24T22:43:31+07:00",
         "datePublished": "2020-06-24T22:43:39+07:00",
-        "dateModified": "2021-06-25T00:03:00+07:00",
+        "dateModified": "2021-06-26T23:11:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

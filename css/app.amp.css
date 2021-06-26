@@ -77,33 +77,39 @@ blockquote, body, dd, dl, dt, fieldset, figure, h1, h2, h3, h4, h5, h6, hr, html
     margin-top: 1em;
 }
 .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
-    color: #666666;
+    color: rgba(241,106,96,1.0);
     font-weight: 600;
     line-height: 1.125;
 }
 .content h1 {
+    color: rgba(241,106,96,1.0);
     font-size: 2em;
-    margin-bottom: .5em;
+    margin-bottom: .6em;
 }
 .content h2 {
-    font-size: 1.75em;
-    margin-bottom: .5714em;
+    color: rgba(241,106,96,0.9);
+    font-size: 1.6em;
+    margin-bottom: .5em;
 }
 .content h3 {
-    font-size: 1.65em;
-    margin-bottom: .5814em;
+    color: rgba(241,106,96,0.8);
+    font-size: 1.5em;
+    margin-bottom: .4em;
 }
 .content h4 {
-    font-size: 1.55em;
-    margin-bottom: .5914em;
+    color: rgba(241,106,96,0.7);
+    font-size: 1.4em;
+    margin-bottom: .3em;
 }
 .content h5 {
-    font-size: 1.50em;
-    margin-bottom: .5914em;
+    color: rgba(241,106,96,0.6);
+    font-size: 1.3em;
+    margin-bottom: .2em;
 }
 .content h6 {
-    font-size: 1.41em;
-    margin-bottom: .5994em;
+    color: rgba(241,106,96,0.5);
+    font-size: 1.2em;
+    margin-bottom: .1em;
 }
 .content h2:not(:first-child) {
     margin-top: 1.1428em;
@@ -465,7 +471,7 @@ pre code {
     border-size: 0.08em;
   }
   code {
-    font-size: 0.5em;
+    font-size: 0.75em;
   }
   .nav-bottom {
     display: block;
@@ -559,11 +565,11 @@ Monokai style - ported by Luigi Maselli - http://grigio.org
 }
 
 .hljs.php {
-  color: rgb(255, 128, 191);
+  color: #ffeb3b;
 }
 
 .hljs-comment {
-  color: #af3e36;
+  color: #f99e98;
 }
 .hljs-variable {
   color: #55b5db;

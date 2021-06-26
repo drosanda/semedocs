@@ -12,10 +12,19 @@
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Belajar PHP</h1>
+            <h1 class="">Belajar Singkat PHP</h1>
             <p>
-              Seme Framework dibuat dengan menggunakan bahasa pemrograman PHP. Untuk bacaan lengkap tentang bahasa pemrograman php ada di situs resminya yaitu <a href="https://php.net/">PHP.NET <i class="fa fa-external-link"></i></a> yang tersedia dalam bahasa Inggris.
+              Seme Framework dibuat dengan menggunakan bahasa pemrograman PHP.
               Di sini sekarang, anda akan belajar mengenai penggunaan dasar PHP yang digunakan untuk penyusunan kode dengan Seme Framework.
+            </p>
+            <h2>Referensi Resmi PHP</h2>
+            <p>
+              Untuk bacaan lengkap tentang bahasa pemrograman php ada di situs resminya yaitu <a href="https://php.net/">PHP.NET <i class="fa fa-external-link"></i></a> yang tersedia dalam bahasa Inggris.
+            </p>
+            <h2>Tujuan Belajar Singkat PHP di website Dokumentasi Seme Framework</h2>
+            <p>
+              Tujuan akhir dari Tutorial Belajar Singkat PHP ini adalah supaya programmer dapat membaca kode dengan bahasanya sendiri.
+              Kemudian, apabila telah bisa membaca kode dengan bahasa sendiri, baru bisa melanjutkan ke Tutorial Selanjutnya.
             </p>
 
             <h2>Penulisan dasar kode PHP</h2>
@@ -27,6 +36,121 @@
               Kode PHP ditulis dengan diakhiri tanda titik koma (<code>;</code>) untuk setiap perintahnya.
               Kebanyakan dari PHP ditulis dengan huruf kecil (<b>Lowercase</b>) terkecuali untuk penamaan tertentu.
             </p>
+            <h3>Memulai Ngoding PHP</h3>
+            <p>
+              Kode PHP diawali dengan <code>&#x3C;?php</code> dan diakhiri atau ditutup dengan <code>?&#x3E;</code>.
+              Namun sekarang kode PHP tidak perlu ditutup pada akhir halaman PHP, terkecuali ingin menampilkan kode selain PHP.
+            </p>
+            <p>
+              Dengan adanya kode pembuka dan kode penutup, PHP dapat ditulis dan digabungkan dengan HTML sehingga bisa menampilkan bagian-bagian halaman yang berasal dari PHP.
+            </p>
+            <p>
+              Untuk lebih jelasnya, bisa lihat contoh ini.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  &#x3C;?php
+                  echo &#x27;ini dari PHP&#x27;;
+                  ?&#x3E;
+                  &#x3C;h3&#x3E;Ini dari HTML&#x3C;/h3&#x3E;
+                  &#x3C;?php
+                  echo &#x27;balik lagi dari PHP&#x27;;
+
+                  //baris terakhir tidak usah pakai tutup
+                </highlight-code>
+              </div>
+            </div>
+
+            <h3>Menulis Komentar di dalam PHP</h3>
+            <p>
+              Penulisan komentar atau catatan pada saat ngoding sangat penting.
+              Catatan ini akan membantu untuk mengingat programmer arti lengkapnya dari sebuah kode.
+              Komentar ini tidak akan diproses oleh PHP dan tidak akan menimbulkan ERROR selama masih dalam badan komentar.
+            </p>
+
+            <h4>Penulisan Komentar per baris</h4>
+            <p>
+              Dalam PHP, komentar dapat dituliskan per baris.
+              Untuk menuliskan komentar perbaris ini, cukup tulis kode dua kali garis miring <code>//</code> pada baris yang ingin dikomentari.
+              Contoh kode untuk penulisan komentar.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  &#x3C;?php
+                  // ini komentar kode dalam baris ini tidak akan dieksekusi
+                </highlight-code>
+              </div>
+            </div>
+
+            <h4>Penulisan Komentar per blok</h4>
+            <p>
+              Dalam PHP, komentar dapat dituliskan untuk banyak baris atau perbagian blok.
+              Untuk menuliskan komentar perblok ini ada kode pembukanya yaitu <code>/**</code> sedangkan penutup komentarnya yaitu <code>*/</code>.
+              Contoh kode untuk penulisan komentar perblok.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  &#x3C;?php
+                  /**
+                   Ini adalah komentar panjang sekali
+                   Pokoknya, kalau yang baca komentar ini pasti ngerti
+                   Semoga cepet bisa memahami tulisan ini
+                  */
+                </highlight-code>
+              </div>
+            </div>
+
             <h3>Kaidah tangan kanan</h3>
             <p>
               PHP menggunakan konsep atau kaidah tangan kanan.
@@ -73,14 +197,14 @@
             <h3>Fungsi bawaan atau (<em>Built-in functions</em>)</h3>
             <p>
               Seperti bahasa pemrograman lainnya, PHP memiliki fungsi bawaan yang cukup lengkap.
-              Fungsi bawaan ini ada untuk mempercepat proses penerapan logika dalam penyusunan kode.
+              Fungsi bawaan ini berguna untuk mempercepat proses penerapan logika dalam penyusunan kode karena sudah terbantu denga fungsi yang ada ini.
               Fungsi ini biasanya ditandai dengan akhiran kurung, contoh fungsi <code>strtoupper()</code> adalah fungsi bawaan untuk merubah string menjadi huruf besar semua.
             </p>
             <h3>Variabel bawaan atau (<em>Built-in variables</em>)</h3>
             <p>
               Seperti bahasa pemrograman lainnya, PHP memiliki variabel bawaan yang cukup lengkap.
               Variabel bawaan ini biasanya akan digunakan oleh pembuat kode untuk mendapatkan nilai yang telah ada disistem.
-              Dan bisa juga, untuk merubah nilai yang sudah ada atau bahjkan menambahkan nilai yang baru.
+              Dan bisa juga, untuk merubah nilai yang sudah ada atau bahkan menambahkan nilai yang baru.
             </p>
             <h3>Ruang Lingkup Variabel dan Fungsi</h3>
             <p>
@@ -100,6 +224,9 @@
             <h4>Ruang lingkup Class</h4>
             <p>
               Dalam PHP juga, ada ruang lingkup <code>class</code> yang biasa kita sebut dengan hak akses kelas. Ada 3 hak akses yang digunakan dalam kelas yaitu <code>Public</code>, <code>Private</code>, dan <code>Private</code>.
+            </p>
+            <p>
+              Untuk pembahasan selanjutnya tentang kelas, akan dibahas pada Tutorial <b>Basic MVC</b> (setelah tutorial ini).
             </p>
             <h4>Ruang lingkup Lokal</h4>
             <p>
@@ -143,6 +270,9 @@
                 </highlight-code>
               </div>
             </div>
+            <p>
+              Untuk contoh perbedaan ruang lingkup ketika ngoding metode kelas, akan dibahas pada Tutorial <b>Basic MVC</b> (setelah tutorial ini).
+            </p>
 
             <h2>Tipe Data</h2>
             <p>
@@ -663,12 +793,12 @@
                 <highlight-code lang="php">
                   $nama_variabel = 1;
                   // ini artinya ada variabel bernama nama_variabel berisi INT 1
-                  $int_bukan = '1';
-                  // ini artinya ada variabel bernama int_bukan berisi STRING '1'
-                  $str_lagi = "Hello World";
-                  // ini artinya ada variabel bernama str_lagi berisi STRING "Hello World"
-                  $contoh_ke_4 = "Hello World";
-                  // ini artinya ada variabel bernama str_lagi berisi STRING "Hello World"
+                  $int_bukan = &#x27;1&#x27;;
+                  // ini artinya ada variabel bernama int_bukan berisi STRING &#x27;1&#x27;
+                  $str_lagi = &#x22;Hello World&#x22;;
+                  // ini artinya ada variabel bernama str_lagi berisi STRING &#x22;Hello World&#x22;
+                  $contoh_ke_4 = &#x22;Hello World&#x22;;
+                  // ini artinya ada variabel bernama str_lagi berisi STRING &#x22;Hello World&#x22;
                 </highlight-code>
               </div>
             </div>
@@ -707,7 +837,226 @@
               Kemudian, untuk pembuatan variabel juga tidak boleh menggunakan karakter khusus, selain underscore.
             </p>
 
+            <h2>Operator</h2>
+            <p>
+              Pada bahasa pemrograman PHP ada yang disebut dengan operator.
+              Operator biasanya digunakan untuk melakukan proses <b>Matematika</b>, seperti tambah, kurang, bagi, kali, dan modulus.
+            </p>
+            <h3>Operator +</h3>
+            <p>
+              Operator tambah digunakan untuk melakukan proses pertambahan.
+              Dalam bahasa pemrograman PHP, operator pertambahan memiliki simbol yang sama dengan simbol matematika biasa yaitu simbol tambah (+).
+            </p>
+            <h3>Operator -</h3>
+            <p>
+              Operator kurang digunakan untuk melakukan proses pengurangan.
+              Dalam bahasa pemrograman PHP, operator pengurangan memiliki simbol yang sama dengan simbol matematika biasa yaitu simbol kurang (-).
+            </p>
+            <h3>Operator /</h3>
+            <p>
+              Operator bagi digunakan untuk melakukan proses pembagian.
+              Dalam bahasa pemrograman PHP, operator pembagian memiliki simbol yang sama dengan simbol matematika biasa yaitu simbol bagi (/).
+            </p>
+            <h3>Operator *</h3>
+            <p>
+              Operator kali digunakan untuk melakukan proses pengalian.
+              Dalam bahasa pemrograman PHP, operator pengalian memiliki simbol yang berbeda dengan simbol matematika biasa yaitu simbol bintang / <b>wildcard</b> (*).
+            </p>
+            <h3>Operator %</h3>
+            <p>
+              Operator modulus digunakan untuk melakukan proses perhitungan sisa bagi.
+              Dalam bahasa pemrograman PHP, operator modulus memiliki simbol yang berbeda dengan simbol matematika biasa yaitu simbol persen (%).
+              Operator ini biasanya digunakan untuk menentukan ganjil genap pada warna tabel karena ketika semua bilang di modulus angka 2, hanya akan menghasilkan nilai 1 dan 0.
+              Nilai 1 untuk baris ganjil karena memiliki hasil bagi 1, sementara nilai 0 untuk baris genap karena bilangan tersebut habis dibagi 2.
+            </p>
+            <p>
+              Berikut ini adalah contoh kode untuk setiap operator.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  $a = 1;
+                  $b = 2;
+                  $c = $a+$b;
+                  // nilai $c adalah INT 3
+
+                  $a = 1;
+                  $b = 2;
+                  $c = $a-$b;
+                  // nilai $c adalah INT -1
+
+                  $a = 1;
+                  $b = 2;
+                  $c = $a/$b;
+                  // nilai $c adalah FLOAT 0.5
+
+                  $a = 1;
+                  $b = 2;
+                  $c = $a*$b;
+                  // nilai $c adalah INT 2
+
+
+                  $a = 1;
+                  $b = 2;
+                  $c = $a%$b;
+                  // nilai $c adalah INT 1
+                  // karena 2 bagi 1 menghasilkan sisa 1.
+                </highlight-code>
+              </div>
+            </div>
+            <h3>Operator untuk String</h3>
+            <p>
+              Tipe data String memiliki operator khusus yaitu titik (.).
+              Operator ini digunakan untuk menggabungkan 2 string atau lebih.
+              Lihat contoh kode untuk lebih jelasnya.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  $a = &#x27;Hallo&#x27;;
+                  $b = &#x27;Dunia&#x27;;
+                  $c = $a.$b;
+                  // nilai $c adalah String &#x27;HaloDunia&#x27;
+                  // tidak ada spasi
+
+                  $c = $a.&#x27; &#x27;.$b;
+                  // nilai $c adalah String &#x27;Halo Dunia&#x27;
+
+                  //menggabungkan string tanpa pakai 2 variabel
+
+                  $a = &#x27;Hallo&#x27;;
+                  $a = $a.&#x27; Dunia&#x27;;
+                  // nilai $a adalah String &#x27;Halo Dunia&#x27;
+
+                  //atau dengan cara singkat
+
+                  $a = &#x27;Hallo&#x27;;
+                  $a .= &#x27; Dunia&#x27;;
+                  // nilai $a adalah String &#x27;Halo Dunia&#x27;
+                </highlight-code>
+              </div>
+            </div>
+
+            <h2>Logika Percabangan</h2>
+            <p>
+              Logika Percabangan ini biasanya digunakan untuk membuat perbandingan antar nilai.
+              Nilai ini bisa didapatkan melalui variabel, maupun membandingkan nilainya secara langsung
+            </p>
+            <p>
+              Contoh kode untuk perbandingan nilai dari variabel dan nilai langsung beserta cara bacanya
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  // Contoh perbandingan menggunakan variabel
+                  $a = 1;
+                  $b = 2;
+
+                  //kemudian dibandingkan dengan menggunakan IF ELSE
+                  //gunakan operator lebih besar
+                  if($a &#x3E; $b){
+                    echo &#x27;$a tidak lebih besar dari $b&#x27;;
+                  }else{
+                    echo &#x27;$a lebih besar dari $b&#x27;;
+                  }
+                  //kodingan diatas dapat dibaca sebagai berikut:
+                  // ada variabel $a berisi nilai INTEGER 1
+                  // ada variabel $b berisi nilai INTEGER 2
+                  // Apakah variabel $a lebih besar dari variabel $b?
+                  // jika benar jalankan perintah echo &#x27;$a tidak lebih besar dari $b&#x27;;
+                  // lainnya (jika salah maksudnya) jalankan perintah echo &#x27;$a lebih besar dari $b&#x27;;
+
+                  // Contoh perbandingan menggunakan nilai langsung
+                  if(7 &#x3E; 6){
+                    echo &#x27;7 tidak lebih besar dari 6&#x27;;
+                  }else{
+                    echo &#x27;7 lebih besar dari 6&#x27;;
+                  }
+                  //kodingan diatas dapat dibaca sebagai berikut:
+                  // Apakah 7 lebih besar dari variabel 6?
+                  // jika benar jalankan perintah echo &#x27;7 tidak lebih besar dari 6&#x27;;
+                  // lainnya (jika salah maksudnya) jalankan perintah echo &#x27;7 lebih besar dari 6&#x27;;
+                </highlight-code>
+              </div>
+            </div>
+
+            <h3>Logika Percabangan lebih dari satu (Logika percabangan Majemuk)</h3>
+            <p>
+              Berikut ini adalah contoh Logika Percabangan lebih dari satu.
+            </p>
+
+            <div class="maccontent">
+              <highlight-code lang="php">
+                // Contoh perbandingan menggunakan variabel dengan nilai langsung
+                $status_transaksi = &#x27;berhasil&#x27;;
+                if($status_transaksi == &#x27;berhasil&#x27;){
+                  echo &#x27;Status Transaksi: Berhasil&#x27;;
+                }elseif($status_transaksi == &#x27;gagal&#x27;){
+                  echo &#x27;Status Transaksi: Gagal&#x27;;
+                }else{
+                  echo &#x27;Status Transaksi: Tidak diketahui&#x27;;
+                }
+
+                //kodingan diatas dapat dibaca sebagai berikut:
+                // ada variabel $status_transaksi berisi nilai STRING &#x27;berhasil&#x27;;
+                // Apakah variabel $status_transaksi sama dengan STRING &#x27;berhasil&#x27; ?
+                // jika benar jalankan perintah echo &#x27;Status Transaksi: Berhasil&#x27;;
+                // Apakah variabel $status_transaksi sama dengan STRING &#x27;gagal&#x27; ?
+                // jika benar jalankan perintah echo &#x27;Status Transaksi: Gagal&#x27;;
+                // lainnya (jika tidak memenuhi kriteria if maupun if else)
+                // jalankan echo &#x27;Status Transaksi: Tidak diketahui&#x27;;
+              </highlight-code>
+            </div>
           </div>
+
 
         </div>
       </div>
@@ -738,8 +1087,8 @@ data (){
   return {
     name: 'Seme Framework 4',
     suffix: ' - Seme Framework 4 Bahasa Indonesia',
-    title: 'Tutorial Dasar PHP',
-    description: 'Belajar PHP dasar sebelum menggunakan Seme Framework',
+    title: 'Belajar Singkat PHP',
+    description: 'Belajar Singkat PHP dasar sebelum menggunakan Seme Framework',
     breadcrumbs: [
       {
         url: process.env.BASE_URL || 'http://localhost:3001',
@@ -810,7 +1159,7 @@ jsonld() {
       ],
       "dateCreated": "2020-06-26T19:12:31+07:00",
       "datePublished": "2020-06-26T19:12:39+07:00",
-      "dateModified": "2021-06-26T19:13:00+07:00",
+      "dateModified": "2021-06-27T00:23:10+07:00",
       "author": {
         "@type": "Person",
         "gender": "Male",
