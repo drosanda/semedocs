@@ -428,9 +428,9 @@
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/id/tutorial/" class="btn">
+          <nuxt-link to="/id/tutorial/basic-php/" class="btn">
             <i class="fa fa-chevron-left"></i>
-            Tutorial
+            Basic PHP
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">

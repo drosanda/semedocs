@@ -139,7 +139,7 @@
             Akan mengembalikan nilai berupa string, <code>http://www.example.com/mastermind/user/profile/123</code>.
           </p>
 
-          <h2>Fungsi dd(mixed $data)</h2>
+          <h2 id="fungsi_dd">Fungsi dd(mixed $data)</h2>
           <p>Fungsi global sama seperti <code>SENE_Controller::debug()</code> yang akan meng-<code>echo</code>-kan nilai dari suatu variabel yang dilewatkan kedalam fungsi ini sehingga mudah dibaca oleh developer.</p>
           <p>Fungsi global ini hanya tersedia untuk Seme Framework versi 4.x.</p>
           <h3>Parameter</h3>
@@ -390,7 +390,7 @@ export default {
         ],
         "dateCreated": "2020-06-11T10:12:00+07:00",
         "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-25T09:17:00+07:00",
+        "dateModified": "2021-06-25T18:57:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
