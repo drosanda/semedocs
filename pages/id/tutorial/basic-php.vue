@@ -33,16 +33,18 @@
               Namun, untuk sekarang PHP sudah memiliki banyak kemajuan sehingga sudah sedikit berbeda dengan pendahulunya.
             </p>
             <p>
-              Kode PHP ditulis dengan diakhiri tanda titik koma (<code>;</code>) untuk setiap perintahnya.
+              Kode PHP diakhiri dengan tanda titik koma (<code>;</code>) untuk setiap perintahnya.
+              Kemudian biasanya setelah titik koma (<code>;</code>), kode dilanjutkan pada baris baru supaya lebih mudah dibaca.
               Kebanyakan dari PHP ditulis dengan huruf kecil (<b>Lowercase</b>) terkecuali untuk penamaan tertentu.
             </p>
             <h3>Memulai Ngoding PHP</h3>
             <p>
               Kode PHP diawali dengan <code>&#x3C;?php</code> dan diakhiri atau ditutup dengan <code>?&#x3E;</code>.
+              Jadi PHP itu dibuka dengan kode <code>&#x3C;?php</code> dan ditutup dengan kode <code>&#x3C;?php</code>.
               Namun sekarang kode PHP tidak perlu ditutup pada akhir halaman PHP, terkecuali ingin menampilkan kode selain PHP.
             </p>
             <p>
-              Dengan adanya kode pembuka dan kode penutup, PHP dapat ditulis dan digabungkan dengan HTML sehingga bisa menampilkan bagian-bagian halaman yang berasal dari PHP.
+              Dengan adanya kode pembuka dan kode penutup, PHP dapat digabungkan dengan HTML secara langsung sehingga bisa menampilkan bagian-bagian halaman yang berasal dari PHP.
             </p>
             <p>
               Untuk lebih jelasnya, bisa lihat contoh ini.
@@ -87,8 +89,8 @@
 
             <h4>Penulisan Komentar per baris</h4>
             <p>
-              Dalam PHP, komentar dapat dituliskan per baris.
-              Untuk menuliskan komentar perbaris ini, cukup tulis kode dua kali garis miring <code>//</code> pada baris yang ingin dikomentari.
+              Dalam PHP, komentar dapat diketikan per baris.
+              Untuk menuliskan komentar perbaris ini, cukup ketik <code>//</code> (dua kali garis miring) pada baris yang ingin dikomentari.
               Contoh kode untuk penulisan komentar.
             </p>
             <div class="macwindow">
@@ -118,7 +120,7 @@
 
             <h4>Penulisan Komentar per blok</h4>
             <p>
-              Dalam PHP, komentar dapat dituliskan untuk banyak baris atau perbagian blok.
+              Dalam PHP, komentar dapat diketikan untuk banyak baris atau perbagian blok.
               Untuk menuliskan komentar perblok ini ada kode pembukanya yaitu <code>/**</code> sedangkan penutup komentarnya yaitu <code>*/</code>.
               Contoh kode untuk penulisan komentar perblok.
             </p>
@@ -203,17 +205,37 @@
             <h3>Variabel bawaan atau (<em>Built-in variables</em>)</h3>
             <p>
               Seperti bahasa pemrograman lainnya, PHP memiliki variabel bawaan yang cukup lengkap.
-              Variabel bawaan ini biasanya akan digunakan oleh pembuat kode untuk mendapatkan nilai yang telah ada disistem.
+              Variabel bawaan ini biasanya akan digunakan oleh pembuat kode untuk mendapatkan nilai yang telah ada di sistem.
               Dan bisa juga, untuk merubah nilai yang sudah ada atau bahkan menambahkan nilai yang baru.
             </p>
-            <h3>Ruang Lingkup Variabel dan Fungsi</h3>
+            <h3>Ruang Lingkup</h3>
             <p>
-              PHP memiliki ruang lingkup baik untuk fungsi maupun variabel.
-              Ruang lingkup ini berfungsi untuk melonggarkan supaya dapat diakses dimana saja dan atau membatasi supaya tidak bentrok dengan variabel lain maupun fungsi lain.
+              PHP memiliki ruang lingkup baik untuk penggunaan fungsi maupun untuk penggunaan variabel.
+              Ada dua tujuan dari ruang lingkup ini, yaitu:
             </p>
+            <ol>
+              <li><b>Melonggarkan</b> variabel atau fungsi supaya dapat digunakan dimanapun.</li>
+              <li><b>Membatasi</b> variabel atau fungsi supaya <b>tidak tercampur</b> dengan variabel atau fungsi lain.</li>
+            </ol>
             <h4>Ruang lingkup Global</h4>
             <p>
-              Ruang lingkup <code>global</code> biasanya akan mengizinkan variabel atau fungsi diakses dimanapun, tidak terbatas terhadap kelas ataupun isi dari badan fungsi yang kita buat.
+              Ruang lingkup global adalah cara untuk melonggarkan variabel ataupun fungsi supaya dapat digunakan dimanapun.
+              Tapi, kelemahannya adalah mungkin akan terjadi bentrok antar fungsi atau variabel jika namanya sama.
+              Ketika bentroknya terhadap fungsi dengan yang sama, biasanya akan menimbulkan error.
+              Namun, ketika bentroknya dengan nama variabel yang sama, biasanya tidak error.
+              Tapi, menyebabkan isi atau nilai yang dimiliki oleh variabel tersebut bisa berubah nilainya.
+            </p>
+            <div class="message is-warning">
+              <div class="message-body">
+                <p><b>Awas!</b></p>
+                <p>
+                  Efek samping penggunaan variabel yang banyak didalam ruang lingkup global bisa menyebabkan <em>lemot</em>.
+                </p>
+              </div>
+            </div>
+            <p>
+              Kelemahan yang selanjutnya dari penggunaan ruang lingkup global ini adalah, apabila nilai yang disimpan dari variabel tersebut sangat banyak.
+              Contoh ketika ada variabel bertipe data array menyimpan banyak sekali data, akan membuat lemot</em>.
             </p>
             <p>
               Contoh dari fungsi dengan ruang lingkup global ini adalah fungsi <code>strtoupper()</code> yang ada dicontoh sebelumnya.
@@ -276,14 +298,14 @@
 
             <h2>Tipe Data</h2>
             <p>
-              Tipe data atau jenis penyimpanan data dalam PHP tidak dituliskan atau dideklarasikan secara langsung.
+              Tipe data atau jenis penyimpanan data dalam PHP tidak dibutuhkan atau dideklarasikan secara langsung.
               Meskipun begitu, PHP tetap mengenal beberapa jenis tipe data seperti integer, float, string, boolean, array, object, mixed, dan lain-lain.
             </p>
 
             <h3>INT atau INTEGER</h3>
             <p>
               <code>int</code> atau <code>integer</code>, untuk menyimpan data angka genap tanpa pecahan dari mulai negatif sampai positif. seperti 0, -1, 2, 1000, -781 dan seterusnya.
-              Integer dalam PHP cukup ditulis dengan <code>int</code> saja dalam huruf kecil (lowercase).
+              Integer dalam PHP cukup disebuts dengan <code>int</code> saja dalam huruf kecil (lowercase).
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -480,9 +502,9 @@
                 <highlight-code lang="php">
                   //contoh pengisian kunci dalam array
                   $anggota = array();
-                  $anggota['pertama'] = &#x27;Sandi&#x27;;
-                  $anggota['kedua'] = &#x27;Ruli&#x27;;
-                  $anggota['ketiga'] = &#x27;Iqbal&#x27;;
+                  $anggota[&#x27;pertama&#x27;] = &#x27;Sandi&#x27;;
+                  $anggota[&#x27;kedua&#x27;] = &#x27;Ruli&#x27;;
+                  $anggota[&#x27;ketiga&#x27;] = &#x27;Iqbal&#x27;;
                 </highlight-code>
               </div>
             </div>
@@ -516,20 +538,25 @@
                 <highlight-code lang="php">
                   //contoh pemanggilan nilai dalam array
                   $anggota = array();
-                  $anggota['pertama'] = &#x27;Sandi&#x27;;
-                  $anggota['kedua'] = &#x27;Ruli&#x27;;
-                  $anggota['ketiga'] = &#x27;Iqbal&#x27;;
+                  $anggota[&#x27;pertama&#x27;] = &#x27;Sandi&#x27;;
+                  $anggota[&#x27;kedua&#x27;] = &#x27;Ruli&#x27;;
+                  $anggota[&#x27;ketiga&#x27;] = &#x27;Iqbal&#x27;;
 
                   // kita akan mencoba menampilkan nilai yang berisi &#x27;Ruli&#x27;
-                  // nilai &#x27;Ruli&#x27; ada didalam kunci 'kedua'
+                  // nilai &#x27;Ruli&#x27; ada didalam kunci &#x27;kedua&#x27;
                   // jadi
-                  echo $anggota['kedua'];
+                  echo $anggota[&#x27;kedua&#x27;];
                   // ini akan menampilkan Ruli di layar
                 </highlight-code>
               </div>
             </div>
 
             <h4>Cara mengetahui isi kunci dan isi nilai seluruh array</h4>
+            <p>
+              Cara untuk mengetahui isi nilai dan kunci dari sebuah array yang benar adalah dengan menggunakan teknik perulangan.
+              Teknik perulangan ini, akan dibahas pada halaman tutorial ini setelah logika dan percabangan.
+              Jadi terus baca dan coba untuk fahami dulu keseluruhan tulisan ini.
+            </p>
             <p>
               Untuk mengetahui kunci array dalam Seme Framework sudah mudah, cukup memanggil fungsi <code>dd()</code> didalam view, model, ataupun controller Seme Framework.
               Fungsi <code>dd</code> ini bukan fungsi bawaan PHP, tapi fungsi bawaan dari Seme Framework.
@@ -560,9 +587,9 @@
                     ...
                     //contoh menampilkan isi array dalam controller
                     $anggota = array();
-                    $anggota['pertama'] = &#x27;Sandi&#x27;;
-                    $anggota['kedua'] = &#x27;Ruli&#x27;;
-                    $anggota['ketiga'] = &#x27;Iqbal&#x27;;
+                    $anggota[&#x27;pertama&#x27;] = &#x27;Sandi&#x27;;
+                    $anggota[&#x27;kedua&#x27;] = &#x27;Ruli&#x27;;
+                    $anggota[&#x27;ketiga&#x27;] = &#x27;Iqbal&#x27;;
                     $anggota[] = &#x27;Tami&#x27;;
                     $anggota[] = &#x27;Tia&#x27;;
                     $anggota[] = &#x27;Daeng&#x27;;
@@ -624,7 +651,7 @@
             <p>
               Tapi kunci yang digunakan object tidak bisa bertambah otomatis, seperti dalam array.
               Karena kunci object tidak bisa menggunakan awalan huruf, hanya bisa huruf kemudian angka, dan underscore.
-              Jadi mau tidak mau, kunci pada object tetap harus dituliskan secara langsung.
+              Jadi mau tidak mau, kunci pada object tetap harus disebutkan secara langsung.
               Untuk lebih jelas lihat contoh potongan kode sebelumnya.
             </p>
 
@@ -662,7 +689,7 @@
                   $anggota->ketiga = &#x27;Iqbal&#x27;;
 
                   // kita akan mencoba menampilkan nilai yang berisi &#x27;Iqbal&#x27;
-                  // nilai &#x27;Iqbal&#x27; ada didalam kunci 'ketiga'
+                  // nilai &#x27;Iqbal&#x27; ada didalam kunci &#x27;ketiga&#x27;
                   // jadi
                   echo $anggota->ketiga;
                   // ini akan menampilkan Iqbal di layar
@@ -972,10 +999,35 @@
             <h2>Logika Percabangan</h2>
             <p>
               Logika Percabangan ini biasanya digunakan untuk membuat perbandingan antar nilai.
-              Nilai ini bisa didapatkan melalui variabel, maupun membandingkan nilainya secara langsung
+              Nilai ini bisa didapatkan melalui variabel, maupun membandingkan nilainya secara langsung.
             </p>
+            <h3>Operator pada logika Percabangan</h3>
             <p>
-              Contoh kode untuk perbandingan nilai dari variabel dan nilai langsung beserta cara bacanya
+              Operator pada logika Percabangan biasa disebut juga dengan <b>Operator Perbandingan</b>, telah disediakan oleh PHP untuk digunakan pada logika percabangan, yaitu:
+            </p>
+            <ol>
+              <li>
+                <code>$a == $b</code> berarti $a sama dengan $b.
+              </li>
+              <li>
+                <code>$a != $b</code> berarti tidak sama dengan.
+              </li>
+              <li>
+                <code>$a &#x3E; $b</code> $a lebih besar dari $b.
+              </li>
+              <li>
+                <code>$a &#x3E;= $b</code> $a lebih besar sama dengan dari $b.
+              </li>
+              <li>
+                <code>$a &#x3C; $b</code> $a lebih kecil dari $b.
+              </li>
+              <li>
+                <code>$a &#x3C;= $b</code> $a lebih kecil sama dengan dari $b.
+              </li>
+
+            </ol>
+            <p>
+              Contoh kode untuk perbandingan nilai dari variabel dan nilai langsung beserta cara bacanya.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -1028,12 +1080,38 @@
               </div>
             </div>
 
+            <div class="message is-info">
+              <div class="message-body">
+                <p><b>Posisi tanda sama dengan (<code>=</code>)</b></p>
+                <p>
+                  Tanda sama dengan selalu ada di paling kanan setelah tanda kurang dari (<code>&#x3C;</code>) atau lebih dari (<code>&#x3E;</code>).
+                </p>
+              </div>
+            </div>
+
             <h3>Logika Percabangan lebih dari satu (Logika percabangan Majemuk)</h3>
             <p>
               Berikut ini adalah contoh Logika Percabangan lebih dari satu.
             </p>
 
-            <div class="maccontent">
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
               <highlight-code lang="php">
                 // Contoh perbandingan menggunakan variabel dengan nilai langsung
                 $status_transaksi = &#x27;berhasil&#x27;;
@@ -1057,6 +1135,211 @@
             </div>
           </div>
 
+          <h2>Perulangan</h2>
+          <p>
+            Perulangan adalah sesuatu yang harus dipelajari secara intensif.
+            Karena, perulangan ini akan selalu digunakan untuk menampilkan data dari array.
+            Yang paling sering digunakan oleh Seme Framework hanya 2, yaitu foreach dan for.
+            Semua tarikan dari model di Seme Framework, biasanya berbentuk array of object.
+            Jadi harus difahami betur, tentang penggunaan perulangan ini.
+          </p>
+
+          <h3>Perulangan dengan Foreach</h3>
+          <p>
+            Perluangan dengan foreach adalah perulangan yang paling sederhana dan gampang digunakan.
+            Kenapa sederhana dan gampang? Nanti bisa diketahui ketika membahas teknik perulangan dengan for.
+          </p>
+          <p>
+            Berikut ini adalah contoh kode untuk penelusuran array dengan foreach.
+          </p>
+          <div class="macwindow">
+            <div class="titlebar">
+              <div class="buttons">
+                <div class="close">
+                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                  <!-- close button link -->
+                </div>
+                <div class="minimize">
+                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                  <!-- minimize button link -->
+                </div>
+                <div class="zoom">
+                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                  <!-- zoom button link -->
+                </div>
+              </div>
+            </div>
+            <div class="maccontent">
+              <highlight-code lang="php">
+                // contoh sederhana
+                $anggota = array();
+                $anggota[&#x27;pertama&#x27;] = &#x27;Sandi&#x27;;
+                $anggota[&#x27;kedua&#x27;] = &#x27;Ruli&#x27;;
+                $anggota[&#x27;ketiga&#x27;] = &#x27;Iqbal&#x27;;
+
+                foreach($anggota as $a){
+                  echo $a;
+                  // akan menampilkan semua isi dari nilai array anggota
+                  // tanpa harus mengetahui kunci arraynya
+                }
+
+                //kemudian $anggota bertambah
+                $anggota[&#x27;keempat&#x27;] = &#x27;Tia&#x27;;
+                $anggota[&#x27;kelima&#x27;] = &#x27;Tami&#x27;;
+
+                //ketika di foreach lagi
+                foreach($anggota as $a){
+                  echo $a;
+                  // akan menampilkan semua isi dari nilai array anggota
+                  // ditambah nilai yang baru akan muncul
+                  // tanpa harus merubah kode foreach
+                }
+
+                //kemudian $anggota bertambah dengan kunci array otomatis
+                $anggota[] = &#x27;Daeng&#x27;;
+                $anggota[] = &#x27;Vanny&#x27;;
+
+                //ketika di foreach lagi
+                foreach($anggota as $a){
+                  echo $a;
+                  // akan menampilkan semua isi dari nilai array anggota
+                  // ditambah nilai yang baru dengan kunci array otomatis
+                  // tanpa harus merubah kode foreach
+                }
+              </highlight-code>
+            </div>
+          </div>
+
+          <h3>Perulangan dengan For</h3>
+          <p>
+            Perulangan dengan for dapat digunakan untuk menelusuri isi dari variabel array.
+            Tapi, menggunakan perulangan for ini ada syaratnya, yaitu isi dari variabel yang akan diulang panjang kuncinya sudah ada.
+            Dan syarat selanjutnya adalah, kuncinya harus berupa kunci integer.
+          </p>
+          <p>
+            Berikut ini adalah contoh kode untuk penelusuran array dengan for.
+          </p>
+
+          <div class="macwindow">
+            <div class="titlebar">
+              <div class="buttons">
+                <div class="close">
+                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                  <!-- close button link -->
+                </div>
+                <div class="minimize">
+                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                  <!-- minimize button link -->
+                </div>
+                <div class="zoom">
+                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                  <!-- zoom button link -->
+                </div>
+              </div>
+            </div>
+            <div class="maccontent">
+              <highlight-code lang="php">
+                // contoh sederhana
+                $anggota = array();
+                $anggota[] = &#x27;Sandi&#x27;;
+                $anggota[] = &#x27;Ruli&#x27;;
+                $anggota[] = &#x27;Iqbal&#x27;;
+
+                //karena anggotanya ada 3, maka for nya maksimal 3.
+                for($i=0;$i&#x3C;3;$i++){
+                  echo $anggota[$i];
+                  // akan menampilkan semua isi array
+                  // yang dipanggil melalui kunci arraynya
+                }
+
+                //kemudian $anggota bertambah
+                $anggota[] = &#x27;Tia&#x27;;
+                $anggota[] = &#x27;Tami&#x27;;
+
+                //ketika di for lagi,
+                // harus dihitung jml array kuncinya
+                for($i=0;$i&#x3C;5;$i++){
+                  echo $anggota[$i];
+                  // akan menampilkan semua isi array
+                  // yang dipanggil melalui kunci arraynya
+                }
+
+                //kemudian $anggota bertambah dengan kunci array manual
+                $anggota[&#x27;keenam&#x27;] = &#x27;Daeng&#x27;;
+                $anggota[&#x27;ketujuh&#x27;] = &#x27;Vanny&#x27;;
+
+                //ketika di for lagi
+                // harus dihitung jml array kuncinya
+                for($i=0;$i&#x3C;5;$i++){
+                  echo $anggota[$i];
+                  // akan menampilkan semua isi array
+                  // yang dipanggil melalui kunci arraynya
+                  // tapi akan error, karena $anggota ke-6
+                  // dan ke-7 index nya bukan integer
+                }
+                //jadi lebih mudah pakai foreach kan
+              </highlight-code>
+            </div>
+          </div>
+
+
+
+          <h3>Perulangan dengan Foreach menggunakan kunci array</h3>
+          <p>
+            Berikut ini adalah contoh kode untuk penelusuran array dengan foreach tapi pemanggilan arraynya menggunakan kunci array.
+          </p>
+          <div class="macwindow">
+            <div class="titlebar">
+              <div class="buttons">
+                <div class="close">
+                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                  <!-- close button link -->
+                </div>
+                <div class="minimize">
+                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                  <!-- minimize button link -->
+                </div>
+                <div class="zoom">
+                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                  <!-- zoom button link -->
+                </div>
+              </div>
+            </div>
+            <div class="maccontent">
+              <highlight-code lang="php">
+                // contoh sederhana
+                $anggota = array();
+                $anggota[] = &#x27;Sandi&#x27;;
+                $anggota[] = &#x27;Ruli&#x27;;
+                $anggota[] = &#x27;Iqbal&#x27;;
+
+                foreach($anggota as $kunci=>$nilai){
+                  echo anggota[$kunci=>$nilai];
+                  // akan menampilkan semua isi dari nilai array anggota
+                  // tanpa harus mengetahui kunci arraynya
+                }
+
+                //kemudian $anggota bertambah dengan kunci array manual
+                $anggota[&#x27;keenam&#x27;] = &#x27;Daeng&#x27;;
+                $anggota[&#x27;ketujuh&#x27;] = &#x27;Vanny&#x27;;
+
+                //ketika di foreach lagi
+                foreach($anggota as $kunci=>$nilai){
+                  echo anggota[$kunci=>$nilai];
+                  // akan menampilkan semua isi dari nilai array anggota
+                  // tanpa harus mengetahui kunci arraynya
+                  // array key bukan integer pun tidak akan menimbulkan error
+                  // jadi pakai foreach lebih mudah
+                }
+              </highlight-code>
+            </div>
+          </div>
+
+          <h2>Kesimpulan</h2>
+          <p>
+            Didalam tutorial ini sudah dijelaskan secara menyeluruh, cara ngoding dasar menggunakan PHP.
+            Apabila ada yang tidak mengerti, halaman ini mungkin perlu dibaca berulang kali sampai paham.
+          </p>
 
         </div>
       </div>
@@ -1159,7 +1442,7 @@ jsonld() {
       ],
       "dateCreated": "2020-06-26T19:12:31+07:00",
       "datePublished": "2020-06-26T19:12:39+07:00",
-      "dateModified": "2021-06-27T00:23:10+07:00",
+      "dateModified": "2021-06-27T10:43:33+07:00",
       "author": {
         "@type": "Person",
         "gender": "Male",
