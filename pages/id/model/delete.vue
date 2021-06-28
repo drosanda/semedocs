@@ -1,63 +1,108 @@
 <template>
-    <div class="section">
-        <div class="container">
-          <nav class="breadcrumb" aria-label="breadcrumbs">
-            <ul class="breadcrumbs">
-              <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-<li class=""><NuxtLink to="/id/">4.0.0 (Bahasa)</NuxtLink></li>
-              <li class=""><NuxtLink to="/id/model">Model</NuxtLink></li>
-            <li class="unavailable">Delete Method</li>
-          </ul>
-        </nav>
-        <div class="columns">
-          <div class="column">
-        <div class="content">
-          <h1 class="">Delete Method</h1>
-					<p>Delete method for deleting data in the table.</p>
-					<pre>$this->db->delete(string $table_name [, int $is_debug=0]): boolean</pre>
-          <h2>Parameters</h2>
-          <p>Where method has 2 parameters that is <b>table name</b> and <b>debug flag</b>.</p>
-          <h3>$table_name</h3>
-          <p><b>Table Name</b> can be string contain table name.</p>
-					<h2>Example usage</h2>
-					<p>Here is the examples using <b>delete method</b>. See the first of this page for full example.</p>
-          <h3>Basic Usage</h3>
-          <p>For example we assumed want to delete data in blog table. First, in the model:</p>
-<pre>class Blog_Model extends SENE_Model{
-	var $tbl = 'd_order';
-	var $tbl_as = 'dor';
-	public function __construct(){
-		parent::__construct();
-		$this->db->from($this->tbl,$this->tbl_as);
-	}
-	public function delete($id){
-    $this->db->where("id",$id);
-		return $this->db->delete($this->tbl);
-	}
-}
-					</pre>
+  <div class="section">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul class="breadcrumbs">
+          <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
+          <li class=""><NuxtLink to="/id/">4.0.0 (Bahasa)</NuxtLink></li>
+          <li class=""><NuxtLink to="/id/model">Model</NuxtLink></li>
+          <li class="unavailable">Metode Delete</li>
+        </ul>
+      </nav>
+      <div class="columns">
+        <div class="column">
+          <div class="content">
+            <h1 class="">Metode Delete</h1>
+            <p>Delete method for deleting data in the table.</p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  $this->db->delete(string $table_name [, int $is_debug=0]): boolean
+                </highlight-code>
+              </div>
+            </div>
 
+            <h2>Parameters</h2>
+            <p>Where method has 2 parameters that is <b>table name</b> and <b>debug flag</b>.</p>
+            <h3>$table_name</h3>
+            <p><b>Table Name</b> can be string contain table name.</p>
+            <h2>Example usage</h2>
+            <p>Here is the examples using <b>delete method</b>. See the first of this page for full example.</p>
+            <h3>Basic Usage</h3>
+            <p>For example we assumed want to delete data in blog table. First, in the model:</p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  &#x3C;?php
+                  class Blog_Model extends SENE_Model {
+                    var $tbl = &#x27;d_order&#x27;;
+                    var $tbl_as = &#x27;dor&#x27;;
+                    public function __construct(){
+                    parent::__construct();
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                    }
+                    public function delete($id){
+                      $this-&#x3E;db-&#x3E;where(&#x22;id&#x22;,$id);
+                      return $this-&#x3E;db-&#x3E;delete($this-&#x3E;tbl);
+                    }
+                  }
+                </highlight-code>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/id/model/between/" class="btn">
+            <i class="fa fa-chevron-left"></i>
+            Metode composite_create
+          </nuxt-link>
         </div>
-
-        <div class="columns">
-          <div class="column">
-            <b-button tag="router-link" to="/id/model/update" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Model::update
-            </b-button>
-          </div>
-          <div class="column is-2">&nbsp;</div>
-          <div class="column">
-            <b-button tag="router-link" to="/id/model/exec" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Model::exec
-            </b-button>
-          </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/id/model/exec/" class="btn">
+            Metode exec
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
-
       </div>
+
     </div>
-  </template>
+  </div>
+</template>
 <script>
 export default {
   layout: 'id',
@@ -65,8 +110,8 @@ export default {
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'Model::delete method',
-      description: 'Pelajari selengkapnya tentang delete method on SENE_Model class from Seme Framework.',
+      title: 'Metode delete',
+      description: 'Pelajari selengkapnya tentang Metode delete di Seme Framework versi 4.0.0',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -77,13 +122,9 @@ export default {
           text: 'ID',
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/tutorial/',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/model/',
           text: 'Model',
-        },
-        {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/tutorial/introduction/',
-          text: 'Select',
-        },
+        }
       ],
     }
   },
@@ -112,7 +153,8 @@ export default {
       ]
     }
   },
-  jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
     const items = this.breadcrumbs.map((item, index) => ({
       '@type': 'ListItem',
       position: index + 1,
@@ -139,7 +181,7 @@ export default {
         ],
         "dateCreated": "2020-06-11T10:12:00+07:00",
         "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-11T01:04:00+07:00",
+        "dateModified": "2021-06-28T21:54:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

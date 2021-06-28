@@ -104,8 +104,8 @@ export default {
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'Metode Between',
-      description: 'Pelajari selengkapnya tentang Metode Between dari Model di Seme Framework versi 4.0.0',
+      title: 'Metode composite_create',
+      description: 'Pelajari selengkapnya tentang metode composite_create dari SENE_Model di Seme Framework versi 4.0.0',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
