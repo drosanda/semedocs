@@ -179,8 +179,8 @@ class Blog_Model extends SENE_Model{
         </nuxt-link>
       </div>
       <div class="nav-bottom-right">
-        <nuxt-link to="/id/model/select/" class="btn">
-          Model::select
+        <nuxt-link to="/id/model/between/" class="btn">
+          Metode between
           <i class="fa fa-chevron-right"></i>
         </nuxt-link>
       </div>
@@ -235,7 +235,8 @@ export default {
       ]
     }
   },
-  jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
     const items = this.breadcrumbs.map((item, index) => ({
       '@type': 'ListItem',
       position: index + 1,

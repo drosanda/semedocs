@@ -130,27 +130,24 @@
 
           </div>
         </div>
-      </div>
 
-      <div class="nav-bottom">
-        <div class="nav-bottom-left">
-          <nuxt-link to="/id/model/where_as/" class="btn">
+        <div class="nav-bottom">
+          <div class="nav-bottom-left">
+            <nuxt-link to="/id/model/" class="btn">
             <i class="fa fa-chevron-left"></i>
-            Model::where_as
-          </nuxt-link>
+              Model
+            </nuxt-link>
+          </div>
+          <div class="nav-bottom-right">
+            <nuxt-link to="/id/model/composite_create/" class="btn">
+              Metode composite_create
+              <i class="fa fa-chevron-right"></i>
+            </nuxt-link>
+          </div>
         </div>
-        <div class="nav-bottom-right">
-          <nuxt-link to="/id/model/group_by/" class="btn">
-            Model::group_by
-            <i class="fa fa-chevron-right"></i>
-          </nuxt-link>
-        </div>
+
       </div>
-
     </div>
-
-
-
   </div>
 </template>
 <script>
@@ -231,7 +228,7 @@ export default {
         ],
         "dateCreated": "2020-06-11T10:12:00+07:00",
         "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-24T12:54:00+07:00",
+        "dateModified": "2021-06-28T21:54:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
