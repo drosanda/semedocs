@@ -111,7 +111,7 @@ export default {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Metode delete',
-      description: 'Pelajari selengkapnya tentang Metode delete di Seme Framework versi 4.0.0',
+      description: 'Pelajari selengkapnya tentang Metode delete dari SENE_Model di Seme Framework versi 4.0.0',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
