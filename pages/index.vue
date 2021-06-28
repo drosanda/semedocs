@@ -97,7 +97,7 @@
     layout: 'default',
     data (){
       return {
-        title: 'Welcome to Seme Framework Documentation',
+        title: 'Seme Framework',
         suffix: ' - The Lightweight and Deployable PHP MVC Framework',
         description: 'Seme Framework is lightweight and deployable PHP MVC Framework that you can learn more through this documentation.',
         homeGroup: require('~/static/carbon.png'),
