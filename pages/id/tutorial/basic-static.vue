@@ -312,7 +312,7 @@ export default {
     return {
       fr: require('~/assets/img/first-run.png'),
       name: 'Seme Framework 4',
-      suffix: ' - Seme Framework 4 Bahasa Indonesia',
+      suffix: ' - Seme Framework 4',
       title: 'Pembuatan Halaman Statis',
       description: 'Mari kita pahami dan pelajari bagaimana cara Pembuatan Halaman Statis dan perpindahan halamanya dengan Seme Framework',
       breadcrumbs: [

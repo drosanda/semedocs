@@ -60,7 +60,7 @@
     data() {
       return {
         name: 'Seme Framework 4',
-        suffix: ' - Seme Framework 4 Bahasa Indonesia',
+        suffix: ' - Seme Framework 4',
         title: 'Pengaturan untuk Fase Production',
         description: 'Pelajari selengkapnya tentang Pengaturan Seme Framework untuk Fase Production',
         breadcrumbs: [
@@ -104,7 +104,8 @@
         ]
       }
     },
-    jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+    jsonld() {
+      this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
       const items = this.breadcrumbs.map((item, index) => ({
         '@type': 'ListItem',
         position: index + 1,

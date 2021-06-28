@@ -92,7 +92,7 @@ export default {
   data() {
     return {
       name: 'Seme Framework 4',
-      suffix: ' - Seme Framework 4 Bahasa Indonesia',
+      suffix: ' - Seme Framework 4',
       title: 'putThemeContent Method from SENE_Controller',
       description: 'Pelajari selengkapnya tentang putThemeContent Method from SENE_Controller on Seme Framework versi 4.0.0',
       breadcrumbs: [

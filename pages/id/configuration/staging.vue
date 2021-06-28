@@ -63,7 +63,7 @@
     data() {
       return {
         name: 'Seme Framework 4',
-        suffix: ' - Seme Framework 4 Bahasa Indonesia',
+        suffix: ' - Seme Framework 4',
         title: 'Pengaturan Fase Staging',
         description: 'Pelajari selengkapnya tentang Pengaturan Seme Framework untuk Fase Staging',
         breadcrumbs: [

@@ -80,7 +80,7 @@ export default {
   data() {
     return {
       name: 'Seme Framework 4',
-      suffix: ' - Seme Framework 4 Bahasa Indonesia',
+      suffix: ' - Seme Framework 4',
       title: 'Membuat template',
       description: 'Pelajari selengkapnya tentang membuat view template di Seme Framework versi 4.0.0',
       breadcrumbs: [

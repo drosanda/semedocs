@@ -126,7 +126,7 @@ export default {
   data() {
     return {
       name: 'Seme Framework 4',
-      suffix: ' - Seme Framework 4 Bahasa Indonesia',
+      suffix: ' - Seme Framework 4',
       title: 'Constructor Kelas Controller',
       description: 'Pelajari selengkapnya tentang __construct Method dari SENE_Controller di Seme Framework versi 4.0.0',
       breadcrumbs: [

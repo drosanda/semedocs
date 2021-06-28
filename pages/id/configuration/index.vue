@@ -227,8 +227,8 @@ $semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/id/configuration/development/" class="btn">
-            Fase Development
+          <nuxt-link to="/id/tutorial/" class="btn">
+            Tutorial
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
@@ -243,7 +243,7 @@ $semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;
     data (){
       return {
         name: 'Seme Framework 4',
-        suffix: ' - Seme Framework 4 Bahasa Indonesia',
+        suffix: ' - Seme Framework 4',
         title: 'Pengaturan',
         description: 'Pelajari selengkapnya tentang pengaturan melalui dokumentasi Seme Framework versi 4.0.0.',
         breadcrumbs: [

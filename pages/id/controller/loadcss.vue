@@ -88,7 +88,7 @@ class Blog extends SENE_Controller {
     data() {
       return {
         name: 'Seme Framework 4',
-        suffix: ' - Seme Framework 4 Bahasa Indonesia',
+        suffix: ' - Seme Framework 4',
         title: 'loadCss Method dari SENE_Controller',
         description: 'Pelajari selengkapnya tentang loadCss method dari SENE_Controller di Seme Framework versi 4.0.0',
         breadcrumbs: [

@@ -112,9 +112,9 @@
     data (){
       return {
         name: 'Seme Framework 4',
-        suffix: ' - Seme Framework 4 Bahasa Indonesia',
-        title: 'Beranda Dokumen ',
-        description: 'Seme Framework adalah Framework dengan konsep MVC untuk PHP yang ringan untuk dikembangkan.',
+        suffix: ' - Seme Framework 4',
+        title: 'Dokumentasi Bahasa Indonesia',
+        description: 'Pelajari Seme Framework melaui Dokumentasi Seme Framework 4 dalam Bahasa Indonesia.',
         semecarbon: require('~/static/carbon.png'),
         breadcrumbs: [
           {

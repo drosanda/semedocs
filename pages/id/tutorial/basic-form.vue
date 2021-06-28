@@ -5,31 +5,28 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.0 (Bahasa)</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/configuration">Pengaturan</NuxtLink></li>
-          <li class="unavailable">URL</li>
+          <li class=""><NuxtLink to="/id/tutorial/">Tutorial</NuxtLink></li>
+          <li class="unavailable">Dasar-dasar Perutean</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Pengaturan URL</h1>
-            <p>Pengaturan URL atau <i>Uniform Resource Locator</i> ada dalam Seme Framework karena berhubungan dengan bagaimana cara Seme Framework akan dibuka atau dijalankan.</p>
+            <h1 class="">Penggunaan Form HTML dan Prosesnya</h1>
+            <p>
+              Untuk memproses inputan pada Seme Framework sudah tidak perlu lagi menggunakan <code>$_POST</code>.
+              Seme Framework telah menyediakan kelas khusus untuk mengelola proses inputan ini.
+            </p>
 
-            <h2>Base URL</h2>
+            <h2>Proses Manualnya (tanpa Seme Framework)</h2>
             <p>
-              Pengaturan Base URL diperlukan untuk menentukan URL dasar dari sebuah Web yang dibangun diatas Seme Framework. Base URL ini akan jadi acuan untuk setiap URL yang akan ditempatkan dalam respon yang dihasilkan.
+              Untuk proses manual, PHP telah menyediakan variabel SUPER GLOBAL untuk menangani pengiriman FORM ini.
+              Seperti <code>$_POST</code>, <code>$_GET</code>, <code>$_FILES</code>, dan <code>$_REQUEST</code>.
             </p>
             <p>
-              Pengaturan base URL ini ada di <code>app/config/development.php</code> dibagian variabel <code>$site</code>.
-            </p>
-            <div class="message is-danger">
-              <div class="message-body">
-                <p><b>Pehatian</b></p>
-                <p>Mulai dari Seme Framework versi 3.0.0, isi dari nilai <code>$site</code> harus diberi akhiran garis miring &#x22;/&#x22;.</p>
-              </div>
-            </div>
-            <p>
-              Contoh pengisian <code>$site</code> dalam potongan kode:
+              Dalam contoh ini akan dibuat 2 file pada direktori yang sama yaitu file <code>index.php</code> dan <code>proses.php</code>.
+              Untuk contoh, simpan kedua file ini didalam <code>D:/XAMPP/htdocs/cobaform</code>.
+              Untuk lebih jelasnya lihat contoh kode berikut ini.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -47,37 +44,26 @@
                     <!-- zoom button link -->
                   </div>
                 </div>
+                File index.php
               </div>
               <div class="maccontent">
-                <highlight-code lang="php">
-                  $site = &#x22;http://localhost/seme-framework/&#x22;;
-                  $site = &#x22;https://www.example.com/&#x22;;
-                  $site = &#x22;http://localhost:8080/&#x22;;
+                <highlight-code lang="html">
+                  &#x3C;form method=&#x22;post&#x22; action=&#x22;proses.php&#x22;&#x3E;
+                    &#x3C;input type=&#x22;text&#x22; name=&#x22;nama&#x22; /&#x3E;
+                    &#x3C;br&#x3E;
+                    &#x3C;input type=&#x22;text&#x22; name=&#x22;alamat&#x22; /&#x3E;
+                    &#x3C;br&#x3E;
+                    &#x3C;select name=&#x22;gender&#x22;&#x3E;
+                      &#x3C;option value=&#x22;1&#x22;&#x3E;Pria&#x3C;/option&#x3E;
+                      &#x3C;option value=&#x22;0&#x22;&#x3E;Wanita&#x3C;/option&#x3E;
+                    &#x3C;/select&#x3E;
+                    &#x3C;br&#x3E;
+                    &#x3C;button type=&#x22;submit&#x22;&#x3E;Simpan&#x3C;/button&#x3E;
+                  &#x3C;/form&#x3E;
                 </highlight-code>
               </div>
             </div>
 
-            <div class="message is-info">
-              <div class="message-body">
-                <p><b>Pengaturan Base URL dengan Port Custom</b></p>
-                <p>Jika menggunakan nilai <code>$_SERVER[&#x27;HTTP_HOST&#x27;]</code> pada <code>$site</code> tidak perlu untuk menambahkan akhiran &#x22;:PORT&#x22; pada setiap pengaturannya.</p>
-              </div>
-            </div>
-
-            <div class="message is-info">
-              <div class="message-body">
-                <p><b>Mendapatkan nilai base URL (<code>$site</code>)</b></p>
-                <p>Untuk mendapatkan nilai dari base URL dapat menggunakan fungsi global <NuxtLink to="/id/globals/#fungsi_base_url">base_url()</NuxtLink> yang membalikan base URL sebagai string.</p>
-              </div>
-            </div>
-
-            <h2>URL Rahasia Admin</h2>
-            <p>Konfigurasi url dasar khusus untuk admin yang mengarah ke <code>app/controller/admin/*</code>.</p>
-            <p>Nilai defaultnya adalah <code>$admin_secret_url = &#x27;admin&#x27;;</code>.</p>
-            <p>Ini akan relatif terhadap nilai <code>$site</code>.</p>
-            <p>
-              Contoh dalam kode:
-            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -94,49 +80,36 @@
                     <!-- zoom button link -->
                   </div>
                 </div>
+                File proses.php
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $admin_secret_url = &#x22;admin&#x22;;
-                  $admin_secret_url = &#x22;boss&#x22;;
-                  $admin_secret_url = &#x22;manajer&#x22;;
+                  &#x3C;?php
+                  $nama = $_POST[&#x27;nama&#x27;];
+                  $alamat = $_POST[&#x27;alamat&#x27;];
+                  $gender = $_POST[&#x27;gender&#x27;];
+
+                  echo &#x27;Nama: &#x27;.$nama.&#x27; beralamat di: &#x27;.$alamat.&#x27; berjenis kelamin: &#x27;;
+                  if($gender == 1){
+                    echo &#x27;pria&#x27;;
+                  }else{
+                    echo &#x27;wanita&#x27;;
+                  }
                 </highlight-code>
               </div>
             </div>
-
-            <div class="message is-info">
-              <div class="message-body">
-                <p><b>Mengakses nilai URL admin rahasia (<code>$admin_secret_url</code>)</b></p>
-                <p>Fungsi global <NuxtLink to="/id/globals/functions/">base_url_admin()</NuxtLink> adalah untuk mengembalikan nilai <code>$site.$admin_secret_url</code>.</p>
-              </div>
-            </div>
-
-            <h2>UMetode Perutean URL</h2>
             <p>
-              Metode perutean url ada pada <code>$method</code>, sama seperti versi 3.xx nilainya terdiri dari <code>REQUEST_URI</code>,<code>PATH_INFO</code>, dan <code>ORIG_PATH_INFO</code>.
+              Ketika kita akan buka contoh kode tersebut melalui halaman <code>localhost/cobaform/index.php</code> kemudian isi dan klik tombol simpan.
+              Proses akan berjalan dengan baik.
+              Namun, ketika anda coba buka langsung file <code>localhost/cobaform/proses.php</code>, itu akan menyebabkan error karena tidak ada nilai di <code>$_POST</code> yang terikirim.
             </p>
 
-            <h3>REQUEST_URI</h3>
+            <h3>Perubahan kode manual</h3>
             <p>
-              Nilai REQUEST_URI cocok untuk NGINX, Apache di server penerapan, LiteSpeed, dll.
+              Supaya tidak menimbulkan error ketika membuka langsung <code>localhost/cobaform/proses.php</code>, kita harus menambahkan validasi untuk error tersebut.
+              Untuk selengkapnya, mari kita lihat contoh.
             </p>
 
-            <h3>PATH_INFO</h3>
-            <p>
-              Nilai PATH_INFO cocok untuk lingkungan pengembangan XAMPP.
-            </p>
-
-            <h3>ORIG_PATH_INFO</h3>
-            <p>
-              Nilai ORIG_PATH_INFO adalah untuk konfigurasi server lain.
-            </p>
-
-            <h2>CDN URL</h2>
-            <p>URL dasar khusus untuk URL Jaringan Pengiriman Konten.</p>
-            <p>Nilai defaultnya adalah <code>$cdn_url = &#x27;&#x27;;</code></p>
-            <p>
-              Contoh:
-            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -153,40 +126,53 @@
                     <!-- zoom button link -->
                   </div>
                 </div>
+                File proses.php
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $cdn_url = &#x22;http://cdn.cenah.co.id/seme-framework/&#x22;;
+                  &#x3C;?php
+                  $nama = '-';
+                  if(isset($_POST[&#x27;nama&#x27;])){
+                    $nama = $_POST[&#x27;nama&#x27;];
+                  }
+                  $alamat = '-';
+                  if(isset($_POST[&#x27;alamat&#x27;])){
+                    $alamat = $_POST[&#x27;alamat&#x27;];
+                  }
+                  $gender = '-';
+                  if(isset($_POST[&#x27;gender&#x27;])){
+                    $gender = $_POST[&#x27;gender&#x27;];
+                  }
+
+                  echo &#x27;Nama: &#x27;.$nama.&#x27; beralamat di: &#x27;.$alamat.&#x27; berjenis kelamin: &#x27;;
+                  if($gender == 1){
+                    echo &#x27;pria&#x27;;
+                  }else{
+                    echo &#x27;wanita&#x27;;
+                  }
                 </highlight-code>
               </div>
             </div>
-
-            <div class="message is-info">
-              <div class="message-body">
-                <p><b>Mengakses nilai URL CDN (<code>$cdn_url</code>)</b></p>
-                <p>Bentuk metode <NuxtLink to="/id/controller/cdn_url/">$this->cdn_url()</NuxtLink> kelas <code>SENE_Controller</code> adalah untuk mengembalikan nilai <code>$cdn_url</code > nilai.</p>
-              </div>
-            </div>
-
-            <hr>
-
+            <h2>Kesimpulan</h2>
+            <p>
+              Penggunaan variabel global bawaan PHP, harus divalidasi terlebih dahulu sebelum digunakan.
+              Ketika akan menggunakan Seme Framework untuk pengelolaan input ini, bisa dipelajari di halaman <NuxtLink to="/id/controller/input/">Controller::input</NuxtLink>.
+            </p>
 
           </div>
-
         </div>
       </div>
 
-
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/id/configuration/session/" class="btn">
+          <nuxt-link to="/id/tutorial/basic-static/" class="btn">
             <i class="fa fa-chevron-left"></i>
-            Session
+            Basic Static
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/id/configuration/" class="btn">
-            Pengaturan
+          <nuxt-link to="/id/tutorial/" class="btn">
+            Tutorial
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
@@ -200,10 +186,11 @@ export default {
   layout: 'id',
   data (){
     return {
+      fr: require('~/assets/img/first-run.png'),
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'URL',
-      description: 'Pelajari selengkapnya tentang Pengaturan Rute URL dalam dokumentasi Seme Framework versi 4.0.0.',
+      title: 'Pembuatan Halaman Statis',
+      description: 'Mari kita pahami dan pelajari bagaimana cara Pembuatan Halaman Statis dan perpindahan halamanya dengan Seme Framework',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -214,10 +201,10 @@ export default {
           text: 'ID',
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/configuration/',
-          text: 'Pengaturan',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/tutorial/',
+          text: 'Tutorial',
         }
-      ]
+      ],
     }
   },
   head() {
@@ -251,7 +238,7 @@ export default {
       '@type': 'ListItem',
       position: index + 1,
       item: {
-        "@type": "WebPage",
+        '@type': "WebPage",
         '@id': item.url,
         name: item.text,
       },
@@ -272,9 +259,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2020-06-11T10:12:00+07:00",
-        "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-25T09:19:03+07:00",
+        "dateCreated": "2020-06-25T12:23:01+07:00",
+        "datePublished": "2020-06-25T13:33:42+07:00",
+        "dateModified": "2021-06-25T13:34:39+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

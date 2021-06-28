@@ -1113,7 +1113,7 @@
               </div>
               <div class="maccontent">
               <highlight-code lang="php">
-                // Contoh perbandingan menggunakan variabel dengan nilai langsung
+                // Contoh Logika percabangan Majemuk
                 $status_transaksi = &#x27;berhasil&#x27;;
                 if($status_transaksi == &#x27;berhasil&#x27;){
                   echo &#x27;Status Transaksi: Berhasil&#x27;;
@@ -1134,6 +1134,48 @@
               </highlight-code>
             </div>
           </div>
+
+          <h3>Logika Percabangan lebih dari satu kondisi</h3>
+          <p>
+            Berikut ini adalah contoh Logika Percabangan lebih dari satu kondisi.
+          </p>
+
+          <div class="macwindow">
+            <div class="titlebar">
+              <div class="buttons">
+                <div class="close">
+                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                  <!-- close button link -->
+                </div>
+                <div class="minimize">
+                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                  <!-- minimize button link -->
+                </div>
+                <div class="zoom">
+                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                  <!-- zoom button link -->
+                </div>
+              </div>
+            </div>
+            <div class="maccontent">
+            <highlight-code lang="php">
+              // Contoh Logika Percabangan lebih dari satu kondisi
+              $status_transaksi = &#x27;berhasil&#x27;;
+              $penjual_aktif = 1;
+              if($status_transaksi == &#x27;berhasil&#x27; &#x26;&#x26; $penjual_aktif == 1){
+                echo &#x27;Status Transaksi: Berhasil&#x27;;
+              }elseif($status_transaksi == &#x27;berhasil&#x27; &#x26;&#x26; $penjual_aktif == 0){
+                echo &#x27;Status Transaksi: Berhasil, tapi penjual tidak aktif. Uang akan dikembalikan dalam 2x24 jam&#x27;;
+              }elseif($status_transaksi == &#x27;gagal&#x27; &#x26;&#x26; $penjual_aktif == 1){
+                echo &#x27;Status Transaksi: Gagal&#x27;;
+              }elseif($status_transaksi == &#x27;gagal&#x27; &#x26;&#x26; $penjual_aktif == 0){
+                echo &#x27;Status Transaksi: Gagal&#x27;;
+              }else{
+                echo &#x27;Status Transaksi: Tidak diketahui&#x27;;
+              }
+            </highlight-code>
+          </div>
+        </div>
 
           <h2>Perulangan</h2>
           <p>
@@ -1369,7 +1411,7 @@ layout: 'id',
 data (){
   return {
     name: 'Seme Framework 4',
-    suffix: ' - Seme Framework 4 Bahasa Indonesia',
+    suffix: ' - Seme Framework 4',
     title: 'Belajar Singkat PHP',
     description: 'Belajar Singkat PHP dasar sebelum menggunakan Seme Framework',
     breadcrumbs: [
@@ -1442,7 +1484,7 @@ jsonld() {
       ],
       "dateCreated": "2020-06-26T19:12:31+07:00",
       "datePublished": "2020-06-26T19:12:39+07:00",
-      "dateModified": "2021-06-27T10:43:33+07:00",
+      "dateModified": "2021-06-28T08:30:33+07:00",
       "author": {
         "@type": "Person",
         "gender": "Male",

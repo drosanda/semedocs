@@ -229,7 +229,7 @@ class Home extends SENE_Controller
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/id/tutorial/basic-api/" class="btn">
+          <nuxt-link to="/id/tutorial/introduction/" class="btn">
           <i class="fa fa-chevron-left"></i>
             Tutorial: Introduction
           </nuxt-link>
@@ -251,7 +251,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework 4',
-      suffix: ' - Seme Framework 4 Bahasa Indonesia',
+      suffix: ' - Seme Framework 4',
       title: 'Tutorial: Get Data',
       description: 'Pelajari selengkapnya tentang obtaining data from model tutorial by melalui dokumentasi Seme Framework versi 4.0.0.',
       dbCreate: require('~/assets/img/tutorial/phpmyadmin-db-create.png'),

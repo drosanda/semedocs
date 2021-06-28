@@ -321,7 +321,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework 4',
-      suffix: ' - Seme Framework 4 Bahasa Indonesia',
+      suffix: ' - Seme Framework 4',
       title: 'Fungsi dan Variabel Global',
       description: 'Pelajari selengkapnya tentang Fungsi dan Variabel Global Seme Framework versi 4.x',
       breadcrumbs: [

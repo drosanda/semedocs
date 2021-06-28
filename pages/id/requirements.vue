@@ -80,7 +80,7 @@
     data() {
       return {
         name: 'Seme Framework 4',
-        suffix: ' - Seme Framework 4 Bahasa Indonesia',
+        suffix: ' - Seme Framework 4',
         title: 'Persyaratan',
         description: 'Pelajari selengkapnya tentang Persyaratan penggunaan Seme Framework untuk versi 4.0.0',
         breadcrumbs: [

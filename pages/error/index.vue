@@ -54,8 +54,8 @@ export default {
   layout: 'troubleshoot',
   data (){
     return {
-      name: 'Seme Framework Error & Troubleshooting',
-      suffix: ' - Seme Framework Documentation',
+      name: 'Seme Framework',
+      suffix: ' - Seme Framework',
       title: 'Error & Troubleshooting',
       description: 'Learn more about Seme Framework Error & Troubleshooting nad how to solved it.',
       breadcrumbs: [
@@ -88,7 +88,8 @@ export default {
       ]
     }
   },
-  jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
     const items = this.breadcrumbs.map((item, index) => ({
       '@type': 'ListItem',
       position: index + 1,
@@ -116,7 +117,7 @@ export default {
         ],
         "dateCreated": "2020-06-11T10:12:00+07:00",
         "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-11T01:04:00+07:00",
+        "dateModified": "2021-06-28T07:24:11+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

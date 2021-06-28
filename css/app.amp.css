@@ -595,7 +595,7 @@ Monokai style - ported by Luigi Maselli - http://grigio.org
 .macwindow .titlebar {
   background: transparent;
   background-color: #272822;
-  color: #4d494d;
+  color: #efefef;
   font-size: 11pt;
   line-height: 20px;
   text-align: center;

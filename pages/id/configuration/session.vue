@@ -102,7 +102,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework 4',
-      suffix: ' - Seme Framework 4 Bahasa Indonesia',
+      suffix: ' - Seme Framework 4',
       title: 'Pengaturan Sesi',
       description: 'Pelajari selengkapnya tentang Pengaturan Sesi (Session Configuration) di Seme Framework versi 4.0.0.',
       breadcrumbs: [

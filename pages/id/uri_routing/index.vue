@@ -102,7 +102,7 @@
               </div>
             </div>
 
-            <p>Rute cadangan lainnya adalah rute rahasia admin. Silakan merujuk ke <NuxtLink to="/id/uri_routing/admin/">dokumen ini</NuxtLink> untuk menggunakan perutean rahasia admin.</p>
+            <p>Rute cadangan lainnya adalah rute rahasia admin. Silakan merujuk ke <NuxtLink to="/id/uri_routing/admin/">Rute untk Admin</NuxtLink> untuk menggunakan perutean rahasia admin.</p>
           </div>
         </div>
       </div>
@@ -131,7 +131,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework 4',
-      suffix: ' - Seme Framework 4 Bahasa Indonesia',
+      suffix: ' - Seme Framework 4',
       title: 'Perutean URI',
       description: 'Pelajari selengkapnya tentang the Perutean URI (URI Routing) of melalui dokumentasi Seme Framework versi 4.0.0.',
       breadcrumbs: [

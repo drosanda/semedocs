@@ -508,7 +508,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework 4',
-      suffix: ' - Seme Framework 4 Bahasa Indonesia',
+      suffix: ' - Seme Framework 4',
       title: 'Tutorial Dasar MVC',
       description: 'Mari kita pahami dan pelajari bagaimana cara menulis kode dengan Seme Framework',
       breadcrumbs: [

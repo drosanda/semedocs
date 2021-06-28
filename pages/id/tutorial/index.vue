@@ -17,25 +17,20 @@
               Tutorial ini terbagi kedalam 2 bagian, yaitu konsep dasar teori dan penggunaan secara praktis.
               Nikmati pengalaman baru anda saat menjelajahi tutorial ini.
             </p>
-            <h2>Konsep Dasar</h2>
+            <h2>Tutorial Teori</h2>
             <p>
               Berikut ini adalah daftar materi untuk pengenalan konsep dasar Seme Framework secara teori:
             </p>
             <ul>
               <li><NuxtLink to="/id/tutorial/basic-php/">Belajar Singkat PHP</NuxtLink></li>
-              <li><NuxtLink to="/id/tutorial/basic-mvc/">Dasar-dasar Model-View-Controller (MVC)</NuxtLink></li>
-              <li><NuxtLink to="/id/tutorial/basic-routing/">Dasar-dasar Perutean</NuxtLink></li>
+              <li><NuxtLink to="/id/tutorial/basic-mvc/">Dasar Model-View-Controller (MVC)</NuxtLink></li>
+              <li><NuxtLink to="/id/tutorial/basic-routing/">Dasar Perutean</NuxtLink></li>
               <li><NuxtLink to="/id/tutorial/basic-static/">Pembuatan dan Perpindahan antar halaman statis</NuxtLink></li>
-              <li>Penggunaan Form HTML dan Prosesnya</li>
-              <li>Menggunakan Query Builder</li>
-              <li>Pembuatan Tema Tampilan (<em>Theme</em>)</li>
-              <li>Pembuatan Fitur Admin</li>
-              <li>Kelas Pustaka (<em>Library</em>)</li>
-              <li>dan Application Programming Interface (API)</li>
+              <li><NuxtLink to="/id/tutorial/basic-form/">Penggunaan Form HTML dan Prosesnya</NuxtLink></li>
             </ul>
             <h2>Tutorial Praktek</h2>
             <p>
-              Berikut ini adalah daftar tutorial praktek Seme Framework. Diharapkan dengan mempelajari tutorial daftar tutorial dibawah ini, anda telah memahami teori konsep dasar Seme Framework.
+              Berikut ini adalah daftar tutorial praktek Seme Framework. Diharapkan dengan mempelajari tutorial daftar tutorial dibawah ini, anda telah memahami teori yang dibutuhkan untuk menggunakan Seme Framework.
             </p>
             <ul>
               <li><NuxtLink to="/id/tutorial/introduction/">Pendahuluan</NuxtLink>, yang memberi Anda gambaran umum tentang apa yang diharapkan.</li>
@@ -55,7 +50,7 @@
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/id/tutorial/introduction/" class="btn">
+          <nuxt-link to="/id/tutorial/basic-php/" class="btn">
             Belajar Singkat PHP
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
@@ -71,7 +66,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework 4',
-      suffix: ' - Seme Framework 4 Bahasa Indonesia',
+      suffix: ' - Seme Framework 4',
       title: 'Tutorial penggunaan',
       description: 'Pelajari selengkapnya tentang penggunaan Seme Framework di dunia nyata.',
       breadcrumbs: [
@@ -115,7 +110,8 @@ export default {
       ]
     }
   },
-  jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
     const items = this.breadcrumbs.map((item, index) => ({
       '@type': 'ListItem',
       position: index + 1,
@@ -143,7 +139,7 @@ export default {
         ],
         "dateCreated": "2020-06-11T10:12:00+07:00",
         "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-26T16:09:09+07:00",
+        "dateModified": "2021-06-28T08:24:09+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

@@ -501,7 +501,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework 4',
-      suffix: ' - Seme Framework 4 Bahasa Indonesia',
+      suffix: ' - Seme Framework 4',
       title: 'Tutorial: Static Page',
       description: 'Pelajari selengkapnya tentang creating a static page using Seme Framework version 4.0.0.',
       breadcrumbs: [

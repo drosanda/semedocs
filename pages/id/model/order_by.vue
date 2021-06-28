@@ -66,7 +66,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework 4',
-      suffix: ' - Seme Framework 4 Bahasa Indonesia',
+      suffix: ' - Seme Framework 4',
       title: 'Model::order_by method',
       description: 'Pelajari selengkapnya tentang penggunaan order_by method pada kelas Model di Seme Framework.'
     }

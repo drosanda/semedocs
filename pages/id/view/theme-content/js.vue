@@ -43,7 +43,7 @@ export default {
   data() {
     return {
       name: 'Seme Framework 4',
-      suffix: ' - Seme Framework 4 Bahasa Indonesia',
+      suffix: ' - Seme Framework 4',
       title: 'Javascript Theme Content View from SENE_Controller',
       description: 'Pelajari selengkapnya tentang Javascript Theme Content View from SENE_Controller on Seme Framework versi 4.0.0',
       breadcrumbs: [

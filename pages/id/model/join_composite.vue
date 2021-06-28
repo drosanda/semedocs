@@ -84,7 +84,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework 4',
-      suffix: ' - Seme Framework 4 Bahasa Indonesia',
+      suffix: ' - Seme Framework 4',
       title: 'Model::join_composite method',
       description: 'Pelajari selengkapnya tentang join_composite method on SENE_Model class from Seme Framework.'
     }

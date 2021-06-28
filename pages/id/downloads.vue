@@ -101,7 +101,7 @@
       return {
         fr: require('~/assets/img/first-run.png'),
         name: 'Seme Framework 4',
-        suffix: ' - Seme Framework 4 Bahasa Indonesia',
+        suffix: ' - Seme Framework 4',
         title: 'Download dan Instal',
         description: 'Pelajari selengkapnya tentang cara download dan instal Seme Framework versi 4.0.0',
         breadcrumbs: [

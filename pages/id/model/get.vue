@@ -82,7 +82,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework 4',
-      suffix: ' - Seme Framework 4 Bahasa Indonesia',
+      suffix: ' - Seme Framework 4',
       title: 'Model::get method',
       description: 'Pelajari selengkapnya tentang get method on SENE_Model class from Seme Framework.',
       breadcrumbs: [

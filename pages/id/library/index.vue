@@ -100,7 +100,7 @@ export default {
   data() {
     return {
       name: 'Seme Framework 4',
-      suffix: ' - Seme Framework 4 Bahasa Indonesia',
+      suffix: ' - Seme Framework 4',
       title: 'Perpustakaan',
       description: 'Pelajari selengkapnya tentang Perpustakaan (library) di Seme Framework versi 4.0.0',
       breadcrumbs: [

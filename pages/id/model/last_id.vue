@@ -110,7 +110,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework 4',
-      suffix: ' - Seme Framework 4 Bahasa Indonesia',
+      suffix: ' - Seme Framework 4',
       title: 'Metode Last ID',
       description: 'Pelajari selengkapnya tentang Metode Last ID di Seme Framework versi 4.0.0',
       breadcrumbs: [

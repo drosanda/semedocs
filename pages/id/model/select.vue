@@ -89,7 +89,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework 4',
-      suffix: ' - Seme Framework 4 Bahasa Indonesia',
+      suffix: ' - Seme Framework 4',
       title: 'Model::select method',
       description: 'Pelajari selengkapnya tentang select method on SENE_Model class from Seme Framework.',
       breadcrumbs: [
