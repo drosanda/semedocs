@@ -456,7 +456,7 @@ class Home extends SENE_Controller{
         </div>
         <div class="nav-bottom-right">
           <nuxt-link to="/id/controller/constructor/" class="btn">
-            Controller: __construct
+            Constructor kelas
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>

@@ -6,14 +6,14 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.0 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/controller">Controller</NuxtLink></li>
-          <li class="unavailable">getKey method</li>
+          <li class="unavailable">Metode getKey</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">getKey method</h1>
-            <p><code>SENE_Controller::getKey</code> digunakan untuk memanggil variabel yang disimpan didalam $_SESSION.</p>
+            <h1 class="">Metode getKey</h1>
+            <p>Metode getKey digunakan untuk memanggil variabel yang disimpan didalam <code>$_SESSION[$saltkey]</code>.</p>
             <p>Metode biasanya ini digunakan untuk mengambil data yang tersimpan setelah proses login berhasil.</p>
 
             <h2>Parameter</h2>
@@ -88,18 +88,18 @@
           </div>
         </div>
       </div>
-      
+
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
           <nuxt-link to="/id/controller/constructor/" class="btn">
             <i class="fa fa-chevron-left"></i>
-            Constructor
+            Constructor Kelas
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
           <nuxt-link to="/id/controller/input/" class="btn">
-            input
+            Properti input
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>

@@ -716,12 +716,12 @@
         <div class="nav-bottom-left">
           <nuxt-link to="/id/controller/getkey/" class="btn">
             <i class="fa fa-chevron-left"></i>
-            getKey
+            metode getKey
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
           <nuxt-link to="/id/controller/lib/" class="btn">
-            lib
+            Metode lib
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
