@@ -39,8 +39,8 @@
                 <highlight-code lang="php">
                   &#x3C;?php
                   class Blog_Model extends SENE_Model{
-                    var $tbl = 'd_order';
-                    var $tbl_as = 'dor';
+                    var $tbl = &#x27;d_order&#x27;;
+                    var $tbl_as = &#x27;dor&#x27;;
                     public function __construct(){
                       parent::__construct();
                       $this->db->from($this->tbl,$this->tbl_as);
@@ -228,7 +228,7 @@ export default {
         ],
         "dateCreated": "2020-06-11T10:12:00+07:00",
         "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-28T21:54:00+07:00",
+        "dateModified": "2021-06-29T23:54:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

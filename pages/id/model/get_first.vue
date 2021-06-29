@@ -106,7 +106,7 @@
       </div>
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/id/model/fromt/" class="btn">
+          <nuxt-link to="/id/model/front/" class="btn">
             <i class="fa fa-chevron-left"></i>
             Metode from
           </nuxt-link>
@@ -204,7 +204,7 @@ export default {
         ],
         "dateCreated": "2020-06-11T10:12:00+07:00",
         "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-11T01:04:00+07:00",
+        "dateModified": "2021-06-29T00:14:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
