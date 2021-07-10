@@ -11,54 +11,165 @@
       <div class="">
         <div class="column">
           <div class="content">
-            <h1 class="">Download</h1>
-            <p>Anda dapat menemukan sumber unduhan apa pun yang terkait dengan Seme Framework. Anda bisa mendapatkan Seme Framework dengan mendownloadnya melalui github:</p>
+            <h1 class="">Downloads</h1>
+            <p>Anda dapat menemukan sumber unduhan apa pun yang terkait dengan Seme Framework. Anda bisa mendapatkan Seme Framework dengan mengunduhnya melalui github:</p>
             <ul>
-              <li><a href="https://github.com/drosanda/seme-framework" target="_blank">Seme Framework di Github</a></li>
+              <li><a href="https://github.com/drosanda/seme-framework" target="_blank">Seme Framework di Github <i class="fa fa-external-link"></i></a></li>
             </ul>
 
             <h2 class="">Install</h2>
-            <p><i>Clone</i> repositori Seme Framework dengan menggunakan git atau download langsung file ZIP-nya. Kemudian ekstrak ke lokasi yang diinginkan.</p>
-            <h3>Contoh cara instal menggunakan XAMPP</h3>
-            <p>Setelah mendownload file ZIP-nya, kemudian ekstrak ke:</p>
-            <ul>
-               <li><code>/opt/lampp/htdocs/seme_framework</code> di Linux, atau</li>
-              <li><code>D:\xampp\htdocs\seme_framework</code> di Windows</li>
-            </ul>
-            <p>
-              Dan kemudian jalankan XAMPP dan buka <code>http://locahost/seme_framework/</code>.
-              ika tidak ada muncul error, lanjutkan ke halaman pengaturan.
-            </p>
+            <p>Kloning repositori dengan git atau unduh arsip ZIP dan kemudian ekstrak ke direktori yang Anda inginkan.</p>
+            <h3>Instal dari arsip ke XAMPP (Contoh)</h3>
+            <p>Setelah mengunduh arsip dan kemudian ekstrak ke:</p>
 
-            <h3>Install menggunakan GIT CLONE di Windows</h3>
-            <p>Asumsikan XAMPP diinstall pada drive D.</p>
-            <p>Buka <code>cmd</code> atau <code>cmder</code> lalu jalankan perintah berikut ini:</p>
-            <ul>
-              <li>Buka drive D dengan perintah <code>d:</code>.</li>
-              <li>Pindah ke direktori htdocs dengan cara <code>cd xampp/htdocs</code>.</li>
-              <li>Kemudian tampilkan isi dari htdocs dengan perintah <code>ls</code> atau <code>dir</code>. Periksa jika direktori seme_framework telah ada atau belum.</li>
-              <li>Jika telah ada direktori seme_framework, maka hapus direktori tersebut dengan perintah <code>rm -fr seme_framework</code> atau pindahkan direktori tersebut dengan perintah <code>mv seme_framework sf_old</code>.</li>
-              <li>Kemudian lakukan <code>git clone</code> lagi dari repositori Seme Framework di github, dan disimpan ke direktori seme_framework dengan perintah
-                <pre><code v-highlight class="shell"># git clone https://github.com/drosanda/seme-framework.git seme_framework</code></pre>
-              </li>
-            </ul>
-            <p>
-              Dan kemudian jalankan XAMPP dan buka <code>http://locahost/seme_framework/</code> melalui Chrome atau Firefox.
-              Jika tidak ada kesalahan, maka Anda dapat melanjutkan ke halaman konfigurasi.
-            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  # di Mac
+                  /Application/XAMPP/htdocs/seme_framework
+
+                  # di linux
+                  /opt/lampp/htdocs/seme_framework
+
+                  # di windows
+                  D:\xampp\htdocs\seme_framework
+                </highlight-code>
+              </div>
+            </div>
+
+            <h3>Instal menggunakan GIT CLONE di Windows</h3>
+            <p>Kami berasumsi Anda telah menginstal XAMPP di drive D.</p>
+            <p>Bukalah <code>cmd</code> atau <code>cmder</code> dan kemudian jalankan perintah berikut:</p>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  # Pergi ke drive D dengan perintah
+                  D:
+
+                  # Pindah ke direktori htdocs
+                  cd xampp/htdocs
+
+                  # lihat isi direktori htdocs
+                  dir
+
+                  # periksa apakah direktori seme_framework telah ada?
+
+                  # JIka ada bisa dipindahkan saja seperti ini
+                  mv seme_framework seme_old
+
+                  # atau bisa dihapus juga dengan perintah seperti ini
+                  rm -fr seme_framework
+
+                  # baru jalankan git clone
+                  git clone https://github.com/drosanda/seme-framework.git seme_framework
+                </highlight-code>
+              </div>
+            </div>
 
             <h3>Instal menggunakan Mac dengan XAMPP</h3>
-            <p>Buka <code>cmd</code> atau <code>terminal</code> kemudian jalankan perintah berikut ini:</p>
-            <ul>
-              <li>Pindah ke direktori htdocs dengan cara <code>cd /Applications/XAMPP/htdocs</code>.</li>
-              <li>Kemudian tampilkan isi dari htdocs dengan perintah <code>ls</code> Periksa jika direktori seme_framework telah ada atau belum.</li>
-              <li>Jika telah ada direktori seme_framework, maka hapus direktori tersebut dengan perintah <code>rm -fr seme_framework</code> atau pindahkan direktori tersebut dengan perintah <code>mv seme_framework sf_old</code>.</li>
-              <li>Kemudian lakukan <code>git clone</code> lagi dari repositori Seme Framework di github, dan disimpan ke direktori seme_framework dengan perintah <code>git clone https://github.com/drosanda/seme-framework.git seme_framework</code>.</li>
-            </ul>
-            <h2>Menjalankan Seme Framework</h2>
+            <p>Bukalah <code>cmd</code> or <code>terminal</code> dan kemudian jalankan perintah berikut:</p>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  # Pindah ke direktori htdocs
+                  cd /Applications/XAMPP/htdocs/
+
+                  # lihat isi direktori htdocs
+                  ls
+
+                  # periksa apakah direktori seme_framework telah ada?
+
+                  # JIka ada bisa dipindahkan saja seperti ini
+                  mv seme_framework seme_old
+
+                  # atau bisa dihapus juga dengan perintah seperti ini
+                  rm -fr seme_framework
+
+                  # baru jalankan git clone
+                  git clone https://github.com/drosanda/seme-framework.git seme_framework
+                </highlight-code>
+              </div>
+            </div>
+
+            <h2>Test</h2>
             <p>
-              Setelah menjalankan XAMPP, Anda dapat membuka <code>http://locahost/seme_framework/</code> melaui chrome atau firefox.
-              Jika tidak muncul error, lanjutkan ke halaman konfigurasi.
+              Sebelum menjalankan framework, pastikan apache pada XAMPP <b>sudah dijalankan</b>. Dan kemudian buka alamat melalui browser.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  http://localhost/seme_framework/
+                </highlight-code>
+              </div>
+            </div>
+            <p>
+              Jika tidak muncul error, berarti anda sudah selesai menginstall Seme Framework.
             </p>
 
             <amp-img layout="responsive" width="660" height="294" :src="fr" alt="Seme Framework di Localhost menggunakan XAMPP"></amp-img>

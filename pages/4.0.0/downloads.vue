@@ -21,67 +21,157 @@
             <p>Clone the repository with git or download the ZIP archive and then extract to your desired directory.</p>
             <h3>Install from archive to XAMPP (Examples)</h3>
             <p>After download the archive and then extract to:</p>
-            <ul>
-              <li><code>/Application/XAMPP/htdocs/seme_framework</code> on Mac, or</li>
-              <li><code>/opt/lampp/htdocs/seme_framework</code> on Linux, or</li>
-              <li><code>D:\xampp\htdocs\seme_framework</code> on Windows</li>
-            </ul>
-            <p>
-              And then running the XAMPP and open the <code>http://locahost/seme_framework/</code>.
-              If there does not show any error, then you can proceed to configuration page.
-            </p>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  # on mac
+                  /Application/XAMPP/htdocs/seme_framework
+
+                  # on linux
+                  /opt/lampp/htdocs/seme_framework
+
+                  # on windows
+                  D:\xampp\htdocs\seme_framework
+                </highlight-code>
+              </div>
+            </div>
+
+
 
             <h3>Install using GIT CLONE on Windows</h3>
             <p>We assumed you have install XAMPP on drive D.</p>
             <p>Open your <code>cmd</code> or <code>cmder</code> and then execute the following commands:</p>
-            <ul>
-              <li>Goto drive D with command <code>d:</code>.</li>
-              <li>Change dir to htdocs <code>cd xampp/htdocs</code>.</li>
-              <li>List content of directory <code>ls</code> or <code>dir</code> check if directory is existed.</li>
-              <li>If directory existed delete with command <code>rm -fr seme_framework</code> or move the directory with <code>mv seme_framework sf_old</code>.</li>
-              <li>clone from repo and put on seme_framework directory.
-                <div class="macwindow">
-                  <div class="titlebar">
-                    <div class="buttons">
-                      <div class="close">
-                        <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                        <!-- close button link -->
-                      </div>
-                      <div class="minimize">
-                        <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                        <!-- minimize button link -->
-                      </div>
-                      <div class="zoom">
-                        <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                        <!-- zoom button link -->
-                      </div>
-                    </div>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
                   </div>
-                  <div class="maccontent">
-                    <highlight-code lang="php">
-                      git clone https://github.com/drosanda/seme-framework.git seme_framework
-                    </highlight-code>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
                   </div>
                 </div>
-              </li>
-            </ul>
-            <p>
-              And then running the XAMPP and open the <code>http://locahost/seme_framework/</code>.
-              If there does not show any error, then you can proceed to configuration page.
-            </p>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  # Goto drive D with command
+                  D:
+
+                  # Change dir to htdocs
+                  cd xampp/htdocs
+
+                  # List content of directory
+                  dir
+
+                  # check if the seme_framework directory is existed
+
+                  # if already exist, you can move with
+                  mv seme_framework seme_old
+
+                  # or just deleted it
+                  rm -fr seme_framework
+
+                  # run git clone to download the codes
+                  git clone https://github.com/drosanda/seme-framework.git seme_framework
+                </highlight-code>
+              </div>
+            </div>
 
             <h3>Install using Mac with XAMPP</h3>
             <p>Open your <code>cmd</code> or <code>terminal</code> and then execute the following commands:</p>
-            <ul>
-              <li>Change dir to htdocs <code>cd /Applications/XAMPP/htdocs</code>.</li>
-              <li>List content of directory <code>ls</code> check if directory is existed.</li>
-              <li>If directory existed delete with command <code>rm -fr seme_framework</code> or move the directory with <code>mv seme_framework sf_old</code>.</li>
-              <li>clone from repo and put on seme_framework<code>git clone https://github.com/drosanda/seme-framework.git seme_framework</code>.</li>
-            </ul>
-            <h2>Run the framework</h2>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  # Change dir to htdocs
+                  cd /Applications/XAMPP/htdocs
+
+                  # List content of directory
+                  ls
+
+                  # check if the seme_framework directory is existed
+
+                  # if already exist, you can move with
+                  mv seme_framework seme_old
+
+                  # or just deleted it
+                  rm -fr seme_framework
+
+                  # run git clone to download the codes
+                  git clone https://github.com/drosanda/seme-framework.git seme_framework
+                </highlight-code>
+              </div>
+            </div>
+
+            <h2>Test Run</h2>
             <p>
-              After running the XAMPP, you can open <code>http://locahost/seme_framework/</code> in your browser.
-              If there does not show any error, then you can proceed to configuration page.
+              Before running the framework, please make sure the apache on XAMPP <b>already started</b>. And then open the the address through browser.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  http://localhost/seme_framework/
+                </highlight-code>
+              </div>
+            </div>
+            <p>
+              If there does not show any error, you have finished installing the Seme Framework.
             </p>
             <amp-img layout="responsive" width="660px" height="284px" :src="fr" alt="first run"></amp-img>
 
@@ -160,7 +250,8 @@
         ]
       }
     },
-    jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+    jsonld() {
+      this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
       const items = this.breadcrumbs.map((item, index) => ({
         '@type': 'ListItem',
         position: index + 1,
@@ -188,7 +279,7 @@
           ],
           "dateCreated": "2020-06-11T10:12:00+07:00",
           "datePublished": "2020-06-11T10:12:00+07:00",
-          "dateModified": "2021-06-11T01:04:00+07:00",
+          "dateModified": "2021-07-10T17:54:00+07:00",
           "author": {
             "@type": "Person",
             "gender": "Male",
