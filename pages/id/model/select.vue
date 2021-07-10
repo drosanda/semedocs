@@ -5,81 +5,162 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.0 (Bahasa)</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/model">Model</NuxtLink></li>
-          <li class="unavailable">Select Method</li>
+          <li class=""><NuxtLink to="/id/model/">Model</NuxtLink></li>
+          <li class="unavailable">Metode Select</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Select Method</h1>
-            <p>Select method is part of database class builder for selecting column data into a table.</p>
-            <h2>Parameters</h2>
-            <p>Update method has 1 required parameters that is <b>column name</b> and <b>value</b>, another parameters are optional. Here is the completed parameters can be used by where methods</p>
-            <pre>$this->db->select(string $column_name): dbObject</pre>
-            <h3>$column_name</h3>
-            <p><b>Column Name</b> can be single column name, or can be filled with wildcard "*".</p>
-            <h2>Example usage</h2>
-            <p>Here is the examples using select method. See the first of this page for full example.</p>
-            <h3>Basic Usage</h3>
-            <p>For example we assumed want to add new data in blog table. First, in the model:</p>
-            <pre>
-class Blog_Model extends SENE_Model{
-  var $tbl = &#x27;blog&#x27;;
-  var $tbl_as = &#x27;b&#x27;;
-  public function __construct(){
-    parent::__construct();
-  }
-  public function getList(){
-    $this-&#x3E;db-&#x3E;select(&#x22;*&#x22;);
-    $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
-    return $this-&#x3E;db-&#x3E;get();
-  }
-  public function getById($id){
-    $this-&#x3E;db-&#x3E;select(&#x22;id&#x22;);
-    $this-&#x3E;db-&#x3E;select(&#x22;title&#x22;);
-    $this-&#x3E;db-&#x3E;select(&#x22;content&#x22;);
-    $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
-    $this-&#x3E;db-&#x3E;where_as(&#x22;id&#x22;,$id);
-    return $this-&#x3E;db-&#x3E;get_first();
-  }
-}
-            </pre>
-              <p>at the controller, we assumed has file named blog.php</p>
-              <pre>
-class Blog extends Sene_Controller{
-  public function __construct(){
-    parent::__construct();
-    $this-&#x3E;load(&#x27;blog_model&#x27;,&#x27;bm&#x27;); #class scope model
-  }
-  public function index(){
-    $blogs = $this-&#x3E;bm-&#x3E;getList();
-    $this-&#x3E;debug($blogs);
-  }
-  public function detail($id){
-    $blog = $this-&#x3E;bm-&#x3E;getById($id);
-    $this-&#x3E;debug($blog);
-  }
-}
-              </pre>
+            <h1 class="">Metode Select</h1>
+            <p>Metode select merupakan metode untuk melaksanakan perintah <code>SELECT</code> dari SQL (<em>Structure Query Language</em>) melalui SENE_Model.</p>
+            <p>Metode ini merupakan salah satu pembangun query SQL <b>Query Builder</b> untuk memilih nama kolom yang akan ditarik datanya dari tabel.</p>
+
+            <h2>Parameter</h2>
+            <p>Metode select memiliki satu parameter wajib yaitu <b>$column_name</b>.</p>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  $this->db->select(string $column_name): dbObject
+                </highlight-code>
               </div>
             </div>
-          </div>
 
-          <div class="columns">
-            <div class="column">
-              <b-button tag="router-link" to="/id/model/" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-                Model
-              </b-button>
-            </div>
-            <div class="column is-2">&nbsp;</div>
-            <div class="column">
-              <b-button tag="router-link" to="/id/model/select_as" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-                Model::select_as
-              </b-button>
-            </div>
-          </div>
+            <h3>$column_name</h3>
+            <p><b>$column_name</b> dapat berisi nama kolom dari tabel yang dipilih melalui metode <code>from</code> maupun metode <code>join</code>.</p>
 
+            <h2>Contoh penggunaan</h2>
+            <p>Berikut ini adalah contoh penggunaan dari metode Select.</p>
+
+            <h3>Penggunaan Dasar</h3>
+            <p>
+              Untuk contoh penggunaan dasar metode ini, akan di sajikan dalam bentuk potongan kode.
+              Yang pertama kode pada SENE_Model, dan yang kedua kode pada SENE_Controller.
+            </p>
+
+            <p>
+              Ini adalah potongan kode untuk SENE_Model. Diasumsikan nama filenya adalah blog_model.php.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  &#x3C;?php
+                  class Blog_Model extends SENE_Model{
+                    var $tbl = &#x27;blog&#x27;;
+                    var $tbl_as = &#x27;b&#x27;;
+                    public function __construct(){
+                      parent::__construct();
+                    }
+                    public function getList(){
+                      $this-&#x3E;db-&#x3E;select(&#x22;*&#x22;);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      return $this-&#x3E;db-&#x3E;get();
+                    }
+                    public function getById($id){
+                      $this-&#x3E;db-&#x3E;select(&#x22;id&#x22;);
+                      $this-&#x3E;db-&#x3E;select(&#x22;title&#x22;);
+                      $this-&#x3E;db-&#x3E;select(&#x22;content&#x22;);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;where_as(&#x22;id&#x22;,$id);
+                      return $this-&#x3E;db-&#x3E;get_first();
+                    }
+                  }
+                </highlight-code>
+              </div>
+            </div>
+
+            <p>
+              Sementara untuk potongan kode pada SENE_Controller-nya seperti ini. Diasumsikan nama filenya adalah blog.php
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  &#x3C;?php
+                  class Blog extends Sene_Controller{
+                    public function __construct(){
+                      parent::__construct();
+                      $this-&#x3E;load(&#x27;blog_model&#x27;,&#x27;bm&#x27;); #class scope model
+                    }
+                    public function index(){
+                      $blogs = $this-&#x3E;bm-&#x3E;getList();
+                      $this-&#x3E;debug($blogs);
+                    }
+                    public function detail($id){
+                      $blog = $this-&#x3E;bm-&#x3E;getById($id);
+                      $this-&#x3E;debug($blog);
+                    }
+                  }
+                </highlight-code>
+              </div>
+            </div>
+
+            <div class="nav-bottom">
+              <div class="nav-bottom-left">
+                <nuxt-link to="/id/model/select_as/" class="btn">
+                  <i class="fa fa-chevron-left"></i>
+                  Metode select_as
+                </nuxt-link>
+              </div>
+              <div class="nav-bottom-right">
+                <nuxt-link to="/id/model/update_as/" class="btn">
+                  Metode update_as
+                  <i class="fa fa-chevron-right"></i>
+                </nuxt-link>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -90,8 +171,8 @@ export default {
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'Model::select method',
-      description: 'Pelajari selengkapnya tentang select method on SENE_Model class from Seme Framework.',
+      title: 'Metode Select',
+      description: 'Pelajari selengkapnya tentang metode select dari kelas SENE_Model di Seme Framework.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -102,13 +183,9 @@ export default {
           text: 'ID',
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/tutorial/',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/model/',
           text: 'Model',
-        },
-        {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/tutorial/introduction/',
-          text: 'Select',
-        },
+        }
       ],
     }
   },
@@ -137,7 +214,8 @@ export default {
       ]
     }
   },
-  jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
     const items = this.breadcrumbs.map((item, index) => ({
       '@type': 'ListItem',
       position: index + 1,
@@ -164,7 +242,7 @@ export default {
         ],
         "dateCreated": "2020-06-11T10:12:00+07:00",
         "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-11T01:04:00+07:00",
+        "dateModified": "2021-07-10T18:36:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
