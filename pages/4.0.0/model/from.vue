@@ -128,20 +128,16 @@ export default {
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
-          text: 'Seme Framework',
+          text: 'Seme Framework'
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/',
-          text: '4.0.0',
+          text: '4.0.0'
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/tutorial/',
-          text: 'Model',
-        },
-        {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/tutorial/introduction/',
-          text: 'From',
-        },
+          text: 'Model'
+        }
       ],
     }
   },

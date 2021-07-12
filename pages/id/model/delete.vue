@@ -13,7 +13,14 @@
         <div class="column">
           <div class="content">
             <h1 class="">Metode Delete</h1>
-            <p>Delete method for deleting data in the table.</p>
+            <p>
+              Metode Delete digunakan untuk menghapus data dalam tabel.
+            </p>
+
+            <h2>Bentuk Umum</h2>
+            <p>
+              Berikut ini adalah bentuk umum dari metode delete.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -38,14 +45,25 @@
               </div>
             </div>
 
-            <h2>Parameters</h2>
-            <p>Where method has 2 parameters that is <b>table name</b> and <b>debug flag</b>.</p>
-            <h3>$table_name</h3>
-            <p><b>Table Name</b> can be string contain table name.</p>
-            <h2>Example usage</h2>
-            <p>Here is the examples using <b>delete method</b>. See the first of this page for full example.</p>
-            <h3>Basic Usage</h3>
-            <p>For example we assumed want to delete data in blog table. First, in the model:</p>
+            <h3>Parameter</h3>
+            <p>
+              Metode delete terdiri dari 1 parameter wajib yaitu <b>$table_name</b> dan 1 parameter tidak wajib yaitu <b>$is_debug</b>.
+            </p>
+
+            <h4>$table_name</h4>
+            <p>
+              Dapat berisi nama tabel yang akan dihapus isi datanya.
+            </p>
+
+            <h4>$is_debug</h4>
+            <p>
+              Dapat berisi nilai 1 atau 0. Jika nilai 1 maka proses akan terhenti dan akan menampilkan query yang nantinya akan diproses.
+            </p>
+
+            <h2>Contoh penggunaan</h2>
+            <p>
+              Berikut ini adalah contoh penggunaan metode delete pada file d_blog_model.php.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -82,23 +100,25 @@
               </div>
             </div>
 
+            <div class="nav-bottom">
+              <div class="nav-bottom-left">
+                <nuxt-link to="/id/model/between/" class="btn">
+                  <i class="fa fa-chevron-left"></i>
+                  Metode composite_create
+                </nuxt-link>
+              </div>
+              <div class="nav-bottom-right">
+                <nuxt-link to="/id/model/exec/" class="btn">
+                  Metode exec
+                  <i class="fa fa-chevron-right"></i>
+                </nuxt-link>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
-      <div class="nav-bottom">
-        <div class="nav-bottom-left">
-          <nuxt-link to="/id/model/between/" class="btn">
-            <i class="fa fa-chevron-left"></i>
-            Metode composite_create
-          </nuxt-link>
-        </div>
-        <div class="nav-bottom-right">
-          <nuxt-link to="/id/model/exec/" class="btn">
-            Metode exec
-            <i class="fa fa-chevron-right"></i>
-          </nuxt-link>
-        </div>
-      </div>
+
 
     </div>
   </div>
@@ -111,7 +131,7 @@ export default {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Metode delete',
-      description: 'Pelajari selengkapnya tentang Metode delete dari SENE_Model di Seme Framework versi 4.0.0',
+      description: 'Pelajari selengkapnya tentang metode delete dari SENE_Model di Seme Framework versi 4.0.0',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -179,9 +199,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2020-06-11T10:12:00+07:00",
-        "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-28T21:54:00+07:00",
+        "dateCreated": "2021-07-12T20:26:00+07:00",
+        "datePublished": "2021-07-12T20:26:00+07:00",
+        "dateModified": "2021-07-12T20:26:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
