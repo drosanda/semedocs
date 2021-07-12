@@ -125,11 +125,7 @@ export default {
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/tutorial/',
           text: 'Model',
-        },
-        {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/tutorial/introduction/',
-          text: 'From',
-        },
+        }
       ],
     }
   },
