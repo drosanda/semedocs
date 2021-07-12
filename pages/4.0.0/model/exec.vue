@@ -17,9 +17,29 @@
 
             <h2>Parameters</h2>
             <p>Query method has 1 required parameter.</p>
-            <pre>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
 $this-&#x3E;db-&#x3E;query(string $sql): boolean
-            </pre>
+</highlight-code>
+</div>
+</div>
 
             <h3>$sql</h3>
             <p><b>SQL</b> can be single command of SQL.</p>
@@ -29,7 +49,25 @@ $this-&#x3E;db-&#x3E;query(string $sql): boolean
 
             <h3>Basic Usage</h3>
             <p>For example we assumed want to add new data in blog table. First, in the model:</p>
-            <pre>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
 class Blog_Model extends SENE_Model{
 &#x9;var $tbl = &#x27;d_order&#x27;;
 &#x9;var $tbl_as = &#x27;dor&#x27;;
@@ -42,23 +80,29 @@ class Blog_Model extends SENE_Model{
 &#x9;&#x9;return $this-&#x3E;db-&#x3E;exec($sql);
 &#x9;}
 }
-            </pre>
+</highlight-code>
+</div>
+</div>
           </div>
         </div>
 
       </div>
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/4.0.0/model/delete" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Model::delete
-            </b-button>
-            <b-button tag="router-link" to="/4.0.0/model/query" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Model::query
-            </b-button>
-          </div>
+
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/4.0.0/model/delete/" class="btn">
+            <i class="fa fa-chevron-left"></i>
+            delete method
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/4.0.0/model/from/" class="btn">
+            from method
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
+
     </div>
   </div>
 </template>
@@ -69,8 +113,8 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Documentation',
-      title: 'Model::exec',
-      description: 'Learn more about Model::exec on Seme Framework version 4.0.0 through this documentation.'
+      title: 'exec method',
+      description: 'Learn more about exec method on Seme Framework version 4.0.0 through this documentation.'
     }
   },
   head() {

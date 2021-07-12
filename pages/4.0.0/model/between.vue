@@ -133,14 +133,14 @@
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/4.0.0/model/where_as/" class="btn">
-            <i class="fa fa-chevron-left"></i>
-            Model::where_as
+          <nuxt-link to="/4.0.0/model/" class="btn">
+          <i class="fa fa-chevron-left"></i>
+            Model
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/4.0.0/model/group_by/" class="btn">
-            Model::group_by
+          <nuxt-link to="/4.0.0/model/composite_create/" class="btn">
+            Metode composite_create
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>

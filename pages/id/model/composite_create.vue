@@ -43,7 +43,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;composite_create(TBL1_COLUMN_1, OPERATOR, TBL2_COLUMN_1): compositeObject;
+                  $this-&#x3E;db-&#x3E;composite_create(string $TBL1_COLUMN_1, string $OPERATOR, string TBL2_COLUMN_1): compositeObject;
                 </highlight-code>
               </div>
             </div>
@@ -51,13 +51,13 @@
             <h3>Parameter</h3>
             <p>Metode composite_create terdiri dari 3 parameter wajib dan akan mengembalikan compositeObject.</p>
 
-            <h4>TBL1_COLUMN_1</h4>
+            <h4>$TBL1_COLUMN_1</h4>
             <p>Nama kolom pertama untuk tabel pertama.</p>
 
-            <h4>Operator relasional</h4>
+            <h4>$OPERATOR</h4>
             <p>Nilai operator relasional, biasanya terdiri dari salah satu: &#x22;=&#x22;,&#x22;&#x3C;&#x3E;&#x22;.</p>
 
-            <h4>TBL2_COLUMN_1</h4>
+            <h4>$TBL2_COLUMN_1</h4>
             <p>Nama kolom pertama untuk tabel pertama.</p>
 
             <div class="message is-info">
