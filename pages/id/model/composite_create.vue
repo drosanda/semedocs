@@ -6,16 +6,24 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.0 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/model">Model</NuxtLink></li>
-          <li class="unavailable">composite_create method</li>
+          <li class="unavailable">Metode composite_create</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Composite Create Method</h1>
-            <p>Composite Create is for building multiple join condition for table that have two or more primary key.</p>
-            <p>This method can be used properly with <NuxtLink to="/model/join_composite">join_composite</NuxtLink> method, for joining the table .</p>
+            <h1 class="">Metode Composite Create</h1>
+            <p>
+              Metode <b>composite_create</b> digunakan untuk melakukan proses join dengan kondisi <b>PRIMARYKEY</b> <u>lebih dari satu</u>.
+            </p>
+            <p>
+              Metode ini cocok untuk digunakan untuk melakukan proses <b>JOIN</b> tabel dengan metode <NuxtLink to="/id/model/join_composite/">join_composite</NuxtLink>.
+            </p>
 
+            <h2>Bentuk Umum</h2>
+            <p>
+              Metode <b>composite_create</b> memiliki bentuk umum sebagai berikut:
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -35,11 +43,61 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  class Blog_Model extends SENE_Model{
-                    var $tbl = &#x27;d_order&#x27;;
-                    var $tbl_as = &#x27;dor&#x27;;
+                  $this-&#x3E;db-&#x3E;composite_create(TBL1_COLUMN_1, OPERATOR, TBL2_COLUMN_1): compositeObject;
+                </highlight-code>
+              </div>
+            </div>
+
+            <h3>Parameter</h3>
+            <p>Metode composite_create terdiri dari 3 parameter wajib dan akan mengembalikan compositeObject.</p>
+
+            <h4>TBL1_COLUMN_1</h4>
+            <p>Nama kolom pertama untuk tabel pertama.</p>
+
+            <h4>Operator relasional</h4>
+            <p>Nilai operator relasional, biasanya terdiri dari salah satu: &#x22;=&#x22;,&#x22;&#x3C;&#x3E;&#x22;.</p>
+
+            <h4>TBL2_COLUMN_1</h4>
+            <p>Nama kolom pertama untuk tabel pertama.</p>
+
+            <div class="message is-info">
+              <div class="message-body">
+                <p>This method available from Seme Framework version &#x3E;= 3.2.1</p>
+              </div>
+            </div>
+
+            <h2>Contoh Penggunaan</h2>
+            <p>
+              Berikut ini adalah contoh penggunaan metode composite_create dalam bentuk kode utuh d_sales_model.php.
+            </p>
+            <p>
+              Metode composite_create dipanggil berulangkali sebanyak PRIMARYKEY JOIN yang digunakan.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  class D_Sales_Model extends SENE_Model{
+                    var $tbl = &#x27;d_sales&#x27;;
+                    var $tbl_as = &#x27;dsl&#x27;;
                     var $tbl2 = &#x27;b_seller&#x27;;
                     var $tbl2_as = &#x27;bs&#x27;;
+
                     public function __construct(){
                       parent::__construct();
                       $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
@@ -57,20 +115,6 @@
                     }
                   }
                 </highlight-code>
-              </div>
-            </div>
-            <h2>Parameters</h2>
-            <p>composite_create method has 3 required parameters and will returned join composite object</p>
-            <h3>COLUMN_NAME_1</h3>
-            <p>Column name for first table.</p>
-            <h3>Relational Operator</h3>
-            <p>Value required for condition, value consists of &#x22;=&#x22;,&#x22;&#x3C;&#x3E;&#x22;.</p>
-            <h3>COLUMN_NAME_1</h3>
-            <p>Column name for second table.</p>
-
-            <div class="message is-info">
-              <div class="message-body">
-                <p>This method available from Seme Framework version &#x3E;= 3.2.1</p>
               </div>
             </div>
 
@@ -173,9 +217,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2020-06-11T10:12:00+07:00",
-        "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-28T22:54:00+07:00",
+        "dateCreated": "2021-07-12T19:52:00+07:00",
+        "datePublished": "2021-07-12T19:52:01+07:00",
+        "dateModified": "2021-07-12T19:53:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

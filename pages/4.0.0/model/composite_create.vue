@@ -14,7 +14,7 @@
           <div class="content">
             <h1 class="">Composite Create Method</h1>
             <p>Composite Create is for building multiple join condition for table that have two or more primary key.</p>
-            <p>This method can be used properly with <NuxtLink to="/model/join_composite">join_composite</NuxtLink> method, for joining the table .</p>
+            <p>This method can be used properly with <NuxtLink to="/4.0.0/model/join_composite">join_composite</NuxtLink> method, for joining the table .</p>
 
             <pre>
 class Blog_Model extends SENE_Model{
