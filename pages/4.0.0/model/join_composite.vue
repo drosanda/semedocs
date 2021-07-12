@@ -158,11 +158,11 @@ export default {
           text: '4.0.0',
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/tutorial/',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/model/',
           text: 'Model',
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/tutorial/introduction/',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/model/introduction/',
           text: 'From',
         },
       ],

@@ -34,27 +34,27 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-class Blog_Model extends SENE_Model{
-  var $tbl = &#x27;d_order&#x27;;
-  var $tbl_as = &#x27;dor&#x27;;
-  public function __construct(){
-    parent::__construct();
-    $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
-  }
-  public function getById($id){
-    $this-&#x3E;db-&#x3E;where(&#x22;id&#x22;,$id,&#x22;AND&#x22;,&#x22;=&#x22;,0,0);
-    return $this-&#x3E;db-&#x3E;get_first();
-  }
-  public function getCancel(){
-    $this-&#x3E;db-&#x3E;where(&#x22;order_status&#x22;,&#x22;order_cancel&#x22;,&#x22;AND&#x22;,&#x22;=&#x22;,0,0);
-    return $this-&#x3E;db-&#x3E;get();
-  }
-  public function getCancelByUser($b_user_id){
-    $this-&#x3E;db-&#x3E;where(&#x22;order_status&#x22;,&#x22;order_cancel&#x22;,&#x22;AND&#x22;,&#x22;=&#x22;,0,0)
-    $this-&#x3E;db-&#x3E;where(&#x22;b_user_id&#x22;,$b_user_id,&#x22;AND&#x22;,&#x22;=&#x22;,0,0);
-    return $this-&#x3E;db-&#x3E;get();
-  }
-}
+                  class Blog_Model extends SENE_Model{
+                    var $tbl = &#x27;d_order&#x27;;
+                    var $tbl_as = &#x27;dor&#x27;;
+                    public function __construct(){
+                      parent::__construct();
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                    }
+                    public function getById($id){
+                      $this-&#x3E;db-&#x3E;where(&#x22;id&#x22;,$id,&#x22;AND&#x22;,&#x22;=&#x22;,0,0);
+                      return $this-&#x3E;db-&#x3E;get_first();
+                    }
+                    public function getCancel(){
+                      $this-&#x3E;db-&#x3E;where(&#x22;order_status&#x22;,&#x22;order_cancel&#x22;,&#x22;AND&#x22;,&#x22;=&#x22;,0,0);
+                      return $this-&#x3E;db-&#x3E;get();
+                    }
+                    public function getCancelByUser($b_user_id){
+                      $this-&#x3E;db-&#x3E;where(&#x22;order_status&#x22;,&#x22;order_cancel&#x22;,&#x22;AND&#x22;,&#x22;=&#x22;,0,0)
+                      $this-&#x3E;db-&#x3E;where(&#x22;b_user_id&#x22;,$b_user_id,&#x22;AND&#x22;,&#x22;=&#x22;,0,0);
+                      return $this-&#x3E;db-&#x3E;get();
+                    }
+                  }
                 </highlight-code>
               </div>
             </div>
@@ -88,17 +88,17 @@ class Blog_Model extends SENE_Model{
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-$this-&#x3E;db-&#x3E;where(
-COLUMN_NAME,
-VALUE,
-&#x22; AND | OR &#x22;,
-&#x22;= | != | &#x3C;= | &#x3E;= | &#x3C; | &#x3E; | &#x3C;&#x3E; |
-like | like% | %like | %like% |
-notlike | notlike% |%notlike | %notlike%
-&#x22;,
-OPENBRACKET,
-CLOSEBRACKET
-);
+                  $this-&#x3E;db-&#x3E;where(
+                  COLUMN_NAME,
+                  VALUE,
+                  &#x22; AND | OR &#x22;,
+                  &#x22;= | != | &#x3C;= | &#x3E;= | &#x3C; | &#x3E; | &#x3C;&#x3E; |
+                  like | like% | %like | %like% |
+                  notlike | notlike% |%notlike | %notlike%
+                  &#x22;,
+                  OPENBRACKET,
+                  CLOSEBRACKET
+                  );
 
                 </highlight-code>
               </div>
@@ -137,9 +137,53 @@ CLOSEBRACKET
             <p>Here is the examples using where method, makes sure another from method and get method has executed for real result. See the first of this page for full example.</p>
             <h3>Basic example</h3>
             <p>Here is basic usage for selecting single data using SQL query:</p>
-            <code>SELECT * FROM d_order WHERE `id` = 1</code>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="sql_more">
+                  SELECT * FROM d_order WHERE `id` = 1
+                </highlight-code>
+              </div>
+            </div>
             <p>Here is basic usage for selecting single data using query builder:</p>
-            <code>$this->db->where("id",1);</code>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  $this->db->where("id",1);
+                </highlight-code>
+              </div>
+            </div>
             <br>
             <h3>Using AND / OR</h3>
             <p>Using AND / OR by SQL query:</p>
@@ -163,18 +207,38 @@ CLOSEBRACKET
               </div>
               <div class="maccontent">
                 <highlight-code lang="sql_more">
-SELECT *
-FROM d_order
-WHERE
-&#x60;a_company_id&#x60; = 1 OR
-&#x60;b_user_id&#x60; = 1
+                  SELECT *
+                  FROM d_order
+                  WHERE
+                  &#x60;a_company_id&#x60; = 1 OR
+                  &#x60;b_user_id&#x60; = 1
                 </highlight-code>
               </div>
             </div>
             <p>Using AND / OR by query builder:</p>
-            <code>
-$this-&#x3E;db-&#x3E;where(&#x22;b_user_id&#x22;,1,&#x27;OR&#x27;)-&#x3E;where(&#x22;a_company_id&#x22;,1,&#x27;AND&#x27;);
-            </code>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  $this-&#x3E;db-&#x3E;where(&#x22;b_user_id&#x22;,1,&#x27;OR&#x27;)-&#x3E;where(&#x22;a_company_id&#x22;,1,&#x27;AND&#x27;);
+                </highlight-code>
+              </div>
+            </div>
             <br>
             <h3>Using Relational Operator</h3>
             <p>Using Relational Operator by query builder:</p>
@@ -197,12 +261,12 @@ $this-&#x3E;db-&#x3E;where(&#x22;b_user_id&#x22;,1,&#x27;OR&#x27;)-&#x3E;where(&
               </div>
               <div class="maccontent">
                 <highlight-code lang="sql_more">
-SELECT *
-FROM d_order
-WHERE
-&#x60;b_user_id&#x60; = 1 AND
-&#x60;grand_total&#x60; &#x3E;= 1000 AND
-&#x60;status_text&#x60; LIKE &#x27;order_completed&#x27;
+                  SELECT *
+                  FROM d_order
+                  WHERE
+                  &#x60;b_user_id&#x60; = 1 AND
+                  &#x60;grand_total&#x60; &#x3E;= 1000 AND
+                  &#x60;status_text&#x60; LIKE &#x27;order_completed&#x27;
                 </highlight-code>
               </div>
             </div>
@@ -226,10 +290,10 @@ WHERE
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-$this-&#x3E;db
--&#x3E;where(&#x22;b_user_id&#x22;,1)
--&#x3E;where(&#x22;grand_total&#x22;,1000,&#x22;and&#x22;,&#x27;&#x3E;=&#x27;)
--&#x3E;where(&#x22;status_text&#x22;,&#x27;order_completed&#x27;,&#x22;and&#x22;,&#x27;like&#x27;);
+                  $this-&#x3E;db
+                  -&#x3E;where(&#x22;b_user_id&#x22;,1)
+                  -&#x3E;where(&#x22;grand_total&#x22;,1000,&#x22;and&#x22;,&#x27;&#x3E;=&#x27;)
+                  -&#x3E;where(&#x22;status_text&#x22;,&#x27;order_completed&#x27;,&#x22;and&#x22;,&#x27;like&#x27;);
                 </highlight-code>
               </div>
             </div>
@@ -256,53 +320,71 @@ $this-&#x3E;db
               </div>
               <div class="maccontent">
                 <highlight-code lang="sql_more">
-SELECT *
-FROM b_user
-WHERE
-&#x60;status_text&#x60; LIKE &#x27;active&#x27; AND
-(
-&#x60;fname&#x60; LIKE &#x27;%andre%&#x27; OR
-&#x60;lname&#x60; LIKE &#x27;%andre%&#x27; OR
-&#x60;city&#x60; LIKE &#x27;%andre%&#x27; OR
-&#x60;email LIKE &#x27;%andre%&#x27;
-)
+                  SELECT *
+                  FROM b_user
+                  WHERE
+                  &#x60;status_text&#x60; LIKE &#x27;active&#x27; AND
+                  (
+                  &#x60;fname&#x60; LIKE &#x27;%andre%&#x27; OR
+                  &#x60;lname&#x60; LIKE &#x27;%andre%&#x27; OR
+                  &#x60;city&#x60; LIKE &#x27;%andre%&#x27; OR
+                  &#x60;email LIKE &#x27;%andre%&#x27;
+                  )
                 </highlight-code>
               </div>
             </div>
             <p>Using bracket open and close by query builder:</p>
-            <pre>
-$this-&#x3E;db
--&#x3E;where(&#x22;status_text&#x22;,&#x27;active&#x27;,&#x27;and&#x27;,&#x27;like&#x27;)
--&#x3E;where(&#x22;fname&#x22;,&#x27;andre&#x27;,&#x22;and&#x22;,&#x27;%like%&#x27;,1,0)
--&#x3E;where(&#x22;lname&#x22;,&#x27;andre&#x27;,&#x22;and&#x22;,&#x27;%like%&#x27;,0,0)
--&#x3E;where(&#x22;city&#x22;,&#x27;andre&#x27;,&#x22;and&#x22;,&#x27;%like%&#x27;,0,0)
--&#x3E;where(&#x22;email&#x22;,&#x27;andre&#x27;,&#x22;and&#x22;,&#x27;%like%&#x27;,0,1);
-            </pre>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  $this-&#x3E;db
+                  -&#x3E;where(&#x22;status_text&#x22;,&#x27;active&#x27;,&#x27;and&#x27;,&#x27;like&#x27;)
+                  -&#x3E;where(&#x22;fname&#x22;,&#x27;andre&#x27;,&#x22;and&#x22;,&#x27;%like%&#x27;,1,0)
+                  -&#x3E;where(&#x22;lname&#x22;,&#x27;andre&#x27;,&#x22;and&#x22;,&#x27;%like%&#x27;,0,0)
+                  -&#x3E;where(&#x22;city&#x22;,&#x27;andre&#x27;,&#x22;and&#x22;,&#x27;%like%&#x27;,0,0)
+                  -&#x3E;where(&#x22;email&#x22;,&#x27;andre&#x27;,&#x22;and&#x22;,&#x27;%like%&#x27;,0,1);
+                </highlight-code>
+              </div>
+            </div>
             <hr>
             <h2>Advanced Where Condition</h2>
-            <p>Seme Framework has advanced where method called <NuxtLink to="/model-where-as">where_as method</NuxtLink>.</p>
+            <p>Seme Framework has advanced where method called <NuxtLink to="/4.0.0/model/where_as/">where_as method</NuxtLink>.</p>
+
+            <div class="nav-bottom">
+              <div class="nav-bottom-left">
+                <nuxt-link to="/4.0.0/model/update/" class="btn">
+                  <i class="fa fa-chevron-left"></i>
+                  where_as method
+                </nuxt-link>
+              </div>
+              <div class="nav-bottom-right">
+                <nuxt-link to="/4.0.0/view/" class="btn">
+                  View
+                  <i class="fa fa-chevron-right"></i>
+                </nuxt-link>
+              </div>
+            </div>
 
           </div>
         </div>
 
       </div>
-      
-
-      <div class="nav-bottom">
-        <div class="nav-bottom-left">
-          <nuxt-link to="/4.0.0/model/select/" class="btn">
-          <i class="fa fa-chevron-left"></i>
-            Model::composite_create
-          </nuxt-link>
-        </div>
-        <div class="nav-bottom-right">
-          <nuxt-link to="/4.0.0/model/update/" class="btn">
-            Model::where_as
-            <i class="fa fa-chevron-right"></i>
-          </nuxt-link>
-        </div>
-      </div>
-
     </div>
   </div>
 </template>
@@ -313,22 +395,22 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
-      title: 'Model::where method',
-      description: 'Learn more about where method on SENE_Model class from Seme Framework.',
+      title: 'where method',
+      description: 'Learn more about where method from Seme Framework model class version 4.0.0 through this documentation.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
-          text: 'Seme Framework',
+          text: 'Seme Framework'
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/',
-          text: '4.0.0',
+          text: '4.0.0'
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/model/',
-          text: 'Model',
+          text: 'Model'
         }
-      ]
+      ],
     }
   },
   head() {
@@ -353,12 +435,12 @@ export default {
       ]
     }
   },
-  jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
     const items = this.breadcrumbs.map((item, index) => ({
       '@type': 'ListItem',
       position: index + 1,
       item: {
-        "@type": "WebPage",
         '@id': item.url,
         name: item.text,
       },
@@ -379,9 +461,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2020-06-11T10:12:00+07:00",
-        "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-23T19:25:00+07:00",
+        "dateCreated": "2021-07-12T21:35:00+07:00",
+        "datePublished": "2021-07-12T21:35:00+07:00",
+        "dateModified": "2021-07-12T21:36:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

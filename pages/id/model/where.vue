@@ -155,7 +155,7 @@ $this-&#x3E;db
             </pre>
             <hr>
             <h2>Advanced Where Condition</h2>
-            <p>Seme Framework has advanced where method called <NuxtLink to="/model-where-as">where_as method</NuxtLink>.</p>
+            <p>Seme Framework has advanced where method called <NuxtLink to="/id//model/where_as/">where_as method</NuxtLink>.</p>
 
           </div>
         </div>
