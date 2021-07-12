@@ -284,7 +284,8 @@ export default {
       ]
     }
   },
-  jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
     const items = this.breadcrumbs.map((item, index) => ({
       '@type': 'ListItem',
       position: index + 1,
@@ -310,9 +311,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2020-06-11T10:12:00+07:00",
-        "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-25T22:24:17+07:00",
+        "dateCreated": "2021-07-12T22:03:01+07:00",
+        "datePublished": "2021-07-12T22:03:02+07:00",
+        "dateModified": "2021-07-12T22:04:32+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
