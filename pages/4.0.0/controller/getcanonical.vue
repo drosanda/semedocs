@@ -6,24 +6,19 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.0</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/controller/">Controller</NuxtLink></li>
-          <li class="unavailable">render method</li>
+          <li class="unavailable">getCanonical method</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Render method</h1>
+            <h1 class="">getCanonical method</h1>
             <p>
-              Render buffered view content into browser. The buffered view method generated or process from buffered view methods. This method should called in the last of method controller class.
+              getCanonical URL for the current page, this method used only with <code>setCanonical</code> method.
             </p>
-            <div class="message is-info">
-              <div class="message-body">
-                <p>If the constructor method is missed, you maybe get blank result.</p>
-              </div>
-            </div>
 
             <h2>Basic Usage</h2>
-            <p>The basic usage for render method is:</p>
+            <p>The basic usage for getCanonical method is:</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -43,23 +38,21 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->render([int $cacheable=0]): void
+                  getCanonical(): string
                 </highlight-code>
               </div>
             </div>
 
             <h3>Parameters</h3>
             <p>
-              Render method has 1 optional parameters it is cacheable.
-            </p>
-
-            <h4>$cacheable</h4>
-            <p>
-              This parameter value allowed the buffered view cached with expected time value in second(s).
+              There is no parameter available for getCanonical method.
             </p>
 
             <h2>Example Usage</h2>
-            <p>Here is the full example:</p>
+            <p>
+              Usually this method called inside a layout file. Here is the basic example for <code>getCanonical</code> method.
+              Here is the content of <code>col-1.php</code> layout file.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -78,42 +71,36 @@
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="php">
-                  &#x3C;?php
-                  class Blog extends SENE_Controller {
-                    public function __construct(){
-                      parent::__construct();
-                    }
-                    public function index(){
-                      $this-&#x3E;setTitle(&#x27;Blog home&#x27;);
-                      $this-&#x3E;putThemeContent(&#x22;blog/home&#x22;,$data);
-                      $this-&#x3E;putJsContent(&#x27;blog/home_bottom&#x27;,$data);
-                      $this-&#x3E;loadLayout(&#x27;col-1&#x27;,$data);
-                      $this-&#x3E;render();
-                    }
-                  }
+                <highlight-code lang="html">
+                  &#x3C;!DOCTYPE html&#x3E;
+                  &#x3C;html&#x3E;
+                  &#x3C;head&#x3E;
+                    ...
+                    &#x3C;link rel=&#x22;canonical&#x22; href=&#x22;&#x3C;?=rtrim(rtrim($this-&#x3E;getCanonical(),&#x27;/&#x27;),&#x27;/amp&#x27;).&#x27;/&#x27;?&#x3E;&#x22;&#x3E;
+                    ...
+                  &#x3C;/head&#x3E;
+                  &#x3C;body&#x3E;
+                    ...
+                  &#x3C;/body&#x3E;
+                  &#x3C;/html&#x3E;
                 </highlight-code>
               </div>
             </div>
 
-            <div class="message is-info">
-              <div class="message-body">
-                <p>
-                  The <code>putThemeContent</code>, <code>putJsContent</code>, and <code>loadLayout</code> method(s) has ability for buffered the html view.
-                </p>
-              </div>
-            </div>
+            <p>
+              This example for querying canonical url for use with AMP HTML page.
+            </p>
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
-                <nuxt-link to="/4.0.0/controller/puthemecontent/" class="btn">
+                <nuxt-link to="/4.0.0/controller/constructor/" class="btn">
                   <i class="fa fa-chevron-left"></i>
-                  putThemeContent
+                  __construct
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
-                <nuxt-link to="/4.0.0/controller/resetthemecontent/" class="btn">
-                  resetThemeContent
+                <nuxt-link to="/4.0.0/controller/getcontentlanguage/" class="btn">
+                  getContentLanguage
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
@@ -133,8 +120,8 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
-      title: 'render method',
-      description: 'Learn more about render metod on SENE_Controller class Seme Framework.',
+      title: 'getCanonical method',
+      description: 'Learn more about getCanonical method on SENE_Controller class Seme Framework.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -199,9 +186,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-13T08:58:00+07:00",
-        "datePublished": "2021-07-13T09:02:00+07:00",
-        "dateModified": "2021-07-13T09:03:00+07:00",
+        "dateCreated": "2021-07-13T13:23:00+07:00",
+        "datePublished": "2021-07-13T13:32:00+07:00",
+        "dateModified": "2021-07-13T13:33:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

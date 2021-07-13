@@ -6,24 +6,19 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.0</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/controller/">Controller</NuxtLink></li>
-          <li class="unavailable">render method</li>
+          <li class="unavailable">setCanonical method</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Render method</h1>
+            <h1 class="">setCanonical method</h1>
             <p>
-              Render buffered view content into browser. The buffered view method generated or process from buffered view methods. This method should called in the last of method controller class.
+              setCanonical the current page, this method used only with <code>getCanonical</code> method.
             </p>
-            <div class="message is-info">
-              <div class="message-body">
-                <p>If the constructor method is missed, you maybe get blank result.</p>
-              </div>
-            </div>
 
             <h2>Basic Usage</h2>
-            <p>The basic usage for render method is:</p>
+            <p>The basic usage for setCanonical method.</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -43,23 +38,23 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->render([int $cacheable=0]): void
+                  setCanonical(string $url): controllerObject
                 </highlight-code>
               </div>
             </div>
 
             <h3>Parameters</h3>
             <p>
-              Render method has 1 optional parameters it is cacheable.
+              setCanonical method has 1 required parameter.
             </p>
 
-            <h4>$cacheable</h4>
+            <h4>$url</h4>
             <p>
-              This parameter value allowed the buffered view cached with expected time value in second(s).
+              This parameter value allowed to set the page canonical URL.
             </p>
 
             <h2>Example Usage</h2>
-            <p>Here is the full example:</p>
+            <p>Here is the full example of <code>setCanonical</code> method.</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -85,35 +80,25 @@
                       parent::__construct();
                     }
                     public function index(){
-                      $this-&#x3E;setTitle(&#x27;Blog home&#x27;);
-                      $this-&#x3E;putThemeContent(&#x22;blog/home&#x22;,$data);
-                      $this-&#x3E;putJsContent(&#x27;blog/home_bottom&#x27;,$data);
-                      $this-&#x3E;loadLayout(&#x27;col-1&#x27;,$data);
-                      $this-&#x3E;render();
+                      ...
+                      $this-&#x3E;setCanonical(&#x27;amp&#x27;);
+                      ...
                     }
                   }
                 </highlight-code>
               </div>
             </div>
 
-            <div class="message is-info">
-              <div class="message-body">
-                <p>
-                  The <code>putThemeContent</code>, <code>putJsContent</code>, and <code>loadLayout</code> method(s) has ability for buffered the html view.
-                </p>
-              </div>
-            </div>
-
             <div class="nav-bottom">
               <div class="nav-bottom-left">
-                <nuxt-link to="/4.0.0/controller/puthemecontent/" class="btn">
+                <nuxt-link to="/4.0.0/controller/setauthor/" class="btn">
                   <i class="fa fa-chevron-left"></i>
-                  putThemeContent
+                  setAuthor
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
-                <nuxt-link to="/4.0.0/controller/resetthemecontent/" class="btn">
-                  resetThemeContent
+                <nuxt-link to="/4.0.0/controller/setcontentlanguage/" class="btn">
+                  setContentLanguage
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
@@ -133,8 +118,8 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
-      title: 'render method',
-      description: 'Learn more about render metod on SENE_Controller class Seme Framework.',
+      title: 'setCanonical method',
+      description: 'Learn more about setCanonical method on SENE_Controller class Seme Framework.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -199,9 +184,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-13T08:58:00+07:00",
-        "datePublished": "2021-07-13T09:02:00+07:00",
-        "dateModified": "2021-07-13T09:03:00+07:00",
+        "dateCreated": "2021-07-13T13:18:00+07:00",
+        "datePublished": "2021-07-13T13:19:00+07:00",
+        "dateModified": "2021-07-13T13:26:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

@@ -50,7 +50,7 @@
 
             <h2>Example Usage</h2>
             <p>
-              Usually this method called inside a layout file. Here is the basic example for <code>getJsReady</code> method.
+              Usually this method called inside a layout file. Here is the basic example for <code>getAuthor</code> method.
               Here is the content of <code>col-1.php</code> layout file.
             </p>
             <div class="macwindow">
