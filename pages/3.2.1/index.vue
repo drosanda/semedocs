@@ -62,8 +62,8 @@
     data (){
       return {
         name: 'Seme Framework v3.2.1',
-        suffix: ' - Seme Framework 3.2.1',
-        title: 'Main page',
+        suffix: '',
+        title: 'Seme Framework version 3.2.1',
         description: 'Learn more about Seme Framework version 3.2.1 through this documentation.',
         breadcrumbs: [
           {

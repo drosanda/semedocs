@@ -50,8 +50,8 @@ export default {
   data (){
     return {
       name: 'Seme Framework v3.3.0',
-      suffix: ' - Seme Framework 3.3.0',
-      title: 'Main page',
+      suffix: '',
+      title: 'Seme Framework version 3.3.0',
       description: 'Learn more about Seme Framework version 3.3.0 through this documentation.',
       breadcrumbs: [
         {
@@ -115,7 +115,7 @@ export default {
         ],
         "dateCreated": "2020-06-11T10:12:00+07:00",
         "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-25T16:41:12+07:00",
+        "dateModified": "2021-07-13T12:41:12+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

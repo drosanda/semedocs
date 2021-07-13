@@ -78,8 +78,8 @@
     data (){
       return {
         name: 'Seme Framework v4.0.0',
-        suffix: ' - Seme Framework 4',
-        title: 'Main page',
+        suffix: '',
+        title: 'Seme Framework 4 Documentation',
         description: 'Learn more about Seme Framework version 4.0.0 through this documentation.',
         breadcrumbs: [
           {

@@ -60,10 +60,10 @@ export default {
   layout: 'v3.0.0',
   data (){
     return {
-      name: 'Seme Framework v3.0.0',
-      suffix: ' - Seme Framework 3.0.0',
-      title: 'Main Page',
-      description: 'Learn more about Seme Framework version 3.0.0 through this documentation.',
+      name: 'Seme Framework v3.0.x',
+      suffix: '',
+      title: 'Seme Framework version 3.0.x',
+      description: 'Learn more about Seme Framework version 3.0.x through this documentation.',
       breadcrumbs: [
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/',

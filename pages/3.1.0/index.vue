@@ -46,10 +46,10 @@
     layout: 'v3.1.0',
     data (){
       return {
-        name: 'Seme Framework v3.1.0',
-        suffix: ' - Seme Framework 3.1.0',
-        title: 'Main Page',
-        description: 'Learn more about Seme Framework version 3.1.0 through this documentation.',
+        name: 'Seme Framework v3.1.x',
+        suffix: '',
+        title: 'Seme Framework version 3.1.x',
+        description: 'Learn more about Seme Framework version 3.1.x through this documentation.',
         breadcrumbs: [
           {
             url: (process.env.BASE_URL || 'http://localhost:3001')+'/',
