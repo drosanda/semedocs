@@ -6,19 +6,19 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.0</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/controller/">Controller</NuxtLink></li>
-          <li class="unavailable">getLang method</li>
+          <li class="unavailable">getRobots method</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">getLang method</h1>
+            <h1 class="">getRobots method</h1>
             <p>
-              Get language value from <code>setLang</code> method.
+              Get robots string value value from <code>setRobots</code> method.
             </p>
 
             <h2>Basic Usage</h2>
-            <p>The basic usage for getLang method is:</p>
+            <p>The basic usage for getRobots method is:</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -38,18 +38,18 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  getLang(): string
+                  getRobots(): string
                 </highlight-code>
               </div>
             </div>
 
             <h3>Parameters</h3>
             <p>
-              There is no parameter available for getLang method.
+              There is no parameter available for getRobots method.
             </p>
 
             <h2>Example Usage</h2>
-            <p>Here is the full example of <code>getLang</code> method in a layout file.</p>
+            <p>Here is the full example of <code>getRobots</code> method in a layout file.</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -70,7 +70,9 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   &#x3C;!DOCTYPE html&#x3E;
-                  &#x3C;html lang=&#x22;&#x3C;?=$this-&#x3E;getLang()?&#x3E;&#x22;&#x3E;
+                  &#x3C;html&#x3E;
+                  &#x3C;head&#x3E;
+                    &#x3C;meta name=&#x22;robots&#x22; content=&#x22;&#x3C;?php echo $this-&#x3E;getRobots(); ?&#x3E;&#x22; /&#x3E;
                   ...
                 </highlight-code>
               </div>
@@ -78,14 +80,14 @@
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
-                <nuxt-link to="/4.0.0/controller/getkeyword/" class="btn">
+                <nuxt-link to="/4.0.0/controller/getlang/" class="btn">
                   <i class="fa fa-chevron-left"></i>
-                  getKeyword
+                  getLang
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
-                <nuxt-link to="/4.0.0/controller/getrobots/" class="btn">
-                  getRobots
+                <nuxt-link to="/4.0.0/controller/getshortcuticon/" class="btn">
+                  getShortcutIcon
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
@@ -105,8 +107,8 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
-      title: 'getLang method',
-      description: 'Learn more about getLang method on SENE_Controller class Seme Framework.',
+      title: 'getRobots method',
+      description: 'Learn more about getRobots method on SENE_Controller class Seme Framework.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

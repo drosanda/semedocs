@@ -6,19 +6,19 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.0</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/controller">Controller</NuxtLink></li>
-          <li class="unavailable">getJsReady Method</li>
+          <li class="unavailable">getJsFooter Method</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">getJsReady Method</h1>
+            <h1 class="">getJsFooter Method</h1>
             <p>
-              This method will get injected javascript from <code>putJsReady</code> method.
+              This method will get injected javascript from <code>putJsFooter</code> method.
             </p>
 
             <h2>Basic Usage</h2>
-            <p>Here is the basic usage of <code>getJsReady</code> method.</p>
+            <p>Here is the basic usage of <code>getJsFooter</code> method.</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -38,19 +38,19 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  getJsReady(): void
+                  getJsFooter(): void
                 </highlight-code>
               </div>
             </div>
 
             <h3>Parameters</h3>
             <p>
-              <b>getJsReady</b> method has no parameter required.
+              <b>getJsFooter</b> method has no parameter required.
             </p>
 
             <h2>Example Usage</h2>
             <p>
-              Usually this method called inside a layout file. Here is the basic example for <code>getJsReady</code> method.
+              Usually this method called inside a layout file. Here is the basic example for <code>getJsFooter</code> method.
               Here is the content of <code>col-1.php</code> layout file.
             </p>
             <div class="macwindow">
@@ -79,9 +79,7 @@
                   &#x3C;/head&#x3E;
                   &#x3C;body&#x3E;
                     &#x3C;script&#x3E;
-                    $(document).ready(function(e){
-                      &#x3C;?php $this-&#x3E;getJsReady(); ?&#x3E;
-                    });
+                    &#x3C;?php $this-&#x3E;getJsFooter(); ?&#x3E;
                     &#x3C;/script&#x3E;
                   &#x3C;/body&#x3E;
                   &#x3C;/html&#x3E;
@@ -89,135 +87,16 @@
               </div>
             </div>
 
-            <p>
-              Here is the full file and directory structures.
-            </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  |- app/
-                  |-- controller/
-                  |--- home.php
-                  |-- view/
-                  |--- front/
-                  |---- home/
-                  |----- home_bottom.php
-                  |---- page/
-                  |----- col-1.php
-                </highlight-code>
-              </div>
-            </div>
-
-            <p>
-              Here is the content of <code>home.php</code> controller file.
-            </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  class Home extends SENE_Controller
-                  {
-                    public function __construct()
-                    {
-                      parent::__construct();
-                      $this-&#x3E;setTheme(&#x27;front&#x27;);
-                    }
-                    public function index()
-                    {
-                      $data = array();
-                      $data['admin_name'] = 'Daeng';
-                      $this-&#x3E;putJsReady(&#x27;home/home_bottom&#x27;,$data);
-                      ...
-                    }
-                  }
-                </highlight-code>
-              </div>
-            </div>
-
-
-
-            <p>
-              Here is the content of <code>home_bottom.php</code> embedded javascript file.
-            </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="javascript">
-                  alert(&#x27;&#x3C;?php echo $admin_name?&#x3E;&#x27;);
-                </highlight-code>
-              </div>
-            </div>
-            <p>
-              The <code>$data</code> variable that passed into <code>putJsContent</code> method, has been extracted into native variable depending on key name of array.
-            </p>
-            <p>
-              In this case, the <code>$data[&#x27;admin_name&#x27;]</code> converted into <code>$admin_name</code> if called inside <code>home_bottom.php</code> file.
-            </p>
-
-            <div class="message is-info">
-              <div class="message-body">
-                <p>
-                  The <code>putThemeContent</code>, <code>putJsContent</code>, and <code>render</code> method(s) has ability for buffered the html view.
-                </p>
-              </div>
-            </div>
-
             <div class="nav-bottom">
               <div class="nav-bottom-left">
-                <nuxt-link to="/4.0.0/controller/getjsfooter/" class="btn">
+                <nuxt-link to="/4.0.0/controller/geticon/" class="btn">
                   <i class="fa fa-chevron-left"></i>
-                  getJsFooter
+                  getIcon
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
-                <nuxt-link to="/4.0.0/controller/getkeyword/" class="btn">
-                  getKeyword
+                <nuxt-link to="/4.0.0/controller/getjsready/" class="btn">
+                  getJsReady
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
@@ -239,8 +118,8 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
-      title: 'getJsReady Method',
-      description: 'Learn more about getJsReady Method from SENE_Controller on Seme Framework version 4.0.0',
+      title: 'getJsFooter Method',
+      description: 'Learn more about getJsFooter Method from SENE_Controller on Seme Framework version 4.0.0',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -305,9 +184,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-13T10:40:00+07:00",
-        "datePublished": "2021-07-13T10:46:00+07:00",
-        "dateModified": "2021-07-13T11:04:03+07:00",
+        "dateCreated": "2021-07-13T18:40:00+07:00",
+        "datePublished": "2021-07-13T18:46:00+07:00",
+        "dateModified": "2021-07-13T18:48:03+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
