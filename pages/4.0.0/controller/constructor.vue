@@ -93,8 +93,8 @@
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/4.0.0/controller/getauthor/" class="btn">
-            getAuthor
+          <nuxt-link to="/4.0.0/controller/getadditional/" class="btn">
+            getAdditional
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
@@ -178,7 +178,7 @@ export default {
         ],
         "dateCreated": "2021-07-12T22:01:00+07:00",
         "datePublished": "2021-07-12T22:02:00+07:00",
-        "dateModified": "2021-07-12T22:03:00+07:00",
+        "dateModified": "2021-07-13T19:27:02+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

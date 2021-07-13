@@ -18,7 +18,7 @@
             </p>
 
             <h2>Basic Usage</h2>
-            <p>The basic usage for getIcon method.</p>
+            <p>The basic usage for getShortcutIcon method.</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">

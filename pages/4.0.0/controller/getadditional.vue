@@ -6,19 +6,19 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.0</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/controller/">Controller</NuxtLink></li>
-          <li class="unavailable">getAuthor method</li>
+          <li class="unavailable">getAdditional method</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">getAuthor method</h1>
+            <h1 class="">getAdditional method</h1>
             <p>
-              getAuthor the current page, this method used only with <code>setAuthor</code> method.
+              Get list of array CSS default configuration from theme.json.
             </p>
 
             <h2>Basic Usage</h2>
-            <p>The basic usage for getAuthor method is:</p>
+            <p>The basic usage for getAdditional method is:</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -38,19 +38,19 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  getAuthor(): string
+                  getAdditional(): string
                 </highlight-code>
               </div>
             </div>
 
             <h3>Parameters</h3>
             <p>
-              There is no parameter available for getAuthor method.
+              There is no parameter available for getAdditional method.
             </p>
 
             <h2>Example Usage</h2>
             <p>
-              Usually this method called inside a layout file. Here is the basic example for <code>getAuthor</code> method.
+              Usually this method called inside a layout file. Here is the basic example for <code>getAdditionalAfter</code> method.
               Here is the content of <code>col-1.php</code> layout file.
             </p>
             <div class="macwindow">
@@ -76,7 +76,7 @@
                   &#x3C;html&#x3E;
                   &#x3C;head&#x3E;
                     ...
-                    &#x3C;meta name=&#x22;author&#x22; content=&#x22;&#x3C;?php echo $this-&#x3E;getAuthor(); ?&#x3E;&#x22;&#x3E;
+                    &#x3C;?php $this-&#x3E;getAdditional(); ?&#x3E;
                     ...
                   &#x3C;/head&#x3E;
                   &#x3C;body&#x3E;
@@ -87,94 +87,16 @@
               </div>
             </div>
 
-            <p>
-              Here is the full file and directory structures.
-            </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  |- app/
-                  |-- controller/
-                  |--- home.php
-                  |-- view/
-                  |--- front/
-                  |---- page/
-                  |----- col-1.php
-                </highlight-code>
-              </div>
-            </div>
-
-            <p>
-              Here is the content of <code>home.php</code> controller file.
-            </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  class Home extends SENE_Controller
-                  {
-                    public function __construct()
-                    {
-                      parent::__construct();
-                      $this-&#x3E;setTheme(&#x27;front&#x27;);
-                    }
-                    public function index()
-                    {
-                      ...
-                      $this-&#x3E;setAuthor(&#x27;Daeng R&#x27;,$data);
-                      $this->loadLayout(&#x27;col-1&#x27;,$data);
-                      $this->render();
-                    }
-                  }
-                </highlight-code>
-              </div>
-            </div>
-
-            <p>
-              The meta author page name will be <code>Daeng R</code>.
-            </p>
-
             <div class="nav-bottom">
               <div class="nav-bottom-left">
-                <nuxt-link to="/4.0.0/controller/getadditionalbefore/" class="btn">
+                <nuxt-link to="/4.0.0/controller/constructor/" class="btn">
                   <i class="fa fa-chevron-left"></i>
-                  getAdditionalBefore
+                  __construct
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
-                <nuxt-link to="/4.0.0/controller/getcanonical/" class="btn">
-                  getCanonical
+                <nuxt-link to="/4.0.0/controller/getadditionalafter/" class="btn">
+                  getAdditionalAfter
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
@@ -194,8 +116,8 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
-      title: 'getAuthor method',
-      description: 'Learn more about getAuthor method on SENE_Controller class Seme Framework.',
+      title: 'getAdditional method',
+      description: 'Learn more about getAdditional method on SENE_Controller class Seme Framework.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -260,9 +182,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-13T13:23:00+07:00",
-        "datePublished": "2021-07-13T13:32:00+07:00",
-        "dateModified": "2021-07-13T19:26:21+07:00",
+        "dateCreated": "2021-07-13T19:23:00+07:00",
+        "datePublished": "2021-07-13T19:26:00+07:00",
+        "dateModified": "2021-07-13T19:29:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
