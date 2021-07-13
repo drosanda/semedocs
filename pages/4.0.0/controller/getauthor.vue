@@ -6,23 +6,19 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.0</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/controller/">Controller</NuxtLink></li>
-          <li class="unavailable">__construct method</li>
+          <li class="unavailable">getAuthor method</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Constructor method</h1>
-            <p>The Constructor method will loaded all parent class that required for a controller.</p>
-            <p>This is method is very important for Seme Framework Controller.</p>
-            <div class="message is-info">
-              <div class="message-body">
-                <p>If the constructor method is missed, you maybe get unexpected result.</p>
-              </div>
-            </div>
-            <p>Ussually the parent constructor are executed after class constructor</p>
+            <h1 class="">getAuthor method</h1>
+            <p>
+              getAuthor the current page, this method used only with <code>setAuthor</code> method.
+            </p>
+
             <h2>Basic Usage</h2>
-            <p>The basic usage for this method is:</p>
+            <p>The basic usage for getAuthor method is:</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -42,12 +38,58 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  parent::__construct();
+                  getAuthor(): string
                 </highlight-code>
               </div>
             </div>
 
-            <p>Here is the full example:</p>
+            <h3>Parameters</h3>
+            <p>
+              There is no parameter available for getAuthor method.
+            </p>
+
+            <h2>Example Usage</h2>
+            <p>
+              Usually this method called inside a layout file. Here is the basic example for <code>getJsReady</code> method.
+              Here is the content of <code>col-1.php</code> layout file.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="html">
+                  &#x3C;!DOCTYPE html&#x3E;
+                  &#x3C;html&#x3E;
+                  &#x3C;head&#x3E;
+                    ...
+                    &#x3C;meta name=&#x22;author&#x22; content=&#x22;&#x3C;?php echo $this-&#x3E;getAuthor(); ?&#x3E;&#x22;&#x3E;
+                    ...
+                  &#x3C;/head&#x3E;
+                  &#x3C;body&#x3E;
+                    ...
+                  &#x3C;/body&#x3E;
+                  &#x3C;/html&#x3E;
+                </highlight-code>
+              </div>
+            </div>
+
+            <p>
+              Here is the full file and directory structures.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -67,36 +109,78 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  &#x3C;?php
-                  class Blog extends SENE_Controller {
-                    public function __construct(){
+                  |- app/
+                  |-- controller/
+                  |--- home.php
+                  |-- view/
+                  |--- front/
+                  |---- page/
+                  |----- col-1.php
+                </highlight-code>
+              </div>
+            </div>
+
+            <p>
+              Here is the content of <code>home.php</code> controller file.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  class Home extends SENE_Controller
+                  {
+                    public function __construct()
+                    {
                       parent::__construct();
+                      $this-&#x3E;setTheme(&#x27;front&#x27;);
                     }
-                    public function index(){
-                      echo 'Hi, I run properly!';
+                    public function index()
+                    {
+                      ...
+                      $this-&#x3E;setAuthor(&#x27;Daeng R&#x27;,$data);
+                      $this->loadLayout(&#x27;col-1&#x27;,$data);
+                      $this->render();
                     }
                   }
                 </highlight-code>
               </div>
             </div>
 
+            <p>
+              The meta author page name will be <code>Daeng R</code>.
+            </p>
+
+            <div class="nav-bottom">
+              <div class="nav-bottom-left">
+                <nuxt-link to="/4.0.0/controller/constructor/" class="btn">
+                  <i class="fa fa-chevron-left"></i>
+                  __construct
+                </nuxt-link>
+              </div>
+              <div class="nav-bottom-right">
+                <nuxt-link to="/4.0.0/controller/getcanonical/" class="btn">
+                  getCanonical
+                  <i class="fa fa-chevron-right"></i>
+                </nuxt-link>
+              </div>
+            </div>
+
           </div>
-        </div>
-      </div>
-
-
-      <div class="nav-bottom">
-        <div class="nav-bottom-left">
-          <nuxt-link to="/4.0.0/controller/" class="btn">
-            <i class="fa fa-chevron-left"></i>
-            Controller
-          </nuxt-link>
-        </div>
-        <div class="nav-bottom-right">
-          <nuxt-link to="/4.0.0/controller/getauthor/" class="btn">
-            getAuthor
-            <i class="fa fa-chevron-right"></i>
-          </nuxt-link>
         </div>
       </div>
 
@@ -110,8 +194,8 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
-      title: '__construct method',
-      description: 'Learn more about from __construct on SENE_Controller class Seme Framework.',
+      title: 'getAuthor method',
+      description: 'Learn more about getAuthor method on SENE_Controller class Seme Framework.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -176,9 +260,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-12T22:01:00+07:00",
-        "datePublished": "2021-07-12T22:02:00+07:00",
-        "dateModified": "2021-07-12T22:03:00+07:00",
+        "dateCreated": "2021-07-13T13:23:00+07:00",
+        "datePublished": "2021-07-13T13:32:00+07:00",
+        "dateModified": "2021-07-13T13:33:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

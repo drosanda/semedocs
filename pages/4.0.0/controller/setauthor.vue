@@ -6,23 +6,19 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.0</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/controller/">Controller</NuxtLink></li>
-          <li class="unavailable">__construct method</li>
+          <li class="unavailable">setAuthor method</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Constructor method</h1>
-            <p>The Constructor method will loaded all parent class that required for a controller.</p>
-            <p>This is method is very important for Seme Framework Controller.</p>
-            <div class="message is-info">
-              <div class="message-body">
-                <p>If the constructor method is missed, you maybe get unexpected result.</p>
-              </div>
-            </div>
-            <p>Ussually the parent constructor are executed after class constructor</p>
+            <h1 class="">setAuthor method</h1>
+            <p>
+              setAuthor the current page, this method used only with <code>getAuthor</code> method.
+            </p>
+
             <h2>Basic Usage</h2>
-            <p>The basic usage for this method is:</p>
+            <p>The basic usage for setAuthor method is:</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -42,12 +38,23 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  parent::__construct();
+                  setAuthor(string $author_name): controllerObject
                 </highlight-code>
               </div>
             </div>
 
-            <p>Here is the full example:</p>
+            <h3>Parameters</h3>
+            <p>
+              setAuthor method has 1 required parameter.
+            </p>
+
+            <h4>$author_name</h4>
+            <p>
+              This parameter value allowed to set the page author name.
+            </p>
+
+            <h2>Example Usage</h2>
+            <p>Here is the full example of <code>setAuthor</code> method.</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -73,33 +80,34 @@
                       parent::__construct();
                     }
                     public function index(){
-                      echo 'Hi, I run properly!';
+                      ...
+                      $this-&#x3E;setAuthor(&#x27;Daeng R&#x27;);
+                      ...
                     }
                   }
                 </highlight-code>
               </div>
             </div>
 
+            <div class="nav-bottom">
+              <div class="nav-bottom-left">
+                <nuxt-link to="/4.0.0/controller/session/" class="btn">
+                  <i class="fa fa-chevron-left"></i>
+                  Session
+                </nuxt-link>
+              </div>
+              <div class="nav-bottom-right">
+                <nuxt-link to="/4.0.0/controller/setcanonical/" class="btn">
+                  setCanonical
+                  <i class="fa fa-chevron-right"></i>
+                </nuxt-link>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
-
-
-      <div class="nav-bottom">
-        <div class="nav-bottom-left">
-          <nuxt-link to="/4.0.0/controller/" class="btn">
-            <i class="fa fa-chevron-left"></i>
-            Controller
-          </nuxt-link>
-        </div>
-        <div class="nav-bottom-right">
-          <nuxt-link to="/4.0.0/controller/getauthor/" class="btn">
-            getAuthor
-            <i class="fa fa-chevron-right"></i>
-          </nuxt-link>
-        </div>
-      </div>
-
+      
     </div>
   </div>
 </template>
@@ -110,8 +118,8 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
-      title: '__construct method',
-      description: 'Learn more about from __construct on SENE_Controller class Seme Framework.',
+      title: 'setAuthor method',
+      description: 'Learn more about setAuthor method on SENE_Controller class Seme Framework.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -176,9 +184,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-12T22:01:00+07:00",
-        "datePublished": "2021-07-12T22:02:00+07:00",
-        "dateModified": "2021-07-12T22:03:00+07:00",
+        "dateCreated": "2021-07-13T13:18:00+07:00",
+        "datePublished": "2021-07-13T13:19:00+07:00",
+        "dateModified": "2021-07-13T13:26:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
