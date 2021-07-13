@@ -6,19 +6,19 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.0</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/controller/">Controller</NuxtLink></li>
-          <li class="unavailable">getShortcutIcon method</li>
+          <li class="unavailable">getThemeElement method</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">getShortcutIcon method</h1>
+            <h1 class="">getThemeElement method</h1>
             <p>
-              getShortcutIcon the current page, this method used only with <code>setShortcutIcon</code> method.
+              getThemeElement from another view template.
             </p>
 
             <h2>Basic Usage</h2>
-            <p>The basic usage for getShortcutIcon method.</p>
+            <p>The basic usage for getThemeElement method.</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -38,19 +38,34 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  getShortcutIcon(): string
+                  getThemeElement(string $location, array $__forward [, int $cacheable]): controllerObject
                 </highlight-code>
               </div>
             </div>
 
             <h3>Parameters</h3>
             <p>
-              There is no parameter available for getShortcutIcon method.
+              There is 2 requireds parameter and 1 optional parameter.
+            </p>
+
+            <h4>$location</h4>
+            <p>
+              Location and name of view without .php suffix.
+            </p>
+
+            <h4>$__forward</h4>
+            <p>
+              Data that will be passed to
+            </p>
+
+            <h4>$cacheable</h4>
+            <p>
+              This parameter value allowed the buffered view cached with expected time value in second(s).
             </p>
 
             <h2>Example Usage</h2>
             <p>
-              Usually this method called inside a layout file. Here is the basic example for <code>getShortcutIcon</code> method.
+              Usually this method called inside a layout file. Here is the basic example for <code>getThemeElement</code> method.
               Here is the content of <code>col-1.php</code> layout file.
             </p>
             <div class="macwindow">
@@ -74,15 +89,94 @@
                 <highlight-code lang="html">
                   &#x3C;!DOCTYPE html&#x3E;
                   &#x3C;html&#x3E;
-                  &#x3C;head&#x3E;
-                    ...
-                    &#x3C;link rel=&#x22;shortcut icon&#x22; href=&#x22;&#x3C;?php echo $this-&#x3E;getShortcutIcon(); ?&#x3E;&#x22; type=&#x22;image/x-icon&#x22; /&#x3E;
-                    ...
-                  &#x3C;/head&#x3E;
+                  &#x3C;?php $this-&#x3E;getThemeElement(&#x22;page/html/head&#x22;,$__forward); ?&#x3E;
                   &#x3C;body&#x3E;
                     ...
                   &#x3C;/body&#x3E;
                   &#x3C;/html&#x3E;
+                </highlight-code>
+              </div>
+            </div>
+
+            <p>
+              Here is the full file and directory structures.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  |- app/
+                  |-- view/
+                  |--- front/
+                  |---- page/
+                  |----- col-1.php
+                  |----- html/
+                  |------ head.php
+                </highlight-code>
+              </div>
+            </div>
+
+            <p>
+              Here is the source code of head.php file.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="html">
+                  &#x3C;head&#x3E;
+                  &#x3C;!-- Basic page needs --&#x3E;
+                  &#x3C;meta charset=&#x22;utf-8&#x22;&#x3E;
+                  &#x3C;!-- Mobile specific metas  --&#x3E;
+                  &#x3C;meta name=&#x22;viewport&#x22; content=&#x22;width=device-width, initial-scale=1&#x22;&#x3E;
+
+                  &#x3C;!--[if IE]&#x3E;
+                    &#x3C;meta http-equiv=&#x22;X-UA-Compatible&#x22; content=&#x22;IE=edge&#x22;&#x3E;
+                  &#x3C;![endif]--&#x3E;
+                  &#x3C;meta http-equiv=&#x22;x-ua-compatible&#x22; content=&#x22;ie=edge&#x22;&#x3E;
+                  &#x3C;title&#x3E;&#x3C;?php echo $this-&#x3E;getTitle(); ?&#x3E;&#x3C;/title&#x3E;
+                  &#x3C;meta name=&#x22;language&#x22; content=&#x22;id&#x22; /&#x3E;
+                  &#x3C;meta name=&#x22;description&#x22; content=&#x22;&#x3C;?php echo $this-&#x3E;getDescription(); ?&#x3E;&#x22;/&#x3E;
+                  &#x3C;meta name=&#x22;keyword&#x22; content=&#x22;&#x3C;?php echo $this-&#x3E;getKeyword(); ?&#x3E;&#x22;/&#x3E;
+                  &#x3C;meta name=&#x22;author&#x22; content=&#x22;&#x3C;?php echo $this-&#x3E;getAuthor(); ?&#x3E;&#x22;&#x3E;
+                  &#x3C;link rel=&#x22;icon&#x22; href=&#x22;&#x3C;?php echo $this-&#x3E;getIcon(); ?&#x3E;&#x22; type=&#x22;image/x-icon&#x22; /&#x3E;
+                  &#x3C;link rel=&#x22;shortcut icon&#x22; href=&#x22;&#x3C;?php echo $this-&#x3E;getShortcutIcon(); ?&#x3E;&#x22; type=&#x22;image/x-icon&#x22; /&#x3E;
+                  &#x3C;meta name=&#x22;robots&#x22; content=&#x22;&#x3C;?php echo $this-&#x3E;getRobots(); ?&#x3E;&#x22; /&#x3E;
+
+                  &#x3C;?php $this-&#x3E;getAdditionalBefore(); ?&#x3E;
+                  &#x3C;?php $this-&#x3E;getAdditional(); ?&#x3E;
+                  &#x3C;?php $this-&#x3E;getAdditionalAfter(); ?&#x3E;
+
+                  &#x3C;/head&#x3E;
                 </highlight-code>
               </div>
             </div>
@@ -95,8 +189,8 @@
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
-                <nuxt-link to="/4.0.0/controller/getthemeelement/" class="btn">
-                  getThemeElement
+                <nuxt-link to="/4.0.0/controller/getTitle/" class="btn">
+                  getTitle
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
@@ -116,8 +210,8 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
-      title: 'getShortcutIcon method',
-      description: 'Learn more about getShortcutIcon method on SENE_Controller class Seme Framework.',
+      title: 'getThemeElement method',
+      description: 'Learn more about getThemeElement method on SENE_Controller class Seme Framework.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -182,9 +276,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-13T18:33:00+07:00",
-        "datePublished": "2021-07-13T18:42:00+07:00",
-        "dateModified": "2021-07-13T18:43:00+07:00",
+        "dateCreated": "2021-07-13T19:01:00+07:00",
+        "datePublished": "2021-07-13T19:02:00+07:00",
+        "dateModified": "2021-07-13T19:22:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
