@@ -6,24 +6,19 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.0</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/controller/">Controller</NuxtLink></li>
-          <li class="unavailable">render method</li>
+          <li class="unavailable">setTitle method</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Render method</h1>
+            <h1 class="">setTitle method</h1>
             <p>
-              Render buffered view content into browser. The buffered view method generated or process from buffered view methods. This method should called in the last of method controller class.
+              setTitle the current page, this method used only with <code>getTitle</code> method.
             </p>
-            <div class="message is-info">
-              <div class="message-body">
-                <p>If the constructor method is missed, you maybe get blank result.</p>
-              </div>
-            </div>
 
             <h2>Basic Usage</h2>
-            <p>The basic usage for render method is:</p>
+            <p>The basic usage for setTitle method is:</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -43,23 +38,22 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->render([int $cacheable=0]): void
-                </highlight-code>
+0m                 </highlight-code>
               </div>
             </div>
 
             <h3>Parameters</h3>
             <p>
-              Render method has 1 optional parameters it is cacheable.
+              Render method has 1 required parameter.
             </p>
 
-            <h4>$cacheable</h4>
+            <h4>$page_title</h4>
             <p>
-              This parameter value allowed the buffered view cached with expected time value in second(s).
+              This parameter value allowed to set the page title name.
             </p>
 
             <h2>Example Usage</h2>
-            <p>Here is the full example:</p>
+            <p>Here is the full example of <code>setTitle</code> method.</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -85,11 +79,14 @@
                       parent::__construct();
                     }
                     public function index(){
+                      ...
                       $this-&#x3E;setTitle(&#x27;Blog home&#x27;);
-                      $this-&#x3E;putThemeContent(&#x22;blog/home&#x22;,$data);
-                      $this-&#x3E;putJsContent(&#x27;blog/home_bottom&#x27;,$data);
-                      $this-&#x3E;loadLayout(&#x27;col-1&#x27;,$data);
-                      $this-&#x3E;render();
+                      ...
+                    }
+                    public function detail($id){
+                      ...
+                      $this-&#x3E;setTitle(&#x27;Blog Detail...&#x27;);
+                      ...
                     }
                   }
                 </highlight-code>
@@ -136,8 +133,8 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
-      title: 'render method',
-      description: 'Learn more about render metod on SENE_Controller class Seme Framework.',
+      title: 'setTitle method',
+      description: 'Learn more about setTitle method on SENE_Controller class Seme Framework.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
