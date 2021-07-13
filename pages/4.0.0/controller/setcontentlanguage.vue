@@ -38,7 +38,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  setContentLanguage(string $url): controllerObject
+                  setContentLanguage(string $language_codename): controllerObject
                 </highlight-code>
               </div>
             </div>
@@ -48,9 +48,9 @@
               setContentLanguage method has 1 required parameter.
             </p>
 
-            <h4>$url</h4>
+            <h4>$language_codename</h4>
             <p>
-              This parameter value allowed to set the page canonical URL.
+              The language codename value, like en-US, en-DE, etc.
             </p>
 
             <h2>Example Usage</h2>

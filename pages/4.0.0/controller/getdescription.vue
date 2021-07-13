@@ -6,19 +6,19 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.0</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/controller/">Controller</NuxtLink></li>
-          <li class="unavailable">getContentLanguage method</li>
+          <li class="unavailable">getDescription method</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">getContentLanguage method</h1>
+            <h1 class="">getDescription method</h1>
             <p>
-              getContentLanguage for meta content language, this method used only with <code>setContentLanguage</code> method.
+              getDescription get meta description value, this method used only with <code>setDescription</code> method.
             </p>
 
             <h2>Basic Usage</h2>
-            <p>The basic usage for getContentLanguage method.</p>
+            <p>The basic usage for getDescription method is:</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -38,18 +38,21 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  getContentLanguage(): string
+                  getDescription(): string
                 </highlight-code>
               </div>
             </div>
 
             <h3>Parameters</h3>
             <p>
-              There is no parameter available for getContentLanguage method.
+              There is no parameter available for getDescription method.
             </p>
 
             <h2>Example Usage</h2>
-            <p>Here is the full example of <code>getContentLanguage</code> method in a layout file.</p>
+            <p>
+              Usually this method called inside a layout file. Here is the basic example for <code>getDescription</code> method.
+              Here is the content of <code>col-1.php</code> layout file.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -68,24 +71,32 @@
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="php">
+                <highlight-code lang="html">
                   &#x3C;!DOCTYPE html&#x3E;
-                  &#x3C;html lang=&#x22;&#x3C;?=$this-&#x3E;getContentLanguage()?&#x3E;&#x22;&#x3E;
-                  ...
+                  &#x3C;html&#x3E;
+                  &#x3C;head&#x3E;
+                    ...
+                    &#x3C;meta name=&#x22;description&#x22; content=&#x22;&#x3C;?=$this-&#x3E;getDescription()?&#x3E;&#x22; />
+                    ...
+                  &#x3C;/head&#x3E;
+                  &#x3C;body&#x3E;
+                    ...
+                  &#x3C;/body&#x3E;
+                  &#x3C;/html&#x3E;
                 </highlight-code>
               </div>
             </div>
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
-                <nuxt-link to="/4.0.0/controller/getcanonical/" class="btn">
+                <nuxt-link to="/4.0.0/controller/getcontentlanguage/" class="btn">
                   <i class="fa fa-chevron-left"></i>
-                  getCanonical
+                  getContentLanguage
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
-                <nuxt-link to="/4.0.0/controller/getdescription/" class="btn">
-                  getDescription
+                <nuxt-link to="/4.0.0/controller/geticon/" class="btn">
+                  getIcon
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
@@ -105,8 +116,8 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
-      title: 'getContentLanguage method',
-      description: 'Learn more about getContentLanguage method on SENE_Controller class Seme Framework.',
+      title: 'getDescription method',
+      description: 'Learn more about getDescription method on SENE_Controller class Seme Framework.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -171,9 +182,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-13T13:41:00+07:00",
-        "datePublished": "2021-07-13T13:42:00+07:00",
-        "dateModified": "2021-07-13T13:55:00+07:00",
+        "dateCreated": "2021-07-13T14:03:00+07:00",
+        "datePublished": "2021-07-13T14:06:00+07:00",
+        "dateModified": "2021-07-13T14:09:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
