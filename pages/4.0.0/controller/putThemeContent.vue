@@ -19,69 +19,161 @@
 
             <h2>Content Location Requirements</h2>
             <p>The valid content should only put inside in a directory beneath current selected theme directory.</p>
-            <pre>
-|- app
-|-- view
-|--- front
-|---- home
-|----- home.php
-|----- home_bottom.php
-            </pre>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  |- app
+                  |-- view
+                  |--- front
+                  |---- home
+                  |----- home.php
+                  |----- home_bottom.php
+                </highlight-code>
+              </div>
+            </div>
 
-            <h2>Basic Usage:</h2>
-            <p>Here is the basic usage of <code>Controller::putThemeContent</code>.</p>
-            <pre>
-Controller::putThemeContent(string $content_location[, array $data]): ControllerObject
-            </pre>
+            <h2>Basic Usage</h2>
+            <p>Here is the basic usage of <code>putThemeContent</code> method.</p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  putThemeContent(string $content_location[, array $data]): controllerObject
+                </highlight-code>
+              </div>
+            </div>
 
             <h2>Example</h2>
             <p>Here is the example for <code>putThemeContent</code> method:</p>
-            <pre>
-class Home extends SENE_Controller
-{
-  public function __construct()
-  {
-    parent::__construct();
-    $this-&#x3E;setTheme(&#x27;homepage&#x27;);
-  }
-  public function index()
-  {
-    $data = array();
-    $this-&#x3E;putThemeContent(&#x27;home/slider&#x27;,$data);
-    $this-&#x3E;putThemeContent(&#x27;home/three_values&#x27;,$data);
-    $this-&#x3E;loadLayout(&#x27;col-1&#x27;,$data);
-  }
-}
-            </pre>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  class Home extends SENE_Controller
+                  {
+                    public function __construct()
+                    {
+                      parent::__construct();
+                      $this-&#x3E;setTheme(&#x27;homepage&#x27;);
+                    }
+                    public function index()
+                    {
+                      $data = array();
+                      $this-&#x3E;putThemeContent(&#x27;home/slider&#x27;,$data);
+                      $this-&#x3E;putThemeContent(&#x27;home/three_values&#x27;,$data);
+                      $this-&#x3E;loadLayout(&#x27;col-1&#x27;,$data);
+                    }
+                  }
+                </highlight-code>
+              </div>
+            </div>
             <p>So, the <code>homepage</code> theme and <code>col-1</code> layout should be existed on the directory structure.</p>
-            <pre>
-- app
-|-- view
-|--- homepage
-|---- home
-|----- slider.php
-|----- three_values.php
-|---- page
-|----- col-1.php
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  - app
+                  |-- view
+                  |--- homepage
+                  |---- home
+                  |----- slider.php
+                  |----- three_values.php
+                  |---- page
+                  |----- col-1.php
 
-            </pre>
+                </highlight-code>
+              </div>
+            </div>
+
+            <div class="message is-info">
+              <div class="message-body">
+                <p>
+                  The <code>putThemeContent</code>, <code>putJsContent</code>, and <code>render</code> method(s) has ability for buffered the html view.
+                </p>
+              </div>
+            </div>
+
+            <div class="nav-bottom">
+              <div class="nav-bottom-left">
+                <nuxt-link to="/4.0.0/controller/putjsready/" class="btn">
+                  <i class="fa fa-chevron-left"></i>
+                  putJsReady
+                </nuxt-link>
+              </div>
+              <div class="nav-bottom-right">
+                <nuxt-link to="/4.0.0/controller/render/" class="btn">
+                  render
+                  <i class="fa fa-chevron-right"></i>
+                </nuxt-link>
+              </div>
+            </div>
+
           </div>
         </div>
 
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/4.0.0/controller/loadLayout" icon-pack="fa" icon-left="chevron-left">
-              loadLayout Method
-            </b-button>
-            <b-button tag="router-link" to="/4.0.0/controller/putJsContent" icon-pack="fa" icon-right="chevron-right">
-              putJsContent Method
-            </b-button>
-          </div>
-        </div>
-      </div>
 
     </div>
   </div>
@@ -93,8 +185,22 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
-      title: 'putThemeContent Method from SENE_Controller',
-      description: 'Learn more about putThemeContent Method from SENE_Controller on Seme Framework version 4.0.0'
+      title: 'putThemeContent Method',
+      description: 'Learn more about putThemeContent Method from SENE_Controller on Seme Framework version 4.0.0',
+      breadcrumbs: [
+        {
+          url: process.env.BASE_URL || 'http://localhost:3001',
+          text: 'Seme Framework'
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/',
+          text: '4.0.0'
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/controller/',
+          text: 'Controller'
+        }
+      ],
     }
   },
   head() {
@@ -118,6 +224,63 @@ export default {
         }
       ]
     }
+  },
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+    const items = this.breadcrumbs.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@id': item.url,
+        name: item.text,
+      },
+    }));
+    return [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: items,
+      },
+      {
+        "@type": "NewsArticle",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+        },
+        "headline": (this.headline || this.title),
+        "image": [
+          (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
+        ],
+        "dateCreated": "2021-07-13T08:15:00+07:00",
+        "datePublished": "2021-07-13T09:16:00+07:00",
+        "dateModified": "2021-07-13T09:17:00+07:00",
+        "author": {
+          "@type": "Person",
+          "gender": "Male",
+          "name": "Daeng Rosanda, S.Kom",
+          "alternateName": "Daeng Rosanda",
+          "jobTitle": "Founder",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Cipta Esensi Merenah",
+            "email": "hi@cenah.co.id"
+          }
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Cipta Esensi Merenah",
+          "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+          "logo": {
+            "@type": "ImageObject",
+            "name": "logo Cipta Esensi Merenah",
+            "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+            "width": "256px",
+            "height": "62px"
+          }
+        },
+        "description": this.description
+      }
+    ];
   }
 }
 </script>

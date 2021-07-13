@@ -38,50 +38,50 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-loadLayout(string $layout): controllerObject
-</highlight-code>
-</div>
-</div>
+                  loadLayout(string $layout): controllerObject
+                </highlight-code>
+              </div>
+            </div>
 
-<h3>Parameters</h3>
-<p>
-  loadLayout has 1 required parameter there is <b>$layout</b> name.
-</p>
+            <h3>Parameters</h3>
+            <p>
+              loadLayout has 1 required parameter there is <b>$layout</b> name.
+            </p>
 
-<h4>$layout</h4>
-<p>
-  The $layout value is string name of a file relatives to current theme.
-</p>
+            <h4>$layout</h4>
+            <p>
+              The $layout value is string name of a file relatives to current theme.
+            </p>
 
-<h5>Layout Requirements</h5>
-<p>The valid layout should only put inside <code>page</code> directory of the current theme.</p>
-<div class="macwindow">
-  <div class="titlebar">
-    <div class="buttons">
-      <div class="close">
-        <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-        <!-- close button link -->
-      </div>
-      <div class="minimize">
-        <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-        <!-- minimize button link -->
-      </div>
-      <div class="zoom">
-        <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-        <!-- zoom button link -->
-      </div>
-    </div>
-  </div>
-  <div class="maccontent">
-    <highlight-code lang="php">
-- app
-|- view
-|-- THEME_NAME
-|--- page
-|---- [LAYOUT_FILENAME].php
-</highlight-code>
-</div>
-</div>
+            <h5>Layout Requirements</h5>
+            <p>The valid layout should only put inside <code>page</code> directory of the current theme.</p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  - app
+                  |- view
+                  |-- THEME_NAME
+                  |--- page
+                  |---- [LAYOUT_FILENAME].php
+                </highlight-code>
+              </div>
+            </div>
 
             <h2>Example</h2>
             <p>Here is the example for <code>loadLayout</code> method:</p>
@@ -118,9 +118,9 @@ loadLayout(string $layout): controllerObject
                       $this-&#x3E;render();
                     }
                   }
-</highlight-code>
-</div>
-</div>
+                </highlight-code>
+              </div>
+            </div>
             <p>So, the <code>front</code> theme and <code>col-1</code> layout should be existed on the directory structure.</p>
             <div class="macwindow">
               <div class="titlebar">
@@ -146,33 +146,33 @@ loadLayout(string $layout): controllerObject
                   |-- front
                   |--- page
                   |---- col-1.php
-</highlight-code>
-</div>
-</div>
+                </highlight-code>
+              </div>
+            </div>
 
 
-<div class="message is-info">
-  <div class="message-body">
-    <p>
-      The <code>putThemeContent</code>, <code>putJsContent</code>, and <code>render</code> method(s) has ability for buffered the html view.
-    </p>
-  </div>
-</div>
+            <div class="message is-info">
+              <div class="message-body">
+                <p>
+                  The <code>putThemeContent</code>, <code>putJsContent</code>, and <code>render</code> method(s) has ability for buffered the html view.
+                </p>
+              </div>
+            </div>
 
-<div class="nav-bottom">
-  <div class="nav-bottom-left">
-    <nuxt-link to="/4.0.0/controller/loadcss/" class="btn">
-      <i class="fa fa-chevron-left"></i>
-      loadCss
-    </nuxt-link>
-  </div>
-  <div class="nav-bottom-right">
-    <nuxt-link to="/4.0.0/controller/putjscontent/" class="btn">
-      putJsContent
-      <i class="fa fa-chevron-right"></i>
-    </nuxt-link>
-  </div>
-</div>
+            <div class="nav-bottom">
+              <div class="nav-bottom-left">
+                <nuxt-link to="/4.0.0/controller/loadcss/" class="btn">
+                  <i class="fa fa-chevron-left"></i>
+                  loadCss
+                </nuxt-link>
+              </div>
+              <div class="nav-bottom-right">
+                <nuxt-link to="/4.0.0/controller/putjscontent/" class="btn">
+                  putJsContent
+                  <i class="fa fa-chevron-right"></i>
+                </nuxt-link>
+              </div>
+            </div>
 
           </div>
         </div>
@@ -189,7 +189,7 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
-      title: 'loadLayout Method from SENE_Controller',
+      title: 'loadLayout Method',
       description: 'Learn more about loadLayout Method from SENE_Controller on Seme Framework version 4.0.0',
       breadcrumbs: [
         {
