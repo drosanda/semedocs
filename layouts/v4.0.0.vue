@@ -44,30 +44,30 @@
 
           <li><nuxt-link to="/4.0.0/model/">Model</nuxt-link>
             <ul>
-              <li><nuxt-link to="/4.0.0/model/select/">Model::select</nuxt-link></li>
-              <li><nuxt-link to="/4.0.0/model/select_as/">Model::select_as</nuxt-link></li>
-              <li><nuxt-link to="/4.0.0/model/from/">Model::from</nuxt-link></li>
-              <li><nuxt-link to="/4.0.0/model/join/">Model::join</nuxt-link></li>
-              <li><nuxt-link to="/4.0.0/model/join_composite/">Model::join_composite</nuxt-link></li>
-              <li><nuxt-link to="/4.0.0/model/composite_create/">Model::composite_create</nuxt-link></li>
-              <li><nuxt-link to="/4.0.0/model/where/">Model::where</nuxt-link></li>
-              <li><nuxt-link to="/4.0.0/model/where_as/">Model::where_as</nuxt-link></li>
-              <li><nuxt-link to="/4.0.0/model/between/">Model::between</nuxt-link></li>
-              <li><nuxt-link to="/4.0.0/model/group_by/">Model::group_by</nuxt-link></li>
-              <li><nuxt-link to="/4.0.0/model/order_by/">Model::order_by</nuxt-link></li>
-              <li><nuxt-link to="/4.0.0/model/limit/">Model::limit</nuxt-link></li>
-              <li><nuxt-link to="/4.0.0/model/get/">Model::get</nuxt-link></li>
-              <li><nuxt-link to="/4.0.0/model/get_first/">Model::get_first</nuxt-link></li>
-              <li><nuxt-link to="/4.0.0/model/insert/">Model::insert</nuxt-link></li>
-              <li><nuxt-link to="/4.0.0/model/insert_multi/">Model::insert_multi</nuxt-link></li>
-              <li><nuxt-link to="/4.0.0/model/insert_batch/">Model::insert_batch</nuxt-link></li>
-              <li><nuxt-link to="/4.0.0/model/update/">Model::update</nuxt-link></li>
-              <li><nuxt-link to="/4.0.0/model/update_as/">Model::update_as</nuxt-link></li>
-              <li><nuxt-link to="/4.0.0/model/delete/">Model::delete</nuxt-link></li>
-              <li><nuxt-link to="/4.0.0/model/exec/">Model::exec</nuxt-link></li>
-              <li><nuxt-link to="/4.0.0/model/query/">Model::query</nuxt-link></li>
-              <li><nuxt-link to="/4.0.0/model/last_id/">Model::last_id</nuxt-link></li>
-              <li><nuxt-link to="/4.0.0/model/page/">Model::page</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/model/between/">between</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/model/composite_create/">composite_create</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/model/delete/">delete</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/model/exec/">exec</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/model/from/">from</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/model/get_first/">get_first</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/model/get/">get</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/model/group_by/">group_by</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/model/insert_batch/">insert_batch</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/model/insert_multi/">insert_multi</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/model/insert/">insert</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/model/join_composite/">join_composite</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/model/join/">join</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/model/last_id/">last_id</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/model/limit/">limit</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/model/order_by/">order_by</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/model/page/">page</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/model/query/">query</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/model/select_as/">select_as</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/model/select/">select</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/model/update_as/">update_as</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/model/update/">update</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/model/where/">where</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/model/where_as/">where_as</nuxt-link></li>
             </ul>
           </li>
           <li>
