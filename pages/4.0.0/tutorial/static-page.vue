@@ -39,7 +39,25 @@
             <p>Before we proceed to coding phase, we have to learn about the directory and api result structure that we used to building the API.</p>
             <h3>Directory Structure</h3>
             <p>Here is the structure that we have to use.</p>
-            <pre>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
 - app
 -- controller
 --- api
@@ -48,21 +66,44 @@
 -- model
 --- api
 ---- a_apikey_model.php
-</pre>
+</highlight-code>
+</div>
+</div>
             <p>We have to separated controller and the model too for avoiding mistake by add new directory to model and controller.</p>
             <h3>API response structure</h3>
             <p>There is many standard format for API response structure, but we use the most basic API structure on this tutorial.</p>
-            <pre>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
 {
   &#x22;status&#x22;: 200,
   &#x22;message&#x22;: &#x22;Success&#x22;,
   &#x22;data&#x22;: []
 }
-            </pre>
+</highlight-code>
+</div>
+</div>
             <div class="message is-info">
 <div class="message-body">
               <p>While creating API, we doesn&#x27;t need the view, because API result will be rendered on controller.</p>
-            </div></div>
+            </div>
+          </div>
 
             <h2>Coding Phase</h2>
             <p>After understranding the structure, its time to implement the codes.</p>
@@ -70,7 +111,25 @@
             <h3>Create the default API</h3>
             <p>First thing first we have to create default API response for test basic functionality and basic api result structure.</p>
             <p>Create new directory under <code>app/controller/</code> named <code>api</code> and then create a file named <code>home.php</code>.</p>
-            <pre>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
 &#x3C;?php
 class Home extends SENE_Controller
 {
@@ -87,14 +146,34 @@ class Home extends SENE_Controller
     $this-&#x3E;json-&#x3E;out($data);
   }
 }
-            </pre>
-            <p>To test the functionality, just open <code>http://localhost/seme_framework/api/</code>.</p>
+</highlight-code>
+</div>
+</div>
+            <p>To test the functionality, just open <code>localhost/seme_framework/api/</code>.</p>
 
             <h3>Create the model</h3>
             <p>We have to create the model for communicating between PHP Server and Database server.</p>
             <p>Create new directory under <code>model</code> named <code>api</code>, and then create a file named <code>a_apikey_model.php</code>.</p>
             <p>In the model we have to add some method such as insert, update, delete, get by id, get all data.</p>
-            <pre>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
 &#x3C;?php
 class A_ApiKey_Model extends SENE_Model
 {
@@ -222,11 +301,31 @@ class A_ApiKey_Model extends SENE_Model
     return $this-&#x3E;db-&#x3E;get_first();
   }
 }
-            </pre>
+</highlight-code>
+</div>
+</div>
 
             <h3>Create the controller for apikey</h3>
             <p>After create model, now we have to create controller for CRUD.</p>
-            <pre>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
 &#x3C;?php
 class Home extends SENE_Controller
 {
@@ -440,7 +539,9 @@ class Home extends SENE_Controller
     $this-&#x3E;json-&#x3E;out($data);
   }
 }
-            </pre>
+</highlight-code>
+</div>
+</div>
 
             <h2>Test the API</h2>
             <p>After Completed the code, we can test the code by using <a href="https://www.postman.com/downloads/" target="_blank">Postman</a> or create own test runner.</p>
@@ -448,49 +549,48 @@ class Home extends SENE_Controller
             <div class="message is-info">
 <div class="message-body">
               <p>Seme Framework has supported for creating own test runner for testing the API.</p>
-            </div></div>
+            </div>
+          </div>
 
             <h3>Test apikey List</h3>
-            <p>To test apikey list, you can open url directly in your browser to <code>http://localhost/seme_framework/api/apikey/</code>.</p>
+            <p>To test apikey list, you can open url directly in your browser to <code>localhost/seme_framework/api/apikey/</code>.</p>
             <p>But, for another another function you have to tested it by using runner.</p>
             <p>Here is some example for testing API through Postman.</p>
 
             <h4>Create</h4>
             <p>The test result for create data</p>
-            <figure>
-              <img src="~/assets/img/tutorial/basic-api/postman-create.png">
-            </figure>
+            <amp-img layout="responsive" width="1682px" height="1166px" alt="create data" :src="pcrt"></amp-img>
 
             <h4>Edit</h4>
             <p>The test result for edit data</p>
-            <figure>
-              <img src="~/assets/img/tutorial/basic-api/postman-edit.png">
-            </figure>
+            <amp-img layout="responsive" width="1340px" height="1116px" alt="edit data" :src="pedit"></amp-img>
 
             <h4>Delete</h4>
             <p>The test result for delete data</p>
-            <figure>
-              <img src="~/assets/img/tutorial/basic-api/postman-delete.png">
-            </figure>
+            <amp-img layout="responsive" width="1336px" height="1106px" alt="delete data" :src="pdel"></amp-img>
 
             <p>Well done, if you facing any problem do not hestitate to open the <a href="https://github.com/drosanda/seme-framework/issues/new" target="_blank">issue</a> on our github page.</p>
-            <hr>
+
+
+            <div class="nav-bottom">
+              <div class="nav-bottom-left">
+                <nuxt-link to="/4.0.0/tutorial/get-data/" class="btn">
+                  <i class="fa fa-chevron-left"></i>
+                  Tutorial: Get Data
+                </nuxt-link>
+              </div>
+              <div class="nav-bottom-right">
+                <nuxt-link to="/4.0.0/uri_routing/" class="btn">
+                  Uri Routing
+                  <i class="fa fa-chevron-right"></i>
+                </nuxt-link>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/4.0.0/tutorial/get-data" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Tutorial: Get Data
-            </b-button>
-            <b-button tag="router-link" to="/4.0.0/uri_routing/" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Uri Routing
-            </b-button>
-          </div>
-        </div>
-      </div>
 
     </div>
   </div>
@@ -503,7 +603,24 @@ export default {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
       title: 'Tutorial: Static Page',
-      description: 'Learn more about creating a static page using Seme Framework version 4.0.0.'
+      description: 'Learn more about creating a static page using Seme Framework version 4.0.0.',
+      pcrt: require('~/assets/img/tutorial/basic-api/postman-create.png'),
+      pedit: require('~/assets/img/tutorial/basic-api/postman-edit.png'),
+      pdel: require('~/assets/img/tutorial/basic-api/postman-delete.png'),
+      breadcrumbs: [
+        {
+          url: process.env.BASE_URL || 'http://localhost:3001',
+          text: 'Seme Framework',
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/',
+          text: '4.0.0',
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/tutorial/',
+          text: 'Tutorial',
+        }
+      ]
     }
   },
   head() {
@@ -527,6 +644,64 @@ export default {
         }
       ]
     }
+  },
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+    const items = this.breadcrumbs.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': "WebPage",
+        '@id': item.url,
+        name: item.text,
+      },
+    }));
+    return [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: items,
+      },
+      {
+        "@type": "NewsArticle",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+        },
+        "headline": (this.headline || this.title),
+        "image": [
+          (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
+        ],
+        "dateCreated": "2021-07-14T10:12:00+07:00",
+        "datePublished": "2021-07-14T10:12:00+07:00",
+        "dateModified": "2021-07-14T19:46:00+07:00",
+        "author": {
+          "@type": "Person",
+          "gender": "Male",
+          "name": "Daeng Rosanda, S.Kom",
+          "alternateName": "Daeng Rosanda",
+          "jobTitle": "Founder",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Cipta Esensi Merenah",
+            "email": "hi@cenah.co.id"
+          }
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Cipta Esensi Merenah",
+          "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+          "logo": {
+            "@type": "ImageObject",
+            "name": "logo Cipta Esensi Merenah",
+            "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+            "width": "256px",
+            "height": "62px"
+          }
+        },
+        "description": this.description
+      }
+    ];
   }
 }
 </script>

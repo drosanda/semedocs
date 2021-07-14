@@ -37,21 +37,21 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-              &#x3C;?php
-              class Hello_Model extends SENE_Model
-              {
-                public function __construct()
-                {
-                  parent::__construct();
-                }
-                public function get()
-                {
-                  return &#x27;Hello World, from model&#x27;;
-                }
-              }
-            </highlight-code>
-          </div>
-        </div>
+                  &#x3C;?php
+                  class Hello_Model extends SENE_Model
+                  {
+                    public function __construct()
+                    {
+                      parent::__construct();
+                    }
+                    public function get()
+                    {
+                      return &#x27;Hello World, from model&#x27;;
+                    }
+                  }
+                </highlight-code>
+              </div>
+            </div>
             <p>And then, open and edit the <code>app/controller/home.php</code> again.</p>
             <p>Put model loader on constructor.</p>
             <div class="macwindow">
@@ -73,29 +73,29 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-              &#x3C;?php
-              class Home extends SENE_Controller
-              {
-                public function __construct()
-                {
-                  parent::__construct();
-                  $this-&#x3E;load(&#x22;hello_model&#x22;, &#x22;h&#x22;);
-                }
-                public function index()
-                {
-                  echo $this-&#x3E;h-&#x3E;get();
-                }
-              }
-            </highlight-code>
-          </div>
-        </div>
+                  &#x3C;?php
+                  class Home extends SENE_Controller
+                  {
+                    public function __construct()
+                    {
+                      parent::__construct();
+                      $this-&#x3E;load(&#x22;hello_model&#x22;, &#x22;h&#x22;);
+                    }
+                    public function index()
+                    {
+                      echo $this-&#x3E;h-&#x3E;get();
+                    }
+                  }
+                </highlight-code>
+              </div>
+            </div>
             <p>And then open <code>localhost/seme_framework</code>, it should show Hello World from model.</p>
             <amp-img layout="responsive" width="654px" height="290px" alt="hasil akhir tutorial" :src="hwfm"></amp-img>
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
                 <nuxt-link to="/4.0.0/tutorial/" class="btn">
-                <i class="fa fa-chevron-left"></i>
+                  <i class="fa fa-chevron-left"></i>
                   Tutorials
                 </nuxt-link>
               </div>
