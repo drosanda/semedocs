@@ -87,7 +87,23 @@
             <nuxt-link to="/4.0.0/controller/">Controller</nuxt-link>
             <ul>
               <li><nuxt-link to="/4.0.0/controller/constructor/">constructor</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/controller/getadditional/">getAdditional</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/controller/getadditionalbefore/">getAdditionalBefore</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/controller/getadditionalafter/">getAdditionalAfter</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/controller/getauthor/">getAuthor</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/controller/getcanonical/">getCanonical</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/controller/getcontentlanguage/">getContentLanguage</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/controller/getdescription/">getDescription</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/controller/geticon/">getIcon</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/controller/getjsfooter/">getJsFooter</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/controller/getjsready/">getJsReady</nuxt-link></li>
               <li><nuxt-link to="/4.0.0/controller/getkey/">getKey</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/controller/getkeyword/">getKeyword</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/controller/getlang/">getLang</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/controller/getrobots/">getRobots</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/controller/getshortcuticon/">getShortcutIcon</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/controller/getthemeelement/">getThemeElement</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/controller/gettitle/">getTitle</nuxt-link></li>
               <li><nuxt-link to="/4.0.0/controller/input/">input</nuxt-link></li>
               <li><nuxt-link to="/4.0.0/controller/lib/">lib</nuxt-link></li>
               <li><nuxt-link to="/4.0.0/controller/load/">load</nuxt-link></li>
@@ -95,9 +111,23 @@
               <li><nuxt-link to="/4.0.0/controller/loadlayout/">loadLayout</nuxt-link></li>
               <li><nuxt-link to="/4.0.0/controller/putthemecontent/">putThemeContent</nuxt-link></li>
               <li><nuxt-link to="/4.0.0/controller/putjscontent/">putJsContent</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/controller/putjsfooter/">putJsFooter</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/controller/putjsready/">putJsReady</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/controller/putthemecontent/">putThemeContent</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/controller/render/">render</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/controller/resetthemecontent/">resetThemeContent</nuxt-link></li>
               <li><nuxt-link to="/4.0.0/controller/session/">session</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/controller/setauthor/">setAuthor</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/controller/setcanonical/">setCanonical</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/controller/setcontentlanguage/">setContentLanguage</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/controller/setdescription/">setDescription</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/controller/seticon/">setIcon</nuxt-link></li>
               <li><nuxt-link to="/4.0.0/controller/setkey/">setKey</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/controller/setkeyword/">setKeyword</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/controller/setlang/">setLang</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/controller/setshortcuticon/">setShortcutIcon</nuxt-link></li>
               <li><nuxt-link to="/4.0.0/controller/settheme/">setTheme</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/controller/settitle/">setTitle</nuxt-link></li>
             </ul>
           </li>
           <li>
