@@ -12,13 +12,31 @@
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h3>Model</h3>
+            <h1>Hello From Model</h1>
             <p>On this tutorial we will learn, how to interacted with model from controller.</p>
             <p>First, open files located at <code>app/model/hello_model.php</code>.</p>
             <p>If the file doesnt exists, create one.</p>
             <p>And then, put this code on it.</p>
 
-            <pre>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
               &#x3C;?php
               class Hello_Model extends SENE_Model
               {
@@ -31,10 +49,30 @@
                   return &#x27;Hello World, from model&#x27;;
                 }
               }
-            </pre>
+            </highlight-code>
+          </div>
+        </div>
             <p>And then, open and edit the <code>app/controller/home.php</code> again.</p>
             <p>Put model loader on constructor.</p>
-            <pre>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
               &#x3C;?php
               class Home extends SENE_Controller
               {
@@ -48,23 +86,24 @@
                   echo $this-&#x3E;h-&#x3E;get();
                 }
               }
-            </pre>
-            <p>And then open <code>http://localhost/seme_framework</code>, it should show Hello World from model.</p>
-            <figure>
-              <img src="~/assets/img/hello-world-from-model.png" >
-            </figure>
+            </highlight-code>
+          </div>
+        </div>
+            <p>And then open <code>localhost/seme_framework</code>, it should show Hello World from model.</p>
+            <amp-img layout="responsive" width="654px" height="290px" alt="hasil akhir tutorial" :src="hwfm"></amp-img>
 
-
-            <div class="columns">
-              <div class="column">
-                <div class="buttons">
-                  <b-button tag="router-link" to="/4.0.0/tutorial/" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-                    Tutorials
-                  </b-button>
-                  <b-button tag="router-link" to="/4.0.0/tutorial/get-data/" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-                    Tutorial: Get Data
-                  </b-button>
-                </div>
+            <div class="nav-bottom">
+              <div class="nav-bottom-left">
+                <nuxt-link to="/4.0.0/tutorial/" class="btn">
+                <i class="fa fa-chevron-left"></i>
+                  Tutorials
+                </nuxt-link>
+              </div>
+              <div class="nav-bottom-right">
+                <nuxt-link to="/4.0.0/tutorial/get-data/" class="btn">
+                  Tutorial: Get Data
+                  <i class="fa fa-chevron-right"></i>
+                </nuxt-link>
               </div>
             </div>
 
@@ -82,7 +121,22 @@ export default {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
       title: 'Tutorial: Hello from Model',
-      description: 'Learn more about basic usage of Seme Framework model version 4.0.0 through this documentation.'
+      description: 'Learn more about basic usage of Seme Framework model version 4.0.0 through this documentation.',
+      hwfm: require('~/assets/img/hello-world-from-model.png'),
+      breadcrumbs: [
+        {
+          url: process.env.BASE_URL || 'http://localhost:3001',
+          text: 'Seme Framework',
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/',
+          text: '4.0.0',
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/tutorial/',
+          text: 'Tutorial',
+        }
+      ]
     }
   },
   head() {
@@ -106,6 +160,64 @@ export default {
         }
       ]
     }
+  },
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+    const items = this.breadcrumbs.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': "WebPage",
+        '@id': item.url,
+        name: item.text,
+      },
+    }));
+    return [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: items,
+      },
+      {
+        "@type": "NewsArticle",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+        },
+        "headline": (this.headline || this.title),
+        "image": [
+          (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
+        ],
+        "dateCreated": "2021-07-14T10:12:00+07:00",
+        "datePublished": "2021-07-14T10:12:00+07:00",
+        "dateModified": "2021-07-14T19:46:00+07:00",
+        "author": {
+          "@type": "Person",
+          "gender": "Male",
+          "name": "Daeng Rosanda, S.Kom",
+          "alternateName": "Daeng Rosanda",
+          "jobTitle": "Founder",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Cipta Esensi Merenah",
+            "email": "hi@cenah.co.id"
+          }
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Cipta Esensi Merenah",
+          "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+          "logo": {
+            "@type": "ImageObject",
+            "name": "logo Cipta Esensi Merenah",
+            "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+            "width": "256px",
+            "height": "62px"
+          }
+        },
+        "description": this.description
+      }
+    ];
   }
 }
 </script>
