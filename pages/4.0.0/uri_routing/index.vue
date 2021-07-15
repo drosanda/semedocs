@@ -88,21 +88,23 @@
             <b-notification type="is-primary" :closable="false">
               Important:  The reserved routes must come before any wildcard routes.
             </b-notification>
-            <p>Another reserved route is admin secret route. Please refer to <NuxtLink to="/4.0.0/uri_routing/admin">this docs</NuxtLink> for using admin secret routing.</p>
+            <p>Another reserved route is admin secret route. Please refer to <NuxtLink to="/4.0.0/uri_routing/admin/">this docs</NuxtLink> for using admin secret routing.</p>
           </div>
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/4.0.0/tutorial/introduction" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Tutorial: Introduction
-            </b-button>
-            <b-button tag="router-link" to="/4.0.0/uri_routing/admin" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Uri Routing: Admin
-            </b-button>
-          </div>
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/4.0.0/tutorial/static-page/" class="btn">
+            <i class="fa fa-chevron-left"></i>
+            Tutorial: Static Page
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/4.0.0/uri_routing/admin/" class="btn">
+            Uri Routing: Admin
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 
@@ -117,7 +119,21 @@ export default {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
       title: 'URI Routing',
-      description: 'Learn more about the URI Routing of Seme Framework version 4.0.0 through this documentation.'
+      description: 'Learn more about URI Routing on Seme Framework 4.',
+      breadcrumbs: [
+        {
+          url: process.env.BASE_URL || 'http://localhost:3001',
+          text: 'Seme Framework',
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/',
+          text: '4.0.0',
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/uri_routing/',
+          text: 'URI Routing',
+        }
+      ]
     }
   },
   head() {
@@ -141,6 +157,64 @@ export default {
         }
       ]
     }
+  },
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+    const items = this.breadcrumbs.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': "WebPage",
+        '@id': item.url,
+        name: item.text,
+      },
+    }));
+    return [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: items,
+      },
+      {
+        "@type": "NewsArticle",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+        },
+        "headline": (this.headline || this.title),
+        "image": [
+          (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
+        ],
+        "dateCreated": "2021-07-15T18:11:00+07:00",
+        "datePublished": "2021-07-15T18:12:00+07:00",
+        "dateModified": "2021-07-15T18:36:00+07:00",
+        "author": {
+          "@type": "Person",
+          "gender": "Male",
+          "name": "Daeng Rosanda, S.Kom",
+          "alternateName": "Daeng Rosanda",
+          "jobTitle": "Founder",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Cipta Esensi Merenah",
+            "email": "hi@cenah.co.id"
+          }
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Cipta Esensi Merenah",
+          "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+          "logo": {
+            "@type": "ImageObject",
+            "name": "logo Cipta Esensi Merenah",
+            "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+            "width": "256px",
+            "height": "62px"
+          }
+        },
+        "description": this.description
+      }
+    ];
   }
 }
 </script>
