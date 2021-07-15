@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class="unavailable">3.1.0</li>
+          <li class="unavailable">3.1.x</li>
         </ul>
       </nav>
 
@@ -112,7 +112,7 @@
           ],
           "dateCreated": "2020-06-11T10:12:00+07:00",
           "datePublished": "2020-06-11T10:12:00+07:00",
-          "dateModified": "2021-06-25T6:42:01+07:00",
+          "dateModified": "2021-07-15T16:42:01+07:00",
           "author": {
             "@type": "Person",
             "gender": "Male",

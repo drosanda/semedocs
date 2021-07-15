@@ -3,8 +3,9 @@
     <div class="container">
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
-          <li class=""><nuxt-link to="/">Home</nuxt-link></li>
-          <li class=""><nuxt-link to="/3.1.0/configuration">Configuration</nuxt-link></li>
+          <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.1.0/">3.1.x</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.1.0/configuration/">Configuration</NuxtLink></li>
           <li class="unavailable">Controller</li>
         </ul>
       </nav>
@@ -13,7 +14,26 @@
           <div class="content">
             <h1 class="">Config: controller.php</h1>
             <p>In this configuration file you can change the default value of controller and then manipulate the url routing.</p>
-            <pre><code v-highlight class="php">&#x3C;?php
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  &#x3C;?php
 $default_controller=&#x27;home&#x27;;
 $notfound_controller=&#x27;notfound&#x27;;
 
@@ -30,7 +50,10 @@ $routes[&#x27;konfirmasi/(:any)&#x27;] = &#x27;konfirmasi/index/$1&#x27;;
 //dukungan
 $routes[&#x27;dukungan/kebijakan-privasi&#x27;] = &#x27;dukungan/kebijakan_privasi&#x27;;
 $routes[&#x27;dukungan/syarat-ketentuan&#x27;] = &#x27;dukungan/syarat_ketentuan&#x27;;
-//$routes[&#x27;produk/(:any)/(:any)&#x27;] = &#x27;produk/detail/index/$1/$2&#x27;;</code></pre>
+//$routes[&#x27;produk/(:any)/(:any)&#x27;] = &#x27;produk/detail/index/$1/$2&#x27;;
+</highlight-code>
+</div>
+</div>
 
     					<p>The sequences of routes variable determines priority for each route.</p>
 
@@ -38,17 +61,18 @@ $routes[&#x27;dukungan/syarat-ketentuan&#x27;] = &#x27;dukungan/syarat_ketentuan
           </div>
         </div>
 
-
-        <div class="columns">
-          <div class="column">
-            <div class="buttons">
-              <b-button tag="router-link" to="/3.1.0/configuration/config/" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-                Config: config.php
-              </b-button>
-              <b-button tag="router-link" to="/3.1.0/configuration/core/" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-                Config: core.php
-              </b-button>
-            </div>
+        <div class="nav-bottom">
+          <div class="nav-bottom-left">
+            <nuxt-link to="/3.1.0/configuration/config/" class="btn">
+            <i class="fa fa-chevron-left"></i>
+              Config: config.php
+            </nuxt-link>
+          </div>
+          <div class="nav-bottom-right">
+            <nuxt-link to="/3.1.0/configuration/core/" class="btn">
+              Config: core.php
+              <i class="fa fa-chevron-right"></i>
+            </nuxt-link>
           </div>
         </div>
 
@@ -63,7 +87,21 @@ $routes[&#x27;dukungan/syarat-ketentuan&#x27;] = &#x27;dukungan/syarat_ketentuan
         name: 'Seme Framework v3.1.0',
         suffix: ' - Seme Framework v3.1.0 Documentation',
         title: 'Configuration: controller.php',
-        description: 'File controller.php for Seme Framework version 3.x basic controller setting'
+        description: 'File controller.php for Seme Framework version 3.x basic controller setting',
+        breadcrumbs: [
+          {
+            url: process.env.BASE_URL || 'http://localhost:3001',
+            text: 'Seme Framework',
+          },
+          {
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1.0/',
+            text: '3.1.0',
+          },
+          {
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1.0/configuration/',
+            text: 'Config',
+          }
+        ]
       }
     },
     head() {
@@ -87,6 +125,64 @@ $routes[&#x27;dukungan/syarat-ketentuan&#x27;] = &#x27;dukungan/syarat_ketentuan
           }
         ]
       }
+    },
+    jsonld() {
+      this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+      const items = this.breadcrumbs.map((item, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          "@type": "WebPage",
+          '@id': item.url,
+          name: item.text,
+        },
+      }));
+      return [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: items,
+        },
+        {
+          "@type": "NewsArticle",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+          },
+          "headline": (this.headline || this.title),
+          "image": [
+            (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
+          ],
+          "dateCreated": "2020-06-11T10:12:00+07:00",
+          "datePublished": "2020-06-11T10:12:00+07:00",
+          "dateModified": "2021-06-15T18:46:17+07:00",
+          "author": {
+            "@type": "Person",
+            "gender": "Male",
+            "name": "Daeng Rosanda, S.Kom",
+            "alternateName": "Daeng Rosanda",
+            "jobTitle": "Founder",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Cipta Esensi Merenah",
+              "email": "hi@cenah.co.id"
+            }
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Cipta Esensi Merenah",
+            "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+            "logo": {
+              "@type": "ImageObject",
+              "name": "logo Cipta Esensi Merenah",
+              "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+              "width": "256px",
+              "height": "62px"
+            }
+          },
+          "description": this.description
+        }
+      ];
     }
   }
 </script>

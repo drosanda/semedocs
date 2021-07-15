@@ -3,7 +3,9 @@
     <div class="container">
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
-          <li class=""><nuxt-link to="/">Home</nuxt-link></li>
+          <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.1.0/">3.1.x</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.1.0/configuration/">Configuration</NuxtLink></li>
           <li class="unavailable">Configuration</li>
         </ul>
       </nav>
@@ -14,14 +16,28 @@
             <p>The configuration of Seme Framework version 3.x separated on 6 files. The location in <b>app/config/</b>:</p>
             <p>
               <ul>
-                <li><NuxtLink to="/3.1.0/configuration/config">Basic configuration / config.php</NuxtLink></li>
-                <li><NuxtLink to="/3.1.0/configuration/controller">Controller configuration / controller.php</NuxtLink></li>
-                <li><NuxtLink to="/3.1.0/configuration/core">Core Class Loader / core.php</NuxtLink></li>
-                <li><NuxtLink to="/3.1.0/configuration/database">Database connection / database.php</NuxtLink></li>
-                <li><NuxtLink to="/3.1.0/configuration/session">Session configration / session.php</NuxtLink></li>
-                <li><NuxtLink to="/3.1.0/configuration/timezone">Timezone configration / timezone.php</NuxtLink></li>
+                <li><NuxtLink to="/3.1.0/configuration/config/">Basic configuration / config.php</NuxtLink></li>
+                <li><NuxtLink to="/3.1.0/configuration/controller/">Controller configuration / controller.php</NuxtLink></li>
+                <li><NuxtLink to="/3.1.0/configuration/core/">Core Class Loader / core.php</NuxtLink></li>
+                <li><NuxtLink to="/3.1.0/configuration/database/">Database connection / database.php</NuxtLink></li>
+                <li><NuxtLink to="/3.1.0/configuration/session/">Session configration / session.php</NuxtLink></li>
+                <li><NuxtLink to="/3.1.0/configuration/timezone/">Timezone configration / timezone.php</NuxtLink></li>
               </ul>
             </p>
+            <div class="nav-bottom">
+              <div class="nav-bottom-left">
+                <nuxt-link to="/3.1.0/download/" class="btn">
+                <i class="fa fa-chevron-left"></i>
+                  Download
+                </nuxt-link>
+              </div>
+              <div class="nav-bottom-right">
+                <nuxt-link to="/3.1.0/configuration/config/" class="btn">
+                  Config.php
+                  <i class="fa fa-chevron-right"></i>
+                </nuxt-link>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -31,13 +47,27 @@
 </template>
 <script>
   export default {
-    layout: 'v3.1.0',
+    layout: '3.1.0',
     data() {
       return {
-        name: 'Seme Framework v3.1.0',
-        suffix: ' - Seme Framework v3.1.0 Documentation',
+        name: 'Seme Framework v3.1.x',
+        suffix: ' - Seme Framework 3.1.x',
         title: 'Configuration',
-        description: 'Learn more about configration for Seme Framework version 3.x'
+        description: 'Basic configuration for Seme Framework version 3.1.x',
+        breadcrumbs: [
+          {
+            url: process.env.BASE_URL || 'http://localhost:3001',
+            text: 'Seme Framework',
+          },
+          {
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1.0/',
+            text: '3.1.0',
+          },
+          {
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1.0/configuration/',
+            text: 'Config',
+          }
+        ]
       }
     },
     head() {
@@ -61,6 +91,64 @@
           }
         ]
       }
+    },
+    jsonld() {
+      this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+      const items = this.breadcrumbs.map((item, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          "@type": "WebPage",
+          '@id': item.url,
+          name: item.text,
+        },
+      }));
+      return [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: items,
+        },
+        {
+          "@type": "NewsArticle",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+          },
+          "headline": (this.headline || this.title),
+          "image": [
+            (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
+          ],
+          "dateCreated": "2020-06-11T10:12:00+07:00",
+          "datePublished": "2020-06-11T10:12:00+07:00",
+          "dateModified": "2021-07-15T18:37:17+07:00",
+          "author": {
+            "@type": "Person",
+            "gender": "Male",
+            "name": "Daeng Rosanda, S.Kom",
+            "alternateName": "Daeng Rosanda",
+            "jobTitle": "Founder",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Cipta Esensi Merenah",
+              "email": "hi@cenah.co.id"
+            }
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Cipta Esensi Merenah",
+            "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+            "logo": {
+              "@type": "ImageObject",
+              "name": "logo Cipta Esensi Merenah",
+              "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+              "width": "256px",
+              "height": "62px"
+            }
+          },
+          "description": this.description
+        }
+      ];
     }
   }
 </script>

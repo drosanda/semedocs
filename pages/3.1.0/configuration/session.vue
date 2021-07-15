@@ -2,8 +2,9 @@
   <div class="section">
     <nav class="breadcrumb" aria-label="breadcrumbs">
       <ul class="breadcrumbs">
-        <li class=""><nuxt-link to="/">Home</nuxt-link></li>
-        <li class=""><nuxt-link to="/3.1.0/configuration">Configuration</nuxt-link></li>
+        <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
+        <li class=""><NuxtLink to="/3.1.0/">3.1.x</NuxtLink></li>
+        <li class=""><NuxtLink to="/3.1.0/configuration/">Configuration</NuxtLink></li>
         <li class="unavailable">session.php</li>
       </ul>
     </nav>
