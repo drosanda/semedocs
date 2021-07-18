@@ -333,14 +333,14 @@
       </div>
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/4.0.0/mode/page/" class="btn">
+          <nuxt-link to="/4.0.0/mode/where_as/" class="btn">
             <i class="fa fa-chevron-left"></i>
-            Model: Page
+            Model: where_as()
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/4.0.0/controller/" class="btn">
-            Controller
+          <nuxt-link to="/4.0.0/view/theme/" class="btn">
+            Theme
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
@@ -421,7 +421,7 @@ export default {
         ],
         "dateCreated": "2020-06-11T10:12:00+07:00",
         "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-25T22:00:17+07:00",
+        "dateModified": "2021-07-18T12:57:17+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
