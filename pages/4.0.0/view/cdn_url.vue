@@ -127,7 +127,7 @@ export default {
           text: '4.0.0'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/controller/',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/view/',
           text: 'View'
         }
       ],

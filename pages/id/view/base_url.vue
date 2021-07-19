@@ -12,14 +12,14 @@
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">The <code>{{base_url}}</code> Keyword</h1>
+            <h1 class="">Kode <code>{{base_url}}</code></h1>
             <p>
-              Seme Framework support <code>{{base_url}}</code> keyword for replacing the keyword with <code>$site</code> value in <NuxtLink to="/4.0.0/configuration/">Seme Framework Configuration</NuxtLink>.
+              Kode <code>{{base_url}}</code> digunakan untuk menggantikan nilai tersebut dengan nilai yang ada pada <NuxtLink to="/4.0.0/configuration/">Pengaturan Seme Framework</NuxtLink> dalam nilai variabel <code>$site</code>.
             </p>
 
-            <h2 class="">The Configuration</h2>
+            <h2 class="">Contoh Pengaturan</h2>
             <p>
-              The BASE URL purpose is to get base url value from the configuration. Here is example codes on development.php file.
+              Nilai dari BASE URL diambil dari pengaturan Seme Framework, berikut ini adalah contoh pengaturan dari file development.php.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -47,14 +47,14 @@
               </div>
             </div>
 
-            <h2 class="">How It Works</h2>
+            <h2 class="">Cara Kerja</h2>
             <p>
-              This <code>{{base_url}}</code> keyword only processed on <code>theme.json</code> and <code>script.json</code> files.
+              Kode <code>{{base_url}}</code> hanya akan diproses ketika digunakan dalam file <code>theme.json</code> dan <code>script.json</code>.
             </p>
 
             <h2 class="">Fallback</h2>
             <p>
-              If configuration fails, this will be replaced by empty string.
+              Apabila pengaturan gagal diambil, maka nilai akan digantikan dengan string kosong.
             </p>
 
           </div>
@@ -64,13 +64,13 @@
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/4.0.0/view/" class="btn">
+          <nuxt-link to="/id/view/" class="btn">
             <i class="fa fa-chevron-left"></i>
             View
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/4.0.0/view/cdn_url" class="btn">
+          <nuxt-link to="/id/view/cdn_url" class="btn">
             cdn_url
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
@@ -82,26 +82,26 @@
 </template>
 <script>
 export default {
-  layout: 'v4.0.0',
+  layout: 'id',
   data (){
     return {
       base_url: '{{base_url}}',
       cdn_url: '{{cdn_url}}',
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
-      title: 'The {{base_url}} keyword',
-      description: 'Learn how to use The {{base_url}} keyword on Seme Framework 4.',
+      title: 'Kode {{base_url}}',
+      description: 'Pelajari selengkapnya tentang penggunaan kode {{base_url}} pada Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
           text: 'Seme Framework'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/',
-          text: '4.0.0'
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/',
+          text: 'ID'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/view/',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/view/',
           text: 'View'
         }
       ],
@@ -109,6 +109,9 @@ export default {
   },
   head() {
     return {
+      htmlAttrs: {
+        lang: 'id'
+      },
       title: this.title+this.suffix,
       meta: [
         {
@@ -155,9 +158,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-18T10:31:00+07:00",
-        "datePublished": "2021-07-18T10:32:00+07:00",
-        "dateModified": "2021-07-18T12:38:31+07:00",
+        "dateCreated": "2021-07-19T20:31:00+07:00",
+        "datePublished": "2021-07-19T20:32:00+07:00",
+        "dateModified": "2021-07-19T23:38:31+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

@@ -75,6 +75,20 @@
             <p>Seme Framework licensed under MIT version 2.0.</p>
             <h2>Question and Answer</h2>
             <p>Feel free to ask me on my <a href="https://instagram.com/drosanda/" target="_blank">instagram</a>, <a href="https://facebook.com/drs11/" target="_blank">facebook</a>, or open an issue on <a href="https://github.com/drosanda/semedocs/issues" target="_blank">github</a>.</p>
+
+            <hr>
+            <h2>Latest News</h2>
+            <p>
+              Here is the latest news and updates from Seme Framework creator.
+            </p>
+            <amp-twitter width="300" height="472" layout="responsive" data-tweetid="1416587477251362820"></amp-twitter>
+            <amp-twitter width="300" height="472" layout="responsive" data-tweetid="1416582145070362626"></amp-twitter>
+            <amp-twitter width="300" height="472" layout="responsive" data-tweetid="1410378130942947329"></amp-twitter>
+            <amp-twitter width="300" height="472" layout="responsive" data-tweetid="1407162066142593025"></amp-twitter>
+            <amp-twitter width="300" height="472" layout="responsive" data-tweetid="1399759168454549504"></amp-twitter>
+            <amp-twitter width="300" height="472" layout="responsive" data-tweetid="1398762793164177408"></amp-twitter>
+            <amp-twitter width="300" height="472" layout="responsive" data-tweetid="1394521914538745857"></amp-twitter>
+            <amp-twitter width="300" height="472" layout="responsive" data-tweetid="1392853048930619397"></amp-twitter>
           </div>
         </div>
       </div>
