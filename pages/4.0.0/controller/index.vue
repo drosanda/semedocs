@@ -190,7 +190,7 @@ app/
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="html">
+                <highlight-code lang="php">
                   class Home extends Sene_Controller{
                     var $public_var = &#x27;Yi-Ha!&#x27;;
                     var $__underWear = &#x27;My Private Things&#x27;;
