@@ -99,7 +99,7 @@ $this->seme_email->replacer($replacer);</pre>
             },
             {
               url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/',
-              text: '4.0.0',
+              text: '4.0.2',
             },
             {
               url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/library/',

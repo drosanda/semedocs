@@ -223,7 +223,7 @@
           },
           {
             url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/',
-            text: '4.0.0',
+            text: '4.0.2',
           }
         ]
       }

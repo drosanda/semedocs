@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class="unavailable">4.0.0</li>
+          <li class="unavailable">4.0.2</li>
         </ul>
       </nav>
 
@@ -19,7 +19,7 @@
               <amp-img layout="fixed" width="90px" height="20px" src="https://codecov.io/gh/drosanda/seme-framework/branch/master/graph/badge.svg?token=3WRW0SNO41" alt="code coverage"></amp-img>
             </div>
             <p>
-              In version 4.0.0 Seme Framework has main target for providing deployable apps.
+              In version 4.0.2 Seme Framework has main target is using JSON object for template configuration.
               The first thing on this version is modified the configuration files to single files only.
               And then we have to optimizing the codes and the memory used by using XDebug and qcachegrind for viewing memory used.
             </p>
@@ -88,7 +88,7 @@
           },
           {
             url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/',
-            text: '4.0.0',
+            text: '4.0.2',
           }
         ]
       }

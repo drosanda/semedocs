@@ -107,7 +107,7 @@ $site = &#x22;http://&#x22;.$_SERVER[&#x27;HTTP_HOST&#x27;].&#x22;/seme-framewor
           },
           {
             url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/',
-            text: '4.0.0',
+            text: '4.0.2',
           },
           {
             url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/configuration/',

@@ -252,7 +252,7 @@ $semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;
           },
           {
             url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/',
-            text: '4.0.0',
+            text: '4.0.2',
           }
         ]
       }
