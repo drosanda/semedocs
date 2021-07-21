@@ -4,8 +4,8 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/">4.0.0 (English)</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/controller">Controller</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0.0/">4.0.0 (English)</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0.0/controller">Controller</NuxtLink></li>
           <li class="unavailable">loadCss</li>
         </ul>
       </nav>

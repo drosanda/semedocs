@@ -4,8 +4,8 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/">4.0.0 (Bahasa)</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/controller">Controller</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0.0/">4.0.0 (Bahasa)</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0.0/controller">Controller</NuxtLink></li>
           <li class="unavailable">Lib method</li>
         </ul>
       </nav>
@@ -20,7 +20,7 @@
             <div class="message is-warning">
               <div class="message-body">
                 <p>This <b>lib</b> method only affected for single file class library.</p>
-                <p>For using 3rd party library like from <code>composer</code> you can read it from <NuxtLink to="/id/library/3rd-party">3rd library section</NuxtLink>.</p>
+                <p>For using 3rd party library like from <code>composer</code> you can read it from <NuxtLink to="/4.0.0/library/3rd-party">3rd library section</NuxtLink>.</p>
               </div>
             </div>
 
