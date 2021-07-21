@@ -45,8 +45,8 @@
               </div>
             </div>
 
-            <h3>Parameters</h3>
-            <p>Metode cdn_url miliki 1 parameter, yakni $src.</p>
+            <h3>Parameter</h3>
+            <p>Metode cdn_url miliki 1 parameter, yakni $location.</p>
 
             <h3>$location</h3>
             <p>Nilai dari $location bisa diisi dengan alamat URL lanjutan dari awalan CDN.</p>
