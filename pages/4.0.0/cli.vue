@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0.0/">4.0.0</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
           <li class="unavailable">Command Line Interface (CLI)</li>
         </ul>
       </nav>
@@ -75,7 +75,7 @@
           </div>
         </div>
       </div>
-      
+
       <div class="nav-bottom">
         <div class="nav-bottom-left">
           <nuxt-link to="/4.0.0/uri_routing/admin/" class="btn">

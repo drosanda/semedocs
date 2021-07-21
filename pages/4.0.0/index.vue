@@ -11,7 +11,7 @@
       <div class="">
         <div class="column">
           <div class="content">
-            <h1 class="is-size-1">Seme Framework <span>version 4.0.0</span></h1>
+            <h1 class="is-size-1">Seme Framework <span>4</span></h1>
             <div class="badges">
               <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/version-4.0.0-ed6f75' alt="version"></amp-img>
               <amp-img layout="fixed" width="90px" height="20px" src='https://travis-ci.org/drosanda/seme-framework.svg?branch=master' alt="build status"></amp-img>
