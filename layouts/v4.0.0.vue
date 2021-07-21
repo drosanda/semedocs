@@ -9,7 +9,8 @@
           <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/lang-en-e9bd2e' alt="language"></amp-img>
         </div>
         <ul>
-          <li><nuxt-link to="/4.0.0/">Seme Framework</nuxt-link></li>
+          <li><nuxt-link to="/">Seme Framework</nuxt-link></li>
+          <li><nuxt-link to="/4.0.0/">version 4.0.2</nuxt-link></li>
           <li><nuxt-link to="/4.0.0/requirements/">Requirements</nuxt-link></li>
           <li><nuxt-link to="/4.0.0/downloads/">Download &amp; Install</nuxt-link></li>
           <li>
@@ -147,7 +148,7 @@
       <div class="container">
         <div class="content has-text-centered">
           <p class="">Copyright &copy; 2014-2021. Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
-          <p><small>Last updated on May 30, 2021</small></p>
+          <p><small>Last updated on July 21, 2021</small></p>
         </div>
       </div>
     </footer>

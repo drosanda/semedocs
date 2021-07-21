@@ -10,7 +10,8 @@
         </div>
 
         <ul>
-          <li><nuxt-link to="/id/">Seme Framework</nuxt-link></li>
+          <li><nuxt-link to="/">Seme Framework</nuxt-link></li>
+          <li><nuxt-link to="/id/">versi 4</nuxt-link></li>
           <li><nuxt-link to="/id/requirements/">Persyaratan</nuxt-link></li>
           <li><nuxt-link to="/id/downloads/">Download &amp; Install</nuxt-link></li>
           <li>
@@ -125,7 +126,7 @@
       <div class="container">
         <div class="content has-text-centered">
           <p class="">Copyright &copy; 2014-2021. Dibuat sepenuh cinta di Bandung, Indonesia oleh Daeng Rosanda, S.Kom.</p>
-          <p><small>Diperbarui tanggal 1 Juni 2021</small></p>
+          <p><small>Diperbarui tanggal 21 Juli 2021</small></p>
         </div>
       </div>
     </footer>

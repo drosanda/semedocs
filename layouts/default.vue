@@ -14,8 +14,8 @@
           <li>
             <nuxt-link to="/version/">Versions</nuxt-link>
             <ul>
-              <li><nuxt-link to="/4.0.0/">4.0.0 (English)</nuxt-link></li>
-              <li><nuxt-link to="/id/">4.0.0 (Bahasa)</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/">4.0.2 (English)</nuxt-link></li>
+              <li><nuxt-link to="/id/">4.0.2 (Bahasa)</nuxt-link></li>
               <li><nuxt-link to="/3.3.0/">3.3.0</nuxt-link></li>
               <li><nuxt-link to="/3.2.1/">3.2.1</nuxt-link></li>
               <li><nuxt-link to="/3.1.0/">3.1.x</nuxt-link></li>
@@ -50,7 +50,7 @@
       <div class="container">
         <div class="content has-text-centered">
           <p class="">Copyright &copy; 2014-2021. Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
-          <p><small>Last updated on May 30, 2021</small></p>
+          <p><small>Last updated on July 21, 2021</small></p>
         </div>
       </div>
     </footer>
