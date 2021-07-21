@@ -4,8 +4,8 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0.0/">4.0.0</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0.0/view">View</NuxtLink></li>
+          <li class=""><NuxtLink to="/id/">4.0.0 (Bahasa)</NuxtLink></li>
+          <li class=""><NuxtLink to="/id/view/">View</NuxtLink></li>
           <li class="unavailable">base_url</li>
         </ul>
       </nav>
@@ -14,7 +14,7 @@
           <div class="content">
             <h1 class="">Kode <code>{{base_url}}</code></h1>
             <p>
-              Kode <code>{{base_url}}</code> digunakan untuk menggantikan nilai tersebut dengan nilai yang ada pada <NuxtLink to="/4.0.0/configuration/">Pengaturan Seme Framework</NuxtLink> dalam nilai variabel <code>$site</code>.
+              Kode <code>{{base_url}}</code> digunakan untuk menggantikan nilai tersebut dengan nilai yang ada pada <NuxtLink to="/id/configuration/">Pengaturan Seme Framework</NuxtLink> dalam nilai variabel <code>$site</code>.
             </p>
 
             <h2 class="">Contoh Pengaturan</h2>

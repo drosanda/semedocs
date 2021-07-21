@@ -19,8 +19,7 @@
 
   					<h2>Memanggil view secara manual</h2>
   					<p>View dapat dipanggil secara otomatis melalui tema, atau dapat juga di panggil secara manual. Berikut ini adalah cara pemanggilan menu secara manual (tanpa tema):</p>
-            <p>Seperti biasa, diasumsikan Seme Framework telah diinstal di dalam <code>D:\XAMPP\htodcs\seme_framework</code> dan ketika di buka melalui alamat URL <code>http://localhost/seme_framework</code> sudah mengarah ke Seme Framework yang berjalan dengan baik dan tidak error.</p>
-
+            <p>Seperti biasa, diasumsikan Seme Framework telah di instal seperti yang di jelaskan di halaman <NuxtLink to="/id/downloads/">Download &amp; Install</NuxtLink> dan ketika di buka melalui alamat URL sudah mengarah ke Seme Framework yang berjalan dengan baik dan tidak error.</p>
 
   					<h3>Membuat file view</h3>
             <p>Pertama-tama buat file view didalam direktori <code>app/view/template.php</code>. Kemudian tambahkan <i>source code</i> seperti ini:</p>
@@ -204,7 +203,7 @@ class Home extends Sene_Controller{
               </div>
             </div>
             <div class="maccontent">
-              <highlight-code lang="html">
+              <highlight-code lang="php">
 app/
 -view/
 --front/
@@ -220,7 +219,7 @@ app/
 -----footer.php
 -----sidemenu.php
 skin/
--front
+-front/
 --css
 --js
 --img
@@ -337,14 +336,14 @@ class Home extends SENE_Controller{
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/id/model/last_id/" class="btn">
+          <nuxt-link to="/id/model/where/" class="btn">
           <i class="fa fa-chevron-left"></i>
-            Model::last_id
+            Model where
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/id/configuration/theme/" class="btn">
-            Membuat Tema
+          <nuxt-link to="/id/view/base_url/" class="btn">
+            base_url
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>

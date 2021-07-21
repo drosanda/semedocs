@@ -6,20 +6,21 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.0 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/view/">View</NuxtLink></li>
-          <li class="unavailable">cdn_url</li>
+          <li class="unavailable">theme json</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Kode <code>{{cdn_url}}</code></h1>
+            <h1 class="">File <code>theme.json</code></h1>
             <p>
-              Kode <code>{{cdn_url}}</code> digunakan untuk menggantikan nilai tersebut dengan nilai yang ada pada <NuxtLink to="/id/configuration/">Pengaturan Seme Framework</NuxtLink> dalam nilai variabel <code>$cdn_url</code>.
+              File theme.json berisikan kode untuk link tags untuk pemanggilan CSS yang akan digunakan untuk memanggil javascript pada tampilan tema.
+              File ini dibutuhkan untuk membuat tema view di Seme Framework 4.
             </p>
 
-            <h2 class="">Contoh Pengaturan</h2>
+            <h2>Lokasi</h2>
             <p>
-              Nilai dari CDN URL diambil dari pengaturan Seme Framework, berikut ini adalah contoh pengaturan dari file development.php.
+              Lokasi file ini ada di dalam direktori tema.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -40,23 +41,25 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  ...
-                  $cdn_url = &#x27;https://cdn.cenah.co.id/&#x27;;
-                  ...
+                  | app/
+                  |- view/
+                  |-- [THEME_NAME]/
+                  |--- ...
+                  |--- theme.json
+                  |--- ...
                 </highlight-code>
               </div>
             </div>
 
-            <h2 class="">Cara Kerja</h2>
+            <h2 class="">Cara kerja</h2>
             <p>
-              Kode <code>{{cdn_url}}</code> hanya akan diproses ketika digunakan dalam file <code>theme.json</code> dan <code>script.json</code>.
+              File theme.json diproses oleh <NuxtLink to="/id/controller/constructor/">metode constructor dari kelas SENE_Controller</NuxtLink> dan dioutputkan oleh <NuxtLink to="/id/controller/getadditional/">metode getAdditional() dari SENE_Controller</NuxtLink>.
             </p>
 
-            <h2 class="">Fallback</h2>
+            <h5>Cara Penggunaan dengan JSON String</h5>
             <p>
-              Apabila pengaturan gagal diambil, maka nilai akan digantikan dari isi variabel <code>$base_url</code>.
+              Berikut ini adalah cara penggunaan file script.json dengan json string.
             </p>
-
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -75,13 +78,67 @@
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="php">
-                  ...
-                  $site = &#x27;http://localhost/seme_framework/&#x27;;
-                  ...
+                <highlight-code lang="javascript">
+                  [
+                  &#x22;&#x3C;link rel=\&#x22;stylesheet\&#x22; href=\&#x22;&#x7B;&#x7B;base_url&#x7D;&#x7D;skin/front/css/nprogress.css\&#x22; /&#x3E;&#x22;,
+                  &#x22;&#x3C;link rel=\&#x22;stylesheet\&#x22; href=\&#x22;https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css\&#x22; /&#x3E;&#x22;,
+                  &#x22;&#x3C;link rel=\&#x22;stylesheet\&#x22; href=\&#x22;&#x7B;&#x7B;cdn_url&#x7D;&#x7D;assets/css/jquery.gritter.css\&#x22; /&#x3E;&#x22;
+                  ]
                 </highlight-code>
               </div>
             </div>
+
+            <h5>Cara penggunaan dengan JSON Object</h5>
+            <p>
+              Berikut ini adalah cara penggunaan dengan menggunakan JSON Object.
+            </p>
+            <p>
+              Cara ini baru tersedia mulai dari versi Seme Framework 4.0.2.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="javascript">
+                  {
+                    &#x22;link&#x22;:
+                    [
+                      {
+                        &#x22;rel&#x22;: &#x22;stylesheet&#x22;,
+                        &#x22;href&#x22;: &#x22;https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css&#x22;
+                      },
+                      {
+                        &#x22;rel&#x22;: &#x22;stylesheet&#x22;,
+                        &#x22;href&#x22;: &#x22;&#x7B;&#x7B;cdn_url&#x7D;&#x7D;assets/css/jquery.gritter.css&#x22;
+                      },
+                      {
+                        &#x22;rel&#x22;: &#x22;stylesheet&#x22;,
+                        &#x22;href&#x22;: &#x22;&#x7B;&#x7B;base_url&#x7D;&#x7D;skin/v2/css/app.css&#x22;
+                      }
+                    ]
+                  }
+                </highlight-code>
+              </div>
+            </div>
+
+            <h2>Penggunaan kode <code>{{cdn_url}}</code> dan <code>{{base_url}}</code></h2>
+            <p>
+              File theme.json mendukung penggunaan kode <code>{{cdn_url}}</code> dan <code>{{base_url}}</code> untuk menggantikan base_url dan url untuk CDN (cdn_url).
+            </p>
 
           </div>
         </div>
@@ -90,14 +147,14 @@
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/id/view/base_url/" class="btn">
+          <nuxt-link to="/id/view/script_json/" class="btn">
             <i class="fa fa-chevron-left"></i>
-            base_url
+            script.json
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/id/view/" class="btn">
-            View
+          <nuxt-link to="/id/view/theme/" class="btn">
+            Tema
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
@@ -115,8 +172,8 @@ export default {
       cdn_url: '{{cdn_url}}',
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
-      title: 'Kode {{cdn_url}}',
-      description: 'Pelajari selengkapnya tentang penggunaan kode {{cdn_url}} pada Seme Framework 4.',
+      title: 'File theme.json',
+      description: 'Pelajari cara penggunaan file theme.json dalam tema view Seme Framework 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -124,10 +181,10 @@ export default {
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/',
-          text: 'ID'
+          text: '4.0.0'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/view/',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/controller/',
           text: 'View'
         }
       ],
@@ -184,9 +241,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-19T20:31:00+07:00",
-        "datePublished": "2021-07-19T20:32:00+07:00",
-        "dateModified": "2021-07-19T23:18:31+07:00",
+        "dateCreated": "2021-07-21T17:01:00+07:00",
+        "datePublished": "2021-07-21T17:02:00+07:00",
+        "dateModified": "2021-07-21T17:10:55+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

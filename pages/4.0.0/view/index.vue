@@ -216,7 +216,7 @@
                   -----footer.php
                   -----sidemenu.php
                   skin/
-                  -front
+                  -front/
                   --css
                   --js
                   --img
@@ -333,14 +333,14 @@
       </div>
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/4.0.0/mode/where_as/" class="btn">
+          <nuxt-link to="/4.0.0/mode/where/" class="btn">
             <i class="fa fa-chevron-left"></i>
-            Model: where_as()
+            Model where
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/4.0.0/view/theme/" class="btn">
-            Theme
+          <nuxt-link to="/4.0.0/view/base_url/" class="btn">
+            base_url
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>

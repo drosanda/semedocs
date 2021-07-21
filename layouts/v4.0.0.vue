@@ -75,12 +75,10 @@
             <ul>
               <li><nuxt-link to="/4.0.0/view/theme/">Themes</nuxt-link></li>
               <li><nuxt-link to="/4.0.0/view/layout/">Layout</nuxt-link></li>
-              <li>
-                <nuxt-link to="/4.0.0/view/theme-content/">Content</nuxt-link>
-                <ul>
-                  <li><nuxt-link to="/4.0.0/view/theme-content/js/">Javascript</nuxt-link></li>
-                </ul>
-              </li>
+              <li><nuxt-link to="/4.0.0/view/base_url/">base_url</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/view/cdn_url/">cdn_url</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/view/theme_json/">theme_json</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/view/script_json/">script_json</nuxt-link></li>
             </ul>
           </li>
           <li>
