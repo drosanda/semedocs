@@ -85,6 +85,8 @@
           <li>
             <nuxt-link to="/4.0.0/controller/">Controller</nuxt-link>
             <ul>
+              <li><nuxt-link to="/4.0.0/controller/cdn_url/">cdn_url</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/controller/config/">config</nuxt-link></li>
               <li><nuxt-link to="/4.0.0/controller/constructor/">constructor</nuxt-link></li>
               <li><nuxt-link to="/4.0.0/controller/getadditional/">getAdditional</nuxt-link></li>
               <li><nuxt-link to="/4.0.0/controller/getadditionalbefore/">getAdditionalBefore</nuxt-link></li>

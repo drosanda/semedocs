@@ -6,20 +6,20 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/controller">Controller</NuxtLink></li>
-          <li class="unavailable">cdn_url</li>
+          <li class="unavailable">config property</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">cdn_url method</h1>
+            <h1 class="">Config Property</h1>
             <p>
-              The cdn_url method purpose is to load assets file with CDN URL prefix.
+              The config is a property from <code>SENE_Controller</code> class contain about configuration values from </NuxtLink to="/4.0.0/configuration/">Seme Framework Configuration</NuxtLink>.
             </p>
 
             <h2>Basic Usage</h2>
             <p>
-              Here is the basic usage for cdn_url method.
+              Here is the basic usage for config property method.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -40,51 +40,18 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;cdn_url(string $location): controllerObject
+                  $this-&#x3E;config->{$object_config_name};
                 </highlight-code>
               </div>
             </div>
 
-            <h3>Parameters</h3>
-            <p>cdn_url has 1 parameter there is $location.</p>
-
-            <h4>$location</h4>
+            <h4>$object_config_name</h4>
             <p>
-              Value for $location can be an relative url without CDN URL prefix.
+              The $object_config_name value can be a string, object, array, or integer depends on value that existing on configuration.
             </p>
-
-            <h2 class="">The Configuration</h2>
-            <p>
-              The CDN URL purpose is to create base url for CDN usage. Here is example codes on development.php file.
-            </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  ...
-                  $cdn_url = &#x27;https://cdn.cenah.co.id/&#x27;;
-                  ...
-                </highlight-code>
-              </div>
-            </div>
 
             <h2>Example Usage</h2>
-            <p>Here is the example usage cdn_url in a view file.</p>
+            <p>Here is the example usage config property in a controller file.</p>
 
             <div class="macwindow">
               <div class="titlebar">
@@ -104,11 +71,72 @@
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="html">
+                <highlight-code lang="php">
                   ...
-                  &#x3C;div class=&#x22;logo-container&#x22;&#x3E;
-                    &#x3C;img src=&#x22;&#x3C;?=$this-&#x3E;cdn_url(&#x27;assets/images/logo-cenah.png&#x27;)?&#x3E;&#x22; class=&#x22;logo-fluid&#x22; alt=&#x22;logo Cipta Esensi Merenah&#x22; /&#x3E;
-                  &#x3C;/div&#x3E;
+                  //print the database connection host
+                  echo $this->config->db['host'];
+                  ...
+                </highlight-code>
+              </div>
+            </div>
+
+            <h2>Semevar Property</h2>
+            <p>
+              The semevar property is an object from <code>config</code> property contain about additional config values that can be obtained from config property.
+              Here is the example on configuration file.
+            </p>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  ...
+                  $semevar['site_name'] = 'Cipta Esensi Merenah';
+                  $semevar['site_version'] = '1.0.0';
+                  ...
+                </highlight-code>
+              </div>
+            </div>
+            <p>
+              And then on controller, we can get the values from config through controller.
+            </p>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  ...
+                  echo $this->config->semevar->site_name.' v'.$this->config->semevar->site_version;
                   ...
                 </highlight-code>
               </div>
@@ -116,14 +144,14 @@
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
-                <nuxt-link to="/4.0.0/controller/" class="btn">
+                <nuxt-link to="/4.0.0/controller/cdn_url/" class="btn">
                   <i class="fa fa-chevron-left"></i>
-                  Controller
+                  cdn_url
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
-                <nuxt-link to="/4.0.0/controller/config/" class="btn">
-                  Config
+                <nuxt-link to="/4.0.0/controller/constructor/" class="btn">
+                  Constructor
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
@@ -143,8 +171,8 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
-      title: 'cdn_url method',
-      description: 'Learn more about cdn_url method from SENE_Controller class on Seme Framework.',
+      title: 'Config Property',
+      description: 'Learn more about config property from SENE_Controller class on Seme Framework.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -209,9 +237,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-21T19:41:00+07:00",
-        "datePublished": "2021-07-21T19:42:00+07:00",
-        "dateModified": "2021-07-21T20:44:00+07:00",
+        "dateCreated": "2021-07-22T18:41:00+07:00",
+        "datePublished": "2021-07-22T18:42:00+07:00",
+        "dateModified": "2021-07-22T818:44:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
