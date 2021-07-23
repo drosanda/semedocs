@@ -12,7 +12,7 @@
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">URL</h1>
+            <h1 class="">URL Configuration</h1>
             <p>Seme Framework has some configuration for Uniform Resource Locator (URL).</p>
             <h2>Base URL</h2>
             <p>
@@ -27,9 +27,31 @@
             <p>
               Example:
             </p>
-            <pre>$site = &#x22;http://localhost/seme-framework/&#x22;;</pre>
-            <pre>$site = &#x22;https://www.example.com/&#x22;;</pre>
-            <pre>$site = &#x22;http://localhost:8080/&#x22;;</pre>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  $site = &#x22;http://localhost/seme-framework/&#x22;;
+                  $site = &#x22;https://www.example.com/&#x22;;
+                  $site = &#x22;http://localhost:8080/&#x22;;
+                </highlight-code>
+              </div>
+            </div>
 
             <div class="message is-info">
               <div class="message-body">
@@ -52,9 +74,31 @@
             <p>
               Example:
             </p>
-            <pre>$admin_secret_url = &#x22;admin&#x22;;</pre>
-            <pre>$admin_secret_url = &#x22;boss&#x22;;</pre>
-            <pre>$admin_secret_url = &#x22;manajer&#x22;;</pre>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  $admin_secret_url = &#x22;admin&#x22;;
+                  $admin_secret_url = &#x22;boss&#x22;;
+                  $admin_secret_url = &#x22;manajer&#x22;;
+                </highlight-code>
+              </div>
+            </div>
 
             <div class="message is-info">
               <div class="message-body">
@@ -89,7 +133,29 @@
             <p>
               Example:
             </p>
-            <pre>$cdn_url = &#x22;http://cdn.cenah.co.id/seme-framework/&#x22;;</pre>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  $cdn_url = &#x22;http://cdn.cenah.co.id/seme-framework/&#x22;;
+                </highlight-code>
+              </div>
+            </div>
 
             <div class="message is-info">
               <div class="message-body">
@@ -132,7 +198,7 @@ export default {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
       title: 'URL Configuration',
-      description: 'Learn more about URL Configuration of Seme Framework version 4.0.0 through this documentation.',
+      description: 'Learn more about Uniform Resource Locator (URL) Configuration on Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -171,7 +237,8 @@ export default {
       ]
     }
   },
-  jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
     const items = this.breadcrumbs.map((item, index) => ({
       '@type': 'ListItem',
       position: index + 1,
@@ -197,9 +264,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2020-06-11T10:12:00+07:00",
-        "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-23T19:27:17+07:00",
+        "dateCreated": "2021-07-23T10:12:00+07:00",
+        "datePublished": "2021-07-23T10:12:00+07:00",
+        "dateModified": "2021-07-23T19:27:17+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
