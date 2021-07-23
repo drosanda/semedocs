@@ -738,7 +738,7 @@ export default {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Properti Input',
-      description: 'Metode Properti Input dari kelas SENE_Controller dalam SEME Framework versi 4.0.0 digunakan untuk memanggil variabel yang tersimpan didalam $_SESSION.',
+      description: 'Pelajari selengkapnya tentang properti Input dari kelas SENE_Controller dalam SEME Framework versi 4.0.0 digunakan untuk memanggil variabel yang tersimpan didalam $_SESSION.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
