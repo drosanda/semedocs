@@ -8,6 +8,16 @@
           <amp-img layout="fixed" width="90px" height="20px" src='https://travis-ci.org/drosanda/seme-framework.svg?branch=master' alt="build status"></amp-img>
           <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/lang-en-e9bd2e' alt="language"></amp-img>
         </div>
+        <div class="search-box">
+          <form method="GET" class="search-form" action="https://www.google.com/cse" target="_top">
+            <div class="search-form-inner">
+              <input name="cx" type="hidden" value="d6d5426aa8bd01883" />
+              <input name="ie" type="hidden" value="UTF-8" />
+              <input type="search" placeholder="Search..." name="q" class="form-control" required>
+              <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+            </div>
+          </form>
+        </div>
         <ul>
           <li><nuxt-link to="/">Seme Framework</nuxt-link></li>
           <li><nuxt-link to="/4.0.0/">version 4.0.2</nuxt-link></li>

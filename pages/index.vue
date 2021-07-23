@@ -35,6 +35,8 @@
                 Bahasa Indonesia
               </nuxt-link>
             </div>
+            
+
             <p>This is official documentation for Seme Framework, the PHP MVC Framework for creating small and medium app that needed for fast delivery. At first version of Seme Framework used for building API (Middle Ware) for another Application such as android, iOS, etc. And now as increasing of requirement, Seme Framework has expand the limit for creating Small and Medium App.</p>
 
             <h2>Key Feature</h2>
