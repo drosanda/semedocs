@@ -45,6 +45,7 @@
               <li><NuxtLink to="/4.0.0/configuration/url/">URL Configuration</NuxtLink></li>
               <li><NuxtLink to="/4.0.0/configuration/db-connection/">Database Connection</NuxtLink></li>
             </ul>
+
             <h3>Session</h3>
             <p>
               The session key configuration requires for dividing the session used by another apps.
@@ -59,6 +60,12 @@
               For the values, please refer to <a href="https://www.php.net/manual/en/timezones.php" target="_blank">List of Supported Timezones <i class="fa fa-external-link"></i></a> on PHP Manual website.
             </p>
 
+            <h3>Routes</h3>
+            <p>
+              Seme Framework has ability for remapping URI Request to Controller by changing the routes behavior.
+              Read more about <NuxtLink to="/4.0.0/configuration/routes/">Routes Configuration</NuxtLink>.
+            </p>
+
             <h3>Additional Configuration</h3>
             <p>
               Seme Framework are now support for additional configuration values that can be implemented per configuration.
@@ -66,6 +73,7 @@
               You can add the name value pair on this array.
               The value can be <code>string</code>, <code>array</code>, <code>object</code>, and <code>number</code> depends on your requirements.
             </p>
+
             <hr>
             <h2>Source Codes</h2>
             <p>Here is the default content for development.php file.</p>
