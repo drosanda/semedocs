@@ -6,17 +6,26 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/controller/">Controller</NuxtLink></li>
-          <li class="unavailable">Metode loadLayout</li>
+          <li class="unavailable">Metode render</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Metode loadLayout</h1>
-            <p>Metode loadLayout digunakan untuk memanggil view layout dalam suatu tema.</p>
+            <h1 class="">Metode render</h1>
+            <p>
+              Metode render memungkinkan untuk menampilkan tampilan view yang telah ter-buffer sebelumnya oleh yang dikumpulkan melalui metode <code>putThemeContent</code> dan <code>putJsContent</code>.
+            </p>
+            <div class="message is-info">
+              <div class="message-body">
+                <p><b>Info</b></p>
+                <p>Pastikan metode render ini dipanggil di ujung akhir didalam suatu metode controller yang dibuat.</p>
+                <p>Jika metode __construct dan metode view buffer tidak dipanggil sebelumnya, maka hanya akan menampilkan tampilan kosong (blank).</p>
+              </div>
+            </div>
 
-            <h2>Bentuk Umum</h2>
-            <p>Berikut ini adaah bentuk umum metode <code>loadLayout</code> dari kelas SENE_Controller.</p>
+            <h2>Bentuk umum</h2>
+            <p>Berikut ini adlaah bentuk umum dari metode <code>render</code> dari kelas <code>SENE_Controller</code>.</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -36,56 +45,24 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->loadLayout(string $layout): controllerObject
+                  $this->render([int $cacheable=0]): void
                 </highlight-code>
               </div>
             </div>
 
             <h3>Parameter</h3>
             <p>
-              loadLayout memiliki 1 parameter wajib yaitu <b>$layout</b>.
+              Metode render memiliki 1 parameter opsional yaitu $cacheable.
             </p>
 
-            <h4>$layout</h4>
+            <h4>$cacheable</h4>
             <p>
-              Nilai dari $layout dapat berisi string dari layout yang ingin digunakan.
+              Nilai dari parameter $cacheable memungkinkan untuk view disimpan dalam cache dalam kurun waktu tertentu.
+              Adapun satuan dari nilai dari parameter ini adalah dalam detik.
             </p>
-
-            <h5>Syarat File Layout</h5>
-            <p>
-              Supaya file layout dapat dipanggil dengan baik, file layout harus berada didalam direktori <code>page</code> yang relatif terhadap tema tampilan yang digunakan.
-              Untuk lebih lengkapnya lihat contoh ilustrasi susunan file dan direktori tema.
-            </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  - app/
-                  |- view/
-                  |-- NAMA_TEMA/
-                  |--- page/
-                  |---- [nama_layout].php
-                </highlight-code>
-              </div>
-            </div>
 
             <h2>Contoh Penggunaan</h2>
-            <p>Berikut ini adalah contoh penggunaan dari metode loadLayout.</p>
+            <p>Berikut ini adalah contoh penggunaan dari metode render.</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -109,7 +86,6 @@
                   class Blog extends SENE_Controller {
                     public function __construct(){
                       parent::__construct();
-                      $this->setTheme(&#x27;front&#x27;);
                     }
                     public function index(){
                       $this-&#x3E;setTitle(&#x27;Blog home&#x27;);
@@ -122,62 +98,26 @@
                 </highlight-code>
               </div>
             </div>
-            <p>
-              Dalam potongan kode contoh tersebut, tema yang digunakan bernama <code>front</code> dan layout yang digunakan <code>col-1</code>.
-              Kedua direktori dan file ini harus sudah ada baik secara struktur file maupun direktori.
-              Untuk lebih lengkapnya lihat ilustrasi
-            </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  - app/
-                  |- view/
-                  |-- front/
-                  |--- home/
-                  |---- home.php
-                  |---- home_bottom.php
-                  |--- page/
-                  |---- col-1.php
-                </highlight-code>
-              </div>
-            </div>
-
 
             <div class="message is-info">
               <div class="message-body">
                 <p><b>Info</b></p>
                 <p>
-                  Metode <code>putThemeContent</code>, <code>putJsContent</code>, dan <code>render</code> memiliki kemampuan untuk mem-buffer view, sehingga view ditampung terlebih dahulu sebelum ditampilkan oleh metode <NuxtLink to="/id/controller/render/">render</NuxtLink>.
+                  Metode <code>putThemeContent</code>, <code>putJsContent</code>, dan <code>loadLayout</code> memiliki kemampuan untuk mem-buffer view, sehingga view ditampung terlebih dahulu sebelum ditampilkan oleh metode <NuxtLink to="/id/controller/render/">render</NuxtLink>.
                 </p>
               </div>
             </div>
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
-                <nuxt-link to="/id/controller/loadcss/" class="btn">
+                <nuxt-link to="/id/controller/puthemecontent/" class="btn">
                   <i class="fa fa-chevron-left"></i>
-                  loadCss
+                  putThemeContent
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
-                <nuxt-link to="/id/controller/putjscontent/" class="btn">
-                  putJsContent
+                <nuxt-link to="/id/controller/resetthemecontent/" class="btn">
+                  resetThemeContent
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
@@ -185,7 +125,6 @@
 
           </div>
         </div>
-
       </div>
 
     </div>
@@ -194,12 +133,12 @@
 <script>
 export default {
   layout: 'id',
-  data() {
+  data (){
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
-      title: 'Metode loadLayout',
-      description: 'Pelajari selengkapnya tentang metode loadLayout dari kelas SENE_Controller di Seme Framework 4',
+      title: 'Metode render',
+      description: 'Pelajari selengkapnya tentang metode render dari kelas SENE_Controller di Seme Framework 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -207,7 +146,7 @@ export default {
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/',
-          text: 'ID'
+          text: 'id'
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/controller/',
@@ -267,9 +206,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-23T08:15:00+07:00",
-        "datePublished": "2021-07-23T09:16:00+07:00",
-        "dateModified": "2021-07-23T09:17:00+07:00",
+        "dateCreated": "2021-07-23T20:58:00+07:00",
+        "datePublished": "2021-07-23T20:02:00+07:00",
+        "dateModified": "2021-07-23T20:39:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
