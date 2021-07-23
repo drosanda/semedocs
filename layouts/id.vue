@@ -85,6 +85,8 @@
           <li>
             <nuxt-link to="/id/controller/">Controller</nuxt-link>
             <ul>
+              <li><nuxt-link to="/id/controller/cdn_url/">cdn_url</nuxt-link></li>
+              <li><nuxt-link to="/id/controller/config/">config</nuxt-link></li>
               <li><nuxt-link to="/id/controller/constructor/">constructor</nuxt-link></li>
               <li><nuxt-link to="/id/controller/getkey/">getKey</nuxt-link></li>
               <li><nuxt-link to="/id/controller/input/">input</nuxt-link></li>
@@ -93,6 +95,7 @@
               <li><nuxt-link to="/id/controller/loadcss/">loadCss</nuxt-link></li>
               <li><nuxt-link to="/id/controller/loadlayout/">loadLayout</nuxt-link></li>
               <li><nuxt-link to="/id/controller/putthemecontent/">putThemeContent</nuxt-link></li>
+              <li><nuxt-link to="/id/controller/render/">render</nuxt-link></li>
               <li><nuxt-link to="/id/controller/putjscontent/">putJsContent</nuxt-link></li>
               <li><nuxt-link to="/id/controller/session/">session</nuxt-link></li>
               <li><nuxt-link to="/id/controller/setkey/">setKey</nuxt-link></li>

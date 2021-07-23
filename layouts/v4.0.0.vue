@@ -17,7 +17,8 @@
             <nuxt-link to="/4.0.0/configuration/">Configuration</nuxt-link>
             <ul>
               <li><nuxt-link to="/4.0.0/configuration/db-connection/">Database Connection</nuxt-link></li>
-              <li><nuxt-link to="/4.0.0/configuration/url/">URL Routing</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/configuration/url/">URL Config</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/configuration/routes/">URI Routes</nuxt-link></li>
               <li><nuxt-link to="/4.0.0/configuration/session/">Session</nuxt-link></li>
               <li><nuxt-link to="/4.0.0/configuration/development/">Development</nuxt-link></li>
               <li><nuxt-link to="/4.0.0/configuration/staging/">Staging</nuxt-link></li>
