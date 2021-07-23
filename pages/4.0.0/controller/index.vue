@@ -16,23 +16,116 @@
     <div class="column">
       <div class="content">
         <h1 class="">Controller Class</h1>
-        <p>Controller is the main actor in Seme Framework life cycle.</p>
-        <p>A Controller is simply a class that have file name and class name same as with the requested URI.</p>
-        <p>If nothing related to class name, Seme Framework will automatically load filename <code>home.php</code> calling class named <code>Home</code> and its <code>index()</code> method.</p>
-        <p>Or just simply, load the <code>notfound</code> class in controller by default.</p>
+        <p>
+          Controller is a class that inherited from <code>SENE_Controller</code> and <NuxtLink to="/4.0.0/core/controller/">its derivatives*</NuxtLink>.
+          Also, controller has another requirements before it can used by Seme Framework.
+        </p>
         <p>Before going further, we have to find out the condition for Seme Framework to meet its controller requirements.</p>
-        <h2>Conditions</h2>
+
+        <h2>Requirements</h2>
         <p>The following are the conditions when you want to use the Controller class correctly so that it can run properly:</p>
-        <ul>
-          <li>All Controller classes are stored in the <code>app/controller</code> directory,</li>
-          <li>The controller class must be <code>extends</code> from <code>SENE_Controller</code> OR</li>
-          <li>If using core controller, the core controller class must be <code>extends</code> from <code>SENE_Controller</code>,</li>
-          <li>The naming of the controller file name and controller class name can only be started by a letter, then followed by letters and or numbers, and an underscore.</li>
-          <li>The controller class file name must be in lower case and file extension is <code>.php</code>.</li>
-          <li>The class name and file name must be identical but may not be uppercase or lowercase (not case sensitive)</li>
-        </ul>
-        <h2>Example</h2>
-        <p>Lets say, you have extracted Seme Framework on <code>D:\XAMPP\htdocs\seme_framework</code></p>
+
+        <h3>Location</h3>
+        <p>
+          All Controller classes are stored in the <code>app/controller</code> directory.
+        </p>
+
+        <h3>Class Inheritance</h3>
+        <p>
+          The controller class must be <code>extends</code> from <code>SENE_Controller</code>.
+          But, If using <code>* core controller</code>  as parent class, the core controller class must be <code>extends</code> from <code>SENE_Controller</code>.
+        </p>
+
+        <h3>Naming Rules</h3>
+        <p>
+          The naming of the controller file name and controller class name can only be started by a letter, then followed by letters and or numbers, and/or an underscore.
+          The class name and file name must be identical but may not be uppercase or lowercase (not case sensitive)
+        </p>
+        <h4>Filename Extension</h4>
+        <p>
+          The controller class file name must be in lower case and the filename suffix is <code>.php</code>.
+        </p>
+
+        <h3>Defaults</h3>
+        <p>
+          The default name of class controller is <code>Home</code>.
+          And then, the default method name of class controller is <code>index</code>.
+          This default will be used as <em>fallback</em> if URI Request was empty.
+        </p>
+
+        <h2>How It Work</h2>
+        <p>
+          Seme Framework will be loaded a controller by URI request. Typically there is a one-to-one relationship between an URL string and its corresponding controller class/method. The segments in an URI normally follow this pattern:
+        </p>
+        <div class="macwindow">
+          <div class="titlebar">
+            <div class="buttons">
+              <div class="close">
+                <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                <!-- close button link -->
+              </div>
+              <div class="minimize">
+                <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                <!-- minimize button link -->
+              </div>
+              <div class="zoom">
+                <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                <!-- zoom button link -->
+              </div>
+            </div>
+          </div>
+          <div class="maccontent">
+            <highlight-code lang="php">
+              example.com/class/method/parameter1/parameter2/.../parameterN
+            </highlight-code>
+          </div>
+        </div>
+        <p>
+          Or if using directory:
+        </p>
+        <div class="macwindow">
+          <div class="titlebar">
+            <div class="buttons">
+              <div class="close">
+                <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                <!-- close button link -->
+              </div>
+              <div class="minimize">
+                <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                <!-- minimize button link -->
+              </div>
+              <div class="zoom">
+                <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                <!-- zoom button link -->
+              </div>
+            </div>
+          </div>
+          <div class="maccontent">
+            <highlight-code lang="php">
+              example.com/directory/class/method/parameter1/parameter2/.../parameterN
+            </highlight-code>
+          </div>
+        </div>
+        <p>
+          Seme Framework will only load controller with filename and its class name are matched.
+          But, Seme Framework has support for <NuxtLink to="/4.0.0/configuration/routes/">URI Controller Remapping</NuxtLink>.
+        </p>
+
+        <h3>The Notfound</h3>
+        <p>
+          Error 404 or Notfound is a special controller which serves as fallback if the controller has notfound while the controller requirements is not met.
+        </p>
+
+        <h2>Error 5xx</h2>
+        <p>
+          The error 500 or another 5xx codes, ussualy caused by mismatched class name with filename.
+          However, this condition can also be caused by an error on source code.
+        </p>
+
+        <h2>Code Example</h2>
+        <p>
+          Lets say, you have extracted Seme Framework on <code>D:\XAMPP\htdocs\seme_framework</code>
+        </p>
         <p>So, if you accessing the <code>http://localhost/seme_framework</code> the Seme Framework will load <code>home.php</code> controller inside <code>app/controller</code>.</p>
         <div class="message is-info">
           <div class="message-body">
@@ -59,7 +152,7 @@
           </div>
           <div class="maccontent">
             <highlight-code lang="php">
-              app/
+              |app/
               |- controller/
               |-- blog.php
               |-- product/
@@ -72,9 +165,11 @@
           Inside controller directory, can contain a directory (folder) or file. But, the directory tree level only support 2 level. So, be wise using the directory structure.
         </p>
 
-        <p>How if, we accessing <code>http://localhost/seme_framework/blog</code>?</p>
-        <p>The answer is, Seme Framework will load controller blog.php</p>
-        <p>Seme Framework will only load controller with filename and its class name are matched.</p>
+        <h3>Another Example</h3>
+        <p>
+          How if we accessing <code>http://localhost/seme_framework/blog</code> ?
+          The answer is, Seme Framework will load controller blog.php as long as the controller requirements is fulfilled.
+        </p>
 
         <h2>SENE_Controller</h2>
         <p>The SENE_Controller class is basic class for creating controller which contain properties and methods that are required for using Seme Framework properly.</p>
@@ -118,7 +213,7 @@
         </div>
 
         <h4>Notfound Controller</h4>
-        <p>Here is the default source code of notfound controller.</p>
+        <p>Here is the default source code for notfound controller.</p>
 
         <div class="macwindow">
           <div class="titlebar">
@@ -153,23 +248,13 @@
           </div>
         </div>
 
-        <div class="message is-info">
-          <div class="message-body">
-            <p>Please make sure your class name are match with filename.</p>
-          </div>
-        </div>
-        <div class="message is-info">
-          <div class="message-body">
-            <p>Undefined file name will be throw 404 error.</p>
-          </div>
-        </div>
         <div class="message is-danger">
           <div class="message-body">
             <p><b>Caution</b></p>
-            <p>Mismatched classname with filename will be throw 500 error.</p>
+            <p>There is necessary to add header information on notfound class, because Seme Framework do not provided Error 404 automatically.</p>
           </div>
         </div>
-
+        
         <h2>Access Methods</h2>
         <p>Seme Framework supported access method for public and private declaration.</p>
         <h3>Private Properties and Methods</h3>
@@ -550,7 +635,7 @@ export default {
         ],
         "dateCreated": "2021-07-12T22:03:01+07:00",
         "datePublished": "2021-07-12T22:03:02+07:00",
-        "dateModified": "2021-07-22T19:04:32+07:00",
+        "dateModified": "2021-07-23T21:58:32+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
