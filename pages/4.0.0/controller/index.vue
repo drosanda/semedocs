@@ -312,7 +312,10 @@
         <table class="table-bordered">
           <thead>
             <tr>
-              <th class="has-text-centered">SENE_Controller</th>
+              <th class="has-text-centered">
+                <i>&#x3C;&#x3C;abstract&#x3E;&#x3E;</i>
+                SENE_Controller
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -540,6 +543,11 @@
             <tr>
               <td>
                 <NuxtLink to="/4.0.0/controller/settitle/">+# setTitle():  $this</NuxtLink>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <NuxtLink to="/4.0.0/controller/index_method/">+# index():  void</NuxtLink>
               </td>
             </tr>
           </tbody>

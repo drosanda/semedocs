@@ -21,7 +21,7 @@
             <p>
               The location in <code>app/config/</code>. By default only <code>development.php</code> existed in repository.
             </p>
-            <h3 class="">Prioritize</h3>
+            <h3 class="">Configuration by Environments</h3>
             <p>
               Seme Framework will read the configuration with this order:
             </p>
@@ -30,7 +30,10 @@
               <li><code>staging.php</code></li>
               <li><code>development.php</code></li>
             </ol>
-            <p>The content of each files can be differents each others depends on your requirements.</p>
+            <p>
+              The content of each files can be differents each others depends on your requirements.
+              Learn more about <NuxtLink to="/4.0.0/configuration/environment/">Environment Configuration</NuxtLink>.
+            </p>
             <hr>
 
             <h2>Basic configuration</h2>

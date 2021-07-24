@@ -27,12 +27,10 @@
             <nuxt-link to="/4.0.0/configuration/">Configuration</nuxt-link>
             <ul>
               <li><nuxt-link to="/4.0.0/configuration/db-connection/">Database Connection</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/configuration/environment/">Environment</nuxt-link></li>
               <li><nuxt-link to="/4.0.0/configuration/url/">URL Config</nuxt-link></li>
               <li><nuxt-link to="/4.0.0/configuration/routes/">URI Routes</nuxt-link></li>
               <li><nuxt-link to="/4.0.0/configuration/session/">Session</nuxt-link></li>
-              <li><nuxt-link to="/4.0.0/configuration/development/">Development</nuxt-link></li>
-              <li><nuxt-link to="/4.0.0/configuration/staging/">Staging</nuxt-link></li>
-              <li><nuxt-link to="/4.0.0/configuration/production/">Production</nuxt-link></li>
             </ul>
           </li>
           <li>
@@ -148,7 +146,17 @@
           <li>
             <nuxt-link to="/4.0.0/cli/">CLI (command line interface)</nuxt-link>
           </li>
+          <li>
+            <nuxt-link to="/4.0.0/core/">Core</nuxt-link>
+            <ul>
+              <li><nuxt-link to="/4.0.0/core/controller/">Controller</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0/core/model/">Model</nuxt-link></li>
+            </ul>
+          </li>
         </ul>
+        <br>
+        <br>
+        <br>
       </amp-sidebar>
       <button class="hamburger" on='tap:sidebar1.toggle' aria-label="Click to open sidebar" >
         <div class="hamburger"></div>
