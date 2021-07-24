@@ -106,7 +106,7 @@
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
-                <nuxt-link to="/4.0.0/controller/puthemecontent/" class="btn">
+                <nuxt-link to="/4.0.0/controller/putthemecontent/" class="btn">
                   <i class="fa fa-chevron-left"></i>
                   putThemeContent
                 </nuxt-link>

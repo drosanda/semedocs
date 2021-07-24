@@ -5,78 +5,189 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/controller">Controller</NuxtLink></li>
-          <li class="unavailable">putJsContent Method</li>
+          <li class=""><NuxtLink to="/id/controller/">Controller</NuxtLink></li>
+          <li class="unavailable">Metode putJsContent</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">putJsContent Method</h1>
-            <p>SENE_Controller::putJsContent digunakan untuk memanggil isi dari file javascript kedalam template html.</p>
-            <p>Supaya dapat berjalan dengan baik, metode ini membutuhkan <code>getJsContent()</code> yang diapit didalam tag script.</p>
+            <h1 class="">Metode putJsContent</h1>
+            <p>
+              Metode putJsContent dari <code>SENE_Controller</code> digunakan untuk memanggil isi dari file javascript yang dibungkus dalam file php kedalam template html.
+            </p>
+            <p>
+              Untuk pemanggilan di viewnya, metode ini membutuhkan <NuxtLink to="/4.0.0/controller/getjscontent/">getJsContent()</NuxtLink> yang diapit didalam tag script.
+            </p>
 
-            <h2>Penggunaan dasar</h2>
-            <p>Berikut ini adalah contoh pengunaan dari methode putJsContent.</p>
-            <code v-highlight class="php">SENE_Controllers::putJsContent(string $js_location[, array $data]): object SENE_Controller</code>
+            <h2>Bentuk Umum</h2>
+            <p>
+              Berikut ini adalah contoh pengunaan dari metode putJsContent.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  $this->putJsContent(string $js_location[, array $data]): controllerObject
+                </highlight-code>
+              </div>
+            </div>
 
-            <h2>Contoh Penggunaan lengkap</h2>
-            <p>Here is the example for <code>putThemeContent</code> method:</p>
-            <pre><code v-highlight class="php">&#x3C;?php
-class Home extends SENE_Controller
-{
-  public function __construct()
-  {
-    parent::__construct();
-    $this-&#x3E;setTheme(&#x27;homepage&#x27;);
-  }
-  public function index()
-  {
-    $data = array();
-    $this-&#x3E;putThemeContent(&#x27;home/slider&#x27;,$data);
-    $this-&#x3E;putThemeContent(&#x27;home/three_values&#x27;,$data);
-    $this-&#x3E;putJsContent(&#x27;home/home_bottom&#x27;,$data);
-    $this-&#x3E;loadLayout(&#x27;col-1&#x27;,$data);
-  }
-}</code></pre>
-            <p>So, the <code>homepage</code> theme, <code>col-1</code> layout and <code>home_bottom.php</code> content should be existed on the directory structure.</p>
-            <pre>
-- app
-|-- view
-|--- homepage
-|---- home
-|----- slider.php
-|----- three_values.php
-|---- page
-|----- col-1.php
+            <h3>Parameter</h3>
+            <p>Metode putJsContent miliki 2 parameter, yakni $js_location dan $data.</p>
 
-            </pre>
-            <h3>Example home_bottom.php content</h3>
-            <p>Here is the example code for home_bottom.php content</p>
-            <pre>
-alert(&#x27;Hi, this is from home_bottom&#x27;);
-            </pre>
+            <h3>$js_location</h3>
+            <p>
+              Nilai dari $js_location diisi dengan alamat view js yang ada didalam file php, relatif dari lokasi tema yang digunakan.
+            </p>
+
+            <h3>$data</h3>
+            <p>
+              Nilai dari $data berjenis array yang akan dimasukan kedalam komponen view php. Nilai dari parameter ini bersifat opsional.
+            </p>
+
+            <h2>Contoh Penggunaan</h2>
+            <p>Berikut ini adalah contoh penggunaan dari metode <code>putThemeContent</code> dalam controller.</p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  &#x3C;?php
+                  class Home extends SENE_Controller
+                  {
+                    public function __construct()
+                    {
+                      parent::__construct();
+                      $this-&#x3E;setTheme(&#x27;homepage&#x27;);
+                    }
+                    public function index()
+                    {
+                      $data = array();
+                      $this-&#x3E;putThemeContent(&#x27;home/slider&#x27;,$data);
+                      $this-&#x3E;putThemeContent(&#x27;home/three_values&#x27;,$data);
+                      $this-&#x3E;putJsContent(&#x27;home/home_bottom&#x27;,$data);
+                      $this-&#x3E;loadLayout(&#x27;col-1&#x27;,$data);
+                    }
+                  }
+                </highlight-code>
+              </div>
+            </div>
+            <p>
+              Sementara untuk file dan struktur direktorinya berdasarkan contoh kode diatas, yaitu:
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  |- app/
+                  |-- view/
+                  |--- homepage/
+                  |---- home/
+                  |----- slider.php
+                  |----- three_values.php
+                  |---- page/
+                  |----- col-1.php
+                </highlight-code>
+              </div>
+            </div>
+
+            <h3>Contoh isi dari home_bottom.php</h3>
+            <p>Berikut ini adalah contoh isi kode dari home_bottom.php</p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  alert(&#x27;Hi, this is from home_bottom&#x27;);
+                </highlight-code>
+              </div>
+            </div>
             <div class="message is-info">
-  <div class="message-body">
-              <p>For further information about home_bottom.php and layout, please refer to <NuxtLink to="/id/view/theme-content/js/">Javascript Theme Content</NuxtLink>.</p>
-            </div></div>
+              <div class="message-body">
+                <p>For further information about home_bottom.php and layout, please refer to <NuxtLink to="/id/view/theme-content/js/">Javascript Theme Content</NuxtLink>.</p>
+              </div>
+            </div>
+
+            <div class="nav-bottom">
+              <div class="nav-bottom-left">
+                <nuxt-link to="/id/controller/loadLayout/" class="btn">
+                  <i class="fa fa-chevron-left"></i>
+                  loadLayout
+                </nuxt-link>
+              </div>
+              <div class="nav-bottom-right">
+                <nuxt-link to="/id/controller/putjsfooter/" class="btn">
+                  putJsFooter
+                  <i class="fa fa-chevron-right"></i>
+                </nuxt-link>
+              </div>
+            </div>
+
           </div>
         </div>
 
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/id/controller/loadLayout" icon-pack="fa" icon-left="chevron-left">
-              loadLayout Method
-            </b-button>
-            <b-button tag="router-link" to="/id/controller/putJsContent" icon-pack="fa" icon-right="chevron-right">
-              putJsContent Method
-            </b-button>
-          </div>
-        </div>
-      </div>
+
 
     </div>
   </div>
@@ -88,12 +199,29 @@ export default {
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'putJsContent Method from SENE_Controller',
-      description: 'Pelajari selengkapnya tentang putJsContent Method from SENE_Controller on Seme Framework versi 4.0.0'
+      title: 'Metode putJsContent',
+      description: 'Pelajari selengkapnya tentang metode putJsContent dari kelas SENE_Controller di Seme Framework 4',
+      breadcrumbs: [
+        {
+          url: process.env.BASE_URL || 'http://localhost:3001',
+          text: 'Seme Framework',
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/',
+          text: 'ID',
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/controller/',
+          text: 'Controller',
+        }
+      ]
     }
   },
   head() {
     return {
+      htmlAttrs: {
+        lang: 'id'
+      },
       title: this.title+this.suffix,
       meta: [
         {
@@ -113,6 +241,64 @@ export default {
         }
       ]
     }
+  },
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+    const items = this.breadcrumbs.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        "@type": "WebPage",
+        '@id': item.url,
+        name: item.text,
+      },
+    }));
+    return [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: items,
+      },
+      {
+        "@type": "NewsArticle",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+        },
+        "headline": (this.headline || this.title),
+        "image": [
+          (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
+        ],
+        "dateCreated": "2021-07-24T10:12:10+07:00",
+        "datePublished": "2021-07-24T10:30:20+07:00",
+        "dateModified": "2021-07-24T10:39:01+07:00",
+        "author": {
+          "@type": "Person",
+          "gender": "Male",
+          "name": "Daeng Rosanda, S.Kom",
+          "alternateName": "Daeng Rosanda",
+          "jobTitle": "Founder",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Cipta Esensi Merenah",
+            "email": "hi@cenah.co.id"
+          }
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Cipta Esensi Merenah",
+          "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+          "logo": {
+            "@type": "ImageObject",
+            "name": "logo Cipta Esensi Merenah",
+            "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+            "width": "256px",
+            "height": "62px"
+          }
+        },
+        "description": this.description
+      }
+    ];
   }
 }
 </script>
