@@ -30,14 +30,14 @@
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/4.0.0/configuration/db-connection/" class="btn">
+          <nuxt-link to="/4.0.0/configuration/routes/" class="btn">
           <i class="fa fa-chevron-left"></i>
-            Database Connection
+            Routes
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/4.0.0/configuration/" class="btn">
-            Basic Configuration
+          <nuxt-link to="/4.0.0/configuration/url/" class="btn">
+            URL
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>

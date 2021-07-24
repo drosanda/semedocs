@@ -5,19 +5,57 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0.0/configuration">Configuration</NuxtLink></li>
-          <li class="unavailable">Development</li>
+          <li class=""><NuxtLink to="/4.0.0/configuration/">Configuration</NuxtLink></li>
+          <li class="unavailable">Environment</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Development</h1>
+            <h1 class="">Configuration Environment</h1>
+            <p>
+              Seme Framework has supported configuration file by environments.
+            </p>
+
+            <h2 class="">Prioritize</h2>
+            <p>
+              Seme Framework will read the configuration with this order:
+            </p>
+            <ol>
+              <li><code>production.php</code></li>
+              <li><code>staging.php</code></li>
+              <li><code>development.php</code></li>
+            </ol>
+
+            <h2 class="">Production Phase</h2>
+            <p>
+              On <code>production.php</code> file, you can put your configuration for production environment.
+              Like database connection, base url, etc. Also, you can put any additional config values of staging phase only.
+            </p>
+            <p>
+              You have to exclude the <code>app/config/production.php</code> from git by adding it on <code>.gitignore</code>.
+              So, you can pull at any time in production server.
+              But, be careful wrong <code>git</code> configuration can deleted some files or directories.
+            </p>
+
+            <h2 class="">Staging Phase</h2>
+            <p>
+              On <code>staging.php</code> file, you can put your configuration for staging environment.
+              Like database connection, base url, etc. Also, you can put any additional config values of staging phase only.
+            </p>
+            <p>
+              You have to exclude the <code>app/config/staging.php</code> from git by adding it on <code>.gitignore</code>.
+              So, you can pull at any time in staging server.
+              But, be careful wrong <code>git</code> configuration can deleted some files or directories.
+            </p>
+
+            <h2 class="">Development Phase</h2>
             <p>
               This is default configuration phase. On development file, you can put your configuration for development environment.
               Like database connection, base url, etc. Also, you can put any additional config values of development phase only.
             </p>
-            <h2>Base URL with custom port</h2>
+
+            <h3>Example, Base URL with custom port on Development Phase</h3>
             <p>Seme Framework can be running with overriden default http port e.g. <code>8080</code></p>
             <p>Todo so, you have to edit the <code>$site</code> value on <code>app/config/development.php</code> file.</p>
 
@@ -76,14 +114,14 @@
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/4.0.0/configuration/" class="btn">
+          <nuxt-link to="/4.0.0/configuration/db-connection/" class="btn">
           <i class="fa fa-chevron-left"></i>
             Basic Configuration
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/4.0.0/configuration/staging/" class="btn">
-            Staging Phase
+          <nuxt-link to="/4.0.0/configuration/routes/" class="btn">
+            Routes
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
@@ -99,8 +137,8 @@
       return {
         name: 'Seme Framework v4.0.0',
         suffix: ' - Seme Framework 4',
-        title: 'Configuration for Development',
-        description: 'Learn more about how to configuring Seme Framework version 4.0.0 in development phase',
+        title: 'Configuration Environments',
+        description: 'Learn more about how to configuring Seme Framework 4 splitted by environment type',
         breadcrumbs: [
           {
             url: process.env.BASE_URL || 'http://localhost:3001',
@@ -165,9 +203,9 @@
           "image": [
             (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
           ],
-          "dateCreated": "2020-06-11T10:12:00+07:00",
-          "datePublished": "2020-06-11T10:12:00+07:00",
-          "dateModified": "2021-06-23T19:39:17+07:00",
+          "dateCreated": "2020-06-11T12:12:00+07:00",
+          "datePublished": "2020-06-11T12:12:00+07:00",
+          "dateModified": "2021-06-23T12:17:17+07:00",
           "author": {
             "@type": "Person",
             "gender": "Male",

@@ -254,7 +254,7 @@
             <p>There is necessary to add header information on notfound class, because Seme Framework do not provided Error 404 automatically.</p>
           </div>
         </div>
-        
+
         <h2>Access Methods</h2>
         <p>Seme Framework supported access method for public and private declaration.</p>
         <h3>Private Properties and Methods</h3>
@@ -328,7 +328,7 @@
             </tr>
             <tr>
               <th>
-                <NuxtLink to="/4.0.0/controller/cdn_url/">+ __construct(): this</NuxtLink>
+                <NuxtLink to="/4.0.0/controller/cdn_url/">+ __construct(): void</NuxtLink>
               </th>
             </tr>
             <tr>
@@ -374,6 +374,11 @@
             <tr>
               <td>
                 <NuxtLink to="/4.0.0/controller/geticon/">+# getIcon(): string</NuxtLink>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <NuxtLink to="/4.0.0/controller/getjscontent/">+# getJsContent(): void</NuxtLink>
               </td>
             </tr>
             <tr>
@@ -439,32 +444,32 @@
             </tr>
             <tr>
               <td>
-                <NuxtLink to="/4.0.0/controller/loadlayout/">+# loadLayout(): </NuxtLink>
+                <NuxtLink to="/4.0.0/controller/loadlayout/">+# loadLayout(): $this</NuxtLink>
               </td>
             </tr>
             <tr>
               <td>
-                <NuxtLink to="/4.0.0/controller/putthemecontent/">+# putThemeContent(): </NuxtLink>
+                <NuxtLink to="/4.0.0/controller/putthemecontent/">+# putThemeContent(): $this</NuxtLink>
               </td>
             </tr>
             <tr>
               <td>
-                <NuxtLink to="/4.0.0/controller/putjscontent/">+# putJsContent(): </NuxtLink>
+                <NuxtLink to="/4.0.0/controller/putjscontent/">+# putJsContent(): $this</NuxtLink>
               </td>
             </tr>
             <tr>
               <td>
-                <NuxtLink to="/4.0.0/controller/putjsfooter/">+# putJsFooter(): </NuxtLink>
+                <NuxtLink to="/4.0.0/controller/putjsfooter/">+# putJsFooter(): $this</NuxtLink>
               </td>
             </tr>
             <tr>
               <td>
-                <NuxtLink to="/4.0.0/controller/putjsready/">+# putJsReady(): </NuxtLink>
+                <NuxtLink to="/4.0.0/controller/putjsready/">+# putJsReady(): $this</NuxtLink>
               </td>
             </tr>
             <tr>
               <td>
-                <NuxtLink to="/4.0.0/controller/putthemecontent/">+# putThemeContent(): </NuxtLink>
+                <NuxtLink to="/4.0.0/controller/putthemecontent/">+# putThemeContent(): $this</NuxtLink>
               </td>
             </tr>
             <tr>
@@ -474,12 +479,12 @@
             </tr>
             <tr>
               <td>
-                <NuxtLink to="/4.0.0/controller/resetthemecontent/">+# resetThemeContent(): </NuxtLink>
+                <NuxtLink to="/4.0.0/controller/resetthemecontent/">+# resetThemeContent(): $this</NuxtLink>
               </td>
             </tr>
             <tr>
               <td>
-                <NuxtLink to="/4.0.0/controller/session/">+# session(): </NuxtLink>
+                <NuxtLink to="/4.0.0/controller/session/">+# $session</NuxtLink>
               </td>
             </tr>
             <tr>
@@ -494,47 +499,47 @@
             </tr>
             <tr>
               <td>
-                <NuxtLink to="/4.0.0/controller/setcontentlanguage/">+# setContentLanguage(): </NuxtLink>
+                <NuxtLink to="/4.0.0/controller/setcontentlanguage/">+# setContentLanguage():  $this</NuxtLink>
               </td>
             </tr>
             <tr>
               <td>
-                <NuxtLink to="/4.0.0/controller/setdescription/">+# setDescription(): </NuxtLink>
+                <NuxtLink to="/4.0.0/controller/setdescription/">+# setDescription(): $this</NuxtLink>
               </td>
             </tr>
             <tr>
               <td>
-                <NuxtLink to="/4.0.0/controller/seticon/">+# setIcon(): </NuxtLink>
+                <NuxtLink to="/4.0.0/controller/seticon/">+# setIcon():  $this</NuxtLink>
               </td>
             </tr>
             <tr>
               <td>
-                <NuxtLink to="/4.0.0/controller/setkey/">+# setKey(): </NuxtLink>
+                <NuxtLink to="/4.0.0/controller/setkey/">+# setKey():  $this</NuxtLink>
               </td>
             </tr>
             <tr>
               <td>
-                <NuxtLink to="/4.0.0/controller/setkeyword/">+# setKeyword(): </NuxtLink>
+                <NuxtLink to="/4.0.0/controller/setkeyword/">+# setKeyword():  $this</NuxtLink>
               </td>
             </tr>
             <tr>
               <td>
-                <NuxtLink to="/4.0.0/controller/setlang/">+# setLang(): </NuxtLink>
+                <NuxtLink to="/4.0.0/controller/setlang/">+# setLang():  $this</NuxtLink>
               </td>
             </tr>
             <tr>
               <td>
-                <NuxtLink to="/4.0.0/controller/setshortcuticon/">+# setShortcutIcon(): </NuxtLink>
+                <NuxtLink to="/4.0.0/controller/setshortcuticon/">+# setShortcutIcon():  $this</NuxtLink>
               </td>
             </tr>
             <tr>
               <td>
-                <NuxtLink to="/4.0.0/controller/settheme/">+# setTheme(): </NuxtLink>
+                <NuxtLink to="/4.0.0/controller/settheme/">+# setTheme():  $this</NuxtLink>
               </td>
             </tr>
             <tr>
               <td>
-                <NuxtLink to="/4.0.0/controller/settitle/">+# setTitle(): </NuxtLink>
+                <NuxtLink to="/4.0.0/controller/settitle/">+# setTitle():  $this</NuxtLink>
               </td>
             </tr>
           </tbody>

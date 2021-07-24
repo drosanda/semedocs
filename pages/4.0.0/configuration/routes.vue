@@ -283,14 +283,14 @@
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/4.0.0/tutorial/static-page/" class="btn">
+          <nuxt-link to="/4.0.0/configuration/environment/" class="btn">
             <i class="fa fa-chevron-left"></i>
-            Tutorial: Static Page
+            Environment
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/4.0.0/uri_routing/admin/" class="btn">
-            Uri Routing: Admin
+          <nuxt-link to="/4.0.0/configuration/session/" class="btn">
+            Session
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>

@@ -234,8 +234,8 @@ $semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/4.0.0/configuration/development/" class="btn">
-            Development Phase
+          <nuxt-link to="/4.0.0/configuration/db-connection/" class="btn">
+            DB Connection
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
@@ -316,7 +316,7 @@ $semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;
           ],
           "dateCreated": "2020-06-11T10:12:00+07:00",
           "datePublished": "2020-06-11T10:12:00+07:00",
-          "dateModified": "2021-06-23T19:37:17+07:00",
+          "dateModified": "2021-07-23T19:37:17+07:00",
           "author": {
             "@type": "Person",
             "gender": "Male",

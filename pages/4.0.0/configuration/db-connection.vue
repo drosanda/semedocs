@@ -71,8 +71,8 @@
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/4.0.0/configuration/session/" class="btn">
-            Session Configuration
+          <nuxt-link to="/4.0.0/configuration/environment/" class="btn">
+            Environment
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
