@@ -6,15 +6,21 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/controller/">Controller</NuxtLink></li>
-          <li class="unavailable">Input Method</li>
+          <li class="unavailable">Input Property</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Input Method</h1>
-            <p>Seme Framework comes with builtin input manager which can handled <code>$_POST</code>, <code>$_GET</code>, and <code>$_REQUEST</code>.</p>
-            <p>Here is the example:</p>
+            <h1 class="">Input Property</h1>
+            <p>
+              Seme Framework comes with builtin <code>input property</code> which can handled <code>$_POST</code>, <code>$_GET</code>, and <code>$_REQUEST</code>.
+            </p>
+
+            <h2>Basic Usage</h2>
+            <p>
+              Input Property is obtained from <code>SEME_Input</code> class, contain 3 methods there is <code>get</code>, <code>post</code>, and <code>request</code>.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -34,24 +40,226 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  class Home extends Sene_Controller{
+                  $this->input : SENE_Input
+                </highlight-code>
+              </div>
+            </div>
+
+            <h3>Get method</h3>
+            <p>
+              Get method from <code>SENE_Input</code> purpose is to get value from <code>$_GET</code> using keyname.
+              If the keyname value will return 0 as default value.
+              Start from Seme Framework 4, the default value can be override in the second parameter.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  $this->input->get($keyname [, $default_value=0]) : mixed
+                </highlight-code>
+              </div>
+            </div>
+
+            <h4>Parameters</h4>
+            <p>
+              The get method has 2 parameter, there is <code>$keyname</code> and <code>$default_value</code>.
+            </p>
+
+            <h5>$keyname</h5>
+            <p>
+              This value must match with same key that represented in <code>$_GET[$keyname]</code> global variable.
+            </p>
+
+            <h5>$default_value</h5>
+            <p>
+              The default return value if the $keyname is not found. This parameter added from Seme Framework 4.
+            </p>
+
+            <h4>Get Method Example</h4>
+            <p>Here is the example get method in a controller class.</p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  class Product extends Sene_Controller{
                     public function __construct(){
                       parent::__construct();
                     }
-                    public function index(){
-                      $input_get = $this-&#x3E;input-&#x3E;get(&#x27;id&#x27;); //localhost/seme/?id=100
-                      $input_post = $this-&#x3E;input-&#x3E;post(&#x27;email&#x27;); //handling by form-data post
-                      $input_request = $this-&#x3E;input-&#x3E;request(&#x27;token&#x27;); //handling get or post form-data.
+                    ...
+                    public function detail(){
+                      ...
+                      //example URL Request, localhost/seme_framework/product/detail/?id=100
+                      $product_id = $this-&#x3E;input-&#x3E;get(&#x27;id&#x27;);
+                      ....
                     }
-
+                    ...
                   }
                 </highlight-code>
               </div>
             </div>
-            <p>If the parameter not sent, the default value will return <code>(int) 0</code>.</p>
-            <h2>Handling $_FILES</h2>
-            <p>For handling <code>$_FILES</code> you have to created it <b>manually</b> regarding to your application requirements.</p>
-            <p>Here is the full example for file image upload:</p>
+
+            <h3>Post method</h3>
+            <p>
+              Post method from <code>SENE_Input</code> purpose is to get value from <code>$_POST</code> using keyname.
+              If the keyname value will return 0 as default value.
+              Start from Seme Framework 4, the default value can be override in the second parameter.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  $this->input->post($keyname [, $default_value=0]) : mixed
+                </highlight-code>
+              </div>
+            </div>
+
+            <h4>Parameters</h4>
+            <p>
+              The post method has 2 parameter, there is <code>$keyname</code> and <code>$default_value</code>.
+            </p>
+
+            <h5>$keyname</h5>
+            <p>
+              This value must match with same key that represented in <code>$_POST[$keyname]</code> global variable.
+            </p>
+
+            <h5>$default_value</h5>
+            <p>
+              The default return value if the $keyname is not found. This parameter added from Seme Framework 4.
+            </p>
+
+            <h3>Request method</h3>
+            <p>
+              Request method from <code>SENE_Input</code> purpose is to get value from <code>$_REQUEST</code> using keyname.
+              If the keyname value will return 0 as default value.
+              Start from Seme Framework 4, the default value can be override in the second parameter.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  $this->input->request($keyname [, $default_value=0]) : mixed
+                </highlight-code>
+              </div>
+            </div>
+
+            <h4>Parameters</h4>
+            <p>
+              The request method has 2 parameter, there is <code>$keyname</code> and <code>$default_value</code>.
+            </p>
+
+            <h5>$keyname</h5>
+            <p>
+              This value must match with same key that represented in <code>$_REQUEST[$keyname]</code> global variable.
+            </p>
+
+            <h5>$default_value</h5>
+            <p>
+              The default return value if the $keyname is not found. This parameter added from Seme Framework 4.
+            </p>
+
+            <h4>Request Method Example</h4>
+            <p>Here is the example request method in a controller class.</p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  class Review extends SENE_Controller{
+                    public function __construct(){
+                      parent::__construct();
+                    }
+                    ..
+                    public function submit(){
+                      ...
+                      $product_id = $this-&#x3E;input-&#x3E;request(&#x27;product_id&#x27;);
+                      ...
+                    }
+                    ...
+                  }
+                </highlight-code>
+              </div>
+            </div>
+
+            <h2>Handling File Upload</h2>
+            <p>
+              For handling <code>$_FILES</code> file upload you have to created it <b>manually</b> regarding to your application requirements.
+            </p>
+
             <h3>Create private method for upload image</h3>
             <p>This is full example for upload image and then create thumbnail using <code>WideImage</code> for image resizer.</p>
             <div class="macwindow">
@@ -221,8 +429,9 @@
                 </highlight-code>
               </div>
             </div>
-            <h3>Requirements</h3>
-            <p>This private method are requires:</p>
+
+            <h4>Example Requirements</h4>
+            <p>This private method example, request some library:</p>
             <ul>
               <li>Library Seme_Log</li>
               <li>Library WideImage</li>
@@ -247,16 +456,23 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
+                  ...
                   public function __construct(){
                     parent:: __construct();
+                    //loading the required libraries
                     $this-&#x3E;lib(&#x22;seme_log&#x22;);
+                    $this-&#x3E;lib(&#x22;wideimage&#x22;, 'inc');
                   }
+                  ..
                 </highlight-code>
               </div>
             </div>
 
-            <h3>Implementation</h3>
-            <p>Here is the implementation:</p>
+            <h4>Example Implementation</h4>
+            <p>
+              Here is the example implementation of file upload using the private method.
+              On this example, the <code>$keyname</code> value is <code>foto</code> also this $keyname value should be send by multipart/form-data on HTML form or API Request like <code>curl</code>.
+            </p>
 
             <div class="macwindow">
               <div class="titlebar">
@@ -277,6 +493,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
+                  ...
                   $sc = $this-&#x3E;__uploadImagex(&#x22;foto&#x22;,$id,&#x22;1&#x22;);
                   if(!is_object($sc)) $sc = new stdClass();
                   if(!isset($sc-&#x3E;status)) $sc-&#x3E;status=0;
@@ -288,8 +505,8 @@
                   }else{
                     //failed
                     ....
-
                   }
+                  ...
                 </highlight-code>
               </div>
             </div>
@@ -325,8 +542,8 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
-      title: 'Input Method from SENE_Controller',
-      description: 'Learn more about Input Method like $_GET, $_POST, $_REQUEST from SENE_Controller on Seme Framework version 4.0.0',
+      title: 'Input Property',
+      description: 'Learn more about Input property from SENE_Controller on Seme Framework version 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
