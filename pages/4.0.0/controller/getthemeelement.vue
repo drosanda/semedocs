@@ -14,7 +14,7 @@
           <div class="content">
             <h1 class="">getThemeElement method</h1>
             <p>
-              getThemeElement from another view template.
+              The getThemeElement method will <code>echo</code> the buffered view components that from another view component.
             </p>
 
             <h2>Basic Usage</h2>
@@ -38,7 +38,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  getThemeElement(string $location, array $__forward [, int $cacheable]): controllerObject
+                  getThemeElement(string $view_location [,array $__forward=array() [, int $cacheable=0]]): controllerObject
                 </highlight-code>
               </div>
             </div>
@@ -48,14 +48,14 @@
               There is 2 requireds parameter and 1 optional parameter.
             </p>
 
-            <h4>$location</h4>
+            <h4>$view_location</h4>
             <p>
-              Location and name of view without .php suffix.
+              Location relatives to a theme and file name of view without .php suffix.
             </p>
 
             <h4>$__forward</h4>
             <p>
-              Data that will be passed to
+              Data that will be passed to buffered view component.
             </p>
 
             <h4>$cacheable</h4>
@@ -183,9 +183,9 @@
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
-                <nuxt-link to="/4.0.0/controller/getrobots/" class="btn">
+                <nuxt-link to="/4.0.0/controller/getshortcuticon/" class="btn">
                   <i class="fa fa-chevron-left"></i>
-                  getRobots
+                  getShortcutIcon
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
@@ -276,9 +276,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-13T19:01:00+07:00",
-        "datePublished": "2021-07-13T19:02:00+07:00",
-        "dateModified": "2021-07-13T19:22:00+07:00",
+        "dateCreated": "2021-07-24T11:41:00+07:00",
+        "datePublished": "2021-07-24T11:42:00+07:00",
+        "dateModified": "2021-07-24T11:42:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
