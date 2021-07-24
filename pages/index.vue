@@ -35,9 +35,24 @@
                 Bahasa Indonesia
               </nuxt-link>
             </div>
-            
+
 
             <p>This is official documentation for Seme Framework, the PHP MVC Framework for creating small and medium app that needed for fast delivery. At first version of Seme Framework used for building API (Middle Ware) for another Application such as android, iOS, etc. And now as increasing of requirement, Seme Framework has expand the limit for creating Small and Medium App.</p>
+
+            <h2>How Seme Framework Work?</h2>
+            <p>
+              Seme Framework working as Web Application Framework for your source code that bridging between the Web Browser and Database System.
+              Seme Framework using <code>Model</code> <code>View</code> <code>Controller</code> concept for providing clean code and better programming process.
+              Seme Framework using <a href="https://www.php.net" target="_blank">PHP <i class="fa fa-external-link"></i></a> as main programming language.
+            </p>
+            <amp-img
+              alt="How seme framework work?"
+              :src="hsfwork"
+              layout="responsive"
+              height="826"
+              width="1222"
+            >
+            </amp-img>
 
             <h2>Key Feature</h2>
             <p>This framework suitable for Programmer that only know about <code>Manual</code> way of code. Not like this time, everything build up automatically through console. Seme Framework has taken different way of code, <i>If you want build small app, why we need lots of library</i>. Here is the key feature of Seme Framework:</p>
@@ -117,6 +132,7 @@
         suffix: ' - The Lightweight and Deployable PHP MVC Framework',
         description: 'Seme Framework is lightweight and deployable PHP MVC Framework that you can learn more through this documentation.',
         homeGroup: require('~/static/carbon.png'),
+        hsfwork: require('~/static/how-seme-framework-work.png'),
         breadcrumbs: [
           {
             url: process.env.BASE_URL || 'http://localhost:3001',
@@ -175,7 +191,7 @@
           ],
           "dateCreated": "2020-06-11T10:12:00+07:00",
           "datePublished": "2020-06-11T10:12:00+07:00",
-          "dateModified": "2021-06-11T01:04:00+07:00",
+          "dateModified": "2021-07-24T17:16:00+07:00",
           "author": {
             "@type": "Person",
             "gender": "Male",

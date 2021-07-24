@@ -50,6 +50,21 @@
             <p>Tidak seperti framework jaman now yang serba otomatis, Seme Framework masih mempertahankan cara tradisional dalam hal membuat aplikasi berbasis web secara mendasar.</p>
             <p><i>Kenapa harus membutuhkan banyak library, sementara hanya ingin membuat aplikasi sederhana?</i> Seme Framework merupakan PHP MVC dengan kode minimalis hadir sebagai solusi untuk pertanyaan tersebut.</p>
 
+            <h2>Cara Kerja Seme Framework</h2>
+            <p>
+              Seme Framework berfungsi sebagai Kerangka Aplikasi Web untuk kode sumber Anda yang menjembatani antara Peramban Web dan Sistem Basis Data.
+              Seme Framework menggunakan konsep <code>Model</code> <code>View</code> <code>Controller</code> untuk membuat kode yang rapi dan proses pengkodean yang teratur.
+              Seme Framework menggunakan <a href="https://www.php.net" target="_blank">PHP <i class="fa fa-external-link"></i></a> sebagai bahasa pemrograman utamanya.
+            </p>
+            <amp-img
+              alt="How seme framework work?"
+              :src="hsfwork"
+              layout="responsive"
+              height="826"
+              width="1222"
+            >
+            </amp-img>
+
             <h2>Fitur Utama</h2>
             <p>Berikut ini adalah 3 poin fitur utama Seme Framework:</p>
             <hr>
@@ -116,6 +131,7 @@
         title: 'Dokumentasi Bahasa Indonesia',
         description: 'Pelajari Seme Framework melaui Dokumentasi Seme Framework 4 dalam Bahasa Indonesia.',
         semecarbon: require('~/static/carbon.png'),
+        hsfwork: require('~/static/how-seme-framework-work.png'),
         breadcrumbs: [
           {
             url: process.env.BASE_URL || 'http://localhost:3001',
@@ -181,7 +197,7 @@
           ],
           "dateCreated": "2020-06-11T10:12:00+07:00",
           "datePublished": "2020-06-11T10:12:00+07:00",
-          "dateModified": "2021-06-25T17:01:00+07:00",
+          "dateModified": "2021-07-24T17:19:00+07:00",
           "author": {
             "@type": "Person",
             "gender": "Male",
