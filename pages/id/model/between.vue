@@ -14,7 +14,7 @@
           <div class="content">
             <h1 class="">Metode Between</h1>
             <p>
-              Between adalah sebuah metode dari object <code>$db</code> yang ada didalam kelas <code>SENE_Model</code> untuk digunakan sebagai <strong>Query Builder</strong>.
+              Between adalah sebuah metode dari properti <code>$db</code> yang ada didalam kelas <code>SENE_Model</code> untuk digunakan sebagai <strong>Query Builder</strong>.
               Kegunaan dari metode ini adalah untuk memfilter data yang kompatibel dengan perintah <code>BETWEEN</code> pada SQL.
             </p>
 

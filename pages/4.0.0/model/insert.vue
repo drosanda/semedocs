@@ -13,9 +13,14 @@
         <div class="column">
           <div class="content">
             <h1 class="">Insert Method</h1>
-            <p>Insert method is part of database class builder for inserting data into a table.</p>
-            <h2>Parameters</h2>
-            <p>Insert method has 2 required parameters that is <b>table name</b> and <b>values</b> in key value format.</p>
+            <p>
+              Insert method is part of database class builder for inserting data into a table.
+            </p>
+
+            <h2>Basic Usage</h2>
+            <p>
+              Here is the basic usage <code>insert</code> method from <code>$db</code> properti on <code>SENE_Model</code> class.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -35,12 +40,31 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;insert(string $table_name, array $data_insert, [bool $is_multiple=0], [bool $is_debug=0]): bool
+                  $this-&#x3E;db-&#x3E;insert(string $table_name, array $data_insert, [bool $mass_insert=0 [, bool $is_debug=0] ] ): bool
                 </highlight-code>
               </div>
             </div>
-            <h3>$data_insert</h3>
-            <p><b>Data insert</b> is key value pair in an array. The key refer to column name of the table.</p>
+
+            <h3>Parameters</h3>
+            <p>Insert method has 2 required parameters that is <b>$table_name</b> and <b>$data_insert</b> in key value format.</p>
+
+            <h4>$table_name</h4>
+            <p>
+              The <code>$table_name</code> refers to the name of the table to which the data is to be inserted.
+            </p>
+
+            <h4>$data_insert</h4>
+            <p>
+              The <code>$data_insert</code> value can contain key value pair in array. The key refer to column name of the table and the value refer to value that will be inserted.
+            </p>
+
+            <h4>$mass_insert</h4>
+            <p>
+              The value of <code>$mass_insert</code> can contain values 1 and 0. If the value is equal to 1 (one), it is used to insert more than one row of data in one method call.
+              For this method to work properly, the value of <code>$data_insert</code> must be of data type <code>array of array</code>.
+              Where the first array contains a sequence or row sequence, with an automatic key.
+              Meanwhile, for the contents of each row the array sequence contains a combination of array keys and values as in insert data in general.
+            </p>
 
             <h2>Example usage</h2>
             <p>Here is the examples using insert method. See the first of this page for full example.</p>
@@ -123,10 +147,11 @@
               </div>
             </div>
 
-            <h2>MySQL Builtin Functions</h2>
-            <p>Seme Framework has supported the MySQL builtin function, such as:</p>
+            <h2>MySQL Builtin Functions and Values</h2>
+            <p>Seme Framework has supported the MySQL builtin function and value, such as:</p>
             <ul>
               <li><code>NOW()</code></li>
+              <li><code>NULL</code></li>
             </ul>
 
             <h3>Example usage</h3>
@@ -154,6 +179,7 @@
                   //data input
                   $di = array();
                   ...
+                  $di[&#x27;id&#x27;] = &#x27;NULL&#x27;;
                   $di[&#x27;cdate&#x27;] = &#x27;NOW()&#x27;;
                   ..
                   $res = $this-&#x3E;aakm-&#x3E;set($di);
@@ -172,12 +198,12 @@
               <div class="nav-bottom-left">
                 <nuxt-link to="/4.0.0/model/insert_multi/" class="btn">
                   <i class="fa fa-chevron-left"></i>
-                  insert_multi Method
+                  insert_multi
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
                 <nuxt-link to="/4.0.0/model/join_composite/" class="btn">
-                  join_composite Method
+                  join_composite
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
@@ -264,7 +290,7 @@ export default {
         ],
         "dateCreated": "2021-07-12T21:20:00+07:00",
         "datePublished": "2021-07-12T21:20:00+07:00",
-        "dateModified": "2021-07-12T21:21:00+07:00",
+        "dateModified": "2021-07-25T20:21:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
