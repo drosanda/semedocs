@@ -15,8 +15,64 @@
             <h1 class="">Between Method</h1>
             <p>
               Between is a method of the DB object in the model class to be used as a <strong>Query Builder</strong>.
-               The purpose of this method is to filter data that is compatible with the BETWEEN command in SQL.
-             </p>
+              The purpose of this method is to filter data that is compatible with the BETWEEN command in SQL.
+            </p>
+
+            <h2>Basic Usage</h2>
+            <p>
+              Here is the basic usage of <code>between</code> method is from <code>SENE_Model</code> class.
+            </p>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  $this->db->between(string $column_name, string $value_from, string $value_to): $this->db
+                </highlight-code>
+              </div>
+            </div>
+
+            <h3>Parameters</h3>
+            <p>
+              Where method has 2 required parameters that is <b>column name</b> and <b>value</b>, another parameters are optional.
+              Here is the completed parameters can be used by where methods.
+            </p>
+
+            <h4>$column_name</h4>
+            <p>
+              The <code>$column_name</code> value is required for filtering data from table.
+              This parameter value is automatically escaped.
+            </p>
+
+            <h3>$value_from</h3>
+            <p>
+              The <code>$value_from</code> can contain about start value for filtering data by between method.
+            </p>
+
+            <h3>$value_to</h3>
+            <p>
+              The <code>$value_to</code> can contain about end value for filtering data by between method.
+            </p>
+
+            <h2>Example</h2>
+            <p>
+              Here is the basic example that used in a model class.
+            </p>
 
             <div class="macwindow">
               <div class="titlebar">
@@ -84,38 +140,7 @@
               </div>
             </div>
 
-            <h2>Parameters</h2>
-            <p>Where method has 2 required parameters that is <b>column name</b> and <b>value</b>, another parameters are optional. Here is the completed parameters can be used by where methods</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  $this->db->between( COLUMN_NAME, VALUE_FROM, VALUE_TO): $this->db
-                </highlight-code>
-              </div>
-            </div>
 
-            <h3>COLUMN_NAME</h3>
-            <p>Column name required for filtering data from table. The columname should exist on selected table. This method has automatically escaped.</p>
-            <h3>VALUE_FROM</h3>
-            <p>Value required for matched with data against COLUMN_NAME.</p>
-            <h3>VALUE_TO</h3>
-            <p>Value required for matched with data against COLUMN_NAME.</p>
 
             <div class="message is-info">
                <div class="message-body">
@@ -140,7 +165,7 @@
         </div>
         <div class="nav-bottom-right">
           <nuxt-link to="/4.0.0/model/composite_create/" class="btn">
-            Metode composite_create
+            composite_create
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
@@ -159,8 +184,8 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
-      title: 'Model::between',
-      description: 'Learn more about Model::between method Seme Framework version 4.0.0 through this documentation.',
+      title: 'Between Method',
+      description: 'Learn more about between method from SENE_Model on Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -199,7 +224,8 @@ export default {
       ]
     }
   },
-  jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
   const items = this.breadcrumbs.map((item, index) => ({
     '@type': 'ListItem',
     position: index + 1,
@@ -227,7 +253,7 @@ export default {
       ],
       "dateCreated": "2020-06-11T10:12:00+07:00",
       "datePublished": "2020-06-11T10:12:00+07:00",
-      "dateModified": "2021-06-24T12:59:47+07:00",
+      "dateModified": "2021-07-25T12:59:47+07:00",
       "author": {
         "@type": "Person",
         "gender": "Male",

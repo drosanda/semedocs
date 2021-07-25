@@ -14,10 +14,57 @@
           <div class="content">
             <h1 class="">Metode Between</h1>
             <p>
-              Between adalah metode dari object DB yang ada didalam kelas model untuk digunakan sebagai <strong>Query Builder</strong>.
-              Kegunaan dari metode ini adalah untuk memfilter data yang kompatibel dengan perintah BETWEEN pada SQL.
+              Between adalah sebuah metode dari object <code>$db</code> yang ada didalam kelas <code>SENE_Model</code> untuk digunakan sebagai <strong>Query Builder</strong>.
+              Kegunaan dari metode ini adalah untuk memfilter data yang kompatibel dengan perintah <code>BETWEEN</code> pada SQL.
             </p>
 
+            <h2>Bentuk Umum</h2>
+            <p>
+              Berikut ini adalah bentuk umum dari metode <code>between</code> dari properti <code>$db</code> yang ada di dalam kelas <code>SENE_Model</code>.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  $this->db->between(string $column_name, string $value_from, string $value_to): $this->db
+                </highlight-code>
+              </div>
+            </div>
+
+            <h3>Parameter</h3>
+            <p>
+              Metode ini memiliki 3 parameter wajib yaitu <b>$column_name</b>, <b>$value_from</b>, dan <b>$value_to</b>
+            </p>
+
+            <h3>$column_name</h3>
+            <p>
+              Nilai dari <code>$column_name</code> dapat berisi nama kolom yang diperlukan untuk memfilter data dari tabel.
+              Metode ini telah otomatis di <code><i>escape</i></code>.
+            </p>
+            <h3>$value_from</h3>
+            <p>Rentang nilai yang diperlukan untuk dicocokkan dengan $column_name.</p>
+            <h3>$value_to</h3>
+            <p>Rentang nilai yang diperlukan untuk dicocokkan dengan $column_name.</p>
+
+            <h2>Contoh Penggunaan</h2>
+            <p>
+              Berikut ini adalah contoh penggunaan metode between pada sebuah kelas model.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -84,41 +131,6 @@
               </div>
             </div>
 
-            <h2>Parameter</h2>
-            <p>
-              Jika metode memiliki 3 parameter wajib yaitu <b>nama kolom</b>, <b>nilai awal</b>, <b>nilai akhir</b>
-            </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  $this->db->between( COLUMN_NAME, VALUE_FROM, VALUE_TO): $this->db
-                </highlight-code>
-              </div>
-            </div>
-
-            <h3>COLUMN_NAME</h3>
-            <p>Nama kolom diperlukan untuk memfilter data dari tabel. Nama kolom harus ada di tabel yang dipilih. Metode ini telah lolos secara otomatis.</p>
-            <h3>VALUE_FROM</h3>
-            <p>Rentang nilai yang diperlukan untuk dicocokkan dengan COLUMN_NAME.</p>
-            <h3>VALUE_TO</h3>
-            <p>Rentang nilai yang diperlukan untuk dicocokkan dengan COLUMN_NAME.</p>
-
             <div class="message is-info">
               <div class="message-body">
                 <p><b>Info</b></p>
@@ -140,7 +152,7 @@
           </div>
           <div class="nav-bottom-right">
             <nuxt-link to="/id/model/composite_create/" class="btn">
-              Metode composite_create
+              composite_create
               <i class="fa fa-chevron-right"></i>
             </nuxt-link>
           </div>
@@ -158,7 +170,7 @@ export default {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Metode Between',
-      description: 'Pelajari selengkapnya tentang metode between dari SENE_Model di Seme Framework versi 4.0.0',
+      description: 'Pelajari selengkapnya tentang metode between dari properti $db di SENE_Model pada Seme Framework 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -228,7 +240,7 @@ export default {
         ],
         "dateCreated": "2020-06-11T10:12:00+07:00",
         "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-29T23:54:00+07:00",
+        "dateModified": "2021-07-25T13:54:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

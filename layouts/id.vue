@@ -56,30 +56,30 @@
 
           <li><nuxt-link to="/id/model/">Model</nuxt-link>
             <ul>
-              <li><nuxt-link to="/id/model/select/">Model::select</nuxt-link></li>
-              <li><nuxt-link to="/id/model/select_as/">Model::select_as</nuxt-link></li>
-              <li><nuxt-link to="/id/model/from/">Model::from</nuxt-link></li>
-              <li><nuxt-link to="/id/model/join/">Model::join</nuxt-link></li>
-              <li><nuxt-link to="/id/model/join_composite/">Model::join_composite</nuxt-link></li>
-              <li><nuxt-link to="/id/model/composite_create/">Model::composite_create</nuxt-link></li>
-              <li><nuxt-link to="/id/model/where/">Model::where</nuxt-link></li>
-              <li><nuxt-link to="/id/model/where_as/">Model::where_as</nuxt-link></li>
-              <li><nuxt-link to="/id/model/between/">Model::between</nuxt-link></li>
-              <li><nuxt-link to="/id/model/group_by/">Model::group_by</nuxt-link></li>
-              <li><nuxt-link to="/id/model/order_by/">Model::order_by</nuxt-link></li>
-              <li><nuxt-link to="/id/model/limit/">Model::limit</nuxt-link></li>
-              <li><nuxt-link to="/id/model/get/">Model::get</nuxt-link></li>
-              <li><nuxt-link to="/id/model/get_first/">Model::get_first</nuxt-link></li>
-              <li><nuxt-link to="/id/model/insert/">Model::insert</nuxt-link></li>
-              <li><nuxt-link to="/id/model/insert_multi/">Model::insert_multi</nuxt-link></li>
-              <li><nuxt-link to="/id/model/insert_batch/">Model::insert_batch</nuxt-link></li>
-              <li><nuxt-link to="/id/model/update/">Model::update</nuxt-link></li>
-              <li><nuxt-link to="/id/model/update_as/">Model::update_as</nuxt-link></li>
-              <li><nuxt-link to="/id/model/delete/">Model::delete</nuxt-link></li>
-              <li><nuxt-link to="/id/model/exec/">Model::exec</nuxt-link></li>
-              <li><nuxt-link to="/id/model/query/">Model::query</nuxt-link></li>
-              <li><nuxt-link to="/id/model/last_id/">Model::last_id</nuxt-link></li>
-              <li><nuxt-link to="/id/model/page/">Model::page</nuxt-link></li>
+              <li><nuxt-link to="/id/model/select/">select</nuxt-link></li>
+              <li><nuxt-link to="/id/model/select_as/">select_as</nuxt-link></li>
+              <li><nuxt-link to="/id/model/from/">from</nuxt-link></li>
+              <li><nuxt-link to="/id/model/join/">join</nuxt-link></li>
+              <li><nuxt-link to="/id/model/join_composite/">join_composite</nuxt-link></li>
+              <li><nuxt-link to="/id/model/composite_create/">composite_create</nuxt-link></li>
+              <li><nuxt-link to="/id/model/where/">where</nuxt-link></li>
+              <li><nuxt-link to="/id/model/where_as/">where_as</nuxt-link></li>
+              <li><nuxt-link to="/id/model/between/">between</nuxt-link></li>
+              <li><nuxt-link to="/id/model/group_by/">group_by</nuxt-link></li>
+              <li><nuxt-link to="/id/model/order_by/">order_by</nuxt-link></li>
+              <li><nuxt-link to="/id/model/limit/">limit</nuxt-link></li>
+              <li><nuxt-link to="/id/model/get/">get</nuxt-link></li>
+              <li><nuxt-link to="/id/model/get_first/">get_first</nuxt-link></li>
+              <li><nuxt-link to="/id/model/insert/">insert</nuxt-link></li>
+              <li><nuxt-link to="/id/model/insert_multi/">insert_multi</nuxt-link></li>
+              <li><nuxt-link to="/id/model/insert_batch/">insert_batch</nuxt-link></li>
+              <li><nuxt-link to="/id/model/update/">update</nuxt-link></li>
+              <li><nuxt-link to="/id/model/update_as/">update_as</nuxt-link></li>
+              <li><nuxt-link to="/id/model/delete/">delete</nuxt-link></li>
+              <li><nuxt-link to="/id/model/exec/">exec</nuxt-link></li>
+              <li><nuxt-link to="/id/model/query/">query</nuxt-link></li>
+              <li><nuxt-link to="/id/model/last_id/">last_id</nuxt-link></li>
+              <li><nuxt-link to="/id/model/page/">page</nuxt-link></li>
             </ul>
           </li>
           <li>
