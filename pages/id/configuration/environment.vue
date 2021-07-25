@@ -4,22 +4,22 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0.0/configuration/">Configuration</NuxtLink></li>
+          <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
+          <li class=""><NuxtLink to="/id/configuration">Pengaturan</NuxtLink></li>
           <li class="unavailable">Environment</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Configuration Environment</h1>
+            <h1 class="">Pengaturan Environment</h1>
             <p>
-              Seme Framework has supported configuration file by environments.
+              Seme Framework telah mendukung file konfigurasi berdasarkan environment.
             </p>
 
-            <h2 class="">Prioritize</h2>
+            <h2 class="">Prioritas</h2>
             <p>
-              Seme Framework will read the configuration with this order:
+              Seme Framework akan membaca konfigurasi dengan urutan ini:
             </p>
             <ol>
               <li><code>production.php</code></li>
@@ -27,37 +27,37 @@
               <li><code>development.php</code></li>
             </ol>
 
-            <h2 class="">Production Phase</h2>
+            <h2 class="">Tahap Production</h2>
             <p>
-              On <code>production.php</code> file, you can put your configuration for <code>production environment</code>.
-              Like database connection, base url, etc. Also, you can put any additional config values of <code>production phase</code> only.
+              Pada file <code>production.php</code>, Anda dapat menempatkan konfigurasi Anda untuk lingkungan <code>production</code>.
+              Seperti koneksi database, url dasar, dll. Selain itu, Anda dapat menempatkan nilai konfigurasi tambahan apa pun hanya untuk fase <code>production</code>.
             </p>
             <p>
-              You have to exclude the <code>app/config/production.php</code> from git by adding it on <code>.gitignore</code>.
-              So, you can pull at any time in production server.
-              But, be careful wrong <code>.gitignore</code> configuration can deleted some files or directories.
-            </p>
-
-            <h2 class="">Staging Phase</h2>
-            <p>
-              On <code>staging.php</code> file, you can put your configuration for <code>staging environment</code>.
-              Like database connection, base url, etc. Also, you can put any additional config values of <code>staging phase</code>  only.
-            </p>
-            <p>
-              You have to exclude the <code>app/config/staging.php</code> from git by adding it on <code>.gitignore</code>.
-              So, you can pull at any time in staging server.
-              But, be careful wrong <code>git</code> configuration can deleted some files or directories.
+              Anda harus mengecualikan <code>app/config/production.php</code> dari git dengan menambahkannya di <code>.gitignore</code>.
+              Jadi, Anda dapat <code>git pull</code> kapan saja di server produksi tanpa khawatir file konfigurasinya tertimpa.
+              Namun, hati-hati konfigurasi <code>.gitignore</code> yang salah dapat menghapus beberapa file atau direktori.
             </p>
 
-            <h2 class="">Development Phase</h2>
+            <h2 class="">Fase Staging</h2>
             <p>
-              This is default configuration phase. On development file, you can put your configuration for development environment.
-              Like database connection, base url, etc. Also, you can put any additional config values of development phase only.
+              Pada file <code>staging.php</code> file, Anda dapat menempatkan konfigurasi Anda untuk lingkungan <code>Staging</code>.
+              Seperti koneksi database, url dasar, dll. Selain itu, Anda dapat menempatkan nilai konfigurasi tambahan apa pun hanya untuk fase <code>Staging</code>.
+            </p>
+            <p>
+              Anda harus mengecualikan <code>app/config/staging.php</code> dari git dengan menambahkannya di <code>.gitignore</code>.
+              Jadi, Anda dapat <code>git pull</code> kapan saja di server produksi tanpa khawatir file konfigurasinya tertimpa.
+              Namun, hati-hati konfigurasi <code>.gitignore</code> yang salah dapat menghapus beberapa file atau direktori.
             </p>
 
-            <h3>Example, Base URL with custom port on Development Phase</h3>
-            <p>Seme Framework can be running with overriden default http port e.g. <code>8080</code></p>
-            <p>Todo so, you have to edit the <code>$site</code> value on <code>app/config/development.php</code> file.</p>
+            <h2 class="">Fase Development</h2>
+            <p>
+              Ini adalah fase konfigurasi default. Pada file pengembangan, Anda dapat meletakkan konfigurasi untuk lingkungan pengembangan.
+               Seperti koneksi database, url dasar, dll. Selain itu, Anda dapat menambahkan nilai konfigurasi tambahan apa pun hanya untuk fase pengembangan.
+            </p>
+
+            <h3>Contoh, URL Dasar dengan port khusus pada Fase Development</h3>
+            <p>Seme Framework dapat berjalan dengan port http default yang diganti misalkan <code>8080</code></p>
+            <p>Untuk melakukannya, Anda harus mengedit nilai <code>$site</code> pada file <code>app/config/development.php</code>.</p>
 
             <div class="macwindow">
               <div class="titlebar">
@@ -83,7 +83,7 @@
               </div>
             </div>
 
-            <p>But if using <code>$_SERVER[&#x27;HTTP_HOST&#x27;]</code> there is no necessary to add suffix port after it.</p>
+            <p>Tetapi jika menggunakan <code>$_SERVER[&#x27;HTTP_HOST&#x27;]</code> tidak perlu menambahkan port suffix setelahnya.</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -109,18 +109,20 @@
             </div>
 
           </div>
+
         </div>
       </div>
 
+
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/4.0.0/configuration/db-connection/" class="btn">
+          <nuxt-link to="/id/configuration/" class="btn">
           <i class="fa fa-chevron-left"></i>
-            Basic Configuration
+            Pengaturan
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/4.0.0/configuration/routes/" class="btn">
+          <nuxt-link to="/id/configuration/routes/" class="btn">
             Routes
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
@@ -132,31 +134,34 @@
 </template>
 <script>
   export default {
-    layout: 'v4.0.0',
-    data() {
+    layout: 'id',
+    data (){
       return {
-        name: 'Seme Framework v4.0.0',
+        name: 'Seme Framework 4',
         suffix: ' - Seme Framework 4',
-        title: 'Configuration Environments',
-        description: 'Learn more about how to configuring Seme Framework 4 splitted by environment type',
+        title: 'Pengaturan koneksi DB',
+        description: 'Pelajari selengkapnya tentang pengaturan koneksi database untuk Seme Framework versi 4.0.0.',
         breadcrumbs: [
           {
             url: process.env.BASE_URL || 'http://localhost:3001',
             text: 'Seme Framework',
           },
           {
-            url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/',
-            text: '4.0.2',
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/',
+            text: 'ID',
           },
           {
-            url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/configuration/',
-            text: 'Configuration',
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/configuration/',
+            text: 'Pengaturan',
           }
         ]
       }
     },
     head() {
       return {
+        htmlAttrs: {
+          lang: 'id'
+        },
         title: this.title+this.suffix,
         meta: [
           {
@@ -177,7 +182,8 @@
         ]
       }
     },
-    jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+    jsonld() {
+      this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
       const items = this.breadcrumbs.map((item, index) => ({
         '@type': 'ListItem',
         position: index + 1,
@@ -203,9 +209,9 @@
           "image": [
             (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
           ],
-          "dateCreated": "2020-06-11T12:12:00+07:00",
-          "datePublished": "2020-06-11T12:12:00+07:00",
-          "dateModified": "2021-06-23T12:17:17+07:00",
+          "dateCreated": "2021-07-25T19:12:00+07:00",
+          "datePublished": "2021-07-25T19:12:00+07:00",
+          "dateModified": "2021-07-25T19:12:00+07:00",
           "author": {
             "@type": "Person",
             "gender": "Male",

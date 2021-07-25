@@ -29,6 +29,7 @@
             <ul>
               <li><nuxt-link to="/id/configuration/url/">URL</nuxt-link></li>
               <li><nuxt-link to="/id/configuration/db-connection/">Koneksi DB</nuxt-link></li>
+              <li><nuxt-link to="/id/configuration/environment/">Environment</nuxt-link></li>
               <li><nuxt-link to="/id/configuration/development/">Development</nuxt-link></li>
               <li><nuxt-link to="/id/configuration/staging/">Staging</nuxt-link></li>
               <li><nuxt-link to="/id/configuration/production/">Production</nuxt-link></li>

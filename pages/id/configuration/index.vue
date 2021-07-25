@@ -19,7 +19,7 @@
             <p>
               Lokasi file untuk pengaturan seme framework ada di <code>app/config/</code>. Secara default, hanya ada file <code>development.php</code> didalamnya.
             </p>
-            <h3 class="">Prioritas File Pengaturan</h3>
+            <h3 class="">Prioritas File Pengaturan Environment</h3>
             <p>
               Seme Framework akan membaca konfigurasi dengan urutan ini:
             </p>
@@ -28,7 +28,10 @@
               <li><code>staging.php</code></li>
               <li><code>development.php</code></li>
             </ol>
-            <p>Isi dari setiap file dapat berbeda satu sama lain tergantung pada kebutuhan Anda.</p>
+            <p>
+              Isi dari setiap file dapat berbeda satu sama lain tergantung pada kebutuhan Anda.
+              Pelajari selengkapnya tentang <NuxtLink to="/id/configuration/environment/">pengaturan environment</NuxtLink>.
+            </p>
             <div class="message is-info">
               <div class="message-body">
                 <p>
@@ -311,7 +314,7 @@ $semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;
           ],
           "dateCreated": "2020-06-11T10:12:00+07:00",
           "datePublished": "2020-06-11T10:12:00+07:00",
-          "dateModified": "2021-06-23T01:04:00+07:00",
+          "dateModified": "2021-07-25T19:04:00+07:00",
           "author": {
             "@type": "Person",
             "gender": "Male",
