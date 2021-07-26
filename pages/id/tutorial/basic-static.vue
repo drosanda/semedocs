@@ -418,15 +418,14 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   <?php
-                  class A extends SENE_Controller {
+                  class B extends SENE_Controller {
                     public function __construct(){
                       parent::__construct();
                     }
                     public function index(){
-                      echo &#x27;&#x3C;h1&#x3E;Produk A&#x3C;/h1>&#x27;;
-                      echo &#x27;&#x3C;p&#x3E;Produk A cocok untuk dipakai di musim hujan&#x3C;/p&#x3E;&#x27;;
-                      echo &#x27;&#x3C;p style=&#x22;text-decoration: line-through&#x22;&#x3E;Harga IDR 150.000&#x3C;/p&#x3E;&#x27;;
-                      echo &#x27;&#x3C;p&#x3E;Harga IDR 125.000&#x3C;/p&#x3E;&#x27;;
+                      echo &#x27;&#x3C;h1&#x3E;Produk B&#x3C;/h1>&#x27;;
+                      echo &#x27;&#x3C;p&#x3E;Produk b cocok untuk dipakai di musim panas&#x3C;/p&#x3E;&#x27;;
+                      echo &#x27;&#x3C;p&#x3E;Harga IDR 150.000&#x3C;/p&#x3E;&#x27;;
                       echo &#x27;&#x3C;br&#x3E;&#x27;;
                       echo &#x27;Kembali ke &#x3C;a href=&#x22;&#x27;.base_url().&#x27;produk&#x22;&#x3E;Produk&#x3C;/a&#x3E;&#x27;;
                     }
