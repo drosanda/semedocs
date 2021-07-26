@@ -140,8 +140,8 @@
 
             <h3>Menambah <em>List</em> Produk</h3>
             <p>
-              Sekarang kita akan menambahkan list produk, yaitu produk A dan produk B.
-              Dan tidak lupa juga untuk menambahkan link kembali ke halaman utama juga dengan tag <code>a</code>.
+              Sekarang kita akan menambahkan list produk, yaitu produk A dan produk B untuk ilustrasi.
+              Dan tidak lupa juga untuk menambahkan link kembali ke halaman utama juga dengan tag <code>&#x3C;a href=&#x22;...&#x22;&#x3E;...&#x3C;/a&#x3E;</code>.
               Untuk itu buka file <code>app/controller/produk.php</code> dan ganti isinya seperti contoh kode dibawah ini.
             </p>
             <div class="macwindow">
@@ -190,7 +190,7 @@
 
             <h3>Merubah isi Controller <code>Home</code></h3>
             <p>
-              Sekarang kita akan mencoba untuk menambahkan link dengan tag <code>&#x3C;a href=&#x22;...&#x22;&#x3E;...&#x3C;/a&#x3E;</code>.
+              Sekarang kita akan mencoba untuk menambahkan judul dengan tag <code>&#x3C;h1&#x3E;...&#x3C;/h1&#x3E;</code> dan <code>&#x3C;p&#x3E;...&#x3C;/p&#x3E;</code> untuk sub judulnya.
               Untuk itu, kita akan merubah file <code>app/controller/home.php</code> kemudian ubah isi file tersebut menjadi sama seperti contoh kode dibawah ini.
             </p>
             <div class="macwindow">
@@ -234,7 +234,7 @@
             <h3>Menambahkan Detail Produk</h3>
             <p>
               Sekarang kita akan menambahkan 2 metode baru, yaitu metode <code>a()</code> dan <code>b()</code> pada kelas <code>Produk</code>.
-              Sekarang ganti isi file <code>app/controller/produk/home.php</code> dengan kode sumber seperti dibawah ini.
+              Sekarang ganti isi file <code>app/controller/produk.php</code> dengan kode sumber seperti dibawah ini.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -256,15 +256,15 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   <?php
-                  class Home extends SENE_Controller {
+                  class Produk extends SENE_Controller {
                     public function __construct(){
                       parent::__construct();
                     }
                     public function index(){
                       echo &#x27;Halaman Produk&#x27;;
                       echo &#x27;&#x3C;br&#x3E;&#x27;;
-                      echo ke &#x3C;a href=&#x22;&#x27;.base_url().&#x27;produk/a/&#x22;&#x3E;Produk A&#x3C;/a&#x3E;&#x3C;br&#x3E;&#x27;;
-                      echo ke &#x3C;a href=&#x22;&#x27;.base_url().&#x27;produk/b/&#x22;&#x3E;Produk B&#x3C;/a&#x3E;&#x3C;br&#x3E;&#x27;;
+                      echo &#x27;ke &#x3C;a href=&#x22;&#x27;.base_url().&#x27;produk/a/&#x22;&#x3E;Produk A&#x3C;/a&#x3E;&#x3C;br&#x3E;&#x27;;
+                      echo &#x27;ke &#x3C;a href=&#x22;&#x27;.base_url().&#x27;produk/b/&#x22;&#x3E;Produk B&#x3C;/a&#x3E;&#x3C;br&#x3E;&#x27;;
                       echo &#x27;Kembali ke &#x3C;a href=&#x22;&#x27;.base_url().&#x27;&#x22;&#x3E;Halaman Utama&#x3C;/a&#x3E;&#x27;;
                     }
                     public function a(){
