@@ -245,7 +245,7 @@
             </p>
             <h4>Ruang lingkup Class</h4>
             <p>
-              Dalam PHP juga, ada ruang lingkup <code>class</code> yang biasa kita sebut dengan hak akses kelas. Ada 3 hak akses yang digunakan dalam kelas yaitu <code>Public</code>, <code>Private</code>, dan <code>Private</code>.
+              Dalam PHP juga, ada ruang lingkup <code>class</code> yang biasa kita sebut dengan hak akses kelas. Ada 3 hak akses yang digunakan dalam kelas yaitu <code>Public</code>, <code>Private</code>, dan <code>Protected</code>.
             </p>
             <p>
               Untuk pembahasan selanjutnya tentang kelas, akan dibahas pada Tutorial <b>Basic MVC</b> (setelah tutorial ini).
@@ -1356,7 +1356,8 @@
                 $anggota[] = &#x27;Iqbal&#x27;;
 
                 foreach($anggota as $kunci=>$nilai){
-                  echo anggota[$kunci=>$nilai];
+                  //cara echo nya
+                  echo anggota[$kunci];
                   // akan menampilkan semua isi dari nilai array anggota
                   // tanpa harus mengetahui kunci arraynya
                 }
@@ -1484,7 +1485,7 @@ jsonld() {
       ],
       "dateCreated": "2020-06-26T19:12:31+07:00",
       "datePublished": "2020-06-26T19:12:39+07:00",
-      "dateModified": "2021-06-28T08:30:33+07:00",
+      "dateModified": "2021-07-26T10:51:33+07:00",
       "author": {
         "@type": "Person",
         "gender": "Male",
