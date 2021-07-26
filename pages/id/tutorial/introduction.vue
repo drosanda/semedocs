@@ -554,8 +554,8 @@
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/id/tutorial/get-data/" class="btn">
-            Tutorial: Ambil Data
+          <nuxt-link to="/id/tutorial/notfound-page/" class="btn">
+            Tutorial: Notfound
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>

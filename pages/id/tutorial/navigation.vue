@@ -6,27 +6,27 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/tutorial/">Tutorial</NuxtLink></li>
-          <li class="unavailable">Halaman Notfound</li>
+          <li class="unavailable">Navigation</li>
         </ul>
       </nav>
       <div>
         <div class="column">
           <div class="content">
-            <h1 class="">Halaman Notfound</h1>
+            <h1 class="">Membuat Navigation</h1>
             <p>
-              Halaman not found merupakan halaman yang di desain untuk menangani <code>fallback</code> ketika URL yang diminta tidak ada atau tidak ditemukan dalam <code>app/controller</code>.
-              Pada tutorial kali ini kita akan membuat Halaman notfound dengan menggunakan tampilan materializeCSS.
+              Navigation digunakan dalam situs web untuk berpindah dari satu halaman ke halaman lainnya.
+              Navigation ini biasanya terletak bagian atas halaman web.
+              Pada tutorial kali ini kita akan membuat <code>view component</code> navigation bar dengan menggunakan tampilan materializeCSS.
               Jadi, pastikan untuk menyelesaikan tutorial <NuxtLink to="/id/tutorial/introduction/#part2">Pengenalan bagian 2</NuxtLink> sebelum melanjutkan tutorial ini.
               Sehingga pengaturan view, view component, beserta temanya sudah disetel dan berjalan dengan baik.
             </p>
 
-            <amp-img layout="responsive" width="1656" height="594" :src="notfoundex" alt="Notfound page example"></amp-img>
+            <amp-img layout="responsive" width="2356" height="624" :src="navbar" alt="Navigation bar example"></amp-img>
 
-            <h2>Membuat layout</h2>
+            <h2>Membuat View Component</h2>
             <p>
-              Pertama-tama kita akan membuat layout khusus untuk <code>notfound</code>.
-              Biasanya, halaman notfound ini memiliki struktur HTML yang berbeda dengan halaman lainnya, sehingga harus memiliki layout khusus.
-              Buat file baru di <code>app/view/front/page/notfound.php</code> untuk layout notfound.
+              Pertama-tama kita akan membuat view component khusus untuk <code>navigation bar</code> di <code>app/view/front/page/html/navbar.php</code>.
+              Berikut ini adalah kode sumbernya.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -47,41 +47,77 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="html">
-&#x3C;!DOCTYPE html&#x3E;
-&#x3C;html&#x3E;
-  &#x3C;?php $this-&#x3E;getThemeElement(&#x27;page/html/head&#x27;, $__forward) ?&#x3E;
-  &#x3C;body&#x3E;
+                  &#x3C;nav&#x3E;
+                    &#x3C;div class=&#x22;nav-wrapper&#x22;&#x3E;
+                      &#x3C;a href=&#x22;#!&#x22; class=&#x22;brand-logo&#x22;&#x3E;Logo&#x3C;/a&#x3E;
+                      &#x3C;a href=&#x22;#&#x22; data-target=&#x22;mobile-demo&#x22; class=&#x22;sidenav-trigger&#x22;&#x3E;&#x3C;i class=&#x22;material-icons&#x22;&#x3E;menu&#x3C;/i&#x3E;&#x3C;/a&#x3E;
+                      &#x3C;ul class=&#x22;right hide-on-med-and-down&#x22;&#x3E;
+                        &#x3C;li&#x3E;&#x3C;a href=&#x22;&#x3C;?=base_url()?&#x3E;&#x22;&#x3E;Test&#x3C;/a&#x3E;&#x3C;/li&#x3E;
 
-    &#x3C;div class=&#x22;container&#x22;&#x3E;
-      &#x3C;div class=&#x22;row&#x22;&#x3E;
-        &#x3C;div class=&#x22;col s12&#x22;&#x3E;
-          &#x3C;h1&#x3E;&#x3C;small style=&#x22;color: rgba(0,0,0,0.5);&#x22;&#x3E;Error 404&#x3C;/small&#x3E; Notfound&#x3C;/h1&#x3E;
-          &#x3C;p&#x3E;Oops, looks like this page doesn&#x27;t exist&#x3C;/p&#x3E;
-          &#x3C;hr&#x3E;
-          &#x3C;h5&#x3E;Back to &#x3C;a href=&#x22;&#x3C;?=base_url()?&#x3E;&#x22;&#x3E;Homepage&#x3C;/a&#x3E;&#x3C;/h5&#x3E;
-        &#x3C;/div&#x3E;
-      &#x3C;/div&#x3E;
-    &#x3C;/div&#x3E;
+                      &#x3C;/ul&#x3E;
+                    &#x3C;/div&#x3E;
+                  &#x3C;/nav&#x3E;
 
-    &#x3C;!-- jQuery, Bootstrap.js, jQuery plugins and Custom JS code --&#x3E;
-    &#x3C;?php $this-&#x3E;getJsFooter(); ?&#x3E;
-
-    &#x3C;!-- Load and execute javascript code used only in this page --&#x3E;
-    &#x3C;script&#x3E;
-      $(document).ready(function(e){
-        &#x3C;?php $this-&#x3E;getJsReady(); ?&#x3E;
-      });
-      &#x3C;?php $this-&#x3E;getJsContent(); ?&#x3E;
-    &#x3C;/script&#x3E;
-  &#x3C;/body&#x3E;
-&#x3C;/html&#x3E;
+                  &#x3C;ul class=&#x22;sidenav&#x22; id=&#x22;mobile-demo&#x22;&#x3E;
+                    &#x3C;li&#x3E;&#x3C;a href=&#x22;&#x3C;?=base_url()?&#x3E;&#x22;&#x3E;Test&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                  &#x3C;/ul&#x3E;
                 </highlight-code>
               </div>
             </div>
 
-            <h2>Menyesuaikan Controller Notfound</h2>
+            <h2>Panggil ke dalam layout <code>col-1</code></h2>
             <p>
-              Setelah layoutnya selesai, tinggal penyesuaian di <code>app/controller/notfound.php</code>.
+              Setelah view component-nya selesai, sekarang panggil view component tersebut melaui layout <code>col-1.php</code>.
+              Berikut ini adalah kode sumbernya
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="html">
+                  &#x3C;!DOCTYPE html&#x3E;
+                  &#x3C;html&#x3E;
+                    &#x3C;?php $this-&#x3E;getThemeElement(&#x27;page/html/head&#x27;, $__forward) ?&#x3E;
+                    &#x3C;body&#x3E;
+                      &#x3C;!-- Panggil view component navbar --&#x3E;
+                      &#x3C;?php $this-&#x3E;getThemeElement(&#x27;page/html/navbar&#x27;, $__forward) ?&#x3E;
+
+                      &#x3C;?php $this-&#x3E;getThemeContent() ?&#x3E;
+
+                      &#x3C;!-- jQuery, Bootstrap.js, jQuery plugins and Custom JS code --&#x3E;
+                      &#x3C;?php $this-&#x3E;getJsFooter(); ?&#x3E;
+
+                      &#x3C;!-- Load and execute javascript code used only in this page --&#x3E;
+                      &#x3C;script&#x3E;
+                        $(document).ready(function(e){
+                          $(&#x27;.sidenav&#x27;).sidenav();
+                          &#x3C;?php $this-&#x3E;getJsReady(); ?&#x3E;
+                        });
+                        &#x3C;?php $this-&#x3E;getJsContent(); ?&#x3E;
+                      &#x3C;/script&#x3E;
+                    &#x3C;/body&#x3E;
+                  &#x3C;/html&#x3E;
+                </highlight-code>
+              </div>
+            </div>
+
+            <h2>Mencoba tampilan navbar</h2>
+            <p>
+              Untuk mencoba halaman dengan view component navbar, cukup ketikan buka url seperti dibawah ini.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -102,79 +138,45 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-&#x3C;?php
-/**
- * Controller class for throw 404 response code
- *
- * @package SemeFramework
- * @since SemeFramework 1.0
- *
- * @codeCoverageIgnore
- */
-class NotFound extends SENE_Controller
-{
-    public function __construct()
-    {
-        parent::__construct();
-    }
-    public function index()
-    {
-        $data = array();
-        header(&#x22;HTTP/1.0 404 Not Found&#x22;);
-        $this-&#x3E;setTheme(&#x27;front&#x27;);
-        $this-&#x3E;setTitle(&#x27;Notfound - Error 404&#x27;);
-        $this-&#x3E;loadLayout(&#x22;notfound&#x22;,$data);
-        $this-&#x3E;render();
-    }
-}
+                  http://localhost/seme_framework/
                 </highlight-code>
               </div>
             </div>
 
 
-            <h2>Mencoba halaman notfound</h2>
+            <h2>Referensi</h2>
             <p>
-              Untuk mencoba halaman notfound, cukup ketikan sembarang URL setelah base_url-nya. Lihat contoh dibawah ini
+              Berikut ini adalah referensi fungsi yang digunakan dalam tutorial ini.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  http://localhost/seme_framework/asdasdasad
-                </highlight-code>
-              </div>
-            </div>
+            <ol>
+              <li>
+                <a href="https://materializecss.com/navbar.html" target="_blank">Navbar materializeCSS <i class="fa fa-external-link"></i></a>
+              </li>
+              <li>
+                <NuxtLink to="/4.0.0/controller/getthemeelement/" target="_blank">getThemeElement <i class="fa fa-window-restore"></i></NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="/4.0.0/controller/loadlayout/" target="_blank">loadLayout <i class="fa fa-window-restore"></i></NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="/4.0.0/view/theme/" target="_blank">View Theme <i class="fa fa-window-restore"></i></NuxtLink>
+              </li>
+            </ol>
 
-            <hr>
           </div>
         </div>
       </div>
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/id/tutorial/introduction/" class="btn">
+          <nuxt-link to="/id/tutorial/" class="btn">
             <i class="fa fa-chevron-left"></i>
-            Tutorial: Introduction
+            Tutorial: Notfound Page
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/id/tutorial/navigation/" class="btn">
-            Tutorial: Navigation
+          <nuxt-link to="/id/tutorial/login-register/" class="btn">
+            Tutorial: Login Register
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
@@ -190,9 +192,9 @@ export default {
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'Halaman Notfound',
-      description: 'Pelajari pembuatan Halaman Notfound untuk Seme Framework 4',
-      notfoundex: require('~/assets/img/tutorial/notfound/notfound-page-example.png'),
+      title: 'Membuat Navigation',
+      description: 'Mari kita pelajari pembuatan navigation bar menggunakan Seme Framework 4',
+      navbar: require('~/assets/img/tutorial/navigation/navigation-bar.png'),
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -234,8 +236,7 @@ export default {
       ]
     }
   },
-  jsonld() {
-    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+  jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
   const items = this.breadcrumbs.map((item, index) => ({
     '@type': 'ListItem',
     position: index + 1,
@@ -261,9 +262,9 @@ export default {
       "image": [
         (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
       ],
-      "dateCreated": "2021-07-25T11:11:11+07:00",
-      "datePublished": "2021-07-25T11:11:11+07:00",
-      "dateModified": "2021-07-25T11:11:11+07:00",
+      "dateCreated": "2021-07-25T16:53:01+07:00",
+      "datePublished": "2021-07-25T16:53:01+07:00",
+      "dateModified": "2021-07-25T16:53:01+07:00",
       "author": {
         "@type": "Person",
         "gender": "Male",
