@@ -6,13 +6,13 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/tutorial/">Tutorial</NuxtLink></li>
-          <li class="unavailable">Dasar-dasar Perutean</li>
+          <li class="unavailable">Halaman Statis Dasar</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Pembuatan dan Perpindahan antar halaman statis</h1>
+            <h1 class="">Pembuatan dan Perpindahan antar halaman statis dasar</h1>
             <p>
               Setelah mempelajari <NuxtLink to="/id/tutorial/basic-routing/" target="_blank">perutean <i class="fa fa-window-restore"></i></NuxtLink>, kita akan belajar membuat halaman statis dan berpindah antar halaman tersebut
               Sebelum memulai tutorial ini, pastikan sudah <NuxtLink to="/id/downloads/" target="_blank">menginstall dan menjalankan <i class="fa fa-window-restore"></i></NuxtLink> Seme Framework.
@@ -56,11 +56,9 @@
               </div>
             </div>
 
-            <h2>Membuat contoh halaman dasar</h2>
+            <h2>Membuat Controller Produk</h2>
             <p>
-              Setelah membuka Direktori Seme Framework, buat file baru di dalam <code>app/controller/produk.php</code> untuk membuat Controller.
-            </p>
-            <p>
+              Buat file baru di dalam <code>app/controller/produk.php</code> untuk membuat Controller produk.
               Kemudian, tuliskan kode ini didalam file <code>produk.php</code> dan simpan.
             </p>
             <div class="macwindow">
@@ -98,9 +96,10 @@
               Setelah itu buka Browser, kemudian buka alamat <code>localhost/seme_framework/produk/</code> dan tekan enter untuk membuka halaman tersebut. Apabila, muncul tulisan seperti yang ada dicontroller berarti anda telah berhasil halaman baru.
             </p>
 
-            <h3>Merubah isi Controller <code>Home</code></h3>
+            <h3>Merubah isi Controller Home</h3>
             <p>
-              Untuk merubah controller home, cukup buka <code>app/controller/home.php</code> kemudian ubah isi file tersebut menjadi.
+              Sekarang kita akan mencoba untuk menambahkan link dengan tag <code>&#x3C;a href=&#x22;...&#x22;&#x3E;...&#x3C;/a&#x3E;</code> supaya dapat mengarah ke halaman Produk.
+              Untuk itu, kita akan merubah file <code>app/controller/home.php</code> kemudian ubah isi file tersebut menjadi sama seperti contoh kode dibawah ini.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -139,9 +138,11 @@
               Setelah itu buka Browser, kemudian buka alamat <code>localhost/seme_framework/</code> dan tekan enter untuk membuka halaman tersebut. Apabila, muncul tulisan seperti yang ada di controller home berarti anda telah berhasil merubah controller Home.
             </p>
 
-            <h3>Merubah isi Controller <code>Produk</code></h3>
+            <h3>Menambah <em>List</em> Produk</h3>
             <p>
-              Untuk merubah controller produk, cukup buka <code>app/controller/produk.php</code> kemudian ubah isi file tersebut menjadi.
+              Sekarang kita akan menambahkan list produk, yaitu produk A dan produk B.
+              Dan tidak lupa juga untuk menambahkan link kembali ke halaman utama juga dengan tag <code>a</code>.
+              Untuk itu buka file <code>app/controller/produk.php</code> dan ganti isinya seperti contoh kode dibawah ini.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -170,8 +171,8 @@
                     public function index(){
                       echo &#x27;Halaman Produk&#x27;;
                       echo &#x27;&#x3C;br&#x3E;&#x27;;
-                      echo &#x27;Produk a&#x27;;
-                      echo &#x27;Produk b&#x27;;
+                      echo &#x27;Produk A &#x3C;br&#x3E;&#x27;;
+                      echo &#x27;Produk B &#x3C;br&#x3E;&#x27;;
                       echo &#x27;Kembali ke &#x3C;a href=&#x22;&#x27;.base_url().&#x27;&#x22;&#x3E;Halaman Utama&#x3C;/a&#x3E;&#x27;;
                     }
                   }
@@ -184,49 +185,13 @@
 
             <h2>Membuat contoh halaman lanjutan</h2>
             <p>
-              Setelah membuka direktori Seme Framework, buat file baru di dalam <code>app/controller/produk/home.php</code> untuk membuat Controller.
-            </p>
-            <p>
-              Kemudian, tuliskan kode ini didalam file <code>produk/home.php</code> dan simpan.
-            </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  <?php
-                  class Home extends SENE_Controller {
-                    public function __construct(){
-                      parent::__construct();
-                    }
-                    public function index(){
-                      echo 'Nanti halaman produk akan tampil disini';
-                    }
-                  }
-                </highlight-code>
-              </div>
-            </div>
-            <p>
-              Setelah itu buka Browser, kemudian buka alamat <code>localhost/seme_framework/produk/</code> dan tekan enter untuk membuka halaman tersebut. Apabila, muncul tulisan seperti yang ada dicontroller berarti anda telah berhasil halaman baru.
+              Sekarang kita akan mencoba membuat contoh halaman lanjutan untuk produk, yaitu halaman detail produk.
             </p>
 
             <h3>Merubah isi Controller <code>Home</code></h3>
             <p>
-              Untuk merubah controller home, cukup buka <code>app/controller/home.php</code> kemudian ubah isi file tersebut menjadi.
+              Sekarang kita akan mencoba untuk menambahkan link dengan tag <code>&#x3C;a href=&#x22;...&#x22;&#x3E;...&#x3C;/a&#x3E;</code>.
+              Untuk itu, kita akan merubah file <code>app/controller/home.php</code> kemudian ubah isi file tersebut menjadi sama seperti contoh kode dibawah ini.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -253,9 +218,10 @@
                       parent::__construct();
                     }
                     public function index(){
-                      echo &#x27;Halaman utama&#x27;;
+                      echo &#x27;&#x3C;h1&#x3E;Halaman utama&#x3C;/h1&#x3E;&#x27;;
+                      echo &#x27;&#x3C;p&#x3E;Selamat datang di Toko Kamu&#x3C;/p&#x3E;&#x27;;
                       echo &#x27;&#x3C;br&#x3E;&#x27;;
-                      echo &#x27;Menuju ke halaman &#x3C;a href=&#x22;&#x27;.base_url().&#x27;produk&#x22;&#x3E;produk&#x3C;/a&#x3E;&#x27;;
+                      echo &#x27;Lihat &#x3C;a href=&#x22;&#x27;.base_url().&#x27;produk&#x22;&#x3E;Produk&#x3C;/a&#x3E;&#x27;;
                     }
                   }
                 </highlight-code>
@@ -265,9 +231,10 @@
               Setelah itu buka Browser, kemudian buka alamat <code>localhost/seme_framework/</code> dan tekan enter untuk membuka halaman tersebut. Apabila, muncul tulisan seperti yang ada di controller home berarti anda telah berhasil merubah controller Home.
             </p>
 
-            <h3>Merubah isi Controller <code>Produk</code></h3>
+            <h3>Menambahkan Detail Produk</h3>
             <p>
-              Untuk merubah controller produk, cukup buka <code>app/controller/produk/home.php</code> kemudian ubah isi file tersebut menjadi.
+              Sekarang kita akan menambahkan 2 metode baru, yaitu metode <code>a()</code> dan <code>b()</code> pada kelas <code>Produk</code>.
+              Sekarang ganti isi file <code>app/controller/produk/home.php</code> dengan kode sumber seperti dibawah ini.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -296,9 +263,24 @@
                     public function index(){
                       echo &#x27;Halaman Produk&#x27;;
                       echo &#x27;&#x3C;br&#x3E;&#x27;;
-                      echo &#x27;Produk a&#x27;;
-                      echo &#x27;Produk b&#x27;;
-                      echo &#x27;Kembali ke &#x3C;a href=&#x22;&#x27;.base_url().&#x27;&#x3E;Halaman Utama&#x3C;/a&#x3E;&#x27;;
+                      echo ke &#x3C;a href=&#x22;&#x27;.base_url().&#x27;produk/a/&#x22;&#x3E;Produk A&#x3C;/a&#x3E;&#x3C;br&#x3E;&#x27;;
+                      echo ke &#x3C;a href=&#x22;&#x27;.base_url().&#x27;produk/b/&#x22;&#x3E;Produk B&#x3C;/a&#x3E;&#x3C;br&#x3E;&#x27;;
+                      echo &#x27;Kembali ke &#x3C;a href=&#x22;&#x27;.base_url().&#x27;&#x22;&#x3E;Halaman Utama&#x3C;/a&#x3E;&#x27;;
+                    }
+                    public function a(){
+                      echo &#x27;&#x3C;h1&#x3E;Produk A&#x3C;/h1>&#x27;;
+                      echo &#x27;&#x3C;p&#x3E;Produk A cocok untuk dipakai di musim hujan&#x3C;/p&#x3E;&#x27;;
+                      echo &#x27;&#x3C;p style=&#x22;text-decoration: line-through&#x22;&#x3E;Harga IDR 150.000&#x3C;/p&#x3E;&#x27;;
+                      echo &#x27;&#x3C;p&#x3E;Harga IDR 125.000&#x3C;/p&#x3E;&#x27;;
+                      echo &#x27;&#x3C;br&#x3E;&#x27;;
+                      echo &#x27;Kembali ke &#x3C;a href=&#x22;&#x27;.base_url().&#x27;produk&#x22;&#x3E;Produk&#x3C;/a&#x3E;&#x27;;
+                    }
+                    public function b(){
+                      echo &#x27;&#x3C;h1&#x3E;Produk B&#x3C;/h1&#x3E;&#x27;;
+                      echo &#x27;&#x3C;p&#x3E;Produk B cocok untuk dipakai di musim panas&#x3C;/p&#x3E;&#x27;;
+                      echo &#x27;&#x3C;p&#x3E;Harga IDR 150.000&#x3C;/p&#x3E;&#x27;;
+                      echo &#x27;&#x3C;br&#x3E;&#x27;;
+                      echo &#x27;Kembali ke &#x3C;a href=&#x22;&#x27;.base_url().&#x27;produk&#x22;&#x3E;Produk&#x3C;/a&#x3E;&#x27;;
                     }
                   }
                 </highlight-code>
@@ -344,7 +326,7 @@ export default {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Pembuatan Halaman Statis',
-      description: 'Mari kita pahami dan pelajari bagaimana cara Pembuatan Halaman Statis dan perpindahan halamanya dengan Seme Framework',
+      description: 'Mari kita pahami dan pelajari bagaimana cara Pembuatan Halaman Statis dan perpindahan halamanya dengan Seme Framework 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

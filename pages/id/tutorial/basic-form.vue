@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/tutorial/">Tutorial</NuxtLink></li>
-          <li class="unavailable">Dasar-dasar Perutean</li>
+          <li class="unavailable">Dasar Form HTML</li>
         </ul>
       </nav>
       <div class="columns">
@@ -189,8 +189,8 @@ export default {
       fr: require('~/assets/img/first-run.png'),
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'Pembuatan Halaman Statis',
-      description: 'Mari kita pahami dan pelajari bagaimana cara Pembuatan Halaman Statis dan perpindahan halamanya dengan Seme Framework',
+      title: 'Konsep Dasar Form HTML',
+      description: 'Mari kita pahami dan pelajari bagaimana konsep dasar Form HTML sebelum menggunakan Seme Framework 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -261,7 +261,7 @@ export default {
         ],
         "dateCreated": "2020-06-25T12:23:01+07:00",
         "datePublished": "2020-06-25T13:33:42+07:00",
-        "dateModified": "2021-06-25T13:34:39+07:00",
+        "dateModified": "2021-07-25T13:34:39+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
