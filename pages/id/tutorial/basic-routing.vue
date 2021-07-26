@@ -29,7 +29,81 @@
               Setelah berhasil <NuxtLink to="/id/downloads/" target="_blank">mendownload dan menginstall Seme Framework <i class="fa fa-window-restore"></i></NuxtLink> sehingga dapat dibuka melalui browser dengan alamat <code>http://localhost/seme_framework/</code>.
               Maka, sudah saatnya kita akan mempelajari kelas apa saja yang dieksekusi oleh Seme Framework ketika browser membuka alamat tersebut.
             </p>
+
             <amp-img layout="responsive" width="660" height="294" :src="fr" alt="Seme Framework di Localhost menggunakan XAMPP"></amp-img>
+            <h2>Mengenal nama lain dari Alamat Rute</h2>
+            <p>
+              Alamat rute di pada ruang lingkup aplikasi berbasis web seringkali diistilahkan dengan <code>URL</code> atau <code>URI</code>.
+              URL atau URI ini merupakan penyebutan nama lain dari Alamat Rute yang digunakan oleh Browser.
+              Tetapi, antara URI dan URL ada bedanya. Berikut ini adalah perbedaanya.
+            </p>
+            <h3>Apa itu URL?</h3>
+            <p>
+              URL atau <em>Uniform Resource Locator</em> adalah alamat yang digunakan oleh browser untuk mengidentifikasi sumber daya yang ada di internet yang dituliskan dalam satu baris teks.
+            </p>
+            <p>
+              URL merupakan bagian dari URI.
+            </p>
+            <p>
+              URL menunjuk ke suatu halaman web yang tidak menggunakan <code>scheme</code> dan boleh tanpa menggunakan  <code>code fragment</code>.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  seme.framework.web.id/id/globals
+                </highlight-code>
+              </div>
+            </div>
+
+            <h3>Apa itu URI?</h3>
+            <p>
+              URI atau <em>Uniform Resurce Identifier</em> digunakan browser untuk mengidentifikasi dokumen tunggal dan dituliskan dalam satu baris teks.
+            </p>
+            <p>
+              URI digunakan untuk mengidentifikasi suatu <em>resource</em> dengan lokasi atau nama, ataupun keduanya.
+            </p>
+            <p>
+              URL menunjuk ke suatu halaman web yang menggunakan <code>scheme</code> beserta menggunakan <code>code fragment</code> secara lengkap.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  https://seme.framework.web.id/id/globals/#fungsi_base_url
+                </highlight-code>
+              </div>
+            </div>
 
             <h2>Perutean Standar</h2>
             <p>
@@ -47,99 +121,87 @@
             <h2>Pemetaan Rute</h2>
             <p>
               Supaya tidak bingung, Seme Framework mempermudah pemetaan rute dengan cara setiap alamat akan dipisahkan dalam beberapa segmen.
-              Pemisahan ini dibatasi dengan penggunaan garis miring (/) yang ada pada alamat browser.
-            </p>
-            <p>
-              Namun, harus hati-hati juga, segmentasi rute ini hanya berpengaruh terhadap alamat yang tertulis setelah <code>base_url</code>.
+              Pemisahan ini dibatasi dengan penggunaan <code>garis miring (<b>/</b>)</code> yang ada pada alamat browser.
+              Namun, harus hati-hati juga, segmentasi rute ini hanya berpengaruh terhadap alamat yang tertulis setelah <NuxtLink to="/id/globals/#base_url" target="_blank" title="Pelajari selengkapnya tentang fungsi global base_url() di Seme Framework">base_url <i class="fa fa-window-restore"></i></NuxtLink> .
               Lihat <NuxtLink to="/id/configuration/" target="_blank">pengaturan base_url di halaman pengaturan <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
             <h3>Segmentasi Alamat Rute</h3>
             <p>
-              Diasumsikan nilai dari pengaturan <code>base_url</code> adalah <code>localhost/sf/</code>.
+              Diasumsikan nilai dari pengaturan <NuxtLink to="/id/globals/#base_url" target="_blank" title="Pelajari selengkapnya tentang fungsi global base_url() di Seme Framework">base_url <i class="fa fa-window-restore"></i></NuxtLink> adalah <code>localhost/sf/</code>.
               Maka, alamat setelah <code>localhost/sf/</code> akan menjadi dipisah menjadi beberapa segmen.
-              Mari kita lihat contoh.
+              Mari kita lihat contoh alamat URL.
             </p>
-            <p>
-              Contoh: <code>localhost/sf/produk/detail/rolcis-keju-gulung</code>
-            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  localhost/sf/produk/detail/rolcis_keju_gulung
+                </highlight-code>
+              </div>
+            </div>
             <p>
               Dari contoh tersebut akan dapat ditemukan 3 segmen yaitu:
               <ol>
                 <li><b>produk</b>.</li>
                 <li><b>detail</b>.</li>
-                <li><b>rolciz</b>.</li>
+                <li><b>rolciz_keju_gulung</b>.</li>
               </ol>
             </p>
             <h4>Pemetaan Segmen Alamat terhadap kelas controller</h4>
             <p>
-              Dari hasil penelaahan alamat segmen, dalam Seme Framework dapat dipetakan menjadi dua alternatif yaitu:
+              Dari hasil penelaahan alamat segmen, dalam Seme Framework dapat dipetakan menjadi dua kasus alternatif yaitu:
               <ol>
                 <li>
+                  <p><b>Alternatif ke-1</b></p>
                   <p>
                     Segmen pertama <b>produk</b> akan mengarah kepada kelas <code>Produk</code> yang lokasi filenya berada di <code>app/controller/produk.php</code>.
                   </p>
                   <p>
-                    Kemudian segmen kedua <b>detail</b> akan mengarah kepada metode <b>detail()</b> yang ada di dalam kelas <code>produk</code>.
+                    Kemudian segmen kedua <b>detail</b> akan mengarah kepada metode <b>detail()</b> yang ada di dalam kelas <code>Produk</code>.
                   </p>
                   <p>
-                    Dan segmen ketiga <b>rolciz</b> akan mengarah kepada isi dari parameter metode <b>detail()</b> yang ada di dalam kelas <code>produk</code>.
+                    Dan segmen ketiga <b>rolciz_keju_gulung</b> akan mengarah kepada isi dari parameter metode <b>detail()</b> yang ada di dalam kelas <code>Produk</code>.
                   </p>
                   <p>&nbsp;</p>
                 </li>
                 <li>
+                  <p><b>Alternatif ke-2</b></p>
                   <p>
-                    Segmen pertama <b>produk</b> akan mengarah kepada folder atau direktori <code>app/controller/produk</code>.
+                    Segmen pertama <b>produk</b> akan mengarah kepada folder atau direktori <code>app/controller/produk/</code>.
                   </p>
                   <p>
                     Kemudian segmen kedua <b>detail</b> akan mengarah kepada kelas <b>detail</b> yang berlokasi di <code>app/controller/produk/detail.php</code>.
                   </p>
                   <p>
-                    Dan segmen ketiga <b>rolciz</b> akan mengarah kepada metode <b>rolciz()</b> dari kelas <code>detail</code>.
+                    Dan segmen ketiga <b>rolciz_keju_gulung</b> akan mengarah kepada metode <b>rolciz_keju_gulung()</b> dari kelas <code>detail</code>.
                   </p>
                 </li>
               </ol>
             </p>
             <p>
-              Baik dari alternatif ke-1 ataupun ke-2, tidak ada yang salah. Seme Framework secara <b>otomatis</b> akan memilih pemetaan yang ada direktorinya terlebih dahulu (alternatif ke-2).
-              Apabila tidak ada direktori <b>produk</b> di dalam <code>app/controller</code>, maka Seme Framework akan menggunakan pemetaan alternatif ke-1.
+              Baik dari <b>Alternatif ke-1</b> ataupun <b>Alternatif ke-2</b>, tidak ada yang salah. Seme Framework secara <b>otomatis</b> akan memilih pemetaan yang ada direktorinya terlebih dahulu (<b>Alternatif ke-2</b>).
+              Apabila tidak ada direktori <b>produk</b> di dalam <code>app/controller</code>, maka Seme Framework akan menggunakan pemetaan <b>Alternatif ke-1</b>.
             </p>
             <p>
               Jadi dalam istilah bahasa pemrogramannya, Seme Framework akan menggunakan <b>Alternatif ke-2</b> kemudian <b>Alternatif ke-1</b> akan digunakan sebagai <code>fallback</code>.
             </p>
 
-            <h2>Mengenal nama lain dari Alamat Rute</h2>
-            <p>
-              Alamat rute di pada ruang lingkup aplikasi berbasis web seringkali diistilahkan dengan <code>URL</code> atau <code>URI</code>.
-              URL atau URI ini merupakan penyebutan nama lain dari Alamat Rute yang digunakan oleh Browser.
-              Tetapi, antara URI dan URL ada bedanya. Berikut ini adalah perbedaanya.
-            </p>
-            <h3>Apa itu URL?</h3>
-            <p>
-              URL atau <em>Uniform Resource Locator</em> adalah alamat yang digunakan oleh browser untuk mengidentifikasi sumber daya yang ada di internet yang dituliskan dalam satu baris teks.
-            </p>
-            <p>
-              URL merupakan bagian dari URI.
-            </p>
-            <p>
-              URL menunjuk ke suatu halaman web yang menggunakan <code>scheme</code> tanpa menggunakan code fragment.
-            </p>
-            <p>
-              Contoh: <a href="https://seme.framework.web.id/id/globals" target="_blank">https://seme.framework.web.id/id/globals</a>.
-            </p>
 
-            <h3>Apa itu URI?</h3>
-            <p>
-              URI atau <em>Uniform Resurce Identifier</em> digunakan browser untuk mengidentifikasi dokumen tunggal dan dituliskan dalam satu baris teks.
-            </p>
-            <p>
-              URI digunakan untuk mengidentifikasi suatu <em>resource</em> dengan lokasi atau nama, ataupun keduanya.
-            </p>
-            <p>
-              URL menunjuk ke suatu halaman web yang menggunakan <code>scheme</code> tanpa menggunakan code fragment.
-            </p>
-            <p>
-              Contoh: <a href="https://seme.framework.web.id/id/globals/#fungsi_base_url" target="_blank">https://seme.framework.web.id/id/globals/#fungsi_base_url</a>.
-            </p>
           </div>
         </div>
       </div>

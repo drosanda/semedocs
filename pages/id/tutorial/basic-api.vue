@@ -30,7 +30,7 @@
               <li>Menjalankan Apache dan MySQL melalui XAMPP</li>
               <li>IDE atau Editor Teks sudah terinstall dan bisa digunakan</li>
               <li>Peramban / Browser seperti Chrome atau Firefox</li>
-              <li>Download dan Install <a href="https://www.postman.com/downloads/" target="_blank">Postman</a> untuk melakukan pengujian API</li>
+              <li>Download dan Install <a href="https://www.postman.com/downloads/" target="_blank">Postman <i class="fa fa-external-link"></i></a> untuk melakukan pengujian API</li>
               <li><NuxtLink to="/id/tutorial/introduction/">Menyelesaikan tutorial pertama</NuxtLink></li>
               <li><NuxtLink to="/id/tutorial/get-data/">Menyelesaikan tutorial kedua</NuxtLink></li>
             </ul>

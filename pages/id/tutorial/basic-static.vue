@@ -14,17 +14,47 @@
           <div class="content">
             <h1 class="">Pembuatan dan Perpindahan antar halaman statis</h1>
             <p>
-              Setelah mempelajari <NuxtLink to="/id/tutorial/basic-routing/">perutean</NuxtLink>, kita akan belajar membuat halaman statis dan berpindah antar halaman tersebut
-            </p>
-            <p>
-              Sebelum memulai tutorial ini, pastikan sudah <NuxtLink to="/id/downloads/">menginstall dan menjalankan</NuxtLink> Seme Framework.
-            </p>
-            <p>
+              Setelah mempelajari <NuxtLink to="/id/tutorial/basic-routing/" target="_blank">perutean <i class="fa fa-window-restore"></i></NuxtLink>, kita akan belajar membuat halaman statis dan berpindah antar halaman tersebut
+              Sebelum memulai tutorial ini, pastikan sudah <NuxtLink to="/id/downloads/" target="_blank">menginstall dan menjalankan <i class="fa fa-window-restore"></i></NuxtLink> Seme Framework.
               Diasumsikan Seme Framework berjalan menggunakan <code>XAMPP</code> dan diinstall di <code>D:/XAMPP/htdocs/seme_framework</code>.
-            </p>
-            <p>
               Kemudian buka aplikasi Atom IDE, VsCode atau notepad++. Setelah itu pilih <code>file / Open Directory</code> dan arahkan ke tempat folder atau direktori instalasi Seme Framework.
             </p>
+
+            <h2>Menyetel pengaturan base_url()</h2>
+            <p>
+              Sebelum melanjutkan, periksa dulu nilai dari variabel <code>$site</code> pada file <code>app/config/development.php</code>, pastikan nilainya <code>http://localhost/seme_framework/</code>.
+              Untuk lebih jelasnya lihat contoh pengaturannya.
+            </p>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  ...
+                  /**
+                   * Site Base URL with http:// or https:// prefix and trailing slash
+                   * @var string
+                   */
+                  $site = &#x22;http://localhost/seme_framework/&#x22;;
+                  ...
+                </highlight-code>
+              </div>
+            </div>
 
             <h2>Membuat contoh halaman dasar</h2>
             <p>
@@ -142,7 +172,7 @@
                       echo &#x27;&#x3C;br&#x3E;&#x27;;
                       echo &#x27;Produk a&#x27;;
                       echo &#x27;Produk b&#x27;;
-                      echo &#x27;Kembali ke &#x3C;a href=&#x22;&#x27;.base_url().&#x27;&#x3E;Halaman Utama&#x3C;/a&#x3E;&#x27;;
+                      echo &#x27;Kembali ke &#x3C;a href=&#x22;&#x27;.base_url().&#x27;&#x22;&#x3E;Halaman Utama&#x3C;/a&#x3E;&#x27;;
                     }
                   }
                 </highlight-code>
