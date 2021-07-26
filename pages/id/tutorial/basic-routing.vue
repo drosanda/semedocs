@@ -26,7 +26,7 @@
             </p>
 
             <p>
-              Setelah berhasil <NuxtLink to="id/downloads/">mendownload dan menginstall Seme Framework</NuxtLink> sehingga dapat dibuka melalui browser dengan alamat <code>http://localhost/seme_framework/</code>.
+              Setelah berhasil <NuxtLink to="/id/downloads/" target="_blank">mendownload dan menginstall Seme Framework <i class="fa fa-window-restore"></i></NuxtLink> sehingga dapat dibuka melalui browser dengan alamat <code>http://localhost/seme_framework/</code>.
               Maka, sudah saatnya kita akan mempelajari kelas apa saja yang dieksekusi oleh Seme Framework ketika browser membuka alamat tersebut.
             </p>
             <amp-img layout="responsive" width="660" height="294" :src="fr" alt="Seme Framework di Localhost menggunakan XAMPP"></amp-img>
@@ -51,7 +51,7 @@
             </p>
             <p>
               Namun, harus hati-hati juga, segmentasi rute ini hanya berpengaruh terhadap alamat yang tertulis setelah <code>base_url</code>.
-              Lihat <NuxtLink to="id/configuration/" target="_blank">pengaturan base_url di halaman pengaturan <i class="fa fa-external-link"></i></NuxtLink>.
+              Lihat <NuxtLink to="/id/configuration/" target="_blank">pengaturan base_url di halaman pengaturan <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
             <h3>Segmentasi Alamat Rute</h3>
             <p>
