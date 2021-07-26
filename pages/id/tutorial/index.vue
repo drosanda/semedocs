@@ -34,6 +34,7 @@
             </p>
             <ul>
               <li><NuxtLink to="/id/tutorial/introduction/">Pendahuluan</NuxtLink>, yang memberi Anda gambaran umum tentang apa yang diharapkan.</li>
+              <li><NuxtLink to="/id/tutorial/notfound-page/">Halaman Notfound</NuxtLink>, pelajari tentang cara pembuatan halaman notfound.</li>
               <li><NuxtLink to="/id/tutorial/get-data/">Tema dan tata letak</NuxtLink>, yang akan mengajarkan Anda dasar-dasar membuat tampilan menggunakan Seme Framework.</li>
               <li><NuxtLink to="/id/tutorial/basic-api/">Building API</NuxtLink>, pelajari lebih banyak tentang database, controller, dan model.</li>
             </ul>
