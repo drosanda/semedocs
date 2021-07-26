@@ -41,12 +41,12 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  | app/
-                  |- view/
-                  |-- [THEME_NAME]/
-                  |--- ...
-                  |--- script.json
-                  |--- ...
+                  app/
+                  └── view/
+                   └── [THEME_NAME]/
+                    ├──  ...
+                    ├──  script.json
+                    └──  ...
                 </highlight-code>
               </div>
             </div>

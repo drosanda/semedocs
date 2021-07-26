@@ -53,7 +53,8 @@
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="php">&#x3C;?php
+                <highlight-code lang="php">
+&#x3C;?php
 class Home extends SENE_Controller
 {
     public function __construct()
@@ -104,15 +105,15 @@ class Home extends SENE_Controller
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
--| app/
----| view/
------| front/
--------| theme.json
--------| script.json
--------| page/
----------| col-1.php
------------| html/
--------------| head.php
+app/
+└── view/
+ └── front/
+  ├── theme.json
+   ├── script.json
+   └── page/
+    ├── col-1.php
+    └── html/
+     └── head.php
                 </highlight-code>
               </div>
             </div>
@@ -144,11 +145,20 @@ class Home extends SENE_Controller
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="json">
-[
-  &#x22;&#x3C;link rel=\&#x22;stylesheet\&#x22; href=\&#x22;https://fonts.googleapis.com/icon?family=Material+Icons\&#x22; \/&#x3E;&#x22;,
-  &#x22;&#x3C;link rel=\&#x22;stylesheet\&#x22; href=\&#x22;https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css\&#x22; \/&#x3E;&#x22;
-]
+                <highlight-code lang="php">
+                  {
+                    &#x22;link&#x22;:
+                    [
+                      {
+                        &#x22;rel&#x22;: &#x22;stylesheet&#x22;,
+                        &#x22;href&#x22;: &#x22;https://fonts.googleapis.com/icon?family=Material+Icons&#x22;
+                      },
+                      {
+                        &#x22;rel&#x22;: &#x22;stylesheet&#x22;,
+                        &#x22;href&#x22;: &#x22;https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css&#x22;
+                      }
+                    ]
+                  }
                 </highlight-code>
               </div>
             </div>
@@ -176,11 +186,18 @@ class Home extends SENE_Controller
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="json">
-[
-  &#x22;&#x3C;script src=\&#x22;https://code.jquery.com/jquery-3.5.1.min.js\&#x22;&#x3E;&#x3C;\/script&#x3E;&#x22;,
-  &#x22;&#x3C;script src=\&#x22;https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js\&#x22;&#x3E;&#x3C;\/script&#x3E;&#x22;
-]
+                <highlight-code lang="php">
+                  {
+                    &#x22;script&#x22;:
+                    [
+                      {
+                        &#x22;src&#x22;: &#x22;https://code.jquery.com/jquery-3.5.1.min.js&#x22;
+                      },
+                      {
+                        &#x22;src&#x22;: &#x22;https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js&#x22;
+                      }
+                    ]
+                  }
                 </highlight-code>
               </div>
             </div>
@@ -207,22 +224,23 @@ class Home extends SENE_Controller
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="html">&#x3C;!DOCTYPE html&#x3E;
+                <highlight-code lang="html">
+&#x3C;!DOCTYPE html&#x3E;
 &#x3C;html&#x3E;
   &#x3C;?php $this-&#x3E;getThemeElement(&#x27;page/html/head&#x27;, $__forward) ?&#x3E;
   &#x3C;body&#x3E;
     &#x3C;?php $this-&#x3E;getThemeContent() ?&#x3E;
 
-  &#x9;&#x3C;!-- jQuery, Bootstrap.js, jQuery plugins and Custom JS code --&#x3E;
-  &#x9;&#x3C;?php $this-&#x3E;getJsFooter(); ?&#x3E;
+    &#x3C;!-- jQuery, Bootstrap.js, jQuery plugins and Custom JS code --&#x3E;
+    &#x3C;?php $this-&#x3E;getJsFooter(); ?&#x3E;
 
-  &#x9;&#x3C;!-- Load and execute javascript code used only in this page --&#x3E;
+    &#x3C;!-- Load and execute javascript code used only in this page --&#x3E;
     &#x3C;script&#x3E;
-  &#x9;&#x9;$(document).ready(function(e){
-  &#x9;&#x9;&#x9;&#x3C;?php $this-&#x3E;getJsReady(); ?&#x3E;
-  &#x9;&#x9;});
-  &#x9;&#x9;&#x3C;?php $this-&#x3E;getJsContent(); ?&#x3E;
-  &#x9;&#x3C;/script&#x3E;
+      $(document).ready(function(e){
+        &#x3C;?php $this-&#x3E;getJsReady(); ?&#x3E;
+      });
+      &#x3C;?php $this-&#x3E;getJsContent(); ?&#x3E;
+    &#x3C;/script&#x3E;
   &#x3C;/body&#x3E;
 &#x3C;/html&#x3E;
                 </highlight-code>
@@ -260,27 +278,28 @@ class Home extends SENE_Controller
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="html">&#x3C;head&#x3E;
-&#x9;&#x3C;meta charset=&#x22;utf-8&#x22;&#x3E;
-&#x9;&#x3C;meta name=&#x22;viewport&#x22; content=&#x22;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&#x22;&#x3E;
+                <highlight-code lang="html">
+&#x3C;head&#x3E;
+  &#x3C;meta charset=&#x22;utf-8&#x22;&#x3E;
+  &#x3C;meta name=&#x22;viewport&#x22; content=&#x22;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&#x22;&#x3E;
 
-&#x9;&#x3C;title&#x3E;&#x3C;?=$this-&#x3E;getTitle()?&#x3E;&#x3C;/title&#x3E;
+  &#x3C;title&#x3E;&#x3C;?=$this-&#x3E;getTitle()?&#x3E;&#x3C;/title&#x3E;
 
-&#x9;&#x3C;meta name=&#x22;description&#x22; content=&#x22;&#x3C;?=$this-&#x3E;getDescription()?&#x3E;&#x22;&#x3E;
-&#x9;&#x3C;meta name=&#x22;keyword&#x22; content=&#x22;&#x3C;?=$this-&#x3E;getKeyword()?&#x3E;&#x22;/&#x3E;
-&#x9;&#x3C;meta name=&#x22;author&#x22; content=&#x22;&#x3C;?=$this-&#x3E;getAuthor()?&#x3E;&#x22;&#x3E;
-&#x9;&#x3C;meta name=&#x22;robots&#x22; content=&#x22;&#x3C;?=$this-&#x3E;getRobots()?&#x3E;&#x22; /&#x3E;
+  &#x3C;meta name=&#x22;description&#x22; content=&#x22;&#x3C;?=$this-&#x3E;getDescription()?&#x3E;&#x22;&#x3E;
+  &#x3C;meta name=&#x22;keyword&#x22; content=&#x22;&#x3C;?=$this-&#x3E;getKeyword()?&#x3E;&#x22;/&#x3E;
+  &#x3C;meta name=&#x22;author&#x22; content=&#x22;&#x3C;?=$this-&#x3E;getAuthor()?&#x3E;&#x22;&#x3E;
+  &#x3C;meta name=&#x22;robots&#x22; content=&#x22;&#x3C;?=$this-&#x3E;getRobots()?&#x3E;&#x22; /&#x3E;
 
-&#x9;&#x3C;!-- Icons --&#x3E;
-&#x9;&#x3C;!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers --&#x3E;
-&#x9;&#x3C;link rel=&#x22;shortcut icon&#x22; href=&#x22;&#x3C;?=$this-&#x3E;getIcon()?&#x3E;&#x22;&#x3E;
-&#x9;&#x3C;!-- END Icons --&#x3E;
+  &#x3C;!-- Icons --&#x3E;
+  &#x3C;!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers --&#x3E;
+  &#x3C;link rel=&#x22;shortcut icon&#x22; href=&#x22;&#x3C;?=$this-&#x3E;getIcon()?&#x3E;&#x22;&#x3E;
+  &#x3C;!-- END Icons --&#x3E;
 
-&#x9;&#x3C;meta name=&#x22;msapplication-TileColor&#x22; content=&#x22;#353769&#x22;&#x3E;
-&#x9;&#x3C;meta name=&#x22;theme-color&#x22; content=&#x22;#353769&#x22;&#x3E;
-&#x9;&#x3C;?php $this-&#x3E;getAdditionalBefore()?&#x3E;
-&#x9;&#x3C;?php $this-&#x3E;getAdditional()?&#x3E;
-&#x9;&#x3C;?php $this-&#x3E;getAdditionalAfter()?&#x3E;
+  &#x3C;meta name=&#x22;msapplication-TileColor&#x22; content=&#x22;#353769&#x22;&#x3E;
+  &#x3C;meta name=&#x22;theme-color&#x22; content=&#x22;#353769&#x22;&#x3E;
+  &#x3C;?php $this-&#x3E;getAdditionalBefore()?&#x3E;
+  &#x3C;?php $this-&#x3E;getAdditional()?&#x3E;
+  &#x3C;?php $this-&#x3E;getAdditionalAfter()?&#x3E;
 &#x3C;/head&#x3E;
                 </highlight-code>
               </div>
@@ -326,7 +345,8 @@ class Home extends SENE_Controller
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="html">&#x3C;div class=&#x22;container&#x22;&#x3E;
+                <highlight-code lang="html">
+&#x3C;div class=&#x22;container&#x22;&#x3E;
   &#x3C;div class=&#x22;row&#x22;&#x3E;
     &#x3C;div class=&#x22;col m12 s12&#x22;&#x3E;
       &#x3C;div class=&#x22;card rounded preload-any&#x22;&#x3E;
@@ -590,7 +610,7 @@ export default {
         ],
         "dateCreated": "2020-06-11T10:12:00+07:00",
         "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-11T01:04:00+07:00",
+        "dateModified": "2021-07-25T11:11:11+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

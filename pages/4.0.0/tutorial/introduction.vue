@@ -103,15 +103,15 @@ class Home extends SENE_Controller
               </div>
               <div class="maccontent">
                 <highlight-code lang="plaintext">
--| app/
----| view/
------| front/
--------| theme.json
--------| script.json
--------| page/
----------| col-1.php
------------| html/
--------------| head.php
+                  app/
+                  └── view/
+                   └── front/
+                    ├── theme.json
+                     ├── script.json
+                     └── page/
+                      ├── col-1.php
+                      └── html/
+                       └── head.php
               </highlight-code>
               </div>
             </div>
