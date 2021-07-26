@@ -42,7 +42,7 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   # on mac
-                  /Application/XAMPP/htdocs/seme_framework
+                  /Applications/XAMPP/htdocs/seme_framework
 
                   # on linux
                   /opt/lampp/htdocs/seme_framework
@@ -52,7 +52,6 @@
                 </highlight-code>
               </div>
             </div>
-
 
 
             <h3>Install using GIT CLONE on Windows</h3>

@@ -42,7 +42,7 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   # di Mac
-                  /Application/XAMPP/htdocs/seme_framework
+                  /Applications/XAMPP/htdocs/seme_framework
 
                   # di linux
                   /opt/lampp/htdocs/seme_framework
