@@ -290,9 +290,158 @@
               Setelah itu buka Browser, kemudian buka alamat <code>localhost/seme_framework/produk/</code> dan tekan enter untuk membuka halaman tersebut. Apabila, muncul tulisan seperti yang ada di controller home berarti anda telah berhasil merubah controller Home.
             </p>
 
+            <h2>Menggunakan Direktori Produk</h2>
+            <p>
+              Sekarang kita akan mencoba membuat contoh halaman produk dengan menggunakan direktori.
+            </p>
+
+            <h3>Buat direktori <code>Produk</code></h3>
+            <p>
+              Pertama-tama, buat direktori <code>produk</code> didalam <code>app/controller</code>.
+            </p>
+
+            <h3>Pindahkan controller <code>produk</code></h3>
+            <p>
+              Kemudian, pindahkan controller <code>app/controller/produk.php</code> ke dalam direktori <code>app/controller/produk/produk.php</code>.
+            </p>
+
+            <h3>Ganti nama file dan nama kelas controller <code>Produk</code></h3>
+            <p>
+              Setelah itu ganti nama kelas dan controller <code>Produk</code> menjadi <code>Home</code>, begitu juga dengan nama filenya menjadi <code>app/controller/produk/home.php</code>
+              Untuk lebih lengkapnya, bisa lihat contoh kode dibawah ini.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  <?php
+                  class Home extends SENE_Controller {
+                    public function __construct(){
+                      parent::__construct();
+                    }
+                    public function index(){
+                      echo &#x27;Halaman Produk&#x27;;
+                      echo &#x27;&#x3C;br&#x3E;&#x27;;
+                      echo &#x27;ke &#x3C;a href=&#x22;&#x27;.base_url().&#x27;produk/a/&#x22;&#x3E;Produk A&#x3C;/a&#x3E;&#x3C;br&#x3E;&#x27;;
+                      echo &#x27;ke &#x3C;a href=&#x22;&#x27;.base_url().&#x27;produk/b/&#x22;&#x3E;Produk B&#x3C;/a&#x3E;&#x3C;br&#x3E;&#x27;;
+                      echo &#x27;Kembali ke &#x3C;a href=&#x22;&#x27;.base_url().&#x27;&#x22;&#x3E;Halaman Utama&#x3C;/a&#x3E;&#x27;;
+                    }
+                  }
+                </highlight-code>
+              </div>
+            </div>
+
+            <h3>Pergeseran Peta Segmen URL</h3>
+            <p>
+              Ketika kita menggunakan direktori untuk produknya, maka segmen URL pun berubah.
+              Dari asalnya merujuk pada metode didalam kelas produk, setelah menggunakan direktori maka link produk detail akan merujuk pada sebuah kelas bukan metode.
+              Pada contoh kali ini, kelas yang ditunjuk adalah <code>kelas A</code> dan <code>kelas B</code> didalam direktori <code>produk</code>.
+            </p>
+
+            <h3>Membuat Kelas A</h3>
+            <p>
+              Sekarang kita akan membuat kelas A untuk detail produk A, buat file baru dan simpan didalam <code>app/controlller/produk/a.php</code>.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  <?php
+                  class A extends SENE_Controller {
+                    public function __construct(){
+                      parent::__construct();
+                    }
+                    public function index(){
+                      echo &#x27;&#x3C;h1&#x3E;Produk A&#x3C;/h1>&#x27;;
+                      echo &#x27;&#x3C;p&#x3E;Produk A cocok untuk dipakai di musim hujan&#x3C;/p&#x3E;&#x27;;
+                      echo &#x27;&#x3C;p style=&#x22;text-decoration: line-through&#x22;&#x3E;Harga IDR 150.000&#x3C;/p&#x3E;&#x27;;
+                      echo &#x27;&#x3C;p&#x3E;Harga IDR 125.000&#x3C;/p&#x3E;&#x27;;
+                      echo &#x27;&#x3C;br&#x3E;&#x27;;
+                      echo &#x27;Kembali ke &#x3C;a href=&#x22;&#x27;.base_url().&#x27;produk&#x22;&#x3E;Produk&#x3C;/a&#x3E;&#x27;;
+                    }
+                  }
+                </highlight-code>
+              </div>
+            </div>
+
+            <h3>Membuat Kelas B</h3>
+            <p>
+              Sekarang kita akan membuat kelas B untuk detail produk B, buat file baru dan simpan didalam <code>app/controlller/produk/b.php</code>.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  <?php
+                  class A extends SENE_Controller {
+                    public function __construct(){
+                      parent::__construct();
+                    }
+                    public function index(){
+                      echo &#x27;&#x3C;h1&#x3E;Produk A&#x3C;/h1>&#x27;;
+                      echo &#x27;&#x3C;p&#x3E;Produk A cocok untuk dipakai di musim hujan&#x3C;/p&#x3E;&#x27;;
+                      echo &#x27;&#x3C;p style=&#x22;text-decoration: line-through&#x22;&#x3E;Harga IDR 150.000&#x3C;/p&#x3E;&#x27;;
+                      echo &#x27;&#x3C;p&#x3E;Harga IDR 125.000&#x3C;/p&#x3E;&#x27;;
+                      echo &#x27;&#x3C;br&#x3E;&#x27;;
+                      echo &#x27;Kembali ke &#x3C;a href=&#x22;&#x27;.base_url().&#x27;produk&#x22;&#x3E;Produk&#x3C;/a&#x3E;&#x27;;
+                    }
+                  }
+                </highlight-code>
+              </div>
+            </div>
+
+            <p>
+              Setelah itu buka Browser, kemudian buka alamat <code>localhost/seme_framework/produk/</code> dan tekan enter untuk membuka halaman tersebut. Apabila, muncul tulisan seperti yang ada di controller home berarti anda telah berhasil merubah controller Home.
+            </p>
+
             <h2>Kesimpulan</h2>
             <p>
-              Dari dua contoh diatas, dapat disimpulkan bahwa Seme Framework secara otomatis dapat menentukan pemetaan Alamat URL secara otomatis.
+              Dari tiga contoh diatas, dapat disimpulkan bahwa Seme Framework secara otomatis dapat menentukan pemetaan Alamat URL secara otomatis.
             </p>
 
           </div>

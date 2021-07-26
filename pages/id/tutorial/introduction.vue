@@ -23,7 +23,7 @@
             <p><b>Baiklah kita mulai!</b></p>
             <hr>
 
-            <h2>Hello World!</h2>
+            <h2 id="part1">Hello World!</h2>
             <p>
               Hello World sering digunakan untuk menggambarkan sintaks dasar dari suatu bahasa pemrograman.
               Tetapi pada Seme Framework, Hello World Hello World digunakan untuk memeriksa tujuan dasar MVC.
@@ -85,7 +85,7 @@
             </p>
             <hr>
 
-            <h2>Hello World bagian 2</h2>
+            <h2 id="part2">Hello World bagian 2</h2>
             <p>
               Pada hellow world bagian kedua, kita akan mencoba untuk mengimplementasikan Hello World melalui sebuah tema tampilan.
               Kita akan mulai membuat view, kemudian tema, lalu menyesuaikan controller supaya dapat memanggil tema yang sudah dibuat.
