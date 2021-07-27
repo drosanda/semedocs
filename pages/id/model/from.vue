@@ -6,16 +6,21 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/model">Model</NuxtLink></li>
-          <li class="unavailable">Metode from</li>
+          <li class="unavailable">Metode From</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Metode from</h1>
-            <p><b>From</b> method is part of database class builder for selecting table with its alias.</p>
-            <h2>Parameters</h2>
-            <p>Update method has 2 required parameters that is <b>table name</b> and <b>table alias</b>. Table alias are required for using <b>join</b> and <b>join_method</b></p>
+            <h1 class="">Metode From</h1>
+            <p>
+              Metode <code>from</code> digunakan untuk menandai tabel yang akan diambil datanya.
+              Metode ini bagian dari <b>Query Builder</b> yang dapat digunakan untuk menyusun kode <code>SQL FROM</code>.
+            </p>
+            <h2>Bentuk Umum</h2>
+            <p>
+              Berikut ini adalah bentuk metode <code>from</code> dari properti <code>$db</code> di <code>SENE_Model</code>.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -35,18 +40,32 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->db->from(string $table_name, string $table_alias): object
+                  $this->db->from(string $table_name [, string $table_alias='']): object
                 </highlight-code>
               </div>
             </div>
-            <h3>$table_name</h3>
-            <p><b>Table Name</b> refer to table name.</p>
-            <h3>$alias</h3>
-            <p><b>Alias</b> Aliased name of <b>$table_name</b>. required if you have call <b>join</b> method</p>
-            <h2>Example usage</h2>
-            <p>Here is the examples using select method. See the first of this page for full example.</p>
-            <h3>Basic Usage</h3>
-            <p>For example we assumed want to add new data in blog table. First, in the model:</p>
+
+            <h3>Parameters</h3>
+            <p>
+              Metode ini memiliki 1 parameter wajib yaitu $table_name.
+            </p>
+
+            <h4>$table_name</h4>
+            <p>
+              Nilai dari parameter <b>$table_name</b> dapat berisi nama tabel yang akan diambil datanya.
+            </p>
+
+            <h4>$table_alias</h4>
+            <p>
+              Nilai dari parameter <b>$table_alias</b> dapat berisi nama alias tabel.
+              Dalam Seme Framework alias ini wajib diisi ketika akan menggunakan metode <NuxtLink to="/4.0.0/model/join/">join</NuxtLink>.
+            </p>
+
+            <h2>Contoh Penggunaan</h2>
+            <p>
+              Berikut ini adalah contoh penggunaan untuk metode from pada file model <code>blog_model.php</code>.
+            </p>
+
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -82,6 +101,19 @@
               </div>
             </div>
 
+            <h2>Referensi Luar</h2>
+            <p>
+              Berikut ini adalah referensi luar yang digunakan dalam dokumen ini:
+              <ul>
+                <li>
+                  <a href="https://www.mysqltutorial.org/mysql-select-statement-query-data.aspx">MySQL SELECT <i class="fa fa-external-link"></i></a>
+                </li>
+                <li>
+                  <a href="https://www.mysqltutorial.org/mysql-alias/">MySQL ALIAS <i class="fa fa-external-link"></i></a>
+                </li>
+              </ul>
+            </p>
+
           </div>
         </div>
       </div>
@@ -111,8 +143,8 @@ export default {
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'Metode from',
-      description: 'Pelajari selengkapnya tentang Metode from dari SENE_Model di Seme Framework 4.0.0',
+      title: 'Metode From',
+      description: 'Pelajari selengkapnya tentang metode from dari properti $db di SENE_Model pada Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -182,7 +214,7 @@ export default {
       ],
       "dateCreated": "2020-06-11T10:12:00+07:00",
       "datePublished": "2020-06-11T10:12:00+07:00",
-      "dateModified": "2021-06-11T01:04:00+07:00",
+      "dateModified": "2021-07-27T22:48:00+07:00",
       "author": {
         "@type": "Person",
         "gender": "Male",

@@ -13,12 +13,15 @@
         <div class="column">
           <div class="content">
             <h1 class="">Metode Select</h1>
-            <p>Metode select merupakan metode untuk melaksanakan perintah <code>SELECT</code> dari SQL (<em>Structure Query Language</em>) melalui SENE_Model.</p>
-            <p>Metode ini merupakan salah satu pembangun query SQL <b>Query Builder</b> untuk memilih nama kolom yang akan ditarik datanya dari tabel.</p>
+            <p>
+              Metode select merupakan metode untuk melaksanakan perintah <code>SELECT</code> dari SQL (<em>Structure Query Language</em>) melalui SENE_Model.
+              Metode ini merupakan salah satu pembangun query SQL <b>Query Builder</b> untuk memilih nama kolom yang akan ditarik datanya dari tabel.
+            </p>
 
-            <h2>Parameter</h2>
-            <p>Metode select memiliki satu parameter wajib yaitu <b>$column_name</b>.</p>
-
+            <h2>Bentuk Umum</h2>
+            <p>
+              Berikut ini adalah bentuk umum dari metode <code>select</code> dari properti <code>$db</code> yang ada di kelas <code>SENE_Model</code>.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -43,8 +46,15 @@
               </div>
             </div>
 
-            <h3>$column_name</h3>
-            <p><b>$column_name</b> dapat berisi nama kolom dari tabel yang dipilih melalui metode <code>from</code> maupun metode <code>join</code>.</p>
+            <h3>Parameter</h3>
+            <p>
+              Metode ini memiliki 1 parameter wajib yaitu $column_name.
+            </p>
+
+            <h4>$column_name</h4>
+            <p>
+              Nilai dari <b>$column_name</b> dapat berisi nama kolom dari tabel yang digunakan melalui metode <NuxtLink to="/4.0.0/model/from/">from</NuxtLink> maupun metode <NuxtLink to="/4.0.0/model/join/">join</NuxtLink>.
+            </p>
 
             <h2>Contoh penggunaan</h2>
             <p>Berikut ini adalah contoh penggunaan dari metode Select.</p>
@@ -143,6 +153,16 @@
               </div>
             </div>
 
+            <h2>Referensi Luar</h2>
+            <p>
+              Berikut ini adalah referensi luar yang digunakan dalam dokumen ini:
+              <ul>
+                <li>
+                  <a href="https://www.mysqltutorial.org/mysql-select-statement-query-data.aspx">MySQL SELECT <i class="fa fa-external-link"></i></a>
+                </li>
+              </ul>
+            </p>
+
             <div class="nav-bottom">
               <div class="nav-bottom-left">
                 <nuxt-link to="/id/model/select_as/" class="btn">
@@ -172,7 +192,7 @@ export default {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Metode Select',
-      description: 'Pelajari selengkapnya tentang metode select dari kelas SENE_Model di Seme Framework.',
+      description: 'Pelajari selengkapnya tentang metode select dari properti $db pada kelas SENE_Model di Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -242,7 +262,7 @@ export default {
         ],
         "dateCreated": "2020-06-11T10:12:00+07:00",
         "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-07-10T18:36:00+07:00",
+        "dateModified": "2021-07-27T22:45:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
