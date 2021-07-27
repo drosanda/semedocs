@@ -12,257 +12,44 @@
         <div class="column">
           <div class="content">
             <h1 class="">Kelas Controller</h1>
-            <p>Kelas Controller dalam Seme Framework merupakan inti dari semua logika yang ada dalam jangkauan kelas tersebut.</p>
-            <p>Nama kelas dalam Controller juga berfungsi sebagai identitas dari sebuah alamat URL.</p>
+            <p>
+              Kelas Controller dalam Seme Framework merupakan inti dari semua logika yang ada dalam jangkauan kelas tersebut.
+              Nama kelas dan nama file Controller akan digunakans sebagai identitas dari permintaan URL.
+            </p>
 
-            <h2>Ketentuan Kelas Controller</h2>
-            <p>Berikut ini adalah ketentuan ketika ingin menggunakan kelas Controller dengan benar supaya dapat berjalan dengan baik:</p>
-            <ul>
-              <li>Semua kelas Controller di simpan didalam direktori <code>app/controller</code>.</li>
-              <li>
-                <p>Kelas controller harus <code>extends</code> dari <code>SENE_Controller</code>.</p>
+            <h2>Syarat &amp; Ketentuan</h2>
+            <p>
+              Berikut ini adalah syarat dan ketentuan yang harus dipenuhi ketika ingin menggunakan kelas Controller dengan benar supaya dapat berjalan dengan baik.
+            </p>
 
-                <div class="macwindow">
-                  <div class="titlebar">
-                    <div class="buttons">
-                      <div class="close">
-                        <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                        <!-- close button link -->
-                      </div>
-                      <div class="minimize">
-                        <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                        <!-- minimize button link -->
-                      </div>
-                      <div class="zoom">
-                        <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                        <!-- zoom button link -->
-                      </div>
-                    </div>
-                  </div>
-                  <div class="maccontent">
-                    <highlight-code lang="php">
-app
-|-- controller
-|---- blog.php
-                    </highlight-code>
-                  </div>
-                </div>
+            <h3>Lokasi</h3>
+            <p>
+              Semua controller di simpan di dalam direktori <code>app/controller</code>.
+            </p>
 
-                <p>isi dari blog.php</p>
+            <h3>Aturan Penamaan</h3>
+            <p>
+              Penamaan nama file controller dan nama kelas controller hanya dapat diawali dengan huruf, kemudian diikuti dengan huruf dan atau angka, dan/atau garis bawah.
+              Kemudian untuk Nama kelas dan nama file harus identik, tapi boleh beda urutan pengkapitalan pada nama kelas.
+              Sementara untuk <b>nama file</b> ditulis dengan <b>huruf kecil</b> tidak boleh kapital. Baru bisa diikuti dengan angka, dan/atau <u>underscore</u> serta diberi akhiran <code>.php</code>.
+            </p>
 
-                <div class="macwindow">
-                  <div class="titlebar">
-                    <div class="buttons">
-                      <div class="close">
-                        <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                        <!-- close button link -->
-                      </div>
-                      <div class="minimize">
-                        <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                        <!-- minimize button link -->
-                      </div>
-                      <div class="zoom">
-                        <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                        <!-- zoom button link -->
-                      </div>
-                    </div>
-                  </div>
-                  <div class="maccontent">
-                    <highlight-code lang="php">&#x3C;?php class Blog extends JI_Controller { ... }</highlight-code>
-                  </div>
-                </div>
+            <h3 id="rule_1on1">Jumlah kelas controller dalam 1 file</h3>
+            <p>
+              Seme Framework hanya mengizinkan 1 kelas controller dalam satu file yang sama.
+              Begitu juga dengan nama metode dalam 1 kelas harus bersifat unik (tidak boleh sama).
+            </p>
 
-              </li>
-              <li>
-                Dan bisa juga <code>extends</code> dari kelas <code>core</code> yang mana kelas tersebut merupakan hasil <code>extends</code> dari <code>SENE_Controller</code>.
+            <h3 id="rule_inherit">Turunan Kelas</h3>
+            <p>
+              Controller harus menurunkan kelas dengan kode <code>extends</code> dari kelas <code>SENE_Controller</code>.
+              Begitupun juga ketika menggunakan fitur <NuxtLink to="/id/core/controller/" target="_blank">Core <i class="fa fa-window-restore"></i></NuxtLink>, kelas controller core harus menurunkan dengan cara yang sama.
+            </p>
 
-                <div class="macwindow">
-                  <div class="titlebar">
-                    <div class="buttons">
-                      <div class="close">
-                        <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                        <!-- close button link -->
-                      </div>
-                      <div class="minimize">
-                        <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                        <!-- minimize button link -->
-                      </div>
-                      <div class="zoom">
-                        <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                        <!-- zoom button link -->
-                      </div>
-                    </div>
-                  </div>
-                  <div class="maccontent">
-                    <highlight-code lang="php">
-app
-|-- core
-|---- ji_controller.php
-|-- controller
-|---- home.php
-|---- blog.php
-
-                    </highlight-code>
-                  </div>
-                </div>
-
-                <p>isi dari ji_controller.php</p>
-                <div class="macwindow">
-                  <div class="titlebar">
-                    <div class="buttons">
-                      <div class="close">
-                        <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                        <!-- close button link -->
-                      </div>
-                      <div class="minimize">
-                        <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                        <!-- minimize button link -->
-                      </div>
-                      <div class="zoom">
-                        <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                        <!-- zoom button link -->
-                      </div>
-                    </div>
-                  </div>
-                  <div class="maccontent">
-                    <highlight-code lang="php">&lt;?php class JI_Controller extends SENE_Controller { ... }</highlight-code>
-                  </div>
-                </div>
-                <p>isi dari home.php</p>
-
-                <div class="macwindow">
-                  <div class="titlebar">
-                    <div class="buttons">
-                      <div class="close">
-                        <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                        <!-- close button link -->
-                      </div>
-                      <div class="minimize">
-                        <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                        <!-- minimize button link -->
-                      </div>
-                      <div class="zoom">
-                        <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                        <!-- zoom button link -->
-                      </div>
-                    </div>
-                  </div>
-                  <div class="maccontent">
-                    <highlight-code lang="php">&lt;?php class Home extends JI_Controller { ... }</highlight-code>
-                </div>
-              </div>
-              </li>
-              <li>
-                <p>
-                  Penamaan nama file controller dan nama kelas controller hanya boleh, diawali oleh huruf, kemudian diteruskan oleh huruf dan atau angka, dan underscore.
-                </p>
-                <p>Contoh (benar):</p>
-
-                <div class="macwindow">
-                  <div class="titlebar">
-                    <div class="buttons">
-                      <div class="close">
-                        <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                        <!-- close button link -->
-                      </div>
-                      <div class="minimize">
-                        <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                        <!-- minimize button link -->
-                      </div>
-                      <div class="zoom">
-                        <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                        <!-- zoom button link -->
-                      </div>
-                    </div>
-                  </div>
-                  <div class="maccontent">
-                    <highlight-code lang="php">
--nama file:
-  faktur_pajak.php
--nama kelas:
-
-&lt;?php class Faktur_Pajak extends SENE_Controller { .. }
-                    </highlight-code>
-                  </div>
-                </div>
-
-                <p>Contoh (Salah):</p>
-
-                <div class="macwindow">
-                  <div class="titlebar">
-                    <div class="buttons">
-                      <div class="close">
-                        <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                        <!-- close button link -->
-                      </div>
-                      <div class="minimize">
-                        <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                        <!-- minimize button link -->
-                      </div>
-                      <div class="zoom">
-                        <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                        <!-- zoom button link -->
-                      </div>
-                    </div>
-                  </div>
-                  <div class="maccontent">
-                    <highlight-code lang="php">
-                      -nama file:
-                        1faktur pajak.php
-                      -nama kelas:
-                      &lt;?php class 1Faktur Pajak extends SENE_Controller { .. }
-                    </highlight-code>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <p>
-                  Nama file kelas controller harus dalam huruf kecil (<i>Lower Case</i>) dan berakhiran <code>.php</code>.
-                </p>
-              </li>
-              <li>
-                <p>
-                  Nama kelas dan nama file harus identik tapi boleh tidak sama huruf besar dan atau huruf kecilnya (tidak <i>case sensitive</i>).
-                </p>
-                <div class="macwindow">
-                  <div class="titlebar">
-                    <div class="buttons">
-                      <div class="close">
-                        <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                        <!-- close button link -->
-                      </div>
-                      <div class="minimize">
-                        <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                        <!-- minimize button link -->
-                      </div>
-                      <div class="zoom">
-                        <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                        <!-- zoom button link -->
-                      </div>
-                    </div>
-                  </div>
-                  <div class="maccontent">
-                    <highlight-code lang="php">Contoh (benar):
--nama file:
-  faktur_pajak.php
--nama kelas:
-
-&lt;?php class Faktur_Pajak extends SENE_Controller { .. }
-
-Contoh (benar):
--nama file:
-fakturpajak.php
--nama kelas:
-&lt;?php class FakturPajak extends SENE_Controller { .. }
-                    </highlight-code>
-                  </div>
-                </div>
-              </li>
-            </ul>
-
-
-            <h2>Contoh struktur Controller</h2>
-            <p>Berikut ini adalah contoh struktur direktori dari controller:</p>
+            <h3 id="rule_inherit">Konstruktor Kelas</h3>
+            <p>
+              Setiap kelas controller wajib mendeklarasikan konstruktor kelas, berikut ini adalah contoh kodenya.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -282,33 +69,296 @@ fakturpajak.php
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-app
-|-- controller
-|---- home.php
-|---- blog.php
+                  &lt;?php
+                  class Home extends SENE_Controller{
+                    // WAJIB konstruktor kelas
+                    public function __construct(){
+                      //WAJIB konstruktor parent kelas
+                      parent::__construct();
+                    }
+                    ...
+                  }
                 </highlight-code>
               </div>
             </div>
 
-            <p>Anggap saja kita sudah mengekstrak atau clone Seme Framework ke dalam direktori <code>D:\XAMPP\htdocs\seme_framework</code>.</p>
-            <p>Jadi ketika kita membuka <code>http://localhost/seme_framework</code> maka Seme Framework akan membuka kelas controller yang ada di <code>app/controller/home.php</code>.</p>
+            <h3 id="rule_inherit">Metode Index</h3>
+            <p>
+              Metode <code>index</code> wajib ada untuk setiap turunan dari kelas <code>SENE_Controller</code>.
+            </p>
 
-            <div class="message is-info">
-              <div class="message-body">
-                <p>Nama kelas <b>home</b> atau nama file <b>home.php</b> adalah kelas dasar (<i>default</i>) yang akan selalu diakses jika akar URL seperti <code>https://example.com</code>.</p>
+            <h3 id="rule_inherit"><em>Defaults</em></h3>
+            <p>
+              Nama default dari kelas controller adalah <code>Home</code>.
+              Sementara nama default dari metode adalah <code>index</code>.
+              Dan file name default dari controller adalah <code>home.php</code>.
+              Jadi, pastikan untuk selalu memeriksa nama dan isi file controller baik didalam direktori <code>app/controller</code> maupun direktori lain didalamnya.
+            </p>
+
+            <h3>Direktori Spesial: admin</h3>
+            <p>
+              Seme Framework mendukung direktori spesial untuk pembuatan halaman admin (<code>app/controller/admin</code>).
+              Direktori ini memiliki perlakuan khusus dalam pemetaan ulang URL Request. Pelajari selengkapnya tentang <NuxtLink to="http://localhost:3001/4.0.0/uri_routing/admin/">halaman admin</NuxtLink>.
+            </p>
+
+            <h3>Kedalaman Direktori</h3>
+            <p>
+              Seme Framework hanya mendukung 1 tingkat lebih dalam direktori dari mulai <code>app/controller</code>.
+              Dan 1 tingkat lebih dalam juga untuk direktori spesial admin.
+              Berikut ini adalah contoh susunan file dan direktori untuk controller.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  app/
+                  └── controller/
+                   ├── admin/
+                   |  ├── sales/
+                   |  | ├── online.php
+                   |  | ├── offline.php
+                   |  | └── report.php
+                   |  ├── login.php
+                   |  ├── logout.php
+                   |  └── dashboard.php
+                   |── product/
+                   | ├── home.php
+                   | ├── search.php
+                   | └── detail.php
+                   |── login.php
+                   |── register.php
+                   |── forgot.php
+                   └── about.php
+                </highlight-code>
               </div>
             </div>
 
-            <p>Bagaimana seandainya kita akan membuka alamat URL  <code>http://localhost/seme_framework/blog</code>, apakah akan muncul?</p>
-            <p>Jawabannya adalah Seme Framework akan memamnggil file controller <code>app/controller/blog.php</code> jika ada.</p>
-            <p>Seme Framework will only load controller with filename and its class name are matched.</p>
+            <h2>Contoh Benar Salah Syarat Controller</h2>
+            <p>
+              Berikut ini adalah berbagai contoh untuk salah atau benar pemenuhan syarat dari penamaan file dan kelas controller.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  /**
+                  * CONTOH BENAR
+                  * -nama file:
+                  *   faktur_pajak.php
+                  * -nama kelas: Faktur_Pajak
+                  */
+
+                  &lt;?php class Faktur_Pajak extends SENE_Controller { .. }
+
+                  /**
+                  * CONTOH BENAR
+                  * -nama file:
+                  *   fakturpajak.php
+                  * -nama kelas: FakturPajak
+                  */
+
+                  &lt;?php class FakturPajak extends SENE_Controller { .. }
+
+                  /**
+                  * CONTOH SALAH: ada spasi
+                  * -nama file:
+                  *   faktur pajak.php
+                  * -nama kelas: Faktur_Pajak
+                  */
+
+                  &lt;?php class Faktur_Pajak extends SENE_Controller { .. }
+
+                  /**
+                  * CONTOH SALAH: diawali angka
+                  * -nama file:
+                  *   1faktur_pajak.php
+                  * -nama kelas: 1Faktur_Pajak
+                  */
+
+                  &lt;?php class 1Faktur_Pajak extends SENE_Controller { .. }
+
+                  /**
+                  * CONTOH SALAH: nama kelas tidak identik, beda - dan _
+                  * -nama file:
+                  *   faktur-pajak.php
+                  * -nama kelas: Faktur_Pajak
+                  */
+
+                  &lt;?php class 1Faktur_Pajak extends SENE_Controller { .. }
+
+                  /**
+                  * CONTOH SALAH: nama kelas dan nama file pakai -
+                  * -nama file:
+                  *   faktur-pajak.php
+                  * -nama kelas: Faktur-Pajak
+                  */
+
+                  &lt;?php class 1Faktur-Pajak extends SENE_Controller { .. }
+
+                  /**
+                  * CONTOH SALAH: nama kelas pakai -
+                  * -nama file:
+                  *   faktur_pajak.php
+                  * -nama kelas: Faktur-Pajak
+                  */
+
+                  &lt;?php class 1Faktur-Pajak extends SENE_Controller { .. }
+
+                  /**
+                  * CONTOH SALAH: isi kelas tidak ada kelas constructor
+                  * -nama file:
+                  *   faktur_pajak.php
+                  * -nama kelas: Faktur_Pajak
+                  */
+
+                  &lt;?php class Faktur_Pajak extends SENE_Controller {
+                    public function index(){
+                      echo &#x27;Thankyou for using Seme Framewrok&#x27;;
+                    }
+                  }
+
+                  /**
+                  * CONTOH SALAH: isi kelas tidak ada metode index
+                  * -nama file:
+                  *   faktur_pajak.php
+                  * -nama kelas: Faktur_Pajak
+                  */
+
+                  &lt;?php class Faktur_Pajak extends SENE_Controller {
+                    public function __construct(){
+                      parent::__construct();
+                    }
+                  }
+
+                  /**
+                  * CONTOH SALAH: isi kelas metode kelas konstruktor tidak lengkap
+                  * -nama file:
+                  *   faktur_pajak.php
+                  * -nama kelas: Faktur_Pajak
+                  */
+
+                  &lt;?php class Faktur_Pajak extends SENE_Controller {
+                    public function __construct(){
+                    }
+                    public function index(){
+                      echo &#x27;Thankyou for using Seme Framewrok&#x27;;
+                    }
+                  }
+                </highlight-code>
+              </div>
+            </div>
+
+            <h2>Cara Kerja</h2>
+            <p>
+              Seme Framework akan memuat controller dengan permintaan URI.
+              Biasanya ada hubungan satu-ke-satu antara string URL dan kelas/metode pengontrol yang sesuai.
+              Segmen dalam URI biasanya mengikuti pola ini:
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  example.com/class/method/parameter1/parameter2/.../parameterN
+                </highlight-code>
+              </div>
+            </div>
+            <p>
+              Atau apabila menggunakan direktori:
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  example.com/directory/class/method/parameter1/parameter2/.../parameterN
+                </highlight-code>
+              </div>
+            </div>
+            <p>
+              Seme Framework hanya akan memuat pengontrol dengan nama file dan nama kelasnya cocok.
+              Namun, Seme Framework memiliki dukungan untuk <NuxtLink to="/4.0.0/configuration/routes/">Pemetaan Ulang Kontroler URI</NuxtLink>.
+            </p>
+
+            <h3>Controller Spesial: Notfound</h3>
+            <p>
+              Error 404 atau Notfound adalah kontroler khusus yang berfungsi sebagai fallback jika file Controller tidak ditemukan serta persyaratannya tidak terpenuhi.
+            </p>
+
+            <h2>Error 5xx</h2>
+            <p>
+              Kesalahan 500 atau kode 5xx lainnya, biasanya disebabkan oleh nama kelas yang tidak cocok dengan nama file.
+              Namun, kondisi ini juga dapat disebabkan oleh kesalahan pada kode sumber.
+            </p>
 
             <h2>Kelas SENE_Controller</h2>
-            <p>Kelas SENE_Controller merupakan kelas dasar yang telah memiliki berbagai fungsi (method) didalamnya untuk keperluan pembangunan aplikasi berbasis web.</p>
-            <p>Ada banyak fungsi dan variabel yang telah tersedia di kelas SENE_Controller ini.</p>
+            <p>
+              Kelas SENE_Controller merupakan kelas dasar yang telah memiliki berbagai fungsi (metode) didalamnya untuk keperluan pembangunan aplikasi berbasis web.
+              Ada banyak metode dan properti yang telah tersedia pada kelas SENE_Controller ini.
+            </p>
 
             <h3>Penggunaan Dasar</h3>
-            <p>Berikut ini adalah cara penggunaan dasar dari Kelas Controller di Seme Framework.</p>
+            <p>
+              Berikut ini adalah cara penggunaan dasar dari Kelas Controller di Seme Framework.
+            </p>
 
             <h4>Controller Default</h4>
             <p>Berikut ini adalah source code dari kelas home:</p>
@@ -330,7 +380,8 @@ app
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="php">&lt;?php
+                <highlight-code lang="php">
+&lt;?php
 class Home extends SENE_Controller{
   public function __construct(){
     parent::__construct();
@@ -473,7 +524,7 @@ export default {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Kelas Controller',
-      description: 'Pelajari selengkapnya tentang controller class melalui dokumentasi Seme Framework versi 4.0.0.',
+      description: 'Pelajari selengkapnya tentang aturan pembuatan kelas controller untuk Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -544,7 +595,7 @@ export default {
         ],
         "dateCreated": "2020-06-11T10:12:00+07:00",
         "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-11T01:04:00+07:00",
+        "dateModified": "2021-07-27T23:34:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
