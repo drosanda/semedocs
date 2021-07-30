@@ -6,16 +6,22 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/model">Model</NuxtLink></li>
-          <li class="unavailable">Get Method</li>
+          <li class="unavailable">Metode Get</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Get Method</h1>
-            <p>Get method is part of database class builder for filtering result in array of array or array of object.</p>
-            <h2>Parameters</h2>
-            <p>Group By method has 2 parameter</p>
+            <h1 class="">Metode Get</h1>
+            <p>
+              Metode Get merupakan salah satu bagian dari <code>query builder</code> yang berguna untuk menarik hasil dari query builder yang telah disusun.
+            </p>
+
+            <h2>Bentuk Umum</h2>
+            <p>
+              Metode <code>get</code> merupakan bagian dari properti <code>$db</code> dari kelas <code>SENE_Model</code>.
+            </p>
+
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -35,16 +41,32 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->db->get_first([string $result_type, [bool $is_debug]]): mixed
+                  $this->db->get([string $result_type="", [bool $is_debug]]): mixed
                 </highlight-code>
               </div>
             </div>
-            <h3>$result_type</h3>
-            <p><b>Result type</b> consist of array and object, if value has "array" the result will be array of array otherwise will returned array of object.</p>
-            <h2>Example usage</h2>
-            <p>Here is the examples using select method. See the first of this page for full example.</p>
-            <h3>Basic Usage</h3>
-            <p>For example we assumed want to add new data in blog table. First, in the model:</p>
+            <h3>Parameter</h3>
+            <p>
+              Metode ini terdiri dari 2 parameter opsional.
+            </p>
+            <h4>$result_type</h4>
+            <p>
+              Nilai dari parameter <code>$result_type</code> untuk menentukan hasil keluaran dari metode get.
+              Isi dengan <code>string "array"</code> untuk mengembalikan nilai hasil dengan tipe data <i>array of array</i>.
+              Sementara isi nilai lainnya untuk mengembalikan nilai dengan tipe data <i>array of object</i>.
+            </p>
+            <h4>$is_debug</h4>
+            <p>
+              Parameter <code>$is_debug</code> merupakan sebuah penanda (<em>flag</em>) untuk mengaktifkan mode <i>debug</i>.
+              Nilai dari parameter ini bisa diis dengan <code>int 1</code> untuk mengaktifkan mode debug dan menampilkan query yang akan diproses.
+              Isi dengan nilai lainnya untuk tidak mengaktifkan mode debug.
+              Pada mode debug, tidak akan ada proses eksekusi query ke sistem database.
+            </p>
+
+            <h2>Contoh Penggunaan</h2>
+            <p>
+              Beirkut ini adalah contoh penggunaan pada file <code>blog_model.php</code>.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -125,7 +147,7 @@ export default {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Metode get',
-      description: 'Pelajari selengkapnya tentang Metode get dari SENE_Model di Seme Framework 4.0.0',
+      description: 'Pelajari tentang metode get dari properti $db pada SENE_Model untuk Seme Framework 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -138,11 +160,7 @@ export default {
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/tutorial/',
           text: 'Model',
-        },
-        {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/tutorial/introduction/',
-          text: 'Get First',
-        },
+        }
       ],
     }
   },
@@ -197,9 +215,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2020-06-11T10:12:00+07:00",
-        "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-30T00:11:00+07:00",
+        "dateCreated": "2021-07-30T13:20:11+07:00",
+        "datePublished": "2021-07-30T13:20:11+07:00",
+        "dateModified": "2021-07-30T13:20:11+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
