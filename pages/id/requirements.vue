@@ -31,25 +31,25 @@
             <h2>IDE atau Text Editor</h2>
             <p>IDE atau Editor Teks diperlukan untuk mengimplementasikan kode ke dalam Seme Framework. Anda dapat memilih IDE apa pun tetapi Seme Framework dibangun dengan menggunakan:</p>
             <ul>
-              <li><a href="https://notepad-plus-plus.org/downloads/">Notepad++</a> Editor Teks Sederhana tetapi dengan fitur yang lebih baik</li>
-              <li><a href="https://atom.io/">Atom</a> Hackable Text editor</li>
-              <li><a href="https://code.visualstudio.com/download">VSCode</a> Lebih ringan dari pada atom</li>
+              <li><a href="https://notepad-plus-plus.org/downloads/">Notepad++ <i class="fa fa-external-link"></i></a> Editor Teks Sederhana tetapi dengan fitur yang lebih baik</li>
+              <li><a href="https://atom.io/">Atom <i class="fa fa-external-link"></i></a> Hackable Text editor</li>
+              <li><a href="https://code.visualstudio.com/download">VSCode <i class="fa fa-external-link"></i></a> Lebih ringan dari pada atom</li>
             </ul>
 
             <h2>Lingkungan</h2>
             <p>Seme Framework berjalan dengan baik dengan menggunakan jenis lingkungan ini:</p>
             <ul>
-              <li><a href="https://www.apachefriends.org/download">XAMPP</a> untuk Mac, Linux, dan Windows</li>
-              <li><a href="https://hub.docker.com/r/drosanda/seme_webstack">Seme WebStack Docker Container</a></li>
+              <li><a href="https://www.apachefriends.org/download">XAMPP <i class="fa fa-external-link"></i></a> untuk Mac, Linux, dan Windows</li>
+              <li><a href="https://hub.docker.com/r/drosanda/seme_webstack">Seme WebStack Docker Container <i class="fa fa-external-link"></i></a></li>
               <li>Nginx dengan PHP-FPM 7.4.x berjalan di CentOS 7</li>
             </ul>
 
             <h2>Persyaratan tambahan</h2>
             <p>Seme Framework lebih kuat dan fleksibel apabila didukung dengan aplikasi ini:</p>
             <ul>
-              <li><a href="https://git-scm.com/downloads">GIT</a> untuk Mac, Linux, dan Windows</li>
-              <li><a href="https://cmder.net/">CMDER</a> Console / terminal emulator untuk Windows saja</li>
-              <li><a href="https://ohmyz.sh/">Oh My ZSH</a> Console / terminal for Mac dan Linux saja</li>
+              <li><a href="https://git-scm.com/downloads">GIT <i class="fa fa-external-link"></i></a> untuk Mac, Linux, dan Windows</li>
+              <li><a href="https://cmder.net/">CMDER <i class="fa fa-external-link"></i></a> Console / terminal emulator untuk Windows saja</li>
+              <li><a href="https://ohmyz.sh/">Oh My ZSH <i class="fa fa-external-link"></i></a> Console / terminal for Mac dan Linux saja</li>
             </ul>
 
           </div>

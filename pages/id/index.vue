@@ -96,8 +96,67 @@
             <hr>
 
             <h2>Pertanyaan dan Jawaban</h2>
-            <p>Jika bingung, ada bug, atau <i>request</i> fitur jang sungkan untuk menghubungi saya melalui <a href="https://instagram.com/drosanda/" target="_blank">instagram</a>, <a href="https://facebook.com/drs11/" target="_blank">facebook</a>, atau buat isu permasalahan baru melalui <a href="https://github.com/drosanda/semedocs/issues" target="_blank">github</a>.</p>
+            <p>
+              Jika bingung, ada bug, atau <i>request</i> fitur jang sungkan untuk menghubungi saya melalui <a href="https://instagram.com/drosanda/" target="_blank">instagram <i class="fa fa-external-link"></i></a>, <a href="https://facebook.com/drs11/" target="_blank">facebook <i class="fa fa-external-link"></i></a>,
+              atau buat isu permasalahan baru melalui <a href="https://github.com/drosanda/semedocs/issues" target="_blank">github <i class="fa fa-external-link"></i></a>.
+            </p>
             <hr>
+
+            <h2 id="cara_baca">Panduan Cara Baca Dokumentasi Seme Framework</h2>
+            <p>
+              Berikut ini adalah beberapa panduan untuk cara pembacaan dokumentasi Seme Framework
+            </p>
+
+            <h3 id="cara_baca_link">Link Halaman</h3>
+            <p>
+              Pada dokumentasi Seme Framework ada beberapa link yang digunakan untuk menghubungkan antar halaman.
+              Baik halaman yang ada pada dokumentasi Seme Framework maupun yang diluarnya.
+              Setiap link pada dokumentasi ini diberi garis bawah untuk menandakan bahwa tulisan tersebut bisa diklik dan halaman akan dialihkan kepada link yang akan dituju.
+            </p>
+
+            <h4 id="cara_baca_link_icon">Simbol / Ikon</h4>
+            <p>
+              Pada dokumentasi ini, ada link yang dibubuhi dengan simbol atau ikon.
+              <ul>
+                <li>
+                  Link dengan simbol / ikon <code><i class="fa fa-chevron-right"></i></code> menandakan halaman yang dituju adalah halaman selanjutnya.
+                </li>
+                <li>
+                  Link dengan simbol / ikon <code><i class="fa fa-chevron-left"></i></code> menandakan halaman yang dituju adalah halaman sebelumnya.
+                </li>
+                <li>
+                  Link dengan simbol / ikon <code><i class="fa fa-external-link"></i></code> menandakan halaman yang dituju ada diluar dokumentasi Seme Framework.
+                </li>
+                <li>
+                  Link dengan simbol / ikon <code><i class="fa fa-window-restore"></i></code> menandakan halaman yang dituju akan dibuka pada tab baru.
+                </li>
+              </ul>
+            </p>
+
+
+            <h3 id="cara_baca_path">Jalur Sistem File</h3>
+            <p>
+              Pada beberapa dokumentasi Seme Framework, akan disinggung terkait jalur sistem file atau <code><em>system file path</em></code>.
+              <em>System file path</em> atau sering disingkat <code><em>path</em></code> saja, merupakan notasi untuk menyebutkan lokasi <b>file</b> atau <b>direktori</b> / <b>folder</b> pada sebuah sistem operasi komputer.
+              Notasi path ini bisa berbeda tergantung sistem operasi yang digunakan.</p>
+            <p>
+              Untuk Microsoft Windows, path dimulai dari Drive, kemudian titik dua :, kemudian diikuti nama file atau direktori yang dipisahkan dengan garis miring terbalik (<code>\</code>).
+              Sementara path untuk sistem operasi *nix, dimulai dari garis miring kemudian diikuti nama file atau direktori yang dipisahkan dengan garis miring biasa (<code>/</code>).
+              <ol>
+                <li>
+                  Contoh Windows: <code>D:\XAMPP\htdocs\index.php</code>.
+                </li>
+                <li>
+                  Contoh *Nix: <code>/Applications/XAMPP/htdocs/index.php</code>.
+                </li>
+              </ol>
+            </p>
+
+            <p>
+              Pada dokumentasi ini, yang dipakai adalah konsep *NIX / urutan ke-2.
+            </p>
+            <hr>
+
           </div>
         </div>
       </div>
@@ -129,7 +188,7 @@
         name: 'Seme Framework 4',
         suffix: ' - Seme Framework 4',
         title: 'Dokumentasi Bahasa Indonesia',
-        description: 'Pelajari Seme Framework melaui Dokumentasi Seme Framework 4 dalam Bahasa Indonesia.',
+        description: 'Dokumentasi resmi Seme Framework 4 dengan bahasa indonesia.',
         semecarbon: require('~/static/carbon.png'),
         hsfwork: require('~/static/how-seme-framework-work.png'),
         breadcrumbs: [
@@ -195,9 +254,9 @@
           "image": [
             (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
           ],
-          "dateCreated": "2020-06-11T10:12:00+07:00",
-          "datePublished": "2020-06-11T10:12:00+07:00",
-          "dateModified": "2021-07-24T17:19:00+07:00",
+          "dateCreated": "2021-07-31T00:19:00+07:00",
+          "datePublished": "2021-07-31T00:19:00+07:00",
+          "dateModified": "2021-07-31T00:19:00+07:00",
           "author": {
             "@type": "Person",
             "gender": "Male",

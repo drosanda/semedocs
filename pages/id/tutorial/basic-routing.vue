@@ -230,8 +230,8 @@ export default {
   data (){
     return {
       fr: require('~/assets/img/first-run.png'),
-      name: 'Seme Framework 4',
-      suffix: ' - Seme Framework 4',
+      name: 'Seme Framework 4 Tutorial',
+      suffix: ' - Seme Framework 4 Tutorial',
       title: 'Perutean (Routing)',
       description: 'Mari kita pahami dan pelajari bagaimana cara Perutean (Routing) dengan Seme Framework',
       breadcrumbs: [

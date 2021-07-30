@@ -188,10 +188,10 @@ export default {
   layout: 'id',
   data (){
     return {
-      name: 'Seme Framework 4',
-      suffix: ' - Seme Framework 4',
+      name: 'Seme Framework 4 Tutorial',
+      suffix: ' - Seme Framework 4 Tutorial',
       title: 'Halaman Notfound',
-      description: 'Pelajari pembuatan Halaman Notfound untuk Seme Framework 4',
+      description: 'Pelajari tutorial pembuatan halaman 404 notfound untuk Seme Framework 4',
       notfoundex: require('~/assets/img/tutorial/notfound/notfound-page-example.png'),
       breadcrumbs: [
         {
@@ -236,61 +236,61 @@ export default {
   },
   jsonld() {
     this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
-  const items = this.breadcrumbs.map((item, index) => ({
-    '@type': 'ListItem',
-    position: index + 1,
-    item: {
-      '@type': "WebPage",
-      '@id': item.url,
-      name: item.text,
-    },
-  }));
-  return [
-    {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: items,
-    },
-    {
-      "@type": "NewsArticle",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+    const items = this.breadcrumbs.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': "WebPage",
+        '@id': item.url,
+        name: item.text,
       },
-      "headline": (this.headline || this.title),
-      "image": [
-        (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
-      ],
-      "dateCreated": "2021-07-25T11:11:11+07:00",
-      "datePublished": "2021-07-25T11:11:11+07:00",
-      "dateModified": "2021-07-25T11:11:11+07:00",
-      "author": {
-        "@type": "Person",
-        "gender": "Male",
-        "name": "Daeng Rosanda, S.Kom",
-        "alternateName": "Daeng Rosanda",
-        "jobTitle": "Founder",
-        "worksFor": {
+    }));
+    return [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: items,
+      },
+      {
+        "@type": "NewsArticle",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+        },
+        "headline": (this.headline || this.title),
+        "image": [
+          (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
+        ],
+        "dateCreated": "2021-07-25T11:11:11+07:00",
+        "datePublished": "2021-07-25T11:11:11+07:00",
+        "dateModified": "2021-07-25T11:11:11+07:00",
+        "author": {
+          "@type": "Person",
+          "gender": "Male",
+          "name": "Daeng Rosanda, S.Kom",
+          "alternateName": "Daeng Rosanda",
+          "jobTitle": "Founder",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Cipta Esensi Merenah",
+            "email": "hi@cenah.co.id"
+          }
+        },
+        "publisher": {
           "@type": "Organization",
           "name": "Cipta Esensi Merenah",
-          "email": "hi@cenah.co.id"
-        }
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Cipta Esensi Merenah",
-        "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
-        "logo": {
-          "@type": "ImageObject",
-          "name": "logo Cipta Esensi Merenah",
-          "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
-          "width": "256px",
-          "height": "62px"
-        }
-      },
-      "description": this.description
-    }
-  ];
-}
+          "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+          "logo": {
+            "@type": "ImageObject",
+            "name": "logo Cipta Esensi Merenah",
+            "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+            "width": "256px",
+            "height": "62px"
+          }
+        },
+        "description": this.description
+      }
+    ];
+  }
 }
 </script>

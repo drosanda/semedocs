@@ -507,10 +507,10 @@ export default {
   layout: 'id',
   data (){
     return {
-      name: 'Seme Framework 4',
-      suffix: ' - Seme Framework 4',
-      title: 'Tutorial Dasar MVC',
-      description: 'Mari kita pahami dan pelajari bagaimana cara menulis kode dengan Seme Framework',
+      name: 'Seme Framework 4 Tutorial',
+      suffix: ' - Seme Framework 4 Tutorial',
+      title: 'Dasar-dasar MVC',
+      description: 'Pelajari tutorial konsep MVC beserta cara penyusunan kodenya di Seme Framework 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

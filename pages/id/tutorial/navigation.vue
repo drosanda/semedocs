@@ -190,10 +190,10 @@ export default {
   layout: 'id',
   data (){
     return {
-      name: 'Seme Framework 4',
-      suffix: ' - Seme Framework 4',
+      name: 'Seme Framework 4 Tutorial',
+      suffix: ' - Seme Framework 4 Tutorial',
       title: 'Membuat Navigation',
-      description: 'Mari kita pelajari pembuatan navigation bar menggunakan Seme Framework 4',
+      description: 'Mari kita pelajari tutorial pembuatan navigation bar menggunakan Seme Framework 4',
       navbar: require('~/assets/img/tutorial/navigation/navigation-bar.png'),
       breadcrumbs: [
         {

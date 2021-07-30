@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/tutorial/">Tutorial</NuxtLink></li>
-          <li class="unavailable">Dasar Form HTML</li>
+          <li class="unavailable">Form HTML Dasar</li>
         </ul>
       </nav>
       <div class="columns">
@@ -187,8 +187,8 @@ export default {
   data (){
     return {
       fr: require('~/assets/img/first-run.png'),
-      name: 'Seme Framework 4',
-      suffix: ' - Seme Framework 4',
+      name: 'Seme Framework 4 Tutorial',
+      suffix: ' - Seme Framework 4 Tutorial',
       title: 'Konsep Dasar Form HTML',
       description: 'Mari kita pahami dan pelajari bagaimana konsep dasar Form HTML sebelum menggunakan Seme Framework 4',
       breadcrumbs: [

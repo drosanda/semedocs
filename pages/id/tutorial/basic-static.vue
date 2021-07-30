@@ -12,7 +12,7 @@
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Pembuatan dan Perpindahan antar halaman statis dasar</h1>
+            <h1 class="">Dasar-dasar pembuatan Halaman Statis</h1>
             <p>
               Setelah mempelajari <NuxtLink to="/id/tutorial/basic-routing/" target="_blank">perutean <i class="fa fa-window-restore"></i></NuxtLink>, kita akan belajar membuat halaman statis dan berpindah antar halaman tersebut
               Sebelum memulai tutorial ini, pastikan sudah <NuxtLink to="/id/downloads/" target="_blank">menginstall dan menjalankan <i class="fa fa-window-restore"></i></NuxtLink> Seme Framework.
@@ -471,10 +471,10 @@ export default {
   data (){
     return {
       fr: require('~/assets/img/first-run.png'),
-      name: 'Seme Framework 4',
-      suffix: ' - Seme Framework 4',
+      name: 'Seme Framework 4 Tutorial',
+      suffix: ' - Seme Framework 4 Tutorial',
       title: 'Pembuatan Halaman Statis',
-      description: 'Mari kita pahami dan pelajari bagaimana cara Pembuatan Halaman Statis dan perpindahan halamanya dengan Seme Framework 4',
+      description: 'Pelajari tentang tutorial pembuatan halaman statis pada Seme Framework 4 beserta perpindahan antar halaman.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
