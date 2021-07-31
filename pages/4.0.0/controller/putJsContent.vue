@@ -17,8 +17,10 @@
             <p>The <code>$content_location</code> value will be reffered to a file name under <code>app/view/THEME/</code>.</p>
             <p>This value also can contain path prefix of subdirectory before the filename.</p>
 
-            <h2>Content Location Requirements</h2>
-            <p>The valid content should only put inside in a directory beneath current selected theme directory.</p>
+            <h2>Basic Usage</h2>
+            <p>
+              Here is the basic usage of <code>putThemeContent</code> method from <NuxtLink to="/4.0.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -38,41 +40,27 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  |- app
-                  |-- view
-                  |--- front
-                  |---- home
-                  |----- home.php
-                  |----- home_bottom.php
+                  $this->putJsContent(string $content_location[, array $data=array()]): controllerObject
                 </highlight-code>
               </div>
             </div>
 
-            <h2>Basic Usage:</h2>
-            <p>Here is the basic usage of <code>Controller::putThemeContent</code>.</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  Controller::putJsContent(string $content_location[, array $data]): ControllerObject
-                </highlight-code>
-              </div>
-            </div>
+            <h3>Parameter</h3>
+            <p>
+              Metode ini memiliki 1 paremeter wajib yaitu $content_location.
+            </p>
+
+            <h4>$content_location</h4>
+            <p>
+              The <code>$content_location</code> value is a string indicates view component locations from current theme.
+              This location value does not require <code>.php</code> suffix.
+            </p>
+
+            <h4>$data</h4>
+            <p>
+              The <code>$data</code> value contains about <code>array of array</code> that passed to view.
+              The <code>array key</code> will be parsed as native variable(s) on view.
+            </p>
 
             <h2>Example</h2>
             <p>Here is the example for <code>putThemeContent</code> method:</p>
@@ -134,15 +122,14 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  - app
-                  |-- view
-                  |--- homepage
-                  |---- home
-                  |----- slider.php
-                  |----- three_values.php
-                  |---- page
-                  |----- col-1.php
-
+                  app/
+                  └── view/
+                   └── front/
+                    ├──  home/
+                    | ├──  slider.php
+                    | └──  three_values.php
+                    └──  page
+                      └──  col-1.php
                 </highlight-code>
               </div>
             </div>

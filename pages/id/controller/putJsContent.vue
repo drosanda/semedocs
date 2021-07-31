@@ -55,10 +55,11 @@
             <p>
               Nilai dari $js_location diisi dengan alamat view js yang ada didalam file php, relatif dari lokasi tema yang digunakan.
             </p>
-
-            <h3>$data</h3>
+            
+            <h4>$data</h4>
             <p>
-              Nilai dari $data berjenis array yang akan dimasukan kedalam komponen view php. Nilai dari parameter ini bersifat opsional.
+              Nilai dari parameter <code>$data</code> dapat berisi <code>array of array</code> untuk dilemparkan ke dalam view component dari controller.
+              <code>Kunci array</code> dari isi parameter ini akan dipecah menjadi variabel biasa ketika dipanggil pada view.
             </p>
 
             <h2>Contoh Penggunaan</h2>
@@ -124,14 +125,14 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  |- app/
-                  |-- view/
-                  |--- homepage/
-                  |---- home/
-                  |----- slider.php
-                  |----- three_values.php
-                  |---- page/
-                  |----- col-1.php
+                  app/
+                  └── view/
+                   └── front/
+                    ├──  home/
+                    | ├──  slider.php
+                    | └──  three_values.php
+                    └──  page
+                      └──  col-1.php
                 </highlight-code>
               </div>
             </div>
@@ -161,9 +162,15 @@
                 </highlight-code>
               </div>
             </div>
+
             <div class="message is-info">
               <div class="message-body">
-                <p>For further information about home_bottom.php and layout, please refer to <NuxtLink to="/id/view/theme-content/js/">Javascript Theme Content</NuxtLink>.</p>
+                <p>
+                  <b>Info</b>
+                </p>
+                <p>
+                  Metode <NuxtLink to="/id/controller/putthemecontent/">putThemeContent <i class="fa fa-window-restore"></i></NuxtLink>, <NuxtLink to="/id/controller/putjscontent/">putJsContent <i class="fa fa-window-restore"></i></NuxtLink> dan <NuxtLink to="/id/controller/loadlayout/">loadLayout <i class="fa fa-window-restore"></i></NuxtLink> memiliki kemampuan untuk mem-buffer view, sehingga view ditampung terlebih dahulu sebelum ditampilkan ke browser melalui metode <NuxtLink to="/id/controller/render/">render <i class="fa fa-window-restore"></i></NuxtLink>.
+                </p>
               </div>
             </div>
 

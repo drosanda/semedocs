@@ -13,43 +13,13 @@
         <div class="column">
           <div class="content">
             <h1 class="">putThemeContent Method</h1>
-            <p>This method will be loaded a theme content from a file.</p>
-            <p>The <code>$content_location</code> value will be reffered to a file name under <code>app/view/THEME/</code>.</p>
-            <p>This value also can contain path prefix of subdirectory before the filename.</p>
-
-            <h2>Content Location Requirements</h2>
-            <p>The valid content should only put inside in a directory beneath current selected theme directory.</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  |- app
-                  |-- view
-                  |--- front
-                  |---- home
-                  |----- home.php
-                  |----- home_bottom.php
-                </highlight-code>
-              </div>
-            </div>
+            <p>
+              The <code>putThemeContent</code> method used for load a view component file in current theme.
+              This method support stack for loading another view component.
+            </p>
 
             <h2>Basic Usage</h2>
-            <p>Here is the basic usage of <code>putThemeContent</code> method.</p>
+            <p>Here is the basic usage of <code>putThemeContent</code> method from <NuxtLink to="/4.0.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> class.</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -73,9 +43,66 @@
                 </highlight-code>
               </div>
             </div>
+            <h3>Parameters</h3>
+            <p>
+              This method has required 1 parameter that is $content_location.
+            </p>
+            <h4>$content_location</h4>
+            <p>
+              The <code>$content_location</code> value can be a string that indicates view component location related to current theme.
+              This value does not need <code>.php</code> suffix.
+            </p>
+
+            <h4>$data</h4>
+            <p>
+              The <code>$data</code> values contain <code>array of array</code> that will be passed to view as a variable.
+              The <code>array key</code> from this value will be parsed as name of a variable.
+            </p>
 
             <h2>Example</h2>
-            <p>Here is the example for <code>putThemeContent</code> method:</p>
+            <p>
+              Here is the example implementation of putThemeContent method.
+            </p>
+
+            <h3>File and Directory structures</h3>
+            <p>
+              Before implementing the codes, we have to understand the file and directory structure that will used in example.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  app/
+                  └── view/
+                   └── front/
+                    ├──  home/
+                    | ├──  slider.php
+                    | └──  three_values.php
+                    └──  page
+                      └──  col-1.php
+                </highlight-code>
+              </div>
+            </div>
+
+            <h3>The Controller</h3>
+            <p>
+              On this code example shows implementation of putThemeContent method and how to passing variable to it.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -105,6 +132,7 @@
                     public function index()
                     {
                       $data = array();
+                      $data['example'] = 'this is example';
                       $this-&#x3E;putThemeContent(&#x27;home/slider&#x27;,$data);
                       $this-&#x3E;putThemeContent(&#x27;home/three_values&#x27;,$data);
                       $this-&#x3E;loadLayout(&#x27;col-1&#x27;,$data);
@@ -113,7 +141,11 @@
                 </highlight-code>
               </div>
             </div>
-            <p>So, the <code>homepage</code> theme and <code>col-1</code> layout should be existed on the directory structure.</p>
+
+            <h3>View component</h3>
+            <p>
+              From this example, how view called <code>$data</code> as a variable on <code>home/slider.php</code> view component source codes.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -132,16 +164,10 @@
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="php">
-                  - app
-                  |-- view
-                  |--- homepage
-                  |---- home
-                  |----- slider.php
-                  |----- three_values.php
-                  |---- page
-                  |----- col-1.php
-
+                <highlight-code lang="html">
+                  &#x3C;div&#x3E;
+                    &#x3C;h1&#x3E;This is parsed value from data &#x3C;?=$example?&#x3E;&#x3C;/h1&#x3E;
+                  &#x3C;/div&#x3E;
                 </highlight-code>
               </div>
             </div>
@@ -149,7 +175,11 @@
             <div class="message is-info">
               <div class="message-body">
                 <p>
-                  The <code>putThemeContent</code>, <code>putJsContent</code>, and <code>render</code> method(s) has ability for buffered the html view.
+                  <b>Info</b>
+                </p>
+                <p>
+                  The <NuxtLink to="/id/controller/putthemecontent/">putThemeContent <i class="fa fa-window-restore"></i></NuxtLink>, <NuxtLink to="/en/controller/putjscontent/ ">putJsContent <i class="fa fa-window-restore"></i></NuxtLink> and <NuxtLink to="/id/controller/loadlayout/">loadLayout <i class="fa fa-window- restore"></i></NuxtLink> methods has the ability to buffer view components.
+                  So the view component(s) that collected from the methods are not directly show up on browser, but only displayed while called <NuxtLink to="/id/controller/render/">render <i class=" fa method fa-window-restore"></i></NuxtLink> method.
                 </p>
               </div>
             </div>
@@ -186,7 +216,7 @@ export default {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
       title: 'putThemeContent Method',
-      description: 'Learn more about putThemeContent Method from SENE_Controller on Seme Framework version 4.0.0',
+      description: 'Learn more about putThemeContent method from SENE_Controller class on Seme Framework 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -251,9 +281,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-13T08:15:00+07:00",
-        "datePublished": "2021-07-13T09:16:00+07:00",
-        "dateModified": "2021-07-13T09:17:00+07:00",
+        "dateCreated": "2021-07-31T12:13:14+07:00",
+        "datePublished": "2021-07-31T12:13:14+07:00",
+        "dateModified": "2021-07-31T12:13:14+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
@@ -273,7 +303,7 @@ export default {
           "logo": {
             "@type": "ImageObject",
             "name": "logo Cipta Esensi Merenah",
-            "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+            "url": "https://cdn.cenah.co.4.0.0/_nuxt/img/logo-wide.5420183.png",
             "width": "256px",
             "height": "62px"
           }

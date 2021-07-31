@@ -17,7 +17,20 @@
               Nama kelas dan nama file Controller akan digunakans sebagai identitas dari permintaan URL.
             </p>
 
-            <h2>Syarat &amp; Ketentuan</h2>
+            <h2>Daftar Isi</h2>
+            <ul>
+              <li>
+                <NuxtLink to="/id/controller/#syarat_ketentuan">Syarat Ketentuan</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="/id/controller/#contoh_benar_salah">Contoh Benar salah</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="/id/controller/#SENE_Controller">Kelas SENE_Controller</NuxtLink>
+              </li>
+            </ul>
+
+            <h2 id="syarat_ketentuan">Syarat &amp; Ketentuan</h2>
             <p>
               Berikut ini adalah syarat dan ketentuan yang harus dipenuhi ketika ingin menggunakan kelas Controller dengan benar supaya dapat berjalan dengan baik.
             </p>
@@ -148,7 +161,7 @@
               </div>
             </div>
 
-            <h2>Contoh Benar Salah Syarat Controller</h2>
+            <h2 id="contoh_benar_salah">Contoh Benar Salah Syarat Controller</h2>
             <p>
               Berikut ini adalah berbagai contoh untuk salah atau benar pemenuhan syarat dari penamaan file dan kelas controller.
             </p>
@@ -349,7 +362,7 @@
               Namun, kondisi ini juga dapat disebabkan oleh kesalahan pada kode sumber.
             </p>
 
-            <h2>Kelas SENE_Controller</h2>
+            <h2 id="SENE_Controller">Kelas SENE_Controller</h2>
             <p>
               Kelas SENE_Controller merupakan kelas dasar yang telah memiliki berbagai fungsi (metode) didalamnya untuk keperluan pembangunan aplikasi berbasis web.
               Ada banyak metode dan properti yang telah tersedia pada kelas SENE_Controller ini.

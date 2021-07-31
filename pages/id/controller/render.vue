@@ -103,7 +103,7 @@
               <div class="message-body">
                 <p><b>Info</b></p>
                 <p>
-                  Metode <code>putThemeContent</code>, <code>putJsContent</code>, dan <code>loadLayout</code> memiliki kemampuan untuk mem-buffer view, sehingga view ditampung terlebih dahulu sebelum ditampilkan oleh metode <NuxtLink to="/id/controller/render/">render</NuxtLink>.
+                  Metode <NuxtLink to="/id/controller/putthemecontent/">putThemeContent <i class="fa fa-window-restore"></i></NuxtLink>, <NuxtLink to="/id/controller/putjscontent/">putJsContent <i class="fa fa-window-restore"></i></NuxtLink> dan <NuxtLink to="/id/controller/loadlayout/">loadLayout <i class="fa fa-window-restore"></i></NuxtLink> memiliki kemampuan untuk mem-buffer view, sehingga view ditampung terlebih dahulu sebelum ditampilkan browser melalui metode <code>render</code>.
                 </p>
               </div>
             </div>

@@ -171,7 +171,7 @@
           The answer is, Seme Framework will load controller blog.php as long as the controller requirements is fulfilled.
         </p>
 
-        <h2>SENE_Controller</h2>
+        <h2 id="SENE_Controller">SENE_Controller</h2>
         <p>The SENE_Controller class is basic class for creating controller which contain properties and methods that are required for using Seme Framework properly.</p>
 
         <h3>Basic Usage</h3>

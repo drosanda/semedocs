@@ -36,7 +36,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->loadLayout(string $layout): controllerObject
+                  $this->loadLayout(string $layout [, $data=array()]): controllerObject
                 </highlight-code>
               </div>
             </div>
@@ -83,6 +83,12 @@
                 </highlight-code>
               </div>
             </div>
+
+            <h4>$data</h4>
+            <p>
+              Nilai dari parameter <code>$data</code> dapat berisi <code>array of array</code> untuk dilemparkan ke dalam view component dari controller.
+              <code>Kunci array</code> dari isi parameter ini akan dipecah menjadi variabel biasa ketika dipanggil pada view.
+            </p>
 
             <h2>Contoh Penggunaan</h2>
             <p>Berikut ini adalah contoh penggunaan dari metode loadLayout.</p>
@@ -146,24 +152,25 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  - app/
-                  |- view/
-                  |-- front/
-                  |--- home/
-                  |---- home.php
-                  |---- home_bottom.php
-                  |--- page/
-                  |---- col-1.php
+                  app/
+                  └── view/
+                   └── front/
+                    ├──  home/
+                    | ├──  slider.php
+                    | └──  three_values.php
+                    └──  page
+                      └──  col-1.php
                 </highlight-code>
               </div>
             </div>
 
-
             <div class="message is-info">
               <div class="message-body">
-                <p><b>Info</b></p>
                 <p>
-                  Metode <code>putThemeContent</code>, <code>putJsContent</code>, dan <code>render</code> memiliki kemampuan untuk mem-buffer view, sehingga view ditampung terlebih dahulu sebelum ditampilkan oleh metode <NuxtLink to="/id/controller/render/">render</NuxtLink>.
+                  <b>Info</b>
+                </p>
+                <p>
+                  Metode <NuxtLink to="/id/controller/putthemecontent/">putThemeContent <i class="fa fa-window-restore"></i></NuxtLink>, <NuxtLink to="/id/controller/putjscontent/">putJsContent <i class="fa fa-window-restore"></i></NuxtLink> dan <NuxtLink to="/id/controller/loadlayout/">loadLayout <i class="fa fa-window-restore"></i></NuxtLink> memiliki kemampuan untuk mem-buffer view, sehingga view ditampung terlebih dahulu sebelum ditampilkan ke browser melalui metode <NuxtLink to="/id/controller/render/">render <i class="fa fa-window-restore"></i></NuxtLink>.
                 </p>
               </div>
             </div>

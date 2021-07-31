@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/controller/">Controller</NuxtLink></li>
-          <li class="unavailable">putThemeContent Method</li>
+          <li class="unavailable">Metode putThemeContent</li>
         </ul>
       </nav>
       <div class="columns">
@@ -15,6 +15,7 @@
             <h1 class="">Metode putThemeContent</h1>
             <p>
               Metode putThemeContent digunakan untuk memanggil file <code>view component</code> dari sebuah tema.
+              Untuk memanggil view component yang lain, metode ini bisa digunakan berkali-kali.
             </p>
 
             <h2>Bentuk Umum</h2>
@@ -57,51 +58,17 @@
             <h4>$data</h4>
             <p>
               Nilai dari parameter <code>$data</code> dapat berisi <code>array of array</code> untuk dilemparkan ke dalam view component dari controller.
+              <code>Kunci array</code> dari isi parameter ini akan dipecah menjadi variabel biasa ketika dipanggil pada view.
             </p>
 
             <h2>Contoh</h2>
-            <p>Berikut ini adalah contoh kode penggunaan metode <code>putThemeContent</code> pada controller home.</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  class Home extends SENE_Controller
-                  {
-                    public function __construct()
-                    {
-                      parent::__construct();
-                      $this-&#x3E;setTheme(&#x27;homepage&#x27;);
-                    }
-                    public function index()
-                    {
-                      $data = array();
-                      $this-&#x3E;putThemeContent(&#x27;home/slider&#x27;,$data);
-                      $this-&#x3E;putThemeContent(&#x27;home/three_values&#x27;,$data);
-                      $this-&#x3E;loadLayout(&#x27;col-1&#x27;,$data);
-                    }
-                  }
-                </highlight-code>
-              </div>
-            </div>
-
-            <h5>Strukur File dan Direktori</h5>
             <p>
-              Berikut ini adalah ilustrasi struktur file dan direktorinya.
+              Berikut ini adalah contoh penggunaan metode putThemeContent.
+            </p>
+
+            <h3>Strukur File dan Direktori</h3>
+            <p>
+              Sebelum memahami penggunaan kode, pahami terlebih dahulu ilustrasi struktur file dan direktorinya.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -134,10 +101,88 @@
               </div>
             </div>
 
+            <h3>Contoh Controller</h3>
+            <p>
+              Berikut ini adalah contoh kode penggunaan metode <code>putThemeContent</code> pada controller home.
+              Pada controller, ada variabel <code>$data</code> yang akan dikirim ke view.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  class Home extends SENE_Controller
+                  {
+                    public function __construct()
+                    {
+                      parent::__construct();
+                      $this-&#x3E;setTheme(&#x27;homepage&#x27;);
+                    }
+                    public function index()
+                    {
+                      $data = array();
+                      $data['contoh'] = 'ini contoh';
+                      $this-&#x3E;putThemeContent(&#x27;home/slider&#x27;,$data);
+                      $this-&#x3E;putThemeContent(&#x27;home/three_values&#x27;,$data);
+                      $this-&#x3E;loadLayout(&#x27;col-1&#x27;,$data);
+                    }
+                  }
+                </highlight-code>
+              </div>
+            </div>
+
+            <h3>Contoh View Compoent</h3>
+            <p>
+              Berikut ini adalah contoh isi dari  file <code>home/slider.php</code>.
+              Dari contoh ini kita akan melihat bagaimana isi dari parameter <code>$data</code> array key-nya akan dipecah menajdi variabel biasa.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="html">
+                  &#x3C;div&#x3E;
+                    &#x3C;h1&#x3E;This is parsed example &#x3C;?=$contoh?&#x3E;&#x3C;/h1&#x3E;
+                  &#x3C;/div&#x3E;
+                </highlight-code>
+              </div>
+            </div>
+
             <div class="message is-info">
               <div class="message-body">
                 <p>
-                  Metode <NuxtLink to="/id/controller/putthemecontent/">putThemeContent <i class="fa fa-window-restore"></i></NuxtLink>, <NuxtLink to="/id/controller/putjscontent/">putJsContent <i class="fa fa-window-restore"></i></NuxtLink>, dan <NuxtLink to="/id/controller/render/">render <i class="fa fa-window-restore"></i></NuxtLink> memiliki kemampuan untuk mem-buffer tampilan html.
+                  <b>Info</b>
+                </p>
+                <p>
+                  Metode <NuxtLink to="/id/controller/putthemecontent/">putThemeContent <i class="fa fa-window-restore"></i></NuxtLink>, <NuxtLink to="/id/controller/putjscontent/">putJsContent <i class="fa fa-window-restore"></i></NuxtLink> dan <NuxtLink to="/id/controller/loadlayout/">loadLayout <i class="fa fa-window-restore"></i></NuxtLink> memiliki kemampuan untuk mem-buffer view, sehingga view ditampung terlebih dahulu sebelum ditampilkan ke browser melalui metode <NuxtLink to="/id/controller/render/">render <i class="fa fa-window-restore"></i></NuxtLink>.
                 </p>
               </div>
             </div>
@@ -242,9 +287,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-13T08:15:00+07:00",
-        "datePublished": "2021-07-13T09:16:00+07:00",
-        "dateModified": "2021-07-13T09:17:00+07:00",
+        "dateCreated": "2021-07-31T15:17:00+07:00",
+        "datePublished": "2021-07-31T15:17:00+07:00",
+        "dateModified": "2021-07-31T15:17:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
