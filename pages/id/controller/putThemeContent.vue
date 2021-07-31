@@ -5,83 +5,163 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/controller">Controller</NuxtLink></li>
+          <li class=""><NuxtLink to="/id/controller/">Controller</NuxtLink></li>
           <li class="unavailable">putThemeContent Method</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">putThemeContent Method</h1>
-            <p>This method will be loaded a theme content from a file.</p>
-            <p>The <code>$content_location</code> value will be reffered to a file name under <code>app/view/THEME/</code>.</p>
-            <p>This value also can contain path prefix of subdirectory before the filename.</p>
+            <h1 class="">Metode putThemeContent</h1>
+            <p>
+              Metode putThemeContent digunakan untuk memanggil file <code>view component</code> dari sebuah tema.
+            </p>
 
-            <h2>Content Location Requirements</h2>
-            <p>The valid content should only put inside in a directory beneath current selected theme directory.</p>
-            <pre>
-|- app
-|-- view
-|--- front
-|---- home
-|----- home.php
-|----- home_bottom.php
-            </pre>
+            <h2>Bentuk Umum</h2>
+            <p>
+              Berikut ini adalah bentuk umum metode <code>putThemeContent</code> dari kelas <NuxtLink to="/id/controller/#SENE_Controller" target="_blank">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  $this->putThemeContent(string $content_location[, array $data=array()]): controllerObject
+                </highlight-code>
+              </div>
+            </div>
+            <h3>Parameter</h3>
+            <p>
+              Metode ini memiliki 1 paremeter wajib yaitu $content_location.
+            </p>
+            <h4>$content_location</h4>
+            <p>
+              Nilai dari parameter <code>$content_location</code> merupakan sebuah string yang merujuk pada lokasi file view component didalam tema terpilih.
+              Isi dari nilai ini tidak perlu diberi akhiran <code>.php</code>.
+            </p>
 
-            <h2>Basic Usage:</h2>
-            <p>Here is the basic usage of <code>Controller::putThemeContent</code>.</p>
-            <pre>
-Controller::putThemeContent(string $content_location[, array $data]): ControllerObject
-            </pre>
+            <h4>$data</h4>
+            <p>
+              Nilai dari parameter <code>$data</code> dapat berisi <code>array of array</code> untuk dilemparkan ke dalam view component dari controller.
+            </p>
 
-            <h2>Example</h2>
-            <p>Here is the example for <code>putThemeContent</code> method:</p>
-            <pre>
-class Home extends SENE_Controller
-{
-  public function __construct()
-  {
-    parent::__construct();
-    $this-&#x3E;setTheme(&#x27;homepage&#x27;);
-  }
-  public function index()
-  {
-    $data = array();
-    $this-&#x3E;putThemeContent(&#x27;home/slider&#x27;,$data);
-    $this-&#x3E;putThemeContent(&#x27;home/three_values&#x27;,$data);
-    $this-&#x3E;loadLayout(&#x27;col-1&#x27;,$data);
-  }
-}
-            </pre>
-            <p>So, the <code>homepage</code> theme and <code>col-1</code> layout should be existed on the directory structure.</p>
-            <pre>
-- app
-|-- view
-|--- homepage
-|---- home
-|----- slider.php
-|----- three_values.php
-|---- page
-|----- col-1.php
+            <h2>Contoh</h2>
+            <p>Berikut ini adalah contoh kode penggunaan metode <code>putThemeContent</code> pada controller home.</p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  class Home extends SENE_Controller
+                  {
+                    public function __construct()
+                    {
+                      parent::__construct();
+                      $this-&#x3E;setTheme(&#x27;homepage&#x27;);
+                    }
+                    public function index()
+                    {
+                      $data = array();
+                      $this-&#x3E;putThemeContent(&#x27;home/slider&#x27;,$data);
+                      $this-&#x3E;putThemeContent(&#x27;home/three_values&#x27;,$data);
+                      $this-&#x3E;loadLayout(&#x27;col-1&#x27;,$data);
+                    }
+                  }
+                </highlight-code>
+              </div>
+            </div>
 
-            </pre>
+            <h5>Strukur File dan Direktori</h5>
+            <p>
+              Berikut ini adalah ilustrasi struktur file dan direktorinya.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  app/
+                  └── view/
+                   └── front/
+                    ├──  home/
+                    | ├──  slider.php
+                    | └──  three_values.php
+                    └──  page
+                      └──  col-1.php
+                </highlight-code>
+              </div>
+            </div>
+
+            <div class="message is-info">
+              <div class="message-body">
+                <p>
+                  Metode <NuxtLink to="/id/controller/putthemecontent/">putThemeContent <i class="fa fa-window-restore"></i></NuxtLink>, <NuxtLink to="/id/controller/putjscontent/">putJsContent <i class="fa fa-window-restore"></i></NuxtLink>, dan <NuxtLink to="/id/controller/render/">render <i class="fa fa-window-restore"></i></NuxtLink> memiliki kemampuan untuk mem-buffer tampilan html.
+                </p>
+              </div>
+            </div>
+
+            <div class="nav-bottom">
+              <div class="nav-bottom-left">
+                <nuxt-link to="/id/controller/putjsready/" class="btn">
+                  <i class="fa fa-chevron-left"></i>
+                  putJsReady
+                </nuxt-link>
+              </div>
+              <div class="nav-bottom-right">
+                <nuxt-link to="/id/controller/render/" class="btn">
+                  render
+                  <i class="fa fa-chevron-right"></i>
+                </nuxt-link>
+              </div>
+            </div>
+
           </div>
         </div>
 
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/id/controller/loadLayout" icon-pack="fa" icon-left="chevron-left">
-              loadLayout Method
-            </b-button>
-            <b-button tag="router-link" to="/id/controller/putJsContent" icon-pack="fa" icon-right="chevron-right">
-              putJsContent Method
-            </b-button>
-          </div>
-        </div>
-      </div>
 
     </div>
   </div>
@@ -91,26 +171,22 @@ export default {
   layout: 'id',
   data() {
     return {
-      name: 'Seme Framework 4',
+      name: 'Seme Framework vid',
       suffix: ' - Seme Framework 4',
-      title: 'putThemeContent Method from SENE_Controller',
-      description: 'Pelajari selengkapnya tentang putThemeContent Method from SENE_Controller on Seme Framework versi 4.0.0',
+      title: 'Metode putThemeContent',
+      description: 'Pelajari cara penggunaan metode putThemeContent dari kelas SENE_Controller di Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
-          text: 'Seme Framework',
+          text: 'Seme Framework'
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/',
-          text: 'ID',
+          text: 'ID'
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/controller/',
-          text: 'Controller',
-        },
-        {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/controller/putthemecontent/',
-          text: 'putThemeContent',
+          text: 'Controller'
         }
       ],
     }
@@ -140,12 +216,12 @@ export default {
       ]
     }
   },
-  jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
     const items = this.breadcrumbs.map((item, index) => ({
       '@type': 'ListItem',
       position: index + 1,
       item: {
-        '@type': "WebPage",
         '@id': item.url,
         name: item.text,
       },
@@ -166,9 +242,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2020-06-11T10:12:00+07:00",
-        "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-11T01:04:00+07:00",
+        "dateCreated": "2021-07-13T08:15:00+07:00",
+        "datePublished": "2021-07-13T09:16:00+07:00",
+        "dateModified": "2021-07-13T09:17:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

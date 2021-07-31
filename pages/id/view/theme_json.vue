@@ -165,7 +165,7 @@
 </template>
 <script>
 export default {
-  layout: 'v4.0.0',
+  layout: 'id',
   data (){
     return {
       base_url: '{{base_url}}',

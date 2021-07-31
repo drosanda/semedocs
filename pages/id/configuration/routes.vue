@@ -328,7 +328,7 @@
 </template>
 <script>
 export default {
-  layout: 'v4.0.0',
+  layout: 'id',
   data (){
     return {
       name: 'Seme Framework v4.0.0',
