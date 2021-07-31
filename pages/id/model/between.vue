@@ -41,7 +41,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->db->between(string $column_name, string $value_from, string $value_to): $this->db
+                  $this-&#x3E;db-&#x3E;between(string $column_name, string $value_from, string $value_to): $this-&#x3E;db
                 </highlight-code>
               </div>
             </div>
@@ -90,7 +90,7 @@
                     var $tbl_as = &#x27;dor&#x27;;
                     public function __construct(){
                       parent::__construct();
-                      $this->db->from($this->tbl,$this->tbl_as);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
                     }
 
                     /**
@@ -135,7 +135,7 @@
               <div class="message-body">
                 <p><b>Info</b></p>
                 <p>
-                  Metode mendukung metode berantai (<em>Chaining Method</em>) <b>Query Builder</b> lainnya, karena mengembalikan nilai objek (<em>return object</em>) yang sama dengan <code>$this->db</code> di dalam kelas Model.
+                  Metode mendukung metode berantai (<em>Chaining Method</em>) <b>Query Builder</b> lainnya, karena mengembalikan nilai objek (<em>return object</em>) yang sama dengan <code>$this-&#x3E;db</code> di dalam kelas Model.
                 </p>
               </div>
             </div>

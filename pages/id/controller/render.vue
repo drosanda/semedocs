@@ -45,7 +45,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->render([int $cacheable=0]): void
+                  $this-&#x3E;render([int $cacheable=0]): void
                 </highlight-code>
               </div>
             </div>

@@ -5,7 +5,7 @@
             <ul class="breadcrumbs">
               <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
 <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
-              <li class=""><NuxtLink to="/id/model">Model</NuxtLink></li>
+              <li class=""><NuxtLink to="/id/model/">Model</NuxtLink></li>
             <li class="unavailable">Insert Batch Method</li>
           </ul>
         </nav>
@@ -16,7 +16,7 @@
 					<p>Insert Batch method is alias of insert_multi method. Insert batch is part of database class builder for inserting multiple data into a table. Is alias of <NuxtLink to="/id/model/insert_multi/">Insert Multi method</NuxtLink>.</p>
 					<h2>Parameters</h2>
           <p>Insert Batch method has 2 required parameters that is <b>table name</b> and <b>values</b> array of array format.</p>
-					<pre>$this->db->insert(string $table_name, array $data_inserts, [bool $is_debug=0]): bool</pre>
+					<pre>$this-&#x3E;db-&#x3E;insert(string $table_name, array $data_inserts, [bool $is_debug=0]): bool</pre>
           <h3>$data_inserts</h3>
           <p><b>Data inserts</b> is key value pair in an array. The key refer to column name of the table.</p>
 					<h2>Example usage</h2>

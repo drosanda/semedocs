@@ -5,7 +5,7 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/model">Model</NuxtLink></li>
+          <li class=""><NuxtLink to="/id/model/">Model</NuxtLink></li>
           <li class="unavailable">Metode Delete</li>
         </ul>
       </nav>
@@ -14,7 +14,7 @@
           <div class="content">
             <h1 class="">Metode Delete</h1>
             <p>
-              Metode Delete digunakan untuk menghapus data dalam tabel.
+              Metode Delete digunakan untuk menghapus data dalam tabel dengan menjalankan perintah SQL <code>DELETE</code>.
             </p>
 
             <h2>Bentuk Umum</h2>
@@ -40,7 +40,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->db->delete(string $table_name [, int $is_debug=0]): boolean
+                  $this-&#x3E;db-&#x3E;delete(string $table_name [, int $is_debug=0]): boolean
                 </highlight-code>
               </div>
             </div>

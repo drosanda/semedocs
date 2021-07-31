@@ -38,7 +38,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->getTitle(): string
+                  $this-&#x3E;getTitle(): string
                 </highlight-code>
               </div>
             </div>
@@ -151,8 +151,8 @@
                     {
                       ...
                       $this-&#x3E;setTitle(&#x27;Hello World!&#x27;,$data);
-                      $this->loadLayout(&#x27;col-1&#x27;,$data);
-                      $this->render();
+                      $this-&#x3E;loadLayout(&#x27;col-1&#x27;,$data);
+                      $this-&#x3E;render();
                     }
                   }
                 </highlight-code>
@@ -165,7 +165,7 @@
             <amp-img layout="responsive" width="674" height="158" :src="btiex" alt="Browser title example"></amp-img>
 
             <br>
-            
+
             <div class="nav-bottom">
               <div class="nav-bottom-left">
                 <nuxt-link to="/id/controller/getthemeelement/" class="btn">

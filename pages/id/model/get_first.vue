@@ -5,7 +5,7 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/model">Model</NuxtLink></li>
+          <li class=""><NuxtLink to="/id/model/">Model</NuxtLink></li>
           <li class="unavailable">Get First Method</li>
         </ul>
       </nav>
@@ -35,7 +35,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->db->get_first([string $result_type, [bool $is_debug]]): mixed
+                  $this-&#x3E;db-&#x3E;get_first([string $result_type, [bool $is_debug]]): mixed
                 </highlight-code>
               </div>
             </div>

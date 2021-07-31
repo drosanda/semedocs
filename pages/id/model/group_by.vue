@@ -5,7 +5,7 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/model">Model</NuxtLink></li>
+          <li class=""><NuxtLink to="/id/model/">Model</NuxtLink></li>
           <li class="unavailable">Group By Method</li>
         </ul>
       </nav>
@@ -35,7 +35,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->db->group_by(string $condition): dbObject
+                  $this-&#x3E;db-&#x3E;group_by(string $condition): $this-&#x3E;db
                 </highlight-code>
               </div>
             </div>

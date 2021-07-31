@@ -36,7 +36,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->loadLayout(string $layout [, $data=array()]): controllerObject
+                  $this-&#x3E;loadLayout(string $layout [, $data=array()]): controllerObject
                 </highlight-code>
               </div>
             </div>
@@ -115,9 +115,11 @@
                   class Blog extends SENE_Controller {
                     public function __construct(){
                       parent::__construct();
-                      $this->setTheme(&#x27;front&#x27;);
+                      $this-&#x3E;setTheme(&#x27;front&#x27;);
                     }
                     public function index(){
+                      $data = array();
+                      $data['contoh'] = 'ini contoh';
                       $this-&#x3E;setTitle(&#x27;Blog home&#x27;);
                       $this-&#x3E;putThemeContent(&#x22;blog/home&#x22;,$data);
                       $this-&#x3E;putJsContent(&#x27;blog/home_bottom&#x27;,$data);

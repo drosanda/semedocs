@@ -5,7 +5,7 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/model">Model</NuxtLink></li>
+          <li class=""><NuxtLink to="/id/model/">Model</NuxtLink></li>
           <li class="unavailable">Metode From</li>
         </ul>
       </nav>
@@ -40,7 +40,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->db->from(string $table_name [, string $table_alias='']): object
+                  $this-&#x3E;db-&#x3E;from(string $table_name [, string $table_alias='']): object
                 </highlight-code>
               </div>
             </div>

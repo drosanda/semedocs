@@ -164,7 +164,7 @@
             <div class="message is-info">
               <div class="message-body">
                 <p><b>Mengakses nilai URL CDN (<code>$cdn_url</code>)</b></p>
-                <p>Bentuk metode <NuxtLink to="/id/controller/cdn_url/">$this->cdn_url()</NuxtLink> kelas <code>SENE_Controller</code> adalah untuk mengembalikan nilai <code>$cdn_url</code > nilai.</p>
+                <p>Bentuk metode <NuxtLink to="/id/controller/cdn_url/">$this-&#x3E;cdn_url()</NuxtLink> kelas <code>SENE_Controller</code> adalah untuk mengembalikan nilai <code>$cdn_url</code > nilai.</p>
               </div>
             </div>
 

@@ -5,7 +5,7 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/model">Model</NuxtLink></li>
+          <li class=""><NuxtLink to="/id/model/">Model</NuxtLink></li>
           <li class="unavailable">Query Method</li>
         </ul>
       </nav>
@@ -42,7 +42,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->db->query(string $sql): arrayOfObject
+                  $this-&#x3E;db-&#x3E;query(string $sql): arrayOfObject
                 </highlight-code>
               </div>
             </div>

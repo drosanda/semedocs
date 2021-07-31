@@ -17,7 +17,7 @@
             <hr>
             <h2>Cara menggunakan</h2>
             <p>Pertama kita harus memuat pustaka dengan menggunakan pustaka yang dimuat:</p>
-            <p><code>$this->lib('seme_email');</code></p>
+            <p><code>$this-&#x3E;lib('seme_email');</code></p>
             <p>Anda dapat menempatkan pemuat perpustakaan di konstruktor pengontrol atau pada setiap metode di pengontrol Anda.</p>
             <h2>Penggunaan Dasar</h2>
             <p>Seme Email memiliki beberapa metode, berikut adalah daftar metode umum:</p>
@@ -44,21 +44,21 @@
                   &#x3C;?php
                   Class Product extends SEME_Controller{
                   public function __construct(){
-                    $this->lib('seme_log');
+                    $this-&#x3E;lib('seme_log');
                   }
                   public function index(){
                     $replacer = array();
-                    $replacer['site_name'] = $this->site_name;
+                    $replacer['site_name'] = $this-&#x3E;site_name;
                     $replacer['nama'] = $nama;
                     $replacer['activation_link'] = $link;
-                    $this->seme_email->flush(); //optional
-                    $this->seme_email->replyto($this->site_name,$this->site_replyto);
-                    $this->seme_email->from($this->site_email,$this->site_name);
-                    $this->seme_email->subject('Registration Successful');
-                    $this->seme_email->to($email,$nama);
-                    $this->seme_email->template('account_register');
-                    $this->seme_email->replacer($replacer);
-                    $this->seme_email->send();
+                    $this-&#x3E;seme_email-&#x3E;flush(); //optional
+                    $this-&#x3E;seme_email-&#x3E;replyto($this-&#x3E;site_name,$this-&#x3E;site_replyto);
+                    $this-&#x3E;seme_email-&#x3E;from($this-&#x3E;site_email,$this-&#x3E;site_name);
+                    $this-&#x3E;seme_email-&#x3E;subject('Registration Successful');
+                    $this-&#x3E;seme_email-&#x3E;to($email,$nama);
+                    $this-&#x3E;seme_email-&#x3E;template('account_register');
+                    $this-&#x3E;seme_email-&#x3E;replacer($replacer);
+                    $this-&#x3E;seme_email-&#x3E;send();
                   }
                 }
               </highlight-code>
@@ -128,7 +128,7 @@
               <highlight-code lang="php">
                 $replacer = array();
                 $replacer['first_name'] = 'Agus Setiawan';
-                $this->seme_email->replacer($replacer);
+                $this-&#x3E;seme_email-&#x3E;replacer($replacer);
               </highlight-code>
             </div>
           </div>

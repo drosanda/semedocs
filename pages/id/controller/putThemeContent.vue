@@ -41,7 +41,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->putThemeContent(string $content_location[, array $data=array()]): controllerObject
+                  $thi-&#x3E;putThemeContent(string $content_location[, array $data=array()]): controllerObject
                 </highlight-code>
               </div>
             </div>

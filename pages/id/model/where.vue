@@ -5,174 +5,214 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/model">Model</NuxtLink></li>
-          <li class="unavailable">Where Method</li>
+          <li class=""><NuxtLink to="/id/model/">Model</NuxtLink></li>
+          <li class="unavailable">Metode Where</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Where Method</h1>
-            <p>Where method is part of database class builder for filtering data compatible with WHERE Clause on SQL. This method support chained, and has flow from top to bottom while bracket are used.</p>
-            <pre>
-class Blog_Model extends SENE_Model{
-  var $tbl = &#x27;d_order&#x27;;
-  var $tbl_as = &#x27;dor&#x27;;
-  public function __construct(){
-    parent::__construct();
-    $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
-  }
-  public function getById($id){
-    $this-&#x3E;db-&#x3E;where(&#x22;id&#x22;,$id,&#x22;AND&#x22;,&#x22;=&#x22;,0,0);
-    return $this-&#x3E;db-&#x3E;get_first();
-  }
-  public function getCancel(){
-    $this-&#x3E;db-&#x3E;where(&#x22;order_status&#x22;,&#x22;order_cancel&#x22;,&#x22;AND&#x22;,&#x22;=&#x22;,0,0);
-    return $this-&#x3E;db-&#x3E;get();
-  }
-  public function getCancelByUser($b_user_id){
-    $this-&#x3E;db-&#x3E;where(&#x22;order_status&#x22;,&#x22;order_cancel&#x22;,&#x22;AND&#x22;,&#x22;=&#x22;,0,0)
-    $this-&#x3E;db-&#x3E;where(&#x22;b_user_id&#x22;,$b_user_id,&#x22;AND&#x22;,&#x22;=&#x22;,0,0);
-    return $this-&#x3E;db-&#x3E;get();
-  }
-}
-            </pre>
-            <h2>Parameters</h2>
-            <p>Where method has 2 required parameters that is <b>column name</b> and <b>value</b>, another parameters are optional. Here is the completed parameters can be used by where methods.</p>
-            <ol type="1">
-              <li>COLUMN_NAME*</li>
-              <li>Combining Method*</li>
-              <li>Operator</li>
-              <li>Relational Operator</li>
-              <li>Bracket open (boolean)</li>
-              <li>Bracket close (boolean)</li>
-            </ol>
-            <pre>
-$this-&#x3E;db-&#x3E;where(
-COLUMN_NAME,
-VALUE,
-&#x22; AND | OR &#x22;,
-&#x22;= | != | &#x3C;= | &#x3E;= | &#x3C; | &#x3E; | &#x3C;&#x3E; |
-like | like% | %like | %like% |
-notlike | notlike% |%notlike | %notlike%
-&#x22;,
-OPENBRACKET,
-CLOSEBRACKET
-);
-            </pre>
-            <h3>COLUMN_NAME</h3>
-            <p>Column name required for filtering data from table. The columname should exist on selected table. This method has automatically escaped.</p>
-            <h3>VALUE</h3>
-            <p>Value required for matched with data on table. This method has automatically escaped.</p>
-            <h3>Combining Method</h3>
-            <p>Default value is AND, this parameter useful for filtering data for multiple condition. Available value <b>AND</b> or <b>OR</b>. Value of this parameter is not case sensitive.</p>
-            <h3>Relational Operator</h3>
-            <p>Value required for matched COLUMN_NAME with value. Available value:</p>
-            <ul>
-              <li>=</li>
-              <li>&lt;</li>
-              <li>&gt;</li>
-              <li>&lt;=</li>
-              <li>&gt;=</li>
-              <li>&lt;&gt;</li>
-              <li>like</li>
-              <li>like%</li>
-              <li>%like</li>
-              <li>%like%</li>
-              <li>notlike</li>
-              <li>notlike%</li>
-              <li>%notlike</li>
-              <li>%notlike%</li>
-            </ul>
-            <p>Value of this parameter is not case sensitive.</p>
-            <h3>OPEN BRACKET</h3>
-            <p>Required for adding bracket for prioritize condition filtering, default value 0. Available value <b>1</b> and <b>0</b>.</p>
-            <h3>CLOSE BRACKET</h3>
-            <p>Required for adding bracket for prioritize condition filtering, default value 0. Available value <b>1</b> and <b>0</b>.</p>
-            <hr/>
-            <h2>Example usage</h2>
-            <p>Here is the examples using where method, makes sure another from method and get method has executed for real result. See the first of this page for full example.</p>
-            <h3>Basic example</h3>
-            <p>Here is basic usage for selecting single data using SQL query:</p>
-            <pre>SELECT * FROM d_order WHERE `id` = 1</pre>
-            <p>Here is basic usage for selecting single data using query builder:</p>
-            <pre>$this->db->where("id",1);</pre>
-            <br>
-            <h3>Using AND / OR</h3>
-            <p>Using AND / OR by SQL query:</p>
-            <pre>
-SELECT *
-FROM d_order
-WHERE
-&#x60;a_company_id&#x60; = 1 OR
-&#x60;b_user_id&#x60; = 1
-            </pre>
-            <p>Using AND / OR by query builder:</p>
-            <pre>
-$this-&#x3E;db-&#x3E;where(&#x22;b_user_id&#x22;,1,&#x27;OR&#x27;)-&#x3E;where(&#x22;a_company_id&#x22;,1,&#x27;AND&#x27;);
-            </pre>
-            <br>
-            <h3>Using Relational Operator</h3>
-            <p>Using Relational Operator by query builder:</p>
-            <pre>
-SELECT *
-FROM d_order
-WHERE
-&#x60;b_user_id&#x60; = 1 AND
-&#x60;grand_total&#x60; &#x3E;= 1000 AND
-&#x60;status_text&#x60; LIKE &#x27;order_completed&#x27;
-            </pre>
-            <p>Using Relational Operator by query builder:</p>
-            <pre>
-$this-&#x3E;db
--&#x3E;where(&#x22;b_user_id&#x22;,1)
--&#x3E;where(&#x22;grand_total&#x22;,1000,&#x22;and&#x22;,&#x27;&#x3E;=&#x27;)
--&#x3E;where(&#x22;status_text&#x22;,&#x27;order_completed&#x27;,&#x22;and&#x22;,&#x27;like&#x27;);
-            </pre>
-            <br>
-            <h3>Using Bracket</h3>
-            <p>Using bracket open and close by SQL query:</p>
-            <pre>
-SELECT *
-FROM b_user
-WHERE
-&#x60;status_text&#x60; LIKE &#x27;active&#x27; AND
-(
-&#x60;fname&#x60; LIKE &#x27;%andre%&#x27; OR
-&#x60;lname&#x60; LIKE &#x27;%andre%&#x27; OR
-&#x60;city&#x60; LIKE &#x27;%andre%&#x27; OR
-&#x60;email LIKE &#x27;%andre%&#x27;
-)
-            </pre>
-            <p>Using bracket open and close by query builder:</p>
-            <pre>
-$this-&#x3E;db
--&#x3E;where(&#x22;status_text&#x22;,&#x27;active&#x27;,&#x27;and&#x27;,&#x27;like&#x27;)
--&#x3E;where(&#x22;fname&#x22;,&#x27;andre&#x27;,&#x22;and&#x22;,&#x27;%like%&#x27;,1,0)
--&#x3E;where(&#x22;lname&#x22;,&#x27;andre&#x27;,&#x22;and&#x22;,&#x27;%like%&#x27;,0,0)
--&#x3E;where(&#x22;city&#x22;,&#x27;andre&#x27;,&#x22;and&#x22;,&#x27;%like%&#x27;,0,0)
--&#x3E;where(&#x22;email&#x22;,&#x27;andre&#x27;,&#x22;and&#x22;,&#x27;%like%&#x27;,0,1);
-            </pre>
-            <hr>
-            <h2>Advanced Where Condition</h2>
-            <p>Seme Framework has advanced where method called <NuxtLink to="/id//model/where_as/">where_as method</NuxtLink>.</p>
+            <h1 class="">Metode Where</h1>
+            <p>
+              Metode <code>where</code> digunakan untuk melakukan penyaringan data dengan kondisi tertentu.
+              Metode ini akan mengeksekusi perintah SQL <code>WHERE</code>.
+            </p>
+
+            <h2>Bentuk Umum</h2>
+            <p>
+              Berikut ini adalah bentuk umum metode <code>where</code> dari properti <code>$db</code> di kelas <NuxtLink to="id/model/#SENE_Model">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink>.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  $this-&#x3E;db-&#x3E;where(string $column_name, mixed $filter_value [, string $operator = 'AND' [, string $relation_operator = '=' [, int $open_bracket = 0 [, int $open_bracket = 0 ]]]]): $this-&#x3E;db
+                </highlight-code>
+              </div>
+            </div>
+
+            <h3>Parameter</h3>
+            <p>
+              Metode where terdiri dari 2 parameter wajib yaitu <b>$column_name</b> dan <b>$filter_value</b>.
+            </p>
+
+            <h4>$column_name</h4>
+            <p>
+              Dapat berisi nama kolom yang akan di filter.
+            </p>
+
+            <h4>$filter_value</h4>
+            <p>
+              Nilai filter terhadap kolom terpilih.
+            </p>
+
+            <h4>$operator</h4>
+            <p>
+              Nilai operator yang dilakukan terhadap kondisi where selanjutnya, berikut ini nilai yang cocok untuk nilai dari parameter ini.
+              <ul>
+                <li><code>AND</code></li>
+                <li><code>OR</code></li>
+              </ul>
+            </p>
+
+            <h4>$operator_relational</h4>
+            <p>
+              Nilai operator relasional yang dilakukan terhadap kondisi filter dengan nama kolom.
+              <ul>
+                <li><code>=</code></li>
+                <li><code>!=</code> atau <code>&#x3C;&#x3E;</code></li>
+                <li><code>&#x3E;</code></li>
+                <li><code>&#x3C;</code></li>
+                <li><code>&#x3E;=</code></li>
+                <li><code>&#x3C;=</code></li>
+                <li><code>like</code></li>
+                <li><code>like%</code></li>
+                <li><code>%like</code></li>
+                <li><code>%like%</code> atau <code>like%%</code></li>
+                <li><code>notlike</code></li>
+                <li><code>notlike%</code></li>
+                <li><code>%notlike</code></li>
+                <li><code>%notlike%</code> atau <code>notlike%%</code></li>
+              </ul>
+            </p>
+
+            <h4>$open_bracket</h4>
+            <p>
+              Menambahkan kurung buka pada awal perintah <code>SQL</code> sebelum isi perintah kondisi <code>WHERE</code> selanjutnya.
+            </p>
+
+            <h4>$close_bracket</h4>
+            <p>
+              Menambahkan kurung tutup pada akhir perintah <code>SQL</code> sebelum isi perintah kondisi <code>WHERE</code> selanjutnya.
+            </p>
+
+            <h2>Contoh penggunaan</h2>
+            <p>
+              Berikut ini adalah contoh penggunaan metode where pada file <code>d_order_model.php</code>.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  &#x3C;?php
+                  class D_Order_Model extends SENE_Model{
+                    var $tbl = &#x27;d_order&#x27;;
+                    var $tbl_as = &#x27;dor&#x27;;
+
+                    public function __construct(){
+                      parent::__construct();
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                    }
+
+                    public function getById($id){
+                      $this-&#x3E;db-&#x3E;where(&#x22;id&#x22;,$id,&#x22;AND&#x22;,&#x22;=&#x22;,0,0);
+                      return $this-&#x3E;db-&#x3E;get_first();
+                    }
+                    public function getNotCancelled(){
+                      $this-&#x3E;db-&#x3E;where(&#x22;order_status&#x22;,&#x22;order_cancel&#x22;,&#x22;AND&#x22;,&#x22;&#x3C;&#x3E;&#x22;,0,0);
+                      return $this-&#x3E;db-&#x3E;get();
+                    }
+                    public function getCancelByUser($b_user_id){
+                      $this-&#x3E;db-&#x3E;where(&#x22;order_status&#x22;,&#x22;order_cancel&#x22;,&#x22;AND&#x22;,&#x22;like&#x22;,0,0);
+                      $this-&#x3E;db-&#x3E;where(&#x22;b_user_id&#x22;,$b_user_id,&#x22;AND&#x22;,&#x22;=&#x22;,0,0);
+                      return $this-&#x3E;db-&#x3E;get();
+                    }
+                    public function getAllCancelRefund(){
+                      $this-&#x3E;db-&#x3E;where(&#x22;order_status&#x22;,&#x22;order_cancel&#x22;,&#x22;AND&#x22;,&#x22;=&#x22;,0,0);
+                      $this-&#x3E;db-&#x3E;where(&#x22;is_refund&#x22;, 1,&#x22;OR&#x22;,&#x22;=&#x22;,1,0);
+                      $this-&#x3E;db-&#x3E;where(&#x22;is_refund_closed&#x22;, 1,&#x22;OR&#x22;,&#x22;=&#x22;,0,1);
+                      return $this-&#x3E;db-&#x3E;get();
+                    }
+                  }
+                </highlight-code>
+              </div>
+            </div>
+
+            <h3>Hasil Perintah SQL</h3>
+            <p>
+              Berikut ini adalah perintah SQL yang dihasilkan oleh metode yang ada pada contoh kelas <code>D_Order_Model</code>.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="sql">
+                  -- result from executing D_Order_Model::getById(112) --
+                  SELECT * FROM `d_order` WHERE `id` = 112;
+
+                  -- result from executing D_Order_Model::getNotCancelled() --
+                  SELECT * FROM `d_order` WHERE `order_status` != 'cancel';
+
+                  -- result from executing D_Order_Model::getCancelByUser(2125) --
+                  SELECT * FROM `d_order` WHERE `order_status` LIKE 'cancel' AND `b_user_id` = 2125;
+
+                  -- result from executing D_Order_Model::getAllCancelRefund() --
+                  SELECT * FROM `d_order` WHERE `order_status` = "order_cancel" AND ( `is_refund` = 1 OR `is_refund_closed` = 1);
+                </highlight-code>
+              </div>
+            </div>
 
           </div>
         </div>
 
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <b-button tag="router-link" to="/id/model/composite_create" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-            Model::composite_create
-          </b-button>
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/id/model/where_as/" class="btn">
+            <i class="fa fa-chevron-left"></i>
+            Metode where_as
+          </nuxt-link>
         </div>
-        <div class="column is-2">&nbsp;</div>
-        <div class="column">
-          <b-button tag="router-link" to="/id/model/where_as" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-            Model::where_as
-          </b-button>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/id/view/" class="btn">
+            View
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 
@@ -186,8 +226,8 @@ export default {
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'Model::where method',
-      description: 'Pelajari selengkapnya tentang where method on SENE_Model class from Seme Framework.',
+      title: 'Metode Where',
+      description: 'Pelajari selengkapnya tentang metode where dari properti $db di kelas SENE_Model untuk Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -198,13 +238,9 @@ export default {
           text: 'ID',
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/tutorial/',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/model/',
           text: 'Model',
-        },
-        {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/tutorial/introduction/',
-          text: 'Where',
-        },
+        }
       ],
     }
   },
@@ -233,7 +269,8 @@ export default {
       ]
     }
   },
-  jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
     const items = this.breadcrumbs.map((item, index) => ({
       '@type': 'ListItem',
       position: index + 1,

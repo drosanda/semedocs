@@ -17,7 +17,7 @@
             <hr>
             <h2>Cara Pengunaan</h2>
             <p>Pertama kita harus memuat perpustakaan dengan menggunakan perpustakaan yang dimuat:</p>
-            <p><code>$this->lib('seme_log');</code></p>
+            <p><code>$this-&#x3E;lib('seme_log');</code></p>
             <p>Anda dapat menempatkan pemuat perpustakaan di <u>konstruktor kelas controller</u> atau pada setiap <u>metode di kelas controller</u>.</p>
 
             <h2>Penggunaan Dasar</h2>
@@ -45,10 +45,10 @@
                   &#x3C;?php
                   Class Product extends SEME_Controller{
                     public function __construct(){
-                      $this->lib('seme_log');
+                      $this-&#x3E;lib('seme_log');
                     }
                     public function index(){
-                      $this->seme_log->write("Produk::index called");
+                      $this-&#x3E;seme_log-&#x3E;write("Produk::index called");
                     }
                   }</highlight-code>
                 </div>

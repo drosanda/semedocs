@@ -17,7 +17,12 @@
               <code>SENE_Controller::load</code> digunakan untuk memanggil model kedalam controller menjadi sebuah properti didalam controller tersebut.
             </p>
 
-            <h2>Parameter</h2>
+            <h2>Bentuk Umum</h2>
+            <p>
+              Berikut ini adalah bentuk umum metode <code>load</code> dari kelas <code>SENE_Controller</code>.
+            </p>
+
+            <h3>Parameter</h3>
             <p>
               Metode load terdiri dari 2 parameter yaitu <code>model_location</code> dan <code>$alias</code>.
             </p>

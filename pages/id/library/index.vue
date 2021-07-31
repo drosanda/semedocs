@@ -48,7 +48,7 @@
               <div class="maccontent">
                 <highlight-code lang="php">&#x3C;?php
 Class Home extends SENE_Controller {
-  $this->lib('sene_json_engine','sene_json');
+  $this-&#x3E;lib('sene_json_engine','sene_json');
   public function __construct(){
     parent::__construct();
   }
@@ -57,7 +57,7 @@ Class Home extends SENE_Controller {
     $data["status"]  = 200;
     $data["message"] = 'Hello we just use json right here, Yi-Ha!';
     $data["result"]  = array();
-    $this->sene_json->out($data);
+    $this-&#x3E;sene_json-&#x3E;out($data);
   }
 }
           </highlight-code>

@@ -56,7 +56,7 @@
                       //dengan memanggil metode getKey()
                       $data = $this-&#x3E;getKey();
                       //isi dari getkey() adalah object,
-                      //maka pengambilan datanya dengan -> (notasi panah)
+                      //maka pengambilan datanya dengan -&#x3E; (notasi panah)
                       //di dalam getkey ini telah di tambahkan object user
                       //dan object user ini berisikan id apabila sudah login
                       //jadi untuk pengecekannya bisa menggunakan kode dibawah ini

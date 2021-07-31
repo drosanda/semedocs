@@ -41,7 +41,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->setTitle(string $page_title): controllerObject
+                  $this-&#x3E;setTitle(string $page_title): controllerObject
                 </highlight-code>
               </div>
             </div>

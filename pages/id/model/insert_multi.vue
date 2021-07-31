@@ -5,7 +5,7 @@
             <ul class="breadcrumbs">
               <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
 <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
-              <li class=""><NuxtLink to="/id/model">Model</NuxtLink></li>
+              <li class=""><NuxtLink to="/id/model/">Model</NuxtLink></li>
             <li class="unavailable">Insert Multi Method</li>
           </ul>
         </nav>
@@ -16,7 +16,7 @@
 					<p>Insert Multi method is part of database class builder for inserting multiple data / mass insert into a table.</p>
 					<h2>Parameters</h2>
           <p>Insert Multi method has 2 required parameters that is <b>table name</b> and <b>values</b> array of array format.</p>
-					<pre>$this->db->insert_multi(string $table_name, array $data_inserts, [bool $is_debug=0]): bool</pre>
+					<pre>$this-&#x3E;db-&#x3E;insert_multi(string $table_name, array $data_inserts, [bool $is_debug=0]): bool</pre>
           <h3>$data_inserts</h3>
           <p><b>Data inserts</b> is key value pair in an array. The key refer to column name of the table.</p>
 					<h2>Example usage</h2>
@@ -30,14 +30,14 @@
 	 parent::__construct();
   }
   public function inserts($dis){
-    $this->db->insert_multi($ths->tbl,$dis);
+    $this-&#x3E;db-&#x3E;insert_multi($ths-&#x3E;tbl,$dis);
   }
 }</pre>
 					<p>at the controller, we assumed has file named blog.php</p>
           <pre>class Blog extends Sene_Controller{
   public function __construct(){
     parent::__construct();
-    $this->load('blog_model','bm'); #class scope model
+    $this-&#x3E;load('blog_model','bm'); #class scope model
   }
   public function index(){
     $id = 1;
@@ -55,7 +55,7 @@
     $dis['content'] = "This is new test for multiple insert";
     $di[]=$dis;
 
-    $res = $this->bm->inserts($id,$dis); //call the method on the model
+    $res = $this-&#x3E;bm-&#x3E;inserts($id,$dis); //call the method on the model
     if($res){
       echo 'Success';
     }else{

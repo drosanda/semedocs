@@ -43,7 +43,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->putJsContent(string $js_location[, array $data]): controllerObject
+                  $this-&#x3E;putJsContent(string $js_location[, array $data]): controllerObject
                 </highlight-code>
               </div>
             </div>
@@ -55,7 +55,7 @@
             <p>
               Nilai dari $js_location diisi dengan alamat view js yang ada didalam file php, relatif dari lokasi tema yang digunakan.
             </p>
-            
+
             <h4>$data</h4>
             <p>
               Nilai dari parameter <code>$data</code> dapat berisi <code>array of array</code> untuk dilemparkan ke dalam view component dari controller.

@@ -85,6 +85,8 @@
                       parent::__construct();
                     }
                     public function index(){
+                      $data = array();
+                      $data['example'] = 'this is example';
                       $this-&#x3E;setTitle(&#x27;Blog home&#x27;);
                       $this-&#x3E;putThemeContent(&#x22;blog/home&#x22;,$data);
                       $this-&#x3E;putJsContent(&#x27;blog/home_bottom&#x27;,$data);

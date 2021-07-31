@@ -5,7 +5,7 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/model">Model</NuxtLink></li>
+          <li class=""><NuxtLink to="/id/model/">Model</NuxtLink></li>
           <li class="unavailable">Insert</li>
         </ul>
       </nav>
@@ -41,7 +41,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->db->insert(string $table_name, array $data_insert [, bool $mass_insert=0 [, bool $is_debug=0]]): $this->db
+                  $this-&#x3E;db-&#x3E;insert(string $table_name, array $data_insert [, bool $mass_insert=0 [, bool $is_debug=0]]): $this-&#x3E;db
                 </highlight-code>
               </div>
             </div>
