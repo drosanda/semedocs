@@ -99,7 +99,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  class Blog extends Sene_Controller{
+                  class Blog extends SENE_Controller{
                     public function __construct(){
                       parent::__construct();
                       $this-&#x3E;load(&#x27;blog_model&#x27;,&#x27;bm&#x27;); #class scope model

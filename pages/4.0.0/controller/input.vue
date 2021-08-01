@@ -111,7 +111,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  class Product extends Sene_Controller{
+                  class Product extends SENE_Controller{
                     public function __construct(){
                       parent::__construct();
                     }

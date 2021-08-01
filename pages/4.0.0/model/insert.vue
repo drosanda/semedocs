@@ -40,7 +40,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;insert(string $table_name, array $data_insert, [bool $mass_insert=0 [, bool $is_debug=0] ] ): bool
+                  $this-&#x3E;db-&#x3E;insert(string $table_name, array $data_insert [, bool $mass_insert=0 [, bool $is_debug=0] ] ): bool
                 </highlight-code>
               </div>
             </div>
@@ -55,7 +55,13 @@
 
             <h4>$data_insert</h4>
             <p>
-              The <code>$data_insert</code> value can contain key value pair in array. The key refer to column name of the table and the value refer to value that will be inserted.
+              The <code>$data_insert</code> value can contain key value pair in array.
+              The key refer to column name of the table and the value refer to value that will be inserted.
+              This value supported MySQL builtin functions and values, such as:
+              <ul>
+                <li><code>NOW()</code></li>
+                <li><code>NULL</code></li>
+              </ul>
             </p>
 
             <h4>$mass_insert</h4>
@@ -66,10 +72,23 @@
               Meanwhile, for the contents of each row the array sequence contains a combination of array keys and values as in insert data in general.
             </p>
 
+            <h4>$is_debug</h4>
+            <p>
+              The <code>$is_debug</code> parameter is a marker (<em>flag</em>) to enable <i>debug</i> mode.
+              The value of this parameter can be filled with <code>int 1</code> to enable debug mode and display the query to be processed.
+              Fill it with another value to not enable debug mode.
+              In debug mode, there will be no query execution process to the database system.
+            </p>
+
             <h2>Example usage</h2>
-            <p>Here is the examples using insert method. See the first of this page for full example.</p>
-            <h3>Basic Usage</h3>
-            <p>For example we assumed want to add new data in blog table. First, in the model:</p>
+            <p>
+              This examples will show implementation <code>insert</code> method on class model and then how to executing the method on controller class.
+            </p>
+
+            <h3>The Model Class Example</h3>
+            <p>
+              Here is the source code example for <code>Blog_Model</code> class.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -94,7 +113,7 @@
                     var $tbl = &#x27;blog&#x27;;
                     var $tbl_as = &#x27;b&#x27;;
                     public function __construct(){
-                      &#x9; parent::__construct();
+                      parent::__construct();
                     }
                     public function insert($di){
                       $this-&#x3E;db-&#x3E;insert($ths-&#x3E;tbl,$di);
@@ -103,7 +122,11 @@
                 </highlight-code>
               </div>
             </div>
-            <p>at the controller, we assumed has file named blog.php</p>
+
+            <h3>The Controller Class Example</h3>
+            <p>
+              Here is the source code for controller class example using <code>insert</code> method.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -124,18 +147,18 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   &#x3C;?php
-                  class Blog extends Sene_Controller{
+                  class Blog extends SENE_Controller{
                     public function __construct(){
                       parent::__construct();
                       $this-&#x3E;load(&#x27;blog_model&#x27;,&#x27;bm&#x27;); #class scope model
                     }
                     public function index(){
-                      $id = 1;
                       $di = array();
                       $di[&#x27;id&#x27;] = 1;
-                      $di[&#x27;title&#x27;] = &#x22;This is new title of this blog!&#x22;;
-                      $di[&#x27;content&#x27;] = &#x22;This is new title of this blog!&#x22;;
-                      $res = $this-&#x3E;bm-&#x3E;insert($id,$di); //call the method on the model
+                      $di[&#x27;title&#x27;] = &#x22;Seme Blog!&#x22;;
+                      $di[&#x27;content&#x27;] = &#x22;Hello, welcome to Seme Blog&#x22;;
+                      $di[&#x27;date_publish&#x27;] = &#x22;NOW()&#x22;;
+                      $res = $this-&#x3E;bm-&#x3E;insert($di); //call the method on the model
                       if($res){
                         echo &#x27;Success&#x27;;
                       }else{
@@ -147,15 +170,10 @@
               </div>
             </div>
 
-            <h2>MySQL Builtin Functions and Values</h2>
-            <p>Seme Framework has supported the MySQL builtin function and value, such as:</p>
-            <ul>
-              <li><code>NOW()</code></li>
-              <li><code>NULL</code></li>
-            </ul>
-
-            <h3>Example usage</h3>
-            <p>Here is the example usage for using MySQL builtin function in a controller.</p>
+            <h3>SQL Result</h3>
+            <p>
+              The following is the SQL command that generated from <code>Blog</code> controller while executing <code>insert</code> method.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -174,23 +192,12 @@
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="php">
-                  ...
-                  //data input
-                  $di = array();
-                  ...
-                  $di[&#x27;id&#x27;] = &#x27;NULL&#x27;;
-                  $di[&#x27;cdate&#x27;] = &#x27;NOW()&#x27;;
-                  ..
-                  $res = $this-&#x3E;aakm-&#x3E;set($di);
-                  ...
+                <highlight-code lang="sql">
+                  INSERT INTO blog (id,title,content,date_publish)
+                  VALUES
+                    (1,&#x22;Seme Blog!&#x22;,&#x22;Hello, welcome to Seme Blog&#x22;,NULL)
+                  ;
                 </highlight-code>
-              </div>
-            </div>
-
-            <div class="message is-info">
-              <div class="message-body">
-                <p>You can see the full of source code on <NuxtLink to="/4.0.0/tutorial/basic-api/">Tutorial: Basic API</NuxtLink>.</p>
               </div>
             </div>
 
@@ -220,10 +227,10 @@ export default {
   layout: 'v4.0.0',
   data (){
     return {
-      name: 'Seme Framework v4.0.0',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'insert method',
-      description: 'Learn more about insert method on SENE_Model class Seme Framework.',
+      title: 'Insert Method',
+      description: 'Learn more about insert method from $db properti on SENE_Model class for Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

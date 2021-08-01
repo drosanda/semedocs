@@ -58,6 +58,11 @@
             <p>
               Nilai <code>$data_insert</code> bertipe data <code>array</code> yang mana kunci array-nya merujuk pada nama kolom dari tabel terpilih.
               Dan nilai array-nya berisi data yang akan dimasukan ke dalam tabel.
+              Setiap isi nilai ini dapat diisi fungsi bawaan dari MySQL, seperti:
+              <ul>
+                <li><code>NOW()</code></li>
+                <li><code>NULL</code></li>
+              </ul>
             </p>
 
             <h4>$mass_insert</h4>
@@ -133,18 +138,17 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   &#x3C;?php
-                  class Blog extends Sene_Controller{
+                  class Blog extends SENE_Controller{
                     public function __construct(){
                       parent::__construct();
                       $this-&#x3E;load(&#x27;blog_model&#x27;,&#x27;bm&#x27;); #class scope model
                     }
                     public function index(){
-                      $id = 1;
                       $di = array();
                       $di[&#x27;id&#x27;] = 1;
                       $di[&#x27;title&#x27;] = &#x22;This is new title of this blog!&#x22;;
                       $di[&#x27;content&#x27;] = &#x22;This is new title of this blog!&#x22;;
-                      $res = $this-&#x3E;bm-&#x3E;insert($id,$di); //call the method on the model
+                      $res = $this-&#x3E;bm-&#x3E;insert($di); //call the method on the model
                       if($res){
                         echo &#x27;Success&#x27;;
                       }else{

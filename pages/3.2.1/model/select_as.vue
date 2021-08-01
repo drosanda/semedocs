@@ -54,7 +54,7 @@ class Blog_Model extends SENE_Model{
 }</pre>
 					<p>at the controller, we assumed has file named blog.php</p>
           <pre>
-class Blog extends Sene_Controller{
+class Blog extends SENE_Controller{
   public function __construct(){
     parent::__construct();
     $this->load('blog_model','bm'); #class scope model

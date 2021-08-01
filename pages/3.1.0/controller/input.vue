@@ -14,7 +14,7 @@
             <h1 class="">Controller: Handling Form Input</h1>
             <p>Seme Framework comes with bultin onput manager which can handled $_POST, $_GET, and $_REQUEST. Here is the example</p>
             <pre>
-class Home extends Sene_Controller{
+class Home extends SENE_Controller{
   public function __construct(){
     parent::__construct();
   }

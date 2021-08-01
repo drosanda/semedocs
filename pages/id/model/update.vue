@@ -47,7 +47,7 @@ class Blog_Model extends SENE_Model{
           <h3>Penggunaan di Conrtoller</h3>
           <p>Contoh penggunaan method update yang dipanggil di dalam Controller.</p>
           <pre><code v-highlight class="php">&#x3C;?php
-class Blog extends Sene_Controller{
+class Blog extends SENE_Controller{
   public function __construct(){
     parent::__construct();
     $this-&#x3E;load(&#x27;blog_model&#x27;,&#x27;bm&#x27;);

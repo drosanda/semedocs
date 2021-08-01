@@ -123,7 +123,7 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   &#x3C;?php
-                  class Home extends Sene_Controller{
+                  class Home extends SENE_Controller{
                     public function __construct(){
                       parent::__construct();
                     }
@@ -240,7 +240,7 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   &#x3C;?php
-                  class Home extends Sene_Controller{
+                  class Home extends SENE_Controller{
                     public function __construct(){
                       parent::__construct();
                     }
@@ -305,7 +305,7 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   &#x3C;?php
-                  class Login extends Sene_Controller{
+                  class Login extends SENE_Controller{
                     public function __construct(){
                       parent::__construct();
                     }
@@ -423,7 +423,7 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   &#x3C;?php
-                  class Produk extends Sene_Controller{
+                  class Produk extends SENE_Controller{
                     public function __construct(){
                       parent::__construct();
                     }
@@ -466,7 +466,7 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   &#x3C;?php
-                  class Produk extends Sene_Controller{
+                  class Produk extends SENE_Controller{
                     public function __construct(){
                       parent::__construct();
                     }

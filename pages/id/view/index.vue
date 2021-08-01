@@ -152,7 +152,7 @@ class Home extends SENE_Controller{
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-class Home extends Sene_Controller{
+class Home extends SENE_Controller{
 &#x9;public function __construct(){
 &#x9;&#x9;parent::__construct();
 &#x9;}

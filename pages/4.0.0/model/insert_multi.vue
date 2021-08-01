@@ -6,16 +6,22 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/model/">Model</NuxtLink></li>
-          <li class="unavailable">insert_multi Method</li>
+          <li class="unavailable">Insert Multi Method</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
             <h1 class="">Insert Multi Method</h1>
-            <p>Insert Multi method is part of database class builder for inserting multiple data / mass insert into a table.</p>
-            <h2>Parameters</h2>
-            <p>Insert Multi method has 2 required parameters that is <b>table name</b> and <b>values</b> array of array format.</p>
+            <p>
+              The <code>insert_multi</code> method purpose is for inserting multiple rows data into a table.
+              This method is part from <NuxtLink to="/4.0.0/model/#query_builder">Query Builder <i class="fa fa-window-restore"></i></NuxtLink> methods.
+            </p>
+
+            <h2>Basic Usage</h2>
+            <p>
+              Here is the basic usage <code>insert_multi</code> method from <code>$db</code> property on <NuxtLink to="/4.0.0/model/#SENE_Model">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -35,16 +41,39 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->db->insert_multi(string $table_name, array $data_inserts, [bool $is_debug=0]): bool
+                  $this-&#x3E;db-&#x3E;insert_multi(string $table_name, array $data_inserts [, bool $is_debug = 0]): boolean
                 </highlight-code>
               </div>
             </div>
-            <h3>$data_inserts</h3>
-            <p><b>Data inserts</b> is key value pair in an array. The key refer to column name of the table.</p>
-            <h2>Example usage</h2>
-            <p>Here is the examples using insert multi method. See the first of this page for full example.</p>
-            <h3>Basic Usage</h3>
-            <p>For example we assumed want to add new data in blog table. First, in the model:</p>
+            <h3>Parameters</h3>
+            <p>
+              This method has 2 required parameters and 1 optional parameter.
+            </p>
+            <h4>$table_name</h4>
+            <p>
+              The <code>$table_name</code> refers to the name of the table to which the data is to be inserted.
+            </p>
+            <h4>$data_inserts</h4>
+            <p>
+              The <code>$data_inserts</code> value can contain 2 dimension array.
+              The first dimension array are the data sequencer. Each data sequencer contain an array with <code>key value pair</code>.
+              The <code>array key</code> refer to column name of the table and the value refer to value that will be inserted.
+              This value supported MySQL builtin functions and values, such as:
+              <ul>
+                <li><code>NOW()</code></li>
+                <li><code>NULL</code></li>
+              </ul>
+            </p>
+
+            <h2>Examples</h2>
+            <p>
+              This examples will show implementation <code>insert_multi</code> method on class model and then how to executing the method on controller class.
+            </p>
+
+            <h3>The Model Class Example</h3>
+            <p>
+              Here is the source code example for <code>Blog_Model</code> class.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -67,17 +96,24 @@
                   class Blog_Model extends SENE_Model{
                     var $tbl = &#x27;blog&#x27;;
                     var $tbl_as = &#x27;b&#x27;;
+
                     public function __construct(){
-                      &#x9; parent::__construct();
+                      parent::__construct();
                     }
+                    ...
                     public function inserts($dis){
                       $this-&#x3E;db-&#x3E;insert_multi($ths-&#x3E;tbl,$dis);
                     }
+                    ...
                   }
                 </highlight-code>
               </div>
             </div>
-            <p>at the controller, we assumed has file named blog.php</p>
+
+            <h3>The Controller Class Example</h3>
+            <p>
+              Here is the source code for controller class example using <code>insert_multi</code> method.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -108,14 +144,16 @@
 
                       $dis = array();
                       $dis[&#x27;id&#x27;] = 1;
-                      $dis[&#x27;title&#x27;] = &#x22;This is new title of this blog!&#x22;;
-                      $dis[&#x27;content&#x27;] = &#x22;This is new title of this blog!&#x22;;
+                      $dis[&#x27;title&#x27;] = &#x22;Hello World&#x22;;
+                      $dis[&#x27;content&#x27;] = &#x22;Congratulation, your first blog!&#x22;;
+                      $dis[&#x27;date_publish&#x27;] = &#x22;NULL&#x22;;
                       $di[]=$dis;
 
                       $dis = array();
                       $dis[&#x27;id&#x27;] = 2;
-                      $dis[&#x27;title&#x27;] = &#x22;Test multiple insert&#x22;;
-                      $dis[&#x27;content&#x27;] = &#x22;This is new test for multiple insert&#x22;;
+                      $dis[&#x27;title&#x27;] = &#x22;Seme Framework Awesome!&#x22;;
+                      $dis[&#x27;content&#x27;] = &#x22;Lorem lipsum dolor sit ame, what is lorem lipsum?&#x22;;
+                      $dis[&#x27;date_publish&#x27;] = &#x22;NOW()&#x22;;
                       $di[]=$dis;
 
                       $res = $this-&#x3E;bm-&#x3E;inserts($id,$dis); //call the method on the model
@@ -130,6 +168,37 @@
               </div>
             </div>
 
+            <h3>SQL Result</h3>
+            <p>
+              The following is the SQL command that generated from <code>Blog</code> controller while executing <code>insert_multi</code> method.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="sql">
+                  INSERT INTO blog (id,title,content,date_publish)
+                  VALUES
+                    (1,&#x22;Hello World&#x22;,&#x22;Congratulation, your first blog!&#x22;,NULL),
+                    (2,&#x22;Seme Framework Awesome!&#x22;,&#x22;Lorem lipsum dolor sit ame, what is lorem lipsum?&#x22;,NOW())
+                  ;
+                </highlight-code>
+              </div>
+            </div>
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
@@ -159,8 +228,8 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
-      title: 'insert_multi method',
-      description: 'Learn more about insert_multi method on SENE_Model class Seme Framework.',
+      title: 'Insert Multi Method',
+      description: 'Learn more about insert_multi method from $db property on SENE_Model class for Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -225,9 +294,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-12T21:04:00+07:00",
-        "datePublished": "2021-07-12T21:04:00+07:00",
-        "dateModified": "2021-07-12T21:04:00+07:00",
+        "dateCreated": "2021-07-12T21:01:00+07:00",
+        "datePublished": "2021-07-12T21:01:00+07:00",
+        "dateModified": "2021-07-12T21:02:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
