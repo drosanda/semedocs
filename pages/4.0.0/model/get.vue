@@ -5,7 +5,7 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0.0/model">Model</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0.0/model/">Model</NuxtLink></li>
           <li class="unavailable">Get Method</li>
         </ul>
       </nav>
@@ -35,13 +35,13 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->db->get_first([string $result_type, [bool $is_debug]]): mixed
+                  $this-&#x3E;db-&#x3E;get([string $result_type = &#x22;&#x22; [, bool $is_debug = 0]]): mixed
                 </highlight-code>
               </div>
             </div>
 
             <h3>$result_type</h3>
-            <p><b>Result type</b> consist of array and object, if value has "array" the result will be array of array otherwise will returned array of object.</p>
+            <p><b>Result type</b> consist of array and object, if value has &#x22;array&#x22; the result will be array of array otherwise will returned array of object.</p>
 
             <h2>Example usage</h2>
             <p>Here is the examples using select method. See the first of this page for full example.</p>

@@ -1,4 +1,4 @@
-<template>
+&#x22;array&#x22;<template>
   <div class="section">
     <div class="container">
       <nav class="breadcrumb" aria-label="breadcrumbs">
@@ -14,7 +14,7 @@
           <div class="content">
             <h1 class="">Metode Get</h1>
             <p>
-              Metode Get merupakan salah satu bagian dari <code>query builder</code> yang berguna untuk menarik hasil dari query builder yang telah disusun.
+              Metode <code>get</code> merupakan salah satu bagian dari <code>query builder</code> yang berguna untuk menarik hasil <u>jamak</u> dari query builder yang telah disusun.
             </p>
 
             <h2>Bentuk Umum</h2>
@@ -41,7 +41,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;get([string $result_type="" [,bool $is_debug]]): mixed
+                  $this-&#x3E;db-&#x3E;get([string $result_type = &#x22;&#x22; [, bool $is_debug  =0]]): mixed
                 </highlight-code>
               </div>
             </div>
@@ -52,7 +52,7 @@
             <h4>$result_type</h4>
             <p>
               Nilai dari parameter <code>$result_type</code> untuk menentukan hasil keluaran dari metode get.
-              Isi dengan <code>string "array"</code> untuk mengembalikan nilai hasil dengan tipe data <i>array of array</i>.
+              Isi dengan <code>string &#x22;array&#x22;</code> untuk mengembalikan nilai hasil dengan tipe data <i>array of array</i>.
               Sementara isi nilai lainnya untuk mengembalikan nilai dengan tipe data <i>array of object</i>.
             </p>
             <h4>$is_debug</h4>
@@ -65,7 +65,7 @@
 
             <h2>Contoh Penggunaan</h2>
             <p>
-              Beirkut ini adalah contoh penggunaan pada file <code>blog_model.php</code>.
+              Berikut ini adalah contoh penggunaan pada file <code>blog_model.php</code>.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -117,6 +117,7 @@
                 </highlight-code>
               </div>
             </div>
+
           </div>
         </div>
 

@@ -12,10 +12,17 @@
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Get First Method</h1>
-            <p>Get First method is part of database class builder for filtering just only one result.</p>
-            <h2>Parameters</h2>
-            <p>Group By method has 2 parameter</p>
+            <h1 class="">Metode Get First</h1>
+            <p>
+              Metode <code>get_first</code> merupakan salah satu bagian dari <code>query builder</code> yang berguna untuk menarik hasil <u>tunggal</u> dari query builder yang telah disusun.
+              Metode ini hanya akan mengembalikan nilai hasil tarikan <b>maksimal 1 baris data per query</b>.
+            </p>
+
+            <h2>Bentuk Umum</h2>
+            <p>
+              Metode <code>get_first</code> merupakan bagian dari properti <code>$db</code> dari kelas <code>SENE_Model</code>.
+            </p>
+
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -35,17 +42,32 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;get_first([string $result_type, [bool $is_debug]]): mixed
+                  $this-&#x3E;db-&#x3E;get_first([string $result_type = &#x22;&#x22; [, bool $is_debug = 0]]): mixed
                 </highlight-code>
               </div>
             </div>
+            <h3>Parameter</h3>
+            <p>
+              Metode ini terdiri dari 2 parameter opsional.
+            </p>
+            <h4>$result_type</h4>
+            <p>
+              Nilai dari parameter <code>$result_type</code> untuk menentukan hasil keluaran dari metode get.
+              Isi dengan <code>string &#x22;array&#x22;</code> untuk mengembalikan nilai hasil dengan tipe data <i>array of array</i>.
+              Sementara isi nilai lainnya untuk mengembalikan nilai dengan tipe data <i>array of object</i>.
+            </p>
+            <h4>$is_debug</h4>
+            <p>
+              Parameter <code>$is_debug</code> merupakan sebuah penanda (<em>flag</em>) untuk mengaktifkan mode <i>debug</i>.
+              Nilai dari parameter ini bisa diis dengan <code>int 1</code> untuk mengaktifkan mode debug dan menampilkan query yang akan diproses.
+              Isi dengan nilai lainnya untuk tidak mengaktifkan mode debug.
+              Pada mode debug, tidak akan ada proses eksekusi query ke sistem database.
+            </p>
 
-            <h3>$result_type</h3>
-            <p><b>Result type</b> consist of array and object, if value has "array" the result will be array otherwise will returned object.</p>
-            <h2>Example usage</h2>
-            <p>Here is the examples using select method. See the first of this page for full example.</p>
-            <h3>Basic Usage</h3>
-            <p>For example we assumed want to add new data in blog table. First, in the model:</p>
+            <h2>Contoh Penggunaan</h2>
+            <p>
+              Berikut ini adalah contoh penggunaan pada file <code>blog_model.php</code>.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -68,38 +90,50 @@
                   class Blog_Model extends SENE_Model{
                     var $tbl = &#x27;blog&#x27;;
                     var $tbl_as = &#x27;b&#x27;;
+
                     public function __construct(){
-                      &#x9; parent::__construct();
+                      parent::__construct();
                     }
-                    public function getById($id){
-                      $this-&#x3E;db-&#x3E;select(&#x22;id&#x22;);
-                      $this-&#x3E;db-&#x3E;select(&#x22;title&#x22;);
-                      $this-&#x3E;db-&#x3E;select(&#x22;content&#x22;);
+                    public function getBySlug($slug){
                       $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
-                      $this-&#x3E;db-&#x3E;where_as(&#x22;id&#x22;,$id);
+                      $this-&#x3E;db-&#x3E;where(&#x22;slug&#x22;, $this-&#x3E;db-&#x3E;esc($slug));
                       return $this-&#x3E;db-&#x3E;get_first();
                     }
-                    public function getByIdArray($id){
-                      $this-&#x3E;db-&#x3E;select(&#x22;id&#x22;);
-                      $this-&#x3E;db-&#x3E;select(&#x22;title&#x22;);
-                      $this-&#x3E;db-&#x3E;select(&#x22;content&#x22;);
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
-                      $this-&#x3E;db-&#x3E;where_as(&#x22;id&#x22;,$id);
-                      return $this-&#x3E;db-&#x3E;get_first(&#x27;array&#x27;);
-                    }
-                    public function getByIdArrayDebugQuery($id){
-                      $this-&#x3E;db-&#x3E;select(&#x22;id&#x22;);
-                      $this-&#x3E;db-&#x3E;select(&#x22;title&#x22;);
-                      $this-&#x3E;db-&#x3E;select(&#x22;content&#x22;);
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
-                      $this-&#x3E;db-&#x3E;where_as(&#x22;id&#x22;,$id);
-                      return $this-&#x3E;db-&#x3E;get_first(&#x27;array&#x27;,1);
-                    }
+                    ...
                   }
-
                 </highlight-code>
               </div>
             </div>
+
+            <h3>Hasil Perintah SQL</h3>
+            <p>
+              Berikut ini adalah perintah SQL yang dihasilkan oleh metode yang ada pada contoh kelas <code>D_Blog_Model</code>.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="sql">
+                  -- result from executing D_Blog_Model::getBySlug('seme-framework-tutorial-1') --
+                  SELECT * FROM `d_blog` b WHERE b.`slug` = 'seme-framework-tutorial-1' LIMIT 0, 1;
+                </highlight-code>
+              </div>
+            </div>
+
           </div>
         </div>
 
@@ -129,7 +163,7 @@ export default {
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'Metode get_first',
+      title: 'Metode Get First',
       description: 'Pelajari selengkapnya tentang Metode get_first dari SENE_Model di Seme Framework 4.0.0',
       breadcrumbs: [
         {
@@ -143,11 +177,7 @@ export default {
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/tutorial/',
           text: 'Model',
-        },
-        {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/tutorial/introduction/',
-          text: 'Get First',
-        },
+        }
       ],
     }
   },
@@ -202,9 +232,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2020-06-11T10:12:00+07:00",
-        "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-29T00:14:00+07:00",
+        "dateCreated": "2021-08-01T17:03:00+07:00",
+        "datePublished": "2021-08-01T17:03:00+07:00",
+        "dateModified": "2021-08-01T17:03:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

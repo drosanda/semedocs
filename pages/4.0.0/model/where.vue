@@ -5,7 +5,7 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0.0/model">Model</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0.0/model/">Model</NuxtLink></li>
           <li class="unavailable">Where Method</li>
         </ul>
       </nav>
@@ -180,7 +180,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->db->where("id",1);
+                  $this-&#x3E;db-&#x3E;where(&#x22;id&#x22;,1);
                 </highlight-code>
               </div>
             </div>

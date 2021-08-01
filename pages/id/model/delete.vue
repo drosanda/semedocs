@@ -108,8 +108,8 @@
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
-                <nuxt-link to="/id/model/exec/" class="btn">
-                  Metode exec
+                <nuxt-link to="/id/model/esc/" class="btn">
+                  Metode esc
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>

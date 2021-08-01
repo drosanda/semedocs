@@ -145,8 +145,8 @@
                   class D_Order_Model extends SENE_Model{
                     var $tbl = &#x27;d_order&#x27;;
                     var $tbl_as = &#x27;dor&#x27;;
-                    var $tbl2 = &#x27;d_order&#x27;;
-                    var $tbl2_as = &#x27;dor&#x27;;
+                    var $tbl2 = &#x27;d_order_detail&#x27;;
+                    var $tbl2_as = &#x27;dod&#x27;;
                     var $tbl3 = &#x27;c_produk&#x27;;
                     var $tbl3_as = &#x27;cp&#x27;;
 
@@ -313,8 +313,8 @@ export default {
       "image": [
         (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
       ],
-      "dateCreated": "2020-06-11T10:12:00+07:00",
-      "datePublished": "2020-06-11T10:12:00+07:00",
+      "dateCreated": "2021-08-01T09:04:00+07:00",
+      "datePublished": "2021-08-01T09:04:00+07:00",
       "dateModified": "2021-08-01T09:04:00+07:00",
       "author": {
         "@type": "Person",

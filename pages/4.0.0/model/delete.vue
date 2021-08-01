@@ -5,7 +5,7 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0.0/model">Model</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0.0/model/">Model</NuxtLink></li>
           <li class="unavailable">Delete Method</li>
         </ul>
       </nav>
@@ -74,15 +74,15 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   class Blog_Model extends SENE_Model{
-                    var $tbl = 'd_order';
-                    var $tbl_as = 'dor';
+                    var $tbl = &#x27;d_order&#x27;;
+                    var $tbl_as = &#x27;dor&#x27;;
                     public function __construct(){
                       parent::__construct();
-                      $this->db->from($this->tbl,$this->tbl_as);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
                     }
                     public function delete($id){
-                      $this->db->where("id",$id);
-                      return $this->db->delete($this->tbl);
+                      $this-&#x3E;db-&#x3E;where(&#x22;id&#x22;,$id);
+                      return $this-&#x3E;db-&#x3E;delete($this-&#x3E;tbl);
                     }
                   }
                 </highlight-code>
@@ -101,8 +101,8 @@
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/4.0.0/model/exec/" class="btn">
-            exec method
+          <nuxt-link to="/4.0.0/model/esc/" class="btn">
+            esc method
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>

@@ -298,9 +298,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2020-06-11T10:12:00+07:00",
-        "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-11T01:04:00+07:00",
+        "dateCreated": "2021-08-01T10:04:00+07:00",
+        "datePublished": "2021-08-01T10:04:00+07:00",
+        "dateModified": "2021-08-01T10:04:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
