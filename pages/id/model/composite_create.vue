@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/model/">Model</NuxtLink></li>
-          <li class="unavailable">Metode composite_create</li>
+          <li class="unavailable">Composite Create</li>
         </ul>
       </nav>
       <div class="columns">
@@ -14,15 +14,12 @@
           <div class="content">
             <h1 class="">Metode Composite Create</h1>
             <p>
-              Metode <b>composite_create</b> digunakan untuk melakukan proses join dengan kondisi <b>PRIMARYKEY</b> <u>lebih dari satu</u>.
-            </p>
-            <p>
-              Metode ini cocok untuk digunakan untuk melakukan proses <b>JOIN</b> tabel dengan metode <NuxtLink to="/id/model/join_composite/">join_composite</NuxtLink>.
+              Metode <b>composite_create</b> digunakan untuk menghasilkan <code>object</code> untuk metode <NuxtLink to="/id/model/join_composite/">join_composite <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
 
             <h2>Bentuk Umum</h2>
             <p>
-              Metode <b>composite_create</b> memiliki bentuk umum sebagai berikut:
+              Berikut ini adalah bentuk umum metode <code>composite_create</code> dari properti <code>$db</code> di kelas <NuxtLink to="id/model/#SENE_Model">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -43,7 +40,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;composite_create(string $TBL1_COLUMN_1, string $OPERATOR, string TBL2_COLUMN_1): compositeObject;
+                  $this-&#x3E;db-&#x3E;composite_create(string $TBL1_COLUMN_1, string $OPERATOR, string TBL2_COLUMN_1): array;
                 </highlight-code>
               </div>
             </div>
@@ -55,16 +52,16 @@
             <p>Nama kolom pertama untuk tabel pertama.</p>
 
             <h4>$OPERATOR</h4>
-            <p>Nilai operator relasional, biasanya terdiri dari salah satu: &#x22;=&#x22;,&#x22;&#x3C;&#x3E;&#x22;.</p>
+            <p>
+              Nilai operator relasional, seperti:
+              <ul>
+                <li><code>=</code></li>
+                <li><code>&#x3C;&#x3E;</code></li>
+              </ul>
+            </p>
 
             <h4>$TBL2_COLUMN_1</h4>
             <p>Nama kolom pertama untuk tabel pertama.</p>
-
-            <div class="message is-info">
-              <div class="message-body">
-                <p>This method available from Seme Framework version &#x3E;= 3.2.1</p>
-              </div>
-            </div>
 
             <h2>Contoh Penggunaan</h2>
             <p>
@@ -115,6 +112,13 @@
                     }
                   }
                 </highlight-code>
+              </div>
+            </div>
+
+            <div class="message is-info">
+              <div class="message-body">
+                <p><b>Info</b></p>
+                <p>Metode ini ada mulai dari Seme Framework versi >= 3.2.1</p>
               </div>
             </div>
 

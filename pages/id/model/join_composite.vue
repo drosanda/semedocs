@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/model/">Model</NuxtLink></li>
-          <li class="unavailable">Metode join_composite</li>
+          <li class="unavailable">Join Composite</li>
         </ul>
       </nav>
       <div class="columns">
@@ -14,13 +14,14 @@
           <div class="content">
             <h1 class="">Metode Join Composite</h1>
             <p>
-              Metode <b>join_composite</b> digunakan untuk melakukan operasi <b>JOIN</b> dengan kondisi banyak <b>PRIMARY KEY</b> dan metode ini mendukung <i>chaining method query builder</i>.
-              Metode ini cocok untuk digunakan dengan metode <NuxtLink to="/4.0.0/model/composite_create/">composite_create</NuxtLink>.
+              Metode <code>join_composite</code> digunakan untuk menggabungkan hasil query dari dua tabel atau lebih dengan syarat join lebih dari 1 kunci.
+              Metode ini akan mengeksekusi perintah SQL <code>JOIN</code> dan juga bagian dari <code>Query Builder</code>.
+              Metode ini juga cocok untuk digunakan dalam proses join dengan kondisi <b>PRIMARY KEY</b> lebih dari satu.
             </p>
 
-            <h2>Penggunaan Dasar</h2>
+            <h2>Bentuk Umum</h2>
             <p>
-              Berikut ini adalah penggunaan dasar metode join_composite.
+              Berikut ini adalah bentuk umum metode <code>join_composite</code> dari properti <code>$db</code> di kelas <NuxtLink to="id/model/#SENE_Model">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
 
             <div class="macwindow">
@@ -42,35 +43,46 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;join_composite(string $TABLE_NAME, string $TABLE_NAME_ALIAS, array compositeObjects, string JOIN_TYPE): dbObject
+                  $this-&#x3E;db-&#x3E;join_composite(
+                    string $table2_name,
+                    string $table2_alias,
+                    array $compositeObjects
+                    [, string $join_method = &#x22;&#x22;]
+                  ): $this->db
                 </highlight-code>
               </div>
             </div>
 
             <h3>Parameter</h3>
-            <p>join_composite terdiiri dari 4 parameter wajib dan akan mengembalikan objek dbObject.</p>
+            <p>Metode ini membutuhkan 4 parameter wajib dan 1 parameter opsional.</p>
 
-            <h4>$TABLE_NAME</h4>
+            <h4>$table2_name</h4>
             <p>Nama tabel yang akan dijoinkan.</p>
 
-            <h4>$TABLE_NAME_ALIAS</h4>
+            <h4>$table2_alias</h4>
             <p>Nama alias tabel yang akan dijoinkan.</p>
 
-            <h4>Array of Join Composite Object</h4>
-            <p>Array yang berisi objek komposit dari metode composite_create. </p>
+            <h4>$compositeObjects</h4>
+            <p>
+              Array yang berisi objek komposit, isi nilai ini dibuat oleh metode <NuxtLink to="/id/model/composite_create/">composite_create <i class="fa fa-external-link"></i></NuxtLink>.
+            </p>
 
-            <h4>JOIN_TYPE</h4>
-            <p>Jenis join, adapun nilai default yaitu string kosong. Selain itu, nilai dari JOIN_TYPE ini bisa berisi inner, outer, left, atau right.</p>
+            <h4>$join_method</h4>
 
-            <div class="message is-info">
-              <div class="message-body">
-                <p>Metode ini ada mulai dari Seme Framework versi &#x3E;= 3.2.1 keatas</p>
-              </div>
-            </div>
+            <p>
+              Cara yang digunakan untuk menjoinkan tabel, nilai defaultnya adalah string kosong <code>&#x22;&#x22;</code>.
+              Berikut ini adalah beberapa nilai yang cocok untuk isi dari parameter <code>join_method</code>:
+              <ul>
+                <li><code>left</code> untuk left join</li>
+                <li><code>right</code> untuk right join</li>
+                <li><code>inner</code> untuk inner join</li>
+                <li><code>outer</code> untuk outer join</li>
+              </ul>
+            </p>
 
             <h2>Contoh Penggunaan</h2>
             <p>
-              Berikut ini adalah contoh penggunaan metode join_composite pada file d_sales_model.php.
+              Berikut ini adalah contoh penggunaan metode <code>join_composite</code> pada file <code>d_sales_model.php</code>.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -118,6 +130,51 @@
               </div>
             </div>
 
+            <h3>Hasil Perintah SQL</h3>
+            <p>
+              Berikut ini adalah perintah SQL yang dihasilkan oleh metode yang ada pada contoh kelas <code>D_Sales_Model</code>.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="sql">
+                  -- result from executing D_Sales_Model::getByOrderId(37) --
+                  SELECT *
+                  FROM `d_sales` dsl
+                  INNER JOIN b_seller bs
+                    ON (
+                      dsl.nation_code = bs.nation_code
+                      AND dsl.b_seller_id = bs.id
+                    )
+                  WHERE
+                    dsl.id = &#x22;37&#x22;
+                  LIMIT 0, 1;
+                </highlight-code>
+              </div>
+            </div>
+
+            <div class="message is-info">
+              <div class="message-body">
+                <p><b>Info</b></p>
+                <p>Metode ini ada mulai dari Seme Framework versi >= 3.2.1</p>
+              </div>
+            </div>
+
             <div class="nav-bottom">
               <div class="nav-bottom-left">
                 <nuxt-link to="/id/model/insert/" class="btn">
@@ -147,8 +204,8 @@ export default {
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'Metode join_composite',
-      description: 'Pelajari selengkapnya tentang metode join_composite dari SENE_Model di Seme Framework 4.0.0',
+      title: 'Metode Join Composite',
+      description: 'Pelajari selengkapnya tentang metode join_composite dari properti $db di SENE_Model untuk Seme Framework 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
