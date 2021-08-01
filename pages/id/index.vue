@@ -15,7 +15,7 @@
             <h2 style="margin: 0.5em 0; padding: 0; line-height: 1;">Dokumentasi dalam Bahasa Indonesia</h2>
             <div class="badges">
               <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/version-4.0.0-ed6f75' alt="version"></amp-img>
-              <amp-img layout="fixed" width="90px" height="20px" src='https://travis-ci.org/drosanda/seme-framework.svg?branch=master' alt="build status"></amp-img>
+              <amp-img layout="fixed" width="90px" height="20px" src='https://travis-ci.com/drosanda/seme-framework.svg?branch=master' alt="build status"></amp-img>
               <amp-img layout="fixed" width="53px" height="20px" src='https://img.shields.io/badge/lang-id-e9bd2e' alt="version"></amp-img>
               <amp-img layout="fixed" width="113px" height="20px" src="https://codecov.io/gh/drosanda/seme-framework/branch/master/graph/badge.svg?token=3WRW0SNO41" alt="code coverage"></amp-img>
             </div>
