@@ -12,11 +12,16 @@
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Metode Exec</h1>
-            <p>Exec method is used executing the raw SQL agains the table.</p>
 
-            <h2>Parameters</h2>
-            <p>Query method has 1 required parameter.</p>
+            <h1 class="">Metode Exec</h1>
+            <p>
+              Metode <code>exec</code> berguna untuk menjalankan sebuah perintah SQL mentah.
+            </p>
+
+            <h2>Bentuk Umum</h2>
+            <p>
+              Berikut ini adalah bentuk umum metode <code>exec</code> dari properti <code>$db</code> pada kelas <NuxtLink to="4.0.0/model/#SENE_Model">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink>.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -36,19 +41,21 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;query(string $sql): boolean
+                  $this-&#x3E;db-&#x3E;exec(string $sql): boolean
                 </highlight-code>
               </div>
             </div>
 
-            <h3>$sql</h3>
-            <p><b>SQL</b> can be single command of SQL.</p>
+            <h3>Parameter</h3>
+            <p>Metode ini membutuhkan 1 parameter wajib.</p>
 
-            <h2>Example usage</h2>
-            <p>Here is the examples using SQL method. See the first of this page for full example.</p>
+            <h4>$sql</h4>
+            <p>Nilai dari <b>$sql</b> dapat berisi satu perintah SQL lengkap.</p>
 
-            <h3>Basic Usage</h3>
-            <p>For example we assumed want to add new data in blog table. First, in the model:</p>
+            <h2>Contoh Penggunaan</h2>
+            <p>
+              Berikut ini contoh penggunaan untuk metode <code>exec</code> pada sebuah kelas model.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -68,22 +75,25 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  &#x3C;?php
-                  class Blog_Model extends SENE_Model{
-                    var $tbl = &#x27;d_order&#x27;;
-                    var $tbl_as = &#x27;dor&#x27;;
+                  class C_Produk_Model extends SENE_Model {
+                    var $tbl = &#x27;c_produk&#x27;;
+                    var $tbl_as = &#x27;cp&#x27;;
+
                     public function __construct(){
                       parent::__construct();
                       $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
                     }
-                    public function massUpdateProduct($id){
-                      $sql = &#x27;UPDATE products SET is_published =0 WHERE DATE(date_created) &#x3C; DATE(&#x22;2019-01-01&#x22;)&#x27;;
+                    ...
+                    public function unpublishOldProduct($id){
+                      $sql = &#x27;UPDATE &#x27;.$this-&#x3E;tbl.&#x27; SET is_published = 0 WHERE DATE(date_created) &#x3C; DATE(&#x22;2019-01-01&#x22;)&#x27;;
                       return $this-&#x3E;db-&#x3E;exec($sql);
                     }
+                    ...
                   }
                 </highlight-code>
               </div>
             </div>
+
           </div>
         </div>
 

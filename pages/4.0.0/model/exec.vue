@@ -13,10 +13,14 @@
         <div class="column">
           <div class="content">
             <h1 class="">Exec Method</h1>
-            <p>Exec method is used executing the raw SQL agains the table.</p>
+            <p>
+              The <code>exec</code> method is used for executing raw SQL against the table.
+            </p>
 
-            <h2>Parameters</h2>
-            <p>Query method has 1 required parameter.</p>
+            <h2>Basic Usage</h2>
+            <p>
+              Here is the basic usage <code>exec</code> method from <code>$db</code> property on <NuxtLink to="4.0.0/model/#SENE_Model">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -36,19 +40,21 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;query(string $sql): boolean
+                  $this-&#x3E;db-&#x3E;exec(string $sql): boolean
                 </highlight-code>
               </div>
             </div>
 
-            <h3>$sql</h3>
-            <p><b>SQL</b> can be single command of SQL.</p>
+            <h3>Parameters</h3>
+            <p>This method has 1 required parameter.</p>
 
-            <h2>Example usage</h2>
-            <p>Here is the examples using SQL method. See the first of this page for full example.</p>
+            <h4>$sql</h4>
+            <p>The <b>$sql</b> value can be a completed single command of <code>SQL</code>.</p>
 
-            <h3>Basic Usage</h3>
-            <p>For example we assumed want to add new data in blog table. First, in the model:</p>
+            <h2>Example</h2>
+            <p>
+              Here is the example for <code>exec</code> method in a model class.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -68,17 +74,20 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  class Blog_Model extends SENE_Model {
-                    var $tbl = &#x27;d_order&#x27;;
-                    var $tbl_as = &#x27;dor&#x27;;
+                  class C_Produk_Model extends SENE_Model {
+                    var $tbl = &#x27;c_produk&#x27;;
+                    var $tbl_as = &#x27;cp&#x27;;
+
                     public function __construct(){
                       parent::__construct();
                       $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
                     }
-                    public function massUpdateProduct($id){
-                      $sql = &#x27;UPDATE products SET is_published =0 WHERE DATE(date_created) &#x3C; DATE(&#x22;2019-01-01&#x22;)&#x27;;
+                    ...
+                    public function unpublishOldProduct($id){
+                      $sql = &#x27;UPDATE &#x27;.$this-&#x3E;tbl.&#x27; SET is_published = 0 WHERE DATE(date_created) &#x3C; DATE(&#x22;2019-01-01&#x22;)&#x27;;
                       return $this-&#x3E;db-&#x3E;exec($sql);
                     }
+                    ...
                   }
                 </highlight-code>
               </div>
