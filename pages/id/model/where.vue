@@ -16,6 +16,7 @@
             <p>
               Metode <code>where</code> digunakan untuk melakukan penyaringan data dengan kondisi tertentu.
               Metode ini akan mengeksekusi perintah SQL <code>WHERE</code>.
+              Metode ini juga bagian dari <code>Query Builder</code>.
             </p>
 
             <h2>Bentuk Umum</h2>
@@ -49,11 +50,13 @@
             <h3>Parameter</h3>
             <p>
               Metode where terdiri dari 2 parameter wajib yaitu <b>$column_name</b> dan <b>$filter_value</b>.
+              Nilai parameter ini <b>otomatis</b> di <code>escape</code>.
             </p>
 
             <h4>$column_name</h4>
             <p>
               Dapat berisi nama kolom yang akan di filter.
+              Nilai parameter ini <b>otomatis</b> di <code>escape</code>.
             </p>
 
             <h4>$filter_value</h4>
@@ -63,7 +66,7 @@
 
             <h4>$operator</h4>
             <p>
-              Nilai operator yang dilakukan terhadap kondisi where selanjutnya, berikut ini nilai yang cocok untuk nilai dari parameter ini.
+              Nilai operator yang dilakukan terhadap kondisi <code>WHERE</code> selanjutnya, berikut ini nilai yang cocok untuk nilai dari parameter ini.
               <ul>
                 <li><code>AND</code></li>
                 <li><code>OR</code></li>

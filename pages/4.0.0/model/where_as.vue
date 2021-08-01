@@ -13,7 +13,7 @@
         <div class="column">
           <div class="content">
             <h1 class="">Where AS Method</h1>
-            <p>Where method is part of database class builder for filtering data compatible with WHERE Clause on SQL. This method support chained, and has flow from top to bottom while bracket are used. The <b>difference</b> is this method does not automatically escaped</p>
+            <p>The <code>where_as</code> method is part of database class builder for filtering data compatible with WHERE Clause on SQL. This method support chained, and has flow from top to bottom while bracket are used. The <b>difference</b> is this method does not automatically escaped</p>
 
             <div class="macwindow">
               <div class="titlebar">
