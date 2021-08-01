@@ -14,7 +14,8 @@
           <div class="content">
             <h1 class="">Metode Composite Create</h1>
             <p>
-              Metode <b>composite_create</b> digunakan untuk menghasilkan <code>object</code> untuk metode <NuxtLink to="/id/model/join_composite/">join_composite <i class="fa fa-window-restore"></i></NuxtLink>.
+              Metode <b>composite_create</b> digunakan untuk menghasilkan <code>array compositeObjects</code> untuk nilai parameter <NuxtLink to="/id/model/join_composite/#compositeObject">compositeObject <i class="fa fa-window-restore"></i></NuxtLink> dalam metode <NuxtLink to="/id/model/join_composite/">join_composite <i class="fa fa-window-restore"></i></NuxtLink>.
+              Metode dapat digunakan berulang kali sebanyak kunci yang digunakan.
             </p>
 
             <h2>Bentuk Umum</h2>
@@ -40,7 +41,11 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;composite_create(string $TBL1_COLUMN_1, string $OPERATOR, string TBL2_COLUMN_1): array;
+                  $this-&#x3E;db-&#x3E;composite_create(
+                  string $table1_column,
+                  string $operator,
+                  string $table2_column
+                  ): array
                 </highlight-code>
               </div>
             </div>
@@ -48,27 +53,27 @@
             <h3>Parameter</h3>
             <p>Metode composite_create terdiri dari 3 parameter wajib dan akan mengembalikan compositeObject.</p>
 
-            <h4>$TBL1_COLUMN_1</h4>
-            <p>Nama kolom pertama untuk tabel pertama.</p>
+            <h4>$table1_column</h4>
+            <p>Nama kolom pada tabel pertama yang akan dibuat composite-nya.</p>
 
-            <h4>$OPERATOR</h4>
+            <h4>$operator</h4>
             <p>
-              Nilai operator relasional, seperti:
+              Dapat berisi nilai operator relasional, seperti:
               <ul>
                 <li><code>=</code></li>
                 <li><code>&#x3C;&#x3E;</code></li>
               </ul>
             </p>
 
-            <h4>$TBL2_COLUMN_1</h4>
-            <p>Nama kolom pertama untuk tabel pertama.</p>
+            <h4>$table2_column</h4>
+            <p>Nama kolom untuk tabel kedua.</p>
 
             <h2>Contoh Penggunaan</h2>
             <p>
               Berikut ini adalah contoh penggunaan metode composite_create dalam bentuk kode utuh d_sales_model.php.
             </p>
             <p>
-              Metode composite_create dipanggil berulangkali sebanyak PRIMARYKEY JOIN yang digunakan.
+
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -118,7 +123,7 @@
             <div class="message is-info">
               <div class="message-body">
                 <p><b>Info</b></p>
-                <p>Metode ini ada mulai dari Seme Framework versi >= 3.2.1</p>
+                <p>Metode ini ada dari mulai Seme Framework versi >= 3.2.1</p>
               </div>
             </div>
 

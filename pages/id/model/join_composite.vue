@@ -62,7 +62,7 @@
             <h4>$table2_alias</h4>
             <p>Nama alias tabel yang akan dijoinkan.</p>
 
-            <h4>$compositeObjects</h4>
+            <h4 id="compositeObjects">$compositeObjects</h4>
             <p>
               Array yang berisi objek komposit, isi nilai ini dibuat oleh metode <NuxtLink to="/id/model/composite_create/">composite_create <i class="fa fa-external-link"></i></NuxtLink>.
             </p>
@@ -171,7 +171,7 @@
             <div class="message is-info">
               <div class="message-body">
                 <p><b>Info</b></p>
-                <p>Metode ini ada mulai dari Seme Framework versi >= 3.2.1</p>
+                <p>Metode ini ada dari mulai Seme Framework versi >= 3.2.1</p>
               </div>
             </div>
 

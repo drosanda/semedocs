@@ -54,7 +54,6 @@
             <h3>$column_name</h3>
             <p>
               Nilai dari <code>$column_name</code> dapat berisi nama kolom yang diperlukan untuk memfilter data dari tabel.
-              Metode ini telah otomatis di <code><i>escape</i></code>.
             </p>
             <h3>$value_from</h3>
             <p>Rentang nilai yang diperlukan untuk dicocokkan dengan $column_name.</p>
