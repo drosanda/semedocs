@@ -17,7 +17,7 @@
               The <code>update</code> is part of Query Builder method for executing SQL <code>UPDATE</code> command.
             </p>
 
-            <h3>Basic Usage</h3>
+            <h2>Basic Usage</h2>
             <p>
               Here is the basic usage <code>update</code> method from <code>$db</code> property on <NuxtLink to="/4.0.0/model/#SENE_Model">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
             </p>
@@ -45,7 +45,10 @@
               </div>
             </div>
             <h3>Parameters</h3>
-            <p>Update method has 2 required parameters and 1 optional parameter.
+            <p>
+              This method has 2 required parameters and 1 optional parameter.
+            </p>
+
             <h4>$table_name</h4>
             <p>
               The <code>$table_name</code> refers to the name of the table to which the data is to be updated.
@@ -53,7 +56,7 @@
 
             <h4>$data_update</h4>
             <p>
-              The <code>$data_insert</code> value can contain key value pair in array.
+              The <code>$data_update</code> value can contain key value pair in array and automatically <code>escaped</code>.
               The key refer to column name of the table and the value refer to value that will be inserted.
               This value supported MySQL builtin functions and values, such as:
               <ul>
@@ -178,10 +181,10 @@ export default {
   layout: 'v4.0.0',
   data (){
     return {
-      name: 'Seme Framework v4.0.0',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Update Method',
-      description: 'Learn update method from $db properti on SENE_Model class for Seme Framework 4',
+      description: 'Learn update method from $db property on SENE_Model class for Seme Framework 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -246,9 +249,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-12T21:35:00+07:00",
-        "datePublished": "2021-07-12T21:35:00+07:00",
-        "dateModified": "2021-07-12T21:36:00+07:00",
+        "dateCreated": "2021-08-02T13:36:00+07:00",
+        "datePublished": "2021-08-02T13:36:00+07:00",
+        "dateModified": "2021-08-02T13:36:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

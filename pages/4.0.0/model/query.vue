@@ -6,16 +6,21 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/model/">Model</NuxtLink></li>
-          <li class="unavailable">Query Method</li>
+          <li class="unavailable">Query</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
             <h1 class="">Query Method</h1>
-            <p>Query method is used to query the raw SQL.</p>
-            <h2>Parameters</h2>
-            <p>Query method has 1 required parameter.</p>
+            <p>
+              The <code>query</code> method is used for getting the result from a completed SQL command.
+            </p>
+
+            <h2>Basic Usage</h2>
+            <p>
+              Here is the basic usage <code>query</code> method from <code>$db</code> property on <NuxtLink to="4.0.0/model/#SENE_Model">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -35,16 +40,21 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->db->query(string $sql): arrayOfObject
+                  $this-&#x3E;db-&#x3E;query(string $sql): boolean
                 </highlight-code>
               </div>
             </div>
-            <h3>$sql</h3>
-            <p><b>SQL</b> can be single command of SQL.</p>
-            <h2>Example usage</h2>
-            <p>Here is the examples using SQL method. See the first of this page for full example.</p>
-            <h3>Basic Usage</h3>
-            <p>For example we assumed want to add new data in blog table. First, in the model:</p>
+
+            <h3>Parameters</h3>
+            <p>This method has 1 required parameter.</p>
+
+            <h4>$sql</h4>
+            <p>The <b>$sql</b> value can be a completed single command of <code>SQL</code>.</p>
+
+            <h2>Example</h2>
+            <p>
+              Here is the example for <code>query</code> method in a model class.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -117,8 +127,8 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
-      title: 'query method',
-      description: 'Learn more about query method from Seme Framework model class version 4.0.0 through this documentation.',
+      title: 'Query Method',
+      description: 'Learn update method from $db property on SENE_Model class for Seme Framework 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

@@ -14,15 +14,13 @@
           <div class="content">
             <h1 class="">Metode Query</h1>
             <p>
-              Metode Query adalah metode untuk mengeksekusi kode SQL secara langsung.
-              Hasil nilai dari eksekusi metode ini berupa <code>array of object</code>.
+              Metode <code>query</code> berguna untuk mengambil data dari hasil eksekusi perintah SQL tunggal.
             </p>
 
-            <h2>Parameters</h2>
+            <h2>Bentuk Umum</h2>
             <p>
-              Metode Query hanya memiliki 1 parameter wajib, yaitu <code>string $sql</code>.
+              Berikut ini adalah bentuk umum metode <code>query</code> dari properti <code>$db</code> pada kelas <NuxtLink to="4.0.0/model/#SENE_Model">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
-
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -42,17 +40,21 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;query(string $sql): arrayOfObject
+                  $this-&#x3E;db-&#x3E;query(string $sql): boolean
                 </highlight-code>
               </div>
             </div>
 
-            <h3>$sql</h3>
-            <p><b>SQL</b> perintah tunggal berisi SQL (structur query language).</p>
+            <h3>Parameter</h3>
+            <p>Metode ini membutuhkan 1 parameter wajib.</p>
+
+            <h4>$sql</h4>
+            <p>Nilai dari <b>$sql</b> dapat berisi satu perintah SQL lengkap.</p>
 
             <h2>Contoh Penggunaan</h2>
-            <p>Berikut adalah contoh menggunakan metode SQL. Lihat halaman pertama ini untuk contoh lengkapnya.</p>
-
+            <p>
+              Berikut ini contoh penggunaan untuk metode <code>query</code> pada sebuah kelas model.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -72,14 +74,15 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  &#x3C;?php
-                  class Blog_Model extends SENE_Model{
-                    var $tbl = &#x27;d_blog&#x27;;
-                    var $tbl_as = &#x27;dbl&#x27;;
+                  class C_Produk_Model extends SENE_Model {
+                    var $tbl = &#x27;c_produk&#x27;;
+                    var $tbl_as = &#x27;cp&#x27;;
+
                     public function __construct(){
                       parent::__construct();
                       $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
                     }
+                    ...
                     public function getLatePublish($id){
                       $sql = &#x27;SELECT `title`, `pubdt` AS 'datePublished'
                       FROM &#x27;.$this-&#x3E;tbl.&#x27; &#x27;.$this-&#x3E;tbl_as.&#x27;
@@ -88,6 +91,7 @@
                       LIMIT 0,1;&#x27;;
                       return $this-&#x3E;db-&#x3E;query($sql);
                     }
+                    ...
                   }
                 </highlight-code>
               </div>
@@ -97,7 +101,7 @@
               <div class="message-body">
                 <p><b>Perhatian</b></p>
                 <p>Metode ini tidak dapat digunakan untuk melakukan perintah INSERT, UPDATE, DELETE, TRUNCATE, DROP, dan perintah DDL lainnya.</p>
-                <p>Gunakan <NuxtLink to="/id/model/exec/">Metode Exec</NuxtLink> untuk mengeksekusi perintah SQL DDL.</p>
+                <p>Gunakan <NuxtLink to="/id/model/exec/">Metode Exec <i class="fa fa-window-restore"></i></NuxtLink> </NuxtLink> untuk mengeksekusi perintah SQL DDL.</p>
               </div>
             </div>
 
@@ -108,12 +112,12 @@
           <div class="nav-bottom-left">
             <nuxt-link to="/id/model/exec/" class="btn">
               <i class="fa fa-chevron-left"></i>
-              Model::exec
+              Metode exec
             </nuxt-link>
           </div>
           <div class="nav-bottom-right">
             <nuxt-link to="/id/model/last_id/" class="btn">
-              Model::last_id
+              Metode last_id
               <i class="fa fa-chevron-right"></i>
             </nuxt-link>
           </div>
@@ -131,8 +135,8 @@ export default {
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'Model::query',
-      description: 'Pelajari selengkapnya tentang Model::query dari SENE_Model di Seme Framework versi 4.0.0',
+      title: 'Metode Query',
+      description: 'Pelajari metode query dari properti $db di kelas SENE_Model untuk Seme Framework 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

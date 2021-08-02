@@ -123,7 +123,7 @@ export default {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Documentation',
       title: 'Exec Method',
-      description: 'Learn more about exec method on Seme Framework version 4.0.0 through this documentation.',
+      description: 'Learn exec method from $db property on SENE_Model class for Seme Framework 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

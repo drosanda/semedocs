@@ -12,7 +12,6 @@
       <div class="columns">
         <div class="column">
           <div class="content">
-
             <h1 class="">Metode Exec</h1>
             <p>
               Metode <code>exec</code> berguna untuk menjalankan sebuah perintah SQL mentah.
@@ -94,6 +93,14 @@
               </div>
             </div>
 
+            <div class="message is-warning">
+              <div class="message-body">
+                <p><b>Perhatian</b></p>
+                <p>Metode ini hanya dapat digunakan untuk melakukan perintah INSERT, UPDATE, DELETE, TRUNCATE, DROP, dan perintah DDL lainnya.</p>
+                <p>Gunakan <NuxtLink to="/id/model/query/">Metode Query <i class="fa fa-window-restore"></i></NuxtLink> untuk mengambil data dari SQL mentah.</p>
+              </div>
+            </div>
+
           </div>
         </div>
 
@@ -122,8 +129,8 @@ export default {
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'Metode exec',
-      description: 'Pelajari selengkapnya tentang Metode exec dari SENE_Model di Seme Framework versi 4.0.0',
+      title: 'Metode Exec',
+      description: 'Pelajari metode exec dari properti $db di kelas SENE_Model untuk Seme Framework 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

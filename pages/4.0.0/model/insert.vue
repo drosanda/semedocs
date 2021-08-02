@@ -19,7 +19,7 @@
 
             <h2>Basic Usage</h2>
             <p>
-              Here is the basic usage <code>insert</code> method from <code>$db</code> properti on <code>SENE_Model</code> class.
+              Here is the basic usage <code>insert</code> method from <code>$db</code> property on <code>SENE_Model</code> class.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -230,7 +230,7 @@ export default {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Insert Method',
-      description: 'Learn more about insert method from $db properti on SENE_Model class for Seme Framework 4.',
+      description: 'Learn more about insert method from $db property on SENE_Model class for Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

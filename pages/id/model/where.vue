@@ -230,7 +230,7 @@ export default {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Metode Where',
-      description: 'Pelajari selengkapnya tentang metode where dari properti $db di kelas SENE_Model untuk Seme Framework 4.',
+      description: 'Pelajari metode where dari properti $db di kelas SENE_Model untuk Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

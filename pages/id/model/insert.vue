@@ -70,7 +70,7 @@
               Nilai <code>$mass_insert</code> dapat berisi nilai 1 dan 0. Apabila nilai sama dengan 1 (satu), digunakan untuk menginsert data lebih dari satu baris dalam satu kali pemanggilan metode.
               Supaya metode ini dapat berjalan dengan baik, nilai dari <code>$data_insert</code> harus bertipe data <code>array of array</code>.
               Dimana array pertama berisikan sequence atau urutan baris, dengan key otomatis.
-              Sementara untuk isinya dari setiap baris urutan array berisikan gabunga kunci dan nilai array seperti pada insert data pada umumnya.
+              Sementara untuk isinya dari setiap baris urutan array berisikan gabungan kunci dan nilai array seperti pada insert data pada umumnya.
             </p>
 
             <h4>$is_debug</h4>
@@ -81,7 +81,7 @@
 
             <h2>Contoh Penggunaan</h2>
             <p>
-              Berikut ini adalah contoh penggunaan metode insert pada sebuah model.
+              Berikut ini adalah contoh penggunaan metode <code>insert</code> pada sebuah model.
             </p>
             <div class="macwindow">
               <div class="titlebar">
