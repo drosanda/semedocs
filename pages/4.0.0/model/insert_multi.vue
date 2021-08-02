@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/model/">Model</NuxtLink></li>
-          <li class="unavailable">Insert Multi Method</li>
+          <li class="unavailable">Insert Multi</li>
         </ul>
       </nav>
       <div class="columns">
@@ -226,10 +226,10 @@ export default {
   layout: 'v4.0.0',
   data (){
     return {
-      name: 'Seme Framework v4.0.0',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Insert Multi Method',
-      description: 'Learn more about insert_multi method from $db property on SENE_Model class for Seme Framework 4.',
+      description: 'Learn more insert_multi method from $db property on SENE_Model class for Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

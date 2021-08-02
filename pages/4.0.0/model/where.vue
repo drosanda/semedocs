@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/model/">Model</NuxtLink></li>
-          <li class="unavailable">Where Method</li>
+          <li class="unavailable">Where</li>
         </ul>
       </nav>
       <div class="columns">
@@ -393,10 +393,10 @@ export default {
   layout: 'v4.0.0',
   data (){
     return {
-      name: 'Seme Framework v4.0.0',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'where method',
-      description: 'Learn more about where method from Seme Framework model class version 4.0.0 through this documentation.',
+      title: 'Where Method',
+      description: 'Learn where method from $db property on SENE_Model class for Seme Framework 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -461,9 +461,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-12T21:35:00+07:00",
-        "datePublished": "2021-07-12T21:35:00+07:00",
-        "dateModified": "2021-07-12T21:36:00+07:00",
+        "dateCreated": "2021-07-18T13:46:00+07:00",
+        "datePublished": "2021-07-18T13:46:00+07:00",
+        "dateModified": "2021-07-18T13:46:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

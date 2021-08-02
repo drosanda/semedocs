@@ -6,16 +6,22 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/model/">Model</NuxtLink></li>
-          <li class="unavailable">Group By Method</li>
+          <li class="unavailable">Metode Group By</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Group By Method</h1>
-            <p>Group By method is part of database class builder for selecting column data into a table.</p>
-            <h2>Parameters</h2>
-            <p>Group By method has 1 required parameters that is <b>column name</b> and <b>value</b>, another parameters are optional. Here is the completed parameters can be used by where methods</p>
+
+            <h1 class="">Metode Group By</h1>
+            <p>
+              Metode <code>group_by</code> merupakan salah satu bagian dari Query Builder untuk mengelompokan kumpulan hasil query dengan mengeksekusi perintah SQL <code>GROUP BY</code>.
+            </p>
+
+            <h2>Bentuk Umum</h2>
+            <p>
+              Berikut ini adalah bentuk umum metode <code>group_by</code> dari properti <code>$db</code> di kelas <NuxtLink to="/id/model/#SENE_Model">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink>.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -35,16 +41,24 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;group_by(string $condition): $this-&#x3E;db
+                  $this-&#x3E;db-&#x3E;group_by(string $expression): $this-&#x3E;db
                 </highlight-code>
               </div>
             </div>
-            <h3>$condition</h3>
-            <p><b>Condition</b> can be single column name or can be SQL Function.</p>
-            <h2>Example usage</h2>
-            <p>Here is the examples using group_by method. See the first of this page for full example.</p>
-            <h3>Basic Usage</h3>
-            <p>For example we assumed want to add new data in blog table. First, in the model:</p>
+            <h3>Parameter</h3>
+            <p>
+              Metode ini memiliki 1 parameter wajib.
+            </p>
+
+            <h3>$expression</h3>
+            <p>
+              Parameter <b>$expression</b> dapat berisi nama kolom tunggal ataupun fungsi SQL yang cocok dengan notasi perintah <code>GROUP BY</code>.
+            </p>
+
+            <h2>Contoh</h2>
+            <p>
+              Berikut ini adalah contoh penggunaan metode <code>group_by</code> dalam sebuah kelas model.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -68,7 +82,7 @@
                     var $tbl = &#x27;blog&#x27;;
                     var $tbl_as = &#x27;b&#x27;;
                     public function __construct(){
-                      parent::__construct();
+                      &#x9; parent::__construct();
                     }
                     public function countByCategory(){
                       $this-&#x3E;db-&#x3E;select_as(&#x22;COUNT(*)&#x22;,&#x27;total&#x27;,0);
@@ -81,39 +95,7 @@
                 </highlight-code>
               </div>
             </div>
-            <p>at the controller, we assumed has file named blog.php</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  class Blog extends SENE_Controller{
-                    public function __construct(){
-                      parent::__construct();
-                      $this-&#x3E;load(&#x27;blog_model&#x27;,&#x27;bm&#x27;); #class scope model
-                    }
-                    public function index(){
-                      $blogs = $this-&#x3E;bm-&#x3E;countByCategory();
-                      $this-&#x3E;debug($blogs);
-                    }
-                  }
-                </highlight-code>
-              </div>
-            </div>
+
           </div>
         </div>
 
@@ -144,8 +126,8 @@ export default {
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'Metode group_by',
-      description: 'Pelajari selengkapnya tentang Metode group_by dari SENE_Model di Seme Framework 4.0.0',
+      title: 'Metode Group By',
+      description: 'Pelajari tentang metode group_by dari properti $db di kelas SENE_Model untuk Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -156,13 +138,9 @@ export default {
           text: 'ID',
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/tutorial/',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/model/',
           text: 'Model',
-        },
-        {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/tutorial/introduction/',
-          text: 'Get First',
-        },
+        }
       ],
     }
   },

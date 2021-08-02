@@ -20,7 +20,7 @@
 
             <h2>Bentuk Umum</h2>
             <p>
-              Berikut ini adalah bentuk umum metode <code>join</code> dari properti <code>$db</code> di kelas <NuxtLink to="id/model/#SENE_Model">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink>.
+              Berikut ini adalah bentuk umum metode <code>join</code> dari properti <code>$db</code> di kelas <NuxtLink to="/id/model/#SENE_Model">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
             <div class="macwindow">
               <div class="titlebar">

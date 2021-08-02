@@ -147,7 +147,7 @@ export default {
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'Metode get',
+      title: 'Metode Get',
       description: 'Pelajari tentang metode get dari properti $db pada SENE_Model untuk Seme Framework 4',
       breadcrumbs: [
         {
@@ -159,7 +159,7 @@ export default {
           text: 'ID',
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/tutorial/',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/model/',
           text: 'Model',
         }
       ],

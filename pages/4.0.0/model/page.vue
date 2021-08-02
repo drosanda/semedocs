@@ -6,14 +6,14 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/model/">Model</NuxtLink></li>
-          <li class="unavailable">Page Method</li>
+          <li class="unavailable">Page</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
             <h1 class="">Page Method</h1>
-            <p>Page Method is part of database class builder for limiting query result. It will produce same as <i>SELECT * FROM table WHERE 1 LIMIT [A],[B]</i>.</p>
+            <p>The <code>page</code> method is part of database class builder for limiting query result. It will produce same as <i>SELECT * FROM table WHERE 1 LIMIT [A],[B]</i>.</p>
 
             <h2>Parameters</h2>
             <p>Page method has 2 required parameters that is <b>page</b> and <b>pagesize</b>.</p>
@@ -36,7 +36,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&gt;db-&gt;page(int $page, int $pagesize): dbObject
+                  $this-&gt;db-&gt;page(int $page, int $pagesize): $this-&#x3E;db
                 </highlight-code>
               </div>
             </div>
@@ -134,8 +134,8 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
-      title: 'page method',
-      description: 'Learn more about page method from Seme Framework model class version 4.0.0 through this documentation.',
+      title: 'Page Method',
+      description: 'Learn more about page method from $db property on SENE_Model class for Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -200,9 +200,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-12T21:35:00+07:00",
-        "datePublished": "2021-07-12T21:35:00+07:00",
-        "dateModified": "2021-07-12T21:36:00+07:00",
+        "dateCreated": "2021-07-15T10:35:00+07:00",
+        "datePublished": "2021-07-15T210:35:00+07:00",
+        "dateModified": "2021-07-15T10:36:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

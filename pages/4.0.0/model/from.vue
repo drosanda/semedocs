@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/model/">Model</NuxtLink></li>
-          <li class="unavailable">From Method</li>
+          <li class="unavailable">From</li>
         </ul>
       </nav>
       <div class="columns">
@@ -18,9 +18,9 @@
               This method support chaining method.
             </p>
 
-            <h2>Parameters</h2>
+            <h2>Basic Usage</h2>
             <p>
-              From method has 2 required parameters that is <b>$table_name</b> and <b>$table_as</b>. Table alias are required for using <b>join</b> and <b>join_method</b>.
+              Here is the basic usage <code>from</code> method from <code>$db</code> property on <NuxtLink to="/4.0.0/model/#SENE_Model">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -41,22 +41,28 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->db->from(string $table_name, string $table_alias): object
+                  $this-&#x3E;db-&#x3E;from(string $table_name[, string $table_alias=&#x22;&#x22;]): $this-&#x3E;db
                 </highlight-code>
               </div>
             </div>
+            <h3>Parameters</h3>
+            <p>This method has 1 required parameter and 1 optional parameter.</p>
 
-            <h3>$table_name</h3>
-            <p><b>Table Name</b> refer to table name.</p>
-            <h3>$alias</h3>
-            <p><b>Alias</b> Aliased name of <b>$table_name</b>. required if you have call <b>join</b> method</p>
+            <h4>$table_name</h4>
+            <p>
+              The <code>$table_name</code> value can contain string that refer to table name.
+            </p>
 
-            <h2>Example usage</h2>
-            <p>Here is the examples using select method. See the first of this page for full example.</p>
+            <h4>$alias</h4>
+            <p>
+              The <code>$alias</code> value can contain about string that aliased the value of <b>$table_name</b>.
+              This value are required if using the <NuxtLink to="/4.0.0/model/join/">Join Method <i class="fa fa-external-link"></i></NuxtLink>.
+            </p>
 
-            <h3>Basic Usage</h3>
-            <p>For example we assumed want to add new data in blog table. First, in the model:</p>
-
+            <h2>Example</h2>
+            <p>
+              Here is the example for <code>from</code> in a model class.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -83,9 +89,8 @@
                       parent::__construct();
                     }
                     public function countList(){
-                      $this-&#x3E;db-&#x3E;select_as(&#x22;COUNT(*)&#x22;,&#x22;total&#x22;,0);
                       $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
-                      return $this-&#x3E;db-&#x3E;get_first();
+                      return $this-&#x3E;db-&#x3E;get();
                     }
                   }
                 </highlight-code>
@@ -96,12 +101,12 @@
               <div class="nav-bottom-left">
                 <nuxt-link to="/4.0.0/model/exec/" class="btn">
                   <i class="fa fa-chevron-left"></i>
-                  exec Method
+                  Exec Method
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
                 <nuxt-link to="/4.0.0/model/get_first/" class="btn">
-                  get_first Method
+                  Get First Method
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
@@ -121,10 +126,10 @@ export default {
   layout: 'v4.0.0',
   data (){
     return {
-      name: 'Seme Framework v4.0.0',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'from method',
-      description: 'Learn more about from method on SENE_Model class Seme Framework.',
+      title: 'From Method',
+      description: 'Learn about from method in $db property on SENE_Model class for Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -189,9 +194,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-12T19:32:00+07:00",
-        "datePublished": "2021-07-12T19:32:00+07:00",
-        "dateModified": "2021-07-12T19:34:00+07:00",
+        "dateCreated": "2021-07-01T19:44:00+07:00",
+        "datePublished": "2021-07-01T19:44:00+07:00",
+        "dateModified": "2021-07-01T19:44:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

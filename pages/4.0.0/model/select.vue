@@ -6,14 +6,17 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/model/">Model</NuxtLink></li>
-          <li class="unavailable">Select Method</li>
+          <li class="unavailable">Select</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
             <h1 class="">Select Method</h1>
-            <p>Select method is part of database class builder for selecting column data into a table.</p>
+            <p>
+              The <code>select</code> method is part of database class builder for selecting column data into a table.
+            </p>
+
             <h2>Parameters</h2>
             <p>Update method has 1 required parameters that is <b>column name</b> and <b>value</b>, another parameters are optional. Here is the completed parameters can be used by where methods</p>
             <div class="macwindow">
@@ -35,7 +38,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->db->select(string $column_name): dbObject
+                  $this-&#x3E;db-&#x3E;select(string $column_name): $this-&#x26;#x3E;db
                 </highlight-code>
               </div>
             </div>
@@ -150,10 +153,10 @@ export default {
   layout: 'v4.0.0',
   data (){
     return {
-      name: 'Seme Framework v4.0.0',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'select method',
-      description: 'Learn more about select method from Seme Framework model class version 4.0.0 through this documentation.',
+      title: 'Select Method',
+      description: 'Learn select method from $db property on SENE_Model class for Seme Framework 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -218,9 +221,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-12T21:35:00+07:00",
-        "datePublished": "2021-07-12T21:35:00+07:00",
-        "dateModified": "2021-07-12T21:36:00+07:00",
+        "dateCreated": "2021-07-16T21:55:00+07:00",
+        "datePublished": "2021-07-16T21:55:00+07:00",
+        "dateModified": "2021-07-16T21:56:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

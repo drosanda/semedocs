@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/model/">Model</NuxtLink></li>
-          <li class="unavailable">update_as</li>
+          <li class="unavailable">Update AS</li>
         </ul>
       </nav>
       <div class="columns">
@@ -230,7 +230,7 @@ export default {
   layout: 'v4.0.0',
   data (){
     return {
-      name: 'Seme Framework v4.0.0',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Update AS Method',
       description: 'Learn update_as method from $db property on SENE_Model class for Seme Framework 4.',

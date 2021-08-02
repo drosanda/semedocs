@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/model/">Model</NuxtLink></li>
-          <li class="unavailable">Insert Batch Method</li>
+          <li class="unavailable">Insert Batch</li>
         </ul>
       </nav>
       <div class="columns">
@@ -226,10 +226,10 @@ export default {
   layout: 'v4.0.0',
   data (){
     return {
-      name: 'Seme Framework v4.0.0',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Insert Batch Method',
-      description: 'Learn more about insert_batch method from $db property on SENE_Model class for Seme Framework 4.',
+      description: 'Learn about insert_batch method from $db property on SENE_Model class for Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -294,9 +294,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-12T21:01:00+07:00",
-        "datePublished": "2021-07-12T21:01:00+07:00",
-        "dateModified": "2021-07-12T21:02:00+07:00",
+        "dateCreated": "2021-07-14T21:01:00+07:00",
+        "datePublished": "2021-07-14T21:01:00+07:00",
+        "dateModified": "2021-07-14T21:02:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

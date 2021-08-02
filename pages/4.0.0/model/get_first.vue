@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/model/">Model</NuxtLink></li>
-          <li class="unavailable">Get First Method</li>
+          <li class="unavailable">Get First</li>
         </ul>
       </nav>
       <div class="columns">
@@ -14,11 +14,11 @@
           <div class="content">
             <h1 class="">Get First Method</h1>
             <p>
-              The <code>get_first</code> method is one part of the <code>query builder</code> which is useful for pulling <u>single</u> results from the query builder that has been compiled.
+              The <code>get_first</code> method is a part of the <code>query builder</code> which is useful for pulling <u>single</u> results from the query builder that has been compiled.
               This method will only return maximum <b>1 row</b> result.
             </p>
 
-            <h2>Bentuk Umum</h2>
+            <h2>Basic Usage</h2>
             <p>
               Here is the basic usage <code>get_first</code> method from <code>$db</code> property on <NuxtLink to="/4.0.0/model/#SENE_Model" target="_blank">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
             </p>
@@ -67,7 +67,7 @@
 
             <h2>Example</h2>
             <p>
-              Here is the example for esc method on <code>blog_model.php</code> file.
+              Here is the example for <code>get_first</code> in a model class.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -88,7 +88,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  class Blog_Model extends SENE_Model{
+                  class D_Blog_Model extends SENE_Model{
                     var $tbl = &#x27;blog&#x27;;
                     var $tbl_as = &#x27;b&#x27;;
 
@@ -130,7 +130,11 @@
               <div class="maccontent">
                 <highlight-code lang="sql">
                   -- result from executing D_Blog_Model::getBySlug('seme-framework-tutorial-1') --
-                  SELECT * FROM `d_blog` b WHERE b.`slug` = 'seme-framework-tutorial-1' LIMIT 0, 1;
+                  SELECT *
+                  FROM `d_blog` b
+                  WHERE
+                    `slug` = 'seme-framework-tutorial-1'
+                  LIMIT 0, 1;
                 </highlight-code>
               </div>
             </div>
@@ -165,8 +169,8 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
-      title: 'get_first method',
-      description: 'Learn more about get_first method on SENE_Model class Seme Framework.',
+      title: 'Get First Method',
+      description: 'Learn about get_first method from $db property on SENE_Model class for Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -231,9 +235,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-12T19:32:00+07:00",
-        "datePublished": "2021-07-12T19:32:00+07:00",
-        "dateModified": "2021-07-12T19:34:00+07:00",
+        "dateCreated": "2021-08-02T23:34:00+07:00",
+        "datePublished": "2021-08-02T23:34:00+07:00",
+        "dateModified": "2021-08-02T23:34:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

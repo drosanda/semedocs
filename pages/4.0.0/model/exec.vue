@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/model/">Model</NuxtLink></li>
-          <li class="unavailable">Exec Method</li>
+          <li class="unavailable">Exec</li>
         </ul>
       </nav>
       <div class="columns">
@@ -19,7 +19,7 @@
 
             <h2>Basic Usage</h2>
             <p>
-              Here is the basic usage <code>exec</code> method from <code>$db</code> property on <NuxtLink to="4.0.0/model/#SENE_Model">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
+              Here is the basic usage <code>exec</code> method from <code>$db</code> property on <NuxtLink to="/4.0.0/model/#SENE_Model">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -93,20 +93,29 @@
               </div>
             </div>
 
+
+            <div class="message is-warning">
+              <div class="message-body">
+                <p><b>Caution</b></p>
+                <p>This method only suitable for executing query that contains INSERT, UPDATE, DELETE, TRUNCATE, DROP, and another DDL operation.</p>
+                <p>Please use <NuxtLink to="/4.0.0/model/query/">Query Method<i class="fa fa-window-restore"></i></NuxtLink> for collecting the result from raw SQL.</p>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/4.0.0/model/delete/" class="btn">
+          <nuxt-link to="/4.0.0/model/esc/" class="btn">
             <i class="fa fa-chevron-left"></i>
-            delete method
+            Esc method
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
           <nuxt-link to="/4.0.0/model/from/" class="btn">
-            from method
+            From method
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>

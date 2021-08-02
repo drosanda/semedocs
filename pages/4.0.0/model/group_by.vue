@@ -6,16 +6,21 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/model/">Model</NuxtLink></li>
-          <li class="unavailable">group_by Method</li>
+          <li class="unavailable">Group By</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
             <h1 class="">Group By Method</h1>
-            <p>Group By method is part of database class builder for selecting column data into a table.</p>
-            <h2>Parameters</h2>
-            <p>Group By method has 1 required parameters that is <b>column name</b> and <b>value</b>, another parameters are optional. Here is the completed parameters can be used by where methods</p>
+            <p>
+              The <code>group_by</code> method is part of query builder method for grouping result set by running <code>GROUP BY</code> SQL command.
+            </p>
+
+            <h2>Basic Usage</h2>
+            <p>
+              Here is the basic usage <code>group_by</code> method from <code>$db</code> property on <NuxtLink to="/4.0.0/model/#SENE_Model">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -35,16 +40,22 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->db->group_by(string $condition): dbObject
+                  $this-&#x3E;db-&#x3E;group_by(string $expression): $this-&#x3E;db
                 </highlight-code>
               </div>
             </div>
-            <h3>$condition</h3>
-            <p><b>Condition</b> can be single column name or can be SQL Function.</p>
-            <h2>Example usage</h2>
-            <p>Here is the examples using group_by method. See the first of this page for full example.</p>
-            <h3>Basic Usage</h3>
-            <p>For example we assumed want to add new data in blog table. First, in the model:</p>
+            <h3>Parameters</h3>
+            <p>
+              This method has 1 required one parameter.
+            </p>
+
+            <h3>$expression</h3>
+            <p>The <b>$expression</b> value can be single column name or can be SQL Function that compatible with <code>GROUP BY</code> command.</p>
+
+            <h2>Example</h2>
+            <p>
+              Here is the source code implementation of <code>group_by</code> method in a model class.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -81,39 +92,7 @@
                 </highlight-code>
               </div>
             </div>
-            <p>at the controller, we assumed has file named blog.php</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  class Blog extends SENE_Controller{
-                    public function __construct(){
-                      parent::__construct();
-                      $this-&#x3E;load(&#x27;blog_model&#x27;,&#x27;bm&#x27;); #class scope model
-                    }
-                    public function index(){
-                      $blogs = $this-&#x3E;bm-&#x3E;countByCategory();
-                      $this-&#x3E;debug($blogs);
-                    }
-                  }
-                </highlight-code>
-              </div>
-            </div>
+
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
@@ -147,8 +126,8 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
-      title: 'group_by method',
-      description: 'Learn more about group_by method on SENE_Model class Seme Framework.',
+      title: 'Group By Method',
+      description: 'Learn about group_by method from $db property on SENE_Model class for Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -213,9 +192,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-12T19:32:00+07:00",
-        "datePublished": "2021-07-12T19:32:00+07:00",
-        "dateModified": "2021-07-12T19:34:00+07:00",
+        "dateCreated": "2021-08-02T23:14:00+07:00",
+        "datePublished": "2021-08-02T23:14:00+07:00",
+        "dateModified": "2021-08-02T23:14:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

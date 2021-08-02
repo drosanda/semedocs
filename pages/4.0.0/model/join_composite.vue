@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/model/">Model</NuxtLink></li>
-          <li class="unavailable">join_composite method</li>
+          <li class="unavailable">Join Composite</li>
         </ul>
       </nav>
       <div class="columns">
@@ -56,7 +56,7 @@
             <h4>$TABLE_NAME_ALIAS</h4>
             <p>The alias table for joined with current table.</p>
 
-            <h4>Array of Join Composite Object</h4>
+            <h4 id="compositeObject">Array of Join Composite Object</h4>
             <p>Value required from array of object can be obtained from composite_create method.</p>
 
             <h4>JOIN_TYPE</h4>
@@ -144,10 +144,10 @@ export default {
   layout: 'v4.0.0',
   data (){
     return {
-      name: 'Seme Framework v4.0.0',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'join_composite Method',
-      description: 'Learn more about join_composite method on SENE_Model class Seme Framework.',
+      title: 'Joins Composite Method',
+      description: 'Learn more about join_composite method from $db property on SENE_Model class for Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -155,16 +155,12 @@ export default {
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/',
-          text: '4.0.2',
+          text: '4.0.0',
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/model/',
           text: 'Model',
-        },
-        {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/model/introduction/',
-          text: 'From',
-        },
+        }
       ],
     }
   },

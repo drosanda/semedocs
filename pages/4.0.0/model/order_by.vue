@@ -6,14 +6,14 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/model/">Model</NuxtLink></li>
-          <li class="unavailable">Order By Method</li>
+          <li class="unavailable">Order By</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
             <h1 class="">Order By Method</h1>
-            <p>Order By method is part of database class builder for sorting result query.</p>
+            <p>The <code>order_by</code> method is part of database class builder for sorting result query.</p>
             <h2>Parameters</h2>
             <p>Insert method has 2 required parameters that is <b>column name</b> and <b>sort direction</b>.</p>
             <div class="macwindow">
@@ -35,7 +35,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->db->group_by(string $column_name, string $sort_direction): dbObject
+                  $this-&#x3E;db-&#x3E;group_by(string $column_name, string $sort_direction): $this-&#x3E;db
                 </highlight-code>
               </div>
             </div>
@@ -109,10 +109,10 @@ export default {
   layout: 'v4.0.0',
   data (){
     return {
-      name: 'Seme Framework v4.0.0',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'order_by method',
-      description: 'Learn more about order_by method on SENE_Model class from Seme Framework.',
+      title: 'Order By Method',
+      description: 'Learn more about order_by method from $db property on SENE_Model class for Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

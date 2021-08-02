@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/model/">Model</NuxtLink></li>
-          <li class="unavailable">Join Method</li>
+          <li class="unavailable">Join</li>
         </ul>
       </nav>
       <div class="columns">
@@ -42,7 +42,7 @@
                   string $table1_alias,
                   string $table1_column_to_joined,
                   string $join_method
-                  ): dbObject
+                  ): $this-&#x3E;db
                 </highlight-code>
               </div>
             </div>
@@ -120,10 +120,10 @@ export default {
   layout: 'v4.0.0',
   data (){
     return {
-      name: 'Seme Framework v4.0.0',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'join method',
-      description: 'Learn more about join method on SENE_Model class Seme Framework.',
+      title: 'Join Method',
+      description: 'Learn more about join method from $db property on SENE_Model class for Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

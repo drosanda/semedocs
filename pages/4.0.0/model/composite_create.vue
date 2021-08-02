@@ -6,21 +6,20 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/model/">Model</NuxtLink></li>
-          <li class="unavailable">composite_create method</li>
+          <li class="unavailable">Composite Create</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
             <h1 class="">Composite Create Method</h1>
-            <p>Composite Create is for building multiple join condition for table that have two or more primary key.</p>
-            <p>This method can be used properly with <NuxtLink to="/4.0.0/model/join_composite/">join_composite</NuxtLink> method, for joining the table .</p>
-
-
+            <p>
+              The <code>composite_create</code> method purpose is for generating key pair array for a parameter value in <NuxtLink to="/4.0.0/model/join_composite/#compositeObject">join_composite <i class="fa fa-window-restore"></i></NuxtLink> method.
+            </p>
 
             <h2>Basic Usage</h2>
             <p>
-              Here is the basic usage of <b>composite_create</b> method.
+              Here is the basic usage <code>composite_create</code> method from <code>$db</code> property on <NuxtLink to="/4.0.0/model/#SENE_Model">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -53,7 +52,13 @@
             <p>Column name for first table.</p>
 
             <h4>$OPERATOR</h4>
-            <p>Value required for condition, value consists of &#x22;=&#x22;,&#x22;&#x3C;&#x3E;&#x22;.</p>
+            <p>
+              Can contain a relational operator, such as:
+              <ul>
+                <li><code>=</code></li>
+                <li><code>&#x3C;&#x3E;</code></li>
+              </ul>
+            </p>
 
             <h4>$TBL2_COLUMN_1</h4>
             <p>Column name for second table.</p>

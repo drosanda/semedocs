@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/model/">Model</NuxtLink></li>
-          <li class="unavailable">last_id Method</li>
+          <li class="unavailable">Last ID</li>
         </ul>
       </nav>
       <div class="columns">
@@ -35,7 +35,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->db->lastId(): integer
+                  $this-&#x3E;db-&#x3E;lastId(): integer
                 </highlight-code>
               </div>
             </div>
@@ -110,8 +110,8 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
-      title: 'last_id method',
-      description: 'Learn more about last_id method on SENE_Model class Seme Framework.',
+      title: 'Last ID Method',
+      description: 'Learn more about last_id method from $db property on SENE_Model class for Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -176,9 +176,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-12T21:23:00+07:00",
-        "datePublished": "2021-07-12T21:23:00+07:00",
-        "dateModified": "2021-07-12T21:24:00+07:00",
+        "dateCreated": "2021-07-15T09:23:00+07:00",
+        "datePublished": "2021-07-15T09:23:00+07:00",
+        "dateModified": "2021-07-15T09:24:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

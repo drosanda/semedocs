@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/model/">Model</NuxtLink></li>
-          <li class="unavailable">Limit Method</li>
+          <li class="unavailable">Limit</li>
         </ul>
       </nav>
       <div class="columns">
@@ -38,7 +38,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&gt;db-&gt;limit(int $offset, int $count): dbObject
+                  $this-&gt;db-&gt;limit(int $offset, int $count): $this-&#x3E;db
                 </highlight-code>
               </div>
             </div>
@@ -132,10 +132,10 @@ export default {
   layout: 'v4.0.0',
   data (){
     return {
-      name: 'Seme Framework v4.0.0',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'limit method',
-      description: 'Learn more about limit method from Seme Framework model class version 4.0.0 through this documentation.',
+      title: 'Limit Method',
+      description: 'Learn more about limit method from $db property on SENE_Model class for Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

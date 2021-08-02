@@ -6,7 +6,7 @@ e<template>
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/model/">Model</NuxtLink></li>
-          <li class="unavailable">Esc Method</li>
+          <li class="unavailable">Esc</li>
         </ul>
       </nav>
       <div class="columns">
@@ -19,7 +19,7 @@ e<template>
 
             <h2>Basic Usage</h2>
             <p>
-              Here is the basic usage <code>esc</code> method from <code>$db</code> property on <NuxtLink to="4.0.0/model/#SENE_Model">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
+              Here is the basic usage <code>esc</code> method from <code>$db</code> property on <NuxtLink to="/4.0.0/model/#SENE_Model">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
             </p>
             <div class="macwindow">
               <div class="titlebar">
