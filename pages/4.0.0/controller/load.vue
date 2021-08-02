@@ -6,18 +6,23 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/controller/">Controller</NuxtLink></li>
-          <li class="unavailable">Load method</li>
+          <li class="unavailable">Load</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Load method</h1>
-            <p>Load method from class SENE_Controller is for loading a model class into controller.</p>
-            <p>The model will be instantiate as part of properties on SENE_Controller.</p>
-            <p>Without an alias, the instantiate model object will be same as filename without extension php.</p>
-            <h2>Parameters</h2>
-            <p>Load method has 2 parameter, there is the <code>model filename</code> and <code>model alias</code>.</p>
+            <h1 class="">Load Method</h1>
+            <p>
+              The <code>load</code> method purpose for loading a <NuxtLink to="/4.0.0/model/">model class<i class="fa fa-window-restore"></i></NuxtLink> into a controller.
+              The model will be instantiate as part of properties on SENE_Controller.
+              Without an alias, the instantiate model object will be same as filename without extension php.
+            </p>
+
+            <h3>Basic Usage</h3>
+            <p>
+              Here is the basic usage <code>load</code> method from <NuxtLink to="/4.0.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> class.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -37,11 +42,13 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;load(string $filename_location[, string $alias])
+                  $this-&#x3E;load(string $filename_location[, string $alias]): void
                 </highlight-code>
               </div>
             </div>
-            <h3>$filename_location</h3>
+            <h3>Parameters</h3>
+            <p>Load method has 2 parameter, there is the <code>model filename</code> and <code>model alias</code>.</p>
+            <h4>$filename_location</h4>
             <p>The method load location always relatives to <code>app/model</code> directory.</p>
             <p>So, if we have a model class under <code>app/model/api/hello_model.php</code></p>
             <p>We have to fill the first parameter with <code>api/hello_model</code>.</p>

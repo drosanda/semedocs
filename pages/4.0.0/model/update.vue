@@ -13,10 +13,14 @@
         <div class="column">
           <div class="content">
             <h1 class="">Update Method</h1>
-            <p>Update method is part of database class builder for updating a table.</p>
+            <p>
+              The <code>update</code> is part of Query Builder method for executing SQL <code>UPDATE</code> command.
+            </p>
 
-            <h2>Parameters</h2>
-            <p>Update method has 2 required parameters that is <b>column name</b> and <b>value</b>, another parameters are optional. Here is the completed parameters can be used by where methods</p>
+            <h3>Basic Usage</h3>
+            <p>
+              Here is the basic usage <code>update</code> method from <code>$db</code> property on <NuxtLink to="/4.0.0/model/#SENE_Model">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -36,16 +40,40 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->db->update(string $table_name, array $data_update, [bool $is_debug=0]): bool
+                  $this-&#x3E;db-&#x3E;update(string $table_name, array $data_update [, bool $is_debug=0]): bool
                 </highlight-code>
               </div>
             </div>
-            <h3>$data_update</h3>
-            <p><b>Data update</b> is key value pair in an array. The key refer to column name of the table.</p>
+            <h3>Parameters</h3>
+            <p>Update method has 2 required parameters and 1 optional parameter.
+            <h4>$table_name</h4>
+            <p>
+              The <code>$table_name</code> refers to the name of the table to which the data is to be updated.
+            </p>
+
+            <h4>$data_update</h4>
+            <p>
+              The <code>$data_insert</code> value can contain key value pair in array.
+              The key refer to column name of the table and the value refer to value that will be inserted.
+              This value supported MySQL builtin functions and values, such as:
+              <ul>
+                <li><code>NOW()</code></li>
+                <li><code>NULL</code></li>
+              </ul>
+            </p>
+
+            <h4>$is_debug</h4>
+            <p>
+              The <code>$is_debug</code> parameter is a marker (<em>flag</em>) to enable <i>debug</i> mode.
+              The value of this parameter can be filled with <code>int 1</code> to enable debug mode and display the query to be processed.
+              Fill it with another value to not enable debug mode.
+              In debug mode, there will be no query execution process to the database system.
+            </p>
+
             <h2>Example usage</h2>
-            <p>Here is the examples using insert method. See the first of this page for full example.</p>
-            <h3>Basic Usage</h3>
-            <p>For example we assumed want to edit title in blog table. First, in the model:</p>
+            <p>
+              Here is the source code examples for a model using <code>update</code> method.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -79,7 +107,9 @@
                 </highlight-code>
               </div>
             </div>
-            <p>at the controller, we assumed has file named blog.php</p>
+
+            <h3>Controller class example</h3>
+            <p>And then this is controller class example using the model class example</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -150,8 +180,8 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
-      title: 'update method',
-      description: 'Learn more about update method from Seme Framework model class version 4.0.0 through this documentation.',
+      title: 'Update Method',
+      description: 'Learn update method from $db properti on SENE_Model class for Seme Framework 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
