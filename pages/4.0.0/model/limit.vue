@@ -13,12 +13,15 @@
         <div class="column">
           <div class="content">
             <h1 class="">Limit Method</h1>
-            <p>Limit Method is part of database class builder for limiting query result.</p>
-            <p>It will produce same as <i>SELECT * FROM table WHERE 1 LIMIT [A],[B]</i>.</p>
-            <p>This method suitable for creating pagination with datatable method.</p>
+            <p>
+              The <code>limit</code> method is part of Query Builder for limiting query result by executing <code>LIMIT [A],[B]</code> SQL command.
+              This method also suitable for creating pagination with datatables pagination.
+            </p>
 
-            <h2>Parameters</h2>
-            <p>Limit method has 2 required parameters that is <b>offset</b> and <b>count</b>.</p>
+            <h2>Basic Usage</h2>
+            <p>
+              Here is the basic usage <code>limit</code> method from <code>$db</code> property on <NuxtLink to="/4.0.0/model/#SENE_Model" target="_blank">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -43,17 +46,21 @@
               </div>
             </div>
 
-            <h3>$offset</h3>
-            <p><b>Offset</b> can be zero or positive integer for specifying the offset of the first row to be returned.</p>
+            <h3>Parameters</h3>
+            <p>This method has 2 required parameters.</p>
 
-            <h3>$count</h3>
-            <p><b>Count</b> can be zero or positive integer for specifying the maximum number of rows to be returned.</p>
+            <h4>$offset</h4>
+            <p>
+              The <code>$offset</code> value can be zero or positive integer for specifying the offset of the first row to be returned.
+            </p>
+            <h4>$count</h4>
+            <p>
+              The <b>$count</b> value can be zero or positive integer for specifying the maximum number of rows to be returned.
+            </p>
 
-            <h2>Example usage</h2>
-            <p>Here is the examples using limit method. See the first of this page for full example.</p>
+            <h2>Example</h2>
+            <p>On this example will show limiting the result query by using <code>limit</code> method</p>
 
-            <h3>Basic Usage</h3>
-            <p>For example we assumed want to filter new data in blog table. First, in the model:</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -74,8 +81,8 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   &lt;?php
-                  class Blog_Model extends SENE_Model{
-                    var $tbl = &#039;blog&#039;;
+                  class D_Blog_Model extends SENE_Model{
+                    var $tbl = &#039;d_blog&#039;;
                     var $tbl_as = &#039;b&#039;;
                     public function __construct(){
                       parent::__construct();
@@ -87,7 +94,7 @@
                       $this-&gt;db-&gt;limit(0,5);
                       return $this-&gt;db-&gt;get();
                     }
-                    public function latest3ExceptOne(){
+                    public function latest3ExceptTheFirst(){
                       $this-&gt;db-&gt;select(&quot;*&quot;);
                       $this-&gt;db-&gt;from($this-&gt;tbl,$this-&gt;tbl_as);
                       $this-&gt;db-&gt;order_by(&quot;date_create&quot;,&quot;desc&quot;);
@@ -98,11 +105,48 @@
                 </highlight-code>
               </div>
             </div>
+            <h3>SQL Result</h3>
+            <p>
+              The following is the SQL command that generated from <code>D_Blog_Model</code> model methods.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="sql">
+                  -- result from executing D_Blog_Model::latest() --
+                  SELECT *
+                  FROM &#x60;d_blog&#x60; b
+                  ORDER BY &#x60;date_create&#x60; DESC
+                  LIMIT 0, 5;
+                  -- result from executing D_Blog_Model::latest3ExceptTheFirst() --
+                  SELECT *
+                  FROM &#x60;d_blog&#x60; b
+                  ORDER BY &#x60;date_create&#x60; DESC
+                  LIMIT 1, 4;
+                </highlight-code>
+              </div>
+            </div>
+
             <div class="message is-info">
               <div class="message-body">
-                <p><b>page method v.s. limit method</b></p>
-                <p>Page method used for limiting by page and page size</p>
-                <p>Limit method used for limiting data by MySQL traditional limit method</p>
+                <p><b>Page method v.s. Limit Method</b></p>
+                <p>Page method used for limiting by page and page size.</p>
+                <p>Limit method used for limiting data by MySQL traditional limit method.</p>
               </div>
             </div>
 
@@ -200,9 +244,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-12T21:23:00+07:00",
-        "datePublished": "2021-07-12T21:23:00+07:00",
-        "dateModified": "2021-07-12T21:24:00+07:00",
+        "dateCreated": "2021-08-03T10:24:00+07:00",
+        "datePublished": "2021-08-03T10:24:00+07:00",
+        "dateModified": "2021-08-03T10:24:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
