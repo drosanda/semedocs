@@ -13,9 +13,14 @@
         <div class="column">
           <div class="content">
             <h1 class="">Last ID Method</h1>
-            <p>Last ID method is part of database class builder that returned postive integer value if an ID has generated automatically from auto increment feature.</p>
-            <h2>Parameters</h2>
-            <p>Last ID method has no parameter.</p>
+            <p>
+              The <code>last_id</code> method is part of Query Builder that returned postive integer value if an ID has generated automatically from <code>MySQL Auto Increment</code> feature.
+            </p>
+
+            <h2>Basic Usage</h2>
+            <p>
+              Here is the basic usage <code>last_id</code> method from <code>$db</code> property on <NuxtLink to="/4.0.0/model/#SENE_Model" target="_blank">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -39,10 +44,19 @@
                 </highlight-code>
               </div>
             </div>
-            <h2>Example usage</h2>
-            <p>Here is the examples using Last ID method. See the first of this page for full example.</p>
-            <h3>Basic Usage</h3>
-            <p>For example we assumed want to add new data in blog table. First, in the model:</p>
+            <h3>Parameters</h3>
+            <p>This method doenst need any parameter.</p>
+
+            <h2>Example</h2>
+            <p>
+              On this example will show the process of 2 table, that first table will produce the <code>last_id</code>, and then the second table will requires the <code>last_id</code> result.
+              Also, with the implementation in a controller class.
+            </p>
+
+            <h3>The 1st Model Class</h3>
+            <p>
+              In the first example for implementation <code>last_id</code> method in a model.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -62,16 +76,127 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  class Blog_Model extends SENE_Model{
-                    var $tbl = 'blog';
-                    var $tbl_as = 'b';
+                  &#x3C;?php
+                  class D_Order_Model extends SENE_Model{
+                    var $tbl = &#x27;d_order&#x27;;
+                    var $tbl_as = &#x27;dor&#x27;;
+
+                    public function __construct(){
+                      &#x9; parent::__construct();
+                    }
+                    ...
+                    public function set($di){
+                      $this-&#x3E;db-&#x3E;insert($ths-&#x3E;tbl,$di);
+                      return $this-&#x3E;db-&#x3E;lastId();
+                    }
+                    ...
+                  }
+                </highlight-code>
+              </div>
+            </div>
+            <h3>The 2nd Model Class</h3>
+            <p>
+              In the second example create the insert method that requires from <code>last_id</code> result.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  &#x3C;?php
+                  class D_Order_Detail_Model extends SENE_Model{
+                    var $tbl = &#x27;d_order_detail&#x27;;
+                    var $tbl_as = &#x27;dod&#x27;;
+
                     public function __construct(){
                       parent::__construct();
                     }
-                    public function insert($di){
-                      $this->db->insert($ths->tbl,$di);
-                      return $this->db->lastId();
+                    ...
+                    public function set($dis){
+                      return $this-&#x3E;db-&#x3E;insert_multi($ths-&#x3E;tbl,$dis);
                     }
+                    ...
+                  }
+                </highlight-code>
+              </div>
+            </div>
+
+            <h3>Controller Class</h3>
+            <p>
+              In this controller class will show how to use <code>last_id</code> method, from a model and then inserted new data into another model.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  &#x3C;?php
+                  class Penjualan extends SENE_Controller{
+                    public function __construct(){
+                      parent::__construct();
+                      $this-&#x3E;load(&#x27;d_order_model&#x27;,&#x27;dom&#x27;);
+                      $this-&#x3E;load(&#x27;d_order_detail_model&#x27;,&#x27;dodm&#x27;);
+                    }
+                    ...
+                    public function submit(){
+                      $di = array();
+                      $di[&#x27;buyer_name&#x27;] = &#x22;Aldy Iqbal&#x22;;
+                      $di[&#x27;grand_total&#x27;] = &#x22;100&#x22;;
+                      $di[&#x27;date_create&#x27;] = &#x22;NOW()&#x22;;
+                      $last_id = $this-&#x3E;dom-&#x3E;set($di);
+                      if($last_id){
+                        $dis = array();
+                        $di = array();
+                        $di[&#x27;d_order_id&#x27;] = $last_id;
+                        $di[&#x27;product_name&#x27;] = &#x22;Hand Sanitizer&#x22;;
+                        $di[&#x27;price&#x27;] = &#x22;25&#x22;;
+                        $di[&#x27;qty&#x27;] = &#x22;2&#x22;;
+                        $dis[] = $di;
+                        $di = array();
+                        $di[&#x27;d_order_id&#x27;] = $last_id;
+                        $di[&#x27;product_name&#x27;] = &#x22;Candy&#x22;;
+                        $di[&#x27;price&#x27;] = &#x22;10&#x22;;
+                        $di[&#x27;qty&#x27;] = &#x22;5&#x22;;
+                        $dis[] = $di;
+                        $res = $this-&#x3E;dodm-&#x3E;setMass($dis);
+                        if($res){
+                          echo &#x27;Success&#x27;;
+                        }else{
+                          echo &#x27;failed, ideally we have to rollback the first insert, but in this example has no rollback method&#x27;;
+                        }
+                      }else{
+                        echo &#x27;failed&#x27;;
+                      }
+                    }
+                    ...
                   }
                 </highlight-code>
               </div>

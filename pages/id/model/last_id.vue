@@ -194,8 +194,8 @@
                         echo &#x27;failed&#x27;;
                       }
                     }
+                    ...
                   }
-                  ...
                 </highlight-code>
               </div>
             </div>

@@ -97,7 +97,7 @@
 
             <h2>Contoh penggunaan</h2>
             <p>
-              Berikut ini adalah contoh penggunaan metode where_as pada file <code>d_order_model.php</code>.
+              Berikut ini adalah contoh penggunaan metode <code>join</code> pada file <code>d_order_model.php</code>.
             </p>
             <div class="macwindow">
               <div class="titlebar">
