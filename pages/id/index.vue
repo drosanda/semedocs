@@ -130,6 +130,9 @@
                 <li>
                   Link dengan simbol / ikon <code><i class="fa fa-window-restore"></i></code> menandakan halaman yang dituju akan dibuka pada tab baru.
                 </li>
+                <li>
+                  Link dengan simbol / ikon <code><i class="fa fa-window-maximize"></i></code> menandakan halaman yang dituju ada pada halaman yang sama.
+                </li>
               </ul>
             </p>
 

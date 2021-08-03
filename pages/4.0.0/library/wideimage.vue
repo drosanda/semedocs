@@ -4,22 +4,22 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/">4.0.2</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/library/">Library</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0.0/library/">Library</NuxtLink></li>
           <li class="unavailable">WideImage</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Library WideImage</h1>
+            <h1 class="">WideImage Library</h1>
             <p>
-              WideImage dengan Seme Framework berjalan dengan baik, baca selengkapnya tentang <a href="http://wideimage.sourceforge.net/" target="_blank">WideImage <i class="fa fa-external-link"></i></a>.
+              Seme Framework running well with WideImage, read more about <a href="http://wideimage.sourceforge.net/" target="_blank">WideImage <i class="fa fa-external-link"></i></a>.
             </p>
 
-            <h2>Cara Install</h2>
+            <h2>Installation</h2>
             <p>
-              Download library WideImage, buka direktori <code>app/kero/lib</code>, kemudian buat direktori baru bernama <code>wideimage</code>, setelah itu <em>copy paste</em> isi library-nya ke direktori tersebut.
+              Download the WideImage library, and then put <code>wideimage</code> directory under <code>app/kero/lib</code>.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -49,9 +49,9 @@
               </div>
             </div>
 
-            <h2>Memanggil Library</h2>
+            <h2>Load the WideImage</h2>
             <p>
-              Untuk memanggil library, gunakan metode <NuxtLink to="/id/controller/lib/">lib <i class="fa fa-window-restore"></i></NuxtLink> di kelas controller.
+              For loading WideImage into a controller class, simply using <NuxtLink to="/4.0.0/controller/lib/">lib <i class="fa fa-window-restore"></i></NuxtLink> method in a controller.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -84,9 +84,9 @@
               </div>
             </div>
 
-            <h2>Contoh Pengguaan</h2>
+            <h2>Example Usage</h2>
             <p>
-              Berikut ini adalah contoh metode private yang menggunakan <code>WideImage</code> untuk merubah ukuran gambar yang telah selesai diupload.
+              This is full example for upload image and then create thumbnail using <code>WideImage</code> for image resizer.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -258,13 +258,13 @@
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
-                <nuxt-link to="/id/library/seme_log/" class="btn">
+                <nuxt-link to="/4.0.0/library/seme_log/" class="btn">
                 <i class="fa fa-chevron-left"></i>
                   Seme_Log
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
-                <nuxt-link to="/id/cli/" class="btn">
+                <nuxt-link to="/4.0.0/cli/" class="btn">
                   CLI
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
@@ -280,24 +280,24 @@
   </template>
   <script>
   export default {
-    layout: 'id',
+    layout: 'v4.0.0',
     data() {
       return {
         name: 'Seme Framework 4',
         suffix: ' - Seme Framework 4',
-        title: 'Library WideImage',
-        description: 'Pelajari penggunaan library WideImage dengan Seme Framework 4.',
+        title: 'WideImage Library',
+        description: 'Learn more about WideImage library with Seme Framework 4',
         breadcrumbs: [
           {
             url: process.env.BASE_URL || 'http://localhost:3001',
             text: 'Seme Framework',
           },
           {
-            url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/',
-            text: 'ID',
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/',
+            text: '4.0.2',
           },
           {
-            url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/library/',
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/library/',
             text: 'Library',
           }
         ]
@@ -305,9 +305,6 @@
     },
     head() {
       return {
-        htmlAttrs: {
-          lang: 'id'
-        },
         title: this.title+this.suffix,
         meta: [
           {
@@ -355,9 +352,9 @@
           "image": [
             (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
           ],
-          "dateCreated": "2021-08-03T18:19:20+07:00",
-          "datePublished": "2021-08-03T18:19:20+07:00",
-          "dateModified": "2021-08-03T18:19:20+07:00",
+          "dateCreated": "2021-08-03T17:18:19+07:00",
+          "datePublished": "2021-08-03T17:18:19+07:00",
+          "dateModified": "2021-08-03T17:18:19+07:00",
           "author": {
             "@type": "Person",
             "gender": "Male",
@@ -377,7 +374,7 @@
             "logo": {
               "@type": "ImageObject",
               "name": "logo Cipta Esensi Merenah",
-              "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+              "url": "https://cdn.cenah.co.4.0.0/_nuxt/img/logo-wide.5420183.png",
               "width": "256px",
               "height": "62px"
             }

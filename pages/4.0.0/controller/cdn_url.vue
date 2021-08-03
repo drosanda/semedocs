@@ -6,15 +6,15 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/controller/">Controller</NuxtLink></li>
-          <li class="unavailable">cdn_url</li>
+          <li class="unavailable">CDN URL</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">cdn_url method</h1>
+            <h1 class="">CDN URL Method</h1>
             <p>
-              The cdn_url method purpose is to load assets file with CDN URL prefix.
+              The <code>cdn_url</code> method purpose is to load assets file with CDN URL prefix.
             </p>
 
             <h2>Basic Usage</h2>
@@ -143,8 +143,8 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
-      title: 'cdn_url method',
-      description: 'Learn more about cdn_url method from SENE_Controller class on Seme Framework.',
+      title: 'CDN URL Method',
+      description: 'Learn more about cdn_url method from SENE_Controller class on Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -152,7 +152,7 @@ export default {
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/',
-          text: '4.0.0'
+          text: '4.0.2'
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/controller/',

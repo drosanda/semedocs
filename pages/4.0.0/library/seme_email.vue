@@ -5,7 +5,7 @@
             <ul class="breadcrumbs">
               <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
 <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
-              <li class=""><NuxtLink to="/4.0.0/library">Library</NuxtLink></li>
+              <li class=""><NuxtLink to="/4.0.0/library/">Library</NuxtLink></li>
             <li class="unavailable">Seme Email</li>
           </ul>
         </nav>

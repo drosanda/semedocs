@@ -143,7 +143,7 @@
       <div class="container">
         <div class="content has-text-centered">
           <p class="">Copyright &copy; 2014-2021. Dibuat sepenuh cinta di Bandung, Indonesia oleh Daeng Rosanda, S.Kom.</p>
-          <p><small>Diperbarui tanggal 21 Juli 2021</small></p>
+          <p><small>Diperbarui tanggal 2 Agustus 2021</small></p>
         </div>
       </div>
     </footer>

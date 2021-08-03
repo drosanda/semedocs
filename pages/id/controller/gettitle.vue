@@ -168,14 +168,14 @@
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
-                <nuxt-link to="/id/controller/getthemeelement/" class="btn">
+                <nuxt-link to="/id/controller/getkey/" class="btn">
                   <i class="fa fa-chevron-left"></i>
-                  getThemeElement
+                  Metode getKey
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
                 <nuxt-link to="/id/controller/input/" class="btn">
-                  input
+                  Properti Input
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>

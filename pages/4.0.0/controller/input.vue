@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/controller/">Controller</NuxtLink></li>
-          <li class="unavailable">Input Property</li>
+          <li class="unavailable">Input</li>
         </ul>
       </nav>
       <div class="columns">
@@ -14,12 +14,16 @@
           <div class="content">
             <h1 class="">Input Property</h1>
             <p>
-              Seme Framework comes with builtin <code>input property</code> which can handled <code>$_POST</code>, <code>$_GET</code>, and <code>$_REQUEST</code>.
+              The <code>$input</code> property from <NuxtLink to="/4.0.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> is an object from <code>SENE_Input</code> class.
             </p>
 
-            <h2>Basic Usage</h2>
+            <h2 id="SENE_Input">SENE_Input</h2>
             <p>
-              Input Property is obtained from <code>SEME_Input</code> class, contain 3 methods there is <code>get</code>, <code>post</code>, and <code>request</code>.
+              The <code>SENE_Input</code> class purpose is for handling <code>$_POST</code>, <code>$_GET</code>, and <code>$_REQUEST</code> input.
+            </p>
+            <h3>Class Synopsis</h3>
+            <p>
+              Here is the class synopsis of <code>SENE_Input</code>.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -40,16 +44,26 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->input : SENE_Input
+                  class SENE_Input {
+                    ...
+                    public function post(string $k, $d = 0){ ... }
+                    public function get(string $k, $d = 0){ ... }
+                    public function request(string $k, $d = 0){ ... }
+                    ...
+                  }
                 </highlight-code>
               </div>
             </div>
 
-            <h3>Get method</h3>
+            <h2 id="get">Get method</h2>
             <p>
-              Get method from <code>SENE_Input</code> purpose is to get value from <code>$_GET</code> using keyname.
+              The <code>get</code> method purpose is to get value from <code>$_GET</code> array using its keyname.
               If the keyname value will return 0 as default value.
               Start from Seme Framework 4, the default value can be override in the second parameter.
+            </p>
+            <h3>Basic Usage</h3>
+            <p>
+              This is the basic usage <code>get</code> method from <NuxtLink to="/4.0.0/controller/input/#SENE_Input">$input <i class="fa fa-window-maximize"></i></NuxtLink> property on <NuxtLink to="/4.0.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -70,14 +84,14 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->input->get($keyname [, $default_value=0]) : mixed
+                  $this-&#x3E;input-&#x3E;get($keyname [, $default_value=0]) : mixed
                 </highlight-code>
               </div>
             </div>
 
             <h4>Parameters</h4>
             <p>
-              The get method has 2 parameter, there is <code>$keyname</code> and <code>$default_value</code>.
+              This method has 2 parameter, there is <code>$keyname</code> and <code>$default_value</code>.
             </p>
 
             <h5>$keyname</h5>
@@ -87,11 +101,11 @@
 
             <h5>$default_value</h5>
             <p>
-              The default return value if the $keyname is not found. This parameter added from Seme Framework 4.
+              The default return value if the <code>$keyname</code> is not found. This parameter added from Seme Framework 4.
             </p>
 
-            <h4>Get Method Example</h4>
-            <p>Here is the example get method in a controller class.</p>
+            <h4 id="get_example">Example</h4>
+            <p>Here is the example <code>get</code> method in a controller class.</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -128,11 +142,16 @@
               </div>
             </div>
 
-            <h3>Post method</h3>
+            <h2 id="post">Post Method</h2>
             <p>
-              Post method from <code>SENE_Input</code> purpose is to get value from <code>$_POST</code> using keyname.
+              The <code>post</code> method purpose is to get value from <code>$_POST</code> array using its keyname.
               If the keyname value will return 0 as default value.
               Start from Seme Framework 4, the default value can be override in the second parameter.
+            </p>
+
+            <h3>Basic Usage</h3>
+            <p>
+              This is the basic usage <code>post</code> method from <NuxtLink to="/4.0.0/controller/input/#SENE_Input">$input <i class="fa fa-window-maximize"></i></NuxtLink> property on <NuxtLink to="/4.0.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -153,14 +172,14 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->input->post($keyname [, $default_value=0]) : mixed
+                  $this-&#x3E;input-&#x3E;post($keyname [, $default_value=0]) : mixed
                 </highlight-code>
               </div>
             </div>
 
             <h4>Parameters</h4>
             <p>
-              The post method has 2 parameter, there is <code>$keyname</code> and <code>$default_value</code>.
+              This method has 2 parameter, there is <code>$keyname</code> and <code>$default_value</code>.
             </p>
 
             <h5>$keyname</h5>
@@ -170,14 +189,95 @@
 
             <h5>$default_value</h5>
             <p>
-              The default return value if the $keyname is not found. This parameter added from Seme Framework 4.
+              The default return value if the <code>$keyname</code> is not found. This parameter added from Seme Framework 4.
             </p>
 
-            <h3>Request method</h3>
+            <h4 id="post_example">Example</h4>
+            <p>Here is the example <code>post</code> method in a controller class.</p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  class Product extends SENE_Controller{
+                    public function __construct(){
+                      parent::__construct();
+                    }
+                    ...
+                    public function submit(){
+                      ...
+                      //example URL Request, localhost/seme_framework/product/submi
+                      //get form html example below
+                      $name = $this-&#x3E;input-&#x3E;post(&#x27;name&#x27;);
+                      $is_available = $this-&#x3E;input-&#x3E;post(&#x27;is_available&#x27;);
+                      ....
+                    }
+                    ...
+                  }
+                </highlight-code>
+              </div>
+            </div>
+
+            <h5>HTML Form Example</h5>
             <p>
-              Request method from <code>SENE_Input</code> purpose is to get value from <code>$_REQUEST</code> using keyname.
+              here is the HTML form example for testing with controller example.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="html">
+                  ...
+                  &#x3C;form action=&#x22;&#x3C;?=base_url(&#x27;product/submit&#x27;)?&#x3E;&#x22; method=&#x22;post&#x22; enctype=&#x22;multipart/form-data&#x22;&#x3E;
+                    &#x3C;input type=&#x22;text&#x22; name=&#x22;name&#x22; /&#x3E;
+                    &#x3C;select name=&#x22;is_available&#x22;&#x3E;
+                      &#x3C;option value=&#x22;1&#x22;&#x3E;in stock&#x3C;/option&#x3E;
+                      &#x3C;option value=&#x22;0&#x22;&#x3E;out of stock&#x3C;/option&#x3E;
+                    &#x3C;/select&#x3E;
+                  &#x3C;/form&#x3E;
+                  ...
+                </highlight-code>
+              </div>
+            </div>
+
+            <h2>Request method</h2>
+            <p>
+              The <code>request</code> method purpose is to get value from <code>$_REQUEST</code> array using its keyname.
               If the keyname value will return 0 as default value.
               Start from Seme Framework 4, the default value can be override in the second parameter.
+            </p>
+
+            <h3>Basic Usage</h3>
+            <p>
+              This is the basic usage <code>request</code> method from <NuxtLink to="/4.0.0/controller/input/#SENE_Input">$input <i class="fa fa-window-maximize"></i></NuxtLink> property on <NuxtLink to="/4.0.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -198,7 +298,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->input->request($keyname [, $default_value=0]) : mixed
+                  $this-&#x3E;input-&#x3E;request($keyname [, $default_value=0]) : mixed
                 </highlight-code>
               </div>
             </div>
@@ -215,11 +315,11 @@
 
             <h5>$default_value</h5>
             <p>
-              The default return value if the $keyname is not found. This parameter added from Seme Framework 4.
+              The default return value if the <code>$keyname</code> is not found. This parameter added from Seme Framework 4.
             </p>
 
             <h4>Request Method Example</h4>
-            <p>Here is the example request method in a controller class.</p>
+            <p>Here is the example <code>request</code> method in a controller class.</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -259,6 +359,44 @@
             <p>
               For handling <code>$_FILES</code> file upload you have to created it <b>manually</b> regarding to your application requirements.
             </p>
+
+            <h3>Prerequisited</h3>
+            <p>Before implementing the example, here is the list of prerequisited library:</p>
+            <ul>
+              <li>Library <NuxtLink to="/4.0.0/library/seme_log/">SEME_Log</NuxtLink>,</li>
+              <li>Library <NuxtLink to="/4.0.0/library/wideimage/">WideImage</NuxtLink>,</li>
+              <li>Directory <code>media/upload/</code> with write access permission.</li>
+            </ul>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  ...
+                  public function __construct(){
+                    parent:: __construct();
+                    //loading the required libraries
+                    $this-&#x3E;lib(&#x22;seme_log&#x22;);
+                    $this-&#x3E;lib(&#x22;wideimage&#x22;, 'inc');
+                  }
+                  ..
+                </highlight-code>
+              </div>
+            </div>
 
             <h3>Create private method for upload image</h3>
             <p>This is full example for upload image and then create thumbnail using <code>WideImage</code> for image resizer.</p>
@@ -430,45 +568,7 @@
               </div>
             </div>
 
-            <h4>Example Requirements</h4>
-            <p>This private method example, request some library:</p>
-            <ul>
-              <li>Library Seme_Log</li>
-              <li>Library WideImage</li>
-              <li>Directory <code>media/upload/</code> with write access permission.</li>
-            </ul>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  ...
-                  public function __construct(){
-                    parent:: __construct();
-                    //loading the required libraries
-                    $this-&#x3E;lib(&#x22;seme_log&#x22;);
-                    $this-&#x3E;lib(&#x22;wideimage&#x22;, 'inc');
-                  }
-                  ..
-                </highlight-code>
-              </div>
-            </div>
-
-            <h4>Example Implementation</h4>
+            <h3>Example Implementation</h3>
             <p>
               Here is the example implementation of file upload using the private method.
               On this example, the <code>$keyname</code> value is <code>foto</code> also this $keyname value should be send by multipart/form-data on HTML form or API Request like <code>curl</code>.
@@ -513,14 +613,14 @@
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
-                <nuxt-link to="/4.0.0/controller/constructor/" class="btn">
+                <nuxt-link to="/4.0.0/controller/index_method/" class="btn">
                   <i class="fa fa-chevron-left"></i>
-                  constructor Method
+                  index Method
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
                 <nuxt-link to="/4.0.0/controller/lib/" class="btn">
-                  lib Method
+                  Lib Method
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
@@ -543,7 +643,7 @@ export default {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
       title: 'Input Property',
-      description: 'Learn more about Input property from SENE_Controller on Seme Framework version 4',
+      description: 'Learn input property (SENE_Input) from SENE_Controller class on Seme Framework version 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -551,7 +651,7 @@ export default {
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/',
-          text: '4.0.0'
+          text: '4.0.2'
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/controller/',

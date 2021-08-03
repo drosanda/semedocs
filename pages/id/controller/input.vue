@@ -15,8 +15,6 @@
             <h1 class="">Properti Input</h1>
             <p>
               Seme Framework memiliki properti untuk menerima atau memproses hasil pengiriman nilai melalui <code>$_POST</code>, <code>$_GET</code>, dan <code>$_REQUEST</code>.
-            </p>
-            <p>
               Properti ini berisikan object dari kelas <code>SENE_Input</code>.
             </p>
 
@@ -24,8 +22,7 @@
             <p>
               Metode <code>SENE_Input::post()</code> akan menerima isi nilai dari tag <code>form</code> HTML dengan atribut <code>method</code> berisikan <code>post</code> dan atribut <code>enctype</code> berisikan <code>multipart/form-data</code>.
             </p>
-
-
+            
             <p>
               Berikut ini adalah bentuk umum dari metode <code>SENE_Input::post()</code>.
             </p>
@@ -716,12 +713,12 @@
         <div class="nav-bottom-left">
           <nuxt-link to="/id/controller/getkey/" class="btn">
             <i class="fa fa-chevron-left"></i>
-            metode getKey
+            metode Get Title
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
           <nuxt-link to="/id/controller/lib/" class="btn">
-            Metode lib
+            Metode Lib
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
