@@ -46,21 +46,21 @@
 </template>
 <script>
 export default {
-  layout: 'v3.3.0',
+  layout: 'v3.3',
   data (){
     return {
-      name: 'Seme Framework v3.3.0',
+      name: 'Seme Framework v3.3.x',
       suffix: '',
-      title: 'Seme Framework version 3.3.0',
-      description: 'Learn more about Seme Framework version 3.3.0 through this documentation.',
+      title: 'Seme Framework version 3.3.x Documentation',
+      description: 'Learn more about Seme Framework version 3.3.x through this documentation.',
       breadcrumbs: [
         {
-          url: process.env.ORIGIN_URL || 'http://localhost:3001/',
+          url: process.env.BASE_URL || 'http://localhost:3001',
           text: 'Seme Framework',
         },
         {
-          url: (process.env.ORIGIN_URL || 'http://localhost:3001')+'/3.0.0/',
-          text: '3.0.0',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.3.0',
+          text: '3.3.x',
         }
       ]
     }
@@ -113,9 +113,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2020-06-11T10:12:00+07:00",
-        "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-07-13T12:41:12+07:00",
+        "dateCreated": "2021-08-04T18:16:32+07:00",
+        "datePublished": "2021-08-04T18:16:32+07:00",
+        "dateModified": "2021-08-04T18:16:32+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

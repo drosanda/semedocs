@@ -4,7 +4,7 @@
           <nav class="breadcrumb" aria-label="breadcrumbs">
             <ul class="breadcrumbs">
               <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-<li class=""><NuxtLink to="/3.2.1/">3.2.1</NuxtLink></li>
+<li class=""><NuxtLink to="/3.2.1">3.2.x</NuxtLink></li>
               <li class=""><NuxtLink to="/3.2.1/model">Model</NuxtLink></li>
             <li class="unavailable">Get Method</li>
           </ul>
@@ -61,7 +61,7 @@ class Blog_Model extends SENE_Model{
   </template>
 <script>
   export default {
-    layout: 'v3.2.1'
+    layout: 'v3.2'
     // page component definitions
   }
 </script>

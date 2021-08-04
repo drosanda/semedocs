@@ -264,11 +264,11 @@ export default {
           text: 'Seme Framework',
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id',
           text: 'id',
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/tutorial/',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/tutorial',
           text: 'tutorial',
         }
       ],

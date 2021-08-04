@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/3.2.1/">3.2.1</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.2.1">3.2.x</NuxtLink></li>
           <li class="unavailable">View</li>
         </ul>
       </nav>
@@ -351,10 +351,10 @@
 </template>
 <script>
 export default {
-  layout: 'v3.2.1',
+  layout: 'v3.2',
   data() {
     return {
-      name: 'Seme Framework v3.2.1',
+      name: 'Seme Framework v3.2',
       suffix: ' - Seme Framework 4',
       title: 'View',
       description: 'Learn more about using View concept from Seme Framework version 3.2.1',

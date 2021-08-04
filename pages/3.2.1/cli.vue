@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/3.2.1/">3.2.1</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.2.1">3.2.x</NuxtLink></li>
           <li class="unavailable">Command Line Interface (CLI)</li>
         </ul>
       </nav>
@@ -81,10 +81,10 @@
 </template>
 <script>
 export default {
-  layout: 'v3.2.1',
+  layout: 'v3.2',
   data (){
     return {
-      name: 'Seme Framework v3.2.1',
+      name: 'Seme Framework v3.2',
       suffix: ' - Seme Framework 4',
       title: 'Command Line Interface (CLI)',
       description: 'Learn more about how to use Command Line Interface (CLI) on Seme Framework version 3.2.1 through this documentation.',

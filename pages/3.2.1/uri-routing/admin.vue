@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-<li class=""><NuxtLink to="/3.2.1/">3.2.1</NuxtLink></li>
+<li class=""><NuxtLink to="/3.2.1">3.2.x</NuxtLink></li>
           <li class=""><NuxtLink to="/3.2.1/uri-routing">URI Routing</NuxtLink></li>
           <li class="unavailable">Admin URI Routing</li>
         </ul>
@@ -33,7 +33,7 @@
 </template>
 <script>
   export default {
-    layout: 'v3.2.1'
+    layout: 'v3.2'
     // page component definitions
   }
 </script>

@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class="unavailable">3.2.1</li>
+          <li class="unavailable">3.2.x</li>
         </ul>
       </nav>
 
@@ -58,21 +58,21 @@
 </template>
 <script>
   export default {
-    layout: 'v3.2.1',
+    layout: 'v3.2',
     data (){
       return {
-        name: 'Seme Framework v3.2.1',
+        name: 'Seme Framework v3.2.x',
         suffix: '',
-        title: 'Seme Framework version 3.2.1',
-        description: 'Learn more about Seme Framework version 3.2.1 through this documentation.',
+        title: 'Seme Framework version 3.2.1 Documentation',
+        description: 'Learn more about Seme Framework version 3.2.x through this documentation.',
         breadcrumbs: [
           {
             url: process.env.BASE_URL || 'http://localhost:3001',
             text: 'Seme Framework',
           },
           {
-            url: (process.env.BASE_URL || 'http://localhost:3001/')+'3.2.1/',
-            text: '3.2.1',
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2.1',
+            text: '3.2.x',
           }
         ]
       }
@@ -125,9 +125,9 @@
           "image": [
             (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
           ],
-          "dateCreated": "2020-06-11T10:12:00+07:00",
-          "datePublished": "2020-06-11T10:12:00+07:00",
-          "dateModified": "2021-06-25T16:41:03+07:00",
+          "dateCreated": "2021-08-04T18:15:32+07:00",
+          "datePublished": "2021-08-04T18:15:32+07:00",
+          "dateModified": "2021-08-04T18:15:32+07:00",
           "author": {
             "@type": "Person",
             "gender": "Male",

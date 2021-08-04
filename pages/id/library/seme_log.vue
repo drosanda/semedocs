@@ -118,11 +118,11 @@
             text: 'Seme Framework',
           },
           {
-            url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/',
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/id',
             text: 'ID',
           },
           {
-            url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/library/',
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/library',
             text: 'Library',
           }
         ]

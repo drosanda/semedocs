@@ -4,8 +4,8 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0.0/library/">Library</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.2.1">3.2.x</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.2.1/library">Library</NuxtLink></li>
           <li class="unavailable">WideImage</li>
         </ul>
       </nav>
@@ -51,7 +51,7 @@
 
             <h2>Load the WideImage</h2>
             <p>
-              For loading WideImage into a controller class, simply using <NuxtLink to="/4.0.0/controller/lib/">lib <i class="fa fa-window-restore"></i></NuxtLink> method in a controller.
+              For loading WideImage into a controller class, simply using <NuxtLink to="/3.2.1/controller/lib/">lib <i class="fa fa-window-restore"></i></NuxtLink> method in a controller.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -149,45 +149,45 @@
                       $filethumb = $filename.&#x27;-thumb&#x27;;
 
                       $targetdir = 'media/upload/';
-                      $targetdircheck = realpath(SEMEROOT.$targetdir);
+                      $targetdircheck = realpath(SENEROOT.$targetdir);
                       if (empty($targetdircheck)) {
                         if (PHP_OS == &#x22;WINNT&#x22;) {
-                          if (!is_dir(SEMEROOT.$targetdir)) {
-                            mkdir(SEMEROOT.$targetdir);
+                          if (!is_dir(SENEROOT.$targetdir)) {
+                            mkdir(SENEROOT.$targetdir);
                           }
                         } else {
-                          if (!is_dir(SEMEROOT.$targetdir)) {
-                            mkdir(SEMEROOT.$targetdir, 0775);
+                          if (!is_dir(SENEROOT.$targetdir)) {
+                            mkdir(SENEROOT.$targetdir, 0775);
                           }
                         }
                       }
 
                       $tahun = date(&#x22;Y&#x22;);
                       $targetdir = $targetdir.DIRECTORY_SEPARATOR.$tahun;
-                      $targetdircheck = realpath(SEMEROOT.$targetdir);
+                      $targetdircheck = realpath(SENEROOT.$targetdir);
                       if (empty($targetdircheck)) {
                         if (PHP_OS == &#x22;WINNT&#x22;) {
-                          if (!is_dir(SEMEROOT.$targetdir)) {
-                            mkdir(SEMEROOT.$targetdir);
+                          if (!is_dir(SENEROOT.$targetdir)) {
+                            mkdir(SENEROOT.$targetdir);
                           }
                         } else {
-                          if (!is_dir(SEMEROOT.$targetdir)) {
-                            mkdir(SEMEROOT.$targetdir, 0775);
+                          if (!is_dir(SENEROOT.$targetdir)) {
+                            mkdir(SENEROOT.$targetdir, 0775);
                           }
                         }
                       }
 
                       $bulan = date(&#x22;m&#x22;);
                       $targetdir = $targetdir.DIRECTORY_SEPARATOR.$bulan;
-                      $targetdircheck = realpath(SEMEROOT.$targetdir);
+                      $targetdircheck = realpath(SENEROOT.$targetdir);
                       if (empty($targetdircheck)) {
                         if (PHP_OS == &#x22;WINNT&#x22;) {
-                          if (!is_dir(SEMEROOT.$targetdir)) {
-                            mkdir(SEMEROOT.$targetdir);
+                          if (!is_dir(SENEROOT.$targetdir)) {
+                            mkdir(SENEROOT.$targetdir);
                           }
                         } else {
-                          if (!is_dir(SEMEROOT.$targetdir)) {
-                            mkdir(SEMEROOT.$targetdir, 0775);
+                          if (!is_dir(SENEROOT.$targetdir)) {
+                            mkdir(SENEROOT.$targetdir, 0775);
                           }
                         }
                       }
@@ -195,12 +195,12 @@
                       $sc-&#x3E;status = 998;
                       $sc-&#x3E;message = &#x27;Invalid file extension uploaded&#x27;;
                       if (in_array($fileext, array(&#x22;gif&#x22;, &#x22;jpg&#x22;, &#x22;png&#x22;,&#x22;jpeg&#x22;))) {
-                        $filecheck = SEMEROOT.$targetdir.DIRECTORY_SEPARATOR.$filename.&#x27;.&#x27;.$fileext;
+                        $filecheck = SENEROOT.$targetdir.DIRECTORY_SEPARATOR.$filename.&#x27;.&#x27;.$fileext;
                         if (file_exists($filecheck)) {
                           unlink($filecheck);
                           $rand = rand(0, 999);
                           $filename = &#x22;$id-$ke-&#x22;.$rand;
-                          $filecheck = SEMEROOT.$targetdir.DIRECTORY_SEPARATOR.$filename.&#x27;.&#x27;.$fileext;
+                          $filecheck = SENEROOT.$targetdir.DIRECTORY_SEPARATOR.$filename.&#x27;.&#x27;.$fileext;
                           if (file_exists($filecheck)) {
                             unlink($filecheck);
                             $rand = rand(1000, 99999);
@@ -210,9 +210,9 @@
                         $filethumb = $filename.&#x22;-thumb.&#x22;.$fileext;
                         $filename = $filename.&#x22;.&#x22;.$fileext;
 
-                        move_uploaded_file($_FILES[$keyname][&#x27;tmp_name&#x27;], SEMEROOT.$targetdir.DIRECTORY_SEPARATOR.$filename);
-                        if (is_file(SEMEROOT.$targetdir.DIRECTORY_SEPARATOR.$filename) &#x26;&#x26; file_exists(SEMEROOT.$targetdir.DIRECTORY_SEPARATOR.$filename)) {
-                          if (@mime_content_type(SEMEROOT.$targetdir.DIRECTORY_SEPARATOR.$filename) == &#x27;image/webp&#x27;) {
+                        move_uploaded_file($_FILES[$keyname][&#x27;tmp_name&#x27;], SENEROOT.$targetdir.DIRECTORY_SEPARATOR.$filename);
+                        if (is_file(SENEROOT.$targetdir.DIRECTORY_SEPARATOR.$filename) &#x26;&#x26; file_exists(SENEROOT.$targetdir.DIRECTORY_SEPARATOR.$filename)) {
+                          if (@mime_content_type(SENEROOT.$targetdir.DIRECTORY_SEPARATOR.$filename) == &#x27;image/webp&#x27;) {
                             $sc-&#x3E;status = 302;
                             $sc-&#x3E;message = &#x27;WebP image format currently unsupported&#x27;;
                             $this-&#x3E;seme_log-&#x3E;write(&#x27;User::__uploadImagex -- forceClose &#x27;.$sc-&#x3E;status.&#x27; &#x27;.$sc-&#x3E;message);
@@ -220,11 +220,11 @@
                           }
 
                           $this-&#x3E;lib(&#x22;wideimage/WideImage&#x22;, &#x27;wideimage&#x27;, &#x22;inc&#x22;);
-                          if (file_exists(SEMEROOT.$targetdir.DIRECTORY_SEPARATOR.$filethumb) &#x26;&#x26; is_file(SEMEROOT.$targetdir.DIRECTORY_SEPARATOR.$filethumb)) {
-                            unlink(SEMEROOT.$targetdir.DIRECTORY_SEPARATOR.$filethumb);
+                          if (file_exists(SENEROOT.$targetdir.DIRECTORY_SEPARATOR.$filethumb) &#x26;&#x26; is_file(SENEROOT.$targetdir.DIRECTORY_SEPARATOR.$filethumb)) {
+                            unlink(SENEROOT.$targetdir.DIRECTORY_SEPARATOR.$filethumb);
                           }
-                          if (file_exists(SEMEROOT.$targetdir.DIRECTORY_SEPARATOR.$filename) &#x26;&#x26; is_file(SEMEROOT.$targetdir.DIRECTORY_SEPARATOR.$filename)) {
-                            WideImage::load(SEMEROOT.$targetdir.DIRECTORY_SEPARATOR.$filename)-&#x3E;reSize(370)-&#x3E;saveToFile(SEMEROOT.$targetdir.DIRECTORY_SEPARATOR.$filethumb);
+                          if (file_exists(SENEROOT.$targetdir.DIRECTORY_SEPARATOR.$filename) &#x26;&#x26; is_file(SENEROOT.$targetdir.DIRECTORY_SEPARATOR.$filename)) {
+                            WideImage::load(SENEROOT.$targetdir.DIRECTORY_SEPARATOR.$filename)-&#x3E;reSize(370)-&#x3E;saveToFile(SENEROOT.$targetdir.DIRECTORY_SEPARATOR.$filethumb);
                             $sc-&#x3E;status = 200;
                             $sc-&#x3E;message = &#x27;Successful&#x27;;
                             $sc-&#x3E;thumb = str_replace(&#x22;//&#x22;, &#x22;/&#x22;, $targetdir.&#x27;/&#x27;.$filethumb);
@@ -256,21 +256,6 @@
               </div>
             </div>
 
-            <div class="nav-bottom">
-              <div class="nav-bottom-left">
-                <nuxt-link to="/4.0.0/library/seme_log/" class="btn">
-                <i class="fa fa-chevron-left"></i>
-                  Seme_Log
-                </nuxt-link>
-              </div>
-              <div class="nav-bottom-right">
-                <nuxt-link to="/4.0.0/cli/" class="btn">
-                  CLI
-                  <i class="fa fa-chevron-right"></i>
-                </nuxt-link>
-              </div>
-            </div>
-
           </div>
         </div>
 
@@ -280,24 +265,24 @@
   </template>
   <script>
   export default {
-    layout: 'v4.0.0',
+    layout: 'v3.2',
     data() {
       return {
-        name: 'Seme Framework 4',
-        suffix: ' - Seme Framework 4',
+        name: 'Seme Framework 3.2.1',
+        suffix: ' - Seme Framework 3.2.1',
         title: 'WideImage Library',
-        description: 'Learn more about WideImage library with Seme Framework 4',
+        description: 'Learn more about WideImage library with Seme Framework 3.2.1',
         breadcrumbs: [
           {
             url: process.env.BASE_URL || 'http://localhost:3001',
             text: 'Seme Framework',
           },
           {
-            url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0',
-            text: '4.0.2',
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2.1',
+            text: '3.2.x',
           },
           {
-            url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/library',
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2.1/library',
             text: 'Library',
           }
         ]

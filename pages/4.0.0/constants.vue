@@ -73,17 +73,17 @@
     layout: 'v4.0.0',
     data() {
       return {
-        name: 'Seme Framework v4.0.0',
+        name: 'Seme Framework v4.0.2',
         suffix: ' - Seme Framework 4',
         title: 'Constants',
-        description: 'Learn more about Constants of Seme Framework Documentation for version 4.0.0',
+        description: 'Learn more about Constants of Seme Framework Documentation for version 4.0.2',
         breadcrumbs: [
           {
             url: process.env.BASE_URL || 'http://localhost:3001',
             text: 'Seme Framework',
           },
           {
-            url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/',
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0',
             text: '4.0.2',
           }
         ]
@@ -111,7 +111,8 @@
         ]
       }
     },
-    jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+    jsonld() {
+      this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
       const items = this.breadcrumbs.map((item, index) => ({
         '@type': 'ListItem',
         position: index + 1,

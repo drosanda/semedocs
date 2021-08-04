@@ -12,7 +12,7 @@
         <li><nuxt-link to="/">Seme Framework</nuxt-link></li>
         <li><nuxt-link to="/credits/">Credits</nuxt-link></li>
         <li>
-          <nuxt-link to="/3.2.1/">Version 3.2.1</nuxt-link>
+          <nuxt-link to="/3.2.1/">Version 3.2.X</nuxt-link>
           <ul>
             <li><nuxt-link to="/3.2.1/requirements/">Requirements</nuxt-link></li>
             <li><nuxt-link to="/3.2.1/download/">Download</nuxt-link></li>
@@ -107,7 +107,7 @@
     <footer class="footer">
       <div class="container">
         <div class="content has-text-centered">
-          <p class="">Copyright &copy; 2014-2021. Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
+          <p class="">Seme Framework v3.2.1 &copy; 2014-2021 . Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
           <p><small>Last updated on 30 May 2021</small></p>
         </div>
       </div>

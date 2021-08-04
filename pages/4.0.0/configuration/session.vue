@@ -61,11 +61,11 @@
             text: 'Seme Framework',
           },
           {
-            url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/',
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0',
             text: '4.0.2',
           },
           {
-            url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/configuration/',
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/configuration',
             text: 'Configuration',
           }
         ]

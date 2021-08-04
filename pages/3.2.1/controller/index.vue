@@ -4,121 +4,304 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/3.2.1/">3.2.1</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.2.1">3.2.x</NuxtLink></li>
           <li class="unavailable">Controller</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Controller</h1>
-            <p>Controller is the main actor in framework lifes. A Controller is simply a class file that is named in a way that can be associated with a URI. If you extract Seme Framework on <code>XAMPP/htdocs/seme/</code> and then you called <code>http://localhost/seme/blog/</code>, you are accessing the Blog Controller, if the blog.php file is existed on your controller folder. By Default, if you accessing <code>http://localhost/seme/</code> it will executing home controller which is the default controller for first request in Seme Framework.</p>
-            <h2>The Condition</h2>
-            <p>A Controller can be loaded if URI request has same name with filename of controller and class name of controller. Like example before, if you access blog URI make sure that file blog.php is existed in app/controller/ and the class name is blog with extending SENE_Controller.</p>
-            <h2>What if not found?</h2>
-            <p>By Default Seme Framework has fallback controller named notfound controller which is included in Seme Framework package. You can override the controller, if you wish.</p>
-            <h2>Default Controller</h2>
-            <p>Here is the default source code of controller.</p>
-            <pre>
-              class Home extends SENE_Controller{
-                public function __construct(){
-                  parent::__construct();
-                }
-                public function index(){
-                  echo 'Thankyou for using Seme Framewrok';
-                }
-              }
-            </pre>
-            <h2>Notfound Controller</h2>
-            <p>Here is the default source code of notfound controller.</p>
-            <pre>
-              class Notfound extends SENE_Controller{
-                public function __construct(){
-                  parent::__construct();
-                }
-                public function index(){
-                  header("HTTP/1.0 404 Not Found");
-                  echo '404 Notfound';
-                }
-              }
-            </pre>
+            <h1 class="">Controller Class</h1>
+            <p>
+              Controller is a class that inherited from <NuxtLink to="/3.2.1/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> and <NuxtLink to="/3.2.1/core/controller/">its derivatives*</NuxtLink>.
+              Also, controller has another requirements before it can used by Seme Framework.
+            </p>
+            <p>Before going further, we have to find out the condition for Seme Framework to meet its controller requirements.</p>
 
-            <p class="panel">Please make sure your class name are match with filename.</p>
-            <p class="panel">Seme Framework only use lowercase filename, but there is no restriction for class name use capital at first name. You can do CamelCase if you want on class name.</p>
-            <h2>Controller Composition</h2>
-            <p>Like a object oriented lesson, a controller can have properties and methods. First, if you want the class can be identified as a controller, you have to extends SENE_Controller on class declaration. After that, you have to re-executed parent constructor if you want use all benefit from SENE_Controller on your controller (<code>parent::__construct();</code>).</p>
+            <h2>Requirements</h2>
+            <p>The following are the conditions when you want to use the Controller class correctly so that it can run properly:</p>
+
+            <h3>Location</h3>
+            <p>
+              All Controller classes are stored in the <code>app/controller</code> directory.
+            </p>
+
+            <h3>Class Inheritance</h3>
+            <p>
+              The controller class must be <code>extends</code> from <NuxtLink to="/3.2.1/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
+              But, If using <code>* core controller</code>  as parent class, the core controller class must be <code>extends</code> from <NuxtLink to="/3.2.1/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
+            </p>
+
+            <h3>Naming Rules</h3>
+            <p>
+              The naming of the controller file name and controller class name can only be started by a letter, then followed by letters and or numbers, and/or an underscore.
+              The class name and file name must be identical but may not be uppercase or lowercase (not case sensitive)
+            </p>
+            <h4>Filename Extension</h4>
+            <p>
+              The controller class file name must be in lower case and the filename suffix is <code>.php</code>.
+            </p>
+
+            <h3>Defaults</h3>
+            <p>
+              The default name of class controller is <code>Home</code>.
+              And then, the default method name of class controller is <code>index</code>.
+              This default will be used as <em>fallback</em> if URI Request was empty.
+            </p>
+
+            <h2>How It Work</h2>
+            <p>
+              Seme Framework will be loaded a controller by URI request. Typically there is a one-to-one relationship between an URL string and its corresponding controller class/method. The segments in an URI normally follow this pattern:
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  example.com/class/method/parameter1/parameter2/.../parameterN
+                </highlight-code>
+              </div>
+            </div>
+            <p>
+              Or if using directory:
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  example.com/directory/class/method/parameter1/parameter2/.../parameterN
+                </highlight-code>
+              </div>
+            </div>
+            <p>
+              Seme Framework will only load controller with filename and its class name are matched.
+              But, Seme Framework has support for <NuxtLink to="/3.2.1/configuration/routes/">URI Controller Remapping</NuxtLink>.
+            </p>
+
+            <h3>The Notfound</h3>
+            <p>
+              Error 404 or Notfound is a special controller which serves as fallback if the controller has notfound while the controller requirements is not met.
+            </p>
+
+            <h2>Error 5xx</h2>
+            <p>
+              The error 500 or another 5xx codes, ussualy caused by mismatched class name with filename.
+              However, this condition can also be caused by an error on source code.
+            </p>
+
+            <h2>Code Example</h2>
+            <p>
+              Lets say, you have extracted Seme Framework on <code>D:\XAMPP\htdocs\seme_framework</code>
+            </p>
+            <p>So, if you accessing the <code>http://localhost/seme_framework</code> the Seme Framework will load <code>home.php</code> controller inside <code>app/controller</code>.</p>
+            <div class="message is-info">
+              <div class="message-body">
+                <p>Class <b>home</b> on (<b>app/controller/home.php</b>) file is the default access controller from each URI even in the sub directory.</p>
+              </div>
+            </div>
+            <p>Here is the basic example for a controller structure.</p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  app/
+                    └── controller/
+                      ├── blog.php
+                      └── product/
+                        ├── home.php
+                        └── detail.php
+                </highlight-code>
+              </div>
+            </div>
+            <p>
+              Inside controller directory, can contain a directory (folder) or file. But, the directory tree level only support 2 level. So, be wise using the directory structure.
+            </p>
+
+            <h3>Another Example</h3>
+            <p>
+              How if we accessing <code>http://localhost/seme_framework/blog</code> ?
+              The answer is, Seme Framework will load controller blog.php as long as the controller requirements is fulfilled.
+            </p>
+
+            <h2 id="SENE_Controller">SENE_Controller</h2>
+            <p>The SENE_Controller class is basic class for creating controller which contain properties and methods that are required for using Seme Framework properly.</p>
+
+            <h3>Basic Usage</h3>
+            <p>Here is some basic usage for creating controller</p>
+
+            <h4>Default Controller</h4>
+            <p>Here is the default source code of controller.</p>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  &#x3C;?php
+                  class Home extends SENE_Controller{
+                    public function __construct(){
+                      parent::__construct();
+                    }
+                    public function index(){
+                      echo &#x27;Thankyou for using Seme Framewrok&#x27;;
+                    }
+                  }
+                </highlight-code>
+              </div>
+            </div>
+
+            <h4>Notfound Controller</h4>
+            <p>Here is the default source code for notfound controller.</p>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  &#x3C;?php
+                  class Notfound extends SENE_Controller{
+                    public function __construct(){
+                      parent::__construct();
+                    }
+                    public function index(){
+                      header(&#x22;HTTP/1.0 404 Not Found&#x22;);
+                      echo &#x27;404 Notfound&#x27;;
+                    }
+                  }
+                </highlight-code>
+              </div>
+            </div>
+
+            <div class="message is-danger">
+              <div class="message-body">
+                <p><b>Caution</b></p>
+                <p>There is necessary to add header information on notfound class, because Seme Framework do not provided Error 404 automatically.</p>
+              </div>
+            </div>
+
+            <h2>Access Methods</h2>
+            <p>Seme Framework supported access method for public and private declaration.</p>
             <h3>Private Properties and Methods</h3>
             <p>Seme Framework allow your method in Private or in Protected mode. The Private or Protected mode cant be executed through URI request. Or you can use double underscore (__) means as Private properties or methods.</p>
-            <pre>
-              class Home extends SENE_Controller{
-                var $public_var = 'Yi-Ha!';
-                var $__underWear = 'My Private Things';
-                public function __construct(){
-                  parent::__construct();
-                }
-                private function __processFile(){
-                  return true;
-                }
-                public function index(){
-                  echo '404 Notfound';
-                }
-              }
-            </pre>
-            <h2>Loading the Model</h2>
-            <p>Model is a class contain about communication from framework to database. Model is a bridge for data that can be fetch or push to database from controller. You can load model in constructor if you want executed widely in certain controller. Or you can load inside method of a controller. </p>
 
-            <pre>
-              class Home extends SENE_Controller{
-                public function __construct(){
-                  parent::__construct();
-                  $this->load('users_model','alias_of_user_model'); #class scope model
-                }
-                private function __processFile(){
-                  return true;
-                }
-                public function index(){
-                  $this->load('address_model','alias_of_address_model'); #method scope model
-                  echo '404 Notfound';
-                }
-              }
-            </pre>
-            <h2>Loading the Theme</h2>
-            <p>Theme is collection of view file that meets requirement of Seme Framework. Please refer to this <a href="/view.html">section</a> if you want learn more.</p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  class Home extends SENE_Controller{
+                    var $public_var = &#x27;Yi-Ha!&#x27;;
+                    var $__underWear = &#x27;My Private Things&#x27;;
+                    public function __construct(){
+                      parent::__construct();
+                    }
+                    private function __processFile(){
+                      return true;
+                    }
+                    public function index(){
+                      echo &#x27;404 Notfound&#x27;;
+                    }
+                  }
+                </highlight-code>
+              </div>
+            </div>
+            <div class="message is-info">
+              <div class="message-body">
+                <p>The private method or private properties on Seme Framework are always prefixed with double underscore.</p>
+              </div>
+            </div>
+            <div class="message is-success">
+              <div class="message-body">
+                <p>The private method is inaccessible from URI request.</p>
+              </div>
+            </div>
 
-            <pre>
-              class Home extends SENE_Controller{
-                public function __construct(){
-                  parent::__construct();
-                  $this->setTheme('name_of_theme'); //located at app/view/name_of_theme
-                }
-              }
-            </pre>
-            <h3>Debug variable</h3>
-            <p>Seme framework has builtin debugging in controller and view scope. The purpose of debugger for debugging variable on controller or view.</p>
-
-            <pre>
-              class Home extends SENE_Controller{
-                public function __construct(){
-                  parent::__construct();
-                  $this->setTheme('front');
-                  $this->load('front/user_model','um');
-                }
-                public function index(){
-                  $data = array();
-
-                  $data['user'] = $this->um->getById($id);
-
-                  //debugging $data
-                  $this->debug($data);
-                  die();
-
-                  $this->putThemeContent('home/home',$data);
-
-                  $this->setLayout('col-1',$data);
-                  $this->render();
-                }
-              }
-            </pre>
           </div>
         </div>
 
@@ -129,7 +312,7 @@
 
 <script>
 export default {
-  layout: 'v3.2.1',
+  layout: 'v3.2',
   data (){
     return {
       name: 'Seme Framework v3.2.1',
@@ -142,8 +325,8 @@ export default {
           text: 'Seme Framework',
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2.1/',
-          text: '3.2.1',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2.1',
+          text: '3.2.x',
         }
       ]
     }
@@ -170,7 +353,8 @@ export default {
       ]
     }
   },
-  jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
     const items = this.breadcrumbs.map((item, index) => ({
       '@type': 'ListItem',
       position: index + 1,
@@ -196,9 +380,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2020-06-11T10:12:00+07:00",
-        "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-23T15:26:17+07:00",
+        "dateCreated": "2021-07-12T22:03:01+07:00",
+        "datePublished": "2021-07-12T22:03:02+07:00",
+        "dateModified": "2021-07-23T21:58:32+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

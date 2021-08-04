@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/3.2.1/">3.2.1</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.2.1">3.2.x</NuxtLink></li>
           <li class=""><NuxtLink to="/3.2.1/configuration">Configuration</NuxtLink></li>
           <li class="unavailable">config.php</li>
         </ul>
@@ -71,11 +71,11 @@ location / {
   </template>
 <script>
 export default {
-    layout: 'v3.2.1',
+    layout: 'v3.2',
     data() {
       return {
-        name: 'Seme Framework v3.2.1',
-        suffix: ' - Seme Framework v3.2.1 Documentation',
+        name: 'Seme Framework v3.2',
+        suffix: ' - Seme Framework v3.2 Documentation',
         title: 'Configuration: config.php',
         description: 'File config.php for Seme Framework version 3.x basic setting'
       }

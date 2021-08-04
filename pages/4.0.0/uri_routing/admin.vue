@@ -61,11 +61,11 @@ export default {
           text: 'Seme Framework',
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0',
           text: '4.0.2',
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/uri_routing/',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/uri_routing',
           text: 'URI Routing',
         }
       ]
