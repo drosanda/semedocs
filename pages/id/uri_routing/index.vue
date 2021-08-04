@@ -67,9 +67,9 @@
             </code>
             <p>URL dengan "produk" sebagai segmen pertama, dan apa pun di segmen kedua akan dipetakan ulang ke kelas "katalog" dan metode "pencarian_produk". </p>
             <code>
-              $routes['product/(:num)'] = "catalog/product_lookup_by_id/$1";
+              $routes[&#x27;product/(:num)&#x27;] = &#x22;catalog/product_lookup_by_id/$1&#x22;;
             </code>
-            <p>URL dengan "produk" sebagai segmen pertama, dan nomor di segmen kedua akan dipetakan ulang ke kelas "katalog" dan metode "product_lookup_by_id" meneruskan kecocokan sebagai variabel ke fungsi.</p>
+            <p>URL dengan &#x22;product&#x22; sebagai segmen pertama, dan nomor di segmen kedua akan dipetakan ulang ke kelas "katalog" dan metode "product_lookup_by_id" meneruskan kecocokan sebagai variabel ke fungsi.</p>
 
 
             <div class="message is-info">

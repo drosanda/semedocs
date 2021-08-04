@@ -130,7 +130,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework v4.0.0',
-      suffix: ' - Documentation',
+      suffix: ' - Seme Framework 4',
       title: 'Exec Method',
       description: 'Learn exec method from $db property on SENE_Model class for Seme Framework 4',
       breadcrumbs: [

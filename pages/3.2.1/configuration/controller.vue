@@ -12,41 +12,51 @@
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Config: controller.php</h1>
-            <p>In this configuration file you can change the default value of controller and then manipulate the url routing.</p>
-            <pre><code v-highlight class="php">&#x3C;?php
-$default_controller=&#x27;home&#x27;;
-$notfound_controller=&#x27;notfound&#x27;;
+            <h1 class="">Controller Configuration</h1>
+            <p>
+              On this configuration file you can change the default value of controller and then manipulate the url routing.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  &#x3C;?php
+                  $default_controller=&#x27;home&#x27;;
+                  $notfound_controller=&#x27;notfound&#x27;;
 
-//override default routing
-//make sure dont add any traing slash in array key of routes
+                  //override default routing
+                  //make sure dont add any traing slash in array key of routes
 
-//example $routes[&#x27;produk/(:any)&#x27;] = &#x27;produk/detail/index/$1&#x27;;
-//example $routes[&#x27;blog/id/(:num)/(:any)&#x27;] = &#x27;blog/detail/index/$1/$2&#x27;;
-$routes[&#x27;produk/(:any)&#x27;] = &#x27;produk/detail/index/$1&#x27;;
-$routes[&#x27;produk/detail/(:any)&#x27;] = &#x27;produk/detail/index/$1&#x27;;
-$routes[&#x27;checkout/berhasil/(:any)&#x27;] = &#x27;checkout/berhasil/index/$1&#x27;;
-$routes[&#x27;konfirmasi/(:any)&#x27;] = &#x27;konfirmasi/index/$1&#x27;;
+                  //example $routes[&#x27;produk/(:any)&#x27;] = &#x27;produk/detail/index/$1&#x27;;
+                  //example $routes[&#x27;blog/id/(:num)/(:any)&#x27;] = &#x27;blog/detail/index/$1/$2&#x27;;
+                  $routes[&#x27;produk/(:any)&#x27;] = &#x27;produk/detail/index/$1&#x27;;
+                  $routes[&#x27;produk/detail/(:any)&#x27;] = &#x27;produk/detail/index/$1&#x27;;
+                  $routes[&#x27;checkout/berhasil/(:any)&#x27;] = &#x27;checkout/berhasil/index/$1&#x27;;
+                  $routes[&#x27;konfirmasi/(:any)&#x27;] = &#x27;konfirmasi/index/$1&#x27;;
 
-//dukungan
-$routes[&#x27;dukungan/kebijakan-privasi&#x27;] = &#x27;dukungan/kebijakan_privasi&#x27;;
-$routes[&#x27;dukungan/syarat-ketentuan&#x27;] = &#x27;dukungan/syarat_ketentuan&#x27;;
-//$routes[&#x27;produk/(:any)/(:any)&#x27;] = &#x27;produk/detail/index/$1/$2&#x27;;</code></pre>
-
-  					<p>The sequences of routes variable determines priority for each route.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/3.2.1/configuration/config/" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Config: config.php
-            </b-button>
-            <b-button tag="router-link" to="/3.2.1/configuration/core/" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Config: core.php
-            </b-button>
+                  //dukungan
+                  $routes[&#x27;dukungan/kebijakan-privasi&#x27;] = &#x27;dukungan/kebijakan_privasi&#x27;;
+                  $routes[&#x27;dukungan/syarat-ketentuan&#x27;] = &#x27;dukungan/syarat_ketentuan&#x27;;
+                  //$routes[&#x27;produk/(:any)/(:any)&#x27;] = &#x27;produk/detail/index/$1/$2&#x27;;
+                </highlight-code>
+              </div>
+            </div>
+            <p>The sequences of routes variable determines priority for each route. Learn more about remapping <NuxtLink to="/3.2.1/uri-routing">URI Routing</NuxtLink>.</p>
           </div>
         </div>
       </div>
@@ -55,37 +65,108 @@ $routes[&#x27;dukungan/syarat-ketentuan&#x27;] = &#x27;dukungan/syarat_ketentuan
   </div>
 </template>
 <script>
-  export default {
-    layout: 'v3.2',
-    data() {
-      return {
-        name: 'Seme Framework v3.2',
-        suffix: ' - Seme Framework v3.2 Documentation',
-        title: 'Configuration: controller.php',
-        description: 'File controller.php for Seme Framework version 3.x basic controller setting'
-      }
-    },
-    head() {
-      return {
-        title: this.title+this.suffix,
-        meta: [
-          {
-            hid: 'description',
-            name: 'description',
-            content: this.description
-          },
-          {
-            hid: 'og:title',
-            name: 'og:title',
-            content: this.name+': '+this.title
-          },
-          {
-            hid: 'og:description',
-            name: 'og:description',
-            content: this.description
-          }
-        ]
-      }
+export default {
+  layout: 'v3.2',
+  data() {
+    return {
+      name: 'Seme Framework v3.2.1',
+      suffix: ' - Seme Framework 3.2.1',
+      title: 'Controller Configuration',
+      description: 'Learn more about controller configuration for Seme Framework version 3.2.1',
+      breadcrumbs: [
+        {
+          url: process.env.BASE_URL || 'http://localhost:3001',
+          text: 'Seme Framework'
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2.1',
+          text: '3.2.x'
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2.1/configuration',
+          text: 'Configuration'
+        }
+      ],
     }
+  },
+  head() {
+    return {
+      title: this.title+this.suffix,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.name+': '+this.title
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.description
+        }
+      ]
+    }
+  },
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+    const items = this.breadcrumbs.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@id': item.url,
+        name: item.text,
+      },
+    }));
+    return [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: items,
+      },
+      {
+        "@type": "NewsArticle",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+        },
+        "headline": (this.headline || this.title),
+        "image": [
+          (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
+        ],
+        "dateCreated": "2021-07-13T13:34:00+07:00",
+        "datePublished": "2021-07-13T13:34:00+07:00",
+        "dateModified": "2021-07-13T13:36:00+07:00",
+        "author": {
+          "@type": "Person",
+          "gender": "Male",
+          "name": "Daeng Rosanda, S.Kom",
+          "alternateName": "Daeng Rosanda",
+          "jobTitle": "Founder",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Cipta Esensi Merenah",
+            "email": "hi@cenah.co.id"
+          }
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Cipta Esensi Merenah",
+          "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+          "logo": {
+            "@type": "ImageObject",
+            "name": "logo Cipta Esensi Merenah",
+            "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+            "width": "256px",
+            "height": "62px"
+          }
+        },
+        "description": this.description
+      }
+    ];
   }
+}
 </script>
