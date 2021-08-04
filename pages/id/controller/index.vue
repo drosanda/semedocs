@@ -55,7 +55,7 @@
 
             <h3 id="rule_inherit">Turunan Kelas</h3>
             <p>
-              Controller harus menurunkan kelas dengan kode <code>extends</code> dari kelas <code>SENE_Controller</code>.
+              Controller harus menurunkan kelas dengan kode <code>extends</code> dari kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
               Begitupun juga ketika menggunakan fitur <NuxtLink to="/id/core/controller/" target="_blank">Core <i class="fa fa-window-restore"></i></NuxtLink>, kelas controller core harus menurunkan dengan cara yang sama.
             </p>
 
@@ -97,7 +97,7 @@
 
             <h3 id="rule_inherit">Metode Index</h3>
             <p>
-              Metode <code>index</code> wajib ada untuk setiap turunan dari kelas <code>SENE_Controller</code>.
+              Metode <code>index</code> wajib ada untuk setiap turunan dari kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
 
             <h3 id="rule_inherit"><em>Defaults</em></h3>

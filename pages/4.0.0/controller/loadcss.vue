@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0.0/">4.0.0 (English)</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/controller/">Controller</NuxtLink></li>
           <li class="unavailable">loadCss</li>
         </ul>
@@ -12,14 +12,14 @@
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">loadCss method</h1>
+            <h1 class="">loadCss Method</h1>
             <p>
-              Method for loading Css from controller.
+              The <code>loadCss</code> method purpose is for loading css file from a controller.
             </p>
 
             <h2>Basic Usage</h2>
             <p>
-              Here is the basic usage for loadCss method.
+              Here is the basic usage <code>loadCss</code> method from <NuxtLink to="/4.0.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> class.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -40,31 +40,32 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;loadCss(string $src[, string $utype]): controllerObject
+                  $this-&#x3E;loadCss(string $src[, string $utype]): $this
                 </highlight-code>
               </div>
             </div>
 
             <h3>Parameters</h3>
-            <p>loadCSS has 2 parameters, there are $src dan $utype.</p>
-
+            <p>loadCSS has 1 required parameter and 1 optional parameter.</p>
 
             <h4>$src</h4>
             <p>
-              Value for $src can be an relative url by using <code>base_url()</code> or using CDN url by using <code>cdn_url</code> method or a plain external URL.
+              The <code>$src</code> value can be an relative url by using <NuxtLink to="/4.0.0/globals/#base_url">base_url() <i class="fa fa-window-restore"></i></NuxtLink> function or using CDN url by using <NuxtLink to="/4.0.0/controller/cdn_url/">cdn_url() <i class="fa fa-window-restore"></i></NuxtLink> method or a plain external URL.
             </p>
 
             <h4>$utype</h4>
-            <p>The value of $utype can be <code>'before'</code> or <code>'after'</code> or <code>''</code> (empty string).</p>
-            <p>If value equal to <b>before</b>, its mean css will be loaded before <code>app/view/THEME_NAME/theme.json</code> list.</p>
-            <p>Or if value equal to <b>after</b>, its mean css will be loaded after <code>app/view/THEME_NAME/theme.json</code> list.</p>
+            <p>
+              The <code>$utype</code> value indicates the load position of css after load.
+              Here is the list of compatible values:
+              <ul>
+                <li><code>before</code>, its mean css will be loaded before <NuxtLink to="/4.0.0/view/theme_json/">theme.json <i class="fa fa-window-restore"></i></NuxtLink> list.</li>
+                <li><code>after</code>, its mean css will be loaded after <NuxtLink to="/4.0.0/view/theme_json/">theme.json <i class="fa fa-window-restore"></i></NuxtLink> list.</li>
+              </ul>
+            </p>
 
             <h2>Example Usage</h2>
-            <p>Here is the full example for loadCss method.</p>
-
-            <h3>Basic External CSS</h3>
             <p>
-              So, if want to used external css resource, simply use.
+              Here is the full example for <code>loadCss</code> method by using used external css resource.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -90,8 +91,7 @@
               </div>
             </div>
 
-
-            <h3>Relative CSS</h3>
+            <h3>Relative CSS File</h3>
             <p>
               If want to used relatives css resource, simply use.
             </p>
@@ -118,7 +118,6 @@
                 </highlight-code>
               </div>
             </div>
-
 
             <h3>Full Example</h3>
             <p>
@@ -169,11 +168,11 @@
             <div class="message is-warning">
               <div class="message-body">
                 <p><b>Caution</b></p>
-                <p>Please make sure this method has been loaded from header template:</p>
+                <p>Please make sure this method has been loaded from <NuxtLink to="/4.0.0/tutorial/introduction/#view_html_head">header html  <i class="fa fa-window-restore"></i></NuxtLink> template, with the following order:</p>
                 <ul>
-                  <li>&#x3C;?php $this-&#x3E;getAdditionalBefore()?&#x3E;</li>
-                  <li>&#x9;&#x3C;?php $this-&#x3E;getAdditional()?&#x3E;</li>
-                  <li>&#x9;&#x3C;?php $this-&#x3E;getAdditionalAfter()?&#x3E;</li>
+                  <li><NuxtLink to="/4.0.0/controller/getAdditionalBefore/">&#x3C;?php $this-&#x3E;getAdditionalBefore()?&#x3E; <i class="fa fa-window-restore"></i></NuxtLink></li>
+                  <li><NuxtLink to="/4.0.0/controller/getAdditional/">&#x9;&#x3C;?php $this-&#x3E;getAdditional()?&#x3E; <i class="fa fa-window-restore"></i></NuxtLink></li>
+                  <li><NuxtLink to="/4.0.0/controller/getAdditionalAfter/">&#x9;&#x3C;?php $this-&#x3E;getAdditionalAfter()?&#x3E; <i class="fa fa-window-restore"></i></NuxtLink></li>
                 </ul>
               </div>
             </div>
@@ -182,12 +181,12 @@
               <div class="nav-bottom-left">
                 <nuxt-link to="/4.0.0/controller/load/" class="btn">
                   <i class="fa fa-chevron-left"></i>
-                  load
+                  Load method
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
                 <nuxt-link to="/4.0.0/controller/loadlayout/" class="btn">
-                  loadLayout
+                  loadLayout method
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
@@ -207,8 +206,8 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
-      title: 'loadCss method',
-      description: 'Learn more about loadCss method on SENE_Controller class Seme Framework.',
+      title: 'loadCss Method',
+      description: 'Learn more about loadCss method from SENE_Controller class on Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -273,9 +272,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-13T19:21:00+07:00",
-        "datePublished": "2021-07-13T19:22:00+07:00",
-        "dateModified": "2021-07-13T19:32:00+07:00",
+        "dateCreated": "2021-08-04T13:24:00+07:00",
+        "datePublished": "2021-08-04T13:24:00+07:00",
+        "dateModified": "2021-08-04T13:24:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

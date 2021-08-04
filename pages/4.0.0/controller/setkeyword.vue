@@ -38,7 +38,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  setKeyword(string $keyword): controllerObject
+                  setKeyword(string $keyword): $this
                 </highlight-code>
               </div>
             </div>

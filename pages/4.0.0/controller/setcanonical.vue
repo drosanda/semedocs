@@ -38,7 +38,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  setCanonical(string $url): controllerObject
+                  setCanonical(string $url): $this
                 </highlight-code>
               </div>
             </div>

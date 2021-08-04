@@ -69,7 +69,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;putJsFooter(string $content_location[, array $data]): controllerObject
+                  $this-&#x3E;db-&#x3E;putJsFooter(string $content_location[, array $data]): $this
                 </highlight-code>
               </div>
             </div>

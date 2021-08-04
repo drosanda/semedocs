@@ -25,7 +25,7 @@
             </div>
 
             <h2>Bentuk umum</h2>
-            <p>Berikut ini adlaah bentuk umum dari metode <code>render</code> dari kelas <code>SENE_Controller</code>.</p>
+            <p>Berikut ini adlaah bentuk umum dari metode <code>render</code> dari kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">

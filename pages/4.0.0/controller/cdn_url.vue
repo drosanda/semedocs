@@ -19,7 +19,7 @@
 
             <h2>Basic Usage</h2>
             <p>
-              Here is the basic usage for cdn_url method.
+              Here is the basic usage for <code>cdn_url</code> method from <code>SENE_Controller</code> class.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -40,7 +40,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;cdn_url(string $location): controllerObject
+                  $this-&#x3E;cdn_url(string $location): $this
                 </highlight-code>
               </div>
             </div>
@@ -209,9 +209,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-21T19:41:00+07:00",
-        "datePublished": "2021-07-21T19:42:00+07:00",
-        "dateModified": "2021-07-21T20:44:00+07:00",
+        "dateCreated": "2021-08-04T15:12:34+07:00",
+        "datePublished": "2021-08-04T15:12:34+07:00",
+        "dateModified": "2021-08-04T15:12:34+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

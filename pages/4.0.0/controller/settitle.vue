@@ -38,7 +38,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  setTitle(string $page_title): controllerObject
+                  setTitle(string $page_title): $this
                 </highlight-code>
               </div>
             </div>

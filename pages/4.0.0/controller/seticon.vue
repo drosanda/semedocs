@@ -38,7 +38,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  setIcon(string $icon_location): controllerObject
+                  setIcon(string $icon_location): $this
                 </highlight-code>
               </div>
             </div>

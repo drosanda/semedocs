@@ -38,7 +38,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  resetThemeContent(): controllerObject
+                  resetThemeContent(): $this
                 </highlight-code>
               </div>
             </div>

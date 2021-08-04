@@ -266,10 +266,10 @@
               Contoh koding pewarisan di Seme Framework.
             </h4>
             <p>
-              Dalam Seme Framework ada kelas <code>SENE_Controller</code>, yang mana kelas ini sudah dibuat sedemikian rupa supaya dapat digunakan kembali.
+              Dalam Seme Framework ada kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>, yang mana kelas ini sudah dibuat sedemikian rupa supaya dapat digunakan kembali.
             </p>
             <p>
-              Berikut ini adalah contoh kelas <code>SENE_Controller</code> yang sudah ada didalam Seme Framework dan akan dijadikan orang tua (<em>parent class</em>) oleh kelas <code>Home</code>.
+              Berikut ini adalah contoh kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> yang sudah ada didalam Seme Framework dan akan dijadikan orang tua (<em>parent class</em>) oleh kelas <code>Home</code>.
               Silahkan pahami potongan sebagian kodenya.
             </p>
             <div class="macwindow">
@@ -312,7 +312,7 @@
             </div>
 
             <p>
-              Kemudian kelas <code>SENE_Controller</code> ini akan diturunkan menjadi kelas <code>Home</code> untuk menampilkan halaman utama menggunakan Seme Framework.
+              Kemudian kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> ini akan diturunkan menjadi kelas <code>Home</code> untuk menampilkan halaman utama menggunakan Seme Framework.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -354,8 +354,8 @@
               Dimana kode <code>$this</code> akan bergantung terhadap posisi penulisan kode ini berada.
             </p>
             <p>
-              Dalam penjelasan saat ini kita akan fokus terhadap kelas <code>Home</code> dan kelas <code>SENE_Controller</code> yang mana sudah dijelaskan dalam potongan kode diatas.
-              Konteks <code>$this</code> dalam contoh kode diatas akan mengacu pada <b>method</b> atau <b>properti</b> baik dalam kelas <code>Home</code> maupun kelas <code>SENE_Controller</code>.
+              Dalam penjelasan saat ini kita akan fokus terhadap kelas <code>Home</code> dan kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> yang mana sudah dijelaskan dalam potongan kode diatas.
+              Konteks <code>$this</code> dalam contoh kode diatas akan mengacu pada <b>method</b> atau <b>properti</b> baik dalam kelas <code>Home</code> maupun kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
             <p>
               Setiap perintah <code>$this</code> isinya akan berbeda-beda tergantung kelas utama dan kelas yang di <code>extends</code>-nya.
@@ -402,7 +402,7 @@
               </div>
             </div>
             <p>
-              Dalam contoh konteks ini, kode <code>$this-&#x3E;load</code> mengacu pada metode yang ada pada <code>SENE_Controller</code>.
+              Dalam contoh konteks ini, kode <code>$this-&#x3E;load</code> mengacu pada metode yang ada pada <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
 
             <h4>Contoh koding <code>$this</code> dalam konteks Model</h4>

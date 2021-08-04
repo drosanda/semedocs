@@ -14,9 +14,8 @@
           <div class="content">
             <h1 class="">Load Method</h1>
             <p>
-              The <code>load</code> method purpose for loading a <NuxtLink to="/4.0.0/model/">model class<i class="fa fa-window-restore"></i></NuxtLink> into a controller.
-              The model will be instantiate as part of properties on SENE_Controller.
-              Without an alias, the instantiate model object will be same as filename without extension php.
+              The <code>load</code> method purpose purpose is for loading a <NuxtLink to="/4.0.0/model/">Model Class<i class="fa fa-window-restore"></i></NuxtLink> by generating (<em>instantiating</em>) a new property inside current controller class.
+              The new property name will be same as model filename without <code>.php</code> extension in <b>lowercase</b>.
             </p>
 
             <h3>Basic Usage</h3>
@@ -42,17 +41,32 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;load(string $filename_location[, string $alias]): void
+                  $this-&#x3E;load(string $model_filename [, string $alias]): void
                 </highlight-code>
               </div>
             </div>
+
             <h3>Parameters</h3>
-            <p>Load method has 2 parameter, there is the <code>model filename</code> and <code>model alias</code>.</p>
-            <h4>$filename_location</h4>
-            <p>The method load location always relatives to <code>app/model</code> directory.</p>
-            <p>So, if we have a model class under <code>app/model/api/hello_model.php</code></p>
-            <p>We have to fill the first parameter with <code>api/hello_model</code>.</p>
-            <p>Here is the example:</p>
+            <p>
+              This method has 1 required parameter and 1 optional parameter.
+            </p>
+            <h4>$model_filename</h4>
+            <p>
+              The <code>$model_filename</code> value can be contain a string of model filename.
+              File location always relatives to <code>app/model</code> directory.
+              So, if we have a model class under <code>app/model/api/hello_model.php</code>
+              We have to fill the first parameter with extra suffix path, like <code>api/hello_model</code>.
+            </p>
+
+            <h4>$alias</h4>
+            <p>
+              The <code>$alias</code> value can be contain a string that override the name of property that instantiated by this method.
+            </p>
+
+            <h2>Example</h2>
+            <p>
+              On this example, will show the implementation of <code>load</code> method without an alias.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -72,12 +86,72 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;load('api/hello_model');
+                  &#x3C;?php
+                  class Blog extends SENE_Controller {
+                    public function __construct(){
+                      parent::__construct();
+                      $this-&#x3E;load(&#x27;hello_model&#x27;);
+                    }
+                    public function index(){
+                      //executing the hello_model object
+                      print_r($this-&#x3E;hello_model-&#x3E;get());
+                      die();
+                    }
+                  }
                 </highlight-code>
               </div>
             </div>
-            <p>With this example the hello_model will be part of SENE_Controller class as <code>hello_model</code> object</p>
-            <p>Here is the full example:</p>
+
+            <h3>With Alias</h3>
+            <p>
+              On this example, will show the implementation of <code>load</code> method with an alias.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  &#x3C;?php
+                  class Blog extends SENE_Controller {
+                    public function __construct(){
+                      parent::__construct();
+                      $this-&#x3E;load(&#x27;api/hello_model&#x27;,&#x27;hm&#x27;);
+                    }
+                    public function index(){
+                      //executing the hello_model object
+                      print_r($this-&#x3E;hm-&#x3E;get());
+                      die();
+                    }
+                  }
+                </highlight-code>
+              </div>
+            </div>
+            <div class="message is-success">
+              <div class="message-body">
+                <p><b>Tips</b></p>
+                <p>If you confused how to fill the alias name, you can get from first letter of each class name.</p>
+                <p>example, <code>app/model/api/hello_detail_model2.php</code> and then the alias will be <code>hdm2</code>.</p>
+              </div>
+            </div>
+
+            <h3>Inside a Directory</h3>
+            <p>
+              On this example, will show the implementation of <code>load</code> method loading a model inside a directory and without an alias.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -112,8 +186,10 @@
                 </highlight-code>
               </div>
             </div>
-            <div class="message is-info">
+
+            <div class="message is-warning">
               <div class="message-body">
+                <p><b>Caution</b></p>
                 <p>While loading the model from sub directory, the path prefix will not instantiate as object model name.</p>
                 <p>So, be careful for choosing the naming class model or alias.</p>
                 <p>If necessary, you can duplicate a model class to avoid conflict with extra suffix with number.</p>
@@ -121,76 +197,7 @@
               </div>
             </div>
 
-            <h3>$alias</h3>
-            <p>The alias purpose is for shorting the name of model that we create into SENE_Controller.</p>
-            <p>Alias can contain any alphanumeric and underscore.</p>
-            <p>Here is the example:</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  $this-&#x3E;load('api/hello_model','h');
-                </highlight-code>
-              </div>
-            </div>
-            <p>With this example the hello_model will be part of SENE_Controller class as <code>h</code> object</p>
-            <p>Here is the full example:</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  &#x3C;?php
-                  class Blog extends SENE_Controller {
-                    public function __construct(){
-                      parent::__construct();
-                      $this-&#x3E;load(&#x27;api/hello_model&#x27;,&#x27;h&#x27;);
-                    }
-                    public function index(){
-                      //executing the hello_model object
-                      print_r($this-&#x3E;h-&#x3E;get());
-                      die();
-                    }
-                  }
-                </highlight-code>
-              </div>
-            </div>
-            <div class="message is-success">
-              <div class="message-body">
-                <p><b>Tips</b></p>
-                <p>If you confused how to fill the alias name, you can get from first letter of each class name.</p>
-                <p>example, <code>app/model/api/hello_detail_model2.php</code> and then the alias will be <code>hdm2</code>.</p>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
@@ -204,8 +211,8 @@
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/4.0.0/controller/loadCss/" class="btn">
-            loadCSS Method
+          <nuxt-link to="/4.0.0/controller/loadcss/" class="btn">
+            loadCss Method
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
@@ -221,8 +228,8 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
-      title: 'SENE_Controller::load method',
-      description: 'Learn more about load Method from SENE_Controller on Seme Framework version 4.0.0',
+      title: 'Load Method',
+      description: 'Learn more about load method from SENE_Controller class for Seme Framework 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -261,7 +268,8 @@ export default {
       ]
     }
   },
-  jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
   const items = this.breadcrumbs.map((item, index) => ({
     '@type': 'ListItem',
     position: index + 1,
@@ -287,9 +295,9 @@ export default {
       "image": [
         (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
       ],
-      "dateCreated": "2021-07-12T22:06:21+07:00",
-      "datePublished": "2021-07-12T22:06:22+07:00",
-      "dateModified": "2021-07-12T22:06:30+07:00",
+      "dateCreated": "2021-08-04T16:02:34+07:00",
+      "datePublished": "2021-08-04T16:02:34+07:00",
+      "dateModified": "2021-08-04T16:02:34+07:00",
       "author": {
         "@type": "Person",
         "gender": "Male",

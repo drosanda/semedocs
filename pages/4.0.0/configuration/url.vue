@@ -160,7 +160,7 @@
             <div class="message is-info">
               <div class="message-body">
                 <p><b>Accessing the CDN URL (<code>$cdn_url</code>) value</b></p>
-                <p>The <NuxtLink to="/4.0.0/globals/functions/">$this->cdn_url()</NuxtLink> method form <code>SENE_Controller</code> class is for returning value of <code>$cdn_url</code> value.</p>
+                <p>The <NuxtLink to="/4.0.0/globals/functions/">$this->cdn_url()</NuxtLink> method form <NuxtLink to="/4.0.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> class is for returning value of <code>$cdn_url</code> value.</p>
               </div>
             </div>
 

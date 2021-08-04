@@ -13,9 +13,9 @@
         <div class="column">
           <div class="content">
             <h1 class="">loadLayout Method</h1>
-            <p>This method will be loaded a layout from a theme and has buffered view ability.</p>
-            <p>The <code>$layout</code> value will be reffered to a file name under <code>app/view/THEME/page/</code>.</p>
-
+            <p>
+              This <code>loadLayout</code> method will be loaded a layout file or view component that file relatives in current theme into view buffer.
+            </p>
 
             <h2>Basic Usage</h2>
             <p>Here is the basic usage of <code>loadLayout</code> method.</p>
@@ -38,14 +38,14 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  loadLayout(string $layout): controllerObject
+                  $this-&#x3E;loadLayout(string $layout [, array $data = array()]): $this
                 </highlight-code>
               </div>
             </div>
 
             <h3>Parameters</h3>
             <p>
-              loadLayout has 1 required parameter there is <b>$layout</b> name.
+              This method has 1 required parameter and 1 optional parameter.
             </p>
 
             <h4>$layout</h4>
@@ -74,11 +74,11 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  - app
-                  |- view
-                  |-- THEME_NAME
-                  |--- page
-                  |---- [LAYOUT_FILENAME].php
+                  app/
+                  └── view/
+                    └── THEME_NAME/
+                      └── page/
+                        └── [LAYOUT_FILENAME].php
                 </highlight-code>
               </div>
             </div>
@@ -143,20 +143,37 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  - app
-                  |- view
-                  |-- front
-                  |--- page
-                  |---- col-1.php
+                  app/
+                  └── view/
+                    └── front/
+                      └── page/
+                        └── col-1.php
                 </highlight-code>
               </div>
             </div>
 
-
             <div class="message is-info">
               <div class="message-body">
+                <p><b>Info</b></p>
                 <p>
                   The <code>putThemeContent</code>, <code>putJsContent</code>, and <code>render</code> method(s) has ability for buffered the html view.
+                </p>
+              </div>
+            </div>
+
+            <div class="message is-success">
+              <div class="message-body">
+                <p><b>Layout Naming Tips</b></p>
+                <p>
+                  If you confused how to decided the name of a layout, here is the tips with its filename:
+                  <ul>
+                    <li><b>col-1.php</b> is for a page with one column.</li>
+                    <li><b>col-2-left.php</b> is for a page splitted by two column, and the menu are on left.</li>
+                    <li><b>col-2-right.php</b> is for a page splitted by two column, and the menu are on right.</li>
+                    <li><b>col-3.php</b> is for a page splitted by three column.</li>
+                    <li><b>login.php</b> the special layout for login.</li>
+                    <li><b>homepage.php</b> the special layout for homepage.</li>
+                  </ul>
                 </p>
               </div>
             </div>

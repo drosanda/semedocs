@@ -38,7 +38,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  getThemeElement(string $view_location [,array $__forward=array() [, int $cacheable=0]]): controllerObject
+                  getThemeElement(string $view_location [,array $__forward=array() [, int $cacheable=0]]): $this
                 </highlight-code>
               </div>
             </div>

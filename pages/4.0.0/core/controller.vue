@@ -14,7 +14,7 @@
           <div class="content">
             <h1 class="">Core Controller</h1>
             <p>
-              Core Controller class is the feature of Seme Framework that allowed <code>SENE_Controller</code> to be extended or customized like add some methods or some properties.
+              Core Controller class is the feature of Seme Framework that allowed <NuxtLink to="/4.0.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> to be extended or customized like add some methods or some properties.
             </p>
 
             <h2>When do I use this?</h2>
@@ -71,7 +71,7 @@
             <h3>The <code>JI_Controller.php</code> file</h3>
             <p>
               On this example, we will add <code>__json_out</code> method to <code>JI_Controller</code> class.
-              Do not forget to add <code>__construct</code> method and <code>index</code> method, because they are required from <code>SENE_Controller</code> abstract class.
+              Do not forget to add <code>__construct</code> method and <code>index</code> method, because they are required from <NuxtLink to="/4.0.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> abstract class.
               Save the file under <code>app/core/ji_controller.php</code>.
             </p>
             <div class="macwindow">
@@ -133,7 +133,7 @@
 
             <h3>How to use</h3>
             <p>
-              While creating controller class, extends the controller class from <code>JI_Controller</code> class, not with <code>SENE_Controller</code> class.
+              While creating controller class, extends the controller class from <code>JI_Controller</code> class, not with <NuxtLink to="/4.0.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> class.
             </p>
             <div class="macwindow">
               <div class="titlebar">

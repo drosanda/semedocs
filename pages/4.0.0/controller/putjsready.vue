@@ -38,7 +38,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  putJsReady(string $content_location[, array $data]): controllerObject
+                  putJsReady(string $content_location[, array $data]): $this
                 </highlight-code>
               </div>
             </div>

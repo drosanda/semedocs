@@ -36,7 +36,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  setTheme(string $theme_name): controllerObject
+                  setTheme(string $theme_name): $this
                 </highlight-code>
               </div>
             </div>

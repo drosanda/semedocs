@@ -17,7 +17,7 @@
       <div class="content">
         <h1 class="">Controller Class</h1>
         <p>
-          Controller is a class that inherited from <code>SENE_Controller</code> and <NuxtLink to="/4.0.0/core/controller/">its derivatives*</NuxtLink>.
+          Controller is a class that inherited from <NuxtLink to="/4.0.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> and <NuxtLink to="/4.0.0/core/controller/">its derivatives*</NuxtLink>.
           Also, controller has another requirements before it can used by Seme Framework.
         </p>
         <p>Before going further, we have to find out the condition for Seme Framework to meet its controller requirements.</p>
@@ -32,8 +32,8 @@
 
         <h3>Class Inheritance</h3>
         <p>
-          The controller class must be <code>extends</code> from <code>SENE_Controller</code>.
-          But, If using <code>* core controller</code>  as parent class, the core controller class must be <code>extends</code> from <code>SENE_Controller</code>.
+          The controller class must be <code>extends</code> from <NuxtLink to="/4.0.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
+          But, If using <code>* core controller</code>  as parent class, the core controller class must be <code>extends</code> from <NuxtLink to="/4.0.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
         </p>
 
         <h3>Naming Rules</h3>

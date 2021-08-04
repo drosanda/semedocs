@@ -75,7 +75,7 @@
         <h3>The <code>JI_Controller.php</code> file</h3>
         <p>
           On this example, we will add <code>__json_out</code> method to <code>JI_Controller</code> class.
-          Do not forget to add <code>__construct</code> method and <code>index</code> method, because they are required from <code>SENE_Controller</code> abstract class.
+          Do not forget to add <code>__construct</code> method and <code>index</code> method, because they are required from <NuxtLink to="/4.0.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> abstract class.
         </p>
         <div class="macwindow">
           <div class="titlebar">

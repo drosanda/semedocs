@@ -38,7 +38,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  setContentLanguage(string $language_codename): controllerObject
+                  setContentLanguage(string $language_codename): $this
                 </highlight-code>
               </div>
             </div>

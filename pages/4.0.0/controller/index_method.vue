@@ -6,17 +6,53 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/controller/">Controller</NuxtLink></li>
-          <li class="unavailable">index</li>
+          <li class="unavailable">Index</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">index Method</h1>
+            <h1 class="">Index Method</h1>
             <p>
-              The index method is an <code>abstract method</code> that required on each <code>SENE_Controller</code> and its derivatives.
+              The index method is an <code>abstract method</code> that <b>required</b> on each extended class from <NuxtLink to="/4.0.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> and its derivatives.
               The index method are accessible from URL Request and then it will be a fallback method for empty URL request.
             </p>
+
+            <h2>Basic Usage</h2>
+            <p>
+              Here is the basic usage <code>index</code> method from <NuxtLink to="/4.0.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> class.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  &#x3C;?php
+                  class Name_Class_Guys extends SENE_Controller {
+                    public function __construct(){
+                      parent::__construct();
+                    }
+                    public function index(){
+                      ...
+                    }
+                  }
+                </highlight-code>
+              </div>
+            </div>
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
@@ -47,7 +83,7 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
-      title: 'index method',
+      title: 'Index method',
       description: 'Learn more about index method from SENE_Controller class on Seme Framework 4.',
       breadcrumbs: [
         {

@@ -14,7 +14,7 @@
           <div class="content">
             <h1 class="">Config Property</h1>
             <p>
-              The config is a property from <code>SENE_Controller</code> class contain about configuration values from </NuxtLink to="/4.0.0/configuration/">Seme Framework Configuration</NuxtLink>.
+              The config is a property from <NuxtLink to="/4.0.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> class contain about configuration values from </NuxtLink to="/4.0.0/configuration/">Seme Framework Configuration</NuxtLink>.
             </p>
 
             <h2>Basic Usage</h2>

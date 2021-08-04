@@ -19,7 +19,7 @@
 
             <h2>Bentuk Umum</h2>
             <p>
-              Berikut ini adalah bentuk umum metode <code>load</code> dari kelas <code>SENE_Controller</code>.
+              Berikut ini adalah bentuk umum metode <code>load</code> dari kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
 
             <h3>Parameter</h3>

@@ -263,7 +263,7 @@
                 </div>
               </div>
 
-              <h5>Separated HTML head</h5>
+              <h5 id="view_html_head">Separated HTML head</h5>
               <p>
                 Seme Framework support separated layout element for maximizing reusable components.
                 To do so open files located at <code>app/view/front/page/html/head.php</code>.

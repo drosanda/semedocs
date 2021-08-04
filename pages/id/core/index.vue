@@ -105,7 +105,7 @@
             <h3>File <code>JI_Controller.php</code></h3>
             <p>
               Pada contoh ini, kita akan menambahkan metode baru buatan sendiri yaitu metode <code>__json_out</code> kedalam kelas <code>JI_Controller</code>.
-              Kemudian, jangan lupa juga untuk menambahkan metode <code>__construct</code> dan method <code>index</code>, karena diperlukan dari abstract class <code>SENE_Controller</code>.
+              Kemudian, jangan lupa juga untuk menambahkan metode <code>__construct</code> dan method <code>index</code>, karena diperlukan dari abstract class <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
             <div class="macwindow">
               <div class="titlebar">

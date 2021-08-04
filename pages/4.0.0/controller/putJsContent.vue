@@ -40,7 +40,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->putJsContent(string $content_location[, array $data=array()]): controllerObject
+                  $this->putJsContent(string $content_location[, array $data=array()]): $this
                 </highlight-code>
               </div>
             </div>

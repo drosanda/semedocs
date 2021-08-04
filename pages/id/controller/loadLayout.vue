@@ -177,6 +177,23 @@
               </div>
             </div>
 
+            <div class="message is-success">
+              <div class="message-body">
+                <p><b>Penamaan file layout</b></p>
+                <p>
+                  Jika sulit menentukan penamaan file layout, berikut ini adalah contoh nama file dan tipsnya:
+                  <ul>
+                    <li><b>col-1.php</b> satu halaman penuh, tidak ada menu samping.</li>
+                    <li><b>col-2-left.php</b> halaman dibagi 2 bagian kolom, menu samping ada di sebelah kiri.</li>
+                    <li><b>col-2-right.php</b> halaman dibagi 2 bagian kolom, menu samping ada di sebelah kanan.</li>
+                    <li><b>col-3.php</b> halaman dibagi tiga bagian kolom.</li>
+                    <li><b>login.php</b> layout khusus untuk login.</li>
+                    <li><b>homepage.php</b> layout khusus untuk homepage / halaman utama.</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+
             <div class="nav-bottom">
               <div class="nav-bottom-left">
                 <nuxt-link to="/id/controller/loadcss/" class="btn">
@@ -276,9 +293,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-23T08:15:00+07:00",
-        "datePublished": "2021-07-23T09:16:00+07:00",
-        "dateModified": "2021-07-23T09:17:00+07:00",
+        "dateCreated": "2021-08-04T16:39:16+07:00",
+        "datePublished": "2021-08-04T16:39:16+07:00",
+        "dateModified": "2021-08-04T16:39:16+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

@@ -13,9 +13,10 @@
         <div class="column">
           <div class="content">
             <h1 class="">Lib method</h1>
-            <p>Lib method from class SENE_Controller is for loading a library class into controller.</p>
-            <p>The library will be instantiate as part of properties on SENE_Controller.</p>
-            <p>Without an alias, the instantiate library object will be same as filename without extension php.</p>
+            <p>
+              The <code>lib</code> method purpose is for loading a library class into a controller by generating (<em>instantiating</em>) a new property inside current controller class.
+              The new property name will be same as library filename without <code>.php</code> extension in lowercase.
+            </p>
 
             <div class="message is-warning">
               <div class="message-body">
@@ -24,37 +25,10 @@
               </div>
             </div>
 
-            <h2>Parameters</h2>
-            <p>Load method has 3 parameter, there is the <code>library filename</code>, <code>library alias</code> and <code>embeeding type</code>.</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  $this-&#x3E;lib(string $filename_location[, string $alias[, string $embeeding_type=&#x22;lib&#x22;]])
-                </highlight-code>
-              </div>
-            </div>
-
-            <h3>$filename_location</h3>
-            <p>The method lib location always relatives to <code>kero/lib</code> directory.</p>
-            <p>So, if we have a library class under <code>kero/lib/seme_email.php</code></p>
-            <p>We have to fill the first parameter with <code>seme_email</code> without php extension.</p>
-            <p>Here is the example:</p>
+            <h2>Basic Usage</h2>
+            <p>
+              Here is the basic usage for <code>cdn_url</code> method from <code>SENE_Controller</code> class.
+            </p>
 
             <div class="macwindow">
               <div class="titlebar">
@@ -75,12 +49,41 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;load('seme_email');
+                  $this-&#x3E;lib(string $lib_filename[, string $alias[, string $load_type=&#x22;lib&#x22;]])
                 </highlight-code>
               </div>
             </div>
-            <p>With this example the seme_email library will be part of SENE_Controller class as <code>seme_email</code> object</p>
-            <p>Here is the full example:</p>
+
+            <h3>Parameters</h3>
+            <p>This method has 1 required parameter and 2 optional parameter.</p>
+            <h4>$lib_filename</h4>
+            <p>
+              The <code>$lib_filename</code> value can be contain a string of library filename.
+              File location of library always relatives to <code>kero/lib</code> directory.
+              So, if we have a library class under <code>kero/lib/seme_email.php</code>
+              we have to fill the first parameter with <code>seme_email</code> without <b>.php</b> extension.
+            </p>
+
+            <h4>$alias</h4>
+            <p>
+              The <code>$alias</code> value can be contain a string that override the name of property that instantiated by this method.
+            </p>
+
+            <h4>$load_type</h4>
+            <p>
+              The <code>$load_type</code> determine load mechanism of this method.
+              Here is the list of compatible values:
+              <ul>
+                <li>The <code>lib</code> value for loading the library and then automatically instantiate a property.</li>
+                <li>The <code>inc</code> value is for only load the library.</li>
+              </ul>
+              If <code>$load_type</code> value is not equal to <code>lib</code>, the <code>alias</code> parameter value will ignored.
+            </p>
+
+            <h2>Example</h2>
+            <p>
+              On this example, will show the implementation of <code>lib</code> method without an alias.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -115,45 +118,11 @@
                 </highlight-code>
               </div>
             </div>
-            <div class="message is-info">
-              <div class="message-body">
-                <p>While loading the library from sub directory, the path prefix will not instantiate as object model name.</p>
-                <p>So, be careful for choosing the naming class library or alias.</p>
-                <p>If necessary, you can duplicate a library class to avoid conflict with extra suffix with number.</p>
-                <p>example, <code>kero/lib/seme_email2.php</code> and then the class name <code>Seme_Email2</code>.</p>
-              </div>
-            </div>
 
-            <h3>$alias</h3>
-            <p>The alias purpose is for shorting the name of model that we create into SENE_Controller.</p>
-            <p>Alias can contain any alphanumeric and underscore.</p>
-            <p>Here is the example:</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  $this-&#x3E;lib('seme_email','eml');
-                </highlight-code>
-              </div>
-            </div>
-
-            <p>With this example the seme_email will be part of SENE_Controller class as <code>eml</code> object</p>
-            <p>Here is the full example:</p>
+            <h3>Using Alias</h3>
+            <p>
+              On this example will show the implementation of <code>lib</code> method with an alias.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -188,6 +157,7 @@
                 </highlight-code>
               </div>
             </div>
+
             <div class="message is-success">
               <div class="message-body">
                 <p><b>Tips</b></p>
@@ -196,36 +166,11 @@
               </div>
             </div>
 
-            <h3>$embeeding_type</h3>
-            <p>The embeeding_type purpose is for enable autoinstantiate object or not.</p>
-            <p>If value equal to <code>lib</code>, the library will be instantiated with same name as library filename.</p>
-            <p>Otherwise, the library will be included only wihtout instantiated.</p>
-            <p>Here is the example:</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  $this-&#x3E;lib('seme_email','eml','inc');
-                </highlight-code>
-              </div>
-            </div>
-            <p>With this example the seme_email will be part of SENE_Controller class as <code>eml</code> object</p>
-            <p>Here is the full example:</p>
+            <h3>Only Load</h3>
+            <p>
+              On this example will show the implementation of <code>lib</code> method load only mode (<code>inc</code>).
+              The library <code>SEME_Email</code> have to instantiated <em>manually</em>.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -253,7 +198,7 @@
                     }
                     public function index(){
                       //executing the hello_model object
-                      $eml = new Seme_Emal();
+                      $eml = new Seme_Email();
                       $eml-&#x3E;from(&#x27;daeng@example.com&#x27;);
                       ....
                     }
@@ -261,11 +206,17 @@
                 </highlight-code>
               </div>
             </div>
+
             <div class="message is-info">
               <div class="message-body">
-                <p>If <code>$embeeding_type</code> value is not equal to <code>lib</code>, the second parameter will ignored.</p>
+                <p><b>Info</b></p>
+                <p>While loading the library from sub directory, the path prefix will not instantiate as object model name.</p>
+                <p>So, be careful for choosing the naming class library or alias.</p>
+                <p>If necessary, you can duplicate a library class to avoid conflict with extra suffix with number.</p>
+                <p>example, <code>kero/lib/seme_email2.php</code> and then the class name <code>Seme_Email2</code>.</p>
               </div>
             </div>
+
           </div>
         </div>
       </div>
@@ -296,8 +247,8 @@
       return {
         name: 'Seme Framework v4.0.0',
         suffix: ' - Seme Framework 4',
-        title: 'Lib Method from SENE_Controller',
-        description: 'Learn more about lib Method from SENE_Controller on Seme Framework version 4.0.0',
+        title: 'Lib Method',
+        description: 'Learn more about lib method from SENE_Controller class for Seme Framework 4.',
         breadcrumbs: [
           {
             url: process.env.BASE_URL || 'http://localhost:3001',
@@ -362,9 +313,9 @@
           "image": [
             (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
           ],
-          "dateCreated": "2021-07-12T22:04:21+07:00",
-          "datePublished": "2021-07-12T22:04:22+07:00",
-          "dateModified": "2021-07-12T22:04:30+07:00",
+          "dateCreated": "2021-08-04T16:00:30+07:00",
+          "datePublished": "2021-08-04T16:00:30+07:00",
+          "dateModified": "2021-08-04T16:00:30+07:00",
           "author": {
             "@type": "Person",
             "gender": "Male",

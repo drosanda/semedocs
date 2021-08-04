@@ -18,7 +18,7 @@
             </p>
 
             <h2>Bentuk Umum</h2>
-            <p>Berikut ini adalah bentuk umum metode <code>getTitle</code> dari kelas <code>SENE_Controller</code></p>
+            <p>Berikut ini adalah bentuk umum metode <code>getTitle</code> dari kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink></p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">

@@ -14,7 +14,7 @@
             <h1 class="">Global Variables and Functions</h1>
             <p>Like the other framework, Seme Framework has several global Variables and Functions that you can use for your web app.</p>
 
-            <h2>base_url()</h2>
+            <h2 id="base_url">base_url()</h2>
             <p>This global function return full path url. Please make sure your <code>$base_url</code> are set properly for each <NuxtLink to="/4.0.0/configuration/">configurations</NuxtLink>.</p>
 
             <h2>base_url_admin()</h2>

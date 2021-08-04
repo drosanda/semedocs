@@ -38,7 +38,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  setAuthor(string $author_name): controllerObject
+                  setAuthor(string $author_name): $this
                 </highlight-code>
               </div>
             </div>
