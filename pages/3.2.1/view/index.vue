@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/3.2.1">3.2.x</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.2.1/">3.2.x</NuxtLink></li>
           <li class="unavailable">View</li>
         </ul>
       </nav>
@@ -216,7 +216,7 @@
                   -----footer.php
                   -----sidemenu.php
                   skin/
-                  -front
+                  -front/
                   --css
                   --js
                   --img
@@ -333,14 +333,14 @@
       </div>
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/3.2.1/model/where/" class="btn">
+          <nuxt-link to="/3.2.1/mode/where/" class="btn">
             <i class="fa fa-chevron-left"></i>
-            Model: Where
+            Model where
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/3.2.1/controller/" class="btn">
-            Controller
+          <nuxt-link to="/3.2.1/view/base_url/" class="btn">
+            base_url
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
@@ -354,18 +354,18 @@ export default {
   layout: 'v3.2',
   data() {
     return {
-      name: 'Seme Framework v3.2',
-      suffix: ' - Seme Framework 4',
+      name: 'Seme Framework v3.2.3',
+      suffix: ' - Seme Framework 3.2.3',
       title: 'View',
-      description: 'Learn more about using View concept from Seme Framework version 3.2.1',
+      description: 'Learn more about using View concept from Seme Framework version 4.0.0',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
           text: 'Seme Framework',
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2.1/',
-          text: '3.2.1',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2.1',
+          text: '3.2.x',
         }
       ]
     }
@@ -421,7 +421,7 @@ export default {
         ],
         "dateCreated": "2020-06-11T10:12:00+07:00",
         "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-25T22:01:17+07:00",
+        "dateModified": "2021-07-18T12:57:17+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

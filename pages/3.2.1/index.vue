@@ -11,7 +11,7 @@
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1>Seme Framework version 3.2.1</h1>
+            <h1>Seme Framework version 3.2.3</h1>
             <p>This is official documentation for Seme Framework, the PHP MVC Framework for creating small and medium app that needed for fast delivery. At first version of Seme Framework used for building API (Middle Ware) for another Application such as android, iOS, etc. And now as increasing of requirement, Seme Framework has expand the limit for creating Small and Medium App.</p>
             <h2>Key Feature</h2>
             <p>This framework suitable for Programmer that only know about <code>Manual</code> way of code. Not like this time, everything build up automatically through console. Seme Framework has taken different way of code, <i>If you want build small app, why we need lots of library</i>. Here is the key feature of Seme Framework:</p>
@@ -61,10 +61,10 @@
     layout: 'v3.2',
     data (){
       return {
-        name: 'Seme Framework v3.2.x',
+        name: 'Seme Framework v3.2.3',
         suffix: '',
-        title: 'Seme Framework version 3.2.1 Documentation',
-        description: 'Learn more about Seme Framework version 3.2.x through this documentation.',
+        title: 'Seme Framework version 3.2.3 Documentation',
+        description: 'Learn more about Seme Framework version 3.2.3 through this documentation.',
         breadcrumbs: [
           {
             url: process.env.BASE_URL || 'http://localhost:3001',

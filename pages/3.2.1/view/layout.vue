@@ -1,44 +1,75 @@
 <template>
   <div class="section">
-    <div class="row container">
+    <div class="container">
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/3.2.1">3.2.x</NuxtLink></li>
-          <li class=""><NuxtLink to="/3.2.1/uri-routing">URI Routing</NuxtLink></li>
-          <li class="unavailable">Admin URI Routing</li>
+          <li class=""><NuxtLink to="/3.2.1/">3.2.x</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.2.1/view/">View</NuxtLink></li>
+          <li class="unavailable">Theme Layout</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">URI Routing for Admin Pages</h1>
-            <p>Seme Framework has default feature to overide all routes below <code>app/controller/admin</code>. This feature comes when user need some extra security for securing admin pages. Not only re-routes, Seme Framework has another base_url function for compatibilty routing between admin page. The function is <code>base_url_admin()</code>.</p>
-            <h2>Condition</h2>
-            <p>For using this feature, Seme Framework has some condition to meet such as:</p>
+            <h1 class="">Theme Layout</h1>
+            <p>
+              Seme Framework support theme layout for providing reusable view component.
+              The layout contains about HTML general form by loading its required components, such as css loader method, javascript loader, view component, and plain html content.
+            </p>
+
+            <h2>Layout Requirements</h2>
+            <p>
+              Seme Framework only loaded layout with this condition.
+            </p>
             <ol>
-              <li><code>$site_url</code> in app/config/config.php is set.</li>
-              <li><code>$admin_secret_url</code> in index.php is set. Default value <i>admin</i>.</li>
-              <li>Only work on controller below <code>app/controller/admin</code> folder.</li>
-              <li>If there is a controller folder match with <code>$admin_secret_url</code> value, the controller under matched will be ignored.</li>
-              <li>Use <code>base_url_admin</code> respectively instead of <code>base_url()</code>.</li>
+              <li>
+                The layout file location is under <code>page</code> directory inside a theme directory.
+              </li>
+              <li>
+                The layout filename only contain lowercase and dash with .php suffix.
+              </li>
+              <li>
+                Layout file only loaded by <NuxtLink to="/3.2.1/controller/loadlayout/">loadLayout method</NuxtLink> from Controller class.
+              </li>
             </ol>
+
+            <div class="nav-bottom">
+              <div class="nav-bottom-left">
+                <nuxt-link to="/3.2.1/view/theme/" class="btn">
+                  <i class="fa fa-chevron-left"></i>
+                  theme
+                </nuxt-link>
+              </div>
+              <div class="nav-bottom-right">
+                <nuxt-link to="/3.2.1/view/theme_json/" class="btn">
+                  theme.json
+                  <i class="fa fa-chevron-right"></i>
+                </nuxt-link>
+              </div>
+            </div>
+
           </div>
         </div>
 
       </div>
+
+
+
     </div>
   </div>
 </template>
 <script>
 export default {
   layout: 'v3.2',
-  data() {
+  data (){
     return {
-      name: 'Seme Framework v3.2.1',
-      suffix: ' - Seme Framework 3.2.1',
-      title: 'URI Routing Admin',
-      description: 'Learn more about URI Routing for Admin page on Seme Framework version 3.2.3',
+      base_url: '{{base_url}}',
+      cdn_url: '{{cdn_url}}',
+      name: 'Seme Framework v3.2.3',
+      suffix: ' - Seme Framework 3.2.3',
+      title: 'Theme Layout',
+      description: 'Learn more about theme layout on Seme Framework 3.2.3.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -49,8 +80,8 @@ export default {
           text: '3.2.x'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2.1/uri-routing',
-          text: 'URI Routing'
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2.1/view',
+          text: 'View'
         }
       ],
     }
@@ -103,9 +134,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-13T13:34:00+07:00",
-        "datePublished": "2021-07-13T13:34:00+07:00",
-        "dateModified": "2021-07-13T13:36:00+07:00",
+        "dateCreated": "2021-07-23T14:01:00+07:00",
+        "datePublished": "2021-07-23T14:02:00+07:00",
+        "dateModified": "2021-07-23T14:06:24+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

@@ -498,7 +498,7 @@ export default {
       name: 'Seme Framework v3.2',
       suffix: ' - Seme Framework v3.2',
       title: 'Tutorial: Introduction',
-      description: 'Learn more about introduction tutorial of Seme Framework version 3.2.1 through this documentation.',
+      description: 'Learn more about introduction tutorial of Seme Framework version 3.2.3 through this documentation.',
       hlWorld: require('~/assets/img/hello-world.png'),
       intro6a: require('~/assets/img/tutorial/introduction/6a.png'),
       intro7: require('~/assets/img/tutorial/introduction/7.png'),

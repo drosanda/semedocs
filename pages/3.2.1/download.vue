@@ -14,7 +14,7 @@
             <h1 class="">Download</h1>
             <p>All Seme Framework  of them are available on github, here is the link:</p>
             <ul>
-              <li><a href="https://github.com/drosanda/seme-framework-v3" target="_blank">Seme Framework v3 <i class="fa fa-external-link"></i></a></li>
+              <li><a href="https://github.com/drosanda/seme-framework-v3/releases/tag/v3.2.3" target="_blank">Seme Framework v3.2.3 <i class="fa fa-external-link"></i></a></li>
             </ul>
             <h2>Download example</h2>
             <p>Download <a href="https://github.com/drosanda/seme-framework-v3-bootstrap3" target="_blank">Seme Framework with bootstrap 3 layout</a>.</p>
@@ -30,10 +30,10 @@ export default {
   layout: 'v3.2',
   data() {
     return {
-      name: 'Seme Framework v3.2.1',
-      suffix: ' - Seme Framework 3.2.1',
+      name: 'Seme Framework v3.2.3',
+      suffix: ' - Seme Framework 3.2.3',
       title: 'Download and Install',
-      description: 'Learn more about how to download and install Seme Framework version 3.2.1',
+      description: 'Learn more about how to download and install Seme Framework version 3.2.3',
       fr: require('~/assets/img/first-run.png'),
       breadcrumbs: [
         {
@@ -42,11 +42,7 @@ export default {
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2.1',
-          text: '3.2.1',
-        },
-        {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2.1/download',
-          text: 'Download',
+          text: '3.2.x',
         }
       ]
     }

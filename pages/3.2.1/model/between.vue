@@ -156,7 +156,7 @@ export default {
       name: 'Seme Framework v3.2',
       suffix: ' - Seme Framework 3.2.1',
       title: 'Model::between',
-      description: 'Learn more about Model::between Seme Framework version 3.2.1 through this documentation.',
+      description: 'Learn more about Model::between Seme Framework version 3.2.3 through this documentation.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

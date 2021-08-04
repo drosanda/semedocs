@@ -32,10 +32,10 @@ export default {
   layout: 'v3.2',
   data (){
     return {
-      name: 'Seme Framework v3.2.1',
-      suffix: ' - Seme Framework 3.2.1',
+      name: 'Seme Framework v3.2.3',
+      suffix: ' - Seme Framework 3.2.3',
       title: 'Database Reference',
-      description: 'Learn more about database Reference on Seme Framework 3.2.1.',
+      description: 'Learn more about database Reference on Seme Framework 3.2.3.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

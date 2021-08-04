@@ -329,7 +329,7 @@
 </template>
 <script>
 export default {
-  layout: 'v4.0.0',
+  layout: 'v3.2',
   data (){
     return {
       name: 'Seme Framework v3.2.1',

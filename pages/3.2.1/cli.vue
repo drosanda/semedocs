@@ -87,7 +87,7 @@ export default {
       name: 'Seme Framework v3.2',
       suffix: ' - Seme Framework 4',
       title: 'Command Line Interface (CLI)',
-      description: 'Learn more about how to use Command Line Interface (CLI) on Seme Framework version 3.2.1 through this documentation.',
+      description: 'Learn more about how to use Command Line Interface (CLI) on Seme Framework version 3.2.3 through this documentation.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -95,7 +95,7 @@ export default {
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2.1/',
-          text: '3.2.1',
+          text: '3.2.x',
         }
       ]
     }

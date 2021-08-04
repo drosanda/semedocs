@@ -4,29 +4,23 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/3.2.1">3.2.x</NuxtLink></li>
-          <li class="unavailable">Library</li>
+          <li class=""><NuxtLink to="/3.2.1/">3.2.x</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.2.1/view">View</NuxtLink></li>
+          <li class="unavailable">base_url</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Library</h1>
-            <p>Library is a file of collection of file that you can use inside Seme Framework. You can found our library on <code>kero/lib/</code>. Seme Framework has 3 method for loading library.</p>
-            <ol>
-              <li>instantiate library object automatically,</li>
-              <li>instantiate object of library by using different name</li>
-              <li>include only library file, so you can instantiate by using its class name.</li>
-            </ol>
-            <hr>
-            <h2>Loading A Library</h2>
-            <p>You can load library from controller by using method lib. Method lib has 3 parameter required:</p>
-            <ul>
-              <li>Location of library file relative to kero/lib/.</li>
-              <li>Object name, default name is class name with in lower case format.</li>
-              <li>The include method. you can use inc value if you just require_once only your lib. Otherwise library will instantiate automatically.</li>
-            </ul>
-            <p>Example loading json library in home controller:</p>
+            <h1 class="">The <code>{{base_url}}</code> Keyword</h1>
+            <p>
+              Seme Framework support <code>{{base_url}}</code> keyword for replacing the keyword with <code>$site</code> value in <NuxtLink to="/3.2.1/configuration/">Seme Framework Configuration</NuxtLink>.
+            </p>
+
+            <h2 class="">The Configuration</h2>
+            <p>
+              The BASE URL purpose is to get base url value from the configuration. Here is example codes on development.php file.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -46,55 +40,69 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  Class Home extends SENE_Controller {
-
-                    public function __construct(){
-                      parent::__construct();
-                      $this-&#x3E;lib(&#x27;sene_json_engine&#x27;,&#x27;sene_json&#x27;);
-                    }
-                    public function index(){
-                      $data = array();
-                      $data[&#x22;status&#x22;]  = 200;
-                      $data[&#x22;message&#x22;] = &#x27;Hello we just use json right here, Yi-Ha!&#x27;;
-                      $data[&#x22;result&#x22;]  = array();
-                      $this-&#x3E;sene_json-&#x3E;out($data);
-                    }
-                  }
+                  ...
+                  $site = &#x27;http://localhost/seme_framework/&#x27;;
+                  ...
                 </highlight-code>
               </div>
             </div>
-            <p>After that you can open your base_url on browser and see what you get.</p>
-            <h2>List of Library</h2>
-            <p>Here is the list of library currently exist on seme framework:</p>
-            <ul>
-              <li><NuxtLink to="/3.2.1/library/seme_log">Seme Log - Logger</NuxtLink></li>
-              <li><NuxtLink to="/3.2.1/library/seme_email">Seme Email - Email Sender</NuxtLink></li>
-            </ul>
 
+            <h2 class="">How It Works</h2>
+            <p>
+              This <code>{{base_url}}</code> keyword only processed on <code>theme.json</code> and <code>script.json</code> files.
+            </p>
+
+            <h2 class="">Fallback</h2>
+            <p>
+              If configuration fails, this will be replaced by empty string.
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/3.2.1/view/" class="btn">
+            <i class="fa fa-chevron-left"></i>
+            View
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/3.2.1/view/cdn_url" class="btn">
+            cdn_url
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 
     </div>
   </div>
-</div>
 </template>
 <script>
 export default {
   layout: 'v3.2',
-  data() {
+  data (){
     return {
-      name: 'Seme Framework v3.2.1',
-      suffix: ' - Seme Framework 3.2.1',
-      title: 'Library',
-      description: 'Learn more about Library on Seme Framework version 3.2.3',
+      base_url: '{{base_url}}',
+      cdn_url: '{{cdn_url}}',
+      name: 'Seme Framework v3.2.3',
+      suffix: ' - Seme Framework 3.2.3',
+      title: 'The {{base_url}} keyword',
+      description: 'Learn how to use The {{base_url}} keyword on Seme Framework 3.2.3.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
-          text: 'Seme Framework',
+          text: 'Seme Framework'
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2.1',
-          text: '3.2.x',
+          text: '3.2.x'
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2.1/view',
+          text: 'View'
         }
       ],
     }
@@ -127,7 +135,6 @@ export default {
       '@type': 'ListItem',
       position: index + 1,
       item: {
-        "@type": "WebPage",
         '@id': item.url,
         name: item.text,
       },
@@ -148,9 +155,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2020-06-11T10:12:00+07:00",
-        "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-11T01:04:00+07:00",
+        "dateCreated": "2021-07-18T10:31:00+07:00",
+        "datePublished": "2021-07-18T10:32:00+07:00",
+        "dateModified": "2021-07-18T12:38:31+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

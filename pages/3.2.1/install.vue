@@ -19,8 +19,8 @@
             <h3>File: config.php</h3>
             <p>There is default example for config.php in Seme Framework.</p>
             <pre>
-$site = "http://".$_SERVER['HTTP_HOST']."/";
-$sene_method = "PATH_INFO";//REQUEST_URI,PATH_INFO,ORIG_PATH_INFO
+              $site = "http://".$_SERVER['HTTP_HOST']."/";
+              $sene_method = "PATH_INFO";//REQUEST_URI,PATH_INFO,ORIG_PATH_INFO
             </pre>
             <h3>$site</h3>
             <p>Change content of site variabel and then add slash on the last</p>
@@ -32,11 +32,11 @@ $sene_method = "PATH_INFO";//REQUEST_URI,PATH_INFO,ORIG_PATH_INFO
             <h2>Htaccess configuration</h2>
             <p>If you using apache web server, the apache configuration is the most important to working with this framework. Default configuration:</p>
             <pre>
-RewriteEngine on
-RewriteCond $1 !^(index\.php|resources|robots\.txt)
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php/$1 [L,QSA]
+              RewriteEngine on
+              RewriteCond $1 !^(index\.php|resources|robots\.txt)
+              RewriteCond %{REQUEST_FILENAME} !-f
+              RewriteCond %{REQUEST_FILENAME} !-d
+              RewriteRule ^(.*)$ index.php/$1 [L,QSA]
             </pre>
           </div>
         </div>
@@ -45,8 +45,105 @@ RewriteRule ^(.*)$ index.php/$1 [L,QSA]
   </div>
 </template>
 <script>
-  export default {
-    layout: 'v3.2'
-    // page component definitions
+export default {
+  layout: 'v3.2',
+  data (){
+    return {
+      name: 'Seme Framework v3.2.3',
+      suffix: ' - Seme Framework 3.2.3',
+      title: 'Install',
+      description: 'Learn how to install Seme Framework 3.2.3.',
+      breadcrumbs: [
+        {
+          url: process.env.BASE_URL || 'http://localhost:3001',
+          text: 'Seme Framework',
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2.1',
+          text: '3.2.x',
+        }
+      ]
+    }
+  },
+  head() {
+    return {
+      title: this.title+this.suffix,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.name+': '+this.title
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.description
+        }
+      ]
+    }
+  },
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+    const items = this.breadcrumbs.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        "@type": "WebPage",
+        '@id': item.url,
+        name: item.text,
+      },
+    }));
+    return [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: items,
+      },
+      {
+        "@type": "NewsArticle",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+        },
+        "headline": (this.headline || this.title),
+        "image": [
+          (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
+        ],
+        "dateCreated": "2020-06-11T10:12:00+07:00",
+        "datePublished": "2020-06-11T10:12:00+07:00",
+        "dateModified": "2021-06-23T21:51:32+07:00",
+        "author": {
+          "@type": "Person",
+          "gender": "Male",
+          "name": "Daeng Rosanda, S.Kom",
+          "alternateName": "Daeng Rosanda",
+          "jobTitle": "Founder",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Cipta Esensi Merenah",
+            "email": "hi@cenah.co.id"
+          }
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Cipta Esensi Merenah",
+          "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+          "logo": {
+            "@type": "ImageObject",
+            "name": "logo Cipta Esensi Merenah",
+            "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+            "width": "256px",
+            "height": "62px"
+          }
+        },
+        "description": this.description
+      }
+    ];
   }
+}
 </script>
