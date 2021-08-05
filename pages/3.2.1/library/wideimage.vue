@@ -359,7 +359,7 @@
             "logo": {
               "@type": "ImageObject",
               "name": "logo Cipta Esensi Merenah",
-              "url": "https://cdn.cenah.co.4.0.0/_nuxt/img/logo-wide.5420183.png",
+              "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
               "width": "256px",
               "height": "62px"
             }

@@ -6,20 +6,20 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/3.2.1/">3.2.x</NuxtLink></li>
           <li class=""><NuxtLink to="/3.2.1/model/">Model</NuxtLink></li>
-          <li class="unavailable">Exec</li>
+          <li class="unavailable">Union Flush</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Exec Method</h1>
+            <h1 class="">Union Flush Method</h1>
             <p>
-              The <code>exec</code> method is used for executing raw SQL against the table.
+              The <code>union_flush</code> method purpose is for clearing any buffered union operation.
             </p>
 
             <h2>Basic Usage</h2>
             <p>
-              Here is the basic usage <code>exec</code> method from <code>$db</code> property on <NuxtLink to="/3.2.1/model/#SENE_Model">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
+              Here is the basic usage <code>union_flush</code> method from <code>$db</code> property on <NuxtLink to="/3.2.1/model/#SENE_Model" target="_blank">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -40,86 +40,21 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;exec(string $sql): boolean
+                  $this-&#x3E;db-&#x3E;union_flush(): $this-&#x3E;db
                 </highlight-code>
               </div>
             </div>
-
             <h3>Parameters</h3>
-            <p>This method has 1 required parameter.</p>
+            <p>This method does not need any parameter.</p>
 
-            <h4>$sql</h4>
-            <p>The <b>$sql</b> value can be a completed single command of <code>SQL</code>.</p>
-
-            <h2>Example</h2>
-            <p>
-              Here is the example for <code>exec</code> method in a model class.
-            </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  class C_Produk_Model extends SENE_Model {
-                    var $tbl = &#x27;c_produk&#x27;;
-                    var $tbl_as = &#x27;cp&#x27;;
-
-                    public function __construct(){
-                      parent::__construct();
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
-                    }
-                    ...
-                    public function unpublishOldProduct($id){
-                      $sql = &#x27;UPDATE &#x27;.$this-&#x3E;tbl.&#x27; SET is_published = 0 WHERE DATE(date_created) &#x3C; DATE(&#x22;2019-01-01&#x22;)&#x27;;
-                      return $this-&#x3E;db-&#x3E;exec($sql);
-                    }
-                    ...
-                  }
-                </highlight-code>
-              </div>
-            </div>
-
-
-            <div class="message is-warning">
-              <div class="message-body">
-                <p><b>Caution</b></p>
-                <p>This method only suitable for executing query that contains INSERT, UPDATE, DELETE, TRUNCATE, DROP, and another DDL operation.</p>
-                <p>Please use <NuxtLink to="/3.2.1/model/query/">Query Method<i class="fa fa-window-restore"></i></NuxtLink> for collecting the result from raw SQL.</p>
-              </div>
-            </div>
 
           </div>
         </div>
+
       </div>
 
-      <div class="nav-bottom">
-        <div class="nav-bottom-left">
-          <nuxt-link to="/3.2.1/model/esc/" class="btn">
-            <i class="fa fa-chevron-left"></i>
-            Esc method
-          </nuxt-link>
-        </div>
-        <div class="nav-bottom-right">
-          <nuxt-link to="/3.2.1/model/from/" class="btn">
-            From method
-            <i class="fa fa-chevron-right"></i>
-          </nuxt-link>
-        </div>
-      </div>
+
+
 
     </div>
   </div>
@@ -129,22 +64,22 @@ export default {
   layout: 'v3.2',
   data (){
     return {
-      name: 'Seme Framework v3.2.1',
-      suffix: ' - Seme Framework 3.2.1',
-      title: 'Exec Method',
-      description: 'Learn exec method from $db property on SENE_Model class for Seme Framework 3.2.1',
+      name: 'Seme Framework v3.2.x',
+      suffix: ' - Seme Framework 3.2.3',
+      title: 'Union Flush Method',
+      description: 'Learn about union_flush method from $db property on SENE_Model class for Seme Framework 3.2.3.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
-          text: 'Seme Framework',
+          text: 'Seme Framework'
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2.1',
-          text: '3.2.x',
+          text: '3.2.x'
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2.1/model',
-          text: 'Model',
+          text: 'Model'
         }
       ],
     }
@@ -197,9 +132,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-08-01T16:46:00+07:00",
-        "datePublished": "2021-08-01T16:46:00+07:00",
-        "dateModified": "2021-08-01T16:46:00+07:00",
+        "dateCreated": "2021-08-05T16:30:10+07:00",
+        "datePublished": "2021-08-05T16:30:10+07:00",
+        "dateModified": "2021-08-05T16:30:10+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
