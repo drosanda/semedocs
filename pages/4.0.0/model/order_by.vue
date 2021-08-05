@@ -14,8 +14,11 @@
           <div class="content">
             <h1 class="">Order By Method</h1>
             <p>The <code>order_by</code> method is part of database class builder for sorting result query.</p>
-            <h2>Parameters</h2>
-            <p>Insert method has 2 required parameters that is <b>column name</b> and <b>sort direction</b>.</p>
+
+            <h2>Basic Usage</h2>
+            <p>
+              Here is the basic usage <code>limit</code> method from <code>$db</code> property on <NuxtLink to="/4.0.0/model/#SENE_Model" target="_blank">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -39,14 +42,23 @@
                 </highlight-code>
               </div>
             </div>
+            <h2>Parameters</h2>
+            <p>This method has 2 required parameters.</p>
             <h3>$column_name</h3>
-            <p><b>Column Name</b> can be filled by column name or function string.</p>
+            <p>The <b>$column_name</b> value can be filled by column name or function string.</p>
             <h3>$sort_direction</h3>
-            <p><b>Sort Direction</b> value consist of asc and desc. "asc" for ascending and "desc" for descending</p>
-            <h2>Example usage</h2>
-            <p>Here is the examples using order_by method. See the first of this page for full example.</p>
-            <h3>Basic Usage</h3>
-            <p>For example we assumed want to add new data in blog table. First, in the model:</p>
+            <p>
+              The <b>$sort_direction</b> value can be string like:
+              <ul>
+                <li><code>asc</code> for ascending or,</li>
+                <li><code>desc</code> for descending</li>
+              </ul>
+            </p>
+
+            <h2>Example</h2>
+            <p>
+              For example we assumed want to retrieve newest articles from blog table.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">

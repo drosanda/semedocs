@@ -6,54 +6,109 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/model/">Model</NuxtLink></li>
-          <li class="unavailable">Order By Method</li>
+          <li class="unavailable">Order By</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
             <h1 class="">Order By Method</h1>
-  					<p>Order By method is part of database class builder for sorting result query.</p>
+            <p>Metode <code>order_by</code> adalah bagian dari pembuat kelas database untuk menyortir hasil kueri.</p>
 
-            <h2>Parameters</h2>
-  					<p>Insert method has 2 required parameters that is <b>column name</b> and <b>sort direction</b>.</p>
-  					<pre><code v-highlight class="sql">$this-&gt;db-&gt;group_by(string $column_name, string $sort_direction): dbObject</code></pre>
-
+            <h2>Bentuk Umum</h2>
+            <p>
+              Berikut ini adalah bentuk umum dari metode <code>limit</code> dari properti <code>$db</code> yang ada di dalam kelas <code>SENE_Model</code>.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  $this-&#x3E;db-&#x3E;group_by(string $column_name, string $sort_direction): $this-&#x3E;db
+                </highlight-code>
+              </div>
+            </div>
+            <h2>Parameter</h2>
+            <p>Metode ini membutuhkan 2 parameter wajib.</p>
             <h3>$column_name</h3>
-            <p><b>Column Name</b> can be filled by column name or function string.</p>
+            <p>Parameter <b>$column_name</b> dapat berisi nama kolom atau fungsi SQL.</p>
 
             <h3>$sort_direction</h3>
-            <p><b>Sort Direction</b> value consist of asc and desc. "asc" for ascending and "desc" for descending</p>
+            <p>
+              Parameter <b>$sort_direction</b> dapat berisi:
+              <ul>
+                <li><code>asc</code> untuk pengurutan dari nilai terkecil,</li>
+                <li><code>desc</code> untuk pengurutan dari nilai terbesar.</li>
+              </ul>
+            </p>
 
-            <h2>Example usage</h2>
-  					<p>Here is the examples using order_by method. See the first of this page for full example.</p>
+            <h2>Contoh</h2>
+            <p>
+              Dalam contoh ini metode <code>order_by</code> akan digunakan untuk mengambil artikel terbaru dari sebuah model.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  &lt;?php
+                  class Blog_Model extends SENE_Model{
+                    var $tbl = &#039;blog&#039;;
+                    var $tbl_as = &#039;b&#039;;
+                    public function __construct(){
+                      parent::__construct();
+                    }
+                    public function getLatest($di){
+                      $this-&gt;db-&gt;order_by(&quot;create_date&quot;,&quot;desc&quot;);
+                      return $this-&gt;db-&gt;get();
+                    }
+                  }
+                </highlight-code>
+              </div>
+            </div>
 
-            <h3>Basic Usage</h3>
-            <p>For example we assumed want to add new data in blog table. First, in the model:</p>
-            <pre><code v-highlight class="php">&lt;?php
-class Blog_Model extends SENE_Model{
-  var $tbl = &#039;blog&#039;;
-  var $tbl_as = &#039;b&#039;;
-  public function __construct(){
-	 parent::__construct();
-  }
-  public function getLatest($di){
-    $this-&gt;db-&gt;order_by(&quot;create_date&quot;,&quot;desc&quot;);
-    return $this-&gt;db-&gt;get();
-  }
-}</code></pre>
-          </div>
-        </div>
-      </div>
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/id/model/group_by" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Model::group_by
-            </b-button>
-            <b-button tag="router-link" to="/id/model/limit" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Model::limit
-            </b-button>
+            <div class="nav-bottom">
+              <div class="nav-bottom-left">
+                <nuxt-link to="/id/model/limit/" class="btn">
+                  <i class="fa fa-chevron-left"></i>
+                  limit Method
+                </nuxt-link>
+              </div>
+              <div class="nav-bottom-right">
+                <nuxt-link to="/id/model/page/" class="btn">
+                  page Method
+                  <i class="fa fa-chevron-right"></i>
+                </nuxt-link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -61,37 +116,111 @@ class Blog_Model extends SENE_Model{
   </div>
 </template>
 <script>
-export default {
-  layout: 'id',
-  data (){
-    return {
-      name: 'Seme Framework 4',
-      suffix: ' - Seme Framework 4',
-      title: 'Model::order_by method',
-      description: 'Pelajari selengkapnya tentang penggunaan order_by method pada kelas Model di Seme Framework.'
-    }
-  },
-  head() {
-    return {
-      title: this.title+this.suffix,
-      meta: [
+  export default {
+    layout: 'id',
+    data (){
+      return {
+        name: 'Seme Framework 4',
+        suffix: ' - Seme Framework 4',
+        title: 'Metode Order By',
+        description: 'Pelajari tentang metode order_by dari properti $db di SENE_Model pada Seme Framework 4.',
+        breadcrumbs: [
+          {
+            url: process.env.BASE_URL || 'http://localhost:3001',
+            text: 'Seme Framework'
+          },
+          {
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/id',
+            text: 'ID'
+          },
+          {
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/model',
+            text: 'Model'
+          }
+        ]
+      }
+    },
+    head() {
+      return {
+        htmlAttrs: {
+          lang: 'id'
+        },
+        title: this.title+this.suffix,
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.description
+          },
+          {
+            hid: 'og:title',
+            name: 'og:title',
+            content: this.name+': '+this.title
+          },
+          {
+            hid: 'og:description',
+            name: 'og:description',
+            content: this.description
+          }
+        ]
+      }
+    },
+    jsonld() {
+      this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+      const items = this.breadcrumbs.map((item, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@id': item.url,
+          name: item.text,
+        },
+      }));
+      return [
         {
-          hid: 'description',
-          name: 'description',
-          content: this.description
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: items,
         },
         {
-          hid: 'og:title',
-          name: 'og:title',
-          content: this.name+': '+this.title
-        },
-        {
-          hid: 'og:description',
-          name: 'og:description',
-          content: this.description
+          "@type": "NewsArticle",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+          },
+          "headline": (this.headline || this.title),
+          "image": [
+            (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
+          ],
+          "dateCreated": "2021-08-03T10:24:00+07:00",
+          "datePublished": "2021-08-03T10:24:00+07:00",
+          "dateModified": "2021-08-03T10:24:00+07:00",
+          "author": {
+            "@type": "Person",
+            "gender": "Male",
+            "name": "Daeng Rosanda, S.Kom",
+            "alternateName": "Daeng Rosanda",
+            "jobTitle": "Founder",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Cipta Esensi Merenah",
+              "email": "hi@cenah.co.id"
+            }
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Cipta Esensi Merenah",
+            "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+            "logo": {
+              "@type": "ImageObject",
+              "name": "logo Cipta Esensi Merenah",
+              "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+              "width": "256px",
+              "height": "62px"
+            }
+          },
+          "description": this.description
         }
-      ]
+      ];
     }
   }
-}
 </script>

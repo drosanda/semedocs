@@ -6,82 +6,143 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/model/">Model</NuxtLink></li>
-          <li class="unavailable">Limit Method</li>
+          <li class="unavailable">Limit</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Limit Method</h1>
-            <p>Limit method digunakan untuk membatasi jumlah baris dari hasil query.</p>
+            <h1 class="">Metode Limit </h1>
+            <p>
+              Metode <code>limit</code> adalah bagian dari Query Builder untuk membatasi hasil query dengan mengeksekusi perintah SQL <code>LIMIT [A],[B]</code>.
+              Metode ini juga cocok untuk membuat <em>pagination</em> dengan datatables pagination.
+            </p>
             <div class="message is-success">
-  <div class="message-body">
-              <p>Limit method ini cocok untuk diaplikasikan dengan DataTable.</p>
-            </div></div>
-            <p>Dengan fungsi ini memungkinkan untuk mengatur banyaknya jumlah data dan akan tampil pada halaman ke berapa.</p>
-            <p>Metode ini akan menghasilkan query seperti ini:</p>
-            <code v-highlight class="sql">SELECT * FROM table WHERE 1 LIMIT [A],[B]</code>
+              <div class="message-body">
+                <p>Limit method ini cocok untuk diaplikasikan dengan DataTable.</p>
+              </div>
+            </div>
+            <h2>Bentuk Umum</h2>
+            <p>
+              Berikut ini adalah bentuk umum dari metode <code>limit</code> dari properti <code>$db</code> yang ada di dalam kelas <code>SENE_Model</code>.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  $this-&#x3E;db-&#x3E;limit(int $a, int $b): $this-&#x3E;db
+                </highlight-code>
+              </div>
+            </div>
 
-  					<h2>Parameter</h2>
-  					<p>Limit method membutuhkan 2 parameter yaitu <b>offset</b> dan <b>count</b>.</p>
-  					<code v-highlight class="php">$this-&gt;db-&gt;limit(int $offset, int $count): dbObject</code>
+            <h3>Parameters</h3>
+            <p>
+              Metode ini memiliki 2 parameter wajib.
+            </p>
 
-            <h3>$offset</h3>
-            <p><b>Offset</b> can be zero or positive integer for specifying the offset of the first row to be returned.</p>
+            <h4>$a</h4>
+            <p>
+              Nilai dari parameter <b>$a</b> dapat berisi integer positif dengan nilai mulai dari <code>0</code> untuk batas awal data.
+            </p>
 
-            <h3>$count</h3>
-            <p><b>Count</b> can be zero or positive integer for specifying the maximum number of rows to be returned.</p>
+            <h4>$b</h4>
+            <p>
+              Nilai dari parameter <b>$b</b> dapat berisi integer positif dengan nilai mulai dari <code>0</code> untuk batas akhir data.
+            </p>
 
-  					<h2>Example usage</h2>
-  					<p>Here is the examples using limit method. See the first of this page for full example.</p>
-
-            <h3>Basic Usage</h3>
-            <p>For example we assumed want to filter new data in blog table. First, in the model:</p>
-            <pre><code v-highlight class="php">&lt;?php
-class Blog_Model extends SENE_Model{
-  var $tbl = &#039;blog&#039;;
-  var $tbl_as = &#039;b&#039;;
-  public function __construct(){
-	 parent::__construct();
-  }
-  public function latest(){
-    $this-&gt;db-&gt;select(&quot;*&quot;);
-    $this-&gt;db-&gt;from($this-&gt;tbl,$this-&gt;tbl_as);
-    $this-&gt;db-&gt;order_by(&quot;date_create&quot;,&quot;desc&quot;);
-    $this-&gt;db-&gt;limit(0,5);
-    return $this-&gt;db-&gt;get();
-  }
-  public function latest3ExceptOne(){
-    $this-&gt;db-&gt;select(&quot;*&quot;);
-    $this-&gt;db-&gt;from($this-&gt;tbl,$this-&gt;tbl_as);
-    $this-&gt;db-&gt;order_by(&quot;date_create&quot;,&quot;desc&quot;);
-    $this-&gt;db-&gt;limit(1,4);
-    return $this-&gt;db-&gt;get();
-  }
-}</code></pre>
+            <h2>Contoh Penggunaan</h2>
+            <p>
+              Berikut ini adalah contoh penggunaan untuk metode <code>limit</code> pada file model <code>blog_model.php</code>.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  &lt;?php
+                  class Blog_Model extends SENE_Model{
+                    var $tbl = &#039;blog&#039;;
+                    var $tbl_as = &#039;b&#039;;
+                    public function __construct(){
+                      parent::__construct();
+                    }
+                    public function latest(){
+                      $this-&gt;db-&gt;select(&quot;*&quot;);
+                      $this-&gt;db-&gt;from($this-&gt;tbl,$this-&gt;tbl_as);
+                      $this-&gt;db-&gt;order_by(&quot;date_create&quot;,&quot;desc&quot;);
+                      $this-&gt;db-&gt;limit(0,5);
+                      return $this-&gt;db-&gt;get();
+                    }
+                    public function latest3ExceptOne(){
+                      $this-&gt;db-&gt;select(&quot;*&quot;);
+                      $this-&gt;db-&gt;from($this-&gt;tbl,$this-&gt;tbl_as);
+                      $this-&gt;db-&gt;order_by(&quot;date_create&quot;,&quot;desc&quot;);
+                      $this-&gt;db-&gt;limit(1,4);
+                      return $this-&gt;db-&gt;get();
+                    }
+                  }
+                </highlight-code>
+              </div>
+            </div>
 
             <div class="message is-info">
-  <div class="message-body">
-              <p><b>page method v.s. limit method</b></p>
-              <p>Page method used for limiting by page and page size</p>
-              <p>Limit method used for limiting data by MySQL traditional limit method</p>
-            </div></div>
+              <div class="message-body">
+                <p><b>Metode Page v.s. Metode Limit</b></p>
+                <p>Metode Page digunakan untuk membatasi dengan jumlah data perhalaman.</p>
+                <p>Metode Limit digunakan untuk membatasi dengan batas awal tarikan dan batas akhir tarikan data.</p>
+              </div>
+            </div>
+
+            <div class="nav-bottom">
+              <div class="nav-bottom-left">
+                <nuxt-link to="/id/model/last_id/" class="btn">
+                  <i class="fa fa-chevron-left"></i>
+                  Metode Last ID
+                </nuxt-link>
+              </div>
+              <div class="nav-bottom-right">
+                <nuxt-link to="/id/model/order_by/" class="btn">
+                  Metode Order By
+                  <i class="fa fa-chevron-right"></i>
+                </nuxt-link>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/id/model/order_by" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Model::order_by
-            </b-button>
-            <b-button tag="router-link" to="/id/model/get" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Model::get
-            </b-button>
-          </div>
-        </div>
-      </div>
+
+
     </div>
   </div>
 </template>
@@ -91,13 +152,30 @@ export default {
   data (){
     return {
       name: 'Seme Framework 4',
-      suffix: ' - Seme Framework v4.0.0 Documentation',
-      title: 'Model::limit',
-      description: 'Pelajari selengkapnya tentang penggunaan limit method pada kelas Model di Seme Framework.'
+      suffix: ' - Seme Framework 4',
+      title: 'Metode Limit',
+      description: 'Pelajari tentang metode limit dari properti $db di SENE_Model pada Seme Framework 4.',
+      breadcrumbs: [
+        {
+          url: process.env.BASE_URL || 'http://localhost:3001',
+          text: 'Seme Framework'
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id',
+          text: 'ID'
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/model',
+          text: 'Model'
+        }
+      ]
     }
   },
   head() {
     return {
+      htmlAttrs: {
+        lang: 'id'
+      },
       title: this.title+this.suffix,
       meta: [
         {
@@ -117,6 +195,63 @@ export default {
         }
       ]
     }
+  },
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+    const items = this.breadcrumbs.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@id': item.url,
+        name: item.text,
+      },
+    }));
+    return [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: items,
+      },
+      {
+        "@type": "NewsArticle",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+        },
+        "headline": (this.headline || this.title),
+        "image": [
+          (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
+        ],
+        "dateCreated": "2021-08-03T10:24:00+07:00",
+        "datePublished": "2021-08-03T10:24:00+07:00",
+        "dateModified": "2021-08-03T10:24:00+07:00",
+        "author": {
+          "@type": "Person",
+          "gender": "Male",
+          "name": "Daeng Rosanda, S.Kom",
+          "alternateName": "Daeng Rosanda",
+          "jobTitle": "Founder",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Cipta Esensi Merenah",
+            "email": "hi@cenah.co.id"
+          }
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Cipta Esensi Merenah",
+          "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+          "logo": {
+            "@type": "ImageObject",
+            "name": "logo Cipta Esensi Merenah",
+            "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+            "width": "256px",
+            "height": "62px"
+          }
+        },
+        "description": this.description
+      }
+    ];
   }
 }
 </script>
