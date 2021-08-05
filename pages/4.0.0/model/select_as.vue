@@ -13,9 +13,12 @@
         <div class="column">
           <div class="content">
             <h1 class="">Select AS Method</h1>
-            <p>Select AS method is part of database class builder for selecting column data into a table with aliases.</p>
-            <h2>Parameters</h2>
-            <p>Update method has 3 required parameters that is <b>column name</b> and <b>value</b>, another parameters are optional. Here is the completed parameters can be used by where methods</p>
+            <p>The <code>select_as</code> method is part of Query Builder for selecting column data into a table with its aliases.</p>
+
+            <h2>Basic Usage</h2>
+            <p>
+              Here is the basic usage <code>select_as</code> method from <code>$db</code> property on <NuxtLink to="/4.0.0/model/#SENE_Model">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -35,21 +38,21 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;select_as(string $column_name_or_function, string $alias, bool $force_escape): $this-&#x3E;db
+                  $this-&#x3E;db-&#x3E;select_as(string $col_name, string $alias [, bool $is_esc=0]): $this-&#x3E;db
                 </highlight-code>
               </div>
             </div>
-            <h3>$column_name_or_function</h3>
-            <p><b>Column Name</b> can be single column name, or can be filled with wildcard "*", or can be filled with MySQL function.</p>
-            <h3>$alias</h3>
-            <p><b>Alias</b> Aliased name of <b>$column_name_or_function</b>.</p>
-            <h3>$force_escape</h3>
-            <p><b>Boolean Flag</b> Force escape the column name. <i>optional</i>.</p>
+            <h3>Parameters</h3>
+            <p>Update method has 2 required parameters and 1 optional parameter.</p>
+            <h4>$col_name</h4>
+            <p>The <code>$col_name</code> value can be a single column name or can be filled with wildcard "*", or can be filled with MySQL function.</p>
+            <h4>$alias</h4>
+            <p>The <code>$alias</code> value can be a string that represent the selected column.</p>
+            <h4>$is_esc</h4>
+            <p>The <code>$is_esc</code> value can be a boolean, if 1 all value are escaped otherwise unescaped.</p>
 
-            <h2>Example usage</h2>
-            <p>Here is the examples using select_as method. See the first of this page for full example.</p>
-            <h3>Basic Usage</h3>
-            <p>For example we assumed want to add new data in blog table. First, in the model:</p>
+            <h2>Example</h2>
+            <p>For the example we assumed want to select a colum in a table with <code>select_as</code> method.</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -75,65 +78,11 @@
                     public function __construct(){
                       parent::__construct();
                     }
-                    public function countList(){
+                    public function countPublished(){
                       $this-&#x3E;db-&#x3E;select_as(&#x22;COUNT(*)&#x22;,&#x22;total&#x22;,0);
                       $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;where(&#x22;is_published&#x22;,$is_published);
                       return $this-&#x3E;db-&#x3E;get_first();
-                    }
-                    public function translated($id){
-                      $this-&#x3E;db-&#x3E;select(&#x22;id&#x22;,&#x22;blog_id&#x22;,0);
-                      $this-&#x3E;db-&#x3E;select(&#x22;title&#x22;,&#x22;judul&#x22;,0);
-                      $this-&#x3E;db-&#x3E;select(&#x22;content&#x22;,&#x22;isi&#x22;,0);
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
-                      $this-&#x3E;db-&#x3E;where_as(&#x22;id&#x22;,$id);
-                      return $this-&#x3E;db-&#x3E;get_first();
-                    }
-                    public function allButModified($id){
-                      $this-&#x3E;db-&#x3E;select(&#x22;$this-&#x3E;tbl_as.*, id&#x22;,&#x22;blog_id&#x22;,0);
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
-                      $this-&#x3E;db-&#x3E;where_as(&#x22;id&#x22;,$id);
-                      return $this-&#x3E;db-&#x3E;get_first();
-                    }
-                  }
-                </highlight-code>
-              </div>
-            </div>
-            <p>at the controller, we assumed has file named blog.php</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  class Blog extends SENE_Controller{
-                    public function __construct(){
-                      parent::__construct();
-                      $this->load('blog_model','bm'); #class scope model
-                    }
-                    public function index(){
-                      $blogs = $this->bm->countList();
-                      $this->debug($blogs);
-                    }
-                    public function detail($id){
-                      $blog = $this->bm->translated($id);
-                      $this->debug($blog);
-                    }
-                    public function all($id){
-                      $blog = $this->bm->allButModified($id);
-                      $this->debug($blog);
                     }
                   }
                 </highlight-code>
@@ -168,7 +117,7 @@ export default {
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'Select AS method',
+      title: 'Select AS Method',
       description: 'Learn select_as method from $db property on SENE_Model class for Seme Framework 4',
       breadcrumbs: [
         {
@@ -234,9 +183,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-16T21:35:00+07:00",
-        "datePublished": "2021-07-16T21:35:00+07:00",
-        "dateModified": "2021-07-16T21:36:00+07:00",
+        "dateCreated": "2021-08-05T16:04:07+07:00",
+        "datePublished": "2021-08-05T16:04:07+07:00",
+        "dateModified": "2021-08-05T16:04:07+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

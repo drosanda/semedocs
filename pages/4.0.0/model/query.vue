@@ -99,12 +99,12 @@
               <div class="nav-bottom-left">
                 <nuxt-link to="/4.0.0/model/page/" class="btn">
                   <i class="fa fa-chevron-left"></i>
-                  page Method
+                  Page Method
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
                 <nuxt-link to="/4.0.0/model/select_as/" class="btn">
-                  select_as Method
+                  Select As Method
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>

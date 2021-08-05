@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/model/">Model</NuxtLink></li>
-          <li class="unavailable">Query Method</li>
+          <li class="unavailable">Query</li>
         </ul>
       </nav>
       <div class="columns">
@@ -112,12 +112,12 @@
           <div class="nav-bottom-left">
             <nuxt-link to="/id/model/exec/" class="btn">
               <i class="fa fa-chevron-left"></i>
-              Metode exec
+              Metode Exec
             </nuxt-link>
           </div>
           <div class="nav-bottom-right">
-            <nuxt-link to="/id/model/last_id/" class="btn">
-              Metode last_id
+            <nuxt-link to="/id/model/select_as/" class="btn">
+              Metode Select AS
               <i class="fa fa-chevron-right"></i>
             </nuxt-link>
           </div>
@@ -147,7 +147,7 @@ export default {
           text: 'ID',
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/model',
           text: 'Model',
         }
       ],
@@ -205,9 +205,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2020-06-11T10:12:00+07:00",
-        "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-24T14:10:00+07:00",
+        "dateCreated": "2021-08-04T14:13:00+07:00",
+        "datePublished": "2021-08-04T14:13:00+07:00",
+        "dateModified": "2021-08-04T14:13:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

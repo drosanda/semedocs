@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/model/">Model</NuxtLink></li>
-          <li class="unavailable">Metode Select</li>
+          <li class="unavailable">Select</li>
         </ul>
       </nav>
       <div class="columns">
@@ -20,7 +20,7 @@
 
             <h2>Bentuk Umum</h2>
             <p>
-              Berikut ini adalah bentuk umum dari metode <code>select</code> dari properti <code>$db</code> yang ada di kelas <code>SENE_Model</code>.
+              Berikut ini adalah bentuk umum metode <code>select</code> dari properti <code>$db</code> yang ada di kelas <code>SENE_Model</code>.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -41,32 +41,24 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->db->select(string $column_name): dbObject
+                  $this-&#x3E;db-&#x3E;select(string $column_name): $this-&#x3E;db
                 </highlight-code>
               </div>
             </div>
 
             <h3>Parameter</h3>
             <p>
-              Metode ini memiliki 1 parameter wajib yaitu $column_name.
+              Metode ini memiliki 1 parameter wajib.
             </p>
 
-            <h4>$column_name</h4>
+            <h4>$col_name</h4>
             <p>
-              Nilai dari <b>$column_name</b> dapat berisi nama kolom dari tabel yang digunakan melalui metode <NuxtLink to="/4.0.0/model/from/">from</NuxtLink> maupun metode <NuxtLink to="/4.0.0/model/join/">join</NuxtLink>.
+              Nilai dari <code>$col_name</code> dapat berisi nama kolom dari tabel yang digunakan melalui metode <NuxtLink to="/4.0.0/model/from/">from</NuxtLink> maupun metode <NuxtLink to="/4.0.0/model/join/">join</NuxtLink>.
             </p>
 
             <h2>Contoh penggunaan</h2>
-            <p>Berikut ini adalah contoh penggunaan dari metode Select.</p>
-
-            <h3>Penggunaan Dasar</h3>
             <p>
-              Untuk contoh penggunaan dasar metode ini, akan di sajikan dalam bentuk potongan kode.
-              Yang pertama kode pada SENE_Model, dan yang kedua kode pada SENE_Controller.
-            </p>
-
-            <p>
-              Ini adalah potongan kode untuk SENE_Model. Diasumsikan nama filenya adalah blog_model.php.
+              Dalam contoh ini akan menunjukan penggunaan metode <code>select</code> dalam sebuah kelas model.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -112,53 +104,12 @@
               </div>
             </div>
 
-            <p>
-              Sementara untuk potongan kode pada SENE_Controller-nya seperti ini. Diasumsikan nama filenya adalah blog.php
-            </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  &#x3C;?php
-                  class Blog extends SENE_Controller{
-                    public function __construct(){
-                      parent::__construct();
-                      $this-&#x3E;load(&#x27;blog_model&#x27;,&#x27;bm&#x27;); #class scope model
-                    }
-                    public function index(){
-                      $blogs = $this-&#x3E;bm-&#x3E;getList();
-                      $this-&#x3E;debug($blogs);
-                    }
-                    public function detail($id){
-                      $blog = $this-&#x3E;bm-&#x3E;getById($id);
-                      $this-&#x3E;debug($blog);
-                    }
-                  }
-                </highlight-code>
-              </div>
-            </div>
-
             <h2>Referensi Luar</h2>
             <p>
               Berikut ini adalah referensi luar yang digunakan dalam dokumen ini:
               <ul>
                 <li>
-                  <a href="https://www.mysqltutorial.org/mysql-select-statement-query-data.aspx">MySQL SELECT <i class="fa fa-external-link"></i></a>
+                  <a href="https://www.mysqltutorial.org/mysql-select-statement-query-data.aspx" target="_blank">MySQL SELECT <i class="fa fa-external-link"></i></a>
                 </li>
               </ul>
             </p>
@@ -167,12 +118,12 @@
               <div class="nav-bottom-left">
                 <nuxt-link to="/id/model/select_as/" class="btn">
                   <i class="fa fa-chevron-left"></i>
-                  Metode select_as
+                  Metode Select AS
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
                 <nuxt-link to="/id/model/update_as/" class="btn">
-                  Metode update_as
+                  Metode Update AS
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
@@ -192,7 +143,7 @@ export default {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Metode Select',
-      description: 'Pelajari selengkapnya tentang metode select dari properti $db pada kelas SENE_Model di Seme Framework 4.',
+      description: 'Pelajari metode select dari properti $db pada kelas SENE_Model di Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

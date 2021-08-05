@@ -41,7 +41,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&gt;db-&gt;limit(int $offset, int $count): $this-&#x3E;db
+                  $this-&gt;db-&gt;limit(int $a, int $b): $this-&#x3E;db
                 </highlight-code>
               </div>
             </div>
@@ -49,18 +49,17 @@
             <h3>Parameters</h3>
             <p>This method has 2 required parameters.</p>
 
-            <h4>$offset</h4>
+            <h4>$a</h4>
             <p>
-              The <code>$offset</code> value can be zero or positive integer for specifying the offset of the first row to be returned.
+              The <code>$a</code> value can be zero or positive integer for specifying the offset of the first row to be returned.
             </p>
-            <h4>$count</h4>
+            <h4>$b</h4>
             <p>
-              The <b>$count</b> value can be zero or positive integer for specifying the maximum number of rows to be returned.
+              The <b>$b</b> value can be zero or positive integer for specifying the maximum number of rows to be returned.
             </p>
 
             <h2>Example</h2>
-            <p>On this example will show limiting the result query by using <code>limit</code> method</p>
-
+            <p>On this example will show limiting the result query by using <code>limit</code> method in a model class.</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">

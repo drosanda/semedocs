@@ -99,12 +99,12 @@
               <div class="nav-bottom-left">
                 <nuxt-link to="/id/model/limit/" class="btn">
                   <i class="fa fa-chevron-left"></i>
-                  limit Method
+                  Metode Limit
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
                 <nuxt-link to="/id/model/page/" class="btn">
-                  page Method
+                  Metode Page
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>

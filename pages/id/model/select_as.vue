@@ -6,95 +6,134 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/model/">Model</NuxtLink></li>
-          <li class="unavailable">select_as Method</li>
+          <li class="unavailable">Select AS</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Select AS Method</h1>
-            <p>Select AS method is part of database class builder for selecting column data into a table with aliases.</p>
-            <h2>Parameters</h2>
-            <p>Update method has 3 required parameters that is <b>column name</b> and <b>value</b>, another parameters are optional. Here is the completed parameters can be used by where methods</p>
-            <pre>$this->db->select_as(string $column_name_or_function, string $alias, bool $force_escape): dbObject</pre>
-            <h3>$column_name_or_function</h3>
-            <p><b>Column Name</b> can be single column name, or can be filled with wildcard "*", or can be filled with MySQL function.</p>
-            <h3>$alias</h3>
-            <p><b>Alias</b> Aliased name of <b>$column_name_or_function</b>.</p>
-            <h3>$force_escape</h3>
-            <p><b>Boolean Flag</b> Force escape the column name. <i>optional</i>.</p>
+            <h1 class="">Metode Select AS</h1>
+            <p>
+              Metode select merupakan metode untuk melaksanakan perintah <code>SELECT</code> dari SQL (<em>Structure Query Language</em>) melalui SENE_Model.
+              Metode ini merupakan salah satu pembangun query SQL <b>Query Builder</b> untuk memilih nama kolom yang akan ditarik datanya dari tabel.
+            </p>
 
-            <h2>Example usage</h2>
-            <p>Here is the examples using select_as method. See the first of this page for full example.</p>
-            <h3>Basic Usage</h3>
-            <p>For example we assumed want to add new data in blog table. First, in the model:</p>
-            <pre>
-class Blog_Model extends SENE_Model{
-  var $tbl = &#x27;blog&#x27;;
-  var $tbl_as = &#x27;b&#x27;;
-  public function __construct(){
-    parent::__construct();
-  }
-  public function countList(){
-    $this-&#x3E;db-&#x3E;select_as(&#x22;COUNT(*)&#x22;,&#x22;total&#x22;,0);
-    $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
-    return $this-&#x3E;db-&#x3E;get_first();
-  }
-  public function translated($id){
-    $this-&#x3E;db-&#x3E;select(&#x22;id&#x22;,&#x22;blog_id&#x22;,0);
-    $this-&#x3E;db-&#x3E;select(&#x22;title&#x22;,&#x22;judul&#x22;,0);
-    $this-&#x3E;db-&#x3E;select(&#x22;content&#x22;,&#x22;isi&#x22;,0);
-    $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
-    $this-&#x3E;db-&#x3E;where_as(&#x22;id&#x22;,$id);
-    return $this-&#x3E;db-&#x3E;get_first();
-  }
-  public function allButModified($id){
-    $this-&#x3E;db-&#x3E;select(&#x22;$this-&#x3E;tbl_as.*, id&#x22;,&#x22;blog_id&#x22;,0);
-    $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
-    $this-&#x3E;db-&#x3E;where_as(&#x22;id&#x22;,$id);
-    return $this-&#x3E;db-&#x3E;get_first();
-  }
-}
-            </pre>
-              <p>at the controller, we assumed has file named blog.php</p>
-              <pre>
-class Blog extends SENE_Controller{
-  public function __construct(){
-    parent::__construct();
-    $this->load('blog_model','bm'); #class scope model
-  }
-  public function index(){
-    $blogs = $this->bm->countList();
-    $this->debug($blogs);
-  }
-  public function detail($id){
-    $blog = $this->bm->translated($id);
-    $this->debug($blog);
-  }
-  public function all($id){
-    $blog = $this->bm->allButModified($id);
-    $this->debug($blog);
-  }
-}
-              </pre>
+            <h2>Bentuk Umum</h2>
+            <p>
+              Berikut ini adalah bentuk umum dari metode <code>select</code> dari properti <code>$db</code> yang ada di kelas <code>SENE_Model</code>.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  $this-&#x3E;db-&#x3E;select(string $col_name, string $alias [, boolean $is_int=0]): $this-&#x3E;db
+                </highlight-code>
               </div>
             </div>
-          </div>
 
-          <div class="columns">
-            <div class="column">
-              <b-button tag="router-link" to="/id/model/select/" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-                Model::select
-              </b-button>
-            </div>
-            <div class="column is-2">&nbsp;</div>
-            <div class="column">
-              <b-button tag="router-link" to="/id/model/from" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-                Model::from
-              </b-button>
-            </div>
-          </div>
+            <h3>Parameter</h3>
+            <p>
+              Metode ini memiliki 2 parameter wajib dan 1 parameter opsional.
+            </p>
 
+            <h4>$col_name</h4>
+            <p>
+              Nilai dari <code>$col_name</code> dapat berisi nama kolom dari tabel yang digunakan melalui metode <NuxtLink to="/4.0.0/model/from/">from</NuxtLink> maupun metode <NuxtLink to="/4.0.0/model/join/">join</NuxtLink>.
+            </p>
+
+            <h4>$alias</h4>
+            <p>
+              Nilai dari <code>$alias</code> dapat berisi nama lain atau yang lebih singkat dari <code>$col_name</code>.
+            </p>
+
+            <h4>$is_esc</h4>
+            <p>
+              Flag <code>$is_esc</code> jika berisi 1 akan dipaksa untuk di escape, selain itu akan dibiarkan saja.
+            </p>
+
+            <h2>Contoh penggunaan</h2>
+            <p>
+              Dalam contoh ini akan menunjukan penggunaan metode <code>select_as</code> dalam sebuah kelas model.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  &#x3C;?php
+                  class Blog_Model extends SENE_Model{
+                    var $tbl = &#x27;blog&#x27;;
+                    var $tbl_as = &#x27;b&#x27;;
+                    public function __construct(){
+                      parent::__construct();
+                    }
+                    public function countList(){
+                      $this-&#x3E;db-&#x3E;select_as(&#x22;COUNT(*)&#x22;,&#x22;total&#x22;,0);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      return $this-&#x3E;db-&#x3E;get_first();
+                    }
+                  }
+                </highlight-code>
+              </div>
+            </div>
+
+            <h2>Referensi Luar</h2>
+            <p>
+              Berikut ini adalah referensi luar yang digunakan dalam dokumen ini:
+              <ul>
+                <li>
+                  <a href="https://www.mysqltutorial.org/mysql-select-statement-query-data.aspx" target="_blank">MySQL SELECT <i class="fa fa-external-link"></i></a>
+                </li>
+              </ul>
+            </p>
+
+            <div class="nav-bottom">
+              <div class="nav-bottom-left">
+                <nuxt-link to="/id/model/query/" class="btn">
+                  <i class="fa fa-chevron-left"></i>
+                  Metode Query
+                </nuxt-link>
+              </div>
+              <div class="nav-bottom-right">
+                <nuxt-link to="/id/model/select/" class="btn">
+                  Metode Select
+                  <i class="fa fa-chevron-right"></i>
+                </nuxt-link>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -105,12 +144,29 @@ export default {
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'Model::select_as method',
-      description: 'Pelajari selengkapnya tentang select_as method on SENE_Model class from Seme Framework.'
+      title: 'Metode Select AS',
+      description: 'Pelajari tentang metode select_as dari properti $db pada kelas SENE_Model di Seme Framework 4.',
+      breadcrumbs: [
+        {
+          url: process.env.BASE_URL || 'http://localhost:3001',
+          text: 'Seme Framework',
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id',
+          text: 'ID',
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/model',
+          text: 'Model',
+        }
+      ],
     }
   },
   head() {
     return {
+      htmlAttrs: {
+        lang: 'id'
+      },
       title: this.title+this.suffix,
       meta: [
         {
@@ -130,6 +186,63 @@ export default {
         }
       ]
     }
+  },
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+    const items = this.breadcrumbs.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@id': item.url,
+        name: item.text,
+      },
+    }));
+    return [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: items,
+      },
+      {
+        "@type": "NewsArticle",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+        },
+        "headline": (this.headline || this.title),
+        "image": [
+          (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
+        ],
+        "dateCreated": "2020-06-11T10:12:00+07:00",
+        "datePublished": "2020-06-11T10:12:00+07:00",
+        "dateModified": "2021-07-27T22:45:00+07:00",
+        "author": {
+          "@type": "Person",
+          "gender": "Male",
+          "name": "Daeng Rosanda, S.Kom",
+          "alternateName": "Daeng Rosanda",
+          "jobTitle": "Founder",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Cipta Esensi Merenah",
+            "email": "hi@cenah.co.id"
+          }
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Cipta Esensi Merenah",
+          "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+          "logo": {
+            "@type": "ImageObject",
+            "name": "logo Cipta Esensi Merenah",
+            "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+            "width": "256px",
+            "height": "62px"
+          }
+        },
+        "description": this.description
+      }
+    ];
   }
 }
 </script>

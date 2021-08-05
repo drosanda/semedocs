@@ -13,10 +13,12 @@
         <div class="column">
           <div class="content">
             <h1 class="">Page Method</h1>
-            <p>The <code>page</code> method is part of database class builder for limiting query result. It will produce same as <i>SELECT * FROM table WHERE 1 LIMIT [A],[B]</i>.</p>
+            <p>The <code>page</code> method is part of database class builder for limiting query result.</p>
 
-            <h2>Parameters</h2>
-            <p>Page method has 2 required parameters that is <b>page</b> and <b>pagesize</b>.</p>
+            <h2>Basic Usage</h2>
+            <p>
+              Here is the basic usage <code>page</code> method from <code>$db</code> property on <NuxtLink to="/4.0.0/model/#SENE_Model" target="_blank">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -41,17 +43,17 @@
               </div>
             </div>
 
+            <h3>Parameters</h3>
+            <p>This method has 2 required parameters.</p>
+
             <h3>$page</h3>
-            <p><b>Page</b> determine the current page of specified pagesize.</p>
+            <p>The <code>$page</code> value is for determine the current page of specified pagesize.</p>
 
             <h3>$pagesize</h3>
-            <p><b>Pagesize</b> the maximum result row count per page.</p>
+            <p>The <code>$pagesize</code> the maximum result row count per page.</p>
 
-            <h2>Example usage</h2>
-            <p>Here is the examples using page method. See the first of this page for full example.</p>
-
-            <h3>Basic Usage</h3>
-            <p>For example we assumed want to add new data in blog table. First, in the model:</p>
+            <h2>Example</h2>
+            <p>On this example will show limiting the result query by using <code>page</code> method in model class.</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -85,13 +87,6 @@
                       $this-&gt;db-&gt;page(1,5);
                       return $this-&gt;db-&gt;get();
                     }
-                    public function showSecondPagePer10Rows(){
-                      $this-&gt;db-&gt;select(&quot;*&quot;);
-                      $this-&gt;db-&gt;from($this-&gt;tbl,$this-&gt;tbl_as);
-                      $this-&gt;db-&gt;order_by(&quot;date_create&quot;,&quot;desc&quot;);
-                      $this-&gt;db-&gt;limit(2,10);
-                      return $this-&gt;db-&gt;get();
-                    }
                   }
                 </highlight-code>
               </div>
@@ -99,9 +94,9 @@
 
             <div class="message is-info">
               <div class="message-body">
-                <p><b>page method v.s. limit method</b></p>
-                <p>Page method used for limiting by page and page size</p>
-                <p>Limit method used for limiting data by MySQL traditional limit method</p>
+                <p><b>Page method v.s. Limit Method</b></p>
+                <p>Page method used for limiting by page and page size.</p>
+                <p>Limit method used for limiting data by MySQL traditional limit method.</p>
               </div>
             </div>
 
