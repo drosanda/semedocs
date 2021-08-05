@@ -17,7 +17,7 @@
 
             <h2>Bentuk Umum</h2>
             <p>
-              Berikut ini adalah bentuk umum dari metode <code>limit</code> dari properti <code>$db</code> yang ada di dalam kelas <code>SENE_Model</code>.
+              Berikut ini adalah bentuk umum dari metode <code>order_by</code> dari properti <code>$db</code> yang ada di dalam kelas <code>SENE_Model</code>.
             </p>
             <div class="macwindow">
               <div class="titlebar">

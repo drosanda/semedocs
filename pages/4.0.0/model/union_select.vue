@@ -6,18 +6,18 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/model/">Model</NuxtLink></li>
-          <li class="unavailable">Order By</li>
+          <li class="unavailable">Union Select</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Order By Method</h1>
-            <p>The <code>order_by</code> method is part of database class builder for sorting result query.</p>
+            <h1 class="">Union Select Method</h1>
+            <p>The <code>union_select</code> method select column from create Union Query Builder with its aliases.</p>
 
             <h2>Basic Usage</h2>
             <p>
-              Here is the basic usage <code>order_by</code> method from <code>$db</code> property on <NuxtLink to="/4.0.0/model/#SENE_Model" target="_blank">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
+              Here is the basic usage <code>union_select</code> method from <code>$db</code> property on <NuxtLink to="/4.0.0/model/#SENE_Model">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -38,27 +38,19 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;group_by(string $column_name, string $sort_direction): $this-&#x3E;db
+                  $this-&#x3E;db-&#x3E;union_select(string $col_name, string $alias): $this-&#x3E;db
                 </highlight-code>
               </div>
             </div>
-            <h2>Parameters</h2>
-            <p>This method has 2 required parameters.</p>
-            <h3>$column_name</h3>
-            <p>The <b>$column_name</b> value can be filled by column name or function string.</p>
-            <h3>$sort_direction</h3>
-            <p>
-              The <b>$sort_direction</b> value can be string like:
-              <ul>
-                <li><code>asc</code> for ascending or,</li>
-                <li><code>desc</code> for descending</li>
-              </ul>
-            </p>
+            <h3>Parameters</h3>
+            <p>Update method has 2 required parameters and 1 optional parameter.</p>
+            <h4>$col_name</h4>
+            <p>The <code>$col_name</code> value can be a single column name or can be filled with wildcard "*", or can be filled with MySQL function.</p>
+            <h4>$alias</h4>
+            <p>The <code>$alias</code> value can be a string that represent the selected column.</p>
 
             <h2>Example</h2>
-            <p>
-              For example we assumed want to retrieve newest articles from blog table.
-            </p>
+            <p>For the example we assumed want to select a colum in a table with <code>union_select</code> method.</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -78,16 +70,66 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  &lt;?php
+                  &#x3C;?php
                   class Blog_Model extends SENE_Model{
-                    var $tbl = &#039;blog&#039;;
-                    var $tbl_as = &#039;b&#039;;
+                    var $tbl = &#x27;d_blog&#x27;;
+                    var $tbl_as = &#x27;b&#x27;;
+
                     public function __construct(){
                       parent::__construct();
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
                     }
-                    public function getLatest($di){
-                      $this-&gt;db-&gt;order_by(&quot;create_date&quot;,&quot;desc&quot;);
-                      return $this-&gt;db-&gt;get();
+                    public function searchByScore($keyword){
+                      $this-&#x3E;db-&#x3E;union_flush();
+
+                      //1st union
+                      $this-&#x3E;db-&#x3E;select(&#x27;id&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;title&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;excerpt&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;date_modified&#x27;);
+                      $this-&#x3E;db-&#x3E;select_as(&#x22;3&#x22;,&#x27;score&#x27;);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;where(&#x27;title&#x27;,$keyword,&#x27;or&#x27;,&#x27;like&#x27;,1,0);
+                      $this-&#x3E;db-&#x3E;where(&#x27;excerpt&#x27;,$keyword,&#x27;or&#x27;,&#x27;like&#x27;,0,1);
+                      $this-&#x3E;db-&#x3E;union_create();
+
+                      //2nd union
+                      $this-&#x3E;db-&#x3E;select(&#x27;id&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;title&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;excerpt&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;date_modified&#x27;);
+                      $this-&#x3E;db-&#x3E;select_as(&#x22;2&#x22;,&#x27;score&#x27;);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;where(&#x27;title&#x27;,$keyword,&#x27;or&#x27;,&#x27;like%&#x27;,1,0);
+                      $this-&#x3E;db-&#x3E;where(&#x27;excerpt&#x27;,$keyword,&#x27;or&#x27;,&#x27;like%&#x27;,0,1);
+                      $this-&#x3E;db-&#x3E;union_create();
+
+                      //2nd union
+                      $this-&#x3E;db-&#x3E;select(&#x27;id&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;title&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;excerpt&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;date_modified&#x27;);
+                      $this-&#x3E;db-&#x3E;select_as(&#x22;1&#x22;,&#x27;score&#x27;);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;where(&#x27;title&#x27;,$keyword,&#x27;or&#x27;,&#x27;%like&#x27;,1,0);
+                      $this-&#x3E;db-&#x3E;where(&#x27;excerpt&#x27;,$keyword,&#x27;or&#x27;,&#x27;%like&#x27;,0,1);
+                      $this-&#x3E;db-&#x3E;union_create();
+
+                      //3nd union
+                      $this-&#x3E;db-&#x3E;select(&#x27;id&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;title&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;excerpt&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;date_modified&#x27;);
+                      $this-&#x3E;db-&#x3E;select_as(&#x22;0&#x22;,&#x27;score&#x27;);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;where(&#x27;title&#x27;,$keyword,&#x27;or&#x27;,&#x27;%like%&#x27;,1,0);
+                      $this-&#x3E;db-&#x3E;where(&#x27;excerpt&#x27;,$keyword,&#x27;or&#x27;,&#x27;%like%&#x27;,0,1);
+                      $this-&#x3E;db-&#x3E;union_create();
+
+                      $this-&#x3E;db-&#x3E;union_select(&#x27;id,title,date_modified,score&#x27;,&#x27;score&#x27;);
+                      $this-&#x3E;db-&#x3E;union_group_by(&#x27;id&#x27;);
+                      $this-&#x3E;db-&#x3E;union_order_by(&#x27;score&#x27;,&#x27;desc&#x27;)-&#x3E;union_limit(1, 14);
+                      return $this-&#x3E;db-&#x3E;union_get();
                     }
                   }
                 </highlight-code>
@@ -96,19 +138,18 @@
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
-                <nuxt-link to="/4.0.0/model/limit/" class="btn">
+                <nuxt-link to="/4.0.0/model/union_order_by/" class="btn">
                   <i class="fa fa-chevron-left"></i>
-                  limit Method
+                  Union Get Method
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
-                <nuxt-link to="/4.0.0/model/page/" class="btn">
-                  page Method
+                <nuxt-link to="/4.0.0/model/update_as/" class="btn">
+                  Update AS Method
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -123,8 +164,8 @@ export default {
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'Order By Method',
-      description: 'Learn more about order_by method from $db property on SENE_Model class for Seme Framework 4.',
+      title: 'Union Select Method',
+      description: 'Learn union_select method from $db property on SENE_Model class for Seme Framework 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -189,9 +230,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-12T21:33:00+07:00",
-        "datePublished": "2021-07-12T21:33:00+07:00",
-        "dateModified": "2021-07-12T21:34:00+07:00",
+        "dateCreated": "2021-08-05T16:04:07+07:00",
+        "datePublished": "2021-08-05T16:04:07+07:00",
+        "dateModified": "2021-08-05T16:04:07+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

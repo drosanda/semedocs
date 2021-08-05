@@ -6,20 +6,20 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/model/">Model</NuxtLink></li>
-          <li class="unavailable">Get</li>
+          <li class="unavailable">Union Get</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Get Method</h1>
+            <h1 class="">Union Get Method</h1>
             <p>
-              The <code>get</code> method is a part of the <code>query builder</code> which is useful for getting <u>all results</u> from the query builder that has been compiled.
+              The <code>union_get</code> method for getting result from Union Query Builder.
             </p>
 
             <h2>Basic Usage</h2>
             <p>
-              Here is the basic usage <code>get</code> method from <code>$db</code> property on <NuxtLink to="/4.0.0/model/#SENE_Model" target="_blank">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
+              Here is the basic usage <code>union_get</code> method from <code>$db</code> property on <NuxtLink to="/4.0.0/model/#SENE_Model" target="_blank">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
             </p>
 
             <div class="macwindow">
@@ -41,22 +41,16 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;get([string $result_type = &#x22;&#x22; [, bool $is_debug = 0]]): mixed
+                  $this-&#x3E;db-&#x3E;union_get([bool $is_debug = 0]]): mixed
                 </highlight-code>
               </div>
             </div>
 
             <h3>Parameters</h3>
             <p>
-              This method has 2 optional parameters.
+              This method has 1 optional parameters.
             </p>
 
-            <h4>$result_type</h4>
-            <p>
-              The value of the <code>$result_type</code> parameter to determine the output of the get method.
-              Fill with <code>string &#x22;array&#x22;</code> to return the result value with data type <i>array of array</i>.
-              While the contents of other values to return values with data type <i>array of objects</i>.
-            </p>
             <h4>$is_debug</h4>
             <p>
               The <code>$is_debug</code> parameter is a marker (<em>flag</em>) to enable <i>debug</i> mode.
@@ -65,10 +59,9 @@
               In debug mode, there will be no query execution process to the database system.
             </p>
 
-
             <h2>Example</h2>
             <p>
-              Here is the example for <code>get</code> in a model class.
+              Here is the example for <code>union_get</code> in a model class.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -89,63 +82,72 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  class D_Blog_Model extends SENE_Model{
-                    var $tbl = &#x27;blog&#x27;;
+                  &#x3C;?php
+                  class Blog_Model extends SENE_Model{
+                    var $tbl = &#x27;d_blog&#x27;;
                     var $tbl_as = &#x27;b&#x27;;
 
                     public function __construct(){
                       parent::__construct();
-                    }
-                    ...
-                    public function getSearch($keyword){
                       $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
-                      $this-&#x3E;db-&#x3E;where(&#x22;title&#x22;, ($keyword), &#x22;OR&#x22;, &#x22;%like%&#x22;, 1, 0);
-                      $this-&#x3E;db-&#x3E;where(&#x22;content&#x22;, ($keyword), &#x22;AND&#x22;, &#x22;%like%&#x22;, 0, 1);
-                      $this-&#x3E;db-&#x3E;where(&#x22;is_published&#x22;, $this-&#x3E;db-&#x3E;esc(1));
-                      return $this-&#x3E;db-&#x3E;get();
                     }
-                    ...
+                    public function searchByScore($keyword){
+                      $this-&#x3E;db-&#x3E;union_flush();
+
+                      //1st union
+                      $this-&#x3E;db-&#x3E;select(&#x27;id&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;title&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;excerpt&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;date_modified&#x27;);
+                      $this-&#x3E;db-&#x3E;select_as(&#x22;3&#x22;,&#x27;score&#x27;);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;where(&#x27;title&#x27;,$keyword,&#x27;or&#x27;,&#x27;like&#x27;,1,0);
+                      $this-&#x3E;db-&#x3E;where(&#x27;excerpt&#x27;,$keyword,&#x27;or&#x27;,&#x27;like&#x27;,0,1);
+                      $this-&#x3E;db-&#x3E;union_create();
+
+                      //2nd union
+                      $this-&#x3E;db-&#x3E;select(&#x27;id&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;title&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;excerpt&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;date_modified&#x27;);
+                      $this-&#x3E;db-&#x3E;select_as(&#x22;2&#x22;,&#x27;score&#x27;);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;where(&#x27;title&#x27;,$keyword,&#x27;or&#x27;,&#x27;like%&#x27;,1,0);
+                      $this-&#x3E;db-&#x3E;where(&#x27;excerpt&#x27;,$keyword,&#x27;or&#x27;,&#x27;like%&#x27;,0,1);
+                      $this-&#x3E;db-&#x3E;union_create();
+
+                      //2nd union
+                      $this-&#x3E;db-&#x3E;select(&#x27;id&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;title&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;excerpt&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;date_modified&#x27;);
+                      $this-&#x3E;db-&#x3E;select_as(&#x22;1&#x22;,&#x27;score&#x27;);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;where(&#x27;title&#x27;,$keyword,&#x27;or&#x27;,&#x27;%like&#x27;,1,0);
+                      $this-&#x3E;db-&#x3E;where(&#x27;excerpt&#x27;,$keyword,&#x27;or&#x27;,&#x27;%like&#x27;,0,1);
+                      $this-&#x3E;db-&#x3E;union_create();
+
+                      //3nd union
+                      $this-&#x3E;db-&#x3E;select(&#x27;id&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;title&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;excerpt&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;date_modified&#x27;);
+                      $this-&#x3E;db-&#x3E;select_as(&#x22;0&#x22;,&#x27;score&#x27;);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;where(&#x27;title&#x27;,$keyword,&#x27;or&#x27;,&#x27;%like%&#x27;,1,0);
+                      $this-&#x3E;db-&#x3E;where(&#x27;excerpt&#x27;,$keyword,&#x27;or&#x27;,&#x27;%like%&#x27;,0,1);
+                      $this-&#x3E;db-&#x3E;union_create();
+
+                      $this-&#x3E;db-&#x3E;union_select(&#x27;id,title,date_modified,score&#x27;,&#x27;score&#x27;);
+                      $this-&#x3E;db-&#x3E;union_group_by(&#x27;id&#x27;);
+                      $this-&#x3E;db-&#x3E;union_order_by(&#x27;score&#x27;,&#x27;desc&#x27;)-&#x3E;union_limit(1, 14);
+                      return $this-&#x3E;db-&#x3E;union_get();
+                    }
                   }
                 </highlight-code>
               </div>
             </div>
 
-            <h3>SQL Result</h3>
-            <p>
-              The following is the SQL command that generated from <code>D_Blog_Model</code> class methods.
-            </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="sql">
-                  -- result from executing D_Blog_Model::getSearch('Seme Framework') --
-                  SELECT *
-                  FROM `d_blog` b
-                  WHERE
-                    (
-                      `title` LIKE '%Seme Framework%'
-                      OR `content` LIKE '%Seme Framework%'
-                    )
-                    AND `is_published` = 1;
-
-                </highlight-code>
-              </div>
-            </div>
 
           </div>
         </div>
@@ -154,14 +156,14 @@
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/4.0.0/model/get_first/" class="btn">
+          <nuxt-link to="/4.0.0/model/union_flush/" class="btn">
             <i class="fa fa-chevron-left"></i>
-            get_first Method
+            Union Flush Method
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/4.0.0/model/group_by/" class="btn">
-            group_by Method
+          <nuxt-link to="/4.0.0/model/union_group_by/" class="btn">
+            Union Group By Method
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
@@ -177,8 +179,8 @@ export default {
     return {
       name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
-      title: 'Get Method',
-      description: 'Learn about get method from $db property on SENE_Model class for Seme Framework 4.',
+      title: 'Union Get Method',
+      description: 'Learn about union_get method from $db property on SENE_Model class for Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -243,9 +245,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-12T19:32:00+07:00",
-        "datePublished": "2021-07-12T19:32:00+07:00",
-        "dateModified": "2021-07-12T19:34:00+07:00",
+        "dateCreated": "2021-08-05T16:44:00+07:00",
+        "datePublished": "2021-08-05T16:44:00+07:00",
+        "dateModified": "2021-08-05T16:44:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

@@ -4,21 +4,20 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/3.2.1">3.2.x</NuxtLink></li>
-          <li class=""><NuxtLink to="/3.2.1/model">Model</NuxtLink></li>
-          <li class="unavailable">Order By Method</li>
+          <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0.0/model/">Model</NuxtLink></li>
+          <li class="unavailable">Union Order By</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-
-            <h1 class="">Order By Method</h1>
-            <p>The <code>order_by</code> method is part of database class builder for sorting result query.</p>
+            <h1 class="">Union Order By Method</h1>
+            <p>The <code>union_order_by</code> method is part of database class builder for sorting result query.</p>
 
             <h2>Basic Usage</h2>
             <p>
-              Here is the basic usage <code>order_by</code> method from <code>$db</code> property on <NuxtLink to="/3.2.1/model/#SENE_Model" target="_blank">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
+              Here is the basic usage <code>union_order_by</code> method from <code>$db</code> property on <NuxtLink to="/4.0.0/model/#SENE_Model" target="_blank">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -79,50 +78,114 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  &lt;?php
+                  &#x3C;?php
                   class Blog_Model extends SENE_Model{
-                    var $tbl = &#039;blog&#039;;
-                    var $tbl_as = &#039;b&#039;;
+                    var $tbl = &#x27;d_blog&#x27;;
+                    var $tbl_as = &#x27;b&#x27;;
+
                     public function __construct(){
                       parent::__construct();
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
                     }
-                    public function getLatest($di){
-                      $this-&gt;db-&gt;order_by(&quot;create_date&quot;,&quot;desc&quot;);
-                      return $this-&gt;db-&gt;get();
+                    public function searchByScore($keyword){
+                      $this-&#x3E;db-&#x3E;union_flush();
+
+                      //1st union
+                      $this-&#x3E;db-&#x3E;select(&#x27;id&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;title&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;excerpt&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;date_modified&#x27;);
+                      $this-&#x3E;db-&#x3E;select_as(&#x22;3&#x22;,&#x27;score&#x27;);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;where(&#x27;title&#x27;,$keyword,&#x27;or&#x27;,&#x27;like&#x27;,1,0);
+                      $this-&#x3E;db-&#x3E;where(&#x27;excerpt&#x27;,$keyword,&#x27;or&#x27;,&#x27;like&#x27;,0,1);
+                      $this-&#x3E;db-&#x3E;union_create();
+
+                      //2nd union
+                      $this-&#x3E;db-&#x3E;select(&#x27;id&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;title&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;excerpt&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;date_modified&#x27;);
+                      $this-&#x3E;db-&#x3E;select_as(&#x22;2&#x22;,&#x27;score&#x27;);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;where(&#x27;title&#x27;,$keyword,&#x27;or&#x27;,&#x27;like%&#x27;,1,0);
+                      $this-&#x3E;db-&#x3E;where(&#x27;excerpt&#x27;,$keyword,&#x27;or&#x27;,&#x27;like%&#x27;,0,1);
+                      $this-&#x3E;db-&#x3E;union_create();
+
+                      //2nd union
+                      $this-&#x3E;db-&#x3E;select(&#x27;id&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;title&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;excerpt&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;date_modified&#x27;);
+                      $this-&#x3E;db-&#x3E;select_as(&#x22;1&#x22;,&#x27;score&#x27;);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;where(&#x27;title&#x27;,$keyword,&#x27;or&#x27;,&#x27;%like&#x27;,1,0);
+                      $this-&#x3E;db-&#x3E;where(&#x27;excerpt&#x27;,$keyword,&#x27;or&#x27;,&#x27;%like&#x27;,0,1);
+                      $this-&#x3E;db-&#x3E;union_create();
+
+                      //3nd union
+                      $this-&#x3E;db-&#x3E;select(&#x27;id&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;title&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;excerpt&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;date_modified&#x27;);
+                      $this-&#x3E;db-&#x3E;select_as(&#x22;0&#x22;,&#x27;score&#x27;);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;where(&#x27;title&#x27;,$keyword,&#x27;or&#x27;,&#x27;%like%&#x27;,1,0);
+                      $this-&#x3E;db-&#x3E;where(&#x27;excerpt&#x27;,$keyword,&#x27;or&#x27;,&#x27;%like%&#x27;,0,1);
+                      $this-&#x3E;db-&#x3E;union_create();
+
+                      $this-&#x3E;db-&#x3E;union_select(&#x27;id,title,date_modified,score&#x27;,&#x27;score&#x27;);
+                      $this-&#x3E;db-&#x3E;union_group_by(&#x27;id&#x27;);
+                      $this-&#x3E;db-&#x3E;union_order_by(&#x27;score&#x27;,&#x27;desc&#x27;)-&#x3E;union_limit(1, 14);
+                      return $this-&#x3E;db-&#x3E;union_get();
                     }
                   }
                 </highlight-code>
               </div>
             </div>
 
+            <div class="nav-bottom">
+              <div class="nav-bottom-left">
+                <nuxt-link to="/4.0.0/model/union_limit/" class="btn">
+                  <i class="fa fa-chevron-left"></i>
+                  Union Limit Method
+                </nuxt-link>
+              </div>
+              <div class="nav-bottom-right">
+                <nuxt-link to="/4.0.0/model/union_select/" class="btn">
+                  Union Select Method
+                  <i class="fa fa-chevron-right"></i>
+                </nuxt-link>
+              </div>
+            </div>
 
           </div>
         </div>
-
       </div>
+
     </div>
   </div>
 </template>
 <script>
 export default {
-  layout: 'v3.2',
+  layout: 'v4.0.0',
   data (){
     return {
-      name: 'Seme Framework 3.2.3',
-      suffix: ' - Seme Framework 3.2.3',
-      title: 'Order By Method',
-      description: 'Learn more about order_by method from $db property on SENE_Model class for Seme Framework 3.2.3.',
+      name: 'Seme Framework 4',
+      suffix: ' - Seme Framework 4',
+      title: 'Union Order By Method',
+      description: 'Learn more about union_order_by method from $db property on SENE_Model class for Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
           text: 'Seme Framework'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2.1',
-          text: '3.2.x'
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0',
+          text: '4.0.2'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2.1/model',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/model',
           text: 'Model'
         }
       ],

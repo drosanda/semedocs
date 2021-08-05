@@ -6,18 +6,21 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0.0/model/">Model</NuxtLink></li>
-          <li class="unavailable">Order By</li>
+          <li class="unavailable">Union Limit</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Order By Method</h1>
-            <p>The <code>order_by</code> method is part of database class builder for sorting result query.</p>
+            <h1 class="">Union Limit Method</h1>
+            <p>
+              The <code>union_limit</code> method is part of Query Builder for limiting query result by executing <code>LIMIT [A],[B]</code> SQL command.
+              This method also suitable for creating pagination with datatables pagination.
+            </p>
 
             <h2>Basic Usage</h2>
             <p>
-              Here is the basic usage <code>order_by</code> method from <code>$db</code> property on <NuxtLink to="/4.0.0/model/#SENE_Model" target="_blank">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
+              Here is the basic usage <code>union_limit</code> method from <code>$db</code> property on <NuxtLink to="/4.0.0/model/#SENE_Model" target="_blank">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -38,27 +41,25 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;group_by(string $column_name, string $sort_direction): $this-&#x3E;db
+                  $this-&gt;db-&gt;union_limit(int $a, int $b): $this-&#x3E;db
                 </highlight-code>
               </div>
             </div>
-            <h2>Parameters</h2>
+
+            <h3>Parameters</h3>
             <p>This method has 2 required parameters.</p>
-            <h3>$column_name</h3>
-            <p>The <b>$column_name</b> value can be filled by column name or function string.</p>
-            <h3>$sort_direction</h3>
+
+            <h4>$a</h4>
             <p>
-              The <b>$sort_direction</b> value can be string like:
-              <ul>
-                <li><code>asc</code> for ascending or,</li>
-                <li><code>desc</code> for descending</li>
-              </ul>
+              The <code>$a</code> value can be zero or positive integer for specifying the offset of the first row to be returned.
+            </p>
+            <h4>$b</h4>
+            <p>
+              The <b>$b</b> value can be zero or positive integer for specifying the maximum number of rows to be returned.
             </p>
 
             <h2>Example</h2>
-            <p>
-              For example we assumed want to retrieve newest articles from blog table.
-            </p>
+            <p>On this example will show limiting the result query by using <code>union_limit</code> method in a model class.</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -78,16 +79,66 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  &lt;?php
+                  &#x3C;?php
                   class Blog_Model extends SENE_Model{
-                    var $tbl = &#039;blog&#039;;
-                    var $tbl_as = &#039;b&#039;;
+                    var $tbl = &#x27;d_blog&#x27;;
+                    var $tbl_as = &#x27;b&#x27;;
+
                     public function __construct(){
                       parent::__construct();
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
                     }
-                    public function getLatest($di){
-                      $this-&gt;db-&gt;order_by(&quot;create_date&quot;,&quot;desc&quot;);
-                      return $this-&gt;db-&gt;get();
+                    public function searchByScore($keyword){
+                      $this-&#x3E;db-&#x3E;union_flush();
+
+                      //1st union
+                      $this-&#x3E;db-&#x3E;select(&#x27;id&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;title&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;excerpt&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;date_modified&#x27;);
+                      $this-&#x3E;db-&#x3E;select_as(&#x22;3&#x22;,&#x27;score&#x27;);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;where(&#x27;title&#x27;,$keyword,&#x27;or&#x27;,&#x27;like&#x27;,1,0);
+                      $this-&#x3E;db-&#x3E;where(&#x27;excerpt&#x27;,$keyword,&#x27;or&#x27;,&#x27;like&#x27;,0,1);
+                      $this-&#x3E;db-&#x3E;union_create();
+
+                      //2nd union
+                      $this-&#x3E;db-&#x3E;select(&#x27;id&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;title&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;excerpt&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;date_modified&#x27;);
+                      $this-&#x3E;db-&#x3E;select_as(&#x22;2&#x22;,&#x27;score&#x27;);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;where(&#x27;title&#x27;,$keyword,&#x27;or&#x27;,&#x27;like%&#x27;,1,0);
+                      $this-&#x3E;db-&#x3E;where(&#x27;excerpt&#x27;,$keyword,&#x27;or&#x27;,&#x27;like%&#x27;,0,1);
+                      $this-&#x3E;db-&#x3E;union_create();
+
+                      //2nd union
+                      $this-&#x3E;db-&#x3E;select(&#x27;id&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;title&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;excerpt&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;date_modified&#x27;);
+                      $this-&#x3E;db-&#x3E;select_as(&#x22;1&#x22;,&#x27;score&#x27;);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;where(&#x27;title&#x27;,$keyword,&#x27;or&#x27;,&#x27;%like&#x27;,1,0);
+                      $this-&#x3E;db-&#x3E;where(&#x27;excerpt&#x27;,$keyword,&#x27;or&#x27;,&#x27;%like&#x27;,0,1);
+                      $this-&#x3E;db-&#x3E;union_create();
+
+                      //3nd union
+                      $this-&#x3E;db-&#x3E;select(&#x27;id&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;title&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;excerpt&#x27;);
+                      $this-&#x3E;db-&#x3E;select(&#x27;date_modified&#x27;);
+                      $this-&#x3E;db-&#x3E;select_as(&#x22;0&#x22;,&#x27;score&#x27;);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;where(&#x27;title&#x27;,$keyword,&#x27;or&#x27;,&#x27;%like%&#x27;,1,0);
+                      $this-&#x3E;db-&#x3E;where(&#x27;excerpt&#x27;,$keyword,&#x27;or&#x27;,&#x27;%like%&#x27;,0,1);
+                      $this-&#x3E;db-&#x3E;union_create();
+
+                      $this-&#x3E;db-&#x3E;union_select(&#x27;id,title,date_modified,score&#x27;,&#x27;score&#x27;);
+                      $this-&#x3E;db-&#x3E;union_group_by(&#x27;id&#x27;);
+                      $this-&#x3E;db-&#x3E;union_order_by(&#x27;score&#x27;,&#x27;desc&#x27;)-&#x3E;union_limit(1, 14);
+                      return $this-&#x3E;db-&#x3E;union_get();
                     }
                   }
                 </highlight-code>
@@ -96,14 +147,14 @@
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
-                <nuxt-link to="/4.0.0/model/limit/" class="btn">
+                <nuxt-link to="/4.0.0/model/union_group_by/" class="btn">
                   <i class="fa fa-chevron-left"></i>
-                  limit Method
+                  Union Group By Method
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
-                <nuxt-link to="/4.0.0/model/page/" class="btn">
-                  page Method
+                <nuxt-link to="/4.0.0/model/union_order_by/" class="btn">
+                  Union Order Method
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
@@ -112,7 +163,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </template>
@@ -123,8 +173,8 @@ export default {
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'Order By Method',
-      description: 'Learn more about order_by method from $db property on SENE_Model class for Seme Framework 4.',
+      title: 'Union Limit Method',
+      description: 'Learn more about limit method from $db property on SENE_Model class for Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -138,7 +188,7 @@ export default {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/model',
           text: 'Model'
         }
-      ],
+      ]
     }
   },
   head() {
@@ -189,9 +239,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-12T21:33:00+07:00",
-        "datePublished": "2021-07-12T21:33:00+07:00",
-        "dateModified": "2021-07-12T21:34:00+07:00",
+        "dateCreated": "2021-08-03T10:24:00+07:00",
+        "datePublished": "2021-08-03T10:24:00+07:00",
+        "dateModified": "2021-08-03T10:24:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
