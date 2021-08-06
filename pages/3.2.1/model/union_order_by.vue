@@ -42,11 +42,11 @@
                 </highlight-code>
               </div>
             </div>
-            <h2>Parameters</h2>
+            <h3>Parameters</h3>
             <p>This method has 2 required parameters.</p>
-            <h3>$column_name</h3>
+            <h4>$column_name</h4>
             <p>The <b>$column_name</b> value can be filled by column name or function string.</p>
-            <h3>$sort_direction</h3>
+            <h4>$sort_direction</h4>
             <p>
               The <b>$sort_direction</b> value can be string like:
               <ul>

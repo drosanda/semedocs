@@ -17,7 +17,7 @@
               Metode putJsContent dari <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> digunakan untuk memanggil isi dari file javascript yang dibungkus dalam file php kedalam template html.
             </p>
             <p>
-              Untuk pemanggilan di viewnya, metode ini membutuhkan <NuxtLink to="/4.0.0/controller/getjscontent/">getJsContent()</NuxtLink> yang diapit didalam tag script.
+              Untuk pemanggilan di viewnya, metode ini membutuhkan <NuxtLink to="/id/controller/getjscontent/">getJsContent()</NuxtLink> yang diapit didalam tag script.
             </p>
 
             <h2>Bentuk Umum</h2>

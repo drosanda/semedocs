@@ -4,20 +4,23 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0.0/model/">Model</NuxtLink></li>
-          <li class="unavailable">Union Order By</li>
+          <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
+          <li class=""><NuxtLink to="/id/model/">Model</NuxtLink></li>
+          <li class="unavailable">Union Limit</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Union Order By Method</h1>
-            <p>The <code>union_order_by</code> method is part of database class builder for sorting result query.</p>
-
-            <h2>Basic Usage</h2>
+            <h1 class="">Metode Union Limit</h1>
             <p>
-              Here is the basic usage <code>union_order_by</code> method from <code>$db</code> property on <NuxtLink to="/4.0.0/model/#SENE_Model" target="_blank">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
+              Metode <code>union_limit</code> berfugsi menghasilkan perintah SQL <code>LIMIT [A],[B]</code> khusus untuk Union Query Buffer.
+              Metode ini juga cocok untuk membuat <em>pagination</em>.
+            </p>
+
+            <h2>Bentuk Umum</h2>
+            <p>
+              Berikut ini adalah bentuk umum metode <code>union_limit</code> dari properti <code>$db</code> yang ada di kelas <code>SENE_Model</code>.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -38,26 +41,26 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;group_by(string $column_name, string $sort_direction): $this-&#x3E;db
+                  $this-&gt;db-&gt;union_limit(int $a, int $b): $this-&#x3E;db
                 </highlight-code>
               </div>
             </div>
-            <h3>Parameters</h3>
-            <p>This method has 2 required parameters.</p>
-            <h4>$column_name</h4>
-            <p>The <b>$column_name</b> value can be filled by column name or function string.</p>
-            <h4>$sort_direction</h4>
+
+            <h3>Parameter</h3>
+            <p>Metode ini terdiri dari 2 parameter wajib</p>
+
+            <h4>$a</h4>
             <p>
-              The <b>$sort_direction</b> value can be string like:
-              <ul>
-                <li><code>asc</code> for ascending or,</li>
-                <li><code>desc</code> for descending</li>
-              </ul>
+              Nilai <code>$a</code> dapat berupa nol atau bilangan bulat positif untuk menentukan offset dari baris pertama yang akan dikembalikan.
+            </p>
+            <h4>$b</h4>
+            <p>
+              Nilai <code>$b</code> dapat berupa nol atau bilangan bulat positif untuk menentukan jumlah maksimum baris yang akan dikembalikan.
             </p>
 
-            <h2>Example</h2>
+            <h2>Contoh</h2>
             <p>
-              For example we assumed want to retrieve newest articles from blog table.
+              Berikut adalah implementasi kode sumber dari metode <code>union_limit</code> di kelas model.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -146,14 +149,14 @@
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
-                <nuxt-link to="/4.0.0/model/union_limit/" class="btn">
+                <nuxt-link to="/id/model/union_group_by/" class="btn">
                   <i class="fa fa-chevron-left"></i>
-                  Union Limit Method
+                  Metode Union Group By
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
-                <nuxt-link to="/4.0.0/model/union_select/" class="btn">
-                  Union Select Method
+                <nuxt-link to="/id/model/union_order_by/" class="btn">
+                  Metode Union Order By
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
@@ -162,33 +165,32 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </template>
 <script>
 export default {
-  layout: 'v4.0.0',
+  layout: 'id',
   data (){
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'Union Order By Method',
-      description: 'Learn more about union_order_by method from $db property on SENE_Model class for Seme Framework 4.',
+      title: 'Metode Union Limit',
+      description: 'Pelajari metode union_limit dari properti $db pada kelas SENE_Model di Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
           text: 'Seme Framework'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0',
-          text: '4.0.2'
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id',
+          text: 'ID'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/model',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/model',
           text: 'Model'
         }
-      ],
+      ]
     }
   },
   head() {
@@ -239,9 +241,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-12T21:33:00+07:00",
-        "datePublished": "2021-07-12T21:33:00+07:00",
-        "dateModified": "2021-07-12T21:34:00+07:00",
+        "dateCreated": "2021-08-06T10:44:00+07:00",
+        "datePublished": "2021-08-06T10:44:00+07:00",
+        "dateModified": "2021-08-06T10:44:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

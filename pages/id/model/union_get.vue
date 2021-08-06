@@ -4,20 +4,22 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0.0/">4.0.2</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0.0/model/">Model</NuxtLink></li>
-          <li class="unavailable">Union Order By</li>
+          <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
+          <li class=""><NuxtLink to="/id/model/">Model</NuxtLink></li>
+          <li class="unavailable">Union Get</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Union Order By Method</h1>
-            <p>The <code>union_order_by</code> method is part of database class builder for sorting result query.</p>
-
-            <h2>Basic Usage</h2>
+            <h1 class="">Metode Union Get</h1>
             <p>
-              Here is the basic usage <code>union_order_by</code> method from <code>$db</code> property on <NuxtLink to="/4.0.0/model/#SENE_Model" target="_blank">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
+              Metode <code>union_get</code> berguna untuk mengeksekusi query dari <b>Union Query Buffer</b> dan mengembalikan data dari hasil query tersebut.
+            </p>
+
+            <h2>Bentuk Umum</h2>
+            <p>
+              Berikut ini adalah bentuk umum metode <code>union_get</code> dari properti <code>$db</code> yang ada di kelas <code>SENE_Model</code>.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -38,26 +40,27 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;group_by(string $column_name, string $sort_direction): $this-&#x3E;db
+                  $this-&#x3E;db-&#x3E;union_get([bool $is_debug = 0]]): mixed
                 </highlight-code>
               </div>
             </div>
-            <h3>Parameters</h3>
-            <p>This method has 2 required parameters.</p>
-            <h4>$column_name</h4>
-            <p>The <b>$column_name</b> value can be filled by column name or function string.</p>
-            <h4>$sort_direction</h4>
+
+            <h3>Parameter</h3>
             <p>
-              The <b>$sort_direction</b> value can be string like:
-              <ul>
-                <li><code>asc</code> for ascending or,</li>
-                <li><code>desc</code> for descending</li>
-              </ul>
+              Metode ini tediri dari 1 parameter opsional.
             </p>
 
-            <h2>Example</h2>
+            <h4>$is_debug</h4>
             <p>
-              For example we assumed want to retrieve newest articles from blog table.
+              Parameter <code>$is_debug</code> merupakan sebuah penanda (<em>flag</em>) untuk mengaktifkan mode <i>debug</i>.
+              Nilai dari parameter ini bisa diis dengan <code>int 1</code> untuk mengaktifkan mode debug dan menampilkan query yang akan diproses.
+              Isi dengan nilai lainnya untuk tidak mengaktifkan mode debug.
+              Pada mode debug, tidak akan ada proses eksekusi query ke sistem database.
+            </p>
+
+            <h2>Contoh</h2>
+            <p>
+              Pada contoh ini akan ditampilkan implementasi metode <code>union_get</code>.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -144,22 +147,24 @@
               </div>
             </div>
 
-            <div class="nav-bottom">
-              <div class="nav-bottom-left">
-                <nuxt-link to="/4.0.0/model/union_limit/" class="btn">
-                  <i class="fa fa-chevron-left"></i>
-                  Union Limit Method
-                </nuxt-link>
-              </div>
-              <div class="nav-bottom-right">
-                <nuxt-link to="/4.0.0/model/union_select/" class="btn">
-                  Union Select Method
-                  <i class="fa fa-chevron-right"></i>
-                </nuxt-link>
-              </div>
-            </div>
 
           </div>
+        </div>
+
+      </div>
+
+      <div class="nav-bottom">
+        <div class="nav-bottom-left">
+          <nuxt-link to="/id/model/union_flush/" class="btn">
+            <i class="fa fa-chevron-left"></i>
+            Union Flush Method
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/id/model/union_group_by/" class="btn">
+            Union Group By Method
+            <i class="fa fa-chevron-right"></i>
+          </nuxt-link>
         </div>
       </div>
 
@@ -168,24 +173,24 @@
 </template>
 <script>
 export default {
-  layout: 'v4.0.0',
+  layout: 'id',
   data (){
     return {
-      name: 'Seme Framework 4',
+      name: 'Seme Framework v4.0.0',
       suffix: ' - Seme Framework 4',
-      title: 'Union Order By Method',
-      description: 'Learn more about union_order_by method from $db property on SENE_Model class for Seme Framework 4.',
+      title: 'Metode Union Get',
+      description: 'Pelajari metode union_get dari properti $db pada kelas SENE_Model di Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
           text: 'Seme Framework'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0',
-          text: '4.0.2'
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id',
+          text: 'ID'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0.0/model',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/model',
           text: 'Model'
         }
       ],
@@ -239,9 +244,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-12T21:33:00+07:00",
-        "datePublished": "2021-07-12T21:33:00+07:00",
-        "dateModified": "2021-07-12T21:34:00+07:00",
+        "dateCreated": "2021-08-06T13:14:00+07:00",
+        "datePublished": "2021-08-06T13:14:00+07:00",
+        "dateModified": "2021-08-06T13:14:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

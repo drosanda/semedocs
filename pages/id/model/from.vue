@@ -58,7 +58,7 @@
             <h4>$table_alias</h4>
             <p>
               Nilai dari parameter <b>$table_alias</b> dapat berisi nama alias tabel.
-              Dalam Seme Framework alias ini wajib diisi ketika akan menggunakan metode <NuxtLink to="/4.0.0/model/join/">join</NuxtLink>.
+              Dalam Seme Framework alias ini wajib diisi ketika akan menggunakan metode <NuxtLink to="/id/model/join/">join</NuxtLink>.
             </p>
 
             <h2>Contoh Penggunaan</h2>

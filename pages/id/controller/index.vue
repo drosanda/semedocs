@@ -111,7 +111,7 @@
             <h3>Direktori Spesial: admin</h3>
             <p>
               Seme Framework mendukung direktori spesial untuk pembuatan halaman admin (<code>app/controller/admin</code>).
-              Direktori ini memiliki perlakuan khusus dalam pemetaan ulang URL Request. Pelajari selengkapnya tentang <NuxtLink to="http://localhost:3001/4.0.0/uri_routing/admin/">halaman admin</NuxtLink>.
+              Direktori ini memiliki perlakuan khusus dalam pemetaan ulang URL Request. Pelajari selengkapnya tentang <NuxtLink to="/id/uri_routing/admin/">halaman admin</NuxtLink>.
             </p>
 
             <h3>Kedalaman Direktori</h3>
@@ -348,7 +348,7 @@
             </div>
             <p>
               Seme Framework hanya akan memuat pengontrol dengan nama file dan nama kelasnya cocok.
-              Namun, Seme Framework memiliki dukungan untuk <NuxtLink to="/4.0.0/configuration/routes/">Pemetaan Ulang Kontroler URI</NuxtLink>.
+              Namun, Seme Framework memiliki dukungan untuk <NuxtLink to="/id/configuration/routes/">Pemetaan Ulang Kontroler URI</NuxtLink>.
             </p>
 
             <h3>Controller Spesial: Notfound</h3>

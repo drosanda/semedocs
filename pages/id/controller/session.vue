@@ -13,7 +13,7 @@
         <div class="column">
           <div class="content">
             <h1 class="">Menggunakan Session</h1>
-  					<p>Seme Framework comes with builtin session manager which stored to <code>$_SESSION</code> array with randomize string that define through <NuxtLink to="/4.0.0/configuration/session/">configuration</NuxtLink>. Method <code>setKey()</code> from Sene_controller allowed you to pass array of object or objects to save in session. And Method <code>getKey()</code> allowed to get any stored value to session. Here is the example</p>
+  					<p>Seme Framework comes with builtin session manager which stored to <code>$_SESSION</code> array with randomize string that define through <NuxtLink to="/id/configuration/session/">configuration</NuxtLink>. Method <code>setKey()</code> from Sene_controller allowed you to pass array of object or objects to save in session. And Method <code>getKey()</code> allowed to get any stored value to session. Here is the example</p>
   					<pre>
   class Home extends SENE_Controller{
   &#x9;public function __construct(){

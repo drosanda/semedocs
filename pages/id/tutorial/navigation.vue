@@ -153,13 +153,13 @@
                 <a href="https://materializecss.com/navbar.html" target="_blank">Navbar materializeCSS <i class="fa fa-external-link"></i></a>
               </li>
               <li>
-                <NuxtLink to="/4.0.0/controller/getthemeelement/" target="_blank">getThemeElement <i class="fa fa-window-restore"></i></NuxtLink>
+                <NuxtLink to="/id/controller/getthemeelement/" target="_blank">getThemeElement <i class="fa fa-window-restore"></i></NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/4.0.0/controller/loadlayout/" target="_blank">loadLayout <i class="fa fa-window-restore"></i></NuxtLink>
+                <NuxtLink to="/id/controller/loadlayout/" target="_blank">loadLayout <i class="fa fa-window-restore"></i></NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/4.0.0/view/theme/" target="_blank">View Theme <i class="fa fa-window-restore"></i></NuxtLink>
+                <NuxtLink to="/id/view/theme/" target="_blank">View Theme <i class="fa fa-window-restore"></i></NuxtLink>
               </li>
             </ol>
 

@@ -53,7 +53,7 @@
 
             <h4>$col_name</h4>
             <p>
-              Nilai dari <code>$col_name</code> dapat berisi nama kolom dari tabel yang digunakan melalui metode <NuxtLink to="/4.0.0/model/from/">from</NuxtLink> maupun metode <NuxtLink to="/4.0.0/model/join/">join</NuxtLink>.
+              Nilai dari <code>$col_name</code> dapat berisi nama kolom dari tabel yang digunakan melalui metode <NuxtLink to="/id/model/from/">from</NuxtLink> maupun metode <NuxtLink to="/id/model/join/">join</NuxtLink>.
             </p>
 
             <h2>Contoh penggunaan</h2>

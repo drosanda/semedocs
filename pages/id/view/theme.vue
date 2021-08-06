@@ -79,7 +79,7 @@
             <h4>The Layout File</h4>
             <p>
             Layout file is main file for the reusable component. The location of layout file is under <code>page</code> directory inside theme directory.
-            This layout file can be loaded by using <NuxtLink to="/4.0.0/controller/loadlayout/">loadLayout()</NuxtLink> method from SENE_Controller class.
+            This layout file can be loaded by using <NuxtLink to="/id/controller/loadlayout/">loadLayout()</NuxtLink> method from SENE_Controller class.
             </p>
             <p>
             Here is the example codes for a layout file named <code>col-1.php</code> file.
@@ -134,7 +134,7 @@
             <h4>theme.json File</h4>
             <p>
             The theme.json file contain about css links tags to use in inside head tag.
-            This file are processed by <NuxtLink to="/4.0.0/controller/constructor/">SENE_Controller class constructor</NuxtLink> and outputed by <NuxtLink to="/4.0.0/controller/getadditional/">getAdditional()</NuxtLink>.
+            This file are processed by <NuxtLink to="/id/controller/constructor/">SENE_Controller class constructor</NuxtLink> and outputed by <NuxtLink to="/id/controller/getadditional/">getAdditional()</NuxtLink>.
             </p>
 
             <h5>theme.json JSON String Example</h5>
@@ -219,7 +219,7 @@
             <h4>script.json File</h4>
             <p>
             The script.json file contain about script tags for javascript source file.
-            This file are processed by <NuxtLink to="/4.0.0/controller/constructor/">SENE_Controller class constructor</NuxtLink> and outputed by <NuxtLink to="/4.0.0/controller/getjsfooter/">getJsFooter()</NuxtLink>.
+            This file are processed by <NuxtLink to="/id/controller/constructor/">SENE_Controller class constructor</NuxtLink> and outputed by <NuxtLink to="/id/controller/getjsfooter/">getJsFooter()</NuxtLink>.
             </p>
 
             <h5>script.json JSON String Example</h5>
