@@ -263,7 +263,7 @@ export default {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'View',
-      description: 'Pelajari selengkapnya penggunaan konsep View di Seme Framework versi 4.0.0.',
+      description: 'Pelajari selengkapnya konsep dan penggunaan View di Seme Framework versi 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -328,9 +328,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2020-06-11T10:12:00+07:00",
-        "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-25T17:11:31+07:00",
+        "dateCreated": "2021-08-06T14:56:31+07:00",
+        "datePublished": "2021-08-06T14:56:31+07:00",
+        "dateModified": "2021-08-06T14:56:31+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
