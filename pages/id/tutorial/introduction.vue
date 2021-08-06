@@ -87,7 +87,7 @@
 
             <h2 id="part2">Hello World bagian 2</h2>
             <p>
-              Pada hellow world bagian kedua, kita akan mencoba untuk mengimplementasikan Hello World melalui sebuah tema tampilan.
+              Pada hello world bagian kedua, kita akan mencoba untuk mengimplementasikan Hello World melalui sebuah tema tampilan.
               Kita akan mulai membuat view, kemudian tema, lalu menyesuaikan controller supaya dapat memanggil tema yang sudah dibuat.
             </p>
 
