@@ -166,7 +166,7 @@ export default {
       name: 'Seme Framework 3.2.3',
       suffix: ' - Seme Framework 3.2.3',
       title: 'Limit Method',
-      description: 'Learn more about limit method from $db property on SENE_Model class for Seme Framework 3.2.3.',
+      description: 'Learn about limit method from $db property on SENE_Model class for Seme Framework 3.2.3.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
