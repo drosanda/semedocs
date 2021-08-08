@@ -113,10 +113,10 @@ export default {
     return {
       base_url: '{{base_url}}',
       cdn_url: '{{cdn_url}}',
-      name: 'Seme Framework v3.2.3',
-      suffix: ' - Seme Framework 3.2.3',
+      name: 'Seme Framework v3.2.5',
+      suffix: ' - Seme Framework 3.2.5',
       title: 'The {{cdn_url}} keyword',
-      description: 'Learn how to use The {{cdn_url}} keyword on Seme Framework 3.2.3.',
+      description: 'Learn how to use The {{cdn_url}} keyword on Seme Framework 3.2.5.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

@@ -170,8 +170,8 @@ export default {
     return {
       base_url: '{{base_url}}',
       cdn_url: '{{cdn_url}}',
-      name: 'Seme Framework v3.2.3',
-      suffix: ' - Seme Framework 3.2.3',
+      name: 'Seme Framework v3.2.5',
+      suffix: ' - Seme Framework 3.2.5',
       title: 'The theme json File',
       description: 'Learn how to use theme json file on Seme Framework 4 theme.',
       breadcrumbs: [

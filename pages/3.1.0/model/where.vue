@@ -134,7 +134,7 @@ WHERE
   </template>
 <script>
   export default {
-    layout: 'v3.1.0'
+    layout: 'v3.1'
     // page component definitions
   }
 </script>

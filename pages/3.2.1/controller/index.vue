@@ -318,7 +318,7 @@ export default {
       name: 'Seme Framework v3.2.1',
       suffix: ' - Seme Framework 3.2.1',
       title: 'Controller',
-      description: 'Learn more about controller class of Seme Framework version 3.2.3 through this documentation.',
+      description: 'Learn more about controller class of Seme Framework version 3.2.5 through this documentation.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

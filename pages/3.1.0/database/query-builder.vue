@@ -240,7 +240,7 @@ $this-&#x3E;db-&#x3E;select(&#x27;column_name&#x27;,&#x27;cn&#x27;);
 </template>
 <script>
   export default {
-    layout: 'v3.1.0',
+    layout: 'v3.1',
     data (){
       return {
         name: 'Seme Framework v3.1.0',

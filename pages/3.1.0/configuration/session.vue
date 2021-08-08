@@ -12,43 +12,69 @@
       <div class="column">
         <div class="content">
           <h1 class="">Configuration: session.php</h1>
-          <p>Session configuration define the <code>$_SESSION[$key]</code> used by framework.</p>
-          <p>If you installed 2 framework on same server with same login method and same session key, the app will be share same session.</p>
-          <p>If you want to separated it, simply fill the session key value uniquely.</p>
-          <p>The session configuration located at <code>app/config/session.php</code>.</p>
+          <p>
+            Session configuration define the <code>$_SESSION[$key]</code> used by framework.
+            If you installed 2 framework on same server with same login method and same session key, the app will be share same session.
+            If you want to separated it, simply fill the session key value uniquely.
+            The session configuration located at <code>app/config/session.php</code>.
+          </p>
           <h2>Example</h2>
-          <pre><code v-highlight class="php">&#x3C;?php
-$saltkey = 's3M3Fr31$';</code></pre>
+          <div class="macwindow">
+            <div class="titlebar">
+              <div class="buttons">
+                <div class="close">
+                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                  <!-- close button link -->
+                </div>
+                <div class="minimize">
+                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                  <!-- minimize button link -->
+                </div>
+                <div class="zoom">
+                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                  <!-- zoom button link -->
+                </div>
+              </div>
+            </div>
+            <div class="maccontent">
+              <highlight-code lang="php">
+                &#x3C;?php
+                ...
+                $saltkey = 's3M3Fr321$';
+                ...
+              </highlight-code>
+            </div>
+          </div>
         </div>
       </div>
 
-    </div>
-
-
-    <div class="columns">
-      <div class="column">
-        <div class="buttons">
-          <b-button tag="router-link" to="/3.1.0/configuration/database/" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-            Configuration: database.php
-          </b-button>
-          <b-button tag="router-link" to="/3.1.0/configuration/timezone/" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-            Configuration: timezone.php
-          </b-button>
-        </div>
-      </div>
     </div>
 
   </div>
 </template>
 <script>
   export default {
-    layout: 'v3.1.0',
+    layout: 'v3.1',
     data() {
       return {
-        name: 'Seme Framework v3.1.0',
-        suffix: ' - Seme Framework v3.1.0 Documentation',
+        name: 'Seme Framework v3.1.5',
+        suffix: ' - Seme Framework 3.1.5',
         title: 'Configuration: session.php',
-        description: 'File session.php for Seme Framework version 3.x basic setting'
+        description: 'File session.php for Seme Framework version 3.1.x basic setting',
+        breadcrumbs: [
+          {
+            url: process.env.BASE_URL || 'http://localhost:3001',
+            text: 'Seme Framework'
+          },
+          {
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1.0',
+            text: '3.1.x'
+          },
+          {
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1.0/configuration',
+            text: 'Configuration'
+          }
+        ],
       }
     },
     head() {
@@ -72,6 +98,63 @@ $saltkey = 's3M3Fr31$';</code></pre>
           }
         ]
       }
+    },
+    jsonld() {
+      this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+      const items = this.breadcrumbs.map((item, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@id': item.url,
+          name: item.text,
+        },
+      }));
+      return [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: items,
+        },
+        {
+          "@type": "NewsArticle",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+          },
+          "headline": (this.headline || this.title),
+          "image": [
+            (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
+          ],
+          "dateCreated": "2021-07-13T13:34:00+07:00",
+          "datePublished": "2021-07-13T13:34:00+07:00",
+          "dateModified": "2021-07-13T13:36:00+07:00",
+          "author": {
+            "@type": "Person",
+            "gender": "Male",
+            "name": "Daeng Rosanda, S.Kom",
+            "alternateName": "Daeng Rosanda",
+            "jobTitle": "Founder",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Cipta Esensi Merenah",
+              "email": "hi@cenah.co.id"
+            }
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Cipta Esensi Merenah",
+            "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+            "logo": {
+              "@type": "ImageObject",
+              "name": "logo Cipta Esensi Merenah",
+              "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+              "width": "256px",
+              "height": "62px"
+            }
+          },
+          "description": this.description
+        }
+      ];
     }
   }
-</script>
+  </script>

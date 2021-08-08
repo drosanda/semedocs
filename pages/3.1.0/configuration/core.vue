@@ -12,31 +12,42 @@
         <div class="columns">
           <div class="column">
             <div class="content">
+
               <h1 class="">Configuration: core.php</h1>
               <p>Core configuration purpose for registering your core component on Seme Framework. Core controller allowed you to extend the default class to your default core. Like SENE_Controller to JI_Controller for example. This configuration applies to core controller and core model.</p>
-              <pre><code v-highlight class="php">&#x3C;?php
-//register your core
-//core folder app/core/
-//all value in lower case
-$core_prefix = &#x27;ji_&#x27;;
-$core_controller = &#x27;controller&#x27;;
-$core_model = &#x27;&#x27;;</code></pre>
+              <div class="macwindow">
+                <div class="titlebar">
+                  <div class="buttons">
+                    <div class="close">
+                      <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                      <!-- close button link -->
+                    </div>
+                    <div class="minimize">
+                      <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                      <!-- minimize button link -->
+                    </div>
+                    <div class="zoom">
+                      <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                      <!-- zoom button link -->
+                    </div>
+                  </div>
+                </div>
+                <div class="maccontent">
+                  <highlight-code lang="php">
+                    &#x3C;?php
+                    //register your core
+                    //core folder app/core/
+                    //all value in lower case
+                    $core_prefix = &#x27;ji_&#x27;;
+                    $core_controller = &#x27;controller&#x27;;
+                    $core_model = &#x27;&#x27;;
+                  </highlight-code>
+                </div>
+              </div>
+
             </div>
           </div>
 
-        </div>
-
-        <div class="columns">
-          <div class="column">
-            <div class="buttons">
-              <b-button tag="router-link" to="/3.1.0/configuration/controller/" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-                Configuration: controller
-              </b-button>
-              <b-button tag="router-link" to="/3.1.0/configuration/database/" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-                Configuration: database.php
-              </b-button>
-            </div>
-          </div>
         </div>
 
       </div>
@@ -44,13 +55,27 @@ $core_model = &#x27;&#x27;;</code></pre>
 </template>
 <script>
   export default {
-    layout: 'v3.1.0',
+    layout: 'v3.1',
     data (){
       return {
-        name: 'Seme Framework v3.1.0',
-        suffix: ' - Seme Framework v3.1.0 Documentation',
+        name: 'Seme Framework v3.1.5',
+        suffix: ' - Seme Framework 3.1.5',
         title: 'Configuration: Core Class Helper',
-        description: 'Learn more about Configuration Core Class Helper of Seme Framework version 3.x through this documentation.'
+        description: 'Learn more about Configuration Core Class Helper of Seme Framework version 3.1.x through this documentation.',
+        breadcrumbs: [
+          {
+            url: process.env.BASE_URL || 'http://localhost:3001',
+            text: 'Seme Framework'
+          },
+          {
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1.0',
+            text: '3.1.x'
+          },
+          {
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1.0/configuration',
+            text: 'Configuration'
+          }
+        ],
       }
     },
     head() {
@@ -74,6 +99,63 @@ $core_model = &#x27;&#x27;;</code></pre>
           }
         ]
       }
+    },
+    jsonld() {
+      this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+      const items = this.breadcrumbs.map((item, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@id': item.url,
+          name: item.text,
+        },
+      }));
+      return [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: items,
+        },
+        {
+          "@type": "NewsArticle",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+          },
+          "headline": (this.headline || this.title),
+          "image": [
+            (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
+          ],
+          "dateCreated": "2021-07-13T13:34:00+07:00",
+          "datePublished": "2021-07-13T13:34:00+07:00",
+          "dateModified": "2021-07-13T13:36:00+07:00",
+          "author": {
+            "@type": "Person",
+            "gender": "Male",
+            "name": "Daeng Rosanda, S.Kom",
+            "alternateName": "Daeng Rosanda",
+            "jobTitle": "Founder",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Cipta Esensi Merenah",
+              "email": "hi@cenah.co.id"
+            }
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Cipta Esensi Merenah",
+            "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+            "logo": {
+              "@type": "ImageObject",
+              "name": "logo Cipta Esensi Merenah",
+              "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+              "width": "256px",
+              "height": "62px"
+            }
+          },
+          "description": this.description
+        }
+      ];
     }
   }
-</script>
+  </script>

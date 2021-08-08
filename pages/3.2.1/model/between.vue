@@ -156,7 +156,7 @@ export default {
       name: 'Seme Framework v3.2',
       suffix: ' - Seme Framework 3.2.1',
       title: 'Between Method',
-      description: 'Learn about between method on $db property on SENE_Model class for Seme Framework 3.2.3.',
+      description: 'Learn about between method on $db property on SENE_Model class for Seme Framework 3.2.5.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

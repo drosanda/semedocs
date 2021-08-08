@@ -12,7 +12,7 @@
         <div class="column">
           <div class="content">
             <h1 class="">Configuration</h1>
-            <p>The configuration of Seme Framework version 3.x separated on 6 files. The location in <b>app/config/</b>:</p>
+            <p>The configuration of Seme Framework version 3.2.x separated on 6 files. The location in <b>app/config/</b>:</p>
             <p>
               <ul>
                 <li><NuxtLink to="/3.2.1/configuration/config">Basic configuration / config.php</NuxtLink></li>
@@ -35,10 +35,20 @@
     layout: 'v3.2',
     data() {
       return {
-        name: 'Seme Framework v3.2',
-        suffix: ' - Seme Framework v3.2 Documentation',
+        name: 'Seme Framework v3.2.5',
+        suffix: ' - Seme Framework v3.2.5 Documentation',
         title: 'Configuration',
-        description: 'Learn more about configration for Seme Framework version 3.x'
+        description: 'Learn more about configuration for Seme Framework version 3.2.x',
+        breadcrumbs: [
+          {
+            url: process.env.BASE_URL || 'http://localhost:3001',
+            text: 'Seme Framework'
+          },
+          {
+            url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2.1',
+            text: '3.2.x'
+          }
+        ],
       }
     },
     head() {
@@ -62,6 +72,63 @@
           }
         ]
       }
+    },
+    jsonld() {
+      this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+      const items = this.breadcrumbs.map((item, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@id': item.url,
+          name: item.text,
+        },
+      }));
+      return [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: items,
+        },
+        {
+          "@type": "NewsArticle",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+          },
+          "headline": (this.headline || this.title),
+          "image": [
+            (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
+          ],
+          "dateCreated": "2021-07-13T13:34:00+07:00",
+          "datePublished": "2021-07-13T13:34:00+07:00",
+          "dateModified": "2021-07-13T13:36:00+07:00",
+          "author": {
+            "@type": "Person",
+            "gender": "Male",
+            "name": "Daeng Rosanda, S.Kom",
+            "alternateName": "Daeng Rosanda",
+            "jobTitle": "Founder",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Cipta Esensi Merenah",
+              "email": "hi@cenah.co.id"
+            }
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Cipta Esensi Merenah",
+            "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+            "logo": {
+              "@type": "ImageObject",
+              "name": "logo Cipta Esensi Merenah",
+              "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+              "width": "256px",
+              "height": "62px"
+            }
+          },
+          "description": this.description
+        }
+      ];
     }
   }
-</script>
+  </script>

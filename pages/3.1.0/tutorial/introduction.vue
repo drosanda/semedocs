@@ -490,7 +490,7 @@ class Home extends SENE_Controller
 </template>
 <script>
   export default {
-    layout: 'v3.1.0',
+    layout: 'v3.1',
     data (){
       return {
         name: 'Seme Framework v3.1.0',

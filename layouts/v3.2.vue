@@ -107,7 +107,7 @@
     <footer class="footer">
       <div class="container">
         <div class="content has-text-centered">
-          <p class="">Seme Framework v3.2.3 &copy; 2014-2021 . Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
+          <p class="">Seme Framework v3.2.5 &copy; 2014-2021 . Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
           <p><small>Last updated on 30 May 2021</small></p>
         </div>
       </div>
@@ -124,7 +124,7 @@ export default {
   data() {
     return {
       name: 'SemeDocs',
-      title: 'Seme Framework Documentation v3.2.3',
+      title: 'Seme Framework Documentation v3.2.5',
       description: 'Deployable and lightweight PHP MVC framework that suitable for small and medium web app',
       keyword: '',
       logo: require('~/static/logo.png'),

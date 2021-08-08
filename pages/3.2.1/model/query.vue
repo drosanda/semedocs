@@ -107,10 +107,10 @@ export default {
   layout: 'v3.2',
   data (){
     return {
-      name: 'Seme Framework v3.2.3',
-      suffix: ' - Seme Framework 3.2.3',
+      name: 'Seme Framework v3.2.5',
+      suffix: ' - Seme Framework 3.2.5',
       title: 'Query Method',
-      description: 'Learn query method from $db property on SENE_Model class for Seme Framework 3.2.3',
+      description: 'Learn query method from $db property on SENE_Model class for Seme Framework 3.2.5',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

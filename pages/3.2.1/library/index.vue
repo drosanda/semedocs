@@ -86,7 +86,7 @@ export default {
       name: 'Seme Framework v3.2.1',
       suffix: ' - Seme Framework 3.2.1',
       title: 'Library',
-      description: 'Learn more about Library on Seme Framework version 3.2.3',
+      description: 'Learn more about Library on Seme Framework version 3.2.5',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

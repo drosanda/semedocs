@@ -5,7 +5,6 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/3.1.0/">3.1.x</NuxtLink></li>
-          <li class=""><NuxtLink to="/3.1.0/configuration/">Configuration</NuxtLink></li>
           <li class="unavailable">Configuration</li>
         </ul>
       </nav>
@@ -13,7 +12,7 @@
         <div class="column">
           <div class="content">
             <h1 class="">Configuration</h1>
-            <p>The configuration of Seme Framework version 3.x separated on 6 files. The location in <b>app/config/</b>:</p>
+            <p>The configuration of Seme Framework version 3.1.x separated on 6 files. The location in <b>app/config/</b>:</p>
             <p>
               <ul>
                 <li><NuxtLink to="/3.1.0/configuration/config/">Basic configuration / config.php</NuxtLink></li>
@@ -24,20 +23,7 @@
                 <li><NuxtLink to="/3.1.0/configuration/timezone/">Timezone configration / timezone.php</NuxtLink></li>
               </ul>
             </p>
-            <div class="nav-bottom">
-              <div class="nav-bottom-left">
-                <nuxt-link to="/3.1.0/download/" class="btn">
-                <i class="fa fa-chevron-left"></i>
-                  Download
-                </nuxt-link>
-              </div>
-              <div class="nav-bottom-right">
-                <nuxt-link to="/3.1.0/configuration/config/" class="btn">
-                  Config.php
-                  <i class="fa fa-chevron-right"></i>
-                </nuxt-link>
-              </div>
-            </div>
+
           </div>
         </div>
 
@@ -50,8 +36,8 @@
     layout: '3.1.0',
     data() {
       return {
-        name: 'Seme Framework v3.1.x',
-        suffix: ' - Seme Framework 3.1.x',
+        name: 'Seme Framework v3.1.5',
+        suffix: ' - Seme Framework 3.1.5',
         title: 'Configuration',
         description: 'Basic configuration for Seme Framework version 3.1.x',
         breadcrumbs: [
@@ -62,10 +48,6 @@
           {
             url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1.0/',
             text: '3.1.x',
-          },
-          {
-            url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1.0/configuration/',
-            text: 'Config',
           }
         ]
       }

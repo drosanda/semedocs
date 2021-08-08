@@ -64,7 +64,7 @@ export default {
       name: 'Seme Framework v3.2',
       suffix: ' - Seme Framework 3.2.1',
       title: 'Tutorial',
-      description: 'Learn more about some real world tutorial of Seme Framework version 3.2.3 through this documentation.',
+      description: 'Learn more about some real world tutorial of Seme Framework version 3.2.5 through this documentation.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

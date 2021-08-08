@@ -65,9 +65,9 @@ export default {
   data (){
     return {
       name: 'Seme Framework v3.2.x',
-      suffix: ' - Seme Framework 3.2.3',
+      suffix: ' - Seme Framework 3.2.5',
       title: 'Union Flush Method',
-      description: 'Learn about union_flush method from $db property on SENE_Model class for Seme Framework 3.2.3.',
+      description: 'Learn about union_flush method from $db property on SENE_Model class for Seme Framework 3.2.5.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

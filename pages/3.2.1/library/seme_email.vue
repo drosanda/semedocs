@@ -180,7 +180,7 @@ export default {
       name: 'Seme Framework v3.2.1',
       suffix: ' - Seme Framework 3.2.1',
       title: 'Seme_Email Library',
-      description: 'Learn more about Seme_Email Library on Seme Framework version 3.2.3',
+      description: 'Learn more about Seme_Email Library on Seme Framework version 3.2.5',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
