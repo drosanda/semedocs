@@ -48,7 +48,7 @@
             <h3>Parameter</h3>
             <p>Metode cdn_url miliki 1 parameter, yakni $location.</p>
 
-            <h3>$location</h3>
+            <h4>$location</h4>
             <p>Nilai dari $location bisa diisi dengan alamat URL lanjutan dari awalan CDN.</p>
 
             <h2>Pengaturan</h2>
@@ -143,8 +143,8 @@
       return {
         name: 'Seme Framework 4',
         suffix: ' - Seme Framework 4',
-        title: 'Metode cdn_url',
-        description: 'Pelajari selengkapnya tentang metode cdn_url dari kelas SENE_Controller di Seme Framework 4',
+        title: 'Metode CDN URL',
+        description: 'Pelajari metode cdn_url dari kelas SENE_Controller untuk Seme Framework 4',
         breadcrumbs: [
           {
             url: process.env.BASE_URL || 'http://localhost:3001',
