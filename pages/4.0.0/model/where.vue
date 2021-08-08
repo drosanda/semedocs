@@ -13,7 +13,15 @@
         <div class="column">
           <div class="content">
             <h1 class="">Where Method</h1>
-            <p>Where method is part of database class builder for filtering data compatible with WHERE Clause on SQL. This method support chained, and has flow from top to bottom while bracket are used.</p>
+            <p>
+              The <code>where</code> method purpose is for filtering data from query result by executing <code>WHERE</code> SQL command.
+              This method will put the result SQL command on Query Builder can combined with another Query Builder methods.
+            </p>
+
+            <h2>Basic Usage</h2>
+            <p>
+              Here is the basic usage <code>where</code> method from <code>$db</code> property on <code>SENE_Model</code> class.
+            </p>
 
             <div class="macwindow">
               <div class="titlebar">
@@ -34,41 +42,128 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  class Blog_Model extends SENE_Model{
+                  $this-&#x3E;db-&#x3E;where(string $column_name, mixed $filter_value [, string $operator = &#x27;AND&#x27; [, string $relation_operator = &#x27;=&#x27; [, int $open_bracket = 0 [, int $open_bracket = 0 ]]]]): $this-&#x3E;db
+                </highlight-code>
+              </div>
+            </div>
+            <h3>Parameters</h3>
+            <p>
+              This method has required 2 parameters and 4 optional parameters.
+            </p>
+
+
+            <h4>$column_name</h4>
+            <p>
+              Can contain the name of the column to be filtered.
+              The value of this parameter is <b>auto</b> in <code>escape</code>.
+            </p>
+
+            <h4>$filter_value</h4>
+            <p>
+              Filter value against the selected column.
+            </p>
+
+            <h4>$operator</h4>
+            <p>
+              The operator value performed for the next <code>WHERE</code> condition, the following values match the value of this parameter.
+              <ul>
+                <li><code>AND</code></li>
+                <li><code>OR</code></li>
+              </ul>
+            </p>
+
+            <h4>$operator_relational</h4>
+            <p>
+              The value of the relational operator assigned to the filter condition with the column name.
+              <ul>
+                <li><code>=</code></li>
+                <li><code>!=</code> or <code>&#x3C;&#x3E;</code></li>
+                <li><code>&#x3E;</code></li>
+                <li><code>&#x3C;</code></li>
+                <li><code>&#x3E;=</code></li>
+                <li><code>&#x3C;=</code></li>
+                <li><code>like</code></li>
+                <li><code>like%</code></li>
+                <li><code>%like</code></li>
+                <li><code>%like%</code> or <code>like%%</code></li>
+                <li><code>notlike</code></li>
+                <li><code>notlike%</code></li>
+                <li><code>%notlike</code></li>
+                <li><code>%notlike%</code> or <code>notlike%%</code></li>
+              </ul>
+            </p>
+
+            <h4>$open_bracket</h4>
+            <p>
+              Add an opening parenthesis at the beginning of the <code>SQL</code> command before the contents of the next <code>WHERE</code> command.
+            </p>
+
+            <h4>$close_bracket</h4>
+            <p>
+              Add a closing parenthesis at the end of the <code>SQL</code> command before the contents of the next <code>WHERE</code> command.
+            </p>
+
+            <h2>Example</h2>
+            <p>
+              The following is an example of using the where method in the <code>d_order_model.php</code> file.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  &#x3C;?php
+                  class D_Order_Model extends SENE_Model{
                     var $tbl = &#x27;d_order&#x27;;
                     var $tbl_as = &#x27;dor&#x27;;
+
                     public function __construct(){
                       parent::__construct();
                       $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
                     }
+
                     public function getById($id){
                       $this-&#x3E;db-&#x3E;where(&#x22;id&#x22;,$id,&#x22;AND&#x22;,&#x22;=&#x22;,0,0);
                       return $this-&#x3E;db-&#x3E;get_first();
                     }
-                    public function getCancel(){
-                      $this-&#x3E;db-&#x3E;where(&#x22;order_status&#x22;,&#x22;order_cancel&#x22;,&#x22;AND&#x22;,&#x22;=&#x22;,0,0);
+                    public function getNotCancelled(){
+                      $this-&#x3E;db-&#x3E;where(&#x22;order_status&#x22;,&#x22;order_cancel&#x22;,&#x22;AND&#x22;,&#x22;&#x3C;&#x3E;&#x22;,0,0);
                       return $this-&#x3E;db-&#x3E;get();
                     }
                     public function getCancelByUser($b_user_id){
-                      $this-&#x3E;db-&#x3E;where(&#x22;order_status&#x22;,&#x22;order_cancel&#x22;,&#x22;AND&#x22;,&#x22;=&#x22;,0,0)
+                      $this-&#x3E;db-&#x3E;where(&#x22;order_status&#x22;,&#x22;order_cancel&#x22;,&#x22;AND&#x22;,&#x22;like&#x22;,0,0);
                       $this-&#x3E;db-&#x3E;where(&#x22;b_user_id&#x22;,$b_user_id,&#x22;AND&#x22;,&#x22;=&#x22;,0,0);
+                      return $this-&#x3E;db-&#x3E;get();
+                    }
+                    public function getAllCancelRefund(){
+                      $this-&#x3E;db-&#x3E;where(&#x22;order_status&#x22;,&#x22;order_cancel&#x22;,&#x22;AND&#x22;,&#x22;=&#x22;,0,0);
+                      $this-&#x3E;db-&#x3E;where(&#x22;is_refund&#x22;, 1,&#x22;OR&#x22;,&#x22;=&#x22;,1,0);
+                      $this-&#x3E;db-&#x3E;where(&#x22;is_refund_closed&#x22;, 1,&#x22;OR&#x22;,&#x22;=&#x22;,0,1);
                       return $this-&#x3E;db-&#x3E;get();
                     }
                   }
                 </highlight-code>
               </div>
             </div>
-            <h2>Parameters</h2>
-            <p>Where method has 2 required parameters that is <b>column name</b> and <b>value</b>, another parameters are optional. Here is the completed parameters can be used by where methods.</p>
-            <ol type="1">
-              <li>COLUMN_NAME*</li>
-              <li>Combining Method*</li>
-              <li>Operator</li>
-              <li>Relational Operator</li>
-              <li>Bracket open (boolean)</li>
-              <li>Bracket close (boolean)</li>
-            </ol>
 
+            <h3>Generated SQL Command</h3>
+            <p>
+              The following is the SQL command generated by the method in the <code>D_Order_Model</code> class example.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -87,284 +182,21 @@
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;where(
-                  COLUMN_NAME,
-                  VALUE,
-                  &#x22; AND | OR &#x22;,
-                  &#x22;= | != | &#x3C;= | &#x3E;= | &#x3C; | &#x3E; | &#x3C;&#x3E; |
-                  like | like% | %like | %like% |
-                  notlike | notlike% |%notlike | %notlike%
-                  &#x22;,
-                  OPENBRACKET,
-                  CLOSEBRACKET
-                  );
+                <highlight-code lang="sql">
+                  -- result from executing D_Order_Model::getById(112) --
+                  SELECT * FROM `d_order` WHERE `id` = 112;
 
-                </highlight-code>
-              </div>
-            </div>
-            <h3>COLUMN_NAME</h3>
-            <p>Column name required for filtering data from table. The columname should exist on selected table. This method has automatically escaped.</p>
-            <h3>VALUE</h3>
-            <p>Value required for matched with data on table. This method has automatically escaped.</p>
-            <h3>Combining Method</h3>
-            <p>Default value is AND, this parameter useful for filtering data for multiple condition. Available value <b>AND</b> or <b>OR</b>. Value of this parameter is not case sensitive.</p>
-            <h3>Relational Operator</h3>
-            <p>Value required for matched COLUMN_NAME with value. Available value:</p>
-            <ul>
-              <li>=</li>
-              <li>&lt;</li>
-              <li>&gt;</li>
-              <li>&lt;=</li>
-              <li>&gt;=</li>
-              <li>&lt;&gt;</li>
-              <li>like</li>
-              <li>like%</li>
-              <li>%like</li>
-              <li>%like%</li>
-              <li>notlike</li>
-              <li>notlike%</li>
-              <li>%notlike</li>
-              <li>%notlike%</li>
-            </ul>
-            <p>Value of this parameter is not case sensitive.</p>
-            <h3>OPEN BRACKET</h3>
-            <p>Required for adding bracket for prioritize condition filtering, default value 0. Available value <b>1</b> and <b>0</b>.</p>
-            <h3>CLOSE BRACKET</h3>
-            <p>Required for adding bracket for prioritize condition filtering, default value 0. Available value <b>1</b> and <b>0</b>.</p>
-            <hr/>
-            <h2>Example usage</h2>
-            <p>Here is the examples using where method, makes sure another from method and get method has executed for real result. See the first of this page for full example.</p>
-            <h3>Basic example</h3>
-            <p>Here is basic usage for selecting single data using SQL query:</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="sql_more">
-                  SELECT * FROM d_order WHERE `id` = 1
-                </highlight-code>
-              </div>
-            </div>
-            <p>Here is basic usage for selecting single data using query builder:</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;where(&#x22;id&#x22;,1);
-                </highlight-code>
-              </div>
-            </div>
-            <br>
-            <h3>Using AND / OR</h3>
-            <p>Using AND / OR by SQL query:</p>
+                  -- result from executing D_Order_Model::getNotCancelled() --
+                  SELECT * FROM `d_order` WHERE `order_status` != 'cancel';
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="sql_more">
-                  SELECT *
-                  FROM d_order
-                  WHERE
-                  &#x60;a_company_id&#x60; = 1 OR
-                  &#x60;b_user_id&#x60; = 1
-                </highlight-code>
-              </div>
-            </div>
-            <p>Using AND / OR by query builder:</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;where(&#x22;b_user_id&#x22;,1,&#x27;OR&#x27;)-&#x3E;where(&#x22;a_company_id&#x22;,1,&#x27;AND&#x27;);
-                </highlight-code>
-              </div>
-            </div>
-            <br>
-            <h3>Using Relational Operator</h3>
-            <p>Using Relational Operator by query builder:</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="sql_more">
-                  SELECT *
-                  FROM d_order
-                  WHERE
-                  &#x60;b_user_id&#x60; = 1 AND
-                  &#x60;grand_total&#x60; &#x3E;= 1000 AND
-                  &#x60;status_text&#x60; LIKE &#x27;order_completed&#x27;
-                </highlight-code>
-              </div>
-            </div>
-            <p>Using Relational Operator by query builder:</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  $this-&#x3E;db
-                  -&#x3E;where(&#x22;b_user_id&#x22;,1)
-                  -&#x3E;where(&#x22;grand_total&#x22;,1000,&#x22;and&#x22;,&#x27;&#x3E;=&#x27;)
-                  -&#x3E;where(&#x22;status_text&#x22;,&#x27;order_completed&#x27;,&#x22;and&#x22;,&#x27;like&#x27;);
-                </highlight-code>
-              </div>
-            </div>
-            <br>
-            <h3>Using Bracket</h3>
-            <p>Using bracket open and close by SQL query:</p>
+                  -- result from executing D_Order_Model::getCancelByUser(2125) --
+                  SELECT * FROM `d_order` WHERE `order_status` LIKE 'cancel' AND `b_user_id` = 2125;
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="sql_more">
-                  SELECT *
-                  FROM b_user
-                  WHERE
-                  &#x60;status_text&#x60; LIKE &#x27;active&#x27; AND
-                  (
-                  &#x60;fname&#x60; LIKE &#x27;%andre%&#x27; OR
-                  &#x60;lname&#x60; LIKE &#x27;%andre%&#x27; OR
-                  &#x60;city&#x60; LIKE &#x27;%andre%&#x27; OR
-                  &#x60;email LIKE &#x27;%andre%&#x27;
-                  )
+                  -- result from executing D_Order_Model::getAllCancelRefund() --
+                  SELECT * FROM `d_order` WHERE `order_status` = "order_cancel" AND ( `is_refund` = 1 OR `is_refund_closed` = 1);
                 </highlight-code>
               </div>
             </div>
-            <p>Using bracket open and close by query builder:</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  $this-&#x3E;db
-                  -&#x3E;where(&#x22;status_text&#x22;,&#x27;active&#x27;,&#x27;and&#x27;,&#x27;like&#x27;)
-                  -&#x3E;where(&#x22;fname&#x22;,&#x27;andre&#x27;,&#x22;and&#x22;,&#x27;%like%&#x27;,1,0)
-                  -&#x3E;where(&#x22;lname&#x22;,&#x27;andre&#x27;,&#x22;and&#x22;,&#x27;%like%&#x27;,0,0)
-                  -&#x3E;where(&#x22;city&#x22;,&#x27;andre&#x27;,&#x22;and&#x22;,&#x27;%like%&#x27;,0,0)
-                  -&#x3E;where(&#x22;email&#x22;,&#x27;andre&#x27;,&#x22;and&#x22;,&#x27;%like%&#x27;,0,1);
-                </highlight-code>
-              </div>
-            </div>
-            <hr>
-            <h2>Advanced Where Condition</h2>
-            <p>Seme Framework has advanced where method called <NuxtLink to="/4.0.0/model/where_as/">where_as method</NuxtLink>.</p>
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
@@ -461,9 +293,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-18T13:46:00+07:00",
-        "datePublished": "2021-07-18T13:46:00+07:00",
-        "dateModified": "2021-07-18T13:46:00+07:00",
+        "dateCreated": "2020-08-08T08:43:33+07:00",
+        "datePublished": "2020-08-08T08:43:33+07:00",
+        "dateModified": "2020-08-08T08:43:33+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
