@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/3.2.1">3.2.x</NuxtLink></li>
           <li class=""><NuxtLink to="/3.2.1/model">Model</NuxtLink></li>
-          <li class="unavailable">Between Method</li>
+          <li class="unavailable">Between</li>
         </ul>
       </nav>
       <div class="columns">
@@ -155,19 +155,19 @@ export default {
     return {
       name: 'Seme Framework v3.2',
       suffix: ' - Seme Framework 3.2.1',
-      title: 'Model::between',
-      description: 'Learn more about Model::between Seme Framework version 3.2.3 through this documentation.',
+      title: 'Between Method',
+      description: 'Learn about between method on $db property on SENE_Model class for Seme Framework 3.2.3.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
           text: 'Seme Framework',
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2.1/',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2.1',
           text: '3.2.1',
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2.1/model/',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2.1/model',
           text: 'Model',
         }
       ]
