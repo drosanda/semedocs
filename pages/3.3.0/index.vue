@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class="unavailable">3.3.0</li>
+          <li class="unavailable">3.3.x</li>
         </ul>
       </nav>
 
@@ -30,12 +30,12 @@
         <div class="nav-bottom-left">
           <nuxt-link to="/3.2.1/" class="btn">
             <i class="fa fa-chevron-left"></i>
-            Version: 3.2.1
+            Version: 3.2.x
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
           <nuxt-link to="/4.0.0/" class="btn">
-            Version: 4.0.0
+            Version: 4.0.x
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>

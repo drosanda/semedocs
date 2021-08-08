@@ -36,7 +36,7 @@
             <hr>
             <h2>Downloads</h2>
             <p>
-              Download <a href="https://github.com/drosanda/seme-framework-v3/releases/tag/3.1.5">Seme Framework 3.1.5 via github</a>
+              Download <a href="https://github.com/drosanda/seme-framework-v3/archive/refs/heads/master.zip">Seme Framework 3.2.5 via github</a>
             </p>
           </div>
         </div>
@@ -52,7 +52,7 @@
         </div>
         <div class="nav-bottom-right">
           <nuxt-link to="/3.3.0/" class="btn">
-            Version: 3.3.0
+            Version: 3.3.x
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
@@ -130,9 +130,9 @@
           "image": [
             (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
           ],
-          "dateCreated": "2021-08-04T18:15:32+07:00",
-          "datePublished": "2021-08-04T18:15:32+07:00",
-          "dateModified": "2021-08-04T18:15:32+07:00",
+          "dateCreated": "2021-08-08T13:37:52+07:00",
+          "datePublished": "2021-08-08T13:37:52+07:00",
+          "dateModified": "2021-08-08T13:37:52+07:00",
           "author": {
             "@type": "Person",
             "gender": "Male",

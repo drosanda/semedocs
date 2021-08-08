@@ -37,7 +37,7 @@
         </div>
         <div class="nav-bottom-right">
           <nuxt-link to="/3.2.1/" class="btn">
-            Version: 3.2.1
+            Version: 3.2.x
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
@@ -115,9 +115,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-08-04T18:17:32+07:00",
-        "datePublished": "2021-08-04T18:17:32+07:00",
-        "dateModified": "2021-08-04T18:17:32+07:00",
+        "dateCreated": "2021-08-08T13:37:52+07:00",
+        "datePublished": "2021-08-08T13:37:52+07:00",
+        "dateModified": "2021-08-08T13:37:52+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

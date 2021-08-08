@@ -4,15 +4,21 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class="unavailable">3.0.0</li>
+          <li class="unavailable">3.0.x</li>
         </ul>
       </nav>
 
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1>Seme Framework version 3.0.0</h1>
+            <h1>Seme Framework version 3.0.x</h1>
             <p>This is official documentation for Seme Framework, the PHP MVC Framework for creating small and medium app that needed for fast delivery. At first version of Seme Framework used for building API (Middle Ware) for another Application such as android, iOS, etc. And now as increasing of requirement, Seme Framework has expand the limit for creating Small and Medium App.</p>
+            <div class="message is-warning">
+              <div class="message-body">
+                <p><b>Warning</b></p>
+                <p>This version is deprecated and unmaintained, please use another version of Seme Framework.</p>
+              </div>
+            </div>
             <h2>Key Feature</h2>
             <p>This framework suitable for Programmer that only know about <code>Manual</code> way of code. Not like this time, everything build up automatically through console. Seme Framework has taken different way of code, <i>If you want build small app, why we need lots of library</i>. Here is the key feature of Seme Framework:</p>
             <hr>
@@ -39,14 +45,14 @@
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/credits/" class="btn">
+          <nuxt-link to="/credits" class="btn">
             <i class="fa fa-chevron-left"></i>
             Credits
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/3.1.0/" class="btn">
-            Version 3.1.0
+          <nuxt-link to="/3.1.0" class="btn">
+            Version 3.1.x
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
@@ -57,7 +63,7 @@
 </template>
 <script>
 export default {
-  layout: 'v3.1.0',
+  layout: 'v3.0',
   data (){
     return {
       name: 'Seme Framework v3.0.x',
@@ -67,11 +73,11 @@ export default {
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
-          text: 'Seme Framework',
+          text: 'Seme Framework'
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.0.0',
-          text: '3.0.x',
+          text: '3.0.x'
         }
       ]
     }
@@ -124,9 +130,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-08-04T18:17:32+07:00",
-        "datePublished": "2021-08-04T18:17:32+07:00",
-        "dateModified": "2021-08-04T18:17:32+07:00",
+        "dateCreated": "2021-08-08T13:37:52+07:00",
+        "datePublished": "2021-08-08T13:37:52+07:00",
+        "dateModified": "2021-08-08T13:37:52+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
