@@ -109,7 +109,7 @@ class Blog_Model extends SENE_Model{
           },
           {
             url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1.0/',
-            text: '3.1.0',
+            text: '3.1.x',
           }
         ]
       }

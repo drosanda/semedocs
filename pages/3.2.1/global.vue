@@ -31,21 +31,6 @@
 
       </div>
 
-      <div class="nav-bottom">
-        <div class="nav-bottom-left">
-          <nuxt-link to="/4.0.0/constants/" class="btn">
-          <i class="fa fa-chevron-left"></i>
-            Constants
-          </nuxt-link>
-        </div>
-        <div class="nav-bottom-right">
-          <nuxt-link to="/4.0.0/model/" class="btn">
-            Class Model
-            <i class="fa fa-chevron-right"></i>
-          </nuxt-link>
-        </div>
-      </div>
-
     </div>
   </div>
 </template>
@@ -119,9 +104,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2020-06-11T10:12:00+07:00",
-        "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-23T21:51:32+07:00",
+        "dateCreated": "2021-08-07T21:51:32+07:00",
+        "datePublished": "2021-08-07T21:51:32+07:00",
+        "dateModified": "2021-08-07T21:51:32+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

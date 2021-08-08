@@ -33,6 +33,11 @@
               <li>Enhance json output for utf-8</li>
               <li>Remove required flag for <code>SENE_Model::select_as</code></li>
             </ol>
+            <hr>
+            <h2>Downloads</h2>
+            <p>
+              Download <a href="https://github.com/drosanda/seme-framework-v3/releases/tag/3.1.5">Seme Framework 3.1.5 via github</a>
+            </p>
           </div>
         </div>
       </div>

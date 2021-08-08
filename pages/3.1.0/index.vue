@@ -10,16 +10,21 @@
 
       <div class="columns">
         <div class="column">
-        <div class="content">
-          <h1>Seme Framework version 3.1.0</h1>
-          <p>This is official documentation for Seme Framework, the PHP MVC Framework for creating small and medium app that needed for fast delivery. At first version of Seme Framework used for building API (Middle Ware) for another Application such as android, iOS, etc. And now as increasing of requirement, Seme Framework has expand the limit for creating Small and Medium App.</p>
-          <hr>
-          <h2>Change Log</h2>
-          <ol class="1">
-            <li>Add method loadCSS for loading CSS</li>
-            <li>Improved some codes</li>
-          </ol>
-        </div>
+          <div class="content">
+            <h1>Seme Framework version 3.1.5</h1>
+            <p>This is official documentation for Seme Framework, the PHP MVC Framework for creating small and medium app that needed for fast delivery. At first version of Seme Framework used for building API (Middle Ware) for another Application such as android, iOS, etc. And now as increasing of requirement, Seme Framework has expand the limit for creating Small and Medium App.</p>
+            <hr>
+            <h2>Change Log</h2>
+            <ol class="1">
+              <li>Add charset configuration</li>
+              <li>Remove some unecessary codes</li>
+            </ol>
+            <hr>
+            <h2>Downloads</h2>
+            <p>
+              Download <a href="https://github.com/drosanda/seme-framework-v3/releases/tag/3.1.5">Seme Framework 3.1.5 via github</a>
+            </p>
+          </div>
         </div>
       </div>
 
@@ -46,10 +51,10 @@ export default {
   layout: 'v3.1.0',
   data (){
     return {
-      name: 'Seme Framework v3.1.x',
+      name: 'Seme Framework v3.1.5',
       suffix: '',
-      title: 'Seme Framework version 3.1.0 Documentation',
-      description: 'Learn more about Seme Framework version 3.1.x through this documentation.',
+      title: 'Seme Framework version 3.1.5 Documentation',
+      description: 'Learn more about Seme Framework version 3.1.5 through this documentation.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

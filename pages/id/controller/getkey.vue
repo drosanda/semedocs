@@ -6,25 +6,52 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/controller">Controller</NuxtLink></li>
-          <li class="unavailable">Metode getKey</li>
+          <li class="unavailable">Get Key</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Metode getKey</h1>
-            <p>Metode getKey digunakan untuk memanggil variabel yang disimpan didalam <code>$_SESSION[$saltkey]</code>.</p>
-            <p>Metode biasanya ini digunakan untuk mengambil data yang tersimpan setelah proses login berhasil.</p>
+            <h1 class="">Metode Get Key</h1>
+            <p>
+              Metode <code>getKey</code> digunakan untuk memanggil variabel yang disimpan didalam <code>$_SESSION[$saltkey]</code> yang disimpan oleh metode <NuxtLink to="/id/controller/setkey/">setKey <i class="fa fa-window-restore"></i></NuxtLink>.
+            </p>
+
+            <h2>Bentuk Umum</h2>
+            <p>
+              Berikut ini bentuk umum penggunaan metode <code>setKey</code> dari kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+            $this-&#x3E;getKey(): mixed
+          </highlight-code>
+        </div>
+      </div>
 
             <h2>Parameter</h2>
             <p>Tidak ada parameter untuk metode ini.</p>
 
-            <h2>Pengunaan dasar</h2>
-            <p>Berikut ini adalah penggunaan dasar dari metode getKey</p>
-            <code v-highlight class="php">SENE_Controller::getKey(): mixed</code>
-
-            <h2>Contoh Penggunaan</h2>
-            <p>Berikut ini adalah contoh penggunaannya untuk memeriksa user sudah login atau belum.</p>
+            <h2>Contoh</h2>
+            <p>
+              Berikut ini adalah contoh penggunaannya untuk memeriksa user sudah login atau belum dalam sebuah controller.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -115,8 +142,8 @@
       return {
         name: 'Seme Framework 4',
         suffix: ' - Seme Framework 4',
-        title: 'Metode getKey dari SENE_Controller',
-        description: 'Metode getKey dari kelas SENE_Controller dalam SEME Framework versi 4.0.0 digunakan untuk memanggil variabel yang tersimpan didalam $_SESSION.',
+        title: 'Metode Get Key ',
+        description: 'Pelajari metode getKey dari kelas SENE_Controller untuk SEME Framework 4.',
         breadcrumbs: [
           {
             url: process.env.BASE_URL || 'http://localhost:3001',
@@ -185,9 +212,9 @@
           "image": [
             (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
           ],
-          "dateCreated": "2020-06-11T10:12:00+07:00",
-          "datePublished": "2020-06-11T10:12:00+07:00",
-          "dateModified": "2021-06-25T09:21:40+07:00",
+          "dateCreated": "2021-08-08T09:21:40+07:00",
+          "datePublished": "2021-08-08T09:21:40+07:00",
+          "dateModified": "2021-08-08T09:21:40+07:00",
           "author": {
             "@type": "Person",
             "gender": "Male",

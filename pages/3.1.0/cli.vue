@@ -4,6 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.1.0">3.1.x</NuxtLink></li>
           <li class="unavailable">Command Line Interface (CLI)</li>
         </ul>
       </nav>
@@ -93,8 +94,8 @@ export default {
           text: 'Seme Framework',
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1.0/',
-          text: '3.1.0',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1.0',
+          text: '3.1.x',
         }
       ]
     }

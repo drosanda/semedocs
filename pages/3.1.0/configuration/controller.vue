@@ -95,7 +95,7 @@ $routes[&#x27;dukungan/syarat-ketentuan&#x27;] = &#x27;dukungan/syarat_ketentuan
           },
           {
             url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1.0/',
-            text: '3.1.0',
+            text: '3.1.x',
           },
           {
             url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1.0/configuration/',

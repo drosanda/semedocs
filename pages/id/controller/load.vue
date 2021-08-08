@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/controller/">Controller</NuxtLink></li>
-          <li class="unavailable">Metode Load</li>
+          <li class="unavailable">Load</li>
         </ul>
       </nav>
       <div class="columns">
@@ -14,17 +14,13 @@
           <div class="content">
             <h1 class="">Metode Load</h1>
             <p>
-              <code>SENE_Controller::load</code> digunakan untuk memanggil model kedalam controller menjadi sebuah properti didalam controller tersebut.
+              Metode <code>load</code> digunakan untuk memanggil model kedalam controller menjadi sebuah properti didalam controller tersebut.
+              Nama dari propertinya juga bisa diatur melalui parameter alias dalam metode ini.
             </p>
 
             <h2>Bentuk Umum</h2>
             <p>
               Berikut ini adalah bentuk umum metode <code>load</code> dari kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
-            </p>
-
-            <h3>Parameter</h3>
-            <p>
-              Metode load terdiri dari 2 parameter yaitu <code>model_location</code> dan <code>$alias</code>.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -50,10 +46,17 @@
               </div>
             </div>
 
-            <h3>$model_location</h3>
-            <p>Lokasi file model selalu relatif ke direktori <code>app/model</code>.</p>
-            <p>Jadi, jika ingin memanggil model <code>api/hello_model</code> maka lokasinya ada di <code>app/model/api/hello_model.php</code>.</p>
-            <p>Dan, didalam controller akan ada properti baru bernama <code>hello_model</code> yang sama dengan nama file model namun tanpa akhiran <code>.php</code>.</p>
+            <h3>Parameter</h3>
+            <p>
+              Metode load terdiri dari 2 parameter yaitu <code>model_location</code> dan <code>$alias</code>.
+            </p>
+
+            <h4>$model_location</h4>
+            <p>
+              Lokasi file model selalu relatif ke direktori <code>app/model</code>.
+              Jadi, jika ingin memanggil model <code>api/hello_model</code> maka lokasinya ada di <code>app/model/api/hello_model.php</code>.
+              Dan, didalam controller akan ada properti baru bernama <code>hello_model</code> yang sama dengan nama file model namun tanpa akhiran <code>.php</code>.
+            </p>
 
             <h3>$model_alias</h3>
             <p>
@@ -61,34 +64,8 @@
               Jadi, jika ingin menyederhanakan properti <code>hello_model</code> menjadi <code>h</code> saja, cukup tambahkan parameter ke-2 didalam methode load.
             </p>
 
-            <p>Berikut ini adalah contoh pemanggilan model dengan menggunakan alias.</p>
-
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  $this-&#x3E;load('api/hello_model','h');
-                </highlight-code>
-              </div>
-            </div>
-
             <h2>Contoh Penggunaan</h2>
-            <p>Berikut ini adalah contoh lengkap penggunaan metode load dari SENE_Controller.</p>
+            <p>Berikut ini adalah contoh lengkap penggunaan metode <code>load</code> dalam sebuah kelas controller.</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -168,8 +145,8 @@ export default {
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'Metode load dari SENE_Controller',
-      description: 'Metode load dari kelas SENE_Controller dalam SEME Framework versi 4.0.0 digunakan untuk memanggil model kedalam kelas controller',
+      title: 'Metode Load',
+      description: 'Pelajari tentang metode load dari kelas SENE_Controller untuk Seme Framework 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -242,9 +219,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2020-06-11T10:12:00+07:00",
-        "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-28T22:15:00+07:00",
+        "dateCreated": "2021-08-08T10:51:15+07:00",
+        "datePublished": "2021-08-08T10:51:15+07:00",
+        "dateModified": "2021-08-08T10:51:15+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
