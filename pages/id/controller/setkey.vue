@@ -6,22 +6,22 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/controller">Controller</NuxtLink></li>
-          <li class="unavailable">setKey method</li>
+          <li class="unavailable">setKey</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
             <h1 class="">Metode setKey</h1>
-            <p>Metode <code>SENE_Controller::setKey</code> digunakan untuk menyimpan nilai didalam $_SESSION.</p>
-            <p>Metode biasanya ini digunakan untuk menyimpan data setelah proses login berhasil.</p>
+            <p>
+              Metode <code>setKey</code> digunakan untuk menyimpan nilai di dalam variabel global $_SESSION, sehingga dapat tersedia dimana saja didalam semua kelas controller.
+              Metode biasanya ini digunakan untuk menyimpan data setelah proses login berhasil.
+            </p>
 
-            <h2>Parameter</h2>
-            <p>Metode ini membutuhkan satu parameter yaitu <b>$values</b>.</p>
-
-            <h2>Pengunaan dasar</h2>
-            <p>Berikut ini adalah penggunaan dasar dari metode setKey</p>
-
+            <h2>Bentuk Umum</h2>
+            <p>
+              Berikut ini bentuk umum penggunaan metode <code>setKey</code> dari kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -41,13 +41,50 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  SENE_Controller::setKey(mixed $values): object
+                  $this-&#x3E;setKey(mixed $values): $this
+                </highlight-code>
+              </div>
+            </div>
+            <h3>Parameter</h3>
+            <p>Metode ini membutuhkan 1 parameter wajib.</p>
+            <h4>$values</h4>
+            <p>
+              Nilai dari <code>$values</code> bisa berupa <code>array</code> atau <code>object</code> tergantung kebutuhan.
+            </p>
+
+            <h2>Pengaturan</h2>
+            <p>
+              Kunci untuk menyimpan sesi supaya tidak bentrok dengan aplikasi lain dalam 1 server yang sama, pengaturannya disimpan didalam file pengaturan.
+              Berikut ini adalah contoh file pengaturan <code>development.php</code>.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  ...
+                  $saltkey = &#x27;semeframework21;;
+                  ...
                 </highlight-code>
               </div>
             </div>
 
-            <h2>Contoh Penggunaan</h2>
-            <p>Berikut ini adalah contoh penggunaannya untuk API dalam proses otentifikasi pengguna (login).</p>
+            <h2>Contoh</h2>
+            <p>Berikut ini adalah contoh penggunaannya untuk API dalam proses otentifikasi pengguna (login) pada kelas controller.</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -130,13 +167,12 @@
                 </highlight-code>
               </div>
             </div>
-            <p>&nbsp;</p>
 
             <div class="message is-info">
               <div class="message-body">
                 <p><b>Tips</b></p>
                 <p>Baik <code>setKey()</code> maupun <code>getKey()</code> membutuhkan pengaturan <code>$saltkey</code> untuk berfungsi dengan baik.</p>
-                <p>Pelajari tentang pengaturan <code>$saltkey</code> di halaman <NuxtLink to="/id/configuration/session/">Pengaturan Session</NuxtLink>.</p>
+                <p>Pelajari tentang pengaturan <code>$saltkey</code> di halaman <NuxtLink to="/id/configuration/session/">Pengaturan Session <i class="fa fa-window-restore"></i></NuxtLink>.</p>
               </div>
             </div>
 
