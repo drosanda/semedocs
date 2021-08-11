@@ -479,19 +479,6 @@ class Home extends SENE_Controller
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/id/tutorial/get-data" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Tutorial: Get Data
-            </b-button>
-            <b-button tag="router-link" to="/id/uri_routing/" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Uri Routing
-            </b-button>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </template>

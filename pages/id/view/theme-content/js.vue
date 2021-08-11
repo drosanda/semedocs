@@ -21,19 +21,6 @@
 
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/id/view/theme-content/" icon-pack="fa" icon-left="chevron-left">
-              Theme Content
-            </b-button>
-            <b-button tag="router-link" to="/id/controller/" icon-pack="fa" icon-right="chevron-right">
-              Controller
-            </b-button>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </template>

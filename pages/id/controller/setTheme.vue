@@ -57,19 +57,7 @@ class Home extends SENE_Controller
         </div>
 
       </div>
-
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/id/controller/input" icon-pack="fa" icon-left="chevron-left">
-              Input Method
-            </b-button>
-            <b-button tag="router-link" to="/id/controller/loadLayout" icon-pack="fa" icon-right="chevron-right">
-              loadLayout Method
-            </b-button>
-          </div>
-        </div>
-      </div>
+      
 
     </div>
   </div>

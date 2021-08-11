@@ -42,19 +42,6 @@
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/3.1/uri_routing/admin" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Uri Routing: Admin
-            </b-button>
-            <b-button tag="router-link" to="/3.1/globals" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Globals
-            </b-button>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </template>

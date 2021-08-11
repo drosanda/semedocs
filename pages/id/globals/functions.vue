@@ -28,21 +28,6 @@
 
       </div>
 
-
-      <div class="columns">
-        <div class="column">
-          <b-button tag="router-link" to="/id/uri_routing/" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-            Uri Routing
-          </b-button>
-        </div>
-        <div class="column is-2">&nbsp;</div>
-        <div class="column">
-          <b-button tag="router-link" to="/id/constants" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-            Constants
-          </b-button>
-        </div>
-      </div>
-
     </div>
   </div>
 </template>

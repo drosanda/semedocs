@@ -19,19 +19,7 @@
         </div>
 
       </div>
-
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/id/view/theme" icon-pack="fa" icon-left="chevron-left">
-              Theme
-            </b-button>
-            <b-button tag="router-link" to="/id/view/theme-content" icon-pack="fa" icon-right="chevron-right">
-              Theme Content
-            </b-button>
-          </div>
-        </div>
-      </div>
+      
 
     </div>
   </div>

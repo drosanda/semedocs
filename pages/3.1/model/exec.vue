@@ -47,18 +47,7 @@ class Blog_Model extends SENE_Model{
         </div>
 
       </div>
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/3.1/model/delete" icon-pack="fa" icon-left="chevron-left" class="is-pulled-left">
-              Model::delete
-            </b-button>
-            <b-button tag="router-link" to="/3.1/model/query" icon-pack="fa" icon-right="chevron-right" class="is-pulled-right">
-              Model::query
-            </b-button>
-          </div>
-        </div>
-      </div>
+      
     </div>
   </div>
 </template>

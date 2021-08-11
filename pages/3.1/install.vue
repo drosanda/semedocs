@@ -3,7 +3,8 @@
     <div class="container">
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
-          <li class=""><Nuxt-Link to="/">Home</Nuxt-Link></li>
+          <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.1">3.1.x</NuxtLink></li>
           <li class="unavailable">Install</li>
         </ul>
       </nav>
@@ -49,4 +50,3 @@ RewriteRule ^(.*)$ index.php/$1 [L,QSA]
     // page component definitions
   }
 </script>
-

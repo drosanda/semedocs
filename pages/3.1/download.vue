@@ -3,7 +3,8 @@
     <div class="container">
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
-          <li class=""><nuxt-link to="/">Home</nuxt-link></li>
+          <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.1">3.1.x</NuxtLink></li>
           <li class="unavailable">Download</li>
         </ul>
       </nav>
@@ -31,4 +32,3 @@
     // page component definitions
   }
 </script>
-

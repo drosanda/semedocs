@@ -52,19 +52,7 @@
           </div>
         </div>
       </div>
-
-      <div class="columns">
-        <div class="column">
-          <div class="buttons">
-            <b-button tag="router-link" to="/id/controller/load" icon-pack="fa" icon-left="chevron-left" class="">
-              Load Method
-            </b-button>
-            <b-button tag="router-link" to="/id/controller/input" icon-pack="fa" icon-right="chevron-right" class="">
-              Input Method
-            </b-button>
-          </div>
-        </div>
-      </div>
+      
 
     </div>
   </div>
