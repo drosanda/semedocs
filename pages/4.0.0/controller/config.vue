@@ -14,12 +14,13 @@
           <div class="content">
             <h1 class="">Config Property</h1>
             <p>
-              The config is a property from <NuxtLink to="/4.0.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> class contain about configuration values from </NuxtLink to="/4.0.0/configuration/">Seme Framework Configuration</NuxtLink>.
+              The <code>$config</code> property contains about object from selected Seme Framework file </NuxtLink to="/4.0.0/configuration/">configuration</NuxtLink>.
+              While accessing this property, every variables that existing on configuration will be converted as object.
             </p>
 
             <h2>Basic Usage</h2>
             <p>
-              Here is the basic usage for config property method.
+              Here is the basic usage <code>$config</code> property method from <NuxtLink to="/4.0.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> class.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -40,17 +41,17 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;config->{$object_config_name};
+                  $this-&#x3E;config-&#x3E;{$object_config_name};
                 </highlight-code>
               </div>
             </div>
 
             <h4>$object_config_name</h4>
             <p>
-              The $object_config_name value can be a string, object, array, or integer depends on value that existing on configuration.
+              The value of <code>$object_config_name</code> value can be a string, object, or array depends on value that existing on configuration.
             </p>
 
-            <h2>Example Usage</h2>
+            <h2>Examples</h2>
             <p>Here is the example usage config property in a controller file.</p>
 
             <div class="macwindow">
@@ -74,16 +75,17 @@
                 <highlight-code lang="php">
                   ...
                   //print the database connection host
-                  echo $this->config->db['host'];
+                  echo $this-&#x3E;config-&#x3E;db[&#x27;host&#x27;];
                   ...
                 </highlight-code>
               </div>
             </div>
 
-            <h2>Semevar Property</h2>
+            <h3>Get Current Configration File</h3>
             <p>
-              The semevar property is an object from <code>config</code> property contain about additional config values that can be obtained from config property.
-              Here is the example on configuration file.
+              Seme Framework allows 3 different configration there is development.php, staging.php, and production.php.
+              If we want to know which setting is being used, we can do this by calling this <code>$config</code> property.
+              Let's take a look at the sample code snippet in a controller class below.
             </p>
 
             <div class="macwindow">
@@ -106,8 +108,49 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   ...
-                  $semevar['site_name'] = 'Cipta Esensi Merenah';
-                  $semevar['site_version'] = '1.0.0';
+                  echo $this-&#x3E;config-&#x3E;environment;
+                  // will print:
+                  // - development, or
+                  // - staging, or
+                  // - production
+                  ...
+                </highlight-code>
+              </div>
+            </div>
+
+
+            <h3>Semevar Property</h3>
+            <p>
+              The <code>$this-&#x3E;config-&#x3E;semevar</code> property is an object of the <code>$semevar</code> variable in the Seme Framework settings file.
+              This property is used to retrieve <em>hardcode</em> values for application development needs.
+            </p>
+            <p>
+              In this example, we will see how to retrieve the <code>$semevar</code> value from the settings file into the <code>$this-&#x3E;config</code> property in a controller file.
+              The following is an example of the contents of the <code>$semevar</code> array in the Seme Framework settings file</code>.
+            </p>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  ...
+                  $semevar[&#x27;site_name&#x27;] = &#x27;Cipta Esensi Merenah&#x27;;
+                  $semevar[&#x27;site_version&#x27;] = &#x27;1.0.0&#x27;;
                   ...
                 </highlight-code>
               </div>
@@ -136,7 +179,7 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   ...
-                  echo $this->config->semevar->site_name.' v'.$this->config->semevar->site_version;
+                  echo $this-&#x3E;config-&#x3E;semevar-&#x3E;site_name.' v'.$this-&#x3E;config-&#x3E;semevar-&#x3E;site_version;
                   ...
                 </highlight-code>
               </div>
@@ -237,9 +280,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-22T18:41:00+07:00",
-        "datePublished": "2021-07-22T18:42:00+07:00",
-        "dateModified": "2021-07-22T818:44:00+07:00",
+        "dateCreated": "2021-08-11T18:44:00+07:00",
+        "datePublished": "2021-08-11T18:44:00+07:00",
+        "dateModified": "2021-08-11T18:44:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
