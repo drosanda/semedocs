@@ -3,7 +3,7 @@
     <nav class="breadcrumb" aria-label="breadcrumbs">
       <ul class="breadcrumbs">
         <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-        <li class=""><NuxtLink to="/3.1/">3.1.0</NuxtLink></li>
+        <li class=""><NuxtLink to="/3.1/">3.1.x</NuxtLink></li>
         <li class=""><NuxtLink to="/3.1/database">Database</NuxtLink></li>
         <li class="unavailable">Query Builder</li>
       </ul>
@@ -243,10 +243,10 @@ $this-&#x3E;db-&#x3E;select(&#x27;column_name&#x27;,&#x27;cn&#x27;);
     layout: 'v3.1',
     data (){
       return {
-        name: 'Seme Framework v3.1.0',
-        suffix: ' - Seme Framework v3.1.0 Documentation',
+        name: 'Seme Framework v3.1.5',
+        suffix: ' - Seme Framework v3.1.5 Documentation',
         title: 'Database: Query Builder',
-        description: 'Learn more about Database Query Builder of Seme Framework version 3.1.0 through this documentation.'
+        description: 'Learn more about Database Query Builder of Seme Framework version 3.1.x through this documentation.'
       }
     },
     head() {

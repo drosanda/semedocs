@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/3.1/">3.1.0</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.1/">3.1.x</NuxtLink></li>
           <li class="unavailable">Constants</li>
         </ul>
       </nav>
@@ -63,10 +63,10 @@ export default {
   layout: 'v3.1',
   data (){
     return {
-      name: 'Seme Framework v3.1.0',
-      suffix: ' - Seme Framework v3.1.0 Documentation',
+      name: 'Seme Framework v3.1.5',
+      suffix: ' - Seme Framework v3.1.5 Documentation',
       title: 'Constants',
-      description: 'Learn more about Global Variables / Constants and Methods used by Seme Framework version 3.1.0 through this documentation.'
+      description: 'Learn more about Global Variables / Constants and Methods used by Seme Framework version 3.1.x through this documentation.'
     }
   },
   head() {

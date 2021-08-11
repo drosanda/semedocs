@@ -61,10 +61,10 @@
     layout: 'v3.1',
     data() {
       return {
-        name: 'Seme Framework v3.1.0',
-        suffix: ' - Seme Framework 3.1.0',
+        name: 'Seme Framework v3.1.5',
+        suffix: ' - Seme Framework v3.1.5',
         title: 'Tutorial',
-        description: 'Learn more about some real world tutorial of Seme Framework version 3.1.0 through this documentation.',
+        description: 'Learn more about some real world tutorial of Seme Framework version 3.1.x through this documentation.',
         breadcrumbs: [
           {
             url: process.env.BASE_URL || 'http://localhost:3001',
@@ -125,8 +125,8 @@
           "image": [
             (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
           ],
-          "dateCreated": "2020-06-11T10:12:00+07:00",
-          "datePublished": "2020-06-11T10:12:00+07:00",
+          "dateCreated": "2021-08-11T19:52:38+07:00",
+          "datePublished": "2021-08-11T19:52:38+07:00",
           "dateModified": "2021-06-11T14:48:32+07:00",
           "author": {
             "@type": "Person",

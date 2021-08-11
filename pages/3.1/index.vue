@@ -30,13 +30,13 @@
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/3.0.0/" class="btn">
+          <nuxt-link to="/3.0" class="btn">
             <i class="fa fa-chevron-left"></i>
             Version: 3.0.0
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/3.2.1/" class="btn">
+          <nuxt-link to="/3.2" class="btn">
             Version: 3.2.x
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>

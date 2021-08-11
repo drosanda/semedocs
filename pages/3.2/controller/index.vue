@@ -11,7 +11,7 @@
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Controller Class</h1>
+            <h1 class="">The Controller</h1>
             <p>
               Controller is a class that inherited from <NuxtLink to="/3.2/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> and <NuxtLink to="/3.2/core/controller/">its derivatives*</NuxtLink>.
               Also, controller has another requirements before it can used by Seme Framework.
@@ -315,9 +315,9 @@ export default {
   layout: 'v3.2',
   data (){
     return {
-      name: 'Seme Framework v3.2.1',
-      suffix: ' - Seme Framework 3.2.1',
-      title: 'Controller',
+      name: 'Seme Framework 3.2.5',
+      suffix: ' - Seme Framework 3.2.5',
+      title: 'The Controller',
       description: 'Learn more about controller class of Seme Framework version 3.2.5 through this documentation.',
       breadcrumbs: [
         {

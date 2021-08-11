@@ -189,8 +189,8 @@
           "image": [
             (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
           ],
-          "dateCreated": "2020-06-11T10:12:00+07:00",
-          "datePublished": "2020-06-11T10:12:00+07:00",
+          "dateCreated": "2021-08-11T19:52:38+07:00",
+          "datePublished": "2021-08-11T19:52:38+07:00",
           "dateModified": "2021-07-24T17:16:00+07:00",
           "author": {
             "@type": "Person",

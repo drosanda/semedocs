@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/3.1/">3.1.0</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.1/">3.1.x</NuxtLink></li>
           <li class=""><NuxtLink to="/3.1/model">Model</NuxtLink></li>
           <li class="unavailable">Exec Method</li>
         </ul>
@@ -67,10 +67,10 @@ export default {
   layout: 'v3.1',
   data (){
     return {
-      name: 'Seme Framework v3.1.0',
+      name: 'Seme Framework v3.1.5',
       suffix: ' - Documentation',
       title: 'Model::exec',
-      description: 'Learn more about Model::exec on Seme Framework version 3.1.0 through this documentation.'
+      description: 'Learn more about Model::exec on Seme Framework version 3.1.x through this documentation.'
     }
   },
   head() {

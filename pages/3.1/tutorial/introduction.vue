@@ -493,10 +493,10 @@ class Home extends SENE_Controller
     layout: 'v3.1',
     data (){
       return {
-        name: 'Seme Framework v3.1.0',
-        suffix: ' - Seme Framework v3.1.0',
+        name: 'Seme Framework v3.1.5',
+        suffix: ' - Seme Framework v3.1.5',
         title: 'Tutorial: Introduction',
-        description: 'Learn more about introduction tutorial of Seme Framework version 3.1.0 through this documentation.',
+        description: 'Learn more about introduction tutorial of Seme Framework version 3.1.x through this documentation.',
         hlWorld: require('~/assets/img/hello-world.png'),
         intro6a: require('~/assets/img/tutorial/introduction/6a.png'),
         intro7: require('~/assets/img/tutorial/introduction/7.png'),
@@ -564,8 +564,8 @@ class Home extends SENE_Controller
           "image": [
             (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
           ],
-          "dateCreated": "2020-06-11T10:12:00+07:00",
-          "datePublished": "2020-06-11T10:12:00+07:00",
+          "dateCreated": "2021-08-11T19:52:38+07:00",
+          "datePublished": "2021-08-11T19:52:38+07:00",
           "dateModified": "2021-06-11T01:04:00+07:00",
           "author": {
             "@type": "Person",
