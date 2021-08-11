@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0/">4.0.2</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0/">4.0.x</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0/uri-routing">URI Routing</NuxtLink></li>
           <li class="unavailable">Admin URI Routing</li>
         </ul>
