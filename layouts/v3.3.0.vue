@@ -14,6 +14,9 @@
           <li><nuxt-link to="/3.3.0/">Version 3.3.0</nuxt-link></li>
           <li><nuxt-link to="/error/">Error &amp; Troubleshooting</nuxt-link></li>
         </ul>
+        <br>
+        <br>
+        <br>
       </amp-sidebar>
       <button
         class="hamburger"

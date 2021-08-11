@@ -35,6 +35,9 @@
             </ul>
           </li>
         </ul>
+        <br>
+        <br>
+        <br>
       </amp-sidebar>
 
       <button class="hamburger" on='tap:sidebar1.toggle' aria-label="Click to open sidebar" >

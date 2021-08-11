@@ -496,13 +496,13 @@ class Home extends SENE_Controller{
 </div>
             <div class="message is-info">
               <div class="message-body">
-                <p>Private method dalam Seme Framework diawali dengan underscore 2 kali (__).</p>
-              </div>
-            </div>
-
-            <div class="message is-success">
-              <div class="message-body">
-                <p>Private method tidak dapat diakses oleh alamat URL langsung.</p>
+                <p><b>Asal kamu tahu</b></p>
+                <p>
+                  Private method dalam Seme Framework diawali dengan underscore 2 kali (__) dan tidak dapat diakses oleh alamat URL langsung.
+                </p>
+                <p>
+                  Masih bingung? Pelajari lagi <NuxtLink to="/id/tutorial/basic-mvc/#hak_akses_kelas">Hak Akses Kelas <i class="fa fa-window-restore"></i></NuxtLink> untuk Seme Framework.
+                </p>
               </div>
             </div>
 

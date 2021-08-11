@@ -142,7 +142,7 @@
               Metode dapat berisikan kumpulan kode atau logika yang ada pada suatu kelas.
             </p>
 
-            <h3>Hak Akses pada kelas, properti, dan metode</h3>
+            <h3 id="hak_akses_kelas">Hak Akses pada kelas, properti, dan metode</h3>
             <p>
               Baik kelas, properti, ataupun metode memiliki 3 jenis <b>hak akses</b> yaitu:
               <ol>
