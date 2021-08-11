@@ -4,22 +4,22 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/issue">Error &amp; Troubleshooting</NuxtLink></li>
-          <li class="unavailable">Notice</li>
+          <li class=""><NuxtLink to="/issue">Issue</NuxtLink></li>
+          <li class="unavailable">Error Notice</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1>Notice List</h1>
+            <h1>Error Notice List</h1>
             <p>Here is the list of known notice message that ussually occured in Seme Framework</p>
             <ul>
-              <li><NuxtLink to="/error/notice/missing-app-cache">Notice: Missing app/cache</NuxtLink></li>
-              <li><NuxtLink to="/error/notice/missing-kero-bin">Notice: Missing kero/bin</NuxtLink></li>
-              <li><NuxtLink to="/error/notice/could-not-find-model">Error: Could not find model</NuxtLink></li>
-              <li><NuxtLink to="/error/notice/missing-theme-directory-for-theme-name">Error: Missing theme directory for THEME NAME</NuxtLink></li>
-              <li><NuxtLink to="/error/notice/could-not-find-library">Could not find library LIBRARY NAME</NuxtLink></li>
-              <li><NuxtLink to="/error/notice/unable-to-load-library-on">Unable to load library on LIBRARY NAME</NuxtLink></li>
+              <li><NuxtLink to="/issue/notice/missing-app-cache">Notice: Missing app/cache</NuxtLink></li>
+              <li><NuxtLink to="/issue/notice/missing-kero-bin">Notice: Missing kero/bin</NuxtLink></li>
+              <li><NuxtLink to="/issue/notice/could-not-find-model">Error: Could not find model</NuxtLink></li>
+              <li><NuxtLink to="/issue/notice/missing-theme-directory">Error: Missing theme directory for THEME NAME</NuxtLink></li>
+              <li><NuxtLink to="/issue/notice/could-not-find-library">Could not find library LIBRARY NAME</NuxtLink></li>
+              <li><NuxtLink to="/issue/notice/unable-to-load-library">Unable to load library on LIBRARY NAME</NuxtLink></li>
             </ul>
           </div>
         </div>
@@ -29,11 +29,11 @@
         <div class="nav-bottom-left">
           <nuxt-link to="/issue" class="btn">
           <i class="fa fa-chevron-left"></i>
-            Error &amp; Troubleshooting
+            Issue
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/error/troubleshooting/" class="btn">
+          <nuxt-link to="/issue/troubleshooting" class="btn">
             Troubleshooting
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
@@ -48,18 +48,18 @@ export default {
   layout: 'issue',
   data (){
     return {
-      name: 'Seme Framework Error Notice',
-      suffix: ' - Seme Framework Documentation',
+      name: 'Seme Framework Issue',
+      suffix: ' - Seme Framework Issue',
       title: 'Error Notice',
-      description: 'Learn more about any Error Notice occured while using Seme Framework and how to solved it.',
+      description: 'Here is the list of Error Notice that commonly occured while using Seme Framework.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
           text: 'Seme Framework',
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/error/',
-          text: 'Error',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/issue',
+          text: 'Issue',
         }
       ]
     }
@@ -86,7 +86,8 @@ export default {
       ]
     }
   },
-  jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
     const items = this.breadcrumbs.map((item, index) => ({
       '@type': 'ListItem',
       position: index + 1,
@@ -112,9 +113,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2020-06-11T10:12:00+07:00",
-        "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-11T01:04:00+07:00",
+        "dateCreated": "2021-08-11T19:12:00+07:00",
+        "datePublished": "2021-08-11T19:12:00+07:00",
+        "dateModified": "2021-08-11T19:12:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

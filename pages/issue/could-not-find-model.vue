@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/issue">Error &amp; Troubleshooting</NuxtLink></li>
+          <li class=""><NuxtLink to="/issue">Issue</NuxtLink></li>
           <li class="unavailable">[1024] could not find model</li>
         </ul>
       </nav>
@@ -78,7 +78,7 @@ Error: [1024] could not find model hello_model on /Applications/XAMPP/xamppfiles
         <div class="nav-bottom-left">
           <nuxt-link to="/issue" class="btn">
           <i class="fa fa-chevron-left"></i>
-            Error List
+            Issue
           </nuxt-link>
         </div>
       </div>
@@ -91,18 +91,18 @@ export default {
   layout: 'issue',
   data (){
     return {
-      name: 'Seme Framework Error &amp; Troubleshooting',
-      suffix: ' - Seme Framework Error Notice',
+      name: 'Seme Framework Issue',
+      suffix: ' - Seme Framework Issue',
       title: 'Error: [1024] Could not find model',
-      description: 'Learn more about Seme Framework Error: [1024] Could not find model and how to solved it.',
+      description: 'Learn more about Error: [1024] Could not find model on Seme Framework and how to solved it.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
           text: 'Seme Framework',
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/ertroror/',
-          text: 'Error',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/issue',
+          text: 'Issue',
         }
       ]
     }
@@ -129,7 +129,8 @@ export default {
       ]
     }
   },
-  jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
     const items = this.breadcrumbs.map((item, index) => ({
       '@type': 'ListItem',
       position: index + 1,
@@ -155,9 +156,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2020-06-11T10:12:00+07:00",
-        "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-11T01:04:00+07:00",
+        "dateCreated": "2021-08-11T19:12:00+07:00",
+        "datePublished": "2021-08-11T19:12:00+07:00",
+        "dateModified": "2021-08-11T19:12:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

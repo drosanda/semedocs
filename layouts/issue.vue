@@ -9,21 +9,22 @@
           <li>
             <a href="#">Version</a>
             <ul>
-              <li><nuxt-link to="/4.0.0/">4.0.0</nuxt-link></li>
-              <li><nuxt-link to="/3.3.0/">3.3.0</nuxt-link></li>
-              <li><nuxt-link to="/3.2.1/">3.2.1</nuxt-link></li>
-              <li><nuxt-link to="/3.1.0/">3.1.x</nuxt-link></li>
-              <li><nuxt-link to="/3.0.0/">3.0.x</nuxt-link></li>
+              <li><nuxt-link to="/4.0.0">4.0.x (English)</nuxt-link></li>
+              <li><nuxt-link to="/id">4.0.x (Bahasa)</nuxt-link></li>
+              <li><nuxt-link to="/3.3">3.3.x</nuxt-link></li>
+              <li><nuxt-link to="/3.2">3.2.1</nuxt-link></li>
+              <li><nuxt-link to="/3.1">3.1.x</nuxt-link></li>
+              <li><nuxt-link to="/3.0">3.0.x</nuxt-link></li>
             </ul>
           </li>
           <li>
-            <nuxt-link to="/issue/">Notice, Error &amp; Troubleshooting</nuxt-link>
+            <nuxt-link to="/issue">Issue</nuxt-link>
             <ul>
               <li>
-                <nuxt-link to="/issue/notice/">Notice</nuxt-link>
+                <nuxt-link to="/issue/notice">Error Notice</nuxt-link>
               </li>
               <li>
-                <nuxt-link to="/issue/troubleshooting/">Troubleshooting</nuxt-link>
+                <nuxt-link to="/issue/troubleshooting">Troubleshooting</nuxt-link>
               </li>
             </ul>
           </li>

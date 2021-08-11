@@ -4,8 +4,8 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/issue">Error &amp; Troubleshooting</NuxtLink></li>
-          <li class=""><NuxtLink to="/error/notice">Notice</NuxtLink></li>
+          <li class=""><NuxtLink to="/issue">Issue</NuxtLink></li>
+          <li class=""><NuxtLink to="/issue/notice">Error Notice</NuxtLink></li>
           <li class="unavailable">Missing kero/bin</li>
         </ul>
       </nav>
@@ -58,9 +58,9 @@ Notice: Missing kero/bin in /opt/lampp/htdocs/seme-framework
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/error/notice/" class="btn">
+          <nuxt-link to="/issue/notice" class="btn">
             <i class="fa fa-chevron-left"></i>
-            Notice
+            Error Notice
           </nuxt-link>
         </div>
       </div>
@@ -73,22 +73,22 @@ export default {
   layout: 'issue',
   data (){
     return {
-      name: 'Seme Framework Error &amp; Troubleshooting',
+      name: 'Seme Framework Error Notice',
       suffix: ' - Seme Framework Error Notice',
       title: 'Missing kero/bin',
-      description: 'Learn more about Seme Framework Error Notice: Missing kero/bin and how to solved it.',
+      description: 'Learn more about Error Notice: Missing kero/bin on Seme Framework and how to solved it.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
-          text: 'Seme Framework',
+          text: 'Seme Framework'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/error/',
-          text: 'Error',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/issue',
+          text: 'Issue'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/error/notice/',
-          text: 'Notice',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/issue/notice',
+          text: 'Error Notice'
         }
       ]
     }
@@ -115,7 +115,8 @@ export default {
       ]
     }
   },
-  jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
     const items = this.breadcrumbs.map((item, index) => ({
       '@type': 'ListItem',
       position: index + 1,
@@ -141,9 +142,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2020-06-11T10:12:00+07:00",
-        "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-11T01:04:00+07:00",
+        "dateCreated": "2021-08-11T19:12:00+07:00",
+        "datePublished": "2021-08-11T19:12:00+07:00",
+        "dateModified": "2021-08-11T19:12:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

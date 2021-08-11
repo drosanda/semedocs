@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/issue">Error &amp; Troubleshooting</NuxtLink></li>
+          <li class=""><NuxtLink to="/issue">Issue</NuxtLink></li>
           <li class="unavailable">Troubleshooting</li>
         </ul>
       </nav>
@@ -14,19 +14,19 @@
             <h1>Troubleshooting List</h1>
             <p>Here is the list of known troubleshoot that ussually occured in Seme Framework</p>
             <ul>
-              <li><NuxtLink to="/error/troubleshooting/log-all-query">How to log all query</NuxtLink></li>
+              <li><NuxtLink to="/issue/troubleshooting/log-all-query">How to log all query</NuxtLink></li>
             </ul>
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
-                <nuxt-link to="/error/notice/" class="btn">
+                <nuxt-link to="/issue/notice" class="btn">
                 <i class="fa fa-chevron-left"></i>
-                  Notice
+                  Error Notice
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
                 <nuxt-link to="/issue" class="btn">
-                  Error &amp; Troubleshooting
+                  Issue
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
@@ -46,8 +46,8 @@ export default {
   layout: 'issue',
   data (){
     return {
-      name: 'Seme Framework Troubleshooting',
-      suffix: ' - Seme Framework Documentation',
+      name: 'Seme Framework Issue',
+      suffix: ' - Seme Framework Issue',
       title: 'Troubleshooting',
       description: 'Learn more about Troubleshooting while using Seme Framework and how to solved it.',
       breadcrumbs: [
@@ -56,8 +56,8 @@ export default {
           text: 'Seme Framework',
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/error/',
-          text: 'Error',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/issue',
+          text: 'Issue',
         }
       ]
     }
@@ -84,7 +84,8 @@ export default {
       ]
     }
   },
-  jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
     const items = this.breadcrumbs.map((item, index) => ({
       '@type': 'ListItem',
       position: index + 1,
@@ -110,9 +111,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2020-06-11T10:12:00+07:00",
-        "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-11T01:04:00+07:00",
+        "dateCreated": "2021-08-11T19:12:00+07:00",
+        "datePublished": "2021-08-11T19:12:00+07:00",
+        "dateModified": "2021-08-11T19:12:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

@@ -4,7 +4,8 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/error/troubleshooting/">Troubleshooting</NuxtLink></li>
+          <li class=""><NuxtLink to="/issue">Issue</NuxtLink></li>
+          <li class=""><NuxtLink to="/issue/troubleshooting">Troubleshooting</NuxtLink></li>
           <li class="unavailable">How To Log All Query</li>
         </ul>
       </nav>
@@ -205,7 +206,7 @@ $sl-&gt;write(&#039;SENE_MySQLi::exec -- &#039;.$sql);
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/error/troubleshooting/" class="btn">
+          <nuxt-link to="/issue/troubleshooting/" class="btn">
           <i class="fa fa-chevron-left"></i>
             Troubleshooting
           </nuxt-link>
@@ -230,11 +231,11 @@ export default {
           text: 'Seme Framework',
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/ertroror/',
-          text: 'Error',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/issue',
+          text: 'Issue',
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/error/troubleshooting/',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/issue/troubleshooting',
           text: 'Troubleshooting',
         }
       ]
@@ -262,7 +263,8 @@ export default {
       ]
     }
   },
-  jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
     const items = this.breadcrumbs.map((item, index) => ({
       '@type': 'ListItem',
       position: index + 1,
@@ -288,9 +290,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2020-06-11T10:12:00+07:00",
-        "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-11T01:04:00+07:00",
+        "dateCreated": "2021-08-11T19:12:00+07:00",
+        "datePublished": "2021-08-11T19:12:00+07:00",
+        "dateModified": "2021-08-11T19:12:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

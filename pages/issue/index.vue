@@ -4,27 +4,40 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class="unavailable">Notice, Error &amp; Troubleshooting</li>
+          <li class="unavailable">Issue</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1>Notice, Error &amp; Troubleshooting</h1>
-            <p>Like other framework, Seme Framework has builtin error message.</p>
-            <p>Here is the list of known error that ussually occured in Seme Framework</p>
+            <h1>Issue</h1>
+            <p>
+              Like other framework, Seme Framework has builtin error message. Here is the list of issue that commonly occured while using Seme Framework.
+            </p>
             <ul>
               <li>
                 <a href="#">Error</a>
                 <ul>
-                  <li><NuxtLink to="/error/could-not-find-model/">[1024] Could not find model</NuxtLink></li>
+                  <li><NuxtLink to="/issue/could-not-find-model">[1024] Could not find model</NuxtLink></li>
                 </ul>
               </li>
               <li>
-                <NuxtLink to="/error/notice/">Notice</NuxtLink>
+                <NuxtLink to="/issue/notice">Notice</NuxtLink>
+                <ul>
+                  <li><NuxtLink to="/issue/notice/could-not-find-library">Could not find Library</NuxtLink></li>
+                  <li><NuxtLink to="/issue/notice/could-not-find-model">Could not find Model</NuxtLink></li>
+                  <li><NuxtLink to="/issue/notice/missing-app-cache">Missing app/cache</NuxtLink></li>
+                  <li><NuxtLink to="/issue/notice/missing-app-cache">Missing kero/bin</NuxtLink></li>
+                  <li><NuxtLink to="/issue/notice/missing-theme-directory">Missing Theme Directory</NuxtLink></li>
+                  <li><NuxtLink to="/issue/notice/could-not-find-library">Could not find library</NuxtLink></li>
+                  <li><NuxtLink to="/issue/notice/unable-to-load-library">Unable to load library</NuxtLink></li>
+                </ul>
               </li>
               <li>
-                <NuxtLink to="/error/troubleshooting/">Troubleshooting</NuxtLink>
+                <NuxtLink to="/issue/troubleshooting">Troubleshooting</NuxtLink>
+                <ul>
+                  <li><NuxtLink to="/issue/troubleshooting/log-all-query">How to log all query</NuxtLink></li>
+                </ul>
               </li>
             </ul>
           </div>
@@ -39,7 +52,7 @@
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/error/notice/" class="btn">
+          <nuxt-link to="/issue/notice/" class="btn">
             Notice
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
@@ -56,8 +69,8 @@ export default {
     return {
       name: 'Seme Framework',
       suffix: ' - Seme Framework',
-      title: 'Error & Troubleshooting',
-      description: 'Learn more about Seme Framework Error & Troubleshooting nad how to solved it.',
+      title: 'Issue',
+      description: 'Here is the list of issue that commonly occured while using Seme Framework.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -115,9 +128,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2020-06-11T10:12:00+07:00",
-        "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-28T07:24:11+07:00",
+        "dateCreated": "2021-08-11T19:12:00+07:00",
+        "datePublished": "2021-08-11T19:12:00+07:00",
+        "dateModified": "2021-08-11T19:12:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
