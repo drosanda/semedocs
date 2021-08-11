@@ -11,8 +11,8 @@
         <ul>
           <li><nuxt-link to="/">Seme Framework</nuxt-link></li>
           <li><nuxt-link to="/credits">Credits</nuxt-link></li>
-          <li><nuxt-link to="/3.3.0/">Version 3.3.0</nuxt-link></li>
-          <li><nuxt-link to="/error/">Error &amp; Troubleshooting</nuxt-link></li>
+          <li><nuxt-link to="/3.3.0">Version 3.3.0</nuxt-link></li>
+          <li><nuxt-link to="/issue">Error &amp; Troubleshooting</nuxt-link></li>
         </ul>
         <br>
         <br>

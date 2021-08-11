@@ -63,7 +63,7 @@ Notice: Missing app/cache in /opt/lampp/htdocs/seme-framework
 <script>
 
 export default {
-  layout: 'troubleshoot',
+  layout: 'issue',
   data (){
     return {
       name: 'Seme Framework Error &amp; Troubleshooting',

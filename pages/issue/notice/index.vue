@@ -5,71 +5,22 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/error/">Error &amp; Troubleshooting</NuxtLink></li>
-          <li class="unavailable">[1024] could not find model</li>
+          <li class="unavailable">Notice</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1>[1024] could not find model</h1>
-            <p>Could not find model [model_name] it was occured when model file cannot be loaded from controller.</p>
-
-            <p>Example error message</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-File: /Applications/XAMPP/xamppfiles/htdocs/seme-framework/kero/sine/SENE_Controller.php
-
-Line: 156
-
-Error: [1024] could not find model hello_model on /Applications/XAMPP/xamppfiles/htdocs/seme-framework/app/model/hello_model.php
-</highlight-code>
-</div>
-</div>
-
-            <h2>Solution</h2>
-            <p>Here is some options that can be done for solving this error.</p>
-            <h3>Check the file name</h3>
-            <p>Please make sure:</p>
-            <ol>
-              <li>The file name are correct,</li>
-              <li>Filename are in lower case,</li>
-              <li>There is no spaces between dot and extension name, and</li>
-              <li>There is only alphanumeric and underscore allowed.</li>
-            </ol>
-
-            <h3>Check the class name</h3>
-            <p>Please make sure:</p>
-            <ol>
-              <li>The file name are equal with class name but the case is ignored,</li>
-              <li>Classname can be camel case or in mixed case with the first letter of each internal word capitalized</li>
-              <li>There is only alphanumeric and underscore allowed, </li>
-              <li>There is no space or special char on class name.</li>
-            </ol>
-
-            <h3>Check the class loader on Controller</h3>
-            <p>Model are loaded in Controller through <NuxtLink to="/4.0.0/controller/load/"><code>load</code></NuxtLink> method. Please make sure:</p>
-            <ol>
-              <li>The location of file and file name is correct,</li>
-              <li>The alias are correct.</li>
-            </ol>
-
+            <h1>Notice List</h1>
+            <p>Here is the list of known notice message that ussually occured in Seme Framework</p>
+            <ul>
+              <li><NuxtLink to="/error/notice/missing-app-cache">Notice: Missing app/cache</NuxtLink></li>
+              <li><NuxtLink to="/error/notice/missing-kero-bin">Notice: Missing kero/bin</NuxtLink></li>
+              <li><NuxtLink to="/error/notice/could-not-find-model">Error: Could not find model</NuxtLink></li>
+              <li><NuxtLink to="/error/notice/missing-theme-directory-for-theme-name">Error: Missing theme directory for THEME NAME</NuxtLink></li>
+              <li><NuxtLink to="/error/notice/could-not-find-library">Could not find library LIBRARY NAME</NuxtLink></li>
+              <li><NuxtLink to="/error/notice/unable-to-load-library-on">Unable to load library on LIBRARY NAME</NuxtLink></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -78,7 +29,13 @@ Error: [1024] could not find model hello_model on /Applications/XAMPP/xamppfiles
         <div class="nav-bottom-left">
           <nuxt-link to="/error/" class="btn">
           <i class="fa fa-chevron-left"></i>
-            Error List
+            Error &amp; Troubleshooting
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
+          <nuxt-link to="/error/troubleshooting/" class="btn">
+            Troubleshooting
+            <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
       </div>
@@ -88,20 +45,20 @@ Error: [1024] could not find model hello_model on /Applications/XAMPP/xamppfiles
 </template>
 <script>
 export default {
-  layout: 'troubleshoot',
+  layout: 'issue',
   data (){
     return {
-      name: 'Seme Framework Error &amp; Troubleshooting',
-      suffix: ' - Seme Framework Error Notice',
-      title: 'Error: [1024] Could not find model',
-      description: 'Learn more about Seme Framework Error: [1024] Could not find model and how to solved it.',
+      name: 'Seme Framework Error Notice',
+      suffix: ' - Seme Framework Documentation',
+      title: 'Error Notice',
+      description: 'Learn more about any Error Notice occured while using Seme Framework and how to solved it.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
           text: 'Seme Framework',
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/ertroror/',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/error/',
           text: 'Error',
         }
       ]

@@ -6,16 +6,16 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/error/">Error &amp; Troubleshooting</NuxtLink></li>
           <li class=""><NuxtLink to="/error/notice">Notice</NuxtLink></li>
-          <li class="unavailable">Unable to load library</li>
+          <li class="unavailable">Could not find Library</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1>Unable to load library LIBRARY_NAME</h1>
+            <h1>Could not find Library LIBRARY_NAME</h1>
             <p>Seme framework has supported library directory under <code>kero/lib</code>, so you have to checked it for supplied library name or path with its library name are exist.</p>
-
             <p>Example error message</p>
+
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -84,7 +84,7 @@ class Home extends SENE_Controller
   }
   public function download_xls($){
     $objPHPExcel = new Spreadsheet();
-    $objWorkSheet = $objPHPExcel-&#x3E;setActiveSheetIndex(0);
+&#x9;&#x9;$objWorkSheet = $objPHPExcel-&#x3E;setActiveSheetIndex(0);
     $objWorkSheet-&#x3E;setTitle(&#x22;Example&#x22;);
     $objWorkSheet-&#x3E;setCellValue(&#x27;A1&#x27;, &#x27;Example&#x27;)-&#x3E;mergeCells(&#x27;A1:G1&#x27;);
     $filename = &#x27;example.xlsx&#x27;;
@@ -106,7 +106,6 @@ class Home extends SENE_Controller
     exit;
   }
 }
-
 </highlight-code>
 </div>
 </div>
@@ -114,6 +113,7 @@ class Home extends SENE_Controller
           </div>
         </div>
       </div>
+
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
@@ -129,13 +129,13 @@ class Home extends SENE_Controller
 </template>
 <script>
 export default {
-  layout: 'troubleshoot',
+  layout: 'issue',
   data (){
     return {
       name: 'Seme Framework Error &amp; Troubleshooting',
       suffix: ' - Seme Framework Error Notice',
-      title: 'Unable to load library',
-      description: 'Learn more about Seme Framework Error Unable to load library and how to solved it.',
+      title: 'Could not find Library LIBRARY_NAME',
+      description: 'Learn more about Seme Framework Error Could not find Library and how to solved it.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

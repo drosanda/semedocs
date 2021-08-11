@@ -17,13 +17,13 @@
             </ul>
           </li>
           <li>
-            <nuxt-link to="/error/">Notice, Error &amp; Troubleshooting</nuxt-link>
+            <nuxt-link to="/issue/">Notice, Error &amp; Troubleshooting</nuxt-link>
             <ul>
               <li>
-                <nuxt-link to="/error/notice/">Notice</nuxt-link>
+                <nuxt-link to="/issue/notice/">Notice</nuxt-link>
               </li>
               <li>
-                <nuxt-link to="/error/troubleshooting/">Troubleshooting</nuxt-link>
+                <nuxt-link to="/issue/troubleshooting/">Troubleshooting</nuxt-link>
               </li>
             </ul>
           </li>

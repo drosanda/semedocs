@@ -217,7 +217,7 @@ $sl-&gt;write(&#039;SENE_MySQLi::exec -- &#039;.$sql);
 </template>
 <script>
 export default {
-  layout: 'troubleshoot',
+  layout: 'issue',
   data (){
     return {
       name: 'Advanced Debuging',

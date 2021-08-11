@@ -6,21 +6,14 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/error/">Error &amp; Troubleshooting</NuxtLink></li>
           <li class=""><NuxtLink to="/error/notice">Notice</NuxtLink></li>
-          <li class="unavailable">Missing kero/bin</li>
+          <li class="unavailable">Missing theme directory</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1>Missing kero/bin</h1>
-            <p>Seme framework has special place for putting your batch or binary in <code>kero/bin/</code> directory.</p>
-            <p>But, this directory for now is not auto generated so you have to created manually the <code>bin</code> directory.</p>
-
-            <div class="message is-info">
-              <div class="message-body">
-                <p>This only occured on Seme Framework version 4.x.x.</p>
-              </div>
-            </div>
+            <h1>Missing theme directory for THEME_NAME</h1>
+            <p>Seme framework has theme directory under <code>app/view</code>, so you have to checked it for supplied theme name existed or not.</p>
 
             <p>Example error message</p>
             <div class="macwindow">
@@ -42,17 +35,16 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-Notice: Missing kero/bin in /Application/xampp/htdocs/seme-frmamework
-Notice: Missing kero/bin in D:\xampp\htdocs\seme-framework
-Notice: Missing kero/bin in /opt/lampp/htdocs/seme-framework
+Missing theme directory for front
+Missing theme directory for admin
+Missing theme directory for frontend
 </highlight-code>
 </div>
 </div>
+
             <h2>Solution</h2>
-            <p>Create manually the directory <code>kero/bin</code>.</p>
+            <p>Create manually the directory same as theme name name under<code>app/view/</code>.</p>
           </div>
-
-
         </div>
       </div>
 
@@ -70,13 +62,13 @@ Notice: Missing kero/bin in /opt/lampp/htdocs/seme-framework
 </template>
 <script>
 export default {
-  layout: 'troubleshoot',
+  layout: 'issue',
   data (){
     return {
       name: 'Seme Framework Error &amp; Troubleshooting',
       suffix: ' - Seme Framework Error Notice',
-      title: 'Missing kero/bin',
-      description: 'Learn more about Seme Framework Error Notice: Missing kero/bin and how to solved it.',
+      title: 'Missing theme directory for THEME_NAME',
+      description: 'Learn more about Seme Framework Error Missing theme directory for THEME_NAME and how to solved it.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

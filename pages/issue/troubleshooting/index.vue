@@ -4,64 +4,60 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class="unavailable">Notice, Error &amp; Troubleshooting</li>
+          <li class=""><NuxtLink to="/error/">Error &amp; Troubleshooting</NuxtLink></li>
+          <li class="unavailable">Troubleshooting</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1>Notice, Error &amp; Troubleshooting</h1>
-            <p>Like other framework, Seme Framework has builtin error message.</p>
-            <p>Here is the list of known error that ussually occured in Seme Framework</p>
+            <h1>Troubleshooting List</h1>
+            <p>Here is the list of known troubleshoot that ussually occured in Seme Framework</p>
             <ul>
-              <li>
-                <a href="#">Error</a>
-                <ul>
-                  <li><NuxtLink to="/error/could-not-find-model/">[1024] Could not find model</NuxtLink></li>
-                </ul>
-              </li>
-              <li>
-                <NuxtLink to="/error/notice/">Notice</NuxtLink>
-              </li>
-              <li>
-                <NuxtLink to="/error/troubleshooting/">Troubleshooting</NuxtLink>
-              </li>
+              <li><NuxtLink to="/error/troubleshooting/log-all-query">How to log all query</NuxtLink></li>
             </ul>
+
+            <div class="nav-bottom">
+              <div class="nav-bottom-left">
+                <nuxt-link to="/error/notice/" class="btn">
+                <i class="fa fa-chevron-left"></i>
+                  Notice
+                </nuxt-link>
+              </div>
+              <div class="nav-bottom-right">
+                <nuxt-link to="/error/" class="btn">
+                  Error &amp; Troubleshooting
+                  <i class="fa fa-chevron-right"></i>
+                </nuxt-link>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
 
-      <div class="nav-bottom">
-        <div class="nav-bottom-left">
-          <nuxt-link to="/" class="btn">
-          <i class="fa fa-chevron-left"></i>
-            Seme Framework
-          </nuxt-link>
-        </div>
-        <div class="nav-bottom-right">
-          <nuxt-link to="/error/notice/" class="btn">
-            Notice
-            <i class="fa fa-chevron-right"></i>
-          </nuxt-link>
-        </div>
-      </div>
+
 
     </div>
   </div>
 </template>
 <script>
 export default {
-  layout: 'troubleshoot',
+  layout: 'issue',
   data (){
     return {
-      name: 'Seme Framework',
-      suffix: ' - Seme Framework',
-      title: 'Error & Troubleshooting',
-      description: 'Learn more about Seme Framework Error & Troubleshooting nad how to solved it.',
+      name: 'Seme Framework Troubleshooting',
+      suffix: ' - Seme Framework Documentation',
+      title: 'Troubleshooting',
+      description: 'Learn more about Troubleshooting while using Seme Framework and how to solved it.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
           text: 'Seme Framework',
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/error/',
+          text: 'Error',
         }
       ]
     }
@@ -88,8 +84,7 @@ export default {
       ]
     }
   },
-  jsonld() {
-    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+  jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
     const items = this.breadcrumbs.map((item, index) => ({
       '@type': 'ListItem',
       position: index + 1,
@@ -117,7 +112,7 @@ export default {
         ],
         "dateCreated": "2020-06-11T10:12:00+07:00",
         "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-28T07:24:11+07:00",
+        "dateModified": "2021-06-11T01:04:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

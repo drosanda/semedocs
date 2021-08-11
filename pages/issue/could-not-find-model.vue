@@ -5,17 +5,16 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/error/">Error &amp; Troubleshooting</NuxtLink></li>
-          <li class=""><NuxtLink to="/error/notice">Notice</NuxtLink></li>
-          <li class="unavailable">Could not find Library</li>
+          <li class="unavailable">[1024] could not find model</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1>Could not find Library LIBRARY_NAME</h1>
-            <p>Seme framework has supported library directory under <code>kero/lib</code>, so you have to checked it for supplied library name or path with its library name are exist.</p>
-            <p>Example error message</p>
+            <h1>[1024] could not find model</h1>
+            <p>Could not find model [model_name] it was occured when model file cannot be loaded from controller.</p>
 
+            <p>Example error message</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -35,91 +34,51 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-could not find model b_user_model on D:/XAMPP/htdocs/seme_framework/app/model/b_user_model.php
-could not find model api/b_user_model on D:/XAMPP/htdocs/seme_framework/app/model/api/b_user_model.php
-could not find model admin/b_user_model on D:/XAMPP/htdocs/seme_framework/app/model/admin/b_user_model.php
+File: /Applications/XAMPP/xamppfiles/htdocs/seme-framework/kero/sine/SENE_Controller.php
+
+Line: 156
+
+Error: [1024] could not find model hello_model on /Applications/XAMPP/xamppfiles/htdocs/seme-framework/app/model/hello_model.php
 </highlight-code>
 </div>
 </div>
 
             <h2>Solution</h2>
-            <p>Check the library are existed on <code>kero/lib/</code>.</p>
-            <p>Please make sure the filename and with its extension are not contain symbol and whitespace(s).</p>
+            <p>Here is some options that can be done for solving this error.</p>
+            <h3>Check the file name</h3>
+            <p>Please make sure:</p>
+            <ol>
+              <li>The file name are correct,</li>
+              <li>Filename are in lower case,</li>
+              <li>There is no spaces between dot and extension name, and</li>
+              <li>There is only alphanumeric and underscore allowed.</li>
+            </ol>
 
-            <h3>Example PHPOffice/Spreadsheet library loader</h3>
-            <p>Some library cannot be loaded by Seme Framework library loader, you have to included it manually using its namespace.</p>
+            <h3>Check the class name</h3>
+            <p>Please make sure:</p>
+            <ol>
+              <li>The file name are equal with class name but the case is ignored,</li>
+              <li>Classname can be camel case or in mixed case with the first letter of each internal word capitalized</li>
+              <li>There is only alphanumeric and underscore allowed, </li>
+              <li>There is no space or special char on class name.</li>
+            </ol>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">&#x3C;?php
-//loading library
-$vendorDirPath = (SEMEROOT.&#x27;kero/lib/phpoffice/vendor/&#x27;);
-$vendorDirPath = realpath($vendorDirPath);
-require_once $vendorDirPath.&#x27;/autoload.php&#x27;;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
-
-class Home extends SENE_Controller
-{
-  public function __construct()
-  {
-    parent::__construct();
-  ....
-  }
-  public function download_xls($){
-    $objPHPExcel = new Spreadsheet();
-&#x9;&#x9;$objWorkSheet = $objPHPExcel-&#x3E;setActiveSheetIndex(0);
-    $objWorkSheet-&#x3E;setTitle(&#x22;Example&#x22;);
-    $objWorkSheet-&#x3E;setCellValue(&#x27;A1&#x27;, &#x27;Example&#x27;)-&#x3E;mergeCells(&#x27;A1:G1&#x27;);
-    $filename = &#x27;example.xlsx&#x27;;
-    $objWriter = new Xlsx($objPHPExcel);
-    $objWriter-&#x3E;save(filename);
-
-    //force download
-    header(&#x27;Content-Description: File Transfer&#x27;);
-    header(&#x27;Content-Type: application/octet-stream&#x27;);
-    header(&#x27;Content-Disposition: attachment; filename=&#x27;.basename($filename));
-    header(&#x27;Content-Transfer-Encoding: binary&#x27;);
-    header(&#x27;Expires: 0&#x27;);
-    header(&#x27;Cache-Control: must-revalidate&#x27;);
-    header(&#x27;Pragma: public&#x27;);
-    header(&#x27;Content-Length: &#x27; . filesize($filename));
-    ob_clean();
-    flush();
-    readfile($pathFile);
-    exit;
-  }
-}
-</highlight-code>
-</div>
-</div>
+            <h3>Check the class loader on Controller</h3>
+            <p>Model are loaded in Controller through <NuxtLink to="/4.0.0/controller/load/"><code>load</code></NuxtLink> method. Please make sure:</p>
+            <ol>
+              <li>The location of file and file name is correct,</li>
+              <li>The alias are correct.</li>
+            </ol>
 
           </div>
         </div>
       </div>
 
-
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/error/notice/" class="btn">
-            <i class="fa fa-chevron-left"></i>
-            Notice
+          <nuxt-link to="/error/" class="btn">
+          <i class="fa fa-chevron-left"></i>
+            Error List
           </nuxt-link>
         </div>
       </div>
@@ -129,25 +88,21 @@ class Home extends SENE_Controller
 </template>
 <script>
 export default {
-  layout: 'troubleshoot',
+  layout: 'issue',
   data (){
     return {
       name: 'Seme Framework Error &amp; Troubleshooting',
       suffix: ' - Seme Framework Error Notice',
-      title: 'Could not find Library LIBRARY_NAME',
-      description: 'Learn more about Seme Framework Error Could not find Library and how to solved it.',
+      title: 'Error: [1024] Could not find model',
+      description: 'Learn more about Seme Framework Error: [1024] Could not find model and how to solved it.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
           text: 'Seme Framework',
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/error/',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/ertroror/',
           text: 'Error',
-        },
-        {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/error/notice/',
-          text: 'Notice',
         }
       ]
     }

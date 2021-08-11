@@ -4,59 +4,44 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/error/">Error &amp; Troubleshooting</NuxtLink></li>
-          <li class=""><NuxtLink to="/error/notice">Notice</NuxtLink></li>
-          <li class="unavailable">Could not find model</li>
+          <li class="unavailable">Notice, Error &amp; Troubleshooting</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1>Could not find model PATH_MODEL_NAME</h1>
-            <p>Seme framework has theme directory under <code>app/model</code>, so you have to checked it for supplied model name or path with its model name are exist.</p>
-
-            <p><strong>Example error message</strong></p>
-
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-could not find model b_user_model on D:/XAMPP/htdocs/seme_framework/app/model/b_user_model.php
-could not find model api/b_user_model on D:/XAMPP/htdocs/seme_framework/app/model/api/b_user_model.php
-could not find model admin/b_user_model on D:/XAMPP/htdocs/seme_framework/app/model/admin/b_user_model.php
-</highlight-code>
-</div>
-</div>
-
-            <h2>Solution</h2>
-            <p>Create manually the model file same as model name name under<code>app/model/</code>.</p>
-            <p>If the model loader has path, you have to checked the directory are existed or not.</p>
-            <p>If the directory is missing, you have to created it manually.</p>
-            <p>Please make sure the filename and with its extension are not contain symbol and whitespace(s).</p>
+            <h1>Notice, Error &amp; Troubleshooting</h1>
+            <p>Like other framework, Seme Framework has builtin error message.</p>
+            <p>Here is the list of known error that ussually occured in Seme Framework</p>
+            <ul>
+              <li>
+                <a href="#">Error</a>
+                <ul>
+                  <li><NuxtLink to="/error/could-not-find-model/">[1024] Could not find model</NuxtLink></li>
+                </ul>
+              </li>
+              <li>
+                <NuxtLink to="/error/notice/">Notice</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="/error/troubleshooting/">Troubleshooting</NuxtLink>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
+          <nuxt-link to="/" class="btn">
+          <i class="fa fa-chevron-left"></i>
+            Seme Framework
+          </nuxt-link>
+        </div>
+        <div class="nav-bottom-right">
           <nuxt-link to="/error/notice/" class="btn">
-            <i class="fa fa-chevron-left"></i>
             Notice
+            <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
       </div>
@@ -66,25 +51,17 @@ could not find model admin/b_user_model on D:/XAMPP/htdocs/seme_framework/app/mo
 </template>
 <script>
 export default {
-  layout: 'troubleshoot',
+  layout: 'issue',
   data (){
     return {
-      name: 'Seme Framework Error &amp; Troubleshooting',
-      suffix: ' - Seme Framework Error Notice',
-      title: 'Could not find model PATH_MODEL_NAME',
-      description: 'Learn more about Seme Framework Error Could not find model PATH_MODEL_NAME and how to solved it.',
+      name: 'Seme Framework',
+      suffix: ' - Seme Framework',
+      title: 'Error & Troubleshooting',
+      description: 'Learn more about Seme Framework Error & Troubleshooting nad how to solved it.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
           text: 'Seme Framework',
-        },
-        {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/error/',
-          text: 'Error',
-        },
-        {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/error/notice/',
-          text: 'Notice',
         }
       ]
     }
@@ -111,7 +88,8 @@ export default {
       ]
     }
   },
-  jsonld() { this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
     const items = this.breadcrumbs.map((item, index) => ({
       '@type': 'ListItem',
       position: index + 1,
@@ -139,7 +117,7 @@ export default {
         ],
         "dateCreated": "2020-06-11T10:12:00+07:00",
         "datePublished": "2020-06-11T10:12:00+07:00",
-        "dateModified": "2021-06-11T01:04:00+07:00",
+        "dateModified": "2021-06-28T07:24:11+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

@@ -5,37 +5,62 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/error/">Error &amp; Troubleshooting</NuxtLink></li>
-          <li class="unavailable">Notice</li>
+          <li class=""><NuxtLink to="/error/notice">Notice</NuxtLink></li>
+          <li class="unavailable">Missing kero/bin</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1>Notice List</h1>
-            <p>Here is the list of known notice message that ussually occured in Seme Framework</p>
-            <ul>
-              <li><NuxtLink to="/error/notice/missing-app-cache">Notice: Missing app/cache</NuxtLink></li>
-              <li><NuxtLink to="/error/notice/missing-kero-bin">Notice: Missing kero/bin</NuxtLink></li>
-              <li><NuxtLink to="/error/notice/could-not-find-model">Error: Could not find model</NuxtLink></li>
-              <li><NuxtLink to="/error/notice/missing-theme-directory-for-theme-name">Error: Missing theme directory for THEME NAME</NuxtLink></li>
-              <li><NuxtLink to="/error/notice/could-not-find-library">Could not find library LIBRARY NAME</NuxtLink></li>
-              <li><NuxtLink to="/error/notice/unable-to-load-library-on">Unable to load library on LIBRARY NAME</NuxtLink></li>
-            </ul>
+            <h1>Missing kero/bin</h1>
+            <p>Seme framework has special place for putting your batch or binary in <code>kero/bin/</code> directory.</p>
+            <p>But, this directory for now is not auto generated so you have to created manually the <code>bin</code> directory.</p>
+
+            <div class="message is-info">
+              <div class="message-body">
+                <p>This only occured on Seme Framework version 4.x.x.</p>
+              </div>
+            </div>
+
+            <p>Example error message</p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+Notice: Missing kero/bin in /Application/xampp/htdocs/seme-frmamework
+Notice: Missing kero/bin in D:\xampp\htdocs\seme-framework
+Notice: Missing kero/bin in /opt/lampp/htdocs/seme-framework
+</highlight-code>
+</div>
+</div>
+            <h2>Solution</h2>
+            <p>Create manually the directory <code>kero/bin</code>.</p>
           </div>
+
+
         </div>
       </div>
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/error/" class="btn">
-          <i class="fa fa-chevron-left"></i>
-            Error &amp; Troubleshooting
-          </nuxt-link>
-        </div>
-        <div class="nav-bottom-right">
-          <nuxt-link to="/error/troubleshooting/" class="btn">
-            Troubleshooting
-            <i class="fa fa-chevron-right"></i>
+          <nuxt-link to="/error/notice/" class="btn">
+            <i class="fa fa-chevron-left"></i>
+            Notice
           </nuxt-link>
         </div>
       </div>
@@ -45,13 +70,13 @@
 </template>
 <script>
 export default {
-  layout: 'troubleshoot',
+  layout: 'issue',
   data (){
     return {
-      name: 'Seme Framework Error Notice',
-      suffix: ' - Seme Framework Documentation',
-      title: 'Error Notice',
-      description: 'Learn more about any Error Notice occured while using Seme Framework and how to solved it.',
+      name: 'Seme Framework Error &amp; Troubleshooting',
+      suffix: ' - Seme Framework Error Notice',
+      title: 'Missing kero/bin',
+      description: 'Learn more about Seme Framework Error Notice: Missing kero/bin and how to solved it.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -60,6 +85,10 @@ export default {
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/error/',
           text: 'Error',
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/error/notice/',
+          text: 'Notice',
         }
       ]
     }
