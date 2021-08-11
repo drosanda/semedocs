@@ -183,10 +183,10 @@
 </template>
 <script>
 export default {
-  layout: 'v4.0.0',
+  layout: 'v4.0',
   data() {
     return {
-      name: 'Seme Framework v4.0.0',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'putJsContent Method',
       description: 'Learn more about putJsContent Method from SENE_Controller on Seme Framework version 4.0.0',

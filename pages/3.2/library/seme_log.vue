@@ -113,10 +113,10 @@ export default {
   layout: 'v3.2',
   data() {
     return {
-      name: 'Seme Framework v4.0.0',
-      suffix: ' - Seme Framework 4',
+      name: 'Seme Framework v3.2.5',
+      suffix: ' - Seme Framework  v3.2.5',
       title: 'Seme_Log',
-      description: 'Learn more about Seme_Log Library on Seme Framework version 4.0.0',
+      description: 'Learn more about Seme_Log Library on Seme Framework version 3.2.5',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -124,7 +124,7 @@ export default {
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2',
-          text: '4.0.2',
+          text: '3.2.x',
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2/library',

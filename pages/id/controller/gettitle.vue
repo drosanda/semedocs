@@ -196,7 +196,7 @@ export default {
   layout: 'id',
   data (){
     return {
-      name: 'Seme Framework v4.0.0',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Metode getTitle',
       description: 'Pelajari selengkapnya tentang metode getTitle dari SENE_Controller di Seme Framework 4.',
@@ -208,7 +208,7 @@ export default {
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/id',
-          text: 'id'
+          text: 'ID'
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/controller',

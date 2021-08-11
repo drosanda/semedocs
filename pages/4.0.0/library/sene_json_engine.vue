@@ -89,7 +89,7 @@ class SENE_JSON_Engine
 </template>
 <script>
 export default {
-  layout: 'v4.0.0',
+  layout: 'v4.0',
   data (){
     return {
       name: 'Seme Framework 4',

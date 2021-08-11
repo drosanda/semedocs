@@ -113,7 +113,7 @@ export default {
     return {
       base_url: '{{base_url}}',
       cdn_url: '{{cdn_url}}',
-      name: 'Seme Framework v4.0.0',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Kode {{cdn_url}}',
       description: 'Pelajari selengkapnya tentang penggunaan kode {{cdn_url}} pada Seme Framework 4.',

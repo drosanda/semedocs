@@ -345,10 +345,10 @@
 </template>
 <script>
 export default {
-  layout: 'v4.0.0',
+  layout: 'v4.0',
   data (){
     return {
-      name: 'Seme Framework v4.0.0',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'URI Routing',
       description: 'Learn more about URI Routing on Seme Framework 4.',

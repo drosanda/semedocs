@@ -176,7 +176,7 @@ export default {
   layout: 'id',
   data (){
     return {
-      name: 'Seme Framework v4.0.0',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Metode Union Get',
       description: 'Pelajari metode union_get dari properti $db pada kelas SENE_Model di Seme Framework 4.',

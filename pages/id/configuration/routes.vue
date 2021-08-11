@@ -303,7 +303,7 @@
             <p>
               Rute cadangan lainnya adalah rute <code>rahasia admin</code>, pelajari selengkapnya tentang <NuxtLink to="/id/uri_routing/admin/">rute untuk admin</NuxtLink>.
             </p>
-            
+
           </div>
         </div>
       </div>
@@ -331,7 +331,7 @@ export default {
   layout: 'id',
   data (){
     return {
-      name: 'Seme Framework v4.0.0',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Pengaturan Rute',
       description: 'Pelajari pengaturan rute dan pemetaan ulang rute di Seme Framework 4.',
@@ -346,7 +346,7 @@ export default {
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/configuration',
-          text: 'URI Routing',
+          text: 'Configuration',
         }
       ]
     }

@@ -169,10 +169,10 @@
 </template>
 <script>
 export default {
-  layout: 'v4.0.0',
+  layout: 'v4.0',
   data (){
     return {
-      name: 'Seme Framework v4.0.0',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Union Group By Method',
       description: 'Learn about union_group_by method from $db property on SENE_Model class for Seme Framework 4.',

@@ -48,11 +48,11 @@
 </template>
 <script>
 export default {
-  layout: 'v4.0.0',
+  layout: 'v4.0',
   data() {
     return {
-      title: 'Global: Functions - Seme Framework v4.0.0',
-      name: 'Seme Framework v4.0.0',
+      title: 'Global: Functions - Seme Framework v4.0',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Global Functions',
       description: 'Learn more about Global Functions of Seme Framework version 4.0.0 through this documentation.',

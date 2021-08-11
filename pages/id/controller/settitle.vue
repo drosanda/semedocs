@@ -127,7 +127,7 @@ export default {
   layout: 'id',
   data (){
     return {
-      name: 'Seme Framework v4.0.0',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Metode setTitle',
       description: 'Pelajari selengkapnya tentang metode setTitle dari SENE_Controller di Seme Framework 4.',

@@ -132,10 +132,10 @@
 </template>
 <script>
   export default {
-    layout: 'v4.0.0',
+    layout: 'v4.0',
     data() {
       return {
-        name: 'Seme Framework v4.0.0',
+        name: 'Seme Framework 4',
         suffix: ' - Seme Framework 4',
         title: 'Configuration Environments',
         description: 'Learn more about how to configuring Seme Framework 4 splitted by environment type',

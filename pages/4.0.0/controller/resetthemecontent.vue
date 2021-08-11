@@ -122,10 +122,10 @@
 </template>
 <script>
 export default {
-  layout: 'v4.0.0',
+  layout: 'v4.0',
   data (){
     return {
-      name: 'Seme Framework v4.0.0',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'resetThemeContent method',
       description: 'Learn more about resetThemeContent method on SENE_Controller class Seme Framework.',

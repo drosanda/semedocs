@@ -167,7 +167,7 @@ export default {
     return {
       base_url: '{{base_url}}',
       cdn_url: '{{cdn_url}}',
-      name: 'Seme Framework v4.0.0',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'File script.json',
       description: 'Pelajari cara penggunaan file script.json dalam tema view Seme Framework 4.',

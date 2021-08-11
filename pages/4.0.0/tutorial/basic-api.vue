@@ -605,10 +605,10 @@
 </template>
 <script>
 export default {
-  layout: 'v4.0.0',
+  layout: 'v4.0',
   data (){
     return {
-      name: 'Seme Framework v4.0.0',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Tutorial: Create basic API',
       pbwt: require('~~/assets/img/tutorial/basic-api/postman-create.png'),

@@ -135,7 +135,7 @@ export default {
   layout: 'id',
   data (){
     return {
-      name: 'Seme Framework v4.0.0',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Metode render',
       description: 'Pelajari selengkapnya tentang metode render dari kelas SENE_Controller di Seme Framework 4',

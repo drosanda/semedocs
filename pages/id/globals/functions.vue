@@ -36,7 +36,7 @@ export default {
   layout: 'id',
   data() {
     return {
-      title: 'Global: Functions - Seme Framework v4.0.0'
+      title: 'Global: Functions - Seme Framework 4'
     }
   },
   head() {

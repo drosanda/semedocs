@@ -174,10 +174,10 @@
 </template>
 <script>
 export default {
-  layout: 'v4.0.0',
+  layout: 'v4.0',
   data() {
     return {
-      name: 'Seme Framework v4.0.0',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'setTheme Method from SENE_Controller',
       description: 'Learn more about setTheme Method from SENE_Controller on Seme Framework version 4.0.0',

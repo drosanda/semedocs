@@ -174,7 +174,7 @@ export default {
   layout: 'id',
   data (){
     return {
-      name: 'Seme Framework v4.0.0',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Metode Union Group By',
       description: 'Pelajari metode union_group_by dari properti $db pada kelas SENE_Model di Seme Framework 4.',

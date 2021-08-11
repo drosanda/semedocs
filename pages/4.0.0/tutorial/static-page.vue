@@ -597,10 +597,10 @@ class Home extends SENE_Controller
 </template>
 <script>
 export default {
-  layout: 'v4.0.0',
+  layout: 'v4.0',
   data (){
     return {
-      name: 'Seme Framework v4.0.0',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Tutorial: Static Page',
       description: 'Learn more about creating a static page using Seme Framework version 4.0.0.',
