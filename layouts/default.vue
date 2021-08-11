@@ -24,7 +24,7 @@
           <li>
             <nuxt-link to="/version">Versions</nuxt-link>
             <ul>
-              <li><nuxt-link to="/4.0.0">4.0.x (English)</nuxt-link></li>
+              <li><nuxt-link to="/4.0">4.0.x (English)</nuxt-link></li>
               <li><nuxt-link to="/id">4.0.x (Bahasa)</nuxt-link></li>
               <li><nuxt-link to="/3.3">3.3.x</nuxt-link></li>
               <li><nuxt-link to="/3.2">3.2.1</nuxt-link></li>
