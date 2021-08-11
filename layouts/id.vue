@@ -21,7 +21,7 @@
 
         <ul>
           <li><nuxt-link to="/">Seme Framework</nuxt-link></li>
-          <li><nuxt-link to="/id">versi 4</nuxt-link></li>
+          <li><nuxt-link to="/id">versi 4.0.2 (ID)</nuxt-link></li>
           <li><nuxt-link to="/id/requirements">Persyaratan</nuxt-link></li>
           <li><nuxt-link to="/id/downloads">Download &amp; Install</nuxt-link></li>
           <li>
