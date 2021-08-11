@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0/">4.0.x</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0/">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0/controller/">Controller</NuxtLink></li>
           <li class="unavailable">config property</li>
         </ul>
