@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/error/">Error &amp; Troubleshooting</NuxtLink></li>
+          <li class=""><NuxtLink to="/issue">Error &amp; Troubleshooting</NuxtLink></li>
           <li class="unavailable">Notice</li>
         </ul>
       </nav>
@@ -27,7 +27,7 @@
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/error/" class="btn">
+          <nuxt-link to="/issue" class="btn">
           <i class="fa fa-chevron-left"></i>
             Error &amp; Troubleshooting
           </nuxt-link>

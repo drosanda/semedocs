@@ -28,7 +28,7 @@
               <nuxt-link to="/4.0.0/tutorial/" class="btn">
                 Getting Started
               </nuxt-link>
-              <nuxt-link to="/error/" class="btn">
+              <nuxt-link to="/issue" class="btn">
                 Troubleshoot
               </nuxt-link>
               <nuxt-link to="/id/" class="btn">

@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/error/">Error &amp; Troubleshooting</NuxtLink></li>
+          <li class=""><NuxtLink to="/issue">Error &amp; Troubleshooting</NuxtLink></li>
           <li class="unavailable">[1024] could not find model</li>
         </ul>
       </nav>
@@ -76,7 +76,7 @@ Error: [1024] could not find model hello_model on /Applications/XAMPP/xamppfiles
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/error/" class="btn">
+          <nuxt-link to="/issue" class="btn">
           <i class="fa fa-chevron-left"></i>
             Error List
           </nuxt-link>
