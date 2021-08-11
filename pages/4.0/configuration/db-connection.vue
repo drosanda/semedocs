@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0/">4.0.2</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0/configuration">Configuration</NuxtLink></li>
           <li class="unavailable">Database Connection</li>
         </ul>
@@ -89,7 +89,7 @@ export default {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Database Connection',
-      description: 'Learn more about Database Connection Configuration of Seme Framework version 4.0.0 through this documentation.',
+      description: 'Learn more about Database Connection Configuration of Seme Framework 4 through this documentation.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

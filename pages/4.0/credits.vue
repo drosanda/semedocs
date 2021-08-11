@@ -31,13 +31,13 @@
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/4.0/" class="btn">
+          <nuxt-link to="/4.0" class="btn">
           <i class="fa fa-chevron-left"></i>
-            Version 4.0.0
+            Version 4.0.2
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/4.0/requirements/" class="btn">
+          <nuxt-link to="/4.0/requirements" class="btn">
             Requirements
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
@@ -55,7 +55,7 @@
         name: 'Seme Framework 4',
         suffix: ' - Seme Framework 4',
         title: 'Credits',
-        description: 'Learn more about Requirement of Seme Framework Documentation for version 4.0.0',
+        description: 'Learn more about Requirement of Seme Framework 4 Documentation',
         breadcrumbs: [
           {
             url: process.env.BASE_URL || 'http://localhost:3001',

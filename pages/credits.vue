@@ -37,7 +37,7 @@
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/version/" class="btn">
+          <nuxt-link to="/version" class="btn">
             Versions
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>

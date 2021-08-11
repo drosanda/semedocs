@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0/">4.0.2</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0/tutorial">Tutorial</NuxtLink></li>
           <li class="unavailable">Introduction</li>
         </ul>
@@ -557,7 +557,7 @@
         name: 'Seme Framework 4',
         suffix: ' - Seme Framework 4',
         title: 'Tutorial: Introduction',
-        description: 'Learn more about introduction tutorial of Seme Framework version 4.0.0 through this documentation.',
+        description: 'Learn more about introduction tutorial of Seme Framework 4 through this documentation.',
         hlWorld: require('~/assets/img/hello-world.png'),
         intro6a: require('~/assets/img/tutorial/introduction/6a.png'),
         intro7: require('~/assets/img/tutorial/introduction/7.png'),

@@ -80,7 +80,7 @@
         name: 'Seme Framework 4',
         suffix: '',
         title: 'Seme Framework 4 Documentation',
-        description: 'Learn more about Seme Framework version 4.0.0 through this documentation.',
+        description: 'Learn more about Seme Framework 4 through this documentation.',
         breadcrumbs: [
           {
             url: process.env.BASE_URL || 'http://localhost:3001',

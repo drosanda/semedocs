@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0/">4.0.2</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0">4.0.2</NuxtLink></li>
           <li class="unavailable">View</li>
         </ul>
       </nav>
@@ -357,7 +357,7 @@ export default {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'View',
-      description: 'Learn more about using View concept from Seme Framework version 4.0.0',
+      description: 'Learn more about using View concept from Seme Framework 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

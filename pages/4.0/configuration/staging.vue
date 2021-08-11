@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0/">4.0.2</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0/configuration">Configuration</NuxtLink></li>
           <li class="unavailable">Staging</li>
         </ul>
@@ -55,7 +55,7 @@
         name: 'Seme Framework 4',
         suffix: ' - Seme Framework 4',
         title: 'Configuration for  Staging',
-        description: 'Learn more about how to configuring Seme Framework version 4.0.0 in staging phase',
+        description: 'Learn more about how to configuring Seme Framework 4 in staging phase',
         breadcrumbs: [
           {
             url: process.env.BASE_URL || 'http://localhost:3001',

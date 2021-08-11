@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0/">4.0.2</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0/tutorial">Tutorial</NuxtLink></li>
           <li class="unavailable">Get data</li>
         </ul>
@@ -253,7 +253,7 @@ export default {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Tutorial: Get Data',
-      description: 'Learn more about obtaining data from model tutorial by Seme Framework version 4.0.0 through this documentation.',dbCreate: require('~/assets/img/tutorial/phpmyadmin-db-create.png'),
+      description: 'Learn more about obtaining data from model tutorial by Seme Framework 4 through this documentation.',dbCreate: require('~/assets/img/tutorial/phpmyadmin-db-create.png'),
       dbImport: require('~/assets/img/tutorial/phpmyadmin-db-import.png'),
       dbTblList: require('~/assets/img/tutorial/phpmyadmin-db-tables.png'),
       getDataResult: require('~/assets/img/tutorial/chrome-crud-result.png'),

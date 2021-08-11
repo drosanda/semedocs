@@ -22,16 +22,16 @@
             </amp-img>
 
             <div class="buttons is-centered">
-              <nuxt-link to="/4.0.0/downloads/" class="btn">
+              <nuxt-link to="/4.0/downloads" class="btn">
                 Download
               </nuxt-link>
-              <nuxt-link to="/4.0.0/tutorial/" class="btn">
+              <nuxt-link to="/4.0/tutorial" class="btn">
                 Getting Started
               </nuxt-link>
               <nuxt-link to="/issue" class="btn">
                 Troubleshoot
               </nuxt-link>
-              <nuxt-link to="/id/" class="btn">
+              <nuxt-link to="/id" class="btn">
                 Bahasa Indonesia
               </nuxt-link>
             </div>
@@ -113,7 +113,7 @@
 
       <div class="nav-bottom">
         <div class="nav-bottom-right">
-          <nuxt-link to="/credits/" class="btn">
+          <nuxt-link to="/credits" class="btn">
             Credits
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>

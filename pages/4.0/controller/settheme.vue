@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0/">4.0.2</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0/controller/">Controller</NuxtLink></li>
           <li class="unavailable">setTheme Method</li>
         </ul>
@@ -180,7 +180,7 @@ export default {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'setTheme Method from SENE_Controller',
-      description: 'Learn more about setTheme Method from SENE_Controller on Seme Framework version 4.0.0',
+      description: 'Learn more about setTheme Method from SENE_Controller on Seme Framework 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

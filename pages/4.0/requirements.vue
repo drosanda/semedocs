@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0/">4.0.2</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0">4.0.2</NuxtLink></li>
           <li class="unavailable">Requirements</li>
         </ul>
       </nav>
@@ -82,7 +82,7 @@
         name: 'Seme Framework 4',
         suffix: ' - Seme Framework 4',
         title: 'Requirements',
-        description: 'Learn more about Requirement of Seme Framework Documentation for version 4.0.0',
+        description: 'Learn more about Requirements of Seme Framework 4 Documentation',
         breadcrumbs: [
           {
             url: process.env.BASE_URL || 'http://localhost:3001',

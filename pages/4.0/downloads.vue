@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0/">4.0.2</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0">4.0.2</NuxtLink></li>
           <li class="unavailable">Downloads</li>
         </ul>
       </nav>
@@ -213,7 +213,7 @@
         name: 'Seme Framework 4',
         suffix: ' - Seme Framework 4',
         title: 'Download and Install',
-        description: 'Learn more about how to download and install Seme Framework version 4.0.0',
+        description: 'Learn more about how to download and install Seme Framework 4',
         fr: require('~/assets/img/first-run.png'),
         breadcrumbs: [
           {
