@@ -115,8 +115,8 @@ export default {
   layout: 'v3.2',
   data() {
     return {
-      name: 'Seme Framework v3.2.1',
-      suffix: ' - Seme Framework 3.2.1',
+      name: 'Seme Framework v3.2.5',
+      suffix: ' - Seme Framework 3.2.5',
       title: 'Using Session',
       description: 'Learn more about Using Session from SENE_Controller on Seme Framework version 3.2.5',
       breadcrumbs: [

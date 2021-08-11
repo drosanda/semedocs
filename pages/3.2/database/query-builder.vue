@@ -605,10 +605,10 @@ export default {
   layout: 'v3.2',
   data (){
     return {
-      name: 'Seme Framework v3.2.1',
-      suffix: ' - Seme Framework 3.2.1',
+      name: 'Seme Framework v3.2.5',
+      suffix: ' - Seme Framework 3.2.5',
       title: 'Query Builder',
-      description: 'Learn more about database query builder on Seme Framework 3.2.1.',
+      description: 'Learn more about database query builder on Seme Framework 3.2.5.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

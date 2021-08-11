@@ -62,7 +62,7 @@ export default {
   data() {
     return {
       name: 'Seme Framework v3.2',
-      suffix: ' - Seme Framework 3.2.1',
+      suffix: ' - Seme Framework 3.2.5',
       title: 'Tutorial',
       description: 'Learn more about some real world tutorial of Seme Framework version 3.2.5 through this documentation.',
       breadcrumbs: [
@@ -72,7 +72,7 @@ export default {
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2/',
-          text: '3.2.1',
+          text: '3.2.5',
         }
       ]
     }

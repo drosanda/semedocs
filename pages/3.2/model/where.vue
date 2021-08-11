@@ -211,7 +211,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework v3.2',
-      suffix: ' - Seme Framework 3.2.1',
+      suffix: ' - Seme Framework 3.2.5',
       title: 'Where Method',
       description: 'Learn about where method on $db property on SENE_Model class for Seme Framework 3.2.5.',
       breadcrumbs: [
@@ -221,7 +221,7 @@ export default {
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2',
-          text: '3.2.1',
+          text: '3.2.5',
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2/model',

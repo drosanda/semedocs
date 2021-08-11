@@ -509,7 +509,7 @@ export default {
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2/',
-          text: '3.2.1',
+          text: '3.2.5',
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/tutorial/',
