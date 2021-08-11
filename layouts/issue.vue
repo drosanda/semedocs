@@ -43,7 +43,7 @@
       <div class="container">
         <div class="content has-text-centered">
           <p class="">Copyright &copy; 2014-2021. Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
-          <p><small>Last updated on June 10, 2021</small></p>
+          <p><small>Last updated on June 10, 2021 | <NuxtLink to="/privacy-policy">Privacy Policy</NuxtLink> | <NuxtLink to="/term-condition">Term &amp; Condition</NuxtLink></small></p>
         </div>
       </div>
     </footer>
