@@ -43,6 +43,14 @@
               </li>
             </ul>
           </li>
+          <li>
+            <nuxt-link to="/deployment">Deployment</nuxt-link>
+            <ul>
+              <li>
+                <nuxt-link to="/deployment/hosting-cpanel">Hosting with CPANEL</nuxt-link>
+              </li>
+            </ul>
+          </li>
         </ul>
         <br>
         <br>

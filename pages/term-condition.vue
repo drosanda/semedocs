@@ -39,11 +39,11 @@ export default {
       name: 'Cenah.co.id',
       suffix: ' - Cenah.co.id',
       title: 'Term and Condition',
-      description: 'Learn more about Cipta Esensi Merenah term and condition by using this website.',
+      description: 'Learn more about term and condition for Seme Framework Documentation.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
-          text: 'Seme Framework',
+          text: 'Seme Framework'
         }
       ]
     }
