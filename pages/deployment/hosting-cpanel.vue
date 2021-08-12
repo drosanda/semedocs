@@ -80,10 +80,49 @@
                   cd \XAMPP\htdocs\seme_framework
 
                   # now compressing the Seme Framework files and directories
-                  "C:\Program Files (x86)\7-Zip\7z.exe" upload.zip *
+                  "C:\Program Files (x86)\7-Zip\7z.exe" v4.zip *
 
                   # this command will produce zip file at
-                  #   D:\XAMPP\htdocs\seme_framework\upload.zip
+                  #   D:\XAMPP\htdocs\seme_framework\v4.zip
+                </highlight-code>
+              </div>
+            </div>
+
+            <h3>Compress File on Mac or Linux</h3>
+            <p>
+              Here is the example for compress file and directory using terminal.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  # on this example
+                  #  the Seme Framework located at
+                  #    /Applications/XAMPP/htdocs/seme_framework
+
+                  # first change directory to your Seme Framework working directory
+                  cd /Applications/XAMPP/htdocs/seme_framework
+
+                  # now compressing the Seme Framework files and directories
+                  zip -r9 --exclude="*.git" --exclude="v4.zip" --exclude="*node_modules*" v4.zip .
+                  # at the end of command contain dot (.) dont missed it
+                  #   will produce zip file on
+                  #     /Applications/XAMPP/htdocs/seme_framework/v4.zip
                 </highlight-code>
               </div>
             </div>
