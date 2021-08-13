@@ -13,41 +13,99 @@
         <div class="column">
           <div class="content">
             <h1 class="">Exec Method</h1>
-            <p>Exec method is used executing the raw SQL agains the table.</p>
+            <p>
+              The <code>exec</code> method is used for executing raw SQL against the table.
+            </p>
 
-            <h2>Parameters</h2>
-            <p>Query method has 1 required parameter.</p>
-            <pre>
-$this-&#x3E;db-&#x3E;query(string $sql): boolean
-            </pre>
+            <h2>Basic Usage</h2>
+            <p>
+              Here is the basic usage <code>exec</code> method from <code>$db</code> property on <NuxtLink to="/3.1/model/#SENE_Model">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  $this-&#x3E;db-&#x3E;exec(string $sql): boolean
+                </highlight-code>
+              </div>
+            </div>
 
-            <h3>$sql</h3>
-            <p><b>SQL</b> can be single command of SQL.</p>
+            <h3>Parameters</h3>
+            <p>This method has 1 required parameter.</p>
 
-            <h2>Example usage</h2>
-            <p>Here is the examples using SQL method. See the first of this page for full example.</p>
+            <h4>$sql</h4>
+            <p>The <b>$sql</b> value can be a completed single command of <code>SQL</code>.</p>
 
-            <h3>Basic Usage</h3>
-            <p>For example we assumed want to add new data in blog table. First, in the model:</p>
-            <pre>
-class Blog_Model extends SENE_Model{
-&#x9;var $tbl = &#x27;d_order&#x27;;
-&#x9;var $tbl_as = &#x27;dor&#x27;;
-&#x9;public function __construct(){
-&#x9;&#x9;parent::__construct();
-&#x9;&#x9;$this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
-&#x9;}
-&#x9;public function massUpdateProduct($id){
-&#x9;&#x9;$sql = &#x27;UPDATE products SET is_published =0 WHERE DATE(date_created) &#x3C; DATE(&#x22;2019-01-01&#x22;)&#x27;;
-&#x9;&#x9;return $this-&#x3E;db-&#x3E;exec($sql);
-&#x9;}
-}
-            </pre>
+            <h2>Example</h2>
+            <p>
+              Here is the example for <code>exec</code> method in a model class.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  class C_Produk_Model extends SENE_Model {
+                    var $tbl = &#x27;c_produk&#x27;;
+                    var $tbl_as = &#x27;cp&#x27;;
+
+                    public function __construct(){
+                      parent::__construct();
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                    }
+                    ...
+                    public function unpublishOldProduct($id){
+                      $sql = &#x27;UPDATE &#x27;.$this-&#x3E;tbl.&#x27; SET is_published = 0 WHERE DATE(date_created) &#x3C; DATE(&#x22;2019-01-01&#x22;)&#x27;;
+                      return $this-&#x3E;db-&#x3E;exec($sql);
+                    }
+                    ...
+                  }
+                </highlight-code>
+              </div>
+            </div>
+
+
+            <div class="message is-warning">
+              <div class="message-body">
+                <p><b>Caution</b></p>
+                <p>This method only suitable for executing query that contains INSERT, UPDATE, DELETE, TRUNCATE, DROP, and another DDL operation.</p>
+                <p>Please use <NuxtLink to="/3.1/model/query/">Query Method<i class="fa fa-window-restore"></i></NuxtLink> for collecting the result from raw SQL.</p>
+              </div>
+            </div>
+
           </div>
         </div>
-
       </div>
-      
+
     </div>
   </div>
 </template>
@@ -57,9 +115,23 @@ export default {
   data (){
     return {
       name: 'Seme Framework v3.1.5',
-      suffix: ' - Documentation',
-      title: 'Model::exec',
-      description: 'Learn more about Model::exec on Seme Framework version 3.1.x through this documentation.'
+      suffix: ' - Seme Framework 3.1.5',
+      title: 'Exec Method',
+      description: 'Learn exec method from $db property on SENE_Model class for Seme Framework 3.1.5',
+      breadcrumbs: [
+        {
+          url: process.env.BASE_URL || 'http://localhost:3001',
+          text: 'Seme Framework',
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1',
+          text: '3.1.x',
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1/model',
+          text: 'Model',
+        }
+      ],
     }
   },
   head() {
@@ -83,6 +155,63 @@ export default {
         }
       ]
     }
+  },
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+    const items = this.breadcrumbs.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@id': item.url,
+        name: item.text,
+      },
+    }));
+    return [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: items,
+      },
+      {
+        "@type": "NewsArticle",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+        },
+        "headline": (this.headline || this.title),
+        "image": [
+          (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
+        ],
+        "dateCreated": "2021-08-14T01:02:00+07:00",
+        "datePublished": "2021-08-14T01:02:00+07:00",
+        "dateModified": "2021-08-14T01:02:00+07:00",
+        "author": {
+          "@type": "Person",
+          "gender": "Male",
+          "name": "Daeng Rosanda, S.Kom",
+          "alternateName": "Daeng Rosanda",
+          "jobTitle": "Founder",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Cipta Esensi Merenah",
+            "email": "hi@cenah.co.id"
+          }
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Cipta Esensi Merenah",
+          "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+          "logo": {
+            "@type": "ImageObject",
+            "name": "logo Cipta Esensi Merenah",
+            "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+            "width": "256px",
+            "height": "62px"
+          }
+        },
+        "description": this.description
+      }
+    ];
   }
 }
 </script>

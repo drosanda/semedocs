@@ -127,7 +127,7 @@ export default {
   data (){
     return {
       name: 'Seme Framework v3.1.5',
-      suffix: ' - Seme Framework 3.1.5',
+      suffix: ' - Seme Framework v3.1.5',
       title: 'From Method',
       description: 'Learn about from method in $db property on SENE_Model class for Seme Framework 3.1.5.',
       breadcrumbs: [

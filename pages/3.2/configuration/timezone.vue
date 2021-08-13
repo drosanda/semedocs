@@ -55,7 +55,7 @@
     data() {
       return {
         name: 'Seme Framework v3.2.5',
-        suffix: ' - Seme Framework v3.2.5 Documentation',
+        suffix: ' - Seme Framework v3.2.5',
         title: 'Configuration: session.php',
         description: 'File session.php for Seme Framework version 3.2.x timezone setting',
         breadcrumbs: [

@@ -36,7 +36,7 @@
     data() {
       return {
         name: 'Seme Framework v3.2.5',
-        suffix: ' - Seme Framework v3.2.5 Documentation',
+        suffix: ' - Seme Framework v3.2.5',
         title: 'Configuration',
         description: 'Learn more about configuration for Seme Framework version 3.2.x',
         breadcrumbs: [

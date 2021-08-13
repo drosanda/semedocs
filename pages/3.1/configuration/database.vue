@@ -57,7 +57,7 @@
     data() {
       return {
         name: 'Seme Framework v3.1.5',
-        suffix: ' - Seme Framework v3.1.5 Documentation',
+        suffix: ' - Seme Framework v3.1.5',
         title: 'Configuration: database.php',
         description: 'File database.php for Seme Framework version 3.1.x database connection setting',
         breadcrumbs: [
