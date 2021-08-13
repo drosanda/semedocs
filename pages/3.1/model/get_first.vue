@@ -1,69 +1,256 @@
 <template>
-    <div class="section">
-        <div class="container">
-          <nav class="breadcrumb" aria-label="breadcrumbs">
-            <ul class="breadcrumbs">
-              <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-              <li class=""><NuxtLink to="/model">Model</NuxtLink></li>
-            <li class="unavailable">Get First Method</li>
-          </ul>
-        </nav>
-        <div class="columns">
-          <div class="column">
-        <div class="content">
-          <h1 class="">Get First Method</h1>
-					<p>Get First method is part of database class builder for filtering just only one result.</p>
-					<h2>Parameters</h2>
-					<p>Group By method has 2 parameter</p>
-					<pre>$this->db->get_first([string $result_type, [bool $is_debug]]): mixed</pre>
-          <h3>$result_type</h3>
-          <p><b>Result type</b> consist of array and object, if value has "array" the result will be array otherwise will returned object.</p>
-					<h2>Example usage</h2>
-					<p>Here is the examples using select method. See the first of this page for full example.</p>
-          <h3>Basic Usage</h3>
-          <p>For example we assumed want to add new data in blog table. First, in the model:</p>
-          <pre>class Blog_Model extends SENE_Model{
-  var $tbl = 'blog';
-  var $tbl_as = 'b';
-  public function __construct(){
-	 parent::__construct();
-  }
-  public function getById($id){
-    $this->db->select("id");
-    $this->db->select("title");
-    $this->db->select("content");
-    $this->db->from($this->tbl,$this->tbl_as);
-    $this->db->where_as("id",$id);
-    return $this->db->get_first();
-  }
-  public function getByIdArray($id){
-    $this->db->select("id");
-    $this->db->select("title");
-    $this->db->select("content");
-    $this->db->from($this->tbl,$this->tbl_as);
-    $this->db->where_as("id",$id);
-    return $this->db->get_first('array');
-  }
-  public function getByIdArrayDebugQuery($id){
-    $this->db->select("id");
-    $this->db->select("title");
-    $this->db->select("content");
-    $this->db->from($this->tbl,$this->tbl_as);
-    $this->db->where_as("id",$id);
-    return $this->db->get_first('array',1);
-  }
-}</pre>
-        </div>
-      </div>
-    
-        </div>
-      </div>
-    </div>
-  </template>
-<script>
-  export default {
-    layout: 'v3.1'
-    // page component definitions
-  }
-</script>
+  <div class="section">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul class="breadcrumbs">
+          <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.1">3.1.x</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.1/model">Model</NuxtLink></li>
+          <li class="unavailable">Get First</li>
+        </ul>
+      </nav>
+      <div class="columns">
+        <div class="column">
+          <div class="content">
+            <h1 class="">Get First Method</h1>
+            <p>
+              The <code>get_first</code> method is a part of the <code>query builder</code> which is useful for pulling <u>single</u> results from the query builder that has been compiled.
+              This method will only return maximum <b>1 row</b> result.
+            </p>
 
+            <h2>Basic Usage</h2>
+            <p>
+              Here is the basic usage <code>get_first</code> method from <code>$db</code> property on <NuxtLink to="/3.1/model/#SENE_Model" target="_blank">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
+            </p>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  $this-&#x3E;db-&#x3E;get_first([string $result_type=&#x22;&#x22; [, bool $is_debug = 0]]): mixed
+                </highlight-code>
+              </div>
+            </div>
+            <h3>Parameters</h3>
+            <p>
+              This method has 2 optional parameters.
+            </p>
+
+            <h4>$result_type</h4>
+            <p>
+              The value of the <code>$result_type</code> parameter to determine the output of the get method.
+              Fill with <code>string &#x22;array&#x22;</code> to return the result value with data type <i>array of array</i>.
+              While the contents of other values to return values with data type <i>array of objects</i>.
+            </p>
+            <h4>$is_debug</h4>
+            <p>
+              The <code>$is_debug</code> parameter is a marker (<em>flag</em>) to enable <i>debug</i> mode.
+              The value of this parameter can be filled with <code>int 1</code> to enable debug mode and display the query to be processed.
+              Fill it with another value to not enable debug mode.
+              In debug mode, there will be no query execution process to the database system.
+            </p>
+
+            <h2>Example</h2>
+            <p>
+              Here is the example for <code>get_first</code> in a model class.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  class D_Blog_Model extends SENE_Model{
+                    var $tbl = &#x27;blog&#x27;;
+                    var $tbl_as = &#x27;b&#x27;;
+
+                    public function __construct(){
+                      parent::__construct();
+                    }
+                    public function getBySlug($slug){
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;where(&#x22;slug&#x22;, $this-&#x3E;db-&#x3E;esc($slug));
+                      return $this-&#x3E;db-&#x3E;get_first();
+                    }
+                    ...
+                  }
+                </highlight-code>
+              </div>
+            </div>
+
+            <h3>SQL Result</h3>
+            <p>
+              The following is the SQL command that generated from <code>D_Blog_Model</code> class methods.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="sql">
+                  -- result from executing D_Blog_Model::getBySlug('seme-framework-tutorial-1') --
+                  SELECT *
+                  FROM &#x60;d_blog&#x60; b
+                  WHERE
+                    &#x60;slug&#x60; = &#x27;seme-framework-tutorial-1&#x27;
+                  LIMIT 0, 1;
+                </highlight-code>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+</template>
+<script>
+export default {
+  layout: 'v3.1',
+  data (){
+    return {
+      name: 'Seme Framework v3.1.5',
+      suffix: ' - Seme Framework v3.1.5',
+      title: 'Get First Method',
+      description: 'Learn about get_first method from $db property on SENE_Model class for Seme Framework version 3.1.5.',
+      breadcrumbs: [
+        {
+          url: process.env.BASE_URL || 'http://localhost:3001',
+          text: 'Seme Framework'
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1',
+          text: '3.1.x'
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1/model',
+          text: 'Model'
+        }
+      ],
+    }
+  },
+  head() {
+    return {
+      title: this.title+this.suffix,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.name+': '+this.title
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.description
+        }
+      ]
+    }
+  },
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+    const items = this.breadcrumbs.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@id': item.url,
+        name: item.text,
+      },
+    }));
+    return [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: items,
+      },
+      {
+        "@type": "NewsArticle",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+        },
+        "headline": (this.headline || this.title),
+        "image": [
+          (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
+        ],
+        "dateCreated": "2021-08-14T01:13:57+07:00",
+        "datePublished": "2021-08-14T01:13:57+07:00",
+        "dateModified": "2021-08-14T01:13:57+07:00",
+        "author": {
+          "@type": "Person",
+          "gender": "Male",
+          "name": "Daeng Rosanda, S.Kom",
+          "alternateName": "Daeng Rosanda",
+          "jobTitle": "Founder",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Cipta Esensi Merenah",
+            "email": "hi@cenah.co.id"
+          }
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Cipta Esensi Merenah",
+          "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+          "logo": {
+            "@type": "ImageObject",
+            "name": "logo Cipta Esensi Merenah",
+            "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+            "width": "256px",
+            "height": "62px"
+          }
+        },
+        "description": this.description
+      }
+    ];
+  }
+}
+</script>

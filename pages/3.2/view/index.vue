@@ -355,9 +355,9 @@ export default {
   data() {
     return {
       name: 'Seme Framework v3.2.5',
-      suffix: ' - Seme Framework 3.2.5',
+      suffix: ' - Seme Framework v3.2.5',
       title: 'View',
-      description: 'Learn more about using View concept from Seme Framework version 4.0.0',
+      description: 'Learn more about using View concept from Seme Framework version 3.2.5',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -419,9 +419,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-08-11T19:52:38+07:00",
-        "datePublished": "2021-08-11T19:52:38+07:00",
-        "dateModified": "2021-07-18T12:57:17+07:00",
+        "dateCreated": "2021-08-14T01:04:17+07:00",
+        "datePublished": "2021-08-14T01:04:17+07:00",
+        "dateModified": "2021-08-14T01:04:17+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

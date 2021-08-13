@@ -131,9 +131,9 @@
                 <highlight-code lang="sql">
                   -- result from executing D_Blog_Model::getBySlug('seme-framework-tutorial-1') --
                   SELECT *
-                  FROM `d_blog` b
+                  FROM &#x60;d_blog&#x60; b
                   WHERE
-                    `slug` = 'seme-framework-tutorial-1'
+                    &#x60;slug&#x60; = &#x27;seme-framework-tutorial-1&#x27;
                   LIMIT 0, 1;
                 </highlight-code>
               </div>

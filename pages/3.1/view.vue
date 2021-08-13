@@ -331,20 +331,6 @@
         </div>
 
       </div>
-      <div class="nav-bottom">
-        <div class="nav-bottom-left">
-          <nuxt-link to="/3.1/model/where/" class="btn">
-            <i class="fa fa-chevron-left"></i>
-            Model: Where
-          </nuxt-link>
-        </div>
-        <div class="nav-bottom-right">
-          <nuxt-link to="/3.1/controller/" class="btn">
-            Controller
-            <i class="fa fa-chevron-right"></i>
-          </nuxt-link>
-        </div>
-      </div>
 
     </div>
   </div>
@@ -355,16 +341,16 @@ export default {
   data() {
     return {
       name: 'Seme Framework v3.1.5',
-      suffix: ' - Seme Framework 4',
+      suffix: ' - Seme Framework v3.15',
       title: 'View',
-      description: 'Learn more about using View concept from Seme Framework version 3.1.x',
+      description: 'Learn more about using View concept from Seme Framework version 3.1.5',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
           text: 'Seme Framework',
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1/',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1',
           text: '3.1.x',
         }
       ]
@@ -419,9 +405,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-08-11T19:52:38+07:00",
-        "datePublished": "2021-08-11T19:52:38+07:00",
-        "dateModified": "2021-06-25T22:02:07+07:00",
+        "dateCreated": "2021-08-14T01:03:07+07:00",
+        "datePublished": "2021-08-14T01:03:07+07:00",
+        "dateModified": "2021-08-14T01:03:07+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
