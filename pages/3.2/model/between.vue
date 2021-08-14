@@ -14,7 +14,7 @@
           <div class="content">
             <h1 class="">Between Method</h1>
             <p>
-              Between is a method of the DB object in the model class to be used as a <strong>Query Builder</strong>.
+              Between is a method of the DB object in the model class to be used as a <NuxtLink to="/3.2/database/query-builder">Query Builder <i class="fa fa-window-restore"></i></NuxtLink>.
               The purpose of this method is to filter data that is compatible with the BETWEEN command in SQL.
             </p>
 

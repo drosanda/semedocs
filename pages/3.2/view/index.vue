@@ -354,8 +354,8 @@ export default {
   layout: 'v3.2',
   data() {
     return {
-      name: 'Seme Framework v3.2.5',
-      suffix: ' - Seme Framework v3.2.5',
+      name: 'Seme Framework v3.2',
+      suffix: ' - Seme Framework v3.2',
       title: 'View',
       description: 'Learn more about using View concept from Seme Framework version 3.2.5',
       breadcrumbs: [

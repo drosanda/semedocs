@@ -51,7 +51,7 @@ export default {
   layout: 'v3.1',
   data (){
     return {
-      name: 'Seme Framework v3.1.5',
+      name: 'Seme Framework v3.1',
       suffix: '',
       title: 'Seme Framework version 3.1.5 Documentation',
       description: 'Learn more about Seme Framework version 3.1.5 through this documentation.',

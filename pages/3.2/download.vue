@@ -14,7 +14,7 @@
             <h1 class="">Download</h1>
             <p>All Seme Framework  of them are available on github, here is the link:</p>
             <ul>
-              <li><a href="https://github.com/drosanda/seme-framework-v3/releases/tag/v3.2.5" target="_blank">Seme Framework v3.2.5 <i class="fa fa-external-link"></i></a></li>
+              <li><a href="https://github.com/drosanda/seme-framework-v3/releases/tag/v3.2.5" target="_blank">Seme Framework v3.2 <i class="fa fa-external-link"></i></a></li>
             </ul>
             <h2>Download example</h2>
             <p>Download <a href="https://github.com/drosanda/seme-framework-v3-bootstrap3" target="_blank">Seme Framework with bootstrap 3 layout</a>.</p>
@@ -30,7 +30,7 @@ export default {
   layout: 'v3.2',
   data() {
     return {
-      name: 'Seme Framework v3.2.5',
+      name: 'Seme Framework v3.2',
       suffix: ' - Seme Framework 3.2.5',
       title: 'Download and Install',
       description: 'Learn more about how to download and install Seme Framework version 3.2.5',

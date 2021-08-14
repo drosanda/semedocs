@@ -315,8 +315,8 @@ export default {
   layout: 'v3.1',
   data (){
     return {
-      name: 'Seme Framework v3.1.5',
-      suffix: ' - Seme Framework v3.1.5',
+      name: 'Seme Framework v3.1',
+      suffix: ' - Seme Framework v3.1',
       title: 'The Controller',
       description: 'Learn more about controller class of Seme Framework version 3.1.5 through this documentation.',
       breadcrumbs: [

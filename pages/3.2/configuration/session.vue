@@ -57,8 +57,8 @@ export default {
   layout: 'v3.2',
   data() {
     return {
-      name: 'Seme Framework v3.2.5',
-      suffix: ' - Seme Framework v3.2.5',
+      name: 'Seme Framework v3.2',
+      suffix: ' - Seme Framework v3.2',
       title: 'Configuration: session.php',
       description: 'File session.php for Seme Framework version 3.2.x session setting',
       breadcrumbs: [

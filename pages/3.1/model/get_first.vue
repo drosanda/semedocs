@@ -14,7 +14,7 @@
           <div class="content">
             <h1 class="">Get First Method</h1>
             <p>
-              The <code>get_first</code> method is a part of the <code>query builder</code> which is useful for pulling <u>single</u> results from the query builder that has been compiled.
+              The <code>get_first</code> method is a part of the <NuxtLink to="/3.1/database/query-builder">Query Builder <i class="fa fa-window-restore"></i></NuxtLink> which is useful for pulling <u>single</u> results from the query builder that has been compiled.
               This method will only return maximum <b>1 row</b> result.
             </p>
 
@@ -153,8 +153,8 @@ export default {
   layout: 'v3.1',
   data (){
     return {
-      name: 'Seme Framework v3.1.5',
-      suffix: ' - Seme Framework v3.1.5',
+      name: 'Seme Framework v3.1',
+      suffix: ' - Seme Framework v3.1',
       title: 'Get First Method',
       description: 'Learn about get_first method from $db property on SENE_Model class for Seme Framework version 3.1.5.',
       breadcrumbs: [

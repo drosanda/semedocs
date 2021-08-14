@@ -14,7 +14,7 @@
           <div class="content">
             <h1 class="">Between Method</h1>
             <p>
-              Between is a method of the DB object in the model class to be used as a <strong>Query Builder</strong>.
+              Between is a method of the DB object in the model class to be used as a <NuxtLink to="/3.1/database/query-builder">Query Builder <i class="fa fa-window-restore"></i></NuxtLink>.
               The purpose of this method is to filter data that is compatible with the BETWEEN command in SQL.
             </p>
 
@@ -153,8 +153,8 @@ export default {
   layout: 'v3.1',
   data (){
     return {
-      name: 'Seme Framework v3.1.5',
-      suffix: ' - Seme Framework v3.1.5',
+      name: 'Seme Framework v3.1',
+      suffix: ' - Seme Framework v3.1',
       title: 'Model::between',
       description: 'Learn more about Model::between Seme Framework version 3.1.x through this documentation.',
       breadcrumbs: [

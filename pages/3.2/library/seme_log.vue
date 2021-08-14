@@ -113,7 +113,7 @@ export default {
   layout: 'v3.2',
   data() {
     return {
-      name: 'Seme Framework v3.2.5',
+      name: 'Seme Framework v3.2',
       suffix: ' - Seme Framework  v3.2.5',
       title: 'Seme_Log',
       description: 'Learn more about Seme_Log Library on Seme Framework version 3.2.5',

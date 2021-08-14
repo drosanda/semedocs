@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/model/">Model</NuxtLink></li>
-          <li class="unavailable">Metode Group By</li>
+          <li class="unavailable">Group By</li>
         </ul>
       </nav>
       <div class="columns">

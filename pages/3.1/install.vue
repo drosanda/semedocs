@@ -89,8 +89,8 @@ export default {
   layout: 'v3.1',
   data (){
     return {
-      name: 'Seme Framework v3.1.5',
-      suffix: ' - Seme Framework v3.1.5',
+      name: 'Seme Framework v3.1',
+      suffix: ' - Seme Framework v3.1',
       title: 'Install',
       description: 'Learn how to install Seme Framework 3.1.5.',
       breadcrumbs: [

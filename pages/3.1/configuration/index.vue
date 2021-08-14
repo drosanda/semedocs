@@ -36,7 +36,7 @@
     layout: '3.1',
     data() {
       return {
-        name: 'Seme Framework v3.1.5',
+        name: 'Seme Framework v3.1',
         suffix: ' - Seme Framework 3.1.5',
         title: 'Configuration',
         description: 'Basic configuration for Seme Framework version 3.1.x',

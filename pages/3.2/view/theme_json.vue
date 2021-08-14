@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/3.2/">3.2.x</NuxtLink></li>
           <li class=""><NuxtLink to="/3.2/view">View</NuxtLink></li>
-          <li class="unavailable">theme json</li>
+          <li class="unavailable">theme.json</li>
         </ul>
       </nav>
       <div class="columns">
@@ -88,53 +88,6 @@
               </div>
             </div>
 
-            <h5>Example Usage with JSON Object</h5>
-            <p>
-              Here is the example codes for theme.json file using <b>json object</b>.
-            </p>
-            <p>
-              This method only supported from Seme Framework 4.0.2 above.
-            </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="javascript">
-                  {
-                    &#x22;link&#x22;:
-                    [
-                      {
-                        &#x22;rel&#x22;: &#x22;stylesheet&#x22;,
-                        &#x22;href&#x22;: &#x22;https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css&#x22;
-                      },
-                      {
-                        &#x22;rel&#x22;: &#x22;stylesheet&#x22;,
-                        &#x22;href&#x22;: &#x22;&#x7B;&#x7B;cdn_url&#x7D;&#x7D;assets/css/jquery.gritter.css&#x22;
-                      },
-                      {
-                        &#x22;rel&#x22;: &#x22;stylesheet&#x22;,
-                        &#x22;href&#x22;: &#x22;&#x7B;&#x7B;base_url&#x7D;&#x7D;skin/v2/css/app.css&#x22;
-                      }
-                    ]
-                  }
-                </highlight-code>
-              </div>
-            </div>
-
             <h2>The <code>{{cdn_url}}</code> and <code>{{base_url}}</code> Keyword</h2>
             <p>
               theme.json support <code>{{cdn_url}}</code> and <code>{{base_url}}</code> keyword for replacing value from Seme Framework configuration.
@@ -170,10 +123,10 @@ export default {
     return {
       base_url: '{{base_url}}',
       cdn_url: '{{cdn_url}}',
-      name: 'Seme Framework v3.2.5',
-      suffix: ' - Seme Framework 3.2.5',
-      title: 'The theme json File',
-      description: 'Learn how to use theme json file on Seme Framework 4 theme.',
+      name: 'Seme Framework v3.2',
+      suffix: ' - Seme Framework v3.2',
+      title: 'The theme.json File',
+      description: 'Learn how to use theme.json file on Seme Framework version 3.2.x.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

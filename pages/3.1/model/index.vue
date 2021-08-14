@@ -226,8 +226,8 @@
     layout: 'v3.1',
     data (){
       return {
-        name: 'Seme Framework v3.1.5',
-        suffix: ' - Seme Framework v3.1.5',
+        name: 'Seme Framework v3.1',
+        suffix: ' - Seme Framework v3.1',
         title: 'Class Model',
         description: 'Learn more about Class Model of Seme Framework version 3.1.5 through this documentation.',
         breadcrumbs: [

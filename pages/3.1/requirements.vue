@@ -26,8 +26,8 @@
     layout: 'v3.1',
     data (){
       return {
-        name: 'Seme Framework v3.1.5',
-        suffix: ' - Seme Framework v3.1.5',
+        name: 'Seme Framework v3.1',
+        suffix: ' - Seme Framework v3.1',
         title: 'Requirements',
         description: 'Learn more about Requirements of Seme Framework version 4.0.0 through this documentation.'
       }

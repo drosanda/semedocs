@@ -35,7 +35,7 @@ export default {
   layout: 'v3.2',
   data() {
     return {
-      name: 'Seme Framework v3.2.5',
+      name: 'Seme Framework v3.2',
       suffix: ' - Seme Framework 3.2.5',
       title: 'URI Routing Admin',
       description: 'Learn more about URI Routing for Admin page on Seme Framework version 3.2.5',

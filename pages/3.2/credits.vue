@@ -37,7 +37,7 @@
     layout: 'v3.2',
     data() {
       return {
-        name: 'Seme Framework v3.2.5',
+        name: 'Seme Framework v3.2',
         suffix: ' - Seme Framework 3.2.5',
         title: 'Credits',
         description: 'Learn more about Constants of Seme Framework Documentation for version 3.2.5',

@@ -493,8 +493,8 @@ class Home extends SENE_Controller
     layout: 'v3.1',
     data (){
       return {
-        name: 'Seme Framework v3.1.5',
-        suffix: ' - Seme Framework v3.1.5',
+        name: 'Seme Framework v3.1',
+        suffix: ' - Seme Framework v3.1',
         title: 'Tutorial: Introduction',
         description: 'Learn more about introduction tutorial of Seme Framework version 3.1.x through this documentation.',
         hlWorld: require('~/assets/img/hello-world.png'),

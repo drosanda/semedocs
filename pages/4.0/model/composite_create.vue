@@ -146,8 +146,8 @@ export default {
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'composite_create method',
-      description: 'Learn more about composite_create method on SENE_Model class Seme Framework.',
+      title: 'Composite Create Method',
+      description: 'Learn more about composite_create method on SENE_Model class Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

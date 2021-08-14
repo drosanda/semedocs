@@ -37,7 +37,7 @@ export default {
   layout: 'v3.1',
   data (){
     return {
-      name: 'Seme Framework v3.1.5',
+      name: 'Seme Framework v3.1',
       suffix: ' - Seme Framework 3.1.5',
       title: 'Global Variables and Functions',
       description: 'Learn more about Global Variables and Functions of Seme Framework 3.1.5.',

@@ -14,7 +14,7 @@
           <div class="content">
             <h1 class="">Group By Method</h1>
             <p>
-              The <code>group_by</code> method is part of query builder method for grouping result set by running <code>GROUP BY</code> SQL command.
+              The <code>group_by</code> method is part of <code>Query Builder</code> method for grouping result set by running <code>GROUP BY</code> SQL command.
             </p>
 
             <h2>Basic Usage</h2>

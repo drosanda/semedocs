@@ -61,8 +61,8 @@
     layout: 'v3.1',
     data() {
       return {
-        name: 'Seme Framework v3.1.5',
-        suffix: ' - Seme Framework v3.1.5',
+        name: 'Seme Framework v3.1',
+        suffix: ' - Seme Framework v3.1',
         title: 'Tutorial',
         description: 'Learn more about some real world tutorial of Seme Framework version 3.1.x through this documentation.',
         breadcrumbs: [

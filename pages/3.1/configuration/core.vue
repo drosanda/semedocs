@@ -58,7 +58,7 @@
     layout: 'v3.1',
     data (){
       return {
-        name: 'Seme Framework v3.1.5',
+        name: 'Seme Framework v3.1',
         suffix: ' - Seme Framework 3.1.5',
         title: 'Configuration: Core Class Helper',
         description: 'Learn more about Configuration Core Class Helper of Seme Framework version 3.1.x through this documentation.',

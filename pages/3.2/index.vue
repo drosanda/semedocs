@@ -66,7 +66,7 @@
     layout: 'v3.2',
     data (){
       return {
-        name: 'Seme Framework v3.2.5',
+        name: 'Seme Framework v3.2',
         suffix: '',
         title: 'Seme Framework version 3.2.5 Documentation',
         description: 'Learn more about Seme Framework version 3.2.5 through this documentation.',

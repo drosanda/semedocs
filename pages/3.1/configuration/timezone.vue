@@ -53,8 +53,8 @@ export default {
   layout: 'v3.1',
   data() {
     return {
-      name: 'Seme Framework v3.1.5',
-      suffix: ' - Seme Framework v3.1.5',
+      name: 'Seme Framework v3.1',
+      suffix: ' - Seme Framework v3.1',
       title: 'Configuration: timezone.php',
       description: 'File session.php for Seme Framework version 3.1.x timezone setting',
       breadcrumbs: [

@@ -88,50 +88,6 @@
               </div>
             </div>
 
-            <h5>Example Usage with JSON Object</h5>
-            <p>
-              Here is the example codes for script.json file using <b>json object</b>.
-            </p>
-            <p>
-              This method only supported from Seme Framework 4.0.2 above.
-            </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="javascript">
-                  {
-                    &#x22;script&#x22;:
-                    [
-                      {
-                        &#x22;src&#x22;: &#x22;https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js&#x22;
-                      },
-                      {
-                        &#x22;src&#x22;: &#x22;&#x7B;&#x7B;base_url&#x7D;&#x7D;skin/v2/css/jquery.min.js&#x22;
-                      },
-                      {
-                        &#x22;src&#x22;: &#x22;&#x7B;&#x7B;cdn_url&#x7D;&#x7D;assets/js/jquery.moneyFormat.min.js&#x22;
-                      }
-                    ]
-                  }
-                </highlight-code>
-              </div>
-            </div>
-
             <h2>The <code>{{cdn_url}}</code> and <code>{{base_url}}</code> Keyword</h2>
             <p>
               script.json support <code>{{cdn_url}}</code> and <code>{{base_url}}</code> keyword for replacing value from Seme Framework configuration.
@@ -167,10 +123,10 @@ export default {
     return {
       base_url: '{{base_url}}',
       cdn_url: '{{cdn_url}}',
-      name: 'Seme Framework v3.2.5',
-      suffix: ' - Seme Framework 3.2.5',
-      title: 'The script json File',
-      description: 'Learn how to use script json file on Seme Framework 4 theme.',
+      name: 'Seme Framework v3.2',
+      suffix: ' - Seme Framework v3.2',
+      title: 'The script.json File',
+      description: 'Learn how to use script.json file on Seme Framework version 3.2.x.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

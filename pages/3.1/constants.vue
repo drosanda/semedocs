@@ -50,8 +50,8 @@ export default {
   layout: 'v3.1',
   data (){
     return {
-      name: 'Seme Framework v3.1.5',
-      suffix: ' - Seme Framework v3.1.5',
+      name: 'Seme Framework v3.1',
+      suffix: ' - Seme Framework v3.1',
       title: 'Constants',
       description: 'Learn more about Global Variables / Constants and Methods used by Seme Framework version 3.1.x through this documentation.'
     }

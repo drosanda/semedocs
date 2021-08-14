@@ -66,7 +66,7 @@ export default {
     return {
       base_url: '{{base_url}}',
       cdn_url: '{{cdn_url}}',
-      name: 'Seme Framework v3.2.5',
+      name: 'Seme Framework v3.2',
       suffix: ' - Seme Framework 3.2.5',
       title: 'Theme Layout',
       description: 'Learn more about theme layout on Seme Framework 3.2.5.',

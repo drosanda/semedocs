@@ -169,8 +169,8 @@ export default {
       cdn_url: '{{cdn_url}}',
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'The script json File',
-      description: 'Learn how to use script json file on Seme Framework 4 theme.',
+      title: 'The script.json File',
+      description: 'Learn how to use script.json file on Seme Framework 4 theme.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

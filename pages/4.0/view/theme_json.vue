@@ -173,7 +173,7 @@ export default {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'The theme json File',
-      description: 'Learn how to use theme json file on Seme Framework 4 theme.',
+      description: 'Learn how to use theme.json file on Seme Framework 4 theme.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

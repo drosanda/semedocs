@@ -14,7 +14,7 @@
           <div class="content">
             <h1 class="">From Method</h1>
             <p>
-              <b>From</b> method is part of database class builder for selecting table with its alias.
+              <b>From</b> method is part of <NuxtLink to="/3.1/database/query-builder">Query Builder <i class="fa fa-window-restore"></i></NuxtLink> for selecting table with its alias.
               This method support chaining method.
             </p>
 
@@ -126,8 +126,8 @@ export default {
   layout: 'v3.1',
   data (){
     return {
-      name: 'Seme Framework v3.1.5',
-      suffix: ' - Seme Framework v3.1.5',
+      name: 'Seme Framework v3.1',
+      suffix: ' - Seme Framework v3.1',
       title: 'From Method',
       description: 'Learn about from method in $db property on SENE_Model class for Seme Framework 3.1.5.',
       breadcrumbs: [
