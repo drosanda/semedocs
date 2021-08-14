@@ -146,7 +146,7 @@ export default {
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'Joins Composite Method',
+      title: 'Join Composite Method',
       description: 'Learn more about join_composite method from $db property on SENE_Model class for Seme Framework 4.',
       breadcrumbs: [
         {
@@ -155,7 +155,7 @@ export default {
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0',
-          text: '4.0.2',
+          text: '4.0.x',
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0/model',
