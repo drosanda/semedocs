@@ -113,16 +113,16 @@ export default {
   data (){
     return {
       name: 'Seme Framework v3.2',
-      suffix: ' - Seme Framework 3.2.5',
+      suffix: ' - Seme Framework 3.2',
       title: 'Page Method',
-      description: 'Learn more about page method from $db property on SENE_Model class for Seme Framework 3.2.5.',
+      description: 'Learn more about page method from $db property on SENE_Model class for Seme Framework version 3.2.x',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
           text: 'Seme Framework'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2.5',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2',
           text: '3.2.x'
         },
         {

@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/3.2">3.2.x</NuxtLink></li>
           <li class=""><NuxtLink to="/3.2/model">Model</NuxtLink></li>
-          <li class="unavailable">Where Method</li>
+          <li class="unavailable">Where</li>
         </ul>
       </nav>
       <div class="columns">
@@ -211,23 +211,23 @@ export default {
   data (){
     return {
       name: 'Seme Framework v3.2',
-      suffix: ' - Seme Framework 3.2.5',
+      suffix: ' - Seme Framework 3.2',
       title: 'Where Method',
-      description: 'Learn about where method on $db property on SENE_Model class for Seme Framework 3.2.5.',
+      description: 'Learn where method from $db property on SENE_Model class for Seme Framework version 3.2.x',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
-          text: 'Seme Framework',
+          text: 'Seme Framework'
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2',
-          text: '3.2.5',
+          text: '3.2.x'
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2/model',
-          text: 'Model',
+          text: 'Model'
         }
-      ]
+      ],
     }
   },
   head() {
@@ -258,7 +258,6 @@ export default {
       '@type': 'ListItem',
       position: index + 1,
       item: {
-        "@type": "WebPage",
         '@id': item.url,
         name: item.text,
       },
@@ -279,9 +278,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2020-08-08T09:48:12+07:00",
-        "datePublished": "2020-08-08T09:48:12+07:00",
-        "dateModified": "2020-08-08T09:48:12+07:00",
+        "dateCreated": "2021-08-14T13:43:07+07:00",
+        "datePublished": "2021-08-14T13:43:07+07:00",
+        "dateModified": "2021-08-14T13:43:07+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

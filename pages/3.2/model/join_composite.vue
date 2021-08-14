@@ -4,8 +4,8 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/3.2/">3.2.x</NuxtLink></li>
-          <li class=""><NuxtLink to="/3.2/model/">Model</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.2">3.2.x</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.2/model">Model</NuxtLink></li>
           <li class="unavailable">Join Composite</li>
         </ul>
       </nav>
@@ -115,21 +115,6 @@
                   }
 
                 </highlight-code>
-              </div>
-            </div>
-
-            <div class="nav-bottom">
-              <div class="nav-bottom-left">
-                <nuxt-link to="/3.2/model/insert/" class="btn">
-                  <i class="fa fa-chevron-left"></i>
-                  insert Method
-                </nuxt-link>
-              </div>
-              <div class="nav-bottom-right">
-                <nuxt-link to="/3.2/model/join/" class="btn">
-                  join Method
-                  <i class="fa fa-chevron-right"></i>
-                </nuxt-link>
               </div>
             </div>
 

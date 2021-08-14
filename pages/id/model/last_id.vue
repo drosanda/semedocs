@@ -5,7 +5,7 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/model/">Model</NuxtLink></li>
+          <li class=""><NuxtLink to="/id/model">Model</NuxtLink></li>
           <li class="unavailable">Metode Last ID</li>
         </ul>
       </nav>

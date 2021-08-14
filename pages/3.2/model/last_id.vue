@@ -5,8 +5,8 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/3.2">3.2.x</NuxtLink></li>
-          <li class=""><NuxtLink to="/3.2/model/">Model</NuxtLink></li>
-          <li class="unavailable">Last ID Method</li>
+          <li class=""><NuxtLink to="/3.2/model">Model</NuxtLink></li>
+          <li class="unavailable">Last ID</li>
         </ul>
       </nav>
       <div class="columns">
@@ -215,9 +215,9 @@ export default {
   data (){
     return {
       name: 'Seme Framework v3.2',
-      suffix: ' - Seme Framework 3.2.5',
+      suffix: ' - Seme Framework 3.2',
       title: 'Last ID Method',
-      description: 'Learn more about last_id method from $db property on SENE_Model class for Seme Framework 3.2.5.',
+      description: 'Learn more about last_id method from $db property on SENE_Model class for Seme Framework version 3.2.x',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

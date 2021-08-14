@@ -4,21 +4,20 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/3.2">3.2.x</NuxtLink></li>
-          <li class=""><NuxtLink to="/3.2/model">Model</NuxtLink></li>
-          <li class="unavailable">Order By</li>
+          <li class=""><NuxtLink to="/3.1">3.1.x</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.1/model">Model</NuxtLink></li>
+          <li class="unavailable">Page</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-
-            <h1 class="">Order By Method</h1>
-            <p>The <code>order_by</code> method is part of database class builder for sorting result query.</p>
+            <h1 class="">Page Method</h1>
+            <p>The <code>page</code> method is part of database class builder for limiting query result.</p>
 
             <h2>Basic Usage</h2>
             <p>
-              Here is the basic usage <code>order_by</code> method from <code>$db</code> property on <NuxtLink to="/3.2/model/#SENE_Model" target="_blank">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
+              Here is the basic usage <code>page</code> method from <code>$db</code> property on <NuxtLink to="/3.1/model/#SENE_Model" target="_blank">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -39,27 +38,22 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;group_by(string $column_name, string $sort_direction): $this-&#x3E;db
+                  $this-&gt;db-&gt;page(int $page, int $pagesize): $this-&#x3E;db
                 </highlight-code>
               </div>
             </div>
-            <h2>Parameters</h2>
+
+            <h3>Parameters</h3>
             <p>This method has 2 required parameters.</p>
-            <h3>$column_name</h3>
-            <p>The <b>$column_name</b> value can be filled by column name or function string.</p>
-            <h3>$sort_direction</h3>
-            <p>
-              The <b>$sort_direction</b> value can be string like:
-              <ul>
-                <li><code>asc</code> for ascending or,</li>
-                <li><code>desc</code> for descending</li>
-              </ul>
-            </p>
+
+            <h3>$page</h3>
+            <p>The <code>$page</code> value is for determine the current page of specified pagesize.</p>
+
+            <h3>$pagesize</h3>
+            <p>The <code>$pagesize</code> the maximum result row count per page.</p>
 
             <h2>Example</h2>
-            <p>
-              For example we assumed want to retrieve newest articles from blog table.
-            </p>
+            <p>On this example will show limiting the result query by using <code>page</code> method in model class.</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -86,8 +80,11 @@
                     public function __construct(){
                       parent::__construct();
                     }
-                    public function getLatest($di){
-                      $this-&gt;db-&gt;order_by(&quot;create_date&quot;,&quot;desc&quot;);
+                    public function showFirstPagePer5Rows(){
+                      $this-&gt;db-&gt;select(&quot;*&quot;);
+                      $this-&gt;db-&gt;from($this-&gt;tbl,$this-&gt;tbl_as);
+                      $this-&gt;db-&gt;order_by(&quot;date_create&quot;,&quot;desc&quot;);
+                      $this-&gt;db-&gt;page(1,5);
                       return $this-&gt;db-&gt;get();
                     }
                   }
@@ -95,34 +92,41 @@
               </div>
             </div>
 
+            <div class="message is-info">
+              <div class="message-body">
+                <p><b>Page method v.s. Limit Method</b></p>
+                <p>Page method used for limiting by page and page size.</p>
+                <p>Limit method used for limiting data by MySQL traditional limit method.</p>
+              </div>
+            </div>
 
           </div>
         </div>
-
       </div>
+
     </div>
   </div>
 </template>
 <script>
 export default {
-  layout: 'v3.2',
+  layout: 'v3.1',
   data (){
     return {
-      name: 'Seme Framework v3.2',
-      suffix: ' - Seme Framework 3.2',
-      title: 'Order By Method',
-      description: 'Learn more about order_by method from $db property on SENE_Model class for Seme Framework version 3.2.x',
+      name: 'Seme Framework v3.1',
+      suffix: ' - Seme Framework 3.1.5',
+      title: 'Page Method',
+      description: 'Learn more about page method from $db property on SENE_Model class for Seme Framework 3.1.5.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
           text: 'Seme Framework'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2',
-          text: '3.2.x'
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1',
+          text: '3.1.x'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2/model',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1/model',
           text: 'Model'
         }
       ],
@@ -176,9 +180,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-12T21:33:00+07:00",
-        "datePublished": "2021-07-12T21:33:00+07:00",
-        "dateModified": "2021-07-12T21:34:00+07:00",
+        "dateCreated": "2021-08-04T10:36:00+07:00",
+        "datePublished": "2021-08-04T10:36:00+07:00",
+        "dateModified": "2021-08-04T10:36:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

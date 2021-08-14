@@ -16,7 +16,7 @@
             <p>
               The <code>update_as</code> method is like <NuxtLink to="/3.2/model/update">update method <i class="fa fa-window-restore"></i></NuxtLink> but with <b>unescaped</b> key value pair.
               This method suitable for updating column to column in a table or suitable for another advanced SQL <code>UPDATE</code> operation.
-              This method is available from SEME Framework version 3.1.x.
+              This method is available from SEME Framework version 3.1.0.
             </p>
 
             <div class="message is-warning">
@@ -215,10 +215,10 @@ export default {
   layout: 'v3.1',
   data (){
     return {
-      name: 'Seme Framework 3.1.5',
-      suffix: ' - Seme Framework 3.1.5',
+      name: 'Seme Framework v3.1',
+      suffix: ' - Seme Framework 3.1',
       title: 'Update AS Method',
-      description: 'Learn update_as method from $db property on SENE_Model class for Seme Framework 3.1.5.',
+      description: 'Learn update_as method from $db property on SENE_Model class for Seme Framework version 3.1.x',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

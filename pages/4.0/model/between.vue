@@ -5,7 +5,7 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0">4.0.2</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0/model/">Model</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0/model">Model</NuxtLink></li>
           <li class="unavailable">Between</li>
         </ul>
       </nav>
@@ -158,7 +158,7 @@
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/4.0/model/" class="btn">
+          <nuxt-link to="/4.0/model" class="btn">
           <i class="fa fa-chevron-left"></i>
             Model
           </nuxt-link>
