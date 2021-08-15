@@ -14,8 +14,8 @@
           <div class="content">
             <h1 class="">Metode getAdditional</h1>
             <p>
-              Metode <code>getAdditional</code> digunakan untuk mengambil nilai array yang telah disetel dari <NuxtLink to="/id/view/theme_json">theme.json</NuxtLink> untuk ditampilkan didalam tag HTML <code>head</code>.
-              Metode ini biasanya dipanggil didalam sebuah file <code>layout</code> atau didalam komponen layout-nya.
+              Metode <code>getAdditional</code> digunakan untuk mengambil nilai array yang telah disetel dari <NuxtLink to="/id/view/theme_json">theme.json <i class="fa fa-window-restore"></i></NuxtLink> untuk ditampilkan didalam tag HTML <code>head</code>.
+              Metode ini biasanya dipanggil didalam sebuah file <NuxtLink to="/id/view/theme#requirement_layout">layout <i class="fa fa-window-restore"></i></NuxtLink> atau didalam komponen layout-nya.
             </p>
 
             <h2>Bentuk Umum</h2>

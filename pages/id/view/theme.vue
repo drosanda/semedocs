@@ -222,7 +222,7 @@
 
             <h5>Contoh <em>Source Code</em> script.json</h5>
             <p>
-              Berikut ini adalah contoh <em>source code</em> untuk file <code>theme.json</code> untuk Seme Framework minimal versi 4.0.2.
+              Berikut ini adalah contoh <em>source code</em> untuk file <code>script.json</code> untuk Seme Framework minimal versi 4.0.2.
             </p>
             <div class="macwindow">
               <div class="titlebar">
