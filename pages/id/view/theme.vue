@@ -19,12 +19,6 @@
               Penyusunan tampilan HTML ini akan dipecah berdasarkan jumlah penggunaannya, seperti sering digunakan berulang kali (<em>reusable</em>) atau hanya digunakan 1 kali saja untuk tampilan tertentu (<em>specific</em>).
             </p>
 
-            <h2 class="">Komponen <em>Reusable</em></h2>
-            <p>
-              Komponen <em>Reusable</em> adalah komponen yang sering digunakan berulangkali ketika menampilkan sebuah website.
-              Contoh dari komponen yang sering digunakan didalam tampilan adalah bagian tag <code>head</code>, navigation bar, side menu, footer, dan komponen lainnya.
-            </p>
-
             <h2 class="">Komponen Spesifik</h2>
             <p>
               Komponen spesifik merupakan tampilan yang hanya digunakan untuk halaman itu saja, hampir tidak pernah digunakan dihalaman lain.
@@ -44,6 +38,58 @@
               Dalam Seme Framework, penggunaan modal ini akan dipecah juga, karena <code>home.php</code> hanya akan dipergunakan untuk tampilan yang langsung tampil saja.
               Untuk itu setiap tampilan <b>Modal</b> akan disimpan didalam file tampilan berkahiran <code>_modal.php</code>.
               Contoh untuk kelas Controller <code>Produk</code> Method <code>detail</code>, maka file view khusus untuk <b>Modal</b>-nya adalah <code>produk/detail/home_modal.php</code>.
+            </p>
+
+            <h4>Contoh View Komponen Spesifik</h4>
+            <p>
+              Berikut ini adalah contoh ilustrasi struktur file dan direktori untuk view komponen yang spesifik dalam sebuah tema.
+            </p>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  app/
+                  └── view/
+                  &#160;└── front/ ( untuk tema)
+                  &#160;&#160;├── home/
+                  &#160;&#160;│ ├── home.php
+                  &#160;&#160;│ ├── home_modal.php
+                  &#160;&#160;│ └── home_bottom.php
+                  &#160;&#160;├── produk/
+                  &#160;&#160;│ ├── home.php
+                  &#160;&#160;│ ├── home_modal.php
+                  &#160;&#160;│ ├── home_bottom.php
+                  &#160;&#160;│ ├── detail.php
+                  &#160;&#160;│ ├── detail_modal.php
+                  &#160;&#160;│ └── detail_bottom.php
+                  &#160;&#160;└── profile/
+                  &#160;&#160;&#160; ├── home.php
+                  &#160;&#160;&#160; ├── home_modal.php
+                  &#160;&#160;&#160; └── home_bottom.php
+                </highlight-code>
+              </div>
+            </div>
+
+            <h2 class="">Komponen <em>Reusable</em></h2>
+            <p>
+              Komponen <em>Reusable</em> adalah komponen yang sering digunakan berulangkali ketika menampilkan sebuah website.
+              Contoh dari komponen yang sering digunakan didalam tampilan adalah bagian tag <code>head</code>, navigation bar, side menu, footer, dan komponen lainnya.
             </p>
 
             <h2 class="">Cara Kerja</h2>
@@ -368,9 +414,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-08-15T16:46:00+07:00",
-        "datePublished": "2021-08-15T16:46:00+07:00",
-        "dateModified": "2021-08-15T16:46:00+07:00",
+        "dateCreated": "2021-08-15T17:06:00+07:00",
+        "datePublished": "2021-08-15T17:06:00+07:00",
+        "dateModified": "2021-08-15T17:06:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

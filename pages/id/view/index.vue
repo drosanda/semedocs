@@ -44,9 +44,10 @@
                 <highlight-code lang="php">
                   app/
                   └── view/
-                  &#160;└── front/ ( untuk tema)
-                  &#160;|&#160;├── home
+                  &#160;├── front/
+                  &#160;|&#160;├── home/
                   &#160;|&#160;│ ├── home.php
+                  &#160;|&#160;│ ├── home_modal.php
                   &#160;|&#160;│ └── home_bottom.php
                   &#160;|&#160;├── theme.json
                   &#160;|&#160;├── script.json
@@ -328,9 +329,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-08-06T14:56:31+07:00",
-        "datePublished": "2021-08-06T14:56:31+07:00",
-        "dateModified": "2021-08-06T14:56:31+07:00",
+        "dateCreated": "2021-08-15T16:59:00+07:00",
+        "datePublished": "2021-08-15T16:59:00+07:00",
+        "dateModified": "2021-08-15T16:59:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
