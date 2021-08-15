@@ -17,27 +17,73 @@
               Seme Framework support theme creation by separating the view into 2 different view parts, the reusable view component(s) and specific view component(s).
             </p>
 
-            <h2 class="">The Reusable Component(s)</h2>
+            <h2 class="">The Specific View Component(s)</h2>
+            <p>
+              The Specific View Component(s) is the view component that only show up for a specific page.
+              This specific View component(s) on Seme Framework usually separated by Controller class name and its method.
+              Also this specific component will separated again by its content like specific content for Main HTML Content, JavaScript, and Additional HTML Content.
+            </p>
+            <h3>Example</h3>
+            <p>
+              Here is the files and directories example for specific view component.
+            </p>
+
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  app/
+                  └── view/
+                  &#160;└── front/
+                  &#160;&#160;├── home/
+                  &#160;&#160;│ ├── home.php (for Main HTML)
+                  &#160;&#160;│ ├── home_modal.php (for HTML Modal)
+                  &#160;&#160;│ └── home_bottom.php (for JS)
+                  &#160;&#160;├── product/
+                  &#160;&#160;│ ├── home.php
+                  &#160;&#160;│ ├── home_modal.php
+                  &#160;&#160;│ ├── home_bottom.php
+                  &#160;&#160;│ ├── detail.php
+                  &#160;&#160;│ ├── detail_modal.php
+                  &#160;&#160;│ └── detail_bottom.php
+                  &#160;&#160;└── profile/
+                  &#160;&#160;&#160; ├── home.php
+                  &#160;&#160;&#160; ├── home_modal.php
+                  &#160;&#160;&#160; └── home_bottom.php
+                </highlight-code>
+              </div>
+            </div>
+
+            <h2 class="">The Reusable View Component(s)</h2>
             <p>
               The reusable component(s) is the view component(s) that always included on each view, such as inside head tag, navigation bar, side menu, footer, and many more.
             </p>
 
-            <h2 class="">The Specific Component(s)</h2>
+            <h2 class="">Requirement</h2>
             <p>
-              The Specific Component(s) is the view component that only show up for a specific page. This specific component(s) on Seme Framework usually separated by Controller class name and its method.
+              There is some requirements for building a theme in Seme Framework.
+              Seme Framework requires a directory for a theme that will created inside <code>app/view</code> and its directory name will be repesented as theme name.
             </p>
 
-            <h2 class="">How It Works</h2>
+            <h3>File and Directory Structure Requirement</h3>
             <p>
-              The view template on Seme Framework will be related to a directory name inside <code>app/view</code>.
-              The reusable component(s) will be placed inside theme directory under <code>page/html</code> directory.
-              The specific component(s) will be placed inside theme directory, the directory name will be represented the controller name, and then the method will be a file name inside the same directory.
-            </p>
-
-            <h3>Basic File and Directory Structure</h3>
-            <p>
-              Seme Framework requires a directory for a theme name.
-              And then Seme Framework theme requires a layout file, script.json file, and theme.json file.
+              And then Seme Framework theme requires a directory named <code>page</code>, a <code>layout file</code> inside page directory, <code>script.json</code> file, and <code>theme.json</code> file.
               For more detailed information you can see the directory structure ilustration below.
             </p>
           <div class="macwindow">
@@ -73,7 +119,7 @@
           <h4>Theme Directory</h4>
           <p>
             A directory inside <code>app/view</code> that represent the theme name.
-            The directory theme name always in lowercase, only use underscore for special character.
+            The directory theme name always in lowercase, and then after that can be followed by number character, and then only use underscore for special character.
           </p>
 
           <h4>The Layout File</h4>

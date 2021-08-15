@@ -52,7 +52,7 @@
 
             <h4>$theme_name</h4>
             <p>
-              Theme name value can be a directory name under <code>app/view</code>.
+              The <code>$theme_name</code> value can be a directory name under <code>app/view</code>, learn more about <NuxtLink to="/4.0/view">view theme <i class="fa fa-window-restore"></i>.
             </p>
             <h5>Theme Name Requirements</h5>
             <p>The valid themes should contain these files with this directory structure.</p>
@@ -183,8 +183,8 @@ export default {
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'setTheme Method from SENE_Controller',
-      description: 'Learn more about setTheme Method from SENE_Controller on Seme Framework 4',
+      title: 'setTheme Method',
+      description: 'Learn more about setTheme Method from SENE_Controller on Seme Framework version 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
