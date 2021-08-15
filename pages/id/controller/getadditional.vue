@@ -4,21 +4,24 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0">4.0.2</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0/controller">Controller</NuxtLink></li>
-          <li class="unavailable">setLang method</li>
+          <li class=""><NuxtLink to="/id">4.0.2 (Bahasa)</NuxtLink></li>
+          <li class=""><NuxtLink to="/id/controller">Controller</NuxtLink></li>
+          <li class="unavailable">getAdditional</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">setLang method</h1>
+            <h1 class="">Metode getAdditional</h1>
             <p>
-              setLang set language value, this method used only with <code>getLang</code> method.
+              Metode <code>getAdditional</code> digunakan untuk mengambil nilai array yang telah disetel dari <NuxtLink to="/id/view/theme_json">theme.json</NuxtLink> untuk ditampilkan didalam tag HTML <code>head</code>.
+              Metode ini biasanya dipanggil didalam sebuah file <code>layout</code> atau didalam komponen layout-nya.
             </p>
 
-            <h2>Basic Usage</h2>
-            <p>The basic usage for setLang method.</p>
+            <h2>Bentuk Umum</h2>
+            <p>
+              Berikut ini bentuk umum penggunaan metode <code>getAdditional</code> dari kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -38,23 +41,20 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  setLang(string $language_codename): $this
+                  $this-&#x3E;getAdditional(): string
                 </highlight-code>
               </div>
             </div>
 
-            <h3>Parameters</h3>
+            <h3>Parameter</h3>
             <p>
-              setLang method has 1 required parameter.
+              Metode ini tidak membutuhkan parameter apapun.
             </p>
 
-            <h4>$language_codename</h4>
+            <h2>Contoh</h2>
             <p>
-              The language codename value, like en-US, en-DE, etc.
+              Berikut ini adalah contoh penggunaan untuk metode <code>getAdditionalAfter</code> pada file layout <code>col-1.php</code>.
             </p>
-
-            <h2>Example Usage</h2>
-            <p>Here is the full example of <code>setLang</code> method.</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -73,32 +73,32 @@
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="php">
-                  &#x3C;?php
-                  class Blog extends SENE_Controller {
-                    public function __construct(){
-                      parent::__construct();
-                    }
-                    public function index(){
-                      ...
-                      $this-&#x3E;setLang(&#x27;en-US&#x27;);
-                      ...
-                    }
-                  }
+                <highlight-code lang="html">
+                  &#x3C;!DOCTYPE html&#x3E;
+                  &#x3C;html&#x3E;
+                  &#x3C;head&#x3E;
+                    ...
+                    &#x3C;?php $this-&#x3E;getAdditional(); ?&#x3E;
+                    ...
+                  &#x3C;/head&#x3E;
+                  &#x3C;body&#x3E;
+                    ...
+                  &#x3C;/body&#x3E;
+                  &#x3C;/html&#x3E;
                 </highlight-code>
               </div>
             </div>
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
-                <nuxt-link to="/4.0/controller/setKeyword/" class="btn">
+                <nuxt-link to="/id/controller/constructor/" class="btn">
                   <i class="fa fa-chevron-left"></i>
-                  setKeyword
+                  __construct
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
-                <nuxt-link to="/4.0/controller/setshortcuticon/" class="btn">
-                  setShortcutIcon
+                <nuxt-link to="/id/controller/getadditionalafter/" class="btn">
+                  getAdditionalAfter
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
@@ -113,24 +113,24 @@
 </template>
 <script>
 export default {
-  layout: 'v4.0',
+  layout: 'vid',
   data (){
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'setLang method',
-      description: 'Learn more about setLang method on SENE_Controller class Seme Framework.',
+      title: 'getAdditional method',
+      description: 'Learn more about getAdditional method on SENE_Controller class Seme Framework.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
           text: 'Seme Framework'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0',
-          text: '4.0.2'
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id',
+          text: 'ID'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0/controller',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/controller',
           text: 'Controller'
         }
       ],
@@ -184,9 +184,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-13T13:18:00+07:00",
-        "datePublished": "2021-07-13T13:19:00+07:00",
-        "dateModified": "2021-07-13T13:26:00+07:00",
+        "dateCreated": "2021-08-15T16:57:00+07:00",
+        "datePublished": "2021-08-15T16:57:00+07:00",
+        "dateModified": "2021-08-15T16:57:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

@@ -13,10 +13,14 @@
         <div class="column">
           <div class="content">
             <h1 class="">Metode loadLayout</h1>
-            <p>Metode loadLayout digunakan untuk memanggil view layout dalam suatu tema.</p>
+            <p>
+              Metode <code>loadLayout</code> digunakan untuk memanggil view layout dalam suatu tema.
+            </p>
 
             <h2>Bentuk Umum</h2>
-            <p>Berikut ini adaah bentuk umum metode <code>loadLayout</code> dari kelas SENE_Controller.</p>
+            <p>
+              Berikut ini bentuk umum penggunaan metode <code>loadLayout</code> dari kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -43,46 +47,14 @@
 
             <h3>Parameter</h3>
             <p>
-              loadLayout memiliki 1 parameter wajib yaitu <b>$layout</b>.
+              Metode ini memiliki 1 parameter wajib dan 1 parameter opsional.
             </p>
 
             <h4>$layout</h4>
             <p>
-              Nilai dari $layout dapat berisi string dari layout yang ingin digunakan.
+              Nilai dari <code>$layout</code> dapat berisi string dari layout yang ingin digunakan.
+              Pelajari tentang persyaratan file layout di <NuxtLink to="/id/view/theme/#requirement_layout">Tema Tampilan <i class="fa fa-window-restore"></i></NuxtLink> Seme Framework.
             </p>
-
-            <h5>Syarat File Layout</h5>
-            <p>
-              Supaya file layout dapat dipanggil dengan baik, file layout harus berada didalam direktori <code>page</code> yang relatif terhadap tema tampilan yang digunakan.
-              Untuk lebih lengkapnya lihat contoh ilustrasi susunan file dan direktori tema.
-            </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  - app/
-                  |- view/
-                  |-- NAMA_TEMA/
-                  |--- page/
-                  |---- [nama_layout].php
-                </highlight-code>
-              </div>
-            </div>
 
             <h4>$data</h4>
             <p>
@@ -293,9 +265,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-08-04T16:39:16+07:00",
-        "datePublished": "2021-08-04T16:39:16+07:00",
-        "dateModified": "2021-08-04T16:39:16+07:00",
+        "dateCreated": "2021-08-15T16:16:00+07:00",
+        "datePublished": "2021-08-15T16:16:00+07:00",
+        "dateModified": "2021-08-15T16:16:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

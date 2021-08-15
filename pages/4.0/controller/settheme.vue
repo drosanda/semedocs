@@ -5,18 +5,22 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0">4.0.2</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0/controller/">Controller</NuxtLink></li>
-          <li class="unavailable">setTheme Method</li>
+          <li class=""><NuxtLink to="/4.0/controller">Controller</NuxtLink></li>
+          <li class="unavailable">setTheme</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
             <h1 class="">setTheme Method</h1>
-            <p>This method will be loaded theme and overrides the current theme value using the new one.</p>
+            <p>
+              The <code>setTheme</code> method purpose is for set a theme view for current controller.
+            </p>
 
             <h2>Basic Usage</h2>
-            <p>Here is the basic usage of <code>setTheme</code> method.</p>
+            <p>
+              Here is the basic usage of <code>setTheme</code> method from <NuxtLink to="/4.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -71,13 +75,13 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  | app/
-                  |- view/
-                  |-- THEME_NAME/
-                  |--- theme.json
-                  |--- script.json
-                  |--- page/
-                  |----- col-1.php
+                  |app/
+                  └── view/
+                  &#160;└── [THEME_NAME]/
+                  &#160;&#160;├── theme.json
+                  &#160;&#160;├── script.json
+                  &#160;&#160;└── page/
+                  &#160;&#160;&#160;└── col-1.php
                 </highlight-code>
               </div>
             </div>

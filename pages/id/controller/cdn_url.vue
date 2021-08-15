@@ -19,7 +19,7 @@
 
             <h2>Bentuk Umum</h2>
             <p>
-              Berikut ini bentuk umum penggunaan metode cdn_url dari kelas SENE_Controller.
+              Berikut ini bentuk umum penggunaan metode <code>cdn_url</code> dari kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -213,9 +213,9 @@
           "image": [
             (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
           ],
-          "dateCreated": "2021-07-21T20:12:10+07:00",
-          "datePublished": "2021-07-21T10:30:20+07:00",
-          "dateModified": "2021-07-21T20:39:01+07:00",
+          "dateCreated": "2021-08-15T15:46:00+07:00",
+          "datePublished": "2021-08-15T15:46:00+07:00",
+          "dateModified": "2021-08-15T15:46:00+07:00",
           "author": {
             "@type": "Person",
             "gender": "Male",

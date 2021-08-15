@@ -5,7 +5,7 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0">4.0.2</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0/controller/">Controller</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0/controller">Controller</NuxtLink></li>
           <li class="unavailable">CDN URL</li>
         </ul>
       </nav>
@@ -116,7 +116,7 @@
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
-                <nuxt-link to="/4.0/controller/" class="btn">
+                <nuxt-link to="/4.0/controller" class="btn">
                   <i class="fa fa-chevron-left"></i>
                   Controller
                 </nuxt-link>

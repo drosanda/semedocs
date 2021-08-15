@@ -5,7 +5,7 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0">4.0.2</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0/controller/">Controller</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0/controller">Controller</NuxtLink></li>
           <li class="unavailable">getIcon method</li>
         </ul>
       </nav>

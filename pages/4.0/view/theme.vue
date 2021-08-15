@@ -59,13 +59,13 @@
             </div>
             <div class="maccontent">
               <highlight-code lang="php">
-                | app/
-                |- view/
-                |-- [THEME_NAME]/
-                |--- theme.json
-                |--- script.json
-                |--- page/
-                |---- col-1.php (layout file)
+                app/
+                └── view/
+                &#160;└── [THEME_NAME]/
+                &#160;&#160;├── theme.json
+                &#160;&#160;├── script.json
+                &#160;&#160;└── page/
+                &#160;&#160;&#160;└── col-1.php
               </highlight-code>
             </div>
           </div>

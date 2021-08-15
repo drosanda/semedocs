@@ -6,39 +6,58 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/view">View</NuxtLink></li>
-          <li class="unavailable">Theme</li>
+          <li class="unavailable">Tema</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Tema</h1>
+            <h1 class="">Tema Tampilan</h1>
             <p>
               Seme Framework support theme creation by separating the view into 2 different view parts, the reusable view component(s) and specific view component(s).
+              Seme Framework telah menyediakan fitur untuk pembuatan tema tampilan untuk mempermudah dalam penyusunan tampilan HTML.
+              Penyusunan tampilan HTML ini akan dipecah berdasarkan jumlah penggunaannya, seperti sering digunakan berulang kali (<em>reusable</em>) atau hanya digunakan 1 kali saja untuk tampilan tertentu (<em>specific</em>).
             </p>
 
-            <h2 class="">The Reusable Component(s)</h2>
+            <h2 class="">Komponen <em>Reusable</em></h2>
             <p>
-              The reusable component(s) is the view component(s) that always included on each view, such as inside head tag, navigation bar, side menu, footer, and many more.
+              Komponen <em>Reusable</em> adalah komponen yang sering digunakan berulangkali ketika menampilkan sebuah website.
+              Contoh dari komponen yang sering digunakan didalam tampilan adalah bagian tag <code>head</code>, navigation bar, side menu, footer, dan komponen lainnya.
             </p>
 
-            <h2 class="">The Specific Component(s)</h2>
+            <h2 class="">Komponen Spesifik</h2>
             <p>
-              The Specific Component(s) is the view component that only show up for a specific page. This specific component(s) on Seme Framework usually separated by Controller class name and its method.
+              Komponen spesifik merupakan tampilan yang hanya digunakan untuk halaman itu saja, hampir tidak pernah digunakan dihalaman lain.
+              Pada Seme Framework, komponen spesifik biasanya disimpan pada folder sesuai dengan nama kelas Controller dan method-nya.
+              Contoh kelas Controller <code>Produk</code> Method <code>detail</code>, maka file viewnya adalah <code>produk/detail/home.php</code>.
             </p>
 
-            <h2 class="">How It Works</h2>
+            <h3 class="">View Spesifik untuk JavaScript</h3>
             <p>
-              The view template on Seme Framework will be related to a directory name inside <code>app/view</code>.
-              The reusable component(s) will be placed inside theme directory under <code>page/html</code> directory.
-              The specific component(s) will be placed inside theme directory, the directory name will be represented the controller name, and then the method will be a file name inside the same directory.
+              Pada seme framework, setiap file JavaScript yang spesifik akan disimpan didalam file tampilan berkahiran <code>_bottom.php</code>.
+              Contoh untuk kelas Controller <code>Produk</code> Method <code>detail</code>, maka file view khusus untuk javascriptnya adalah <code>produk/detail/home_bottom.php</code>.
             </p>
 
-            <h3>Basic File and Directory Structure</h3>
+            <h3 class="">View Spesifik untuk Modal</h3>
             <p>
-              Seme Framework requires a directory for a theme name.
-              And then Seme Framework theme requires a layout file, script.json file, and theme.json file.
-              For more detailed information you can see the directory structure ilustration below.
+              <b>Modal</b> merupakan sebuah tampilan yang ada pada lapisan terdepan dan menutup tampilan yang ada, yang bertujuan untuk memberikan informasi tambahan terhadap pengguna.
+              Dalam Seme Framework, penggunaan modal ini akan dipecah juga, karena <code>home.php</code> hanya akan dipergunakan untuk tampilan yang langsung tampil saja.
+              Untuk itu setiap tampilan <b>Modal</b> akan disimpan didalam file tampilan berkahiran <code>_modal.php</code>.
+              Contoh untuk kelas Controller <code>Produk</code> Method <code>detail</code>, maka file view khusus untuk <b>Modal</b>-nya adalah <code>produk/detail/home_modal.php</code>.
+            </p>
+
+            <h2 class="">Cara Kerja</h2>
+            <p>
+              Tema tampilan pada Seme Fraework berada didalam direktori <code>app/view</code>.
+              Sementara untuk komponen <em>reusable</em> disimpan didalam <code>app/view/theme_name/page/html</code>.
+              Kemudian untuk komponen <em>spesifik</em> disimpan didalam <code>app/view/theme_name/nama_controller/nama_method/home.php</code>.
+            </p>
+
+            <h3 id="requirement">Syarat Dasar Tema Tampilan</h3>
+            <p>
+              Seme Framework membutuhkan sebuah direktori untuk mengumpulan tema tampilan.
+              Kemudian, sebuah tema tampilan dikatakan valid jika memiliki file <NuxtLink to="/id/view/script_json">script.json</NuxtLink>, <NuxtLink to="/id/view/theme_json">theme.json</NuxtLink> dan sebuah direktori <code>page</code> yang berisi file layout.
+              Untuk lebih jelasnya bisa dilihat pada ilustrasi struktur file dan direktori dibawah ini.
             </p>
             <div class="macwindow">
             <div class="titlebar">
@@ -59,249 +78,197 @@
             </div>
             <div class="maccontent">
               <highlight-code lang="php">
-                | app/
-                |- view/
-                |-- [THEME_NAME]/
-                |--- theme.json
-                |--- script.json
-                |--- page/
-                |---- col-1.php (layout file)
+                app/
+                └── view/
+                &#160;└── [THEME_NAME]/
+                &#160;&#160;├── theme.json
+                &#160;&#160;├── script.json
+                &#160;&#160;└── page/
+                &#160;&#160;&#160;└── col-1.php
               </highlight-code>
             </div>
             </div>
 
-            <h4>Theme Directory</h4>
+            <h4>Syarat Direktori Tema</h4>
             <p>
-            A directory inside <code>app/view</code> that represent the theme name.
-            The directory theme name always in lowercase, only use underscore for special character.
+              Direktori Tema merupakan sebuah direktori yang ada didalam <code>app/view</code> dan nama dari direktori tersebut akan mewwakili nama tema.
+              Syarat dari direktori ini adalah hanya memiliki <b>huruf kecil</b> kemudian bisa diikuti oleh <b>angka</b> dan atau <b>underscore</b>.
             </p>
 
-            <h4>The Layout File</h4>
+            <h4 id="requirement_layout">Syarat File Layout</h4>
             <p>
-            Layout file is main file for the reusable component. The location of layout file is under <code>page</code> directory inside theme directory.
-            This layout file can be loaded by using <NuxtLink to="/id/controller/loadlayout/">loadLayout()</NuxtLink> method from SENE_Controller class.
+              File <code>layout</code> merupakan sebuah file yang berisikan layout atau tata letak dari html.
+              File layout ini merupakan file utama untuk menyimpan komponen <em>reusable</em>.
+              Letak dari file layout ini <b>harus</b> didalam <code>app/view/theme_name/page/</code>.
+              Kemudian barulah layout tersebut bisa dipanggil dengan menggunakan metode <NuxtLink to="/id/controller/loadlayout/">loadLayout()</NuxtLink>.
             </p>
+
+            <h5>Contoh <em>Source Code</em> File Layout</h5>
             <p>
-            Here is the example codes for a layout file named <code>col-1.php</code> file.
+              Berikut ini adalah contoh <em>source code</em> untuk file layout <code>col-1.php</code>.
             </p>
             <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
                 </div>
               </div>
+              <div class="maccontent">
+                <highlight-code lang="html">
+                  &#x3C;!DOCTYPE html&#x3E;
+                  &#x3C;html&#x3E;
+                  &#x20;&#x3C;head&#x3E;
+                  &#x20;&#x20;&#x3C;title&#x3E;&#x3C;?=$this-&#x3E;getTitle()?&#x3E;&#x3C;/title&#x3E;
+
+                  &#x20;&#x20;&#x3C;!-- CSS link from theme.json --&#x3E;
+                  &#x20;&#x20;&#x3C;?php $this-&#x3E;getAdditional(); ?&#x3E;
+                  &#x20;&#x3C;/head&#x3E;
+                  &#x20;&#x3C;body&#x3E;
+                  &#x20;&#x20;&#x3C;?php $this-&#x3E;getThemeContent() ?&#x3E;
+
+                  &#x20;&#x20;&#x3C;!-- from script.json --&#x3E;
+                  &#x20;&#x20;&#x3C;?php $this-&#x3E;getJsFooter(); ?&#x3E;
+
+                  &#x20;&#x20;&#x3C;!-- Load and execute javascript --&#x3E;
+                  &#x20;&#x20;&#x3C;script&#x3E;
+                  &#x20;&#x20;&#x20;//javascript loaded from putJsReady()
+                  &#x20;&#x20;&#x20;&#x3C;?php $this-&#x3E;getJsReady(); ?&#x3E;
+
+                  &#x20;&#x20;&#x20;//javascript loaded from putJsContent()
+                  &#x20;&#x20;&#x20;&#x3C;?php $this-&#x3E;getJsContent(); ?&#x3E;
+                  &#x20;&#x3C;/script&#x3E;
+                  &#x3C;/body&#x3E;
+                  &#x3C;/html&#x3E;
+                </highlight-code>
+              </div>
             </div>
-            <div class="maccontent">
-              <highlight-code lang="html">
-                &#x3C;!DOCTYPE html&#x3E;
-                &#x3C;html&#x3E;
-                &#x20;&#x3C;head&#x3E;
-                &#x20;&#x20;&#x3C;title&#x3E;&#x3C;?=$this-&#x3E;getTitle()?&#x3E;&#x3C;/title&#x3E;
 
-                &#x20;&#x20;&#x3C;!-- CSS link from theme.json --&#x3E;
-                &#x20;&#x20;&#x3C;?php $this-&#x3E;getAdditional(); ?&#x3E;
-                &#x20;&#x3C;/head&#x3E;
-                &#x20;&#x3C;body&#x3E;
-                &#x20;&#x20;&#x3C;?php $this-&#x3E;getThemeContent() ?&#x3E;
-
-                &#x20;&#x20;&#x3C;!-- from script.json --&#x3E;
-                &#x20;&#x20;&#x3C;?php $this-&#x3E;getJsFooter(); ?&#x3E;
-
-                &#x20;&#x20;&#x3C;!-- Load and execute javascript --&#x3E;
-                &#x20;&#x20;&#x3C;script&#x3E;
-                &#x20;&#x20;&#x20;//javascript loaded from putJsReady()
-                &#x20;&#x20;&#x20;&#x3C;?php $this-&#x3E;getJsReady(); ?&#x3E;
-
-                &#x20;&#x20;&#x20;//javascript loaded from putJsContent()
-                &#x20;&#x20;&#x20;&#x3C;?php $this-&#x3E;getJsContent(); ?&#x3E;
-                &#x20;&#x3C;/script&#x3E;
-                &#x3C;/body&#x3E;
-                &#x3C;/html&#x3E;
-              </highlight-code>
-            </div>
-            </div>
-
-            <h4>theme.json File</h4>
+            <h4>Syarat theme.json</h4>
             <p>
-            The theme.json file contain about css links tags to use in inside head tag.
-            This file are processed by <NuxtLink to="/id/controller/constructor/">SENE_Controller class constructor</NuxtLink> and outputed by <NuxtLink to="/id/controller/getadditional/">getAdditional()</NuxtLink>.
+              File theme.json ini adalah salah satu syarat untuk pembuatan tema tampilan di Seme Framework.
+              File ini akan menyimpan semua tag yang nantinya akan ada didalam tag HTML <code>head</code>.
+              File ini diproses oleh metode <NuxtLink to="/id/controller/constructor/">Konstruktor kelas SENE_Controller</NuxtLink> dan di<em>outputkan</em> oleh metode <NuxtLink to="/id/controller/getadditional/">getAdditional()</NuxtLink>.
             </p>
 
-            <h5>theme.json JSON String Example</h5>
+            <h5>Contoh <em>Source Code</em> theme.json</h5>
             <p>
-            Here is the example codes for theme.json file using <b>json string</b>.
+              Berikut ini adalah contoh <em>source code</em> untuk file <code>theme.json</code> untuk Seme Framework minimal versi 4.0.2.
             </p>
             <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
                 </div>
               </div>
+              <div class="maccontent">
+                <highlight-code lang="javascript">
+                  {
+                    &#x22;link&#x22;:
+                    [
+                      {
+                        &#x22;rel&#x22;: &#x22;stylesheet&#x22;,
+                        &#x22;href&#x22;: &#x22;https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css&#x22;
+                      },
+                      {
+                        &#x22;rel&#x22;: &#x22;stylesheet&#x22;,
+                        &#x22;href&#x22;: &#x22;&#x7B;&#x7B;cdn_url&#x7D;&#x7D;assets/css/jquery.gritter.css&#x22;
+                      },
+                      {
+                        &#x22;rel&#x22;: &#x22;stylesheet&#x22;,
+                        &#x22;href&#x22;: &#x22;&#x7B;&#x7B;base_url&#x7D;&#x7D;skin/v2/css/app.css&#x22;
+                      }
+                    ]
+                  }
+                </highlight-code>
+              </div>
             </div>
-            <div class="maccontent">
-              <highlight-code lang="javascript">
-                [
-                &#x22;&#x3C;link rel=\&#x22;stylesheet\&#x22; href=\&#x22;&#x7B;&#x7B;base_url&#x7D;&#x7D;skin/front/css/nprogress.css\&#x22; /&#x3E;&#x22;,
-                &#x22;&#x3C;link rel=\&#x22;stylesheet\&#x22; href=\&#x22;https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css\&#x22; /&#x3E;&#x22;,
-                &#x22;&#x3C;link rel=\&#x22;stylesheet\&#x22; href=\&#x22;&#x7B;&#x7B;cdn_url&#x7D;&#x7D;assets/css/jquery.gritter.css\&#x22; /&#x3E;&#x22;
-                ]
-              </highlight-code>
-            </div>
+            <div class="message is-success">
+              <div class="message-body">
+                <p><b>Pelajari selengkapnya</b></p>
+                <p>
+                   Penggunaan kode <code>{{base_url}}</code> dan <code>{{cdn_url}}</code> untuk <NuxtLink to="/id/view/theme_json">theme.json</NuxtLink>.
+                </p>
+              </div>
             </div>
 
-            <h5>theme.json JSON Object Example</h5>
+            <h4>Syarat script.json</h4>
             <p>
-            Here is the example codes for theme.json file using <b>json object</b>.
+              File script.json ini adalah salah satu syarat untuk pembuatan tema tampilan di Seme Framework.
+              File ini akan menyimpan semua tag <code>script</code> yang nantinya akan disimpan pada <a href="https://stackoverflow.com/questions/30653081/why-scripts-at-the-end-of-body-tag#answer-30653102" target="_blank">bagian akhir halaman HTML <i class="fa fa-external-link"></i></a> sebelum tutup tag <code>body</code>.
+              File ini diproses oleh metode <NuxtLink to="/id/controller/constructor/">Konstruktor kelas SENE_Controller</NuxtLink> dan di<em>outputkan</em> oleh metode <NuxtLink to="/id/controller/getjsfooter/">getJsFooter()</NuxtLink>.
             </p>
+
+            <h5>Contoh <em>Source Code</em> script.json</h5>
             <p>
-            This method only supported from Seme Framework 4.0.2 above.
+              Berikut ini adalah contoh <em>source code</em> untuk file <code>theme.json</code> untuk Seme Framework minimal versi 4.0.2.
             </p>
             <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="javascript">
-                {
-                  &#x22;link&#x22;:
-                  [
-                    {
-                      &#x22;rel&#x22;: &#x22;stylesheet&#x22;,
-                      &#x22;href&#x22;: &#x22;https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css&#x22;
-                    },
-                    {
-                      &#x22;rel&#x22;: &#x22;stylesheet&#x22;,
-                      &#x22;href&#x22;: &#x22;&#x7B;&#x7B;cdn_url&#x7D;&#x7D;assets/css/jquery.gritter.css&#x22;
-                    },
-                    {
-                      &#x22;rel&#x22;: &#x22;stylesheet&#x22;,
-                      &#x22;href&#x22;: &#x22;&#x7B;&#x7B;base_url&#x7D;&#x7D;skin/v2/css/app.css&#x22;
-                    }
-                  ]
-                }
-              </highlight-code>
-            </div>
-            </div>
-
-            <h4>script.json File</h4>
-            <p>
-            The script.json file contain about script tags for javascript source file.
-            This file are processed by <NuxtLink to="/id/controller/constructor/">SENE_Controller class constructor</NuxtLink> and outputed by <NuxtLink to="/id/controller/getjsfooter/">getJsFooter()</NuxtLink>.
-            </p>
-
-            <h5>script.json JSON String Example</h5>
-            <p>
-            Here is the example codes for script.json file using <b>json string</b>.
-            </p>
-            <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="javascript">
-                [
-                  &#x22;&#x3C;script src=\&#x22;{{base_url}}skin/front/js/nprogress.js\&#x22;&#x3E;&#x3C;/script&#x3E;&#x22;,
-                  &#x22;&#x3C;script src=\&#x22;{{base_url}}skin/front/js/moment.min.js\&#x22;&#x3E;&#x3C;/script&#x3E;&#x22;,
-                  &#x22;&#x3C;script src=\&#x22;{{base_url}}skin/front/js/moment-with-locales.min.js\&#x22;&#x3E;&#x3C;/script&#x3E;&#x22;
-                ]
-              </highlight-code>
-            </div>
-            </div>
-
-            <h5>script.json JSON Object Example</h5>
-            <p>
-            Here is the example codes for script.json file using <b>json object</b>.
-            </p>
-            <p>
-            This method only supported from Seme Framework 4.0.2 above.
-            </p>
-            <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
+              <div class="maccontent">
+                <highlight-code lang="javascript">
+                  {
+                    &#x22;script&#x22;:
+                    [
+                      {
+                        &#x22;src&#x22;: &#x22;https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js&#x22;
+                      },
+                      {
+                        &#x22;src&#x22;: &#x22;&#x7B;&#x7B;base_url&#x7D;&#x7D;skin/v2/css/jquery.min.js&#x22;
+                      },
+                      {
+                        &#x22;src&#x22;: &#x22;&#x7B;&#x7B;cdn_url&#x7D;&#x7D;assets/js/jquery.moneyFormat.min.js&#x22;
+                      }
+                    ]
+                  }
+                </highlight-code>
               </div>
             </div>
-            <div class="maccontent">
-              <highlight-code lang="javascript">
-                {
-                  &#x22;script&#x22;:
-                  [
-                    {
-                      &#x22;src&#x22;: &#x22;https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js&#x22;
-                    },
-                    {
-                      &#x22;src&#x22;: &#x22;&#x7B;&#x7B;base_url&#x7D;&#x7D;skin/v2/css/jquery.min.js&#x22;
-                    },
-                    {
-                      &#x22;src&#x22;: &#x22;&#x7B;&#x7B;cdn_url&#x7D;&#x7D;assets/js/jquery.moneyFormat.min.js&#x22;
-                    }
-                  ]
-                }
-              </highlight-code>
-            </div>
+            <div class="message is-success">
+              <div class="message-body">
+                <p><b>Pelajari selengkapnya</b></p>
+                <p>
+                   Penggunaan kode <code>{{base_url}}</code> dan <code>{{cdn_url}}</code> untuk <NuxtLink to="/id/view/script_json">script.json</NuxtLink>.
+                </p>
+              </div>
             </div>
 
-            <h4>Using <code>{{cdn_url}}</code> and <code>{{base_url}}</code> Keyword</h4>
-            <p>
-              Both of theme.json and script json, support <code>{{cdn_url}}</code> and <code>{{base_url}}</code> keyword for replacing value from Seme Framework configuration.
-            </p>
 
           </div>
         </div>
@@ -331,10 +298,12 @@ export default {
   layout: 'id',
   data() {
     return {
+      base_url: '{{base_url}}',
+      cdn_url: '{{cdn_url}}',
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'Membuat Tema',
-      description: 'Pelajari selengkapnya tentang Theme View untuk Seme Framework versi 4.0.0',
+      title: 'Tema Tampilan',
+      description: 'Pelajari selengkapnya tentang pembuatan tema tampilan beserta syarat tema tampilan untuk Seme Framework versi 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -399,9 +368,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-08-11T19:52:38+07:00",
-        "datePublished": "2021-08-11T19:52:38+07:00",
-        "dateModified": "2021-06-11T01:04:00+07:00",
+        "dateCreated": "2021-08-15T16:46:00+07:00",
+        "datePublished": "2021-08-15T16:46:00+07:00",
+        "dateModified": "2021-08-15T16:46:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
