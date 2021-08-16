@@ -26,7 +26,7 @@
               Contoh kelas Controller <code>Produk</code> Method <code>detail</code>, maka file viewnya adalah <code>produk/detail/home.php</code>.
             </p>
 
-            <h3 class="">View Spesifik untuk JavaScript</h3>
+            <h3 id="spesifik_js" class="">View Spesifik untuk JavaScript</h3>
             <p>
               Pada seme framework, setiap file JavaScript yang spesifik akan disimpan didalam file tampilan berkahiran <code>_bottom.php</code>.
               Contoh untuk kelas Controller <code>Produk</code> Method <code>detail</code>, maka file view khusus untuk javascriptnya adalah <code>produk/detail/home_bottom.php</code>.

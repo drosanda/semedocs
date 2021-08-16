@@ -13,16 +13,21 @@
         <div class="column">
           <div class="content">
             <h1 class="">Constructor method</h1>
-            <p>The Constructor method will loaded all parent class that required for a controller.</p>
-            <p>This is method is very important for Seme Framework Controller.</p>
+            <p>
+              The Constructor method will loaded all parent class that required for a controller.
+              This is method is very important for Seme Framework Controller.
+              Usually the parent constructor are executed after class constructor.
+            </p>
             <div class="message is-info">
               <div class="message-body">
                 <p>If the constructor method is missed, you maybe get unexpected result.</p>
               </div>
             </div>
-            <p>Ussually the parent constructor are executed after class constructor</p>
+
             <h2>Basic Usage</h2>
-            <p>The basic usage for this method is:</p>
+            <p>
+              Here is the basic usage for <code>__construct</code> method from <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> class.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -46,8 +51,12 @@
                 </highlight-code>
               </div>
             </div>
+            <h3>Parameters</h3>
 
-            <p>Here is the full example:</p>
+            <p>This method doenst need any parameter.</p>
+
+            <h2>Example</h2>
+            <p>Here is the full example usage for <code>__construct</code> method.</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -89,12 +98,12 @@
         <div class="nav-bottom-left">
           <nuxt-link to="/4.0/controller" class="btn">
             <i class="fa fa-chevron-left"></i>
-            Controller
+            Config Property
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/4.0/controller/getadditional/" class="btn">
-            getAdditional
+          <nuxt-link to="/4.0/controller/getadditional" class="btn">
+            Get Additional Method
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
@@ -176,9 +185,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-12T22:01:00+07:00",
-        "datePublished": "2021-07-12T22:02:00+07:00",
-        "dateModified": "2021-07-13T19:27:02+07:00",
+        "dateCreated": "2021-08-16T07:37:28+07:00",
+        "datePublished": "2021-08-16T07:37:28+07:00",
+        "dateModified": "2021-08-16T07:37:28+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

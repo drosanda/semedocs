@@ -14,7 +14,8 @@
           <div class="content">
             <h1 class="">Theme</h1>
             <p>
-              Seme Framework support theme creation by separating the view into 2 different view parts, the reusable view component(s) and specific view component(s).
+              Theme is a set of files and directories that contain view for serving completed webpage interface.
+              Seme Framework support theme creation by separating the view into 2 different parts, the reusable view component(s) and specific view component(s).
             </p>
 
             <h2 class="">The Specific View Component(s)</h2>
@@ -23,12 +24,15 @@
               This specific View component(s) on Seme Framework usually separated by Controller class name and its method.
               Also this specific component will separated again by its content like specific content for Main HTML Content, JavaScript, and Additional HTML Content.
             </p>
+            <h3 id="specific_js">Specific view Component for Javascript Content</h3>
+            <p>
+              In the seme framework, each specific JavaScript file will be stored in a view file ending in <code>_bottom.php</code>.
+              Example for <code>Product</code> class controller and <code>detail</code> method, so the special view file for the javascript is <code>product/detail/home_bottom.php</code>.
+            </p>
             <h3>Example</h3>
             <p>
               Here is the files and directories example for specific view component.
             </p>
-
-
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -116,10 +120,10 @@
             </div>
           </div>
 
-          <h4>Theme Directory</h4>
+          <h4>Theme Directory Name Rules</h4>
           <p>
-            A directory inside <code>app/view</code> that represent the theme name.
-            The directory theme name always in lowercase, and then after that can be followed by number character, and then only use underscore for special character.
+            A theme required a directory inside <code>app/view</code>. The directory name represent the theme name.
+            The theme name should in lowercase, and after that the number character can be followed. Only use underscore for special character.
           </p>
 
           <h4>The Layout File</h4>
@@ -183,44 +187,9 @@
             This file are processed by <NuxtLink to="/4.0/controller/constructor/">SENE_Controller class constructor</NuxtLink> and outputed by <NuxtLink to="/4.0/controller/getadditional/">getAdditional()</NuxtLink>.
           </p>
 
-          <h5>theme.json JSON String Example</h5>
+          <h5>theme.json JSON Example</h5>
           <p>
-            Here is the example codes for theme.json file using <b>json string</b>.
-          </p>
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="javascript">
-                [
-                &#x22;&#x3C;link rel=\&#x22;stylesheet\&#x22; href=\&#x22;&#x7B;&#x7B;base_url&#x7D;&#x7D;skin/front/css/nprogress.css\&#x22; /&#x3E;&#x22;,
-                &#x22;&#x3C;link rel=\&#x22;stylesheet\&#x22; href=\&#x22;https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css\&#x22; /&#x3E;&#x22;,
-                &#x22;&#x3C;link rel=\&#x22;stylesheet\&#x22; href=\&#x22;&#x7B;&#x7B;cdn_url&#x7D;&#x7D;assets/css/jquery.gritter.css\&#x22; /&#x3E;&#x22;
-                ]
-              </highlight-code>
-            </div>
-          </div>
-
-          <h5>theme.json JSON Object Example</h5>
-          <p>
-            Here is the example codes for theme.json file using <b>json object</b>.
-          </p>
-          <p>
-            This method only supported from Seme Framework 4.0.2 above.
+            Here is the example codes for theme.json file using <b>json object</b>, this method only supported from Seme Framework 4.0.2 above.
           </p>
           <div class="macwindow">
             <div class="titlebar">
@@ -268,43 +237,9 @@
             This file are processed by <NuxtLink to="/4.0/controller/constructor/">SENE_Controller class constructor</NuxtLink> and outputed by <NuxtLink to="/4.0/controller/getjsfooter/">getJsFooter()</NuxtLink>.
           </p>
 
-          <h5>script.json JSON String Example</h5>
+          <h5>script.json Example</h5>
           <p>
-            Here is the example codes for script.json file using <b>json string</b>.
-          </p>
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="javascript">
-                [
-                  &#x22;&#x3C;script src=\&#x22;{{base_url}}skin/front/js/nprogress.js\&#x22;&#x3E;&#x3C;/script&#x3E;&#x22;,
-                  &#x22;&#x3C;script src=\&#x22;{{base_url}}skin/front/js/moment.min.js\&#x22;&#x3E;&#x3C;/script&#x3E;&#x22;,
-                  &#x22;&#x3C;script src=\&#x22;{{base_url}}skin/front/js/moment-with-locales.min.js\&#x22;&#x3E;&#x3C;/script&#x3E;&#x22;
-                ]
-              </highlight-code>
-            </div>
-          </div>
-
-          <h5>script.json JSON Object Example</h5>
-          <p>
-            Here is the example codes for script.json file using <b>json object</b>.
-          </p>
-          <p>
+            Here is the example codes for script.json file using <b>json object</b>,
             This method only supported from Seme Framework 4.0.2 above.
           </p>
           <div class="macwindow">
@@ -447,9 +382,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-18T10:01:00+07:00",
-        "datePublished": "2021-07-18T10:02:00+07:00",
-        "dateModified": "2021-07-18T12:18:31+07:00",
+        "dateCreated": "2021-08-16T07:53:33+07:00",
+        "datePublished": "2021-08-16T07:53:33+07:00",
+        "dateModified": "2021-08-16T07:53:33+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

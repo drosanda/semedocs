@@ -5,7 +5,7 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0">4.0.2</NuxtLink></li>
-          <li class="unavailable">Controller Class</li>
+          <li class="unavailable">Controller</li>
         </ul>
       </nav>
       <div class="columns">
@@ -562,8 +562,8 @@
           </NuxtLink>
         </div>
         <div class="nav-bottom-right">
-          <NuxtLink to="/4.0/controller/constructor/" class="btn">
-            Controller: __construct
+          <NuxtLink to="/4.0/controller/cdn_url/" class="btn">
+            CDN URL Method
             <i class="fa fa-chevron-right"></i>
           </NuxtLink>
         </div>
@@ -577,10 +577,10 @@ export default {
   layout: 'v4.0',
   data (){
     return {
-      name: 'Seme Framework v4.0.2',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Controller',
-      description: 'Learn more about controller class of Seme Framework version 4.0.2 through this documentation.',
+      description: 'Learn more about controller class of Seme Framework version 4 through this documentation.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

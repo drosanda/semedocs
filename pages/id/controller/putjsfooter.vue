@@ -4,22 +4,22 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0">4.0.2</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0/controller">Controller</NuxtLink></li>
-          <li class="unavailable">setTheme</li>
+          <li class=""><NuxtLink to="/id">4.0.2 (Bahasa)</NuxtLink></li>
+          <li class=""><NuxtLink to="/id/controller">Controller</NuxtLink></li>
+          <li class="unavailable">putJsFooter</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">setTheme Method</h1>
+            <h1 class="">putJsFooter Method</h1>
             <p>
-              The <code>setTheme</code> method purpose is for set a theme view for current controller.
+              Metode <code>putJsFooter</code> digunakan untuk memanggil <NuxtLink to="/id/view/theme#spesifik_js">View Spesifik untuk Javascript <i class="fa fa-window-restore"></i></NuxtLink> ketika ada dalam sebuah tema.
             </p>
 
-            <h2>Basic Usage</h2>
+            <h2>Bentuk Umum</h2>
             <p>
-              Here is the basic usage of <code>setTheme</code> method from <NuxtLink to="/4.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
+              Berikut ini bentuk umum penggunaan metode <code>putJsFooter</code> dari kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -40,54 +40,15 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  setTheme(string $theme_name): $this
+                  $this-&#x3E;db-&#x3E;putJsFooter(string $content_location[, array $data]): $this
                 </highlight-code>
               </div>
             </div>
 
-            <h3>Parameters</h3>
+            <h2>Contoh</h2>
             <p>
-              setTheme requires 1 parameter it is $theme_name.
+              Berikut ini adalah contoh untuk metode <code>putJsFooter</code> pada sebuah kelas controller.
             </p>
-
-            <h4>$theme_name</h4>
-            <p>
-              The <code>$theme_name</code> value can be a directory name under <code>app/view</code>, learn more about <NuxtLink to="/4.0/view">view theme <i class="fa fa-window-restore"></i></NuxtLink>.
-            </p>
-            <h5>Theme Name Requirements</h5>
-            <p>The valid themes should contain these files with this directory structure.</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  |app/
-                  └── view/
-                  &#160;└── [THEME_NAME]/
-                  &#160;&#160;├── theme.json
-                  &#160;&#160;├── script.json
-                  &#160;&#160;└── page/
-                  &#160;&#160;&#160;└── col-1.php
-                </highlight-code>
-              </div>
-            </div>
-
-            <h2>Example</h2>
-            <p>Here is the example for <code>setTheme</code> method.</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -112,17 +73,25 @@
                     public function __construct()
                     {
                       parent::__construct();
-                      $this-&#x3E;setTheme(&#x27;homepage&#x27;);
+                      $this-&#x3E;setTheme(&#x27;home&#x27;);
                     }
                     public function index()
                     {
-                      ...
+                      $data = array();
+                      $this-&#x3E;putThemeContent(&#x27;home/home&#x27;,$data);
+                      $this-&#x3E;putJsFooter(&#x27;home/home_bottom&#x27;,$data);
+                      $this-&#x3E;loadLayout(&#x27;col-1&#x27;,$data);
+                      $this-&#x3E;render();
                     }
                   }
                 </highlight-code>
               </div>
             </div>
-            <p>So, the directory <code>homepage</code> should be existed on the directory structure.</p>
+            <h3>Struktur File dan Directory</h3>
+            <p>
+              Jadi tema <code>front</code>, kemudian layout <code>col-1</code> layout serta <code>home_bottom.php</code> harus ada didalam struktur direktori.
+            </p>
+
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -142,27 +111,57 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  | app/
-                  |- view/
-                  |-- homepage/
-                  |--- theme.json
-                  |--- script.json
-                  |--- page/
-                  |----- col-1.php
+                  app/
+                  └── view/
+                   └── front/
+                    ├── home/
+                    | ├── home.php
+                    | └── home_bottom.php
+                    ├── page/
+                    | └── col-1.php
+                    └── ...
+                </highlight-code>
+              </div>
+            </div>
+
+            <h3>Contoh home_bottom.php</h3>
+            <p>
+              Berikut ini adalah contoh source code untuk file <code>home_bottom.php</code> yang berisi javascript.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  alert(&#x27;Hi, this is from home_bottom&#x27;);
                 </highlight-code>
               </div>
             </div>
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
-                <nuxt-link to="/4.0/controller/setshortcuticon/" class="btn">
+                <nuxt-link to="/id/controller/putjscontent" class="btn">
                   <i class="fa fa-chevron-left"></i>
-                  setShortcutIcon
+                  putJsContent
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
-                <nuxt-link to="/4.0/controller/settitle/" class="btn">
-                  setTitle
+                <nuxt-link to="/id/controller/putjsready" class="btn">
+                  putJsReady
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
@@ -172,7 +171,6 @@
         </div>
 
       </div>
-
     </div>
   </div>
 </template>
@@ -183,19 +181,19 @@ export default {
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'setTheme Method',
-      description: 'Learn more about setTheme Method from SENE_Controller on Seme Framework version 4',
+      title: 'putJsFooter Method',
+      description: 'Learn more about putJsFooter method from SENE_Controller on Seme Framework 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
           text: 'Seme Framework'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0',
-          text: '4.0.2'
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id',
+          text: 'ID'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0/controller',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/controller',
           text: 'Controller'
         }
       ],
@@ -249,9 +247,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-08-16T07:51:42+07:00",
-        "datePublished": "2021-08-16T07:51:42+07:00",
-        "dateModified": "2021-08-16T07:51:42+07:00",
+        "dateCreated": "2021-07-13T19:38:00+07:00",
+        "datePublished": "2021-07-13T19:39:00+07:00",
+        "dateModified": "2021-07-13T19:48:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

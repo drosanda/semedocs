@@ -19,7 +19,7 @@
 
             <h2>Basic Usage</h2>
             <p>
-              Here is the basic usage for <code>cdn_url</code> method from <code>SENE_Controller</code> class.
+              Here is the basic usage for <code>cdn_url</code> method from <NuxtLink to="/4.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> class.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -123,7 +123,7 @@
               </div>
               <div class="nav-bottom-right">
                 <nuxt-link to="/4.0/controller/config/" class="btn">
-                  Config
+                  Config property
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
@@ -144,7 +144,7 @@ export default {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'CDN URL Method',
-      description: 'Learn more about cdn_url method from SENE_Controller class on Seme Framework 4.',
+      description: 'Learn more about cdn_url method from SENE_Controller class on Seme Framework version 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -209,9 +209,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-08-04T15:12:34+07:00",
-        "datePublished": "2021-08-04T15:12:34+07:00",
-        "dateModified": "2021-08-04T15:12:34+07:00",
+        "dateCreated": "2021-08-16T07:32:34+07:00",
+        "datePublished": "2021-08-16T07:32:34+07:00",
+        "dateModified": "2021-08-16T07:32:34+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0/controller">Controller</NuxtLink></li>
-          <li class="unavailable">config property</li>
+          <li class="unavailable">Config</li>
         </ul>
       </nav>
       <div class="columns">
@@ -215,7 +215,7 @@ export default {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Config Property',
-      description: 'Learn more about config property from SENE_Controller class on Seme Framework.',
+      description: 'Learn more about config property from SENE_Controller class on Seme Framework version 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -280,9 +280,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-08-11T18:44:00+07:00",
-        "datePublished": "2021-08-11T18:44:00+07:00",
-        "dateModified": "2021-08-11T18:44:00+07:00",
+        "dateCreated": "2021-08-16T07:37:28+07:00",
+        "datePublished": "2021-08-16T07:37:28+07:00",
+        "dateModified": "2021-08-16T07:37:28+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

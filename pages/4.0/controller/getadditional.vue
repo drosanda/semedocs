@@ -14,11 +14,14 @@
           <div class="content">
             <h1 class="">getAdditional method</h1>
             <p>
-              Get list of array CSS default configuration from theme.json.
+              The <code>getAdditional</code> method is used to retrieve the set array values from <NuxtLink to="/4.0/view/theme_json">theme.json <i class="fa fa-window-restore"></i></NuxtLink> to display in the HTML head tag.
+              This method is usually called in a <NuxtLink to="/4.0/view/layout">layout file <i class="fa fa-window-restore"></i></NuxtLink> or in its layout component.
             </p>
 
             <h2>Basic Usage</h2>
-            <p>The basic usage for getAdditional method is:</p>
+            <p>
+              Here is the basic usage for <code>getAdditional</code> method from <NuxtLink to="/4.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> class.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -38,7 +41,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  getAdditional(): string
+                  $this-&#x3E;getAdditional(): string
                 </highlight-code>
               </div>
             </div>
@@ -48,7 +51,7 @@
               There is no parameter available for getAdditional method.
             </p>
 
-            <h2>Example Usage</h2>
+            <h2>Example</h2>
             <p>
               Usually this method called inside a layout file. Here is the basic example for <code>getAdditionalAfter</code> method.
               Here is the content of <code>col-1.php</code> layout file.
@@ -91,12 +94,12 @@
               <div class="nav-bottom-left">
                 <nuxt-link to="/4.0/controller/constructor/" class="btn">
                   <i class="fa fa-chevron-left"></i>
-                  __construct
+                  __construct method
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
                 <nuxt-link to="/4.0/controller/getadditionalafter/" class="btn">
-                  getAdditionalAfter
+                  getAdditionalAfter method
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
@@ -116,8 +119,8 @@ export default {
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'getAdditional method',
-      description: 'Learn more about getAdditional method on SENE_Controller class Seme Framework.',
+      title: 'Get Additional Method',
+      description: 'Learn more about getAdditional method on SENE_Controller class Seme Framework version 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -182,9 +185,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-13T19:23:00+07:00",
-        "datePublished": "2021-07-13T19:26:00+07:00",
-        "dateModified": "2021-07-13T19:29:00+07:00",
+        "dateCreated": "2021-08-16T07:42:28+07:00",
+        "datePublished": "2021-08-16T07:42:28+07:00",
+        "dateModified": "2021-08-16T07:42:28+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
