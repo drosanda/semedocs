@@ -4,22 +4,23 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0">4.0.2</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0/controller">Controller</NuxtLink></li>
-          <li class="unavailable">getJsContent method</li>
+          <li class=""><NuxtLink to="/id">4.0.2 (Bahasa)</NuxtLink></li>
+          <li class=""><NuxtLink to="/id/controller">Controller</NuxtLink></li>
+          <li class="unavailable">getJsFooter</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">getJsContent method</h1>
+            <h1 class="">Metode getJsFooter</h1>
             <p>
-              The <code>getJsContent</code> method will <b>echo</b> the buffered view components that contain javascript from <NuxtLink to="/4.0/controller/putjscontent/">putJsContent <i class="fa fa-window-restore"></i></NuxtLink> method.
-              This method usually called in a <NuxtLink to="/4.0/view/layout/">view layout</NuxtLink>.
+              Metode <code>getJsFooter</code> digunakan untuk mengambil list tag <code>script</code> yang diperoleh dari <NuxtLink to="/id/view/theme_json">theme.json</NuxtLink> untuk ditampilkan dalam layout.
             </p>
 
-            <h2>Basic Usage</h2>
-            <p>The basic usage for getJsContent method.</p>
+            <h2>Bentuk Umum</h2>
+            <p>
+              Berikut ini adalah bentuk umum metode <code>getJsFooter</code> dari kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -39,20 +40,20 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $thiss-&#x3E;getJsContent(): void
+                  $this-&#x3E;getJsFooter(): string
                 </highlight-code>
               </div>
             </div>
 
-            <h3>Parameters</h3>
+            <h3>Parameter</h3>
             <p>
-              There is no parameter available for getIcon method.
+              Metode ini tidak memiliki parameter.
             </p>
 
-            <h2>Example Usage</h2>
+            <h2>Contoh</h2>
             <p>
-              Usually this method called inside a layout file. Here is the basic example for <code>getJsContent</code> method.
-              Here is the content of <code>col-1.php</code> layout file.
+              Biasanya metode ini hanya dipanggil didalam file layout atau didalam view component.
+              Berikut ini adalah contoh penggunaanya pada file layout <code>col-1.php</code>.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -74,24 +75,20 @@
               <div class="maccontent">
                 <highlight-code lang="html">
                   &#x3C;!DOCTYPE html&#x3E;
-                  &#x3C;html class=&#x22;no-js&#x22; lang=&#x22;id&#x22;&#x3E;
-                    &#x3C;?php $this-&#x3E;getThemeElement(&#x27;page/html/head&#x27;,$__forward); ?&#x3E;
-                    &#x3C;body class=&#x22;preloader-active&#x22;&#x3E;
-                      &#x3C;?php $this-&#x3E;getThemeElement(&#x27;page/html/header&#x27;,$__forward); ?&#x3E;
-                      &#x3C;?php $this-&#x3E;getThemeContent(); ?&#x3E;
-                      &#x3C;?php $this-&#x3E;putJsContent(&#x27;page/html/footjs&#x27;,$__forward); ?&#x3E;
-
-                      &#x3C;!-- jQuery, Bootstrap.js, jQuery plugins and Custom JS code --&#x3E;
-                      &#x3C;?php $this-&#x3E;getJsFooter(); ?&#x3E;
-
-                      &#x3C;!-- Load and execute javascript code used only in this page --&#x3E;
-                      &#x3C;script&#x3E;
-                        $(document).ready(function(e){
-                          &#x3C;?php $this-&#x3E;getJsReady(); ?&#x3E;
-                        });
-                        &#x3C;?php $this-&#x3E;getJsContent(); ?&#x3E;
-                      &#x3C;/script&#x3E;
-                    &#x3C;/body&#x3E;
+                  &#x3C;html&#x3E;
+                  &#x3C;head&#x3E;
+                    &#x3C;title&#x3E;Test&#x3C;/title&#x3E;
+                  &#x3C;/head&#x3E;
+                  &#x3C;body&#x3E;
+                    ...
+                    ...
+                    &#x3C;!-- jQuery, Bootstrap.js, jQuery plugins and Custom JS code from script.json --&#x3E;
+                    &#x3C;?php $this-&#x3E;getJsFooter(); ?&#x3E;
+                    ...
+                    &#x3C;script&#x3E;
+                      ...
+                    &#x3C;/script&#x3E;
+                  &#x3C;/body&#x3E;
                   &#x3C;/html&#x3E;
                 </highlight-code>
               </div>
@@ -99,14 +96,14 @@
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
-                <nuxt-link to="/4.0/controller/getIcon/" class="btn">
+                <nuxt-link to="/id/controller/getjscontent" class="btn">
                   <i class="fa fa-chevron-left"></i>
-                  getIcon
+                  Metode Get JS Content
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
-                <nuxt-link to="/4.0/controller/getjsfooter/" class="btn">
-                  getJSFooter
+                <nuxt-link to="/id/controller/getjsready" class="btn">
+                  Metode Get JS Ready
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
@@ -121,24 +118,25 @@
 </template>
 <script>
 export default {
-  layout: 'v4.0',
+  layout: 'id',
   data (){
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'getJsContent method',
-      description: 'Learn more about getJsContent method from SENE_Controller class on Seme Framework 4.',
+      title: 'Metode getJsFooter',
+      description: 'Pelajari selengkapnya tentang metode getJsFooter dari SENE_Controller di Seme Framework versi 4.',
+      btiex: require('~/assets/img/controller/browser-title-example.png'),
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
           text: 'Seme Framework'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0',
-          text: '4.0.2'
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id',
+          text: 'ID'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0/controller',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/controller',
           text: 'Controller'
         }
       ],
@@ -146,6 +144,9 @@ export default {
   },
   head() {
     return {
+      htmlAttrs: {
+        lang: 'id'
+      },
       title: this.title+this.suffix,
       meta: [
         {
@@ -192,9 +193,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-08-16T09:51:00+07:00",
-        "datePublished": "2021-08-16T09:51:00+07:00",
-        "dateModified": "2021-08-16T09:51:00+07:00",
+        "dateCreated": "2021-08-16T09:38:00+07:00",
+        "datePublished": "2021-08-16T09:38:00+07:00",
+        "dateModified": "2021-08-16T09:38:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0/controller">Controller</NuxtLink></li>
-          <li class="unavailable">getJsFooter Method</li>
+          <li class="unavailable">getJsFooter</li>
         </ul>
       </nav>
       <div class="columns">
@@ -14,11 +14,13 @@
           <div class="content">
             <h1 class="">getJsFooter Method</h1>
             <p>
-              This method will get injected javascript from <code>putJsFooter</code> method.
+              The <code>getJsFooter</code> method will produce output of javascript with their <code>script</code> tag <NuxtLink to="/4.0/controller/putjsfooter">putJsFooter <i class="fa fa-window-restore"></i></NuxtLink> method.
             </p>
 
             <h2>Basic Usage</h2>
-            <p>Here is the basic usage of <code>getJsFooter</code> method.</p>
+            <p>
+              Here is the basic usage for <code>getJsFooter</code> method from <NuxtLink to="/4.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> class.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -38,17 +40,17 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  getJsFooter(): void
+                  $this-&#x3E;getJsFooter(): void
                 </highlight-code>
               </div>
             </div>
 
             <h3>Parameters</h3>
             <p>
-              <b>getJsFooter</b> method has no parameter required.
+              This method has no parameter required.
             </p>
 
-            <h2>Example Usage</h2>
+            <h2>Example</h2>
             <p>
               Usually this method called inside a layout file. Here is the basic example for <code>getJsFooter</code> method.
               Here is the content of <code>col-1.php</code> layout file.
@@ -78,8 +80,13 @@
                     &#x3C;title&#x3E;Test&#x3C;/title&#x3E;
                   &#x3C;/head&#x3E;
                   &#x3C;body&#x3E;
-                    &#x3C;script&#x3E;
+                    ...
+                    ...
+                    &#x3C;!-- jQuery, Bootstrap.js, jQuery plugins and Custom JS code from script.json --&#x3E;
                     &#x3C;?php $this-&#x3E;getJsFooter(); ?&#x3E;
+                    ...
+                    &#x3C;script&#x3E;
+                      ...
                     &#x3C;/script&#x3E;
                   &#x3C;/body&#x3E;
                   &#x3C;/html&#x3E;
@@ -89,14 +96,14 @@
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
-                <nuxt-link to="/4.0/controller/geticon/" class="btn">
+                <nuxt-link to="/4.0/controller/geticon" class="btn">
                   <i class="fa fa-chevron-left"></i>
-                  getIcon
+                  Get JS Content Method
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
-                <nuxt-link to="/4.0/controller/getjsready/" class="btn">
-                  getJsReady
+                <nuxt-link to="/4.0/controller/getjsready" class="btn">
+                  get JS Ready Method
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
@@ -184,9 +191,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-13T18:40:00+07:00",
-        "datePublished": "2021-07-13T18:46:00+07:00",
-        "dateModified": "2021-07-13T18:48:03+07:00",
+        "dateCreated": "2021-08-16T09:57:00+07:00",
+        "datePublished": "2021-08-16T09:57:00+07:00",
+        "dateModified": "2021-08-16T09:57:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
