@@ -107,7 +107,11 @@
         <div class="hamburger"></div>
       </button>
       <div class="container column is-9">
+        <amp-auto-ads type="adsense" data-ad-client="ca-pub-5281151685218961">
+        </amp-auto-ads>
         <nuxt />
+        <amp-auto-ads type="adsense" data-ad-client="ca-pub-5281151685218961">
+        </amp-auto-ads>
       </div>
     </div>
     <footer class="footer">
