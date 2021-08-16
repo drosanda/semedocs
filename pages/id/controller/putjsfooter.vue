@@ -197,8 +197,8 @@ export default {
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'putJsFooter Method',
-      description: 'Learn more about putJsFooter method from SENE_Controller on Seme Framework 4',
+      title: 'Metode putJsFooter',
+      description: 'Pelajari tentang metode putJsFooter dari kelas SENE_Controller untuk Seme Framework versi 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
