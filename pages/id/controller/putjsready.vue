@@ -4,89 +4,23 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/">4.0.2</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/controller/">Controller</NuxtLink></li>
-          <li class="unavailable">getTitle</li>
+          <li class=""><NuxtLink to="/id">4.0.2 (Bahasa)</NuxtLink></li>
+          <li class=""><NuxtLink to="/id/controller">Controller</NuxtLink></li>
+          <li class="unavailable">putJsReady</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Metode getTitle</h1>
+            <h1 class="">Metode putJsReady</h1>
             <p>
-              Metode getTitle digunakan untuk mengambil judul halaman berdasarkan metode <NuxtLink to="/id/controller/settitle/">setTitle</NuxtLink>.
+              Metode <code>putJsReady</code> digunakan untuk memanggil <NuxtLink to="/id/view/theme#spesifik_js">View Spesifik untuk Javascript <i class="fa fa-window-restore"></i></NuxtLink> ketika ada dalam sebuah tema, dikhususkan untuk javascript yang hanya akan dipanggil ketika <a href="https://stackoverflow.com/questions/3698200/window-onload-vs-document-ready#answer-3698214">document ready <i class="fa fa-external-link"></i></a>.
+              Pasangan dari metode ini adalah metode <NuxtLink to="/id/controller/getjsready">getJsReady <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
 
             <h2>Bentuk Umum</h2>
-            <p>Berikut ini adalah bentuk umum metode <code>getTitle</code> dari kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink></p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  $this-&#x3E;getTitle(): string
-                </highlight-code>
-              </div>
-            </div>
-
-            <h3>Parameter</h3>
             <p>
-              Metode ini tidak memiliki parameter.
-            </p>
-
-            <h2>Contoh Penggunaan</h2>
-            <p>
-              Biasanya metode ini hanya dipanggil didalam file layout atau didalam view component.
-              Berikut ini adalah contoh penggunaanya pada file layout <code>col-1.php</code>.
-            </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">
-                  &#x3C;!DOCTYPE html&#x3E;
-                  &#x3C;html&#x3E;
-                  &#x3C;head&#x3E;
-                    &#x3C;title&#x3E;&#x3C;?=$this-&#x3E;getTitle()?&#x3E;&#x3C;/title&#x3E;
-                  &#x3C;/head&#x3E;
-                  &#x3C;body&#x3E;
-                    ...
-                  &#x3C;/body&#x3E;
-                  &#x3C;/html&#x3E;
-                </highlight-code>
-              </div>
-            </div>
-
-            <p>
-              Sementara, untuk struktur file dan direktorinya.
+              Berikut ini bentuk umum penggunaan metode <code>putJsReady</code> dari kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -107,19 +41,30 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  app/
-                  ├── controller/
-                  |&#160;└── home.php
-                  └── view/
-                  &#160;└── front/
-                  &#160;&#160;└── page/
-                  &#160;&#160;&#160;└── col-1.php
+                  $this-&#x3E;putJsReady(string $content_location[, array $data]): $this
                 </highlight-code>
               </div>
             </div>
 
+            <h3>Parameters</h3>
             <p>
-              Ini adalah contoh kode untuk penggunaan di controllernya.
+              Metode ini membutuhkan 1 parameter wajib dan 1 parameter opsional.
+            </p>
+
+            <h4>$content_location</h4>
+            <p>
+              Nilai dari <code>$content_location</code> dapat berupa sebuah string yang merujuk pada lokasi file dibawah terhadap direktori <code>app/view/THEME/</code>.
+              Nilai ini juga dapat berisi juga awalan untuk sub direktori sebelum lokasi file.
+            </p>
+
+            <h4>$data</h4>
+            <p>
+              Nilai dari <code>$data</code> dapat berupa <code>array</code> yang berisi 1 atau lebih pasang <em>array key value</em>.
+            </p>
+
+            <h2>Contoh</h2>
+            <p>
+              Berikut ini adalah contoh untuk metode <code>putJsReady</code> pada sebuah kelas controller.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -145,12 +90,13 @@
                     public function __construct()
                     {
                       parent::__construct();
-                      $this-&#x3E;setTheme(&#x27;front&#x27;);
+                      $this-&#x3E;setTheme(&#x27;home&#x27;);
                     }
                     public function index()
                     {
-                      ...
-                      $this-&#x3E;setTitle(&#x27;Hello World!&#x27;,$data);
+                      $data = array();
+                      $this-&#x3E;putThemeContent(&#x27;home/home&#x27;,$data);
+                      $this-&#x3E;putJsReady(&#x27;home/home_bottom&#x27;,$data);
                       $this-&#x3E;loadLayout(&#x27;col-1&#x27;,$data);
                       $this-&#x3E;render();
                     }
@@ -158,24 +104,81 @@
                 </highlight-code>
               </div>
             </div>
-
+            <h3>Struktur File dan Directory</h3>
             <p>
-              Sementara untuk judulnya sekarang berisi <code>Hello World!</code>.
+              Jadi tema <code>front</code>, kemudian layout <code>col-1</code> layout serta <code>home_bottom.php</code> harus ada didalam struktur direktori.
             </p>
-            <amp-img layout="responsive" width="674" height="158" :src="btiex" alt="Browser title example"></amp-img>
 
-            <br>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  app/
+                  └── view/
+                   └── front/
+                    ├── home/
+                    | ├── home.php
+                    | └── home_bottom.php
+                    ├── page/
+                    | └── col-1.php
+                    └── ...
+                </highlight-code>
+              </div>
+            </div>
+
+            <h3>Contoh home_bottom.php</h3>
+            <p>
+              Berikut ini adalah contoh source code untuk file <code>home_bottom.php</code> yang berisi javascript.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  alert(&#x27;Hi, this is from home_bottom&#x27;);
+                </highlight-code>
+              </div>
+            </div>
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
-                <nuxt-link to="/id/controller/getkey/" class="btn">
+                <nuxt-link to="/id/controller/putjscontent" class="btn">
                   <i class="fa fa-chevron-left"></i>
-                  Metode getKey
+                  putJsContent
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
-                <nuxt-link to="/id/controller/input/" class="btn">
-                  Properti Input
+                <nuxt-link to="/id/controller/putthemecontent" class="btn">
+                  putThemeContent
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
@@ -183,24 +186,20 @@
 
           </div>
         </div>
+
       </div>
-
-
-
-
     </div>
   </div>
 </template>
 <script>
 export default {
-  layout: 'id',
-  data (){
+  layout: 'v4.0',
+  data() {
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'Metode getTitle',
-      description: 'Pelajari selengkapnya tentang metode getTitle dari SENE_Controller di Seme Framework 4.',
-      btiex: require('~/assets/img/controller/browser-title-example.png'),
+      title: 'Metode putJsReady',
+      description: 'Pelajari tentang metode putJsReady dari kelas SENE_Controller untuk Seme Framework versi 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -219,9 +218,6 @@ export default {
   },
   head() {
     return {
-      htmlAttrs: {
-        lang: 'id'
-      },
       title: this.title+this.suffix,
       meta: [
         {
@@ -268,9 +264,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-08-16T08:41:00+07:00",
-        "datePublished": "2021-08-16T08:41:00+07:00",
-        "dateModified": "2021-08-16T08:41:00+07:00",
+        "dateCreated": "2021-08-16T09:35:00+07:00",
+        "datePublished": "2021-08-16T09:35:00+07:00",
+        "dateModified": "2021-08-16T09:35:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

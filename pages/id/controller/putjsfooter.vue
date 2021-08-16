@@ -12,7 +12,7 @@
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">putJsFooter Method</h1>
+            <h1 class="">Metode putJsFooter</h1>
             <p>
               Metode <code>putJsFooter</code> digunakan untuk memanggil <NuxtLink to="/id/view/theme#spesifik_js">View Spesifik untuk Javascript <i class="fa fa-window-restore"></i></NuxtLink> ketika ada dalam sebuah tema.
             </p>
@@ -40,10 +40,26 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;putJsFooter(string $content_location[, array $data]): $this
+                  $this-&#x3E;putJsFooter(string $content_location[, array $data]): $this
                 </highlight-code>
               </div>
             </div>
+
+            <h3>Parameters</h3>
+            <p>
+              Metode ini membutuhkan 1 parameter wajib dan 1 parameter opsional.
+            </p>
+
+            <h4>$content_location</h4>
+            <p>
+              Nilai dari <code>$content_location</code> dapat berupa sebuah string yang merujuk pada lokasi file dibawah terhadap direktori <code>app/view/THEME/</code>.
+              Nilai ini juga dapat berisi juga awalan untuk sub direktori sebelum lokasi file.
+            </p>
+
+            <h4>$data</h4>
+            <p>
+              Nilai dari <code>$data</code> dapat berupa <code>array</code> yang berisi 1 atau lebih pasang <em>array key value</em>.
+            </p>
 
             <h2>Contoh</h2>
             <p>
@@ -247,9 +263,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-13T19:38:00+07:00",
-        "datePublished": "2021-07-13T19:39:00+07:00",
-        "dateModified": "2021-07-13T19:48:00+07:00",
+        "dateCreated": "2021-08-16T08:38:00+07:00",
+        "datePublished": "2021-08-16T08:38:00+07:00",
+        "dateModified": "2021-08-16T08:38:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

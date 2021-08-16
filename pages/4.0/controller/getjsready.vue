@@ -14,11 +14,13 @@
           <div class="content">
             <h1 class="">getJsReady Method</h1>
             <p>
-              This method will get injected javascript from <code>putJsReady</code> method.
+              The <code>getJsReady</code> method will get injected javascript that espsecially built for use inside <code>document ready</code> block from <NuxtLink to="/4.0/controller/putjsready">putJsReady <i class="fa fa-window-restore"></i></NuxtLink> method.
             </p>
 
             <h2>Basic Usage</h2>
-            <p>Here is the basic usage of <code>getJsReady</code> method.</p>
+            <p>
+              Here is the basic usage for <code>getJsReady</code> method from <NuxtLink to="/4.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> class.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -38,14 +40,14 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  getJsReady(): void
+                  $this-&#x3E;getJsReady(): void
                 </highlight-code>
               </div>
             </div>
 
             <h3>Parameters</h3>
             <p>
-              <b>getJsReady</b> method has no parameter required.
+              This method has no parameter required.
             </p>
 
             <h2>Example Usage</h2>
@@ -111,15 +113,15 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  |- app/
-                  |-- controller/
-                  |--- home.php
-                  |-- view/
-                  |--- front/
-                  |---- home/
-                  |----- home_bottom.php
-                  |---- page/
-                  |----- col-1.php
+                  app/
+                  └── controller/
+                  | └── home.php
+                  └── view/
+                   ├── front/
+                   | ├── home/
+                   | └── home_bottom.php
+                   └── page/
+                     └── col-1.php
                 </highlight-code>
               </div>
             </div>
@@ -305,9 +307,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-13T10:40:00+07:00",
-        "datePublished": "2021-07-13T10:46:00+07:00",
-        "dateModified": "2021-07-13T11:04:03+07:00",
+        "dateCreated": "2021-08-16T09:32:00+07:00",
+        "datePublished": "2021-08-16T09:32:00+07:00",
+        "dateModified": "2021-08-16T09:32:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

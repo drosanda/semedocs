@@ -14,7 +14,7 @@
           <div class="content">
             <h1 class="">putJsFooter Method</h1>
             <p>
-              The <code>putJsFooter</code> method purpose is for loading <NuxtLink to="/4.0/view/theme#specific_js">javascript specific view component</NuxtLink> in a theme.
+              The <code>putJsFooter</code> method purpose is for loading <NuxtLink to="/4.0/view/theme#specific_js">javascript specific view component <i class="fa fa-window-restore"></i></NuxtLink> in a theme.
             </p>
 
             <h2>Basic Usage</h2>
@@ -40,10 +40,26 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;putJsFooter(string $content_location[, array $data]): $this
+                  $this-&#x3E;putJsFooter(string $content_location[, array $data]): $this
                 </highlight-code>
               </div>
             </div>
+
+            <h3>Parameters</h3>
+            <p>
+              This method has 1 required parameter and 1 optional parameter.
+            </p>
+
+            <h4>$content_location</h4>
+            <p>
+              The <code>$content_location</code> value will be reffered to a file name under <code>app/view/THEME/</code>.
+              This value also can contain path prefix of subdirectory before the filename.
+            </p>
+
+            <h4>$data</h4>
+            <p>
+              The <code>$data</code> value is an array that contained one or more array key value(s).
+            </p>
 
             <h2>Example</h2>
             <p>Here is the example for <code>putJsFooter</code> method in a controller.</p>

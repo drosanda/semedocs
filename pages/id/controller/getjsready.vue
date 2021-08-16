@@ -6,19 +6,22 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/id/controller/">Controller</NuxtLink></li>
-          <li class="unavailable">getTitle</li>
+          <li class="unavailable">getJsReady</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Metode getTitle</h1>
+            <h1 class="">Metode getJsReady</h1>
             <p>
-              Metode getTitle digunakan untuk mengambil judul halaman berdasarkan metode <NuxtLink to="/id/controller/settitle/">setTitle</NuxtLink>.
+              Metode <code>getJsReady</code> digunakan untuk mengambil view component javascript yang tersimpan dari metode <NuxtLink to="/id/controller/putjsready">putJsReady <i class="fa fa-window-restore"></i></NuxtLink>.
+              Pastikan untuk memanggil metode ini hanya didalam block <a href="https://stackoverflow.com/questions/3698200/window-onload-vs-document-ready#answer-3698214" target="_blank">document ready <i class="fa fa-external-link"></i></a> javascript.
             </p>
 
             <h2>Bentuk Umum</h2>
-            <p>Berikut ini adalah bentuk umum metode <code>getTitle</code> dari kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink></p>
+            <p>
+              Berikut ini adalah bentuk umum metode <code>getJsReady</code> dari kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -38,7 +41,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;getTitle(): string
+                  $this-&#x3E;getJsReady(): string
                 </highlight-code>
               </div>
             </div>
@@ -48,7 +51,7 @@
               Metode ini tidak memiliki parameter.
             </p>
 
-            <h2>Contoh Penggunaan</h2>
+            <h2>Contoh</h2>
             <p>
               Biasanya metode ini hanya dipanggil didalam file layout atau didalam view component.
               Berikut ini adalah contoh penggunaanya pada file layout <code>col-1.php</code>.
@@ -75,16 +78,21 @@
                   &#x3C;!DOCTYPE html&#x3E;
                   &#x3C;html&#x3E;
                   &#x3C;head&#x3E;
-                    &#x3C;title&#x3E;&#x3C;?=$this-&#x3E;getTitle()?&#x3E;&#x3C;/title&#x3E;
+                    &#x3C;title&#x3E;Test&#x3C;/title&#x3E;
                   &#x3C;/head&#x3E;
                   &#x3C;body&#x3E;
-                    ...
+                    &#x3C;script&#x3E;
+                    $(document).ready(function(e){
+                      &#x3C;?php $this-&#x3E;getJsReady(); ?&#x3E;
+                    });
+                    &#x3C;/script&#x3E;
                   &#x3C;/body&#x3E;
                   &#x3C;/html&#x3E;
                 </highlight-code>
               </div>
             </div>
 
+            <h3>Contoh struktur file dan direktori</h3>
             <p>
               Sementara, untuk struktur file dan direktorinya.
             </p>
@@ -109,7 +117,8 @@
                 <highlight-code lang="php">
                   app/
                   ├── controller/
-                  |&#160;└── home.php
+                  |&#160;├── home.php
+                  |&#160;└── home_bottom.php
                   └── view/
                   &#160;└── front/
                   &#160;&#160;└── page/
@@ -118,6 +127,7 @@
               </div>
             </div>
 
+            <h3>Contoh source code pada kelas Controller</h3>
             <p>
               Ini adalah contoh kode untuk penggunaan di controllernya.
             </p>
@@ -149,33 +159,58 @@
                     }
                     public function index()
                     {
+                      $data = array();
+                      $data['admin_name'] = 'Daeng';
+                      $this-&#x3E;putJsReady(&#x27;home/home_bottom&#x27;,$data);
                       ...
-                      $this-&#x3E;setTitle(&#x27;Hello World!&#x27;,$data);
-                      $this-&#x3E;loadLayout(&#x27;col-1&#x27;,$data);
-                      $this-&#x3E;render();
                     }
                   }
                 </highlight-code>
               </div>
             </div>
-
+            <h3>Contoh isi home_bottom.php</h3></h3>
             <p>
-              Sementara untuk judulnya sekarang berisi <code>Hello World!</code>.
+              Berikut ini adalah contoh isi source code untuk <code>home_bottom.php</code> yang berisi kode JavaScript.
             </p>
-            <amp-img layout="responsive" width="674" height="158" :src="btiex" alt="Browser title example"></amp-img>
-
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="javascript">
+                  alert(&#x27;&#x3C;?php echo $admin_name?&#x3E;&#x27;);
+                </highlight-code>
+              </div>
+            </div>
             <br>
+            <p>
+              Variabel <code>$data</code> yang diteruskan ke metode <code>putJsContent</code>, telah diekstraksi menjadi variabel asli tergantung pada nama kunci array.
+              Dalam hal ini, <code>$data[&#x27;admin_name&#x27;]</code> diubah menjadi <code>$admin_name</code> jika dipanggil di dalam file <code>home_bottom.php</code>.
+            </p>
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
-                <nuxt-link to="/id/controller/getkey/" class="btn">
+                <nuxt-link to="/id/controller/getjsfooter" class="btn">
                   <i class="fa fa-chevron-left"></i>
-                  Metode getKey
+                  Metode Get JS Footer
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
-                <nuxt-link to="/id/controller/input/" class="btn">
-                  Properti Input
+                <nuxt-link to="/id/controller/getkey" class="btn">
+                  Metode Get Key
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
@@ -184,9 +219,6 @@
           </div>
         </div>
       </div>
-
-
-
 
     </div>
   </div>
@@ -198,8 +230,8 @@ export default {
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'Metode getTitle',
-      description: 'Pelajari selengkapnya tentang metode getTitle dari SENE_Controller di Seme Framework 4.',
+      title: 'Metode getJsReady',
+      description: 'Pelajari selengkapnya tentang metode getJsReady dari SENE_Controller di Seme Framework versi 4.',
       btiex: require('~/assets/img/controller/browser-title-example.png'),
       breadcrumbs: [
         {
@@ -268,9 +300,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-08-16T08:41:00+07:00",
-        "datePublished": "2021-08-16T08:41:00+07:00",
-        "dateModified": "2021-08-16T08:41:00+07:00",
+        "dateCreated": "2021-08-16T08:47:00+07:00",
+        "datePublished": "2021-08-16T08:47:00+07:00",
+        "dateModified": "2021-08-16T08:47:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

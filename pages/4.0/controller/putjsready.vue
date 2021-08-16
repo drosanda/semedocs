@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0">4.0.2</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0/controller">Controller</NuxtLink></li>
-          <li class="unavailable">putJsReady Method</li>
+          <li class="unavailable">putJsReady</li>
         </ul>
       </nav>
       <div class="columns">
@@ -14,11 +14,14 @@
           <div class="content">
             <h1 class="">putJsReady Method</h1>
             <p>
-              This method will put (injected) javascript code into ready function block of javascript. This method only combined with <code>getJsReady</code> method.
+              The <code>putJsReady</code> method will put (injected) javascript code into <a href="https://stackoverflow.com/questions/3698200/window-onload-vs-document-ready#answer-3698214" target="_blank">document ready <i class="fa fa-external-link"></i></a> block of javascript.
+              This method can only combined with <NuxtLink to="/4.0/controller/getjsready">getJsReady <i class="fa fa-window-restore"></i></NuxtLink> method.
             </p>
 
             <h2>Basic Usage</h2>
-            <p>Here is the basic usage of <code>putJsReady</code> method.</p>
+            <p>
+              Here is the basic usage for <code>putJsReady</code> method from <NuxtLink to="/4.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> class.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -38,53 +41,21 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  putJsReady(string $content_location[, array $data]): $this
+                  $this-&#x3E;putJsReady(string $content_location[, array $data]): $this
                 </highlight-code>
               </div>
             </div>
 
             <h3>Parameters</h3>
             <p>
-              <b>putJsReady</b> method has 1 required parameter <code>$content_location</code> and 1 optional parameters <code>$data</code>.
+              This method has 1 required parameter and 1 optional parameter.
             </p>
 
             <h4>$content_location</h4>
             <p>
               The <code>$content_location</code> value will be reffered to a file name under <code>app/view/THEME/</code>.
               This value also can contain path prefix of subdirectory before the filename.
-            </p>
-
-            <h5>Content Location Requirements</h5>
-            <p>The valid content should only put inside in a directory beneath current selected theme directory.</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  - app/
-                  |- view/
-                  |-- front/
-                  |--- home/
-                  |---- home_bottom.php
-                </highlight-code>
-              </div>
-            </div>
-            <p>
-              The <code>home_bottom.php</code> contain about javascript wrapped inside PHP file.
+              Learn more about <NuxtLink to="/4.0/view/theme#specific_js">javascript specific view component <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
 
             <h4>$data</h4>
@@ -180,15 +151,16 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  |- app/
-                  |-- controller/
-                  |--- home.php
-                  |-- view/
-                  |--- front/
-                  |---- home/
-                  |----- home_bottom.php
-                  |---- page/
-                  |----- col-1.php
+                  app/
+                  └── controller/
+                  | └── home.php
+                  └── view/
+                   └── front/
+                    ├── home/
+                    | ├── home.php
+                    | └── home_bottom.php
+                    └── page/
+                      └── col-1.php
                 </highlight-code>
               </div>
             </div>
@@ -411,9 +383,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-13T10:40:00+07:00",
-        "datePublished": "2021-07-13T10:46:00+07:00",
-        "dateModified": "2021-07-13T11:04:03+07:00",
+        "dateCreated": "2021-08-16T09:12:00+07:00",
+        "datePublished": "2021-08-16T09:12:00+07:00",
+        "dateModified": "2021-08-16T09:12:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
