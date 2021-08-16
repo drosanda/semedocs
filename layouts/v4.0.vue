@@ -153,6 +153,10 @@
               <li><nuxt-link to="/4.0/core/model">Model</nuxt-link></li>
             </ul>
           </li>
+          <li><nuxt-link to="/issue">Issue</nuxt-link></li>
+          <li>
+            <nuxt-link to="/deployment">Deployment</nuxt-link>
+          </li>
         </ul>
         <br>
         <br>

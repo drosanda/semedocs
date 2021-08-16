@@ -13,6 +13,9 @@
           <li><nuxt-link to="/credits">Credits</nuxt-link></li>
           <li><nuxt-link to="/3.3">Version 3.3.x</nuxt-link></li>
           <li><nuxt-link to="/issue">Issue</nuxt-link></li>
+          <li>
+            <nuxt-link to="/deployment">Deployment</nuxt-link>
+          </li>
         </ul>
         <br>
         <br>

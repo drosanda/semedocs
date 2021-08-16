@@ -95,6 +95,9 @@
             </ul>
           </li>
           <li><nuxt-link to="/issue">Issue</nuxt-link></li>
+          <li>
+            <nuxt-link to="/deployment">Deployment</nuxt-link>
+          </li>
         </ul>
         <br>
         <br>
