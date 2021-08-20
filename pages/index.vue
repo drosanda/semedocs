@@ -10,17 +10,15 @@
       <div class="">
         <div class="column">
           <div class="content">
-            <h1 class="is-size-1">Welcome to <span>Seme Framework</span></h1>
-            <h2 class="tagline">The Lightweight PHP MVC Framework</h2>
-            <amp-img
-              alt="Seme Framework code example"
-              :src="homeGroup"
-              layout="responsive"
-              height="1480"
-              width="1308"
-            >
-            </amp-img>
-
+            <h1 class="is-size-1"><span> Seme Framework </span></h1>
+            <h2 class="tagline">Web Framework for Veteran PHP Programmer</h2>
+            <p>
+              This is official documentation for Seme Framework, the PHP MVC Framework for creating small and medium app that needed for fast delivery.
+              This framework suitable for Programmer that only know about <code>Manual way</code> of code.
+              Not like this time, everything build up automatically through console.
+              Seme Framework has taken different way of code, <i>If you want build small app, why we need lots of library</i>.
+            </p>
+            <hr>
             <div class="buttons is-centered">
               <nuxt-link to="/4.0/downloads" class="btn">
                 Download
@@ -35,9 +33,63 @@
                 Bahasa Indonesia
               </nuxt-link>
             </div>
+            <hr>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  &#x3C;?php
+class Product extends SENE_Controller
+{
+  &#x9;public $user_login=0;
 
+    public function __construct()
+    {
+        parent::__construct();
+      &#x9;$session = $this-&#x3E;getKey();
+      &#x9;if(isset($session-&#x3E;user-&#x3E;id)) $this-&#x3E;user_login = 1;
 
-            <p>This is official documentation for Seme Framework, the PHP MVC Framework for creating small and medium app that needed for fast delivery. At first version of Seme Framework used for building API (Middle Ware) for another Application such as android, iOS, etc. And now as increasing of requirement, Seme Framework has expand the limit for creating Small and Medium App.</p>
+      &#x9;$this-&#x3E;load(&#x27;front/c_product_model&#x27;,&#x27;cpm&#x27;);
+    }
+
+    public function index()
+    {
+&#x9;&#x9;$data = array();
+      &#x9;$page = (int) $this-&#x3E;input-&#x3E;post(&#x27;page&#x27;);
+       &#x9;$pagesize = (int) $this-&#x3E;input-&#x3E;post(&#x27;pagesize&#x27;);
+        $data[&#x27;cpm&#x27;] = $this-&#x3E;cpm-&#x3E;get($page,$pagesize);
+      &#x9;
+      &#x9;$this-&#x3E;loadCss($this-&#x3E;cdn_url(&#x27;skin/front/css/datatables.min.css&#x27;));
+      &#x9;$this-&#x3E;putJsFooter($this-&#x3E;cdn_url(&#x27;skin/front/js/datatables.min.js&#x27;));
+
+      &#x9;$this-&#x3E;setTitle(&#x27;Catalog Product&#x27;.$this-&#x3E;config-&#x3E;semevar-&#x3E;site_suffix);
+
+        $this-&#x3E;putThemeContent(&#x27;produk/home&#x27;,$data);
+        $this-&#x3E;putThemeContent(&#x27;produk/home_modal&#x27;,$data);
+        $this-&#x3E;putJsReady(&#x27;produk/home_bottom&#x27;,$data);
+        $this-&#x3E;loadLayout(&#x27;col&#x27;,$data);
+        $this-&#x3E;render();
+    }
+}
+                </highlight-code>
+              </div>
+            </div>
+            <hr>
 
             <h2>How Seme Framework Work?</h2>
             <p>
@@ -55,7 +107,11 @@
             </amp-img>
 
             <h2>Key Feature</h2>
-            <p>This framework suitable for Programmer that only know about <code>Manual</code> way of code. Not like this time, everything build up automatically through console. Seme Framework has taken different way of code, <i>If you want build small app, why we need lots of library</i>. Here is the key feature of Seme Framework:</p>
+            <p>
+              At first version of Seme Framework used for building API (Middle Ware) for another Application such as android, iOS, etc.
+              And now as increasing of requirement, Seme Framework has expand the limit for creating Small and Medium App.
+              Here is the key feature of Seme Framework:
+            </p>
             <hr>
             <div class="columns">
               <div class="column"><i>Small but not Tiny</i>. Seme Framework growth on SME Industries with many requirement but can suppress the hosting price.</div>
@@ -128,10 +184,9 @@
     layout: 'default',
     data (){
       return {
-        title: 'Seme Framework',
-        suffix: ' - The Lightweight and Deployable PHP MVC Framework',
-        description: 'Seme Framework is lightweight and deployable PHP MVC Framework that you can learn more through this documentation.',
-        homeGroup: require('~/static/carbon.png'),
+        title: 'Seme Framework: PHP Web Framework for Veteran',
+        suffix: '',
+        description: 'Seme Framework is Web Framework using PHP for building small and medium website, suitable for veteran PHP programmer that know manual way of codes.',
         hsfwork: require('~/static/how-seme-framework-work.png'),
         breadcrumbs: [
           {
@@ -189,9 +244,9 @@
           "image": [
             (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
           ],
-          "dateCreated": "2021-08-11T19:52:38+07:00",
-          "datePublished": "2021-08-11T19:52:38+07:00",
-          "dateModified": "2021-07-24T17:16:00+07:00",
+          "dateCreated": "2021-08-20T22:20:00+07:00",
+          "datePublished": "2021-08-20T22:20:00+07:00",
+          "dateModified": "2021-08-20T22:20:00+07:00",
           "author": {
             "@type": "Person",
             "gender": "Male",
