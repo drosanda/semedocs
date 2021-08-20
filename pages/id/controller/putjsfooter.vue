@@ -15,7 +15,7 @@
             <h1 class="">Metode putJsFooter</h1>
             <p>
               Metode <code>putJsFooter</code> digunakan untuk memanggil file JavaScript kedalam sebuah <NuxtLink to="/id/view/theme">Tema Tampilan <i class="fa fa-window-restore"></i></NuxtLink> dengan cara menambahkan HTML tag <code>SCRIPT</code> kedalamnya.
-              Supaya metode ini dapat berjalan dengan baik, metode <NuxtLink to="/id/controller/getjsfooter">getJsFooter<i class="fa fa-window-restore"></i></NuxtLink> harus dipanggil pada <NuxtLink to="/id/view/layout">Layout tema<i class="fa fa-window-restore"></i></NuxtLink> atau pada komponen tampilan tema.
+              For this method to work properly, the <NuxtLink to="/id/controller/getjsfooter">getJsFooter<i class="fa fa-window-restore"></i></NuxtLink> method must be called on <NuxtLink to ="/en/view/layout">Theme layout<i class="fa fa-window-restore"></i></NuxtLink> or on the theme view component.
             </p>
 
             <h2>Bentuk Umum</h2>
@@ -90,13 +90,13 @@
                     public function __construct()
                     {
                       parent::__construct();
-                      $this-&#x3E;setTheme(&#x27;home&#x27;);
+                      $this-&#x3E;setTheme(&#x27;homepage&#x27;);
                     }
                     public function index()
                     {
                       $data = array();
                       $this-&#x3E;putThemeContent(&#x27;home/home&#x27;,$data);
-                      $this-&#x3E;putJsFooter(&#x27;home/home_bottom&#x27;,$data);
+                      $this-&#x3E;putJsFooter($this->cdn_url(&#x27;skin/front/js/app.js&#x27;), 1);
                       $this-&#x3E;loadLayout(&#x27;col-1&#x27;,$data);
                       $this-&#x3E;render();
                     }
@@ -104,70 +104,7 @@
                 </highlight-code>
               </div>
             </div>
-            <h3>Struktur File dan Directory</h3>
-            <p>
-              Jadi tema <code>front</code>, kemudian layout <code>col-1</code> layout serta <code>home_bottom.php</code> harus ada didalam struktur direktori.
-            </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  app/
-                  └── view/
-                   └── front/
-                    ├── home/
-                    | ├── home.php
-                    | └── home_bottom.php
-                    ├── page/
-                    | └── col-1.php
-                    └── ...
-                </highlight-code>
-              </div>
-            </div>
-
-            <h3>Contoh home_bottom.php</h3>
-            <p>
-              Berikut ini adalah contoh source code untuk file <code>home_bottom.php</code> yang berisi javascript.
-            </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  alert(&#x27;Hi, this is from home_bottom&#x27;);
-                </highlight-code>
-              </div>
-            </div>
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">

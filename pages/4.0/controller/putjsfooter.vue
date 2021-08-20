@@ -14,7 +14,7 @@
           <div class="content">
             <h1 class="">putJsFooter Method</h1>
             <p>
-              The <code>putJsFooter</code> method purpose is for loading JavaScript file by add (inject) <code>SCRIPT</code> tag into <NuxtLink to="/4.0/view/theme#specific_js">theme view<i class="fa fa-window-restore"></i></NuxtLink> from a controller.
+              The <code>putJsFooter</code> method purpose is for loading JavaScript file by add (inject) <code>SCRIPT</code> tag into <NuxtLink to="/id/controller/getjsfooter">getJsFooter <i class="fa fa-window-restore"></i></NuxtLink> method from a controller.
             </p>
 
             <h2>Basic Usage</h2>
@@ -93,72 +93,11 @@
                     {
                       $data = array();
                       $this-&#x3E;putThemeContent(&#x27;home/home&#x27;,$data);
-                      $this-&#x3E;putJsFooter(&#x27;home/home_bottom&#x27;,$data);
+                      $this-&#x3E;putJsFooter($this->cdn_url(&#x27;skin/front/js/app.js&#x27;), 1);
                       $this-&#x3E;loadLayout(&#x27;col-1&#x27;,$data);
                       $this-&#x3E;render();
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
-            <h3>The File and Directory Structure</h3>
-            <p>So, the <code>front</code> theme, <code>col-1</code> layout and <code>home_bottom.php</code> content should be existed on the directory structure.</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  app/
-                  └── view/
-                   └── front/
-                    ├── home/
-                    | ├── home.php
-                    | └── home_bottom.php
-                    ├── page/
-                    | └── col-1.php
-                    └── ...
-                </highlight-code>
-              </div>
-            </div>
-
-            <h3>home_bottom.php Content</h3>
-            <p>
-              Here is the source code example for home_bottom.php content
-            </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  alert(&#x27;Hi, this is from home_bottom&#x27;);
                 </highlight-code>
               </div>
             </div>
