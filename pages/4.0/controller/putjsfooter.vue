@@ -14,7 +14,7 @@
           <div class="content">
             <h1 class="">putJsFooter Method</h1>
             <p>
-              The <code>putJsFooter</code> method purpose is for loading <NuxtLink to="/4.0/view/theme#specific_js">javascript specific view component <i class="fa fa-window-restore"></i></NuxtLink> in a theme.
+              The <code>putJsFooter</code> method purpose is for loading JavaScript file by add (inject) <code>SCRIPT</code> tag into <NuxtLink to="/4.0/view/theme#specific_js">theme view<i class="fa fa-window-restore"></i></NuxtLink> from a controller.
             </p>
 
             <h2>Basic Usage</h2>
@@ -40,7 +40,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;putJsFooter(string $content_location[, array $data]): $this
+                  $this-&#x3E;putJsFooter(string $jsfile_location[, int $utype=0]): $this
                 </highlight-code>
               </div>
             </div>
@@ -50,15 +50,15 @@
               This method has 1 required parameter and 1 optional parameter.
             </p>
 
-            <h4>$content_location</h4>
+            <h4>$jsfile_location</h4>
             <p>
-              The <code>$content_location</code> value will be reffered to a file name under <code>app/view/THEME/</code>.
-              This value also can contain path prefix of subdirectory before the filename.
+              The <code>$jsfile_location</code> value can be string that point to a javascript filename with its location prefix, like URL.
             </p>
 
-            <h4>$data</h4>
+            <h4>$utype</h4>
             <p>
-              The <code>$data</code> value is an array that contained one or more array key value(s).
+              The <code>$utype</code> value can be an integer, if <code>false</code> or <code>0</code> its relative to current <code>BASE_URL</code>.
+              Otherwise, it will point to exact location that provide in the <code>$jsfile_location</code> value.
             </p>
 
             <h2>Example</h2>
@@ -193,7 +193,7 @@ export default {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'putJsFooter Method',
-      description: 'Learn more about putJsFooter method from SENE_Controller on Seme Framework 4',
+      description: 'Learn more about putJsFooter method from SENE_Controller on Seme Framework version 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -201,7 +201,7 @@ export default {
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0',
-          text: '4.0.2'
+          text: '4.0'
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0/controller',
@@ -258,9 +258,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-08-16T08:02:18+07:00",
-        "datePublished": "2021-08-16T08:02:18+07:00",
-        "dateModified": "2021-08-16T08:02:18+07:00",
+        "dateCreated": "2021-08-18T10:32:18+07:00",
+        "datePublished": "2021-08-18T10:32:18+07:00",
+        "dateModified": "2021-08-18T10:32:18+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

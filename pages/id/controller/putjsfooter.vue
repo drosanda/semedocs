@@ -14,7 +14,8 @@
           <div class="content">
             <h1 class="">Metode putJsFooter</h1>
             <p>
-              Metode <code>putJsFooter</code> digunakan untuk memanggil <NuxtLink to="/id/view/theme#spesifik_js">View Spesifik untuk Javascript <i class="fa fa-window-restore"></i></NuxtLink> ketika ada dalam sebuah tema.
+              Metode <code>putJsFooter</code> digunakan untuk memanggil file JavaScript kedalam sebuah <NuxtLink to="/id/view/theme">Tema Tampilan <i class="fa fa-window-restore"></i></NuxtLink> dengan cara menambahkan HTML tag <code>SCRIPT</code> kedalamnya.
+              Supaya metode ini dapat berjalan dengan baik, metode <NuxtLink to="/id/controller/getjsfooter">getJsFooter<i class="fa fa-window-restore"></i></NuxtLink> harus dipanggil pada <NuxtLink to="/id/view/layout">Layout tema<i class="fa fa-window-restore"></i></NuxtLink> atau pada komponen tampilan tema.
             </p>
 
             <h2>Bentuk Umum</h2>
