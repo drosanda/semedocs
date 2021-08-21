@@ -71,7 +71,7 @@
 
             <p id="intro">
               Seme Framework merupakan kumpulan kode yang dibuat menggunakan PHP untuk pembuatan aplikasi berbasis web skala kecil sampai dengan skala menengah tanpa harus <em>ngoding</em> dari nol.
-              Framework ini <code>cukup ringan</code> untuk digunakan, baik ketika proses pembuatan (<code>development phase</code>) aplikasi maupun sampai dengan aplikasi tersebut jadi digunakan (<code>production phase</code>).
+              Framework ini <code>cukup ringan</code> untuk digunakan, baik ketika proses pembuatan (<code>development phase</code>) maupun sampai aplikasi tersebut jadi digunakan (<code>production phase</code>).
               Seme Framework masih mempertahankan cara tradisional (<code>manual</code>), yang cocok untuk programmer yang baru mulai belajar maupun <code>programmer veteran</code>.
             </p>
 
@@ -155,15 +155,16 @@
                 Mulai percobaan
               </nuxt-link>
               <nuxt-link class="btn" to="/issue">
-                <i>Troubleshoot (b. inggris)</i>
+                <i>Issue (b. inggris)</i>
               </nuxt-link>
             </div>
 
             <h2 id="cara_kerja">Cara Kerja Seme Framework</h2>
             <p>
-              Seme Framework berfungsi sebagai Kerangka Aplikasi Web untuk kode sumber Anda yang menjembatani antara Peramban Web dan Sistem Basis Data.
-              Seme Framework menggunakan konsep <code>Model</code> <code>View</code> <code>Controller</code> untuk membuat kode yang rapi dan proses pengkodean yang teratur.
-              Seme Framework menggunakan <a href="https://www.php.net" target="_blank">PHP <i class="fa fa-external-link"></i></a> sebagai bahasa pemrograman utamanya.
+              Seme Framework berfungsi sebagai Kerangka Aplikasi Web untuk kode sumber Anda yang menjembatani antara Peramban Web (<em>Browser</em>) dengan Sistem Basis Data (<em>Database System</em>).
+              Seme Framework telah menyediakan fungsi dan metode yang siap digunakan untuk pembuatan aplikasi berbasis web.
+              Kemudian komunikasi antara Seme Framework dengan Database System, telah dipermudah dengan <b>Query Builder</b> sehingga untuk kode <code>SQL</code> yang sederhan tidak perlu dihafalkan.
+              Tugas programmer cukup meneruskan atau menurunkan kode yang telah ada sehingga sebuah aplikasi dapat dibuat sesuai dengan kebutuhan serta dapat digunakan melalui web browser.
             </p>
             <amp-img
             alt="How seme framework work?"
