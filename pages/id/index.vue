@@ -167,13 +167,13 @@
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/version/" class="btn">
+          <nuxt-link to="/version" class="btn">
           <i class="fa fa-chevron-left"></i>
             Versions
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link class="btn" to="/id/requirements/">
+          <nuxt-link class="btn" to="/id/requirements">
             Persyaratan
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
@@ -190,8 +190,8 @@
       return {
         name: 'Seme Framework 4',
         suffix: ' - Seme Framework 4',
-        title: 'Dokumentasi Bahasa Indonesia',
-        description: 'Dokumentasi resmi Seme Framework 4 dengan bahasa indonesia.',
+        title: 'Web Framework untuk Programmer Veteran',
+        description: 'Seme Framework merupakan web framework yang ringan untuk Programmer Veteran dalam pembuatan aplikasi web skala kecil dan menengah.',
         semecarbon: require('~/static/carbon.png'),
         hsfwork: require('~/static/how-seme-framework-work.png'),
         breadcrumbs: [

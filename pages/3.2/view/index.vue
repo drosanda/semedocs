@@ -201,25 +201,24 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  app/
-                  -view/
-                  --front/
-                  ---themes.json
-                  ---script.json
-                  ---page/
-                  ----col-1.php
-                  ----col-2-left.php
-                  ----html/
-                  -----head.php
-                  -----header.php
-                  -----topbar.php
-                  -----footer.php
-                  -----sidemenu.php
-                  skin/
-                  -front/
-                  --css
-                  --js
-                  --img
+                  /
+                  ├── app/
+                  │ └── view/
+                  │  └── front/
+                  │   ├── home
+                  │   │ ├── home.php
+                  │   │ └── home_bottom.php
+                  │   ├── theme.json
+                  │   ├── script.json
+                  │   └── page/
+                  │    ├── col-1.php
+                  │    └── html/
+                  │     └── head.php
+                  └── skin/
+                    └── front/
+                     ├── css/
+                     ├── img/
+                     └── js/
                 </highlight-code>
               </div>
             </div>

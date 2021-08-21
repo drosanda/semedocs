@@ -56,13 +56,13 @@
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/id/uri_routing/admin/" class="btn">
+          <nuxt-link to="/id/uri_routing/admin" class="btn">
           <i class="fa fa-chevron-left"></i>
             Uri Routing: Admin
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/id/globals/" class="btn">
+          <nuxt-link to="/id/globals" class="btn">
             Globals
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
