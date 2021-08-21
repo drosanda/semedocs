@@ -439,9 +439,33 @@
             </p>
 
             <h2>Kesimpulan</h2>
-            <p>
-              Dari tiga contoh diatas, dapat disimpulkan bahwa Seme Framework secara otomatis dapat menentukan pemetaan Alamat URL secara otomatis.
-            </p>
+            <ul>
+              <li>
+                Dari tiga contoh diatas, dapat disimpulkan bahwa Seme Framework secara otomatis dapat menentukan pemetaan Alamat URL secara otomatis.
+              </li>
+              <li>
+                Untuk membuat halaman harus ada 2 tahap ini.
+                <ol>
+                  <li>
+                    Membuat file baru untuk view.
+                  </li>
+                  <li>
+                    Kemudian untuk kelas Controller-nya:
+                    <ul>
+                      <li>
+                        buat kelas controller baru, kemudian panggil view-nya, atau
+                      </li>
+                      <li>
+                        Ubah di Controller-nya, Tambahkan metode <code>function</code> baru, kemudian panggil view-nya, atau
+                      </li>
+                      <li>
+                        Ubah di Controller-nya, ubah metode / <code>function</code> yang sudah ada, kemudian panggil view-nya.
+                      </li>
+                    </ul>
+                  </li>
+                </ol>
+              </li>
+            </ul>
 
           </div>
         </div>
