@@ -11,91 +11,175 @@
       <div class="">
         <div class="column">
           <div class="content">
-            <h1 class="is-size-1">Seme Framework <span>4</span></h1>
-            <h2 style="margin: 0.5em 0; padding: 0; line-height: 1;">Dokumentasi dalam Bahasa Indonesia</h2>
+            <h1 class="is-size-1"><span> Seme Framework 4 </span></h1>
+            <h2 style="margin: 0.5em 0; padding: 0; line-height: 1;">Web Framework untuk Veteran</h2>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  &#x3C;?php
+                  class Product extends SENE_Controller
+                  {
+                    public $user_login=0;
+
+                    public function __construct()
+                    {
+                      parent::__construct();
+                      $session = $this-&#x3E;getKey();
+                      if(isset($session-&#x3E;user-&#x3E;id)) $this-&#x3E;user_login = 1;
+
+                      $this-&#x3E;load(&#x27;front/c_product_model&#x27;,&#x27;cpm&#x27;);
+                    }
+
+                    public function index()
+                    {
+                      $data = array();
+                      $page = (int) $this-&#x3E;input-&#x3E;post(&#x27;page&#x27;);
+                      $pagesize = (int) $this-&#x3E;input-&#x3E;post(&#x27;pagesize&#x27;);
+                      $data[&#x27;cpm&#x27;] = $this-&#x3E;cpm-&#x3E;get($page,$pagesize);
+
+                      $this-&#x3E;loadCss($this-&#x3E;cdn_url(&#x27;skin/front/css/datatables.min.css&#x27;));
+                      $this-&#x3E;putJsFooter($this-&#x3E;cdn_url(&#x27;skin/front/js/datatables.min.js&#x27;));
+
+                      $this-&#x3E;setTitle(&#x27;Catalog Product&#x27;.$this-&#x3E;config-&#x3E;semevar-&#x3E;site_suffix);
+
+                      $this-&#x3E;putThemeContent(&#x27;produk/home&#x27;,$data);
+                      $this-&#x3E;putThemeContent(&#x27;produk/home_modal&#x27;,$data);
+                      $this-&#x3E;putJsReady(&#x27;produk/home_bottom&#x27;,$data);
+                      $this-&#x3E;loadLayout(&#x27;col&#x27;,$data);
+                      $this-&#x3E;render();
+                    }
+                  }
+                </highlight-code>
+              </div>
+            </div>
+
+            <p id="intro">
+              Seme Framework merupakan kumpulan kode yang dibuat menggunakan PHP untuk pembuatan aplikasi berbasis web skala kecil sampai dengan skala menengah tanpa harus <em>ngoding</em> dari nol.
+              Framework ini <code>cukup ringan</code> untuk digunakan, baik ketika proses pembuatan (<code>development phase</code>) aplikasi maupun sampai dengan aplikasi tersebut jadi digunakan (<code>production phase</code>).
+              Seme Framework masih mempertahankan cara tradisional (<code>manual</code>), yang cocok untuk programmer yang baru mulai belajar maupun <code>programmer veteran</code>.
+            </p>
+
+            <h2>Daftar Isi</h2>
+            <ul>
+              <li>
+                <NuxtLink to="#">Seme Framework</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="#intro">Tentang Seme Framework</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="#indikator">Indikator</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="#alasan">Alasan Penggunaan Seme Framework</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="#cara_kerja">Cara Kerja Seme Framework</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="#qna">Pertanyaan &amp; Jawaban</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="#cara_baca">Cara Pembacaan Dokumentasi Ini</NuxtLink>
+              </li>
+            </ul>
+
+            <h2 id="indikator">Indikator</h2>
+            <p>
+              Berikut ini beberapa indikator proses pengembangan Seme Framework:
+            </p>
             <div class="badges">
-              <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/version-4.0.0-ed6f75' alt="version"></amp-img>
+              <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/version-4.0.2-ed6f75' alt="version"></amp-img>
               <amp-img layout="fixed" width="90px" height="20px" src='https://travis-ci.com/drosanda/seme-framework.svg?branch=master' alt="build status"></amp-img>
               <amp-img layout="fixed" width="53px" height="20px" src='https://img.shields.io/badge/lang-id-e9bd2e' alt="version"></amp-img>
               <amp-img layout="fixed" width="113px" height="20px" src="https://codecov.io/gh/drosanda/seme-framework/branch/master/graph/badge.svg?token=3WRW0SNO41" alt="code coverage"></amp-img>
             </div>
 
-            <p>Ini adalah dokumentasi resmi untuk Seme Framework, PHP MVC Framework untuk membuat aplikasi berbasis web yang cepat. Cocok untuk membuat aplikasi yang kecil sampai menengah.</p>
-            <p>Pada versi pertama Seme Framework digunakan untuk membangun API (Middleware) untuk Aplikasi lain seperti aplikasi berbasis android, iOS, dll.</p>
-            <p>Sekarang ini Seme Framework sudah dapat digunakan untuk membuat aplikasi berbasis web seutuhnya.</p>
+            <h2 id="alasan">Kenapa harus Seme Framework?</h2>
+            <p>
+              Berikut ini adalah beberapa alasan kenapa harus menggunakan Seme Framework:
+            </p>
+            <ol>
+              <li>
+                Seme Framework dibuat dengan bahasa pemrograman PHP, tidak perlu inisialiasi tipe data, dan masih satu rumpun dengan <b>bahasa pemrograman C</b>. Baca selengkapnya tentang <NuxtLink to="/id/tutorial/basic-php">Dasar PHP <i class="fa fa-window-restore"></i></NuxtLink>.
+              </li>
+              <li>
+                Seme Framework sangatlah ringan karena hanya dibuat kode dasar untuk kelas abstraknya dan diuji setiap pengembangannya dengan <code>CacheGrind</code> dari extensi XDEBUG di PHP.
+              </li>
+              <li>
+                Seme Framework menggunakan konsep <b>Model View Controller (MVC)</b>, sehingga pembuatan kode bisa lebih terstruktur. Baca selengkapnya tentang <NuxtLink to="/id/tutorial/basic-mvc">MVC <i class="fa fa-window-restore"></i></NuxtLink>.
+              </li>
+              <li>
+                Seme Framework memiliki <b>perutean otomatis</b>, sehingga pembuatan halaman dapat dibuat dengan cepat langsung dengan rute URL-nya. Baca selengkapnya tentang <NuxtLink to="/id/uri_routing">Perutean URI <i class="fa fa-window-restore"></i></NuxtLink>.
+              </li>
+              <li>
+                Seme Framework mendukung pembuatan <b>tema tampilan</b> dimana tampilan yang sama bisa digunakan kembali tanpa harus melakukan pengkodean ulang. Baca selengkapnya tentang <NuxtLink to="/id/view/theme">Tema Tampilan <i class="fa fa-window-restore"></i></NuxtLink>.
+              </li>
+              <li>
+                Seme Framework memiliki kelas <b>database query builder</b> untuk penyusunan SQL sehingga tidak perlu lagi khawatir ada salah penyusunan kode SQL ketika akan berinteraksi dengan database. Baca selengkapnya tentang <NuxtLink to="/id/model">Kelas Model <i class="fa fa-window-restore"></i></NuxtLink>.
+              </li>
+              <li>
+                Seme Framework juga bisa <b>diintegrasikan</b> / dihubungkan dengan modul atau <code>library</code> tambahan yang sama-sama menggunakan bahasa pemrograman PHP. Baca selengkapnya tentang <NuxtLink to="/id/library">Library <i class="fa fa-window-restore"></i></NuxtLink>.
+              </li>
+              <li>
+                Seme Framework memiliki beberapa panduan tutorial dan dokumentasi untuk penggunaannya. Baca selengkapnya tentang <NuxtLink to="/id/tutorial">Tutorial <i class="fa fa-window-restore"></i></NuxtLink>.
+              </li>
+            </ol>
 
-            <amp-img
-              alt="Seme Framework code example"
-              :src="semecarbon"
-              layout="responsive"
-              height="1480"
-              width="1308"
-            >
-            </amp-img>
 
+            <h2 id="link_cepat">Link Cepat</h2>
+            <p>
+              Berikut ini adalah daftar link cepat Seme Framework:
+            </p>
             <div class="buttons is-centered">
               <nuxt-link class="btn" to="/id/downloads">
-                Download
+                Cara Download &amp; Install
               </nuxt-link>
               <nuxt-link class="btn" to="/id/tutorial">
                 Mulai percobaan
               </nuxt-link>
               <nuxt-link class="btn" to="/issue">
-                <i>Troubleshoot</i>
+                <i>Troubleshoot (b. inggris)</i>
               </nuxt-link>
             </div>
 
-            <h2>Kenapa harus Seme Framework?</h2>
-            <p>Seme Framework cocok untuk programmer PHP yang mengerti cara koding secara <code>Manual</code>.</p>
-            <p>Tidak seperti framework jaman now yang serba otomatis, Seme Framework masih mempertahankan cara tradisional dalam hal membuat aplikasi berbasis web secara mendasar.</p>
-            <p><i>Kenapa harus membutuhkan banyak library, sementara hanya ingin membuat aplikasi sederhana?</i> Seme Framework merupakan PHP MVC dengan kode minimalis hadir sebagai solusi untuk pertanyaan tersebut.</p>
-
-            <h2>Cara Kerja Seme Framework</h2>
+            <h2 id="cara_kerja">Cara Kerja Seme Framework</h2>
             <p>
               Seme Framework berfungsi sebagai Kerangka Aplikasi Web untuk kode sumber Anda yang menjembatani antara Peramban Web dan Sistem Basis Data.
               Seme Framework menggunakan konsep <code>Model</code> <code>View</code> <code>Controller</code> untuk membuat kode yang rapi dan proses pengkodean yang teratur.
               Seme Framework menggunakan <a href="https://www.php.net" target="_blank">PHP <i class="fa fa-external-link"></i></a> sebagai bahasa pemrograman utamanya.
             </p>
             <amp-img
-              alt="How seme framework work?"
-              :src="hsfwork"
-              layout="responsive"
-              height="826"
-              width="1222"
+            alt="How seme framework work?"
+            :src="hsfwork"
+            layout="responsive"
+            height="826"
+            width="1222"
             >
-            </amp-img>
+          </amp-img>
 
-            <h2>Fitur Utama</h2>
-            <p>Berikut ini adalah 3 poin fitur utama Seme Framework:</p>
-            <hr>
-            <div class="columns">
-              <div class="column"><i>Kecil tapi tidak terlalu kecil</i>. Seme Framework tumbuh dalam industri UKM yang membutuhkan berbagai kebutuhan yang dapat menekan harga hosting (server).</div>
-              <div class="column"><i>Tidak terlalu serius</i>. Seme Framework membebaskan programmer untuk bermain dan bereksplorasi secara bebas dengan menggunakan logika yang ada. Seme Framework gratis dan hampir tidak ada batasan dalam pengembangannya.</div>
-              <div class="column"><i>Ramah Admin</i>. Seme Framework sangat ramah dalam pembuatan halaman khusus untuk admin, karena memiliki rute khusus tanpa harus merubah kode MVC-nya.</div>
-              <div class="column"><i>Tampilan Tematik</i>. Seme Framework memiliki fitur yang dapat mengisi langsung kedalam layout tampilan. Programmer bebas untuk mengatur gaya maupun tema tanpa merubah tema yang ada.</div>
-            </div>
-            <hr>
-
-            <h2>Sekilas tentang MVC</h2>
-            <p><b>MVC</b> atau <b>Model View Controller</b> merupakan suatu metode pembangunan perangkat lunak yang memisahkan logika aplikasi menjadi beberapa bagian yang dasarkan pada fungsi suatu bagian tertentu.</p>
-            <h3>Apa itu Model?</h3>
-            <p><b>Model</b> merupakan bagian kode khusus yang berfungsi untuk melakukan komunikasi dari kode yang kita bangun terhadap database. Adapun isi dari model ini biasanya, untuk menarik data, menyimpan data, dan menghapus data dari database.</p>
-            <h3>Apa itu View?</h3>
-            <p><b>View</b> merupakan kumpulan kode yang khusus digunakan untuk mengeluarkan tampilan. Biasanya pada view ini berisi HTML, JavaScript, CSS, dan sedikit PHP yang hanya digunakan untuk mengeluarkan datanya saja.</p>
-            <h3>Apa itu Controller?</h3>
-            <p><b>Controller</b> merupakan kode yang berisi sebagai jembatan dari <b>Model &amp; View</b>. Pada bagian ini biasanya berisikan kode PHP beserta logika didalamnya. Controller juga bisa diartikan sebagai identitas dari <i>HTTP Request</i> untuk sebuah halaman web.
-            <br>
-            <p>Dengan pemecahan kode berdasarkan metode MVC, diharapkan pembangunan aplikasi dapat lebih jelas dan sederhana sehingga lebih mudah untuk dikembangkan dan dikelola dari sisi kode maupun sisi alur proses.</p>
-            <hr>
-            <amp-img layout="responsive" width="837px" height="458px" src="https://nyingspot.b-cdn.net/wp-content/uploads/2016/11/konsep-mvc-nyingspot.com_.png"></amp-img>
-            <hr>
-
-            <h2>Lisensi</h2>
+            <h2 id="lisensi">Lisensi</h2>
             <p>Seme Framework menggunakan lisensi MIT versi 2.0.</p>
 
             <hr>
 
-            <h2>Pertanyaan dan Jawaban</h2>
+            <h2 id="qna">Pertanyaan dan Jawaban</h2>
             <p>
               Jika bingung, ada bug, atau <i>request</i> fitur jang sungkan untuk menghubungi saya melalui <a href="https://instagram.com/drosanda/" target="_blank">instagram <i class="fa fa-external-link"></i></a>, <a href="https://facebook.com/drs11/" target="_blank">facebook <i class="fa fa-external-link"></i></a>,
               atau buat isu permasalahan baru melalui <a href="https://github.com/drosanda/semedocs/issues" target="_blank">github <i class="fa fa-external-link"></i></a>.
@@ -142,48 +226,48 @@
               Pada beberapa dokumentasi Seme Framework, akan disinggung terkait jalur sistem file atau <code><em>system file path</em></code>.
               <em>System file path</em> atau sering disingkat <code><em>path</em></code> saja, merupakan notasi untuk menyebutkan lokasi <b>file</b> atau <b>direktori</b> / <b>folder</b> pada sebuah sistem operasi komputer.
               Notasi path ini bisa berbeda tergantung sistem operasi yang digunakan.</p>
-            <p>
-              Untuk Microsoft Windows, path dimulai dari Drive, kemudian titik dua :, kemudian diikuti nama file atau direktori yang dipisahkan dengan garis miring terbalik (<code>\</code>).
-              Sementara path untuk sistem operasi *nix, dimulai dari garis miring kemudian diikuti nama file atau direktori yang dipisahkan dengan garis miring biasa (<code>/</code>).
-              <ol>
-                <li>
-                  Contoh Windows: <code>D:\XAMPP\htdocs\index.php</code>.
-                </li>
-                <li>
-                  Contoh *Nix: <code>/Applications/XAMPP/htdocs/index.php</code>.
-                </li>
-              </ol>
-            </p>
+              <p>
+                Untuk Microsoft Windows, path dimulai dari Drive, kemudian titik dua :, kemudian diikuti nama file atau direktori yang dipisahkan dengan garis miring terbalik (<code>\</code>).
+                Sementara path untuk sistem operasi *nix, dimulai dari garis miring kemudian diikuti nama file atau direktori yang dipisahkan dengan garis miring biasa (<code>/</code>).
+                <ol>
+                  <li>
+                    Contoh Windows: <code>D:\XAMPP\htdocs\index.php</code>.
+                  </li>
+                  <li>
+                    Contoh *Nix: <code>/Applications/XAMPP/htdocs/index.php</code>.
+                  </li>
+                </ol>
+              </p>
 
-            <p>
-              Pada dokumentasi ini, yang dipakai adalah konsep *NIX / urutan ke-2.
-            </p>
-            <hr>
+              <p>
+                Pada dokumentasi ini, yang dipakai adalah konsep *NIX / urutan ke-2.
+              </p>
+              <hr>
 
+            </div>
           </div>
         </div>
-      </div>
 
 
-      <div class="nav-bottom">
-        <div class="nav-bottom-left">
-          <nuxt-link to="/version" class="btn">
-          <i class="fa fa-chevron-left"></i>
-            Versions
-          </nuxt-link>
+        <div class="nav-bottom">
+          <div class="nav-bottom-left">
+            <nuxt-link to="/version" class="btn">
+              <i class="fa fa-chevron-left"></i>
+              Versions
+            </nuxt-link>
+          </div>
+          <div class="nav-bottom-right">
+            <nuxt-link class="btn" to="/id/requirements">
+              Persyaratan
+              <i class="fa fa-chevron-right"></i>
+            </nuxt-link>
+          </div>
         </div>
-        <div class="nav-bottom-right">
-          <nuxt-link class="btn" to="/id/requirements">
-            Persyaratan
-            <i class="fa fa-chevron-right"></i>
-          </nuxt-link>
-        </div>
-      </div>
 
+      </div>
     </div>
-  </div>
-</template>
-<script>
+  </template>
+  <script>
   export default {
     layout: 'id',
     data (){
@@ -257,9 +341,9 @@
           "image": [
             (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
           ],
-          "dateCreated": "2021-07-31T00:19:00+07:00",
-          "datePublished": "2021-07-31T00:19:00+07:00",
-          "dateModified": "2021-07-31T00:19:00+07:00",
+          "dateCreated": "2021-07-21T23:21:00+07:00",
+          "datePublished": "2021-07-21T23:21:00+07:00",
+          "dateModified": "2021-07-21T23:21:00+07:00",
           "author": {
             "@type": "Person",
             "gender": "Male",
@@ -289,4 +373,4 @@
       ];
     }
   }
-</script>
+  </script>
