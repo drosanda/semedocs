@@ -12,28 +12,7 @@
           <div class="content">
             <h1 class="is-size-1"><span> Seme Framework </span></h1>
             <h2 class="tagline">Web Framework for Veteran PHP Programmer</h2>
-            <p>
-              This is official documentation for Seme Framework, the PHP MVC Framework for creating small and medium app that needed for fast delivery.
-              This framework suitable for Programmer that only know about <code>Manual way</code> of code.
-              Not like this time, everything build up automatically through console.
-              Seme Framework has taken different way of code, <i>If you want build small app, why we need lots of library</i>.
-            </p>
-            <hr>
-            <div class="buttons is-centered">
-              <nuxt-link to="/4.0/downloads" class="btn">
-                Download 4.0
-              </nuxt-link>
-              <nuxt-link to="/4.0/tutorial" class="btn">
-                Getting Started 4.0
-              </nuxt-link>
-              <nuxt-link to="/issue" class="btn">
-                Troubleshoot
-              </nuxt-link>
-              <nuxt-link to="/id" class="btn">
-                Bahasa version
-              </nuxt-link>
-            </div>
-            <hr>
+
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -89,13 +68,99 @@
                 </highlight-code>
               </div>
             </div>
-            <hr>
+            <p id="abstract">
+             Seme Framework are bunch of code made from PHP that suitable for creating small to medium scale web based applications wihtout starting code from the scratch.
+             This framework is <code>lightweight</code> to be used, both during the <code>development phase</code> until the application in <code>production phase</code>.
+             Seme Framework still retains the traditional method (<code>manual way of code</code>), which is suitable for both newbie programmers and <code>veteran programmers</code>.
+           </p>
 
-            <h2>How Seme Framework Work?</h2>
+           <h2>Table of Contents</h2>
+            <ul>
+              <li>
+                <NuxtLink to="#">Seme Framework</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="#abstract">Abstract</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="#ql">Quick Links</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="#kf">Key Feature</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="#how_work">How the Seme Framework Works</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="#indicators">Indicators</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="#license">License</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="#qna">Questions &amp; Answer</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="#ln">Latest News</NuxtLink>
+              </li>
+            </ul>
+
+            <h2 id="ql">Quick Links</h2>
             <p>
-              Seme Framework working as Web Application Framework for your source code that bridging between the Web Browser and Database System.
-              Seme Framework using <code>Model</code> <code>View</code> <code>Controller</code> concept for providing clean code and better programming process.
-              Seme Framework using <a href="https://www.php.net" target="_blank">PHP <i class="fa fa-external-link"></i></a> as main programming language.
+              Here is some quick links:
+            </p>
+             <div class="buttons is-centered">
+               <nuxt-link to="/4.0/downloads" class="btn">
+                 Download &amp; Install 4.0
+               </nuxt-link>
+               <nuxt-link to="/4.0/tutorial" class="btn">
+                 Getting Started 4.0
+               </nuxt-link>
+               <nuxt-link to="/issue" class="btn">
+                 Issue
+               </nuxt-link>
+               <nuxt-link to="/id" class="btn">
+                 Bahasa version
+               </nuxt-link>
+             </div>
+
+             <h2 id="kf">Key Feature</h2>
+             <p>
+               Here are some reasons why you should use the Seme Framework:
+             </p>
+             <ol>
+               <li>
+                 Seme Framework is made with the PHP programming language, does not need to initialize data types, and is still in the same family as the <b>C programming language</b>. Read more about <NuxtLink to="/en/tutorial/basic-php">PHP basics <i class="fa fa-window-restore"></i></NuxtLink>.
+               </li>
+               <li>
+                 The Seme Framework is very lightweight because it only builds the basic code for its abstract classes and is tested each development with <code>CacheGrind</code> from the XDEBUG extension in PHP.
+               </li>
+               <li>
+                 Seme Framework uses the <b>Model View Controller (MVC)</b> concept, so that code generation can be more structured. Read more about <NuxtLink to="/en/tutorial/basic-mvc">MVC <i class="fa fa-window-restore"></i></NuxtLink>.
+               </li>
+               <li>
+                 The Seme Framework has <b>automatic routing</b>, so page creation can be quickly generated directly with the URL route. Read more about <NuxtLink to="/en/uri_routing">URI routing <i class="fa fa-window-restore"></i></NuxtLink>.
+               </li>
+               <li>
+                 The Seme Framework supports creating <b>display themes</b> where the same views can be reused without having to re-code them. Read more about <NuxtLink to="/en/view/theme">Display Themes <i class="fa fa-window-restore"></i></NuxtLink>.
+               </li>
+               <li>
+                 Seme Framework has a <b>database query builder</b> class for SQL preparation, so you don't have to worry about SQL code incorrectly when interacting with the database. Read more about <NuxtLink to="/id/model">Model Class <i class="fa fa-window-restore"></i></NuxtLink>.
+               </li>
+               <li>
+                 Seme Framework can also be <b>integrated</b> / linked with additional modules or <code>libraries</code> that both use the PHP programming language. Read more about <NuxtLink to="/en/library">Library <i class="fa fa-window-restore"></i></NuxtLink>.
+               </li>
+               <li>
+                 The Seme Framework has several tutorial guides and documentation for its use. Read more about <NuxtLink to="/en/tutorial">Tutorial <i class="fa fa-window-restore"></i></NuxtLink>.
+               </li>
+             </ol>
+
+            <h2 id="how_work">How Seme Framework Work?</h2>
+            <p>
+              Seme Framework serves as a Web Application Framework for your source code that bridges between the Web Browser and the Database System.
+              Seme Framework has provided ready-to-use functions and methods for creating web-based applications.
+              Database System with Seme Framework communicate using <code>Structured Query Language (SQL)</code>, but with <b>query builder</b> for simple <code>SQL</code> has been handle by it.
+              So, the programmer simply to continue by extending code from Seme Framework. And then can focused to their logic implementation and solution result through web browser.
             </p>
             <amp-img
             alt="How seme framework work?"
@@ -106,22 +171,8 @@
             >
           </amp-img>
 
-          <h2>Key Feature</h2>
-          <p>
-            At first version of Seme Framework used for building API (Middle Ware) for another Application such as android, iOS, etc.
-            And now as increasing of requirement, Seme Framework has expand the limit for creating Small and Medium App.
-            Here is the key feature of Seme Framework:
-          </p>
-          <hr>
-          <div class="columns">
-            <div class="column"><i>Small but not Tiny</i>. Seme Framework growth on SME Industries with many requirement but can suppress the hosting price.</div>
-            <div class="column"><i>Not Too serious</i>. You can played with Seme Framework at your own logic. Its free and almost has no restriction to developing your solution.</div>
-            <div class="column"><i>Admin Friendly</i>. Seme Framework has re-routing feature for admin page, without refactoring the MVC.</div>
-            <div class="column"><i>Theme Engine</i>. Seme Framework has feature who can <i>PUSH</i> the content inside the layout view. Also support theming engine, if you want change the Style, you just clone the original one and modified safely.</div>
-          </div>
-          <hr>
-          <h2>Status</h2>
-          <p>Here is the badges of project status:</p>
+          <h2 id="indicators">Indicator</h2>
+          <p>Here is the badges (indicator) of project status:</p>
           <div class="badges">
             <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/version-4.0.0-ed6f75' alt="version"></amp-img>
             <amp-img layout="fixed" width="90px" height="20px" src='https://travis-ci.com/drosanda/seme-framework.svg?branch=master' alt="build status"></amp-img>
@@ -144,13 +195,14 @@
             </ul>
           </p>
           <hr>
-          <h2>License</h2>
+          <h2 id="license">License</h2>
           <p>Seme Framework licensed under MIT version 2.0.</p>
-          <h2>Question and Answer</h2>
+
+          <h2 id="qna">Question and Answer</h2>
           <p>Feel free to ask me on my <a href="https://instagram.com/drosanda/" target="_blank">instagram</a>, <a href="https://facebook.com/drs11/" target="_blank">facebook</a>, or open an issue on <a href="https://github.com/drosanda/semedocs/issues" target="_blank">github</a>.</p>
 
           <hr>
-          <h2>Latest News</h2>
+          <h2 id="ln">Latest News</h2>
           <p>
             Here is the latest news and updates from Seme Framework creator.
           </p>
@@ -246,7 +298,7 @@ export default {
         ],
         "dateCreated": "2021-08-20T22:20:00+07:00",
         "datePublished": "2021-08-20T22:20:00+07:00",
-        "dateModified": "2021-08-20T22:20:00+07:00",
+        "dateModified": "2021-08-22T00:40:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
