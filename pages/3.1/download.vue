@@ -10,25 +10,25 @@
       </nav>
       <div class="columns">
         <div class="column">
-      <div class="content">
-        <h1 class="">Download</h1>
-        <p>
-          Here is the list download of Seme Framework version 3.1.x:
-        </p>
-        <ul>
-          <li><a href="https://github.com/drosanda/seme-framework-v3/archive/refs/heads/3.1.5.zip" target="_blank">Seme Framework version 3.1.5 (latest) <i class="fa fa-external-link"></i></a></li>
-        </ul>
-				<h2>Download Example</h2>
-				<p>
-          Here is the list of Seme Framework working example(s):
-        </p>
-        <ul>
-          <li>
-            <a href="https://github.com/drosanda/seme-framework-v3-bootstrap3" target="_blank">Seme Framework 3.1 with bootstrap 3 layout <i class="fa fa-external-link"></i></a>.
-          </li>
-        </ul>
-      </div>
-    </div>
+          <div class="content">
+            <h1 class="">Download</h1>
+            <p>
+              Here is the list download of Seme Framework version 3.1.x:
+            </p>
+            <ul>
+              <li><a href="https://github.com/drosanda/seme-framework-v3/archive/refs/heads/3.1.5.zip" target="_blank">Seme Framework version 3.1.5 (latest) <i class="fa fa-external-link"></i></a></li>
+            </ul>
+            <h2>Download Example</h2>
+            <p>
+              Here is the list of Seme Framework working example(s):
+            </p>
+            <ul>
+              <li>
+                <a href="https://github.com/drosanda/seme-framework-v3-bootstrap3" target="_blank">Seme Framework 3.1 with bootstrap 3 layout <i class="fa fa-external-link"></i></a>.
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -12,13 +12,21 @@
         <div class="column">
           <div class="content">
             <h1 class="">Download</h1>
-            <p>All Seme Framework  of them are available on github, here is the link:</p>
+            <p>
+              Here is the list download of Seme Framework version 3.2.x:
+            </p>
             <ul>
-              <li><a href="https://github.com/drosanda/seme-framework-v3/releases/tag/v3.2.5" target="_blank">Seme Framework v3.2 <i class="fa fa-external-link"></i></a></li>
+              <li><a href="https://github.com/drosanda/seme-framework-v3/archive/refs/heads/master.zip" target="_blank">Seme Framework version 3.2.5 (latest) <i class="fa fa-external-link"></i></a></li>
             </ul>
-            <h2>Download example</h2>
-            <p>Download <a href="https://github.com/drosanda/seme-framework-v3-bootstrap3" target="_blank">Seme Framework with bootstrap 3 layout</a>.</p>
-            <p>Download <a href="https://github.com/drosanda/risaikuru" target="_blank">Seme Framework with working project</a>.</p>
+            <h2>Download Example</h2>
+            <p>
+              Here is the list of Seme Framework working example(s):
+            </p>
+            <ul>
+              <li>
+                <a href="https://github.com/drosanda/seme-framework-v3-bootstrap3" target="_blank">Seme Framework 3.2 with bootstrap 3 layout <i class="fa fa-external-link"></i></a>.
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -33,7 +41,7 @@ export default {
       name: 'Seme Framework v3.2',
       suffix: ' - Seme Framework 3.2.5',
       title: 'Download and Install',
-      description: 'Learn more about how to download and install Seme Framework version 3.2.5',
+      description: 'Download latest version of Seme Framework 3.2.x',
       fr: require('~/assets/img/first-run.png'),
       breadcrumbs: [
         {
