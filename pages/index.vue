@@ -174,7 +174,7 @@
           <h2 id="indicators">Indicator</h2>
           <p>Here is the badges (indicator) of project status:</p>
           <div class="badges">
-            <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/version-4.0.0-ed6f75' alt="version"></amp-img>
+            <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/version-4.0.2-ed6f75' alt="version"></amp-img>
             <amp-img layout="fixed" width="90px" height="20px" src='https://travis-ci.com/drosanda/seme-framework.svg?branch=master' alt="build status"></amp-img>
             <amp-img layout="fixed" width="56px" height="20px" src='https://img.shields.io/badge/lang-en-e9bd2e' alt="version"></amp-img>
             <amp-img layout="fixed" width="113px" height="20px" src="https://codecov.io/gh/drosanda/seme-framework/branch/master/graph/badge.svg?token=3WRW0SNO41" alt="Code coverage"></amp-img>

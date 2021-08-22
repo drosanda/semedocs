@@ -258,7 +258,7 @@
             <div class="maccontent">
               <highlight-code lang="php">
                 Ilustrasi
-                header.php <----- navbar.php
+                header.php &#x3C;----- navbar.php
               </highlight-code>
             </div>
           </div>
@@ -299,13 +299,13 @@
 
     <div class="nav-bottom">
       <div class="nav-bottom-left">
-        <nuxt-link to="/id/constants/" class="btn">
+        <nuxt-link to="/id/constants" class="btn">
           <i class="fa fa-chevron-left"></i>
           Konstanta
         </nuxt-link>
       </div>
       <div class="nav-bottom-right">
-        <nuxt-link to="/id/model/" class="btn">
+        <nuxt-link to="/id/model" class="btn">
           Model
           <i class="fa fa-chevron-right"></i>
         </nuxt-link>
@@ -323,7 +323,7 @@ export default {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Fungsi dan Variabel Global',
-      description: 'Pelajari selengkapnya tentang Fungsi dan Variabel Global Seme Framework versi 4.x',
+      description: 'Pelajari selengkapnya tentang Fungsi dan Variabel Global Seme Framework versi 4.0.x',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

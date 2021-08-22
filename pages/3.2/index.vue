@@ -45,13 +45,13 @@
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/3.1/" class="btn">
+          <nuxt-link to="/3.1" class="btn">
             <i class="fa fa-chevron-left"></i>
             Version: 3.1.x
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/3.3/" class="btn">
+          <nuxt-link to="/3.3" class="btn">
             Version: 3.3.x
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
