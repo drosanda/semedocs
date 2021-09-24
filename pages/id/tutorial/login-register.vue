@@ -63,7 +63,7 @@ CREATE TABLE &#x60;b_user&#x60; (
   &#x60;cdate&#x60; date DEFAULT NULL,
   &#x60;is_active&#x60; int(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-SET FOREIGN_KEY_CHECKS=0;
+SET FOREIGN_KEY_CHECKS=1;
                 </highlight-code>
               </div>
             </div>
