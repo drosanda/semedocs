@@ -169,13 +169,13 @@
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/id/tutorial/" class="btn">
+          <nuxt-link to="/id/tutorial" class="btn">
             <i class="fa fa-chevron-left"></i>
             Tutorial: Notfound Page
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/id/tutorial/login-register/" class="btn">
+          <nuxt-link to="/id/tutorial/login-register" class="btn">
             Tutorial: Login Register
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>

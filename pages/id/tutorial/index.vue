@@ -36,6 +36,7 @@
               <li><NuxtLink to="/id/tutorial/introduction/">Pendahuluan</NuxtLink>, yang memberi Anda gambaran umum tentang apa yang diharapkan.</li>
               <li><NuxtLink to="/id/tutorial/notfound-page/">Halaman Notfound</NuxtLink>, pelajari tentang cara pembuatan halaman notfound.</li>
               <li><NuxtLink to="/id/tutorial/navigation/">Navigation Bar</NuxtLink>, pelajari tentang cara pembuatan view component Navigation Bar.</li>
+              <li><NuxtLink to="/id/tutorial/login-register/">Login &amp; Register</NuxtLink>, pelajari tentang cara pembuatan halaman login dan register beserta prosesnya.</li>
               <li><NuxtLink to="/id/tutorial/get-data/">Mendapatkan Data</NuxtLink>, pelajari cara mendapatkan data dari database melalui MVC di Seme Framework.</li>
               <li><NuxtLink to="/id/tutorial/basic-api/">Building API</NuxtLink>, pelajari lebih banyak tentang database, controller, dan model.</li>
             </ul>
@@ -139,9 +140,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-08-11T19:52:38+07:00",
-        "datePublished": "2021-08-11T19:52:38+07:00",
-        "dateModified": "2021-06-28T08:24:09+07:00",
+        "dateCreated": "2021-09-25T00:24:09+07:00",
+        "datePublished": "2021-09-25T00:24:09+07:00",
+        "dateModified": "2021-09-25T00:24:09+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
