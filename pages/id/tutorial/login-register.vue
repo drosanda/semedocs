@@ -890,6 +890,53 @@ class Login extends JI_Controller
               </div>
             </div>
 
+            <h2>Controller untuk logout</h2>
+            <p>
+              Untuk menghapus session yang digunakan setelah login berhasil, kita perlu fungsi logout untuk menghapus session tersebut.
+              Caranya adalah buat file baru di <code>app/controller/logout.php</code> kemudian <i>copy paste</i> kode dibawah ini dan simpan perubahannya.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  &#x3C;?php
+                  class Logout extends SENE_Controller
+                  {
+                      public function __construct()
+                      {
+                          parent::__construct();
+                      }
+                      public function index()
+                      {
+                          $data = array();
+                          $sess = $this-&#x3E;getKey();
+                          if (!is_object($sess)) {
+                              $sess = new stdClass();
+                          }
+                          $sess-&#x3E;user = new stdClass();
+                          $this-&#x3E;setKey($sess);
+                          redir(base_url(&#x22;login&#x22;), 0);
+                      }
+                  }
+                </highlight-code>
+              </div>
+            </div>
+
             <h2>Selesai...!</h2>
             <p>
               Untuk mencoba hasil dari tutorial ini, buka alamat <code>http://localhost/seme_framework</code> pada browser.
