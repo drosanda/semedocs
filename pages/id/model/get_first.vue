@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/model">Model</NuxtLink></li>
-          <li class="unavailable">Get First Method</li>
+          <li class="unavailable">Metode Get First</li>
         </ul>
       </nav>
       <div class="columns">
@@ -53,8 +53,8 @@
             <h4>$result_type</h4>
             <p>
               Nilai dari parameter <code>$result_type</code> untuk menentukan hasil keluaran dari metode get.
-              Isi dengan <code>string &#x22;array&#x22;</code> untuk mengembalikan nilai hasil dengan tipe data <i>array of array</i>.
-              Sementara isi nilai lainnya untuk mengembalikan nilai dengan tipe data <i>array of object</i>.
+              Isi dengan <code>string &#x22;array&#x22;</code> untuk mengembalikan nilai hasil dengan tipe data <i>array</i>.
+              Sementara isi nilai lainnya untuk mengembalikan nilai dengan tipe data <i>object</i>.
             </p>
             <h4>$is_debug</h4>
             <p>
@@ -232,9 +232,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-08-01T17:03:00+07:00",
-        "datePublished": "2021-08-01T17:03:00+07:00",
-        "dateModified": "2021-08-01T17:03:00+07:00",
+        "dateCreated": "2021-09-25T17:03:00+07:00",
+        "datePublished": "2021-09-25T17:03:00+07:00",
+        "dateModified": "2021-09-25T17:03:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
