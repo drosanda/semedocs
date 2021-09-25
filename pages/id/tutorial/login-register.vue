@@ -49,20 +49,23 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="sql">
-                  SET FOREIGN_KEY_CHECKS=0;
+SET FOREIGN_KEY_CHECKS=0;
 SET SQL_MODE = &#x22;NO_AUTO_VALUE_ON_ZERO&#x22;;
 SET time_zone = &#x22;+00:00&#x22;;
 
 DROP TABLE IF EXISTS &#x60;b_user&#x60;;
 CREATE TABLE &#x60;b_user&#x60; (
-  &#x60;id&#x60; int(6) UNSIGNED NOT NULL,
+  &#x60;id&#x60; int(6) unsigned NOT NULL AUTO_INCREMENT,
   &#x60;email&#x60; varchar(255) DEFAULT NULL,
   &#x60;password&#x60; varchar(255) NOT NULL,
   &#x60;nama&#x60; varchar(78) DEFAULT NULL,
   &#x60;alamat&#x60; varchar(78) DEFAULT NULL,
-  &#x60;cdate&#x60; date DEFAULT NULL,
-  &#x60;is_active&#x60; int(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  &#x60;cdate&#x60; datetime DEFAULT NULL,
+  &#x60;foto&#x60; varchar(255) DEFAULT NULL,
+  &#x60;is_active&#x60; int(1) unsigned DEFAULT 1,
+  PRIMARY KEY (&#x60;id&#x60;),
+  KEY &#x60;email&#x60; (&#x60;email&#x60;)
+) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=utf8mb4;
 SET FOREIGN_KEY_CHECKS=1;
                 </highlight-code>
               </div>
@@ -236,7 +239,7 @@ class JI_Controller extends SENE_Controller
                   /****************************/
                   $core_prefix = &#x27;ji_&#x27;;
                   $core_controller = &#x27;controller&#x27;;
-                  $core_model = &#x27;model&#x27;;
+                  $core_model = &#x27;&#x27;;
 
                   ...
                 </highlight-code>
@@ -997,7 +1000,7 @@ export default {
       ],
       "dateCreated": "2021-09-24T22:53:01+07:00",
       "datePublished": "2021-09-24T22:53:01+07:00",
-      "dateModified": "2021-09-24T22:53:01+07:00",
+      "dateModified": "2021-09-25T22:53:01+07:00",
       "author": {
         "@type": "Person",
         "gender": "Male",
