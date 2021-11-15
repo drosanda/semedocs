@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class="unavailable">4.0.2</li>
+          <li class="unavailable">4.0.3</li>
         </ul>
       </nav>
 
@@ -13,13 +13,13 @@
           <div class="content">
             <h1 class="is-size-1">Seme Framework <span>4</span></h1>
             <div class="badges">
-              <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/version-4.0.2-ed6f75' alt="version"></amp-img>
+              <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/version-4.0.3-ed6f75' alt="version"></amp-img>
               <amp-img layout="fixed" width="90px" height="20px" src='https://travis-ci.com/drosanda/seme-framework.svg?branch=master' alt="build status"></amp-img>
               <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/lang-en-e9bd2e' alt="version"></amp-img>
               <amp-img layout="fixed" width="90px" height="20px" src="https://codecov.io/gh/drosanda/seme-framework/branch/master/graph/badge.svg?token=3WRW0SNO41" alt="code coverage"></amp-img>
             </div>
             <p>
-              In version 4.0.2 Seme Framework has main target is using JSON object for template configuration.
+              In version 4.0.3 Seme Framework has main target is using JSON object for template configuration.
               The first thing on this version is modified the configuration files to single files only.
               And then we have to optimizing the codes and the memory used by using XDebug and qcachegrind for viewing memory used.
             </p>

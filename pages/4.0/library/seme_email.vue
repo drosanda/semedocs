@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0">4.0.2</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0">4.0.3</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0/library/">Library</NuxtLink></li>
           <li class="unavailable">Seme Email</li>
         </ul>
@@ -178,10 +178,10 @@ export default {
   layout: 'v4.0',
   data() {
     return {
-      name: 'Seme Framework v4.0.2',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Seme_Email Library',
-      description: 'Learn more about Seme_Email Library on Seme Framework version 4.0.2',
+      description: 'Learn more about Seme_Email Library on Seme Framework version 4.0',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

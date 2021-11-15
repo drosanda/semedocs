@@ -33,7 +33,7 @@
         <div class="nav-bottom-left">
           <nuxt-link to="/4.0" class="btn">
           <i class="fa fa-chevron-left"></i>
-            Version 4.0.2
+            Version 4.0.3
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">

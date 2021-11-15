@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
+          <li class=""><NuxtLink to="/id/">4.0.3 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/model">Model</NuxtLink></li>
           <li class="unavailable">Union Create</li>
         </ul>
@@ -164,7 +164,7 @@ export default {
   layout: 'id',
   data (){
     return {
-      name: 'Seme Framework v4.0.2',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Metode Union Create',
       description: 'Pelajari metode union_create dari properti $db pada kelas SENE_Model di Seme Framework 4.',

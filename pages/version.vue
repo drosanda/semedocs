@@ -23,7 +23,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>4.0.2</td>
+                  <td>4.0.3</td>
                   <td>
                     <NuxtLink to="/4.0">English</NuxtLink> <NuxtLink to="/id">Bahasa</NuxtLink>
                   </td>
@@ -84,7 +84,7 @@
         </div>
         <div class="nav-bottom-right">
           <nuxt-link to="/4.0" class="btn">
-            Version 4.0.2
+            Version 4.0.3
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>

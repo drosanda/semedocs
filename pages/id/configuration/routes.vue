@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/">4.0.2 (bahasa)</NuxtLink></li>
+          <li class=""><NuxtLink to="/id/">4.0.3 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/configuration/">Pengaturan</NuxtLink></li>
           <li class="">Rute</li>
         </ul>

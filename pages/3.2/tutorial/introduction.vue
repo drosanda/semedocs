@@ -480,7 +480,7 @@ class Home extends SENE_Controller
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/4.0.0/tutorial/get-data/" class="btn">
+          <nuxt-link to="/4.0/tutorial/get-data/" class="btn">
             Tutorial: Get Data
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>

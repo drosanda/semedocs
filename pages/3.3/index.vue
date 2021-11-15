@@ -20,7 +20,7 @@
             <h2>Change Log</h2>
             <ol class="1">
               <li>Add namespace for model, view, and controller classes</li>
-              <li>Enhance index.php from version 4.0.0</li>
+              <li>Enhance index.php from version 4.0</li>
             </ol>
           </div>
         </div>

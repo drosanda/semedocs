@@ -29,9 +29,9 @@
             </ul>
             <p>The entire tutorial is split up over several pages. Each explaining a small part of the functionality of the Seme Framework. You’ll go through the following pages:</p>
             <ul>
-              <li><NuxtLink to="/4.0.0/tutorial/introduction/">Introduction</NuxtLink>, which gives you an overview of what to expect.</li>
-              <li><NuxtLink to="/4.0.0/tutorial/get-data/">Theme and layout</NuxtLink>, which will teach you the basics of creating view using Seme Framework.</li>
-              <li><NuxtLink to="/4.0.0/tutorial/basic-api/">Building API</NuxtLink>, this will introduce more about database, controller, and model.</li>
+              <li><NuxtLink to="/4.0/tutorial/introduction/">Introduction</NuxtLink>, which gives you an overview of what to expect.</li>
+              <li><NuxtLink to="/4.0/tutorial/get-data/">Theme and layout</NuxtLink>, which will teach you the basics of creating view using Seme Framework.</li>
+              <li><NuxtLink to="/4.0/tutorial/basic-api/">Building API</NuxtLink>, this will introduce more about database, controller, and model.</li>
             </ul>
             <p>Enjoy your exploration of the Seme Framework.</p>
           </div>
@@ -127,7 +127,7 @@ export default {
         ],
         "dateCreated": "2021-08-11T19:52:38+07:00",
         "datePublished": "2021-08-11T19:52:38+07:00",
-        "dateModified": "2021-06-11T14:48:32+07:00",
+        "dateModified": "2021-11-15T14:48:32+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

@@ -4,7 +4,8 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/tutorial.html">Tutorial</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.1">3.1</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.1/tutorial">Tutorial</NuxtLink></li>
           <li class="unavailable">Introduction</li>
         </ul>
       </nav>
@@ -478,7 +479,7 @@ class Home extends SENE_Controller
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/4.0.0/tutorial/get-data/" class="btn">
+          <nuxt-link to="/4.0/tutorial/get-data/" class="btn">
             Tutorial: Get Data
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>

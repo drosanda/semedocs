@@ -21,7 +21,7 @@
 
         <ul>
           <li><nuxt-link to="/">Seme Framework</nuxt-link></li>
-          <li><nuxt-link to="/id">versi 4.0.2 (ID)</nuxt-link></li>
+          <li><nuxt-link to="/id">versi 4.0.3 (ID)</nuxt-link></li>
           <li><nuxt-link to="/id/requirements">Persyaratan</nuxt-link></li>
           <li><nuxt-link to="/id/downloads">Download &amp; Install</nuxt-link></li>
           <li>
@@ -147,7 +147,7 @@
       <div class="container">
         <div class="content has-text-centered">
           <p class="">Copyright &copy; 2014-2021. Dibuat sepenuh cinta di Bandung, Indonesia oleh Daeng Rosanda, S.Kom.</p>
-          <p><small>Terakhir Diperbarui 25 September 2021 | <NuxtLink to="/privacy-policy">Privacy Policy</NuxtLink> | <NuxtLink to="/term-condition">Term &amp; Condition</NuxtLink></small></p>
+          <p><small>Terakhir Diperbarui 15 November 2021 | <NuxtLink to="/privacy-policy">Privacy Policy</NuxtLink> | <NuxtLink to="/term-condition">Term &amp; Condition</NuxtLink></small></p>
         </div>
       </div>
     </footer>
@@ -161,7 +161,7 @@ export default {
   data() {
     return {
       name: 'Seme Framework',
-      version: 'v4.0.0',
+      version: 'v4.0',
       prefix: ' - ',
       title: 'Seme Framework 4 Bahasa Indonesia',
       description: 'Dokumentasi Seme Framework 4 Bahasa Indonesia',

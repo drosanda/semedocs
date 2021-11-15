@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0">4.0.2</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0">4.0.3</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0/tutorial">Tutorial</NuxtLink></li>
           <li class="unavailable">Hello From Model</li>
         </ul>
@@ -121,7 +121,7 @@ export default {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Tutorial: Hello from Model',
-      description: 'Learn more about basic usage of Seme Framework model version 4.0.0 through this documentation.',
+      description: 'Learn more about basic usage of Seme Framework Model for version 4 through this documentation.',
       hwfm: require('~/assets/img/hello-world-from-model.png'),
       breadcrumbs: [
         {

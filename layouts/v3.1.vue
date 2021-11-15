@@ -4,7 +4,7 @@
       <amp-sidebar id="sidebar1" layout="nodisplay" side="left" on="sidebarOpen:focusOnMe.focus">
       <amp-img :src="logo" width="240" height="40" layout="responsive" alt="Seme Framework Logo"></amp-img>
       <div class="badges">
-        <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/version-3.1.0-ed6f75' alt="version"></amp-img>
+        <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/version-3.1.5-ed6f75' alt="version"></amp-img>
         <amp-img layout="fixed" width="90px" height="20px" src='https://travis-ci.com/drosanda/seme-framework.svg?branch=master' alt="build status"></amp-img>
         <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/lang-en-e9bd2e' alt="language"></amp-img>
       </div>
@@ -12,7 +12,7 @@
           <li><nuxt-link to="/">Seme Framework</nuxt-link></li>
           <li><nuxt-link to="/credits">Credits</nuxt-link></li>
           <li>
-            <nuxt-link to="/3.1">Version 3.1.0</nuxt-link>
+            <nuxt-link to="/3.1">Version 3.1.5</nuxt-link>
             <ul>
               <li><nuxt-link to="/3.1/requirements">Requirements</nuxt-link></li>
               <li><nuxt-link to="/3.1/download">Download</nuxt-link></li>
@@ -118,7 +118,7 @@
       <div class="container">
         <div class="content has-text-centered">
           <p class="">Seme Framework v3.1.5 &copy; 2014-2021 . Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
-          <p><small>Last updated on August 8, 2021</small></p>
+          <p><small>Last updated on November 15, 2021</small></p>
         </div>
       </div>
     </footer>

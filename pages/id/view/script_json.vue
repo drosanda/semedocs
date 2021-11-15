@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
+          <li class=""><NuxtLink to="/id/">4.0.3 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/view/">View</NuxtLink></li>
           <li class="unavailable">script json</li>
         </ul>
@@ -178,7 +178,7 @@ export default {
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/id',
-          text: '4.0.0'
+          text: 'ID'
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/controller',

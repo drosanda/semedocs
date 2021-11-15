@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0">4.0.2</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0">4.0.3</NuxtLink></li>
           <li class="unavailable">Global Variables and Functions</li>
         </ul>
       </nav>
@@ -58,10 +58,10 @@ export default {
   layout: 'v4.0',
   data (){
     return {
-      name: 'Seme Framework v4.0.2',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Global Variables and Functions',
-      description: 'Learn more about Global Variables and Functions of Seme Framework version 4.0.2 through this documentation.',
+      description: 'Learn more about Global Variables and Functions of Seme Framework version 4 through this documentation.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0">4.0.2</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0">4.0.3</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0/model">Model</NuxtLink></li>
           <li class="unavailable">Union Flush</li>
         </ul>
@@ -78,7 +78,7 @@ export default {
   layout: 'v4.0',
   data (){
     return {
-      name: 'Seme Framework v4.0.2',
+      name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Union Flush Method',
       description: 'Learn about union_flush method from $db property on SENE_Model class for Seme Framework 4.',

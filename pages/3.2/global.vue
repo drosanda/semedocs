@@ -15,16 +15,16 @@
             <p>Like the other framework, Seme Framework has several global Variables and Functions that you can use for your web app.</p>
 
             <h2 id="base_url">base_url()</h2>
-            <p>This global function return full path url. Please make sure your <code>$base_url</code> are set properly for each <NuxtLink to="/4.0.0/configuration/">configurations</NuxtLink>.</p>
+            <p>This global function return full path url. Please make sure your <code>$base_url</code> are set properly for each <NuxtLink to="/4.0/configuration/">configurations</NuxtLink>.</p>
 
             <h2>base_url_admin()</h2>
-            <p>This global function return full path url for admin secret url. Please make sure your <code>$base_url_admin</code> are set properly for each <NuxtLink to="/4.0.0/configuration/">configurations</NuxtLink>.</p>
+            <p>This global function return full path url for admin secret url. Please make sure your <code>$base_url_admin</code> are set properly for each <NuxtLink to="/4.0/configuration/">configurations</NuxtLink>.</p>
 
             <h2>Controller::debug()</h2>
             <p>This global function will echo pre formatted text for debugging purpose.</p>
 
             <h2>$__forward</h2>
-            <p>This global variable used by view for forwarding variable between <NuxtLink to="/4.0.0/view">view</NuxtLink>.</p>
+            <p>This global variable used by view for forwarding variable between <NuxtLink to="/4.0/view">view</NuxtLink>.</p>
 
           </div>
         </div>
@@ -106,7 +106,7 @@ export default {
         ],
         "dateCreated": "2021-08-07T21:51:32+07:00",
         "datePublished": "2021-08-07T21:51:32+07:00",
-        "dateModified": "2021-08-07T21:51:32+07:00",
+        "dateModified": "2021-11-15T21:51:32+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

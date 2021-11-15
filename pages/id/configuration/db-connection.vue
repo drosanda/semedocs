@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/">4.0.2 (Bahasa)</NuxtLink></li>
+          <li class=""><NuxtLink to="/id/">4.0.3 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/configuration">Pengaturan</NuxtLink></li>
           <li class="unavailable">Koneksi Database</li>
         </ul>
@@ -88,7 +88,7 @@
         name: 'Seme Framework 4',
         suffix: ' - Seme Framework 4',
         title: 'Pengaturan koneksi DB',
-        description: 'Pelajari selengkapnya tentang pengaturan koneksi database untuk Seme Framework versi 4.0.0.',
+        description: 'Pelajari selengkapnya tentang pengaturan koneksi database untuk Seme Framework 4',
         breadcrumbs: [
           {
             url: process.env.BASE_URL || 'http://localhost:3001',

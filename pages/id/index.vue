@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class="unavailable">4.0.2 (Bahasa)</li>
+          <li class="unavailable">4.0.3 (Bahasa)</li>
         </ul>
       </nav>
 
@@ -105,7 +105,7 @@
               Berikut ini beberapa indikator proses pengembangan Seme Framework:
             </p>
             <div class="badges">
-              <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/version-4.0.2-ed6f75' alt="version"></amp-img>
+              <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/version-4.0.3-ed6f75' alt="version"></amp-img>
               <amp-img layout="fixed" width="90px" height="20px" src='https://travis-ci.com/drosanda/seme-framework.svg?branch=master' alt="build status"></amp-img>
               <amp-img layout="fixed" width="53px" height="20px" src='https://img.shields.io/badge/lang-id-e9bd2e' alt="version"></amp-img>
               <amp-img layout="fixed" width="113px" height="20px" src="https://codecov.io/gh/drosanda/seme-framework/branch/master/graph/badge.svg?token=3WRW0SNO41" alt="code coverage"></amp-img>

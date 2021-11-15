@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class="unavailable">3.1.x</li>
+          <li class="unavailable">3.1</li>
         </ul>
       </nav>
 
@@ -51,8 +51,7 @@ export default {
   layout: 'v3.1',
   data (){
     return {
-      name: 'Seme Framework v3.1',
-      suffix: '',
+      name: 'Seme Framework 3.1',
       title: 'Seme Framework version 3.1.5 Documentation',
       description: 'Learn more about Seme Framework version 3.1.5 through this documentation.',
       breadcrumbs: [

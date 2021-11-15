@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink>
           </td>
         </tr>
-        <li class=""><NuxtLink to="/4.0/">4.0.2</NuxtLink>
+        <li class=""><NuxtLink to="/4.0/">4.0.3</NuxtLink>
         </td>
       </tr>
       <li class="unavailable">Core Class</li>

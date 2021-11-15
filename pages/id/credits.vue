@@ -39,7 +39,7 @@ export default {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Credits',
-      description: 'Kenali orang dibalik pembangunan Seme Framework versi 4.0.0.',
+      description: 'Kenali orang-orang dibelakang layar Seme Framework 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

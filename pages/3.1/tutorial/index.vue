@@ -4,6 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.1">3.1</NuxtLink></li>
           <li class="unavailable">Tutorial</li>
         </ul>
       </nav>
@@ -28,9 +29,9 @@
             </ul>
             <p>The entire tutorial is split up over several pages. Each explaining a small part of the functionality of the Seme Framework. You’ll go through the following pages:</p>
             <ul>
-              <li><NuxtLink to="/4.0.0/tutorial/introduction/">Introduction</NuxtLink>, which gives you an overview of what to expect.</li>
-              <li><NuxtLink to="/4.0.0/tutorial/get-data/">Theme and layout</NuxtLink>, which will teach you the basics of creating view using Seme Framework.</li>
-              <li><NuxtLink to="/4.0.0/tutorial/basic-api/">Building API</NuxtLink>, this will introduce more about database, controller, and model.</li>
+              <li><NuxtLink to="/4.0/tutorial/introduction/">Introduction</NuxtLink>, which gives you an overview of what to expect.</li>
+              <li><NuxtLink to="/4.0/tutorial/get-data/">Theme and layout</NuxtLink>, which will teach you the basics of creating view using Seme Framework.</li>
+              <li><NuxtLink to="/4.0/tutorial/basic-api/">Building API</NuxtLink>, this will introduce more about database, controller, and model.</li>
             </ul>
             <p>Enjoy your exploration of the Seme Framework.</p>
           </div>

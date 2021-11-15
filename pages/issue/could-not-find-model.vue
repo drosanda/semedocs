@@ -64,7 +64,7 @@ Error: [1024] could not find model hello_model on /Applications/XAMPP/xamppfiles
             </ol>
 
             <h3>Check the class loader on Controller</h3>
-            <p>Model are loaded in Controller through <NuxtLink to="/4.0.0/controller/load/"><code>load</code></NuxtLink> method. Please make sure:</p>
+            <p>Model are loaded in Controller through <NuxtLink to="/4.0/controller/load/"><code>load</code></NuxtLink> method. Please make sure:</p>
             <ol>
               <li>The location of file and file name is correct,</li>
               <li>The alias are correct.</li>

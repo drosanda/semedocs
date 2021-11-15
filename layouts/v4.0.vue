@@ -20,7 +20,7 @@
         </div>
         <ul>
           <li><nuxt-link to="/">Seme Framework</nuxt-link></li>
-          <li><nuxt-link to="/4.0">version 4.0.2</nuxt-link></li>
+          <li><nuxt-link to="/4.0">version 4.0.3</nuxt-link></li>
           <li><nuxt-link to="/4.0/requirements">Requirements</nuxt-link></li>
           <li><nuxt-link to="/4.0/downloads">Download &amp; Install</nuxt-link></li>
           <li>
@@ -177,7 +177,7 @@
       <div class="container">
         <div class="content has-text-centered">
           <p class="">Copyright &copy; 2014-2021. Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
-          <p><small>Last updated on August 11, 2021 | <NuxtLink to="/privacy-policy">Privacy Policy</NuxtLink> | <NuxtLink to="/term-condition">Term &amp; Condition</NuxtLink></small></p>
+          <p><small>Last updated on November 15, 2021 | <NuxtLink to="/privacy-policy">Privacy Policy</NuxtLink> | <NuxtLink to="/term-condition">Term &amp; Condition</NuxtLink></small></p>
         </div>
       </div>
     </footer>
@@ -192,7 +192,7 @@ export default {
   data() {
     return {
       name: 'Seme Framework',
-      version: 'v4.0.0',
+      version: 'v4.0',
       prefix: ' - ',
       title: 'Seme Framework v4.0.0 Documentation',
       description: 'Learn more about Seme Framework version 4.0.0 trough this documentation',

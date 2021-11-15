@@ -174,7 +174,7 @@
           <h2 id="indicators">Indicator</h2>
           <p>Here is the badges (indicator) of project status:</p>
           <div class="badges">
-            <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/version-4.0.2-ed6f75' alt="version"></amp-img>
+            <amp-img layout="fixed" width="90px" height="20px" src='https://img.shields.io/badge/version-4.0.3-ed6f75' alt="version"></amp-img>
             <amp-img layout="fixed" width="90px" height="20px" src='https://travis-ci.com/drosanda/seme-framework.svg?branch=master' alt="build status"></amp-img>
             <amp-img layout="fixed" width="56px" height="20px" src='https://img.shields.io/badge/lang-en-e9bd2e' alt="version"></amp-img>
             <amp-img layout="fixed" width="113px" height="20px" src="https://codecov.io/gh/drosanda/seme-framework/branch/master/graph/badge.svg?token=3WRW0SNO41" alt="Code coverage"></amp-img>
@@ -206,6 +206,7 @@
           <p>
             Here is the latest news and updates from Seme Framework creator.
           </p>
+          <amp-twitter width="300" height="472" layout="responsive" data-tweetid="1460255506719670273"></amp-twitter>
           <amp-twitter width="300" height="472" layout="responsive" data-tweetid="1416587477251362820"></amp-twitter>
           <amp-twitter width="300" height="472" layout="responsive" data-tweetid="1416582145070362626"></amp-twitter>
           <amp-twitter width="300" height="472" layout="responsive" data-tweetid="1410378130942947329"></amp-twitter>
