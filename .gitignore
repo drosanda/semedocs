@@ -4,3 +4,4 @@ node_modules
 dist
 sw.*
 dist.zip
+.DS_Store
