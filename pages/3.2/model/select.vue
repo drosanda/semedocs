@@ -41,7 +41,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;select(string $column_name): $this-&#x26;#x3E;db
+                  $this-&#x3E;db-&#x3E;select(string $column_name): $this-&#x3E;db
                 </highlight-code>
               </div>
             </div>
@@ -215,7 +215,7 @@ export default {
         ],
         "dateCreated": "2021-08-14T10:53:01+07:00",
         "datePublished": "2021-08-14T10:53:01+07:00",
-        "dateModified": "2021-08-14T10:53:01+07:00",
+        "dateModified": "2021-11-16T10:53:01+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
