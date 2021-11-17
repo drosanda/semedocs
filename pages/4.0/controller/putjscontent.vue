@@ -14,7 +14,7 @@
           <div class="content">
             <h1 class="">putJsContent Method</h1>
             <p>This method will be loaded a theme with javascript content from a theme file.</p>
-            <p>The <code>$content_location</code> value will be reffered to a file name under <code>app/view/THEME/</code>.</p>
+            <p>The <code>$content_location</code> value will be referred to a file name under <code>app/view/THEME/</code>.</p>
             <p>This value also can contain path prefix of subdirectory before the filename.</p>
 
             <h2>Basic Usage</h2>
@@ -256,7 +256,7 @@ export default {
         ],
         "dateCreated": "2021-07-13T18:18:00+07:00",
         "datePublished": "2021-07-13T18:19:00+07:00",
-        "dateModified": "2021-07-13T18:58:00+07:00",
+        "dateModified": "2021-11-18T05:40:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

@@ -53,7 +53,7 @@
 
             <h4>$content_location</h4>
             <p>
-              The <code>$content_location</code> value will be reffered to a file name under <code>app/view/THEME/</code>.
+              The <code>$content_location</code> value will be referred to a file name under <code>app/view/THEME/</code>.
               This value also can contain path prefix of subdirectory before the filename.
               Learn more about <NuxtLink to="/4.0/view/theme#specific_js">javascript specific view component <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
@@ -385,7 +385,7 @@ export default {
         ],
         "dateCreated": "2021-08-16T09:12:00+07:00",
         "datePublished": "2021-08-16T09:12:00+07:00",
-        "dateModified": "2021-08-16T09:12:00+07:00",
+        "dateModified": "2021-11-18T05:39:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
