@@ -227,7 +227,7 @@
               Create new folder <i>page</i> under <code>app/view/front</code> and then create layout file with php extension, name it <code>col-1.php</code>.
               Then use this code.
             </p>
-            <div class="macwindow">
+            <div id="view_layout_example" class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
                   <div class="close">

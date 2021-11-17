@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/3.1/">3.1.x</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.1">3.1.x</NuxtLink></li>
           <li class="unavailable">View</li>
         </ul>
       </nav>
@@ -227,7 +227,7 @@
               Create new folder <i>page</i> under <code>app/view/front</code> and then create layout file with php extension, name it <code>col-1.php</code>.
               Then use this code.
             </p>
-            <div class="macwindow">
+            <div id="view_layout_example" class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
                   <div class="close">
@@ -331,6 +331,7 @@
 
       </div>
 
+
     </div>
   </div>
 </template>
@@ -339,10 +340,10 @@ export default {
   layout: 'v3.1',
   data() {
     return {
-      name: 'Seme Framework v3.1',
-      suffix: ' - Seme Framework v3.1',
+      name: 'Seme Framework 3.1',
+      suffix: ' - Seme Framework 3.1',
       title: 'View',
-      description: 'Learn more about using View concept from Seme Framework version 3.1.x',
+      description: 'Learn more about using View concept from Seme Framework 3.1.x',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -350,7 +351,7 @@ export default {
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1',
-          text: '3.1.x',
+          text: '3.1'
         }
       ]
     }
@@ -404,9 +405,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-08-14T01:03:07+07:00",
-        "datePublished": "2021-08-14T01:03:07+07:00",
-        "dateModified": "2021-08-14T01:03:07+07:00",
+        "dateCreated": "2021-11-18T06:26:17+07:00",
+        "datePublished": "2021-11-18T06:26:17+07:00",
+        "dateModified": "2021-11-18T06:26:17+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

@@ -4,8 +4,8 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0">4.0.3</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0/controller">Controller</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.1">3.1.x</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.1/controller">Controller</NuxtLink></li>
           <li class="unavailable">putJsReady</li>
         </ul>
       </nav>
@@ -16,12 +16,12 @@
             <p>
               The <code>putJsReady</code> method will put (injected) javascript code into <a href="https://stackoverflow.com/questions/3698200/window-onload-vs-document-ready#answer-3698214" target="_blank">document ready <i class="fa fa-external-link"></i></a> block of javascript.
               This method can be called in controller or in a view as well.
-              This method only work if <NuxtLink to="/4.0/controller/getjsready" target="_blank">getJsReady <i class="fa fa-window-restore"></i></NuxtLink> method called inside document ready block in a <NuxtLink to="/4.0/view/#view_layout_example" target="_blank">View Layout</NuxtLink>.
+              This method only work if <NuxtLink to="/3.1/controller/getjsready" target="_blank">getJsReady <i class="fa fa-window-restore"></i></NuxtLink> method called inside document ready block in a <NuxtLink to="/3.1/view/#view_layout_example" target="_blank">View Layout</NuxtLink>.
             </p>
 
             <h2>Basic Usage</h2>
             <p>
-              Here is the basic usage for <code>putJsReady</code> method from <NuxtLink to="/4.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> class.
+              Here is the basic usage for <code>putJsReady</code> method from <NuxtLink to="/3.1/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> class.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -56,7 +56,7 @@
             <p>
               The <code>$content_location</code> value will be referred to a file name under <code>app/view/THEME/</code>.
               This value also can contain path prefix of subdirectory before the filename.
-              Learn more about <NuxtLink to="/4.0/view/theme#specific_js">javascript specific view component <i class="fa fa-window-restore"></i></NuxtLink>.
+              Learn more about <NuxtLink to="/3.1/view/theme#specific_js">javascript specific view component <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
 
             <h4>$data</h4>
@@ -287,21 +287,6 @@
               </div>
             </div>
 
-            <div class="nav-bottom">
-              <div class="nav-bottom-left">
-                <nuxt-link to="/4.0/controller/putjscontent/" class="btn">
-                  <i class="fa fa-chevron-left"></i>
-                  putJsContent
-                </nuxt-link>
-              </div>
-              <div class="nav-bottom-right">
-                <nuxt-link to="/4.0/controller/putthemecontent/" class="btn">
-                  putThemeContent
-                  <i class="fa fa-chevron-right"></i>
-                </nuxt-link>
-              </div>
-            </div>
-
           </div>
         </div>
 
@@ -313,24 +298,24 @@
 </template>
 <script>
 export default {
-  layout: 'v4.0',
+  layout: 'v3.1',
   data() {
     return {
-      name: 'Seme Framework 4',
-      suffix: ' - Seme Framework 4',
+      name: 'Seme Framework 3.1',
+      suffix: ' - Seme Framework 3.1.x',
       title: 'putJsReady Method',
-      description: 'Learn more about putJsReady Method from SENE_Controller on Seme Framework 4',
+      description: 'Learn more about putJsReady Method from SENE_Controller on Seme Framework 3.1.x',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
           text: 'Seme Framework'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0',
-          text: '4.0'
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1',
+          text: '3.1.x'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0/controller',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1/controller',
           text: 'Controller'
         }
       ],
@@ -384,9 +369,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-08-16T09:12:00+07:00",
-        "datePublished": "2021-08-16T09:12:00+07:00",
-        "dateModified": "2021-11-18T05:39:00+07:00",
+        "dateCreated": "2021-11-18T06:17:00+07:00",
+        "datePublished": "2021-11-18T06:17:00+07:00",
+        "dateModified": "2021-11-18T06:17:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

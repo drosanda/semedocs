@@ -4,25 +4,21 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/id">4.0.3 (Bahasa)</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/controller">Controller</NuxtLink></li>
-          <li class="unavailable">putJsReady</li>
+          <li class=""><NuxtLink to="/3.1">3.1.x</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.1/controller">Controller</NuxtLink></li>
+          <li class="unavailable">loadLayout Method</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Metode putJsReady</h1>
+            <h1 class="">loadLayout Method</h1>
             <p>
-              Metode <code>putJsReady</code> digunakan untuk mengisikan javascript dari <NuxtLink to="/id/view/theme#spesifik_js">view komponen<i class="fa fa-window-restore"></i></NuxtLink>  yang berisi kode javascript kedalam blok <a href="https://stackoverflow.com/questions/3698200/window-onload-vs-document-ready#answer-3698214" target="_blank">document ready <i class="fa fa-external-link"></i></a>.
-              Metode ini dapat dipanggil di dalam controller maupun didalam komponen view sekalipun.
-              Supaya metode ini dapat digunakan dengan baik, pastikan metode <NuxtLink to="/id/controller/getjsready">getJsReady <i class="fa fa-window-restore"></i></NuxtLink> sudah diletakan pada <NuxtLink to="/id/view/layout" target="_blank">View Layout <i class="fa fa-window-restore"></i></NuxtLink> di dalam block document ready.
+              This <code>loadLayout</code> method will be loaded a layout file or view component that file relatives in current theme into view buffer.
             </p>
 
-            <h2>Bentuk Umum</h2>
-            <p>
-              Berikut ini bentuk umum penggunaan metode <code>putJsReady</code> dari kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
-            </p>
+            <h2>Basic Usage</h2>
+            <p>Here is the basic usage of <code>loadLayout</code> method.</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -42,74 +38,23 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;putJsReady(string $content_location[, array $data]): $this
+                  $this-&#x3E;loadLayout(string $layout [, array $data = array()]): $this
                 </highlight-code>
               </div>
             </div>
 
             <h3>Parameters</h3>
             <p>
-              Metode ini membutuhkan 1 parameter wajib dan 1 parameter opsional.
+              This method has 1 required parameter and 1 optional parameter.
             </p>
 
-            <h4>$content_location</h4>
+            <h4>$layout</h4>
             <p>
-              Nilai dari <code>$content_location</code> dapat berupa sebuah string yang merujuk pada lokasi file dibawah terhadap direktori <code>app/view/THEME/</code>.
-              Nilai ini juga dapat berisi juga awalan untuk sub direktori sebelum lokasi file.
+              The $layout value is string name of a file relatives to current theme.
             </p>
 
-            <h4>$data</h4>
-            <p>
-              Nilai dari <code>$data</code> dapat berupa <code>array</code> yang berisi 1 atau lebih pasang <em>array key value</em>.
-            </p>
-
-            <h2>Contoh</h2>
-            <p>
-              Berikut ini adalah contoh untuk metode <code>putJsReady</code> pada sebuah kelas controller.
-            </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  class Home extends SENE_Controller
-                  {
-                    public function __construct()
-                    {
-                      parent::__construct();
-                      $this-&#x3E;setTheme(&#x27;home&#x27;);
-                    }
-                    public function index()
-                    {
-                      $data = array();
-                      $this-&#x3E;putThemeContent(&#x27;home/home&#x27;,$data);
-                      $this-&#x3E;putJsReady(&#x27;home/home_bottom&#x27;,$data);
-                      $this-&#x3E;loadLayout(&#x27;col-1&#x27;,$data);
-                      $this-&#x3E;render();
-                    }
-                  }
-                </highlight-code>
-              </div>
-            </div>
-            <h3>Struktur File dan Directory</h3>
-            <p>
-              Jadi tema <code>front</code>, kemudian layout <code>col-1</code> layout serta <code>home_bottom.php</code> harus ada didalam struktur direktori.
-            </p>
-
+            <h5>Layout Requirements</h5>
+            <p>The valid layout should only put inside <code>page</code> directory of the current theme.</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -131,21 +76,15 @@
                 <highlight-code lang="php">
                   app/
                   └── view/
-                   └── front/
-                    ├── home/
-                    | ├── home.php
-                    | └── home_bottom.php
-                    ├── page/
-                    | └── col-1.php
-                    └── ...
+                    └── THEME_NAME/
+                      └── page/
+                        └── [LAYOUT_FILENAME].php
                 </highlight-code>
               </div>
             </div>
 
-            <h3>Contoh home_bottom.php</h3>
-            <p>
-              Berikut ini adalah contoh source code untuk file <code>home_bottom.php</code> yang berisi javascript.
-            </p>
+            <h2>Example</h2>
+            <p>Here is the example for <code>loadLayout</code> method:</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -165,23 +104,77 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  alert(&#x27;Hi, this is from home_bottom&#x27;);
+                  &#x3C;?php
+                  class Blog extends SENE_Controller {
+                    public function __construct(){
+                      parent::__construct();
+                      $this->setTheme(&#x27;front&#x27;);
+                    }
+                    public function index(){
+                      $data = array();
+                      $data['example'] = 'this is example';
+                      $this-&#x3E;setTitle(&#x27;Blog home&#x27;);
+                      $this-&#x3E;putThemeContent(&#x22;blog/home&#x22;,$data);
+                      $this-&#x3E;putJsContent(&#x27;blog/home_bottom&#x27;,$data);
+                      $this-&#x3E;loadLayout(&#x27;col-1&#x27;,$data);
+                      $this-&#x3E;render();
+                    }
+                  }
+                </highlight-code>
+              </div>
+            </div>
+            <p>So, the <code>front</code> theme and <code>col-1</code> layout should be existed on the directory structure.</p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  app/
+                  └── view/
+                    └── front/
+                      └── page/
+                        └── col-1.php
                 </highlight-code>
               </div>
             </div>
 
-            <div class="nav-bottom">
-              <div class="nav-bottom-left">
-                <nuxt-link to="/id/controller/putjscontent" class="btn">
-                  <i class="fa fa-chevron-left"></i>
-                  putJsContent
-                </nuxt-link>
+            <div class="message is-info">
+              <div class="message-body">
+                <p><b>Info</b></p>
+                <p>
+                  The <code>putThemeContent</code>, <code>putJsContent</code>, and <code>render</code> method(s) has ability for buffered the html view.
+                </p>
               </div>
-              <div class="nav-bottom-right">
-                <nuxt-link to="/id/controller/putthemecontent" class="btn">
-                  putThemeContent
-                  <i class="fa fa-chevron-right"></i>
-                </nuxt-link>
+            </div>
+
+            <div class="message is-success">
+              <div class="message-body">
+                <p><b>Layout Naming Tips</b></p>
+                <p>
+                  If you confused how to decided the name of a layout, here is the tips with its filename:
+                  <ul>
+                    <li><b>col-1.php</b> is for a page with one column.</li>
+                    <li><b>col-2-left.php</b> is for a page splitted by two column, and the menu are on left.</li>
+                    <li><b>col-2-right.php</b> is for a page splitted by two column, and the menu are on right.</li>
+                    <li><b>col-3.php</b> is for a page splitted by three column.</li>
+                    <li><b>login.php</b> the special layout for login.</li>
+                    <li><b>homepage.php</b> the special layout for homepage.</li>
+                  </ul>
+                </p>
               </div>
             </div>
 
@@ -189,29 +182,30 @@
         </div>
 
       </div>
+
     </div>
   </div>
 </template>
 <script>
 export default {
-  layout: 'v4.0',
+  layout: 'v3.1',
   data() {
     return {
-      name: 'Seme Framework 4',
-      suffix: ' - Seme Framework 4',
-      title: 'Metode putJsReady',
-      description: 'Pelajari tentang metode putJsReady dari kelas SENE_Controller untuk Seme Framework versi 4',
+      name: 'Seme Framework 3.1',
+      suffix: ' - Seme Framework 3.1',
+      title: 'loadLayout Method',
+      description: 'Learn more about loadLayout Method from SENE_Controller on Seme Framework 3.1.x',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
           text: 'Seme Framework'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id',
-          text: 'ID'
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1',
+          text: '3.1'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/controller',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1/controller',
           text: 'Controller'
         }
       ],
@@ -265,9 +259,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-08-16T09:35:00+07:00",
-        "datePublished": "2021-08-16T09:35:00+07:00",
-        "dateModified": "2021-08-16T09:35:00+07:00",
+        "dateCreated": "2021-11-18T06:23:00+07:00",
+        "datePublished": "2021-11-18T06:23:00+07:00",
+        "dateModified": "2021-11-18T06:23:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

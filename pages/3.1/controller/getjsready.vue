@@ -4,24 +4,22 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/id">4.0.3 (Bahasa)</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/controller">Controller</NuxtLink></li>
-          <li class="unavailable">putJsReady</li>
+          <li class=""><NuxtLink to="/3.1">3.1.x</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.1/controller">Controller</NuxtLink></li>
+          <li class="unavailable">getJsReady Method</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Metode putJsReady</h1>
+            <h1 class="">getJsReady Method</h1>
             <p>
-              Metode <code>putJsReady</code> digunakan untuk mengisikan javascript dari <NuxtLink to="/id/view/theme#spesifik_js">view komponen<i class="fa fa-window-restore"></i></NuxtLink>  yang berisi kode javascript kedalam blok <a href="https://stackoverflow.com/questions/3698200/window-onload-vs-document-ready#answer-3698214" target="_blank">document ready <i class="fa fa-external-link"></i></a>.
-              Metode ini dapat dipanggil di dalam controller maupun didalam komponen view sekalipun.
-              Supaya metode ini dapat digunakan dengan baik, pastikan metode <NuxtLink to="/id/controller/getjsready">getJsReady <i class="fa fa-window-restore"></i></NuxtLink> sudah diletakan pada <NuxtLink to="/id/view/layout" target="_blank">View Layout <i class="fa fa-window-restore"></i></NuxtLink> di dalam block document ready.
+              The <code>getJsReady</code> method will get injected javascript that espsecially built for use inside <code>document ready</code> block from <NuxtLink to="/3.1/controller/putjsready">putJsReady <i class="fa fa-window-restore"></i></NuxtLink> method.
             </p>
 
-            <h2>Bentuk Umum</h2>
+            <h2>Basic Usage</h2>
             <p>
-              Berikut ini bentuk umum penggunaan metode <code>putJsReady</code> dari kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
+              Here is the basic usage for <code>getJsReady</code> method from <NuxtLink to="/3.1/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> class.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -42,30 +40,94 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;putJsReady(string $content_location[, array $data]): $this
+                  $this-&#x3E;getJsReady(): void
                 </highlight-code>
               </div>
             </div>
 
             <h3>Parameters</h3>
             <p>
-              Metode ini membutuhkan 1 parameter wajib dan 1 parameter opsional.
+              This method has no parameter required.
             </p>
 
-            <h4>$content_location</h4>
+            <h2>Example Usage</h2>
             <p>
-              Nilai dari <code>$content_location</code> dapat berupa sebuah string yang merujuk pada lokasi file dibawah terhadap direktori <code>app/view/THEME/</code>.
-              Nilai ini juga dapat berisi juga awalan untuk sub direktori sebelum lokasi file.
+              Usually this method called inside a layout file. Here is the basic example for <code>getJsReady</code> method.
+              Here is the content of <code>col-1.php</code> layout file.
             </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="html">
+                  &#x3C;!DOCTYPE html&#x3E;
+                  &#x3C;html&#x3E;
+                  &#x3C;head&#x3E;
+                    &#x3C;title&#x3E;Test&#x3C;/title&#x3E;
+                  &#x3C;/head&#x3E;
+                  &#x3C;body&#x3E;
+                    &#x3C;script&#x3E;
+                    $(document).ready(function(e){
+                      &#x3C;?php $this-&#x3E;getJsReady(); ?&#x3E;
+                    });
+                    &#x3C;/script&#x3E;
+                  &#x3C;/body&#x3E;
+                  &#x3C;/html&#x3E;
+                </highlight-code>
+              </div>
+            </div>
 
-            <h4>$data</h4>
             <p>
-              Nilai dari <code>$data</code> dapat berupa <code>array</code> yang berisi 1 atau lebih pasang <em>array key value</em>.
+              Here is the full file and directory structures.
             </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  app/
+                  └── controller/
+                  | └── home.php
+                  └── view/
+                   ├── front/
+                   | ├── home/
+                   | └── home_bottom.php
+                   └── page/
+                     └── col-1.php
+                </highlight-code>
+              </div>
+            </div>
 
-            <h2>Contoh</h2>
             <p>
-              Berikut ini adalah contoh untuk metode <code>putJsReady</code> pada sebuah kelas controller.
+              Here is the content of <code>home.php</code> controller file.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -91,60 +153,24 @@
                     public function __construct()
                     {
                       parent::__construct();
-                      $this-&#x3E;setTheme(&#x27;home&#x27;);
+                      $this-&#x3E;setTheme(&#x27;front&#x27;);
                     }
                     public function index()
                     {
                       $data = array();
-                      $this-&#x3E;putThemeContent(&#x27;home/home&#x27;,$data);
+                      $data['admin_name'] = 'Daeng';
                       $this-&#x3E;putJsReady(&#x27;home/home_bottom&#x27;,$data);
-                      $this-&#x3E;loadLayout(&#x27;col-1&#x27;,$data);
-                      $this-&#x3E;render();
+                      ...
                     }
                   }
                 </highlight-code>
               </div>
             </div>
-            <h3>Struktur File dan Directory</h3>
-            <p>
-              Jadi tema <code>front</code>, kemudian layout <code>col-1</code> layout serta <code>home_bottom.php</code> harus ada didalam struktur direktori.
-            </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  app/
-                  └── view/
-                   └── front/
-                    ├── home/
-                    | ├── home.php
-                    | └── home_bottom.php
-                    ├── page/
-                    | └── col-1.php
-                    └── ...
-                </highlight-code>
-              </div>
-            </div>
 
-            <h3>Contoh home_bottom.php</h3>
+
             <p>
-              Berikut ini adalah contoh source code untuk file <code>home_bottom.php</code> yang berisi javascript.
+              Here is the content of <code>home_bottom.php</code> embedded javascript file.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -164,24 +190,23 @@
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="php">
-                  alert(&#x27;Hi, this is from home_bottom&#x27;);
+                <highlight-code lang="javascript">
+                  alert(&#x27;&#x3C;?php echo $admin_name?&#x3E;&#x27;);
                 </highlight-code>
               </div>
             </div>
+            <p>
+              The <code>$data</code> variable that passed into <code>putJsContent</code> method, has been extracted into native variable depending on key name of array.
+            </p>
+            <p>
+              In this case, the <code>$data[&#x27;admin_name&#x27;]</code> converted into <code>$admin_name</code> if called inside <code>home_bottom.php</code> file.
+            </p>
 
-            <div class="nav-bottom">
-              <div class="nav-bottom-left">
-                <nuxt-link to="/id/controller/putjscontent" class="btn">
-                  <i class="fa fa-chevron-left"></i>
-                  putJsContent
-                </nuxt-link>
-              </div>
-              <div class="nav-bottom-right">
-                <nuxt-link to="/id/controller/putthemecontent" class="btn">
-                  putThemeContent
-                  <i class="fa fa-chevron-right"></i>
-                </nuxt-link>
+            <div class="message is-info">
+              <div class="message-body">
+                <p>
+                  The <code>putThemeContent</code>, <code>putJsContent</code>, and <code>render</code> method(s) has ability for buffered the html view.
+                </p>
               </div>
             </div>
 
@@ -189,29 +214,31 @@
         </div>
 
       </div>
+
+
     </div>
   </div>
 </template>
 <script>
 export default {
-  layout: 'v4.0',
+  layout: 'v3.1',
   data() {
     return {
-      name: 'Seme Framework 4',
-      suffix: ' - Seme Framework 4',
-      title: 'Metode putJsReady',
-      description: 'Pelajari tentang metode putJsReady dari kelas SENE_Controller untuk Seme Framework versi 4',
+      name: 'Seme Framework 3.1',
+      suffix: ' - Seme Framework 3.1',
+      title: 'getJsReady Method',
+      description: 'Learn more about getJsReady Method from SENE_Controller on Seme Framework 3.1.x',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
           text: 'Seme Framework'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id',
-          text: 'ID'
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1',
+          text: '3.1.x'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/controller',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1/controller',
           text: 'Controller'
         }
       ],
@@ -265,9 +292,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-08-16T09:35:00+07:00",
-        "datePublished": "2021-08-16T09:35:00+07:00",
-        "dateModified": "2021-08-16T09:35:00+07:00",
+        "dateCreated": "2021-11-18T06:21:00+07:00",
+        "datePublished": "2021-11-18T06:21:00+07:00",
+        "dateModified": "2021-11-18T06:21:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

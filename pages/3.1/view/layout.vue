@@ -4,8 +4,8 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0">4.0.3</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0/view/">View</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.1">3.1.x</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.1/view/">View</NuxtLink></li>
           <li class="unavailable">Layout</li>
         </ul>
       </nav>
@@ -30,24 +30,9 @@
                 The layout filename only contain <b>alpha numeric</b> with <b>lowercase</b>, only <b>undescore</b>, then with <code>.php</code> suffix.
               </li>
               <li>
-                Layout file only loaded by <NuxtLink to="/4.0/controller/loadlayout/">loadLayout method</NuxtLink> in Controller.
+                Layout file only loaded by <NuxtLink to="/3.1/controller/loadlayout/">loadLayout method</NuxtLink> in Controller.
               </li>
             </ol>
-
-            <div class="nav-bottom">
-              <div class="nav-bottom-left">
-                <nuxt-link to="/4.0/view/theme/" class="btn">
-                  <i class="fa fa-chevron-left"></i>
-                  theme
-                </nuxt-link>
-              </div>
-              <div class="nav-bottom-right">
-                <nuxt-link to="/4.0/view/theme_json/" class="btn">
-                  theme.json
-                  <i class="fa fa-chevron-right"></i>
-                </nuxt-link>
-              </div>
-            </div>
 
           </div>
         </div>
@@ -61,26 +46,26 @@
 </template>
 <script>
 export default {
-  layout: 'v4.0',
+  layout: 'v3.1',
   data (){
     return {
       base_url: '{{base_url}}',
       cdn_url: '{{cdn_url}}',
-      name: 'Seme Framework 4',
-      suffix: ' - Seme Framework 4',
+      name: 'Seme Framework 3.1',
+      suffix: ' - Seme Framework 3.1',
       title: 'Theme Layout',
-      description: 'Learn more about theme layout on Seme Framework 4.',
+      description: 'Learn more about theme layout on Seme Framework 3.1.x',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
           text: 'Seme Framework'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0',
-          text: '4.0'
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1',
+          text: '3.1'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0/view',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.1/view',
           text: 'View'
         }
       ],
@@ -134,9 +119,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-23T14:01:00+07:00",
-        "datePublished": "2021-07-23T14:02:00+07:00",
-        "dateModified": "2021-07-23T14:06:24+07:00",
+        "dateCreated": "2021-11-18T06:24:00+07:00",
+        "datePublished": "2021-11-18T06:24:00+07:00",
+        "dateModified": "2021-11-18T06:24:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
