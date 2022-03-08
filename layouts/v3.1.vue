@@ -74,6 +74,10 @@
                 <ul>
                   <li><nuxt-link to="/3.1/controller/session">Using Session</nuxt-link></li>
                   <li><nuxt-link to="/3.1/controller/input">Handling Input Form</nuxt-link></li>
+                  <li><nuxt-link to="/3.1/controller/getadditional">getAdditional</nuxt-link></li>
+                  <li><nuxt-link to="/3.1/controller/getadditionalbefore">getAdditionalBefore</nuxt-link></li>
+                  <li><nuxt-link to="/3.1/controller/getadditionalafter">getAdditionalAfter</nuxt-link></li>
+                  <li><nuxt-link to="/3.1/controller/getauthor">getAuthor</nuxt-link></li>
                 </ul>
               </li>
               <li>
@@ -117,8 +121,8 @@
     <footer class="footer">
       <div class="container">
         <div class="content has-text-centered">
-          <p class="">Seme Framework v3.1.5 &copy; 2014-2021 . Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
-          <p><small>Last updated on November 15, 2021</small></p>
+          <p class="">Seme Framework v3.1.5 &copy; 2014-2022. Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
+          <p><small>Last updated on March 8, 2022</small></p>
         </div>
       </div>
     </footer>

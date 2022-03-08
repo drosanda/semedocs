@@ -176,8 +176,8 @@
     <footer class="footer">
       <div class="container">
         <div class="content has-text-centered">
-          <p class="">Copyright &copy; 2014-2021. Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
-          <p><small>Last updated on November 15, 2021 | <NuxtLink to="/privacy-policy">Privacy Policy</NuxtLink> | <NuxtLink to="/term-condition">Term &amp; Condition</NuxtLink></small></p>
+          <p class="">Copyright &copy; 2014-2022. Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
+          <p><small>Last updated on March 8, 2022 | <NuxtLink to="/privacy-policy">Privacy Policy</NuxtLink> | <NuxtLink to="/term-condition">Term &amp; Condition</NuxtLink></small></p>
         </div>
       </div>
     </footer>

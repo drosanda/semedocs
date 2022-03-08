@@ -5,22 +5,21 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id">4.0.3 (Bahasa)</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/controller">Controller</NuxtLink></li>
-          <li class="unavailable">getAdditional</li>
+          <li class=""><NuxtLink to="/4.0/controller">Controller</NuxtLink></li>
+          <li class="unavailable">getAuthor</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Metode getAdditional</h1>
+            <h1 class="">Metode getAuthor</h1>
             <p>
-              Metode <code>getAdditional</code> digunakan untuk mengambil nilai array yang telah disetel dari <NuxtLink to="/id/view/theme_json/">theme.json <i class="fa fa-window-restore"></i></NuxtLink> untuk ditampilkan didalam tag HTML <code>head</code>.
-              Metode ini biasanya dipanggil didalam sebuah file <NuxtLink to="/id/view/theme/#requirement_layout">layout <i class="fa fa-window-restore"></i></NuxtLink> atau didalam komponen layout-nya.
+              Metode <code>getAuthor</code> digunakan untuk mengambil nilai string yang disetel melalui metode <NuxtLink to="/4.0/controller/setauthor/">setAuthor <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
 
             <h2>Bentuk Umum</h2>
             <p>
-              Berikut ini bentuk umum penggunaan metode <code>getAdditional</code> dari kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
+              Berikut ini bentuk umum penggunaan metode <code>getAdditionalBefore</code> dari kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -41,7 +40,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;getAdditional(): void
+                  $this-&#x3E;getAuthor(): string
                 </highlight-code>
               </div>
             </div>
@@ -53,7 +52,7 @@
 
             <h2>Contoh</h2>
             <p>
-              Berikut ini adalah contoh penggunaan untuk metode <code>getAdditionalAfter</code> yang diimplementasikan pada file layout <code>col-1.php</code>.
+              Berikut ini adalah contoh penggunaan untuk metode <code>getAuthor</code> yang diimplementasikan pada file layout <code>col-1.php</code>.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -78,7 +77,7 @@
                   &#x3C;html&#x3E;
                   &#x3C;head&#x3E;
                     ...
-                    &#x3C;?php $this-&#x3E;getAdditional(); ?&#x3E;
+                    &#x3C;meta name=&#x22;author&#x22; content=&#x22;&#x3C;?php echo $this-&#x3E;getAuthor(); ?&#x3E;&#x22;&#x3E;
                     ...
                   &#x3C;/head&#x3E;
                   &#x3C;body&#x3E;
@@ -89,16 +88,94 @@
               </div>
             </div>
 
+            <p>
+              Kemudian ini adalah ilustrasi struktur direktorinya.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  app/
+                  ├──controller/
+                  │ └── home.php
+                  └── view/
+                    └── front/
+                      └── page/
+                        └── col-1.php
+                </highlight-code>
+              </div>
+            </div>
+
+            <p>
+              Kemudian ini adalah isi dari controller <code>home.php</code>.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  class Home extends SENE_Controller
+                  {
+                    public function __construct()
+                    {
+                      parent::__construct();
+                      $this-&#x3E;setTheme(&#x27;front&#x27;);
+                    }
+                    public function index()
+                    {
+                      ...
+                      $this-&#x3E;setAuthor(&#x27;Daeng R&#x27;,$data);
+                      $this->loadLayout(&#x27;col-1&#x27;,$data);
+                      $this->render();
+                    }
+                  }
+                </highlight-code>
+              </div>
+            </div>
+
+            <p>
+              Sehingga hasil dari getAuthor akan bernilai <code>Daeng R</code>.
+            </p>
+
             <div class="nav-bottom">
               <div class="nav-bottom-left">
-                <nuxt-link to="/id/controller/constructor/" class="btn">
+                <nuxt-link to="/id/controller/getadditionalbefore/" class="btn">
                   <i class="fa fa-chevron-left"></i>
-                  __construct
+                  getAdditionalBefore
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
-                <nuxt-link to="/id/controller/getadditionalafter/" class="btn">
-                  getAdditionalAfter
+                <nuxt-link to="/id/controller/getcanonical/" class="btn">
+                  getCanonical
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
@@ -118,19 +195,19 @@ export default {
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'Metode getAdditional',
-      description: 'Pelajari selengkapnya tentang metode getAdditional dari SENE_Controller di Seme Framework versi 4.',
+      title: 'Metode getAuthor',
+      description: 'Pelajari selengkapnya tentang metode getAuthor dari SENE_Controller di Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
           text: 'Seme Framework'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id',
-          text: 'ID'
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0',
+          text: '4.0'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/controller',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0/controller',
           text: 'Controller'
         }
       ],
@@ -184,9 +261,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-08-15T16:57:00+07:00",
-        "datePublished": "2021-08-15T16:57:00+07:00",
-        "dateModified": "2022-03-08T20:56:00+07:00",
+        "dateCreated": "2021-07-13T13:23:00+07:00",
+        "datePublished": "2021-07-13T13:32:00+07:00",
+        "dateModified": "2022-03-08T21:08:21+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

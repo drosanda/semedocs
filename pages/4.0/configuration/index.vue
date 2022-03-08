@@ -200,8 +200,8 @@ $controller_404=&#x27;notfound&#x27;;
 /* == Another Configuration == */
 /* configuration are in array of string format */
 /*  - as name value pair */
-/*  - accessing value by $this-&#x3E;semevar-&#x3E;key in controller extended class */
-/*  - accessing value by $this-&#x3E;semevar-&#x3E;key in model extended class */
+/*  - accessing value by $this-&#x3E;config-&#x3E;semevar-&#x3E;keyname in controller extended class */
+/*  - accessing value by $this-&#x3E;config-&#x3E;semevar-&#x3E;keyname in model extended class */
 /****************************/
 
 //firebase messaging
@@ -224,6 +224,14 @@ $semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;
                 </highlight-code>
               </div>
             </div>
+
+            <div class="message is-info">
+              <div class="message-body">
+                <p><b>Config Property</b></p>
+                <p>You can read more about config property on <NuxtLink to="/4.0/controller/config" title="Config Property on controller page">Controller/Config</NuxtLink> page.</p>
+              </div>
+            </div>
+
           </div>
 
         </div>
@@ -237,7 +245,7 @@ $semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/4.0/configuration/db-connection/" class="btn">
+          <nuxt-link to="/4.0/configuration/db-connection" class="btn">
             DB Connection
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
@@ -319,7 +327,7 @@ $semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;
           ],
           "dateCreated": "2021-08-11T19:52:38+07:00",
           "datePublished": "2021-08-11T19:52:38+07:00",
-          "dateModified": "2021-07-23T19:37:17+07:00",
+          "dateModified": "2022-01-10T19:37:21+07:00",
           "author": {
             "@type": "Person",
             "gender": "Male",

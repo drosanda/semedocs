@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0">4.0.3</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0/controller">Controller</NuxtLink></li>
-          <li class="unavailable">getAdditionalAfter method</li>
+          <li class="unavailable">getAdditionalAfter</li>
         </ul>
       </nav>
       <div class="columns">
@@ -14,11 +14,13 @@
           <div class="content">
             <h1 class="">getAdditionalAfter method</h1>
             <p>
-              Get list of array CSS after default configuration from theme.json.
+              The <code>getAdditionalAfter</code> method is used to retrieve set of values that loaded through <NuxtLink to="/4.0/controller/loadcss/">loadCss <i class="fa fa-window-restore"></i></NuxtLink> method with <code>$utype</code> value equal to &#x22;after&#x22;.
             </p>
 
             <h2>Basic Usage</h2>
-            <p>The basic usage for getAdditionalAfter method is:</p>
+            <p>
+              Here is the basic usage for <code>getAdditionalAfter</code> method from <NuxtLink to="/4.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> class.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -38,20 +40,19 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  getAdditionalAfter(): string
+                  $this-&#x3E;getAdditionalAfter(): void
                 </highlight-code>
               </div>
             </div>
 
             <h3>Parameters</h3>
             <p>
-              There is no parameter available for getAdditionalAfter method.
+              This method does not require any parameter.
             </p>
 
             <h2>Example Usage</h2>
             <p>
-              Usually this method called inside a layout file. Here is the basic example for <code>getAdditionalAfter</code> method.
-              Here is the content of <code>col-1.php</code> layout file.
+              Usually this method called inside a layout file. Here is the basic example for <code>getAdditionalAfter</code> method that implemented on <code>col-1.php</code> layout file.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -184,7 +185,7 @@ export default {
         ],
         "dateCreated": "2021-07-13T19:23:00+07:00",
         "datePublished": "2021-07-13T19:26:00+07:00",
-        "dateModified": "2021-07-13T19:29:00+07:00",
+        "dateModified": "2022-03-08T20:46:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

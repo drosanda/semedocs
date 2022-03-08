@@ -69,8 +69,8 @@
               </div>
             </div>
             <p id="abstract">
-             Seme Framework are bunch of code made from PHP that suitable for creating small to medium scale web based applications wihtout starting code from the scratch.
-             This framework is <code>lightweight</code> to be used, both during the <code>development phase</code> until the application in <code>production phase</code>.
+             Seme Framework are bunch of codes that made from PHP, suitable for creating up to medium scale web based applications without started from scratch.
+             This framework is <code>lightweight</code> just from <code>development phase</code> until the applications are in <code>production phase</code>.
              Seme Framework still retains the traditional method (<code>manual way of code</code>), which is suitable for both newbie programmers and <code>veteran programmers</code>.
            </p>
 
@@ -299,7 +299,7 @@ export default {
         ],
         "dateCreated": "2021-08-20T22:20:00+07:00",
         "datePublished": "2021-08-20T22:20:00+07:00",
-        "dateModified": "2021-11-16T00:40:00+07:00",
+        "dateModified": "2022-03-08T21:19:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

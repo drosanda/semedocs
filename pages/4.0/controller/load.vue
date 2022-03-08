@@ -14,7 +14,7 @@
           <div class="content">
             <h1 class="">Load Method</h1>
             <p>
-              The <code>load</code> method purpose purpose is for loading a <NuxtLink to="/4.0/model/">Model Class<i class="fa fa-window-restore"></i></NuxtLink> by generating (<em>instantiating</em>) a new property inside current controller class.
+              The <code>load</code> method purpose purpose is for loading a <NuxtLink to="/4.0/model/">Model Class <i class="fa fa-window-restore"></i></NuxtLink> by generating (<em>instantiating</em>) a new property inside current controller class.
               The new property name will be same as model filename without <code>.php</code> extension in <b>lowercase</b>.
             </p>
 
@@ -297,7 +297,7 @@ export default {
       ],
       "dateCreated": "2021-08-04T16:02:34+07:00",
       "datePublished": "2021-08-04T16:02:34+07:00",
-      "dateModified": "2021-08-04T16:02:34+07:00",
+      "dateModified": "2022-03-08T20:22:34+07:00",
       "author": {
         "@type": "Person",
         "gender": "Male",

@@ -99,6 +99,10 @@
               <li><nuxt-link to="/id/controller/cdn_url">cdn_url</nuxt-link></li>
               <li><nuxt-link to="/id/controller/config">config</nuxt-link></li>
               <li><nuxt-link to="/id/controller/constructor">constructor</nuxt-link></li>
+              <li><nuxt-link to="/id/controller/getadditional">getAdditional</nuxt-link></li>
+              <li><nuxt-link to="/id/controller/getadditionalbefore">getAdditionalBefore</nuxt-link></li>
+              <li><nuxt-link to="/id/controller/getadditionalafter">getAdditionalAfter</nuxt-link></li>
+              <li><nuxt-link to="/id/controller/getauthor">getAuthor</nuxt-link></li>
               <li><nuxt-link to="/id/controller/getkey">getKey</nuxt-link></li>
               <li><nuxt-link to="/id/controller/input">input</nuxt-link></li>
               <li><nuxt-link to="/id/controller/lib">lib</nuxt-link></li>
@@ -146,8 +150,8 @@
     <footer class="footer">
       <div class="container">
         <div class="content has-text-centered">
-          <p class="">Copyright &copy; 2014-2021. Dibuat sepenuh cinta di Bandung, Indonesia oleh Daeng Rosanda, S.Kom.</p>
-          <p><small>Terakhir Diperbarui 15 November 2021 | <NuxtLink to="/privacy-policy">Privacy Policy</NuxtLink> | <NuxtLink to="/term-condition">Term &amp; Condition</NuxtLink></small></p>
+          <p class="">Copyright &copy; 2014-2022. Dibuat sepenuh cinta di Bandung, Indonesia oleh Daeng Rosanda, S.Kom.</p>
+          <p><small>Terakhir Diperbarui 8 Maret 2022 | <NuxtLink to="/privacy-policy">Privacy Policy</NuxtLink> | <NuxtLink to="/term-condition">Term &amp; Condition</NuxtLink></small></p>
         </div>
       </div>
     </footer>

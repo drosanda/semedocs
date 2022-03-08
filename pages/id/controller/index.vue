@@ -14,7 +14,7 @@
             <h1 class="">Kelas Controller</h1>
             <p>
               Kelas Controller dalam Seme Framework merupakan inti dari semua logika yang ada dalam jangkauan kelas tersebut.
-              Nama kelas dan nama file Controller akan digunakans sebagai identitas dari permintaan URL.
+              Nama kelas dan nama file Controller akan digunakan sebagai identitas dari permintaan URL.
             </p>
 
             <h2>Daftar Isi</h2>

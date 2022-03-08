@@ -14,11 +14,13 @@
           <div class="content">
             <h1 class="">getAuthor method</h1>
             <p>
-              getAuthor the current page, this method used only with <code>setAuthor</code> method.
+              The <code>getAuthor</code> is for retrieving text that set from <NuxtLink to="/4.0/controller/setauthor/">setAuthor <i class="fa fa-window-restore"></i></NuxtLink> method.
             </p>
 
             <h2>Basic Usage</h2>
-            <p>The basic usage for getAuthor method is:</p>
+            <p>
+              Here is the basic usage for <code>getAuthor</code> method from <NuxtLink to="/4.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> class.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -38,20 +40,19 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  getAuthor(): string
+                  $this-&#x3E;getAuthor(): string
                 </highlight-code>
               </div>
             </div>
 
             <h3>Parameters</h3>
             <p>
-              There is no parameter available for getAuthor method.
+              This method does not require any parameter.
             </p>
 
             <h2>Example Usage</h2>
             <p>
-              Usually this method called inside a layout file. Here is the basic example for <code>getAuthor</code> method.
-              Here is the content of <code>col-1.php</code> layout file.
+              Usually this method called inside a layout file. Here is the basic example for <code>getAuthor</code> method that implemented on <code>col-1.php</code> layout file.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -88,7 +89,7 @@
             </div>
 
             <p>
-              Here is the full file and directory structures.
+              And then, here is the full file and directory structures.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -109,13 +110,13 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  |- app/
-                  |-- controller/
-                  |--- home.php
-                  |-- view/
-                  |--- front/
-                  |---- page/
-                  |----- col-1.php
+                  app/
+                  ├──controller/
+                  │ └── home.php
+                  └── view/
+                    └── front/
+                      └── page/
+                        └── col-1.php
                 </highlight-code>
               </div>
             </div>
@@ -262,7 +263,7 @@ export default {
         ],
         "dateCreated": "2021-07-13T13:23:00+07:00",
         "datePublished": "2021-07-13T13:32:00+07:00",
-        "dateModified": "2021-07-13T19:26:21+07:00",
+        "dateModified": "2022-03-08T21:05:21+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

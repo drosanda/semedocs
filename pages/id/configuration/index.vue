@@ -193,8 +193,8 @@ $controller_404=&#x27;notfound&#x27;;
 /* == Another Configuration == */
 /* configuration are in array of string format */
 /*  - as name value pair */
-/*  - accessing value by $this-&#x3E;semevar-&#x3E;key in controller extended class */
-/*  - accessing value by $this-&#x3E;semevar-&#x3E;key in model extended class */
+/*  - accessing value by $this-&#x3E;config-&#x3E;semevar-&#x3E;keyname in controller extended class */
+/*  - accessing value by $this-&#x3E;config-&#x3E;semevar-&#x3E;keyname in model extended class */
 /****************************/
 
 //firebase messaging
@@ -215,6 +215,13 @@ $semevar[&#x27;email_reply&#x27;] = &#x27;hi@thecloudalert.com&#x27;;
 $semevar[&#x27;app_name&#x27;] = &#x27;Seme Framework&#x27;;
 $semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;
                 </highlight-code>
+              </div>
+            </div>
+
+            <div class="message is-info">
+              <div class="message-body">
+                <p><b>Properti $config</b></p>
+                <p>Baca selengkapnya tentang properti $config di halaman <NuxtLink to="/id/controller/config">Controller/Config</NuxtLink>.</p>
               </div>
             </div>
 
@@ -314,7 +321,7 @@ $semevar[&#x27;app_logo&#x27;] = &#x27;Seme Framework&#x27;;
           ],
           "dateCreated": "2021-08-11T19:52:38+07:00",
           "datePublished": "2021-08-11T19:52:38+07:00",
-          "dateModified": "2021-07-25T19:04:00+07:00",
+          "dateModified": "2022-01-10T19:21:00+07:00",
           "author": {
             "@type": "Person",
             "gender": "Male",

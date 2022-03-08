@@ -6,21 +6,20 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id">4.0.3 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/controller">Controller</NuxtLink></li>
-          <li class="unavailable">getAdditional</li>
+          <li class="unavailable">getAdditionalAfter</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Metode getAdditional</h1>
+            <h1 class="">Metode getAdditionalAfter</h1>
             <p>
-              Metode <code>getAdditional</code> digunakan untuk mengambil nilai array yang telah disetel dari <NuxtLink to="/id/view/theme_json/">theme.json <i class="fa fa-window-restore"></i></NuxtLink> untuk ditampilkan didalam tag HTML <code>head</code>.
-              Metode ini biasanya dipanggil didalam sebuah file <NuxtLink to="/id/view/theme/#requirement_layout">layout <i class="fa fa-window-restore"></i></NuxtLink> atau didalam komponen layout-nya.
+              Metode <code>getAdditionalAfter</code> digunakan untuk menampilkan kumpulan header yang disetel oleh metode <NuxtLink to="/id/controller/loadcss/">loadCss <i class="fa fa-window-restore"></i></NuxtLink> dengan nilai dari parameter <code>$utype</code> sama dengan &#x22;after&#x22;.
             </p>
 
             <h2>Bentuk Umum</h2>
             <p>
-              Berikut ini bentuk umum penggunaan metode <code>getAdditional</code> dari kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
+              Berikut ini bentuk umum penggunaan metode <code>getAdditionalAfter</code> dari kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -41,7 +40,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;getAdditional(): void
+                  $this-&#x3E;getAdditionalAfter(): void
                 </highlight-code>
               </div>
             </div>
@@ -78,7 +77,7 @@
                   &#x3C;html&#x3E;
                   &#x3C;head&#x3E;
                     ...
-                    &#x3C;?php $this-&#x3E;getAdditional(); ?&#x3E;
+                    &#x3C;?php $this-&#x3E;getAdditionalAfter(); ?&#x3E;
                     ...
                   &#x3C;/head&#x3E;
                   &#x3C;body&#x3E;
@@ -91,14 +90,14 @@
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
-                <nuxt-link to="/id/controller/constructor/" class="btn">
+                <nuxt-link to="/id/controller/getadditional/" class="btn">
                   <i class="fa fa-chevron-left"></i>
-                  __construct
+                  getAdditional
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
-                <nuxt-link to="/id/controller/getadditionalafter/" class="btn">
-                  getAdditionalAfter
+                <nuxt-link to="/id/controller/getadditionalbefore/" class="btn">
+                  getAdditionalBefore
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
@@ -118,19 +117,19 @@ export default {
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'Metode getAdditional',
-      description: 'Pelajari selengkapnya tentang metode getAdditional dari SENE_Controller di Seme Framework versi 4.',
+      title: 'Metode getAdditionalAfter',
+      description: 'Pelajari selengkapnya tentang metode getAdditionalAfter dari SENE_Controller di Seme Framework versi 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
           text: 'Seme Framework'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id',
-          text: 'ID'
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0',
+          text: '4.0'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/controller',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0/controller',
           text: 'Controller'
         }
       ],
@@ -184,9 +183,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-08-15T16:57:00+07:00",
-        "datePublished": "2021-08-15T16:57:00+07:00",
-        "dateModified": "2022-03-08T20:56:00+07:00",
+        "dateCreated": "2021-07-13T19:23:00+07:00",
+        "datePublished": "2021-07-13T19:26:00+07:00",
+        "dateModified": "2022-03-08T20:57:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0">4.0.3</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0/controller">Controller</NuxtLink></li>
-          <li class="unavailable">getAdditional method</li>
+          <li class="unavailable">getAdditional</li>
         </ul>
       </nav>
       <div class="columns">
@@ -41,20 +41,19 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;getAdditional(): string
+                  $this-&#x3E;getAdditional(): void
                 </highlight-code>
               </div>
             </div>
 
             <h3>Parameters</h3>
             <p>
-              There is no parameter available for getAdditional method.
+              This method does not require any parameter.
             </p>
 
             <h2>Example</h2>
             <p>
-              Usually this method called inside a layout file. Here is the basic example for <code>getAdditionalAfter</code> method.
-              Here is the content of <code>col-1.php</code> layout file.
+              Usually this method called inside a layout file. Here is the basic example for <code>getAdditional</code> method that implemented on <code>col-1.php</code> layout file.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -187,7 +186,7 @@ export default {
         ],
         "dateCreated": "2021-08-16T07:42:28+07:00",
         "datePublished": "2021-08-16T07:42:28+07:00",
-        "dateModified": "2021-08-16T07:42:28+07:00",
+        "dateModified": "2022-03-08T20:27:32+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

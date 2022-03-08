@@ -4,23 +4,23 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/id">4.0.3 (Bahasa)</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/controller">Controller</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.2">3.2.x</NuxtLink></li>
+          <li class=""><NuxtLink to="/3.2/controller">Controller</NuxtLink></li>
           <li class="unavailable">getAdditional</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Metode getAdditional</h1>
+            <h1 class="">getAdditional method</h1>
             <p>
-              Metode <code>getAdditional</code> digunakan untuk mengambil nilai array yang telah disetel dari <NuxtLink to="/id/view/theme_json/">theme.json <i class="fa fa-window-restore"></i></NuxtLink> untuk ditampilkan didalam tag HTML <code>head</code>.
-              Metode ini biasanya dipanggil didalam sebuah file <NuxtLink to="/id/view/theme/#requirement_layout">layout <i class="fa fa-window-restore"></i></NuxtLink> atau didalam komponen layout-nya.
+              The <code>getAdditional</code> method is used to retrieve the set array values from <NuxtLink to="/3.2/view/theme_json">theme.json <i class="fa fa-window-restore"></i></NuxtLink> to display in the HTML head tag.
+              This method is usually called in a <NuxtLink to="/3.2/view/layout">layout file <i class="fa fa-window-restore"></i></NuxtLink> or in its layout component.
             </p>
 
-            <h2>Bentuk Umum</h2>
+            <h2>Basic Usage</h2>
             <p>
-              Berikut ini bentuk umum penggunaan metode <code>getAdditional</code> dari kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
+              Here is the basic usage for <code>getAdditional</code> method from <NuxtLink to="/3.2/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> class.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -46,14 +46,14 @@
               </div>
             </div>
 
-            <h3>Parameter</h3>
+            <h3>Parameters</h3>
             <p>
-              Metode ini tidak membutuhkan parameter apapun.
+              This method does not require any parameter.
             </p>
 
-            <h2>Contoh</h2>
+            <h2>Example</h2>
             <p>
-              Berikut ini adalah contoh penggunaan untuk metode <code>getAdditionalAfter</code> yang diimplementasikan pada file layout <code>col-1.php</code>.
+              Usually this method called inside a layout file. Here is the basic example for <code>getAdditional</code> method that implemented on <code>col-1.php</code> layout file.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -91,14 +91,14 @@
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
-                <nuxt-link to="/id/controller/constructor/" class="btn">
+                <nuxt-link to="/3.2/controller/constructor/" class="btn">
                   <i class="fa fa-chevron-left"></i>
-                  __construct
+                  __construct method
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
-                <nuxt-link to="/id/controller/getadditionalafter/" class="btn">
-                  getAdditionalAfter
+                <nuxt-link to="/3.2/controller/getadditionalafter/" class="btn">
+                  getAdditionalAfter method
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
@@ -113,24 +113,24 @@
 </template>
 <script>
 export default {
-  layout: 'id',
+  layout: 'v4.0',
   data (){
     return {
-      name: 'Seme Framework 4',
-      suffix: ' - Seme Framework 4',
-      title: 'Metode getAdditional',
-      description: 'Pelajari selengkapnya tentang metode getAdditional dari SENE_Controller di Seme Framework versi 4.',
+      name: 'Seme Framework 3.2',
+      suffix: ' - Seme Framework 3.2',
+      title: 'Get Additional Method',
+      description: 'Learn more about getAdditional method on SENE_Controller class Seme Framework 3.2.x',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
           text: 'Seme Framework'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id',
-          text: 'ID'
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2',
+          text: '3.2.x'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/controller',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/3.2/controller',
           text: 'Controller'
         }
       ],
@@ -184,9 +184,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-08-15T16:57:00+07:00",
-        "datePublished": "2021-08-15T16:57:00+07:00",
-        "dateModified": "2022-03-08T20:56:00+07:00",
+        "dateCreated": "2021-08-16T07:42:28+07:00",
+        "datePublished": "2021-08-16T07:42:28+07:00",
+        "dateModified": "2022-03-08T20:27:32+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
