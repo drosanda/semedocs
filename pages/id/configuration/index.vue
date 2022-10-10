@@ -95,18 +95,78 @@
                 <highlight-code lang="php">
 &#x3C;?php
 /**
- * Configuration file for Development version
- *   You can create one for:
- *   development.php
- *   staging.php
- *   production.php
+ * # Development.php
+ * Configuration file for **development** environment.
+ *
+ * Seme Framework support for another environment, such as:
+ *   - &#x60;development.php&#x60;
+ *   - &#x60;staging.php&#x60;
+ *   - &#x60;production.php&#x60;
+ *
+ * ## &#x60;$site&#x60;
+ * Site Base URL with http:// or https:// prefix and trailing slash
+ *
+ * ## &#x60;$method&#x60;
+ * URL parse method
+ *   - REQUEST_URI, suitable for Nginx
+ *   - PATH_INFO, suitable for XAMPP
+ *   - ORIG_PATH_INFO
+ *
+ * ## &#x60;$admin_secret_url&#x60;
+ * Admin Secret url for re-routing &#x60;admin&#x60; directory on controller into &#x60;$admin_secret_url&#x60; on request path
+ *
+ * ## &#x60;$cdn_url&#x60;
+ * Base CDN URL with http:// or https:// prefix and trailing slash, optional
+ *
+ * ## $db
+ * Database array configuration
+ * - host
+ * - user
+ * - pass, password
+ * - engine
+ * - charset
+ * - port
+ *
+ * ## &#x60;$saltkey&#x60;
+ * Salt key for session secret
+ *
+ * ## &#x60;$timezone&#x60;
+ * Default time zone
+ *
+ * ## &#x60;$core_prefix&#x60;
+ * Core class prefix, please fill this before load php class on &#x60;app/core/&#x60;
+ *
+ * ## &#x60;$core_controller&#x60;
+ * Core class name for controller (without prefix)
+ *
+ * ## &#x60;$core_model&#x60;
+ * Core class name for mode (without prefix)
+ *
+ * ## &#x60;$controller_main&#x60;
+ * Default Main Controller for application onboarding
+ *
+ * ## &#x60;$controller_404&#x60;
+ * Default Main Controller for handling error 404 not found
+ *   Not found on Seme Framework caused by Undefined method or class controller
+ *
+ * ## &#x60;$semevar&#x60;
+ * Custom configuration value(s) that can be put on &#x60;$semevar[&#x27;keyname&#x27;] = {value}&#x60;, example:
+ *
+ * &#x60;&#x60;&#x60;php
+ * $semevar[&#x27;site_name&#x27;] = &#x27;Seme Framework&#x27;;
+ * &#x60;&#x60;&#x60;
+ *
+ * on controller, you can load the value by implementing code like this
+ * &#x60;&#x60;&#x60;php
+ * $this-&#x3E;config-&#x3E;semevar-&#x3E;site_name; //will contain &#x22;Seme Framework&#x22;
+ * &#x60;&#x60;&#x60;
+ *
+ * @package Application\Configuration
+ * @version 4.0.3
+ *
+ * @since 4.0.0
  */
-
-/****************************/
-/* == Base Configuration == */
-/* @var string */
-/****************************/
-
+ 
 /**
  * Site Base URL with http:// or https:// prefix and trailing slash
  * @var string
