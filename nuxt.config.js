@@ -86,5 +86,6 @@ export default {
   sitemap: {
     hostname: process.env.ORIGIN_URL || 'http://localhost:3001',
     gzip: false
-  }
+  },
+  components: true
 }

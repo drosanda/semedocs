@@ -162,8 +162,8 @@
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
-                <nuxt-link to="/4.0/model/where/" class="btn">
-                  where method
+                <nuxt-link to="/4.0/model/where_in/" class="btn">
+                  where in method
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>

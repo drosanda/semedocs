@@ -223,15 +223,15 @@
             </div>
             <div class="maccontent">
               <highlight-code lang="php">
-                -app
-                |---view
-                |------front
-                |---------page
-                |---------col-1.php
-                |-----------html
-                |--------------header.php
-                |--------------navbar.php
-                |--------------foter.php
+                app/
+                └── view/
+                 └── front/
+                  ├── page/
+                  │ └── html/
+                  │   ├── header.php
+                  │   ├── navbar.php
+                  │   └── foter.php
+                  └── col-1.php
               </highlight-code>
             </div>
           </div>
@@ -286,7 +286,7 @@
             <div class="maccontent">
               <highlight-code lang="php">
                 &#x3C;?php
-                $this-&#x3E;getThemeElement(&#x27;page/html/navbar&#x27;,$__forward);
+                $this-&#x3E;getThemeElement(&#x27;page/html/navbar&#x27;, $__forward);
                 ?&#x3E;
               </highlight-code>
             </div>
@@ -390,7 +390,7 @@ export default {
         ],
         "dateCreated": "2021-08-11T19:52:38+07:00",
         "datePublished": "2021-08-11T19:52:38+07:00",
-        "dateModified": "2021-06-25T18:57:00+07:00",
+        "dateModified": "2022-10-11T08:57:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

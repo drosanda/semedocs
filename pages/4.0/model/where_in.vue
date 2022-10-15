@@ -5,34 +5,19 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0">4.0.3</NuxtLink></li>
-          <li class="unavailable">Global Variables and Functions</li>
+          <li class=""><NuxtLink to="/4.0/model">Model</NuxtLink></li>
+          <li class="unavailable">Where in</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Global Variables and Functions</h1>
-            <p>Like the other framework, Seme Framework has several global Variables and Functions that you can use for your web app.</p>
-
-            <h2 id="base_url">base_url()</h2>
-            <p>This global function return full path url. Please make sure your <code>$base_url</code> are set properly for each <NuxtLink to="/4.0/configuration/">configurations</NuxtLink>.</p>
-
-            <h2>base_url_admin()</h2>
-            <p>This global function return full path url for admin secret url. Please make sure your <code>$base_url_admin</code> are set properly for each <NuxtLink to="/4.0/configuration/">configurations</NuxtLink>.</p>
-
-            <h2>Controller::debug()</h2>
-            <p>This global function will echo pre formatted text for debugging purpose.</p>
-
-            <h2>dd()</h2>
-            <p>Same as <code>Controller::debug()</code> this global function will echo pre formatted text for debugging purpose.</p>
-
-
-            <h2>$__forward</h2>
-            <p>This global variable used by view for forwarding variable between <NuxtLink to="/4.0/view">view</NuxtLink>.</p>
-            
-            <h3>Example</h3>
-            <p>Lets say we have view structure like below:</p>
-
+            <h1 class="">Where in Method</h1>
+            <p>The <code>where_in</code> method is part of database class builder for filtering data compatible with WHERE IN Clause on SQL. This method support chained as well.</p>
+            <h2>Basic Usage</h2>
+            <p>
+              Here is the basic usage <code>where_in</code> method from <code>$db</code> property on <code>SENE_Model</code> class.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -52,21 +37,23 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  app/
-                  └── view/
-                   └── front/
-                    ├── page/
-                    │ └── html/
-                    │   ├── header.php
-                    │   ├── navbar.php
-                    │   └── foter.php
-                    └── col-1.php
+                  $this-&#x3E;db-&#x3E;where_in(array $array_selector): $this-&#x3E;db;
                 </highlight-code>
               </div>
             </div>
+            <h3>Parameters</h3>
+            <p>
+              This method has 1 required parameters.
+            </p>
+            <h4>$array_selector</h4>
+            <p>
+              The <code>$array_selector</code> value can be an array contains the value for filtering data.
+            </p>
 
-            <p>On col-1.php we will call <code>html/header.php</code> and from then will called <code>html/navbar.php</code>.</p>
-
+            <h2>Example</h2>
+            <p>
+              Here is the examples using <code>where_in</code> method in a model class.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -86,62 +73,46 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  // ilustration
-                  header.php &#x3C;----- navbar.php
-                </highlight-code>
-              </div>
-            </div>
-
-            <p>So that all the contents of the variables are passed inside <code>html/header.php</code> can be pass through into <code>html/header.php</code> by using <code>$__forward</code> variable.</p>
-            
-            <p>And here is the impementation.</p>
-
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  &#x3C;?php
-                  $this-&#x3E;getThemeElement(&#x27;page/html/navbar&#x27;, $__forward);
-                  ?&#x3E;
+                  class Blog_Model extends SENE_Model{
+                    var $tbl = &#x27;d_order&#x27;;
+                    var $tbl_as = &#x27;dor&#x27;;
+                    var $tbl2 = &#x27;b_user&#x27;;
+                    var $tbl2_as = &#x27;bu&#x27;;
+                    public function __construct(){
+                      parent::__construct();
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                    }
+                    public function Ids($ids){
+                      $this-&#x3E;db-&#x3E;select(&#x22;$this-&#x3E;tbl_as.*, $this-tbl_as.status_text&#x22;,&#x27;status_text&#x27;,0);
+                      $this-&#x3E;db-&#x3E;select(&#x22;$this-&#x3E;tbl2_as.fname&#x22;,&#x27;fname&#x27;,0);
+                      $this-&#x3E;db-&#x3E;select(&#x22;$this-&#x3E;tbl2_as.email&#x22;,&#x27;email&#x27;,0);
+                      $this-&#x3E;db-&#x3E;where_in(&#x22;$this-&#x3E;tbl_as.id&#x22;, $ids);
+                      return $this-&#x3E;db-&#x3E;get();
+                    }
+                  }
                 </highlight-code>
               </div>
             </div>
             
+            <div class="nav-bottom">
+              <div class="nav-bottom-left">
+                <nuxt-link to="/4.0/model/where_as/" class="btn">
+                  <i class="fa fa-chevron-left"></i>
+                  where as method
+                </nuxt-link>
+              </div>
+              <div class="nav-bottom-right">
+                <nuxt-link to="/4.0/model/where/" class="btn">
+                  where method
+                  <i class="fa fa-chevron-right"></i>
+                </nuxt-link>
+              </div>
+            </div>
+
           </div>
         </div>
 
       </div>
-
-      <div class="nav-bottom">
-        <div class="nav-bottom-left">
-          <nuxt-link to="/4.0/constants/" class="btn">
-          <i class="fa fa-chevron-left"></i>
-            Constants
-          </nuxt-link>
-        </div>
-        <div class="nav-bottom-right">
-          <nuxt-link to="/4.0/model/" class="btn">
-            Class Model
-            <i class="fa fa-chevron-right"></i>
-          </nuxt-link>
-        </div>
-      </div>
-
     </div>
   </div>
 </template>
@@ -152,18 +123,22 @@ export default {
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'Global Variables and Functions',
-      description: 'Learn more about Global Variables and Functions of Seme Framework version 4 through this documentation.',
+      title: 'Where in method',
+      description: 'Learn where_in method from $db property on SENE_Model class for Seme Framework 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
-          text: 'Seme Framework',
+          text: 'Seme Framework'
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0',
           text: '4.0'
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0/model',
+          text: 'Model'
         }
-      ]
+      ],
     }
   },
   head() {
@@ -194,7 +169,6 @@ export default {
       '@type': 'ListItem',
       position: index + 1,
       item: {
-        "@type": "WebPage",
         '@id': item.url,
         name: item.text,
       },
@@ -215,9 +189,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-08-11T19:52:38+07:00",
-        "datePublished": "2021-08-11T19:52:38+07:00",
-        "dateModified": "2022-10-11T08:57:00+07:00",
+        "dateCreated": "2022-10-15T1:15:00+07:00",
+        "datePublished": "2022-10-15T11:15:00+07:00",
+        "dateModified": "2022-10-15T11:26:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
