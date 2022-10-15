@@ -78,6 +78,7 @@
               <li><nuxt-link to="/4.0/model/update">update</nuxt-link></li>
               <li><nuxt-link to="/4.0/model/where">where</nuxt-link></li>
               <li><nuxt-link to="/4.0/model/where_as">where_as</nuxt-link></li>
+              <li><nuxt-link to="/4.0/model/where_in">where_in</nuxt-link></li>
             </ul>
           </li>
           <li>
