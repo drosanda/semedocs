@@ -6,21 +6,20 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id">4.0.3 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/controller">Controller</NuxtLink></li>
-          <li class="unavailable">putJsFooter</li>
+          <li class="unavailable">getCanonical</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Metode putJsFooter</h1>
+            <h1 class="">Metode getCanonical</h1>
             <p>
-              Metode <code>putJsFooter</code> digunakan untuk memanggil file JavaScript kedalam sebuah <NuxtLink to="/id/view/theme">Tema Tampilan <i class="fa fa-window-restore"></i></NuxtLink> dengan cara menambahkan HTML tag <code>SCRIPT</code> kedalamnya.
-              For this method to work properly, the <NuxtLink to="/id/controller/getjsfooter">getJsFooter<i class="fa fa-window-restore"></i></NuxtLink> method must be called on <NuxtLink to ="/en/view/layout">Theme layout<i class="fa fa-window-restore"></i></NuxtLink> or on the theme view component.
+              Metode <code>getCanonical</code> digunakan untuk mengambil URL canonical untuk halaman pada metode controller yang sedang digunakan. Metode ini digunakan dengan <NuxtLink to="/4.0/controller/setauthor/">setCanonical <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
 
             <h2>Bentuk Umum</h2>
             <p>
-              Berikut ini bentuk umum penggunaan metode <code>putJsFooter</code> dari kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
+              Berikut ini bentuk umum penggunaan metode <code>getAdditionalBefore</code> dari kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -41,30 +40,19 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;putJsFooter(string $content_location[, array $data]): $this
+                  getCanonical(): string
                 </highlight-code>
               </div>
             </div>
 
             <h3>Parameters</h3>
             <p>
-              Metode ini membutuhkan 1 parameter wajib dan 1 parameter opsional.
-            </p>
-
-            <h4>$content_location</h4>
-            <p>
-              Nilai dari <code>$content_location</code> dapat berupa sebuah string yang merujuk pada lokasi file dibawah terhadap direktori <code>app/view/THEME/</code>.
-              Nilai ini juga dapat berisi juga awalan untuk sub direktori sebelum lokasi file.
-            </p>
-
-            <h4>$data</h4>
-            <p>
-              Nilai dari <code>$data</code> dapat berupa <code>array</code> yang berisi 1 atau lebih pasang <em>array key value</em>.
+              Metode ini tidak membutuhkan parameter apapun.
             </p>
 
             <h2>Contoh</h2>
             <p>
-              Berikut ini adalah contoh untuk metode <code>putJsFooter</code> pada sebuah kelas controller.
+              Berikut ini adalah contoh penggunaan untuk metode <code>getCanonical</code> yang diimplementasikan pada file layout <code>col-1.php</code>.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -84,38 +72,36 @@
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="php">
-                  class Home extends SENE_Controller
-                  {
-                    public function __construct()
-                    {
-                      parent::__construct();
-                      $this-&#x3E;setTheme(&#x27;homepage&#x27;);
-                    }
-                    public function index()
-                    {
-                      $data = array();
-                      $this-&#x3E;putThemeContent(&#x27;home/home&#x27;,$data);
-                      $this-&#x3E;putJsFooter($this->cdn_url(&#x27;skin/front/js/app.js&#x27;), 1);
-                      $this-&#x3E;loadLayout(&#x27;col-1&#x27;,$data);
-                      $this-&#x3E;render();
-                    }
-                  }
+                <highlight-code lang="html">
+                  &#x3C;!DOCTYPE html&#x3E;
+                  &#x3C;html&#x3E;
+                  &#x3C;head&#x3E;
+                    ...
+                    &#x3C;link rel=&#x22;canonical&#x22; href=&#x22;&#x3C;?=rtrim(rtrim($this-&#x3E;getCanonical(),&#x27;/&#x27;),&#x27;/amp&#x27;).&#x27;/&#x27;?&#x3E;&#x22;&#x3E;
+                    ...
+                  &#x3C;/head&#x3E;
+                  &#x3C;body&#x3E;
+                    ...
+                  &#x3C;/body&#x3E;
+                  &#x3C;/html&#x3E;
                 </highlight-code>
               </div>
             </div>
 
+            <p>
+              Contoh diatas merupakan pembuatan URL canonical untuk halaman non-AMP.
+            </p>
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
-                <nuxt-link to="/id/controller/putjscontent" class="btn">
+                <nuxt-link to="/id/controller/constructor/" class="btn">
                   <i class="fa fa-chevron-left"></i>
-                  putJsContent
+                  __construct
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
-                <nuxt-link to="/id/controller/putjsready" class="btn">
-                  putJsReady
+                <nuxt-link to="/id/controller/getjscontent/" class="btn">
+                  getJsContent
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
@@ -123,20 +109,20 @@
 
           </div>
         </div>
-
       </div>
+
     </div>
   </div>
 </template>
 <script>
 export default {
   layout: 'id',
-  data() {
+  data (){
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'Metode putJsFooter',
-      description: 'Pelajari tentang metode putJsFooter dari kelas SENE_Controller untuk Seme Framework versi 4',
+      title: 'Metode getCanonical',
+      description: 'Learn more about getCanonical method on SENE_Controller class Seme Framework.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -144,7 +130,7 @@ export default {
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/id',
-          text: 'ID'
+          text: '4.0'
         },
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/controller',
@@ -201,9 +187,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-08-16T08:38:00+07:00",
-        "datePublished": "2021-08-16T08:38:00+07:00",
-        "dateModified": "2021-08-16T08:38:00+07:00",
+        "dateCreated": "2022-10-31T21:56:00+07:00",
+        "datePublished": "2022-10-31T21:56:00+07:00",
+        "dateModified": "2022-10-31T21:56:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

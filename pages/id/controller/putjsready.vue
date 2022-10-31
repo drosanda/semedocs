@@ -194,7 +194,7 @@
 </template>
 <script>
 export default {
-  layout: 'v4.0',
+  layout: 'id',
   data() {
     return {
       name: 'Seme Framework 4',
