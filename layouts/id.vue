@@ -103,18 +103,26 @@
               <li><nuxt-link to="/id/controller/getadditionalbefore">getAdditionalBefore</nuxt-link></li>
               <li><nuxt-link to="/id/controller/getadditionalafter">getAdditionalAfter</nuxt-link></li>
               <li><nuxt-link to="/id/controller/getauthor">getAuthor</nuxt-link></li>
+              <li><nuxt-link to="/id/controller/getjscontent">getJsContent</nuxt-link></li>
+              <li><nuxt-link to="/id/controller/getjsfooter">getJsFooter</nuxt-link></li>
+              <li><nuxt-link to="/id/controller/getjsready">getJsReady</nuxt-link></li>
               <li><nuxt-link to="/id/controller/getkey">getKey</nuxt-link></li>
+              <li><nuxt-link to="/id/controller/gettitle">getTitle</nuxt-link></li>
               <li><nuxt-link to="/id/controller/input">input</nuxt-link></li>
               <li><nuxt-link to="/id/controller/lib">lib</nuxt-link></li>
               <li><nuxt-link to="/id/controller/load">load</nuxt-link></li>
               <li><nuxt-link to="/id/controller/loadcss">loadCss</nuxt-link></li>
               <li><nuxt-link to="/id/controller/loadlayout">loadLayout</nuxt-link></li>
-              <li><nuxt-link to="/id/controller/putthemecontent">putThemeContent</nuxt-link></li>
               <li><nuxt-link to="/id/controller/render">render</nuxt-link></li>
               <li><nuxt-link to="/id/controller/putjscontent">putJsContent</nuxt-link></li>
+              <li><nuxt-link to="/id/controller/putjscontent">putJsFooter</nuxt-link></li>
+              <li><nuxt-link to="/id/controller/putjscontent">putJsReady</nuxt-link></li>
+              <li><nuxt-link to="/id/controller/putthemecontent">putThemeContent</nuxt-link></li>
+              <li><nuxt-link to="/id/controller/render">render</nuxt-link></li>
               <li><nuxt-link to="/id/controller/session">session</nuxt-link></li>
               <li><nuxt-link to="/id/controller/setkey">setKey</nuxt-link></li>
               <li><nuxt-link to="/id/controller/settheme">setTheme</nuxt-link></li>
+              <li><nuxt-link to="/id/controller/settitle">setTitle</nuxt-link></li>
             </ul>
           </li>
           <li>
@@ -151,7 +159,7 @@
       <div class="container">
         <div class="content has-text-centered">
           <p class="">Copyright &copy; 2014-2022. Dibuat sepenuh cinta di Bandung, Indonesia oleh Daeng Rosanda, S.Kom.</p>
-          <p><small>Terakhir Diperbarui 8 Maret 2022 | <NuxtLink to="/privacy-policy">Privacy Policy</NuxtLink> | <NuxtLink to="/term-condition">Term &amp; Condition</NuxtLink></small></p>
+          <p><small>Terakhir Diperbarui 31 Oktober 2022 | <NuxtLink to="/privacy-policy">Privacy Policy</NuxtLink> | <NuxtLink to="/term-condition">Term &amp; Condition</NuxtLink></small></p>
         </div>
       </div>
     </footer>

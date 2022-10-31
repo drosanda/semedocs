@@ -106,6 +106,7 @@
               <li><nuxt-link to="/4.0/controller/getcontentlanguage">getContentLanguage</nuxt-link></li>
               <li><nuxt-link to="/4.0/controller/getdescription">getDescription</nuxt-link></li>
               <li><nuxt-link to="/4.0/controller/geticon">getIcon</nuxt-link></li>
+              <li><nuxt-link to="/4.0/controller/getjscontent">getJsContent</nuxt-link></li>
               <li><nuxt-link to="/4.0/controller/getjsfooter">getJsFooter</nuxt-link></li>
               <li><nuxt-link to="/4.0/controller/getjsready">getJsReady</nuxt-link></li>
               <li><nuxt-link to="/4.0/controller/getkey">getKey</nuxt-link></li>
@@ -178,7 +179,7 @@
       <div class="container">
         <div class="content has-text-centered">
           <p class="">Copyright &copy; 2014-2022. Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
-          <p><small>Last updated on March 8, 2022 | <NuxtLink to="/privacy-policy">Privacy Policy</NuxtLink> | <NuxtLink to="/term-condition">Term &amp; Condition</NuxtLink></small></p>
+          <p><small>Last updated on Oct 31, 2022 | <NuxtLink to="/privacy-policy">Privacy Policy</NuxtLink> | <NuxtLink to="/term-condition">Term &amp; Condition</NuxtLink></small></p>
         </div>
       </div>
     </footer>
