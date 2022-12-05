@@ -4,16 +4,16 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0">4.0.3</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0/model">Model</NuxtLink></li>
+          <li class=""><NuxtLink to="/id">4.0.3 (Bahasa)</NuxtLink></li>
+          <li class=""><NuxtLink to="/id/model">Model</NuxtLink></li>
           <li class="unavailable">Where in</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Where in Method</h1>
-            <p>The <code>where_in</code> method is part of database class builder for filtering data compatible with WHERE IN Clause on SQL. This method support chained as well.</p>
+            <h1 class="">Metode Where in</h1>
+            <p>Metode <code>where_in</code> digunakan untuk menjalankan operasi WHERE IN clause on SQL. This method support chained as well.</p>
             <h2>Basic Usage</h2>
             <p>
               Here is the basic usage <code>where_in</code> method from <code>$db</code> property on <code>SENE_Model</code> class.
@@ -41,26 +41,26 @@
                 </highlight-code>
               </div>
             </div>
-            <h3>Parameters</h3>
+            <h3>Parameter</h3>
             <p>
-              This method has 2 required parameters.
+              Metode ini memiliki 2 parameter wajib.
             </p>
             <h4>$column_name</h4>
             <p>
-              The <code>$column_name</code> value can be column name of table or full qualitfied name.
+              <code>$column_name</code> dapat berisi nilai dengan nama kolom pada tabel.
             </p>
             <h4>$array_selector</h4>
             <p>
-              The <code>$array_selector</code> value can be an array contains the value for filtering data.
+              Nilai <code>$array_selector</code> dapat berisi array dari nilai-nilai yang akan dibandingkan dengan nama kolom table.
             </p>
             <h4>$is_not</h4>
             <p>
-              The <code>$is_not</code> for <code>where not in</code> operation if value is equal 1.
+              Jika nilai <code>$is_not</code> sama dengan 1, maka operasi <code>where not in</code> akan dijalankan.
             </p>
 
-            <h2>Example</h2>
+            <h2>Contoh penggunaan</h2>
             <p>
-              Here is the examples using <code>where_in</code> method in a model class.
+              Berikut ini adalah contoh penggunaan metode where_as pada file <code>where_in</code>.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -104,13 +104,13 @@
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
-                <nuxt-link to="/4.0/model/where_as/" class="btn">
+                <nuxt-link to="/id/model/where_as/" class="btn">
                   <i class="fa fa-chevron-left"></i>
                   where as method
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
-                <nuxt-link to="/4.0/model/where/" class="btn">
+                <nuxt-link to="/id/model/where/" class="btn">
                   where method
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
@@ -126,24 +126,24 @@
 </template>
 <script>
 export default {
-  layout: 'v4.0',
+  layout: 'id',
   data (){
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'Where in method',
-      description: 'Learn where_in method from $db property on SENE_Model class for Seme Framework 4',
+      title: 'Metode Where in',
+      description: 'Pelajari tentang metode where_in dari properti $db di kelas SENE_Model untuk Seme Framework 4',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
           text: 'Seme Framework'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0',
-          text: '4.0'
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id',
+          text: 'ID'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0/model',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/model',
           text: 'Model'
         }
       ],

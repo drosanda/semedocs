@@ -224,14 +224,12 @@
             </nuxt-link>
           </div>
           <div class="nav-bottom-right">
-            <nuxt-link to="/id/model/where/" class="btn">
+            <nuxt-link to="/id/model/where_in/" class="btn">
               Metode where
               <i class="fa fa-chevron-right"></i>
             </nuxt-link>
           </div>
         </div>
-
-
 
       </div>
     </div>
@@ -313,9 +311,9 @@ export default {
       "image": [
         (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
       ],
-      "dateCreated": "2021-08-01T09:04:00+07:00",
-      "datePublished": "2021-08-01T09:04:00+07:00",
-      "dateModified": "2021-08-01T09:04:00+07:00",
+      "dateCreated": "2022-12-05T19:04:00+07:00",
+      "datePublished": "2022-12-05T19:04:00+07:00",
+      "dateModified": "2022-12-05T19:04:00+07:00",
       "author": {
         "@type": "Person",
         "gender": "Male",
