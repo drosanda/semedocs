@@ -39,15 +39,10 @@
             </p>
             <h3>Memulai Ngoding PHP</h3>
             <p>
-              Kode PHP diawali dengan <code>&#x3C;?php</code> dan diakhiri atau ditutup dengan <code>?&#x3E;</code>.
-              Jadi PHP itu dibuka dengan kode <code>&#x3C;?php</code> dan ditutup dengan kode <code>&#x3C;?php</code>.
-              Namun sekarang kode PHP tidak perlu ditutup pada akhir halaman PHP, terkecuali ingin menampilkan kode selain PHP.
-            </p>
-            <p>
+              Kode PHP diawali atau dibuka dengan kode <code>&#x3C;?php</code> dan diakhiri atau ditutup dengan <code>?&#x3E;</code>.
+              Namun, sekarang kode PHP tidak perlu ditutup pada akhir halaman PHP, <b>terkecuali</b> ingin menampilkan kode selain PHP.
               Dengan adanya kode pembuka dan kode penutup, PHP dapat digabungkan dengan HTML secara langsung sehingga bisa menampilkan bagian-bagian halaman yang berasal dari PHP.
-            </p>
-            <p>
-              Untuk lebih jelasnya, bisa lihat contoh ini.
+              Untuk lebih jelasnya, bisa dilihat pada potongan kode contoh ini.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -75,7 +70,7 @@
                   &#x3C;?php
                   echo &#x27;balik lagi dari PHP&#x27;;
 
-                  //baris terakhir tidak usah pakai tutup
+                  //baris terakhir tidak pakai penutup kode PHP
                 </highlight-code>
               </div>
             </div>
@@ -1485,7 +1480,7 @@ export default {
         ],
         "dateCreated": "2020-06-26T19:12:31+07:00",
         "datePublished": "2020-06-26T19:12:39+07:00",
-        "dateModified": "2021-07-26T10:51:33+07:00",
+        "dateModified": "2023-01-12T10:52:03+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
