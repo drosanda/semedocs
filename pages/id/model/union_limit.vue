@@ -115,7 +115,7 @@
                       $this-&#x3E;db-&#x3E;where(&#x27;excerpt&#x27;,$keyword,&#x27;or&#x27;,&#x27;like%&#x27;,0,1);
                       $this-&#x3E;db-&#x3E;union_create();
 
-                      //2nd union
+                      //3rd union
                       $this-&#x3E;db-&#x3E;select(&#x27;id&#x27;);
                       $this-&#x3E;db-&#x3E;select(&#x27;title&#x27;);
                       $this-&#x3E;db-&#x3E;select(&#x27;excerpt&#x27;);
@@ -126,7 +126,7 @@
                       $this-&#x3E;db-&#x3E;where(&#x27;excerpt&#x27;,$keyword,&#x27;or&#x27;,&#x27;%like&#x27;,0,1);
                       $this-&#x3E;db-&#x3E;union_create();
 
-                      //3nd union
+                      //4th union
                       $this-&#x3E;db-&#x3E;select(&#x27;id&#x27;);
                       $this-&#x3E;db-&#x3E;select(&#x27;title&#x27;);
                       $this-&#x3E;db-&#x3E;select(&#x27;excerpt&#x27;);
@@ -243,7 +243,7 @@ export default {
         ],
         "dateCreated": "2021-08-06T10:44:00+07:00",
         "datePublished": "2021-08-06T10:44:00+07:00",
-        "dateModified": "2021-08-06T10:44:00+07:00",
+        "dateModified": "2023-01-12T10:49:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
