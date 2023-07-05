@@ -76,6 +76,7 @@
               You can put libary loader in constructor of controller or on each method in your controller.
               To use the Seme Email library, you can add a few lines of code to a controller in the Seme Framework. 
               The following is a basic example of implementing the Seme Email code in a Controller.
+              Please create a new file under <code>app/controller</code> named it <code>emailregister.php</code>, then copy paste this HTML code below into that file.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -99,6 +100,7 @@
                   &#x3C;?php
                   Class EmailRegister extends \SENE_Controller{
                     public function __construct(){
+                      parent::__construct();
                       $this-&#x3E;lib('seme_email');
                     }
                     public function index(){
@@ -185,6 +187,7 @@
                 &#x3C;?php
                 Class EmailRegister extends \SENE_Controller{
                   public function __construct(){
+                    parent::__construct();
                     $this-&#x3E;lib('seme_email');
                   }
                   public function index(){

@@ -80,6 +80,7 @@
             <p>
               Untuk pengunaan library Seme Email ini dapat dilakukan menambahkan beberapa baris kode pada sebuah controller di Seme Framework.
               Berikut ini adalah contoh dasar penerapan kode Seme Email pada sebuah Controller.
+              Buatlah sebuah file PHP didalam <code>app/controller</code>, beri nama <code>emailregister.php</code>. Kemudian copy-paste kode HTML dibawah ini kedalam file tersebut.
             </p>
 
             <div class="macwindow">
@@ -104,6 +105,7 @@
                 &#x3C;?php
                 Class EmailRegister extends \SENE_Controller{
                   public function __construct(){
+                    parent::__construct();
                     $this-&#x3E;lib('seme_email');
                   }
                   public function index(){
@@ -235,6 +237,7 @@
                 &#x3C;?php
                 Class EmailRegister extends \SENE_Controller{
                   public function __construct(){
+                    parent::__construct();
                     $this-&#x3E;lib('seme_email');
                   }
                   public function index(){
@@ -276,6 +279,31 @@
             <li>Untuk konten email terkait uang, gunakan finance@example.com dan pastikan email aktif.</li>
             <li>Untuk tujuan pemasaran harap gunakan nama asli pemasaran seperti adry@example.com dan pastikan email aktif dapat dibalas.</li>
           </ul>
+
+          <h3>Error</h3>
+          <p>Jika terjadi error dengan message: </p>
+          <pre>
+            Error
+            File: C:\xampp\htdocs\sbp\karir\kero\lib\seme_email.php
+            Line: 382
+            Error: [2] mail(): Failed to connect to mailserver at "localhost" port 25, verify your "SMTP" and "smtp_port" setting in php.ini or use ini_set()
+          </pre>
+
+          <h4>Solusi dengan MailToDisk bawaan XAMPP (Windows)</h4>
+          <p>Untuk menggunakan MailToDisk bawaan XAMPP, ikutilah langkah-langkah dibawah ini:</p>
+          <p>1. Buka oleh Notepad++ file <code>C:\xampp\php\php.ini</code>.</p>
+          <p>2. Cari <code>;sendmail_path =</code>, hapus titik koma pada awal sendmail_path.</p>
+          <p>3. Kemudian isikan nilai pada sendmail_path menjadi <code>sendmail_path ="C:/xampp/mailtodisk/mailtodisk.exe"</code></p>
+          <p>4. Setelah itu restart apache-nya, kemudian jalankan scriptnya kembali.</p>
+          <p>5. Semua email akan tersimpan sebagai file di dalam <code>C:\xampp\mailoutput</code>.</p>
+
+          <h4>Solusi dengan Postfix (linux dan mac)</h4>
+          <p>Untuk menggunakan Postfix, ikutilah langkah-langkah dibawah ini:</p>
+          <p>1. install terlebih dahulu postfix.</p>
+          <p>2. Cari <code>;sendmail_path =</code>, hapus titik koma pada awal sendmail_path.</p>
+          <p>3. Kemudian isikan nilai pada sendmail_path menjadi <code>sendmail_path ="sendmail -t -i"</code></p>
+          <p>4. Setelah itu restart apache-nya, kemudian jalankan scriptnya kembali.</p>
+          <p>5. Email akan terkirim selama tidak server tidak diblock oleh provider.</p>
 
           <div class="nav-bottom">
             <div class="nav-bottom-left">
