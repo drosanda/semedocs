@@ -14,14 +14,9 @@
           <div class="content">
             <h1 class="">Seme Email</h1>
             <p>Seme Email adalah library untuk mengirim email dari Seme Framework. Seme Email memiliki template email HTML untuk konten dinamis html.</p>
-            <hr>
-            <h2>Cara menggunakan</h2>
-            <p>Pertama kita harus memuat pustaka dengan menggunakan pustaka yang dimuat:</p>
-            <p><code>$this-&#x3E;lib('seme_email');</code></p>
-            <p>Anda dapat menempatkan pemuat perpustakaan di konstruktor pengontrol atau pada setiap metode di pengontrol Anda.</p>
-            <h2>Penggunaan Dasar</h2>
-            <p>Seme Email memiliki beberapa metode, berikut adalah daftar metode umum:</p>
 
+            <h2>Struktur Class</h2>
+            <p>Berikut ini adalah struktur kelas untuk Seme Email.</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -42,38 +37,148 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   &#x3C;?php
-                  Class Product extends SEME_Controller{
+                  Class Seme_Email {
+                    public $log;
+
+                    public function __construct() {}
+
+                    public function from($from_email_address[, $name='']): Seme_Email {}
+
+                    public function to($to_email_address[, $name='']): Seme_Email {}
+
+                    public function subject($title_or_subject_email): Seme_Email {}
+
+                    public function text($ascii_text): Seme_Email {}
+
+                    public function html($html_content): Seme_Email {}
+
+                    public function send(): Seme_Email {}
+
+                    public function template($file_template_php): Seme_Email {}
+
+                    public function replacer($array_of_string): Seme_Email {}
+
+                    public function attachment_add($filepath[, $filename='']): Seme_Email {}
+
+                    public function attachment_clear(): Seme_Email {}
+
+                    public function getLog(): string {}
+
+                    public function preview(): void {}
+                  }
+                </highlight-code>
+              </div>
+            </div>
+
+            <hr>
+            <h2>Cara menggunakan</h2>
+            <p>Pertama kita harus memuat pustaka dengan menggunakan pustaka yang dimuat:</p>
+            <p><code>$this-&#x3E;lib('seme_email');</code></p>
+            <p>Anda dapat menempatkan pemuat perpustakaan di konstruktor pengontrol atau pada setiap metode di pengontrol Anda.</p>
+            
+            <h2>Penggunaan Dasar</h2>
+            <p>
+              Untuk pengunaan library Seme Email ini dapat dilakukan menambahkan beberapa baris kode pada sebuah controller di Seme Framework.
+              Berikut ini adalah contoh dasar penerapan kode Seme Email pada sebuah Controller.
+            </p>
+
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                &#x3C;?php
+                Class EmailRegister extends \SENE_Controller{
                   public function __construct(){
-                    $this-&#x3E;lib('seme_log');
+                    $this-&#x3E;lib('seme_email');
                   }
                   public function index(){
-                    $replacer = array();
-                    $replacer['site_name'] = $this-&#x3E;site_name;
-                    $replacer['nama'] = $nama;
-                    $replacer['activation_link'] = $link;
-                    $this-&#x3E;seme_email-&#x3E;flush(); //optional
-                    $this-&#x3E;seme_email-&#x3E;replyto($this-&#x3E;site_name,$this-&#x3E;site_replyto);
-                    $this-&#x3E;seme_email-&#x3E;from($this-&#x3E;site_email,$this-&#x3E;site_name);
+                    $this-&#x3E;seme_email-&#x3E;flush();
+                    $this-&#x3E;seme_email-&#x3E;replyto('Support Example Website', 'support@cenah.co.id');
+                    $this-&#x3E;seme_email-&#x3E;from('noreply@example.com', 'Adry from Example Website');
                     $this-&#x3E;seme_email-&#x3E;subject('Registration Successful');
-                    $this-&#x3E;seme_email-&#x3E;to($email,$nama);
-                    $this-&#x3E;seme_email-&#x3E;template('account_register');
-                    $this-&#x3E;seme_email-&#x3E;replacer($replacer);
+                    $this-&#x3E;seme_email-&#x3E;to('agus.setiawan@example.com', 'Agus Setiawan');
+                    $this-&#x3E;seme_email-&#x3E;text('Thank you for registering on Example website.');
                     $this-&#x3E;seme_email-&#x3E;send();
+
+                    // opsinal untuk melihat log dari proses kirim email ini
+                    dd($this-&#x3E;seme_email-&#x3E;getLog());
                   }
                 }
               </highlight-code>
             </div>
           </div>
+          <p>
+            Untuk menjalankan proses kirim email, anda cukup memanggil class ini melalui browser. Contoh: <code>http://localhost/seme_framework/emailregister</code>.
+          </p>
+
           <h2>Metode Kelas (Class Methods)</h2>
-          <p>Seme Email memiliki beberapa metode yang dapat digunakan untuk mengirim email dengan baik.</p>
+          <p>Seme Email memiliki beberapa metode dan properti yang dapat digunakan untuk mengirim email dengan baik.</p>
+          <table class="table table-bordered">
+            <tr>
+              <th>No</th>
+              <th>Metode</th>
+              <th>Keterangan</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td><highlight-code lang="php">Seme_Email::from($from_email_address[, $name='']): Seme_Email</highlight-code></td>
+              <td>Wajib</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><highlight-code lang="php">Seme_Email::to($to_email_address[, $name='']): Seme_Email</highlight-code></td>
+              <td>Wajib</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><highlight-code lang="php">Seme_Email::subject($title_or_subject_email): Seme_Email</highlight-code></td>
+              <td>Wajib</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td><highlight-code lang="php">Seme_Email::text($ascii_text): Seme_Email</highlight-code></td>
+              <td>Wajib</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td><highlight-code lang="php">Seme_Email::html($html_content): Seme_Email</highlight-code></td>
+              <td>Opsional</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td><highlight-code lang="php">Seme_Email::send(): Seme_Email</highlight-code></td>
+              <td>Wajib</td>
+            </tr>
+          </table>
           <h3>From Method</h3>
           <p>Metode ini wajib untuk menyatakan asal email. Diperlukan dua parameter, parameter pertama adalah email dan parameter kedua adalah nama pengirim.</p>
           <h3>Subject Method</h3>
           <p>Metode ini wajib untuk menyatakan judul email.</p>
 
           <h3>To Method</h3>
-          <p>Metode ini wajib untuk mendeklarasikan tujuan alamat email. Diperlukan dua parameter, parameter pertama adalah email dan parameter kedua adalah nama pengirim. Dapat dipanggil lebih dari satu kali untuk mengirim beberapa alamat email.</p><h3>Template Method</h3>
-
+          <p>Metode ini wajib untuk mendeklarasikan tujuan alamat email. Diperlukan dua parameter, parameter pertama adalah email dan parameter kedua adalah nama pengirim. Dapat dipanggil lebih dari satu kali untuk mengirim beberapa alamat email.</p>
+          
+          <h3>Template Method</h3>
+          <p>
+            Dengan template method, kita bisa membuat template email dengan HTML. Untuk melakukannya masuk ke directory <code>kero/lib/seme_email</code>.
+            Kemudian setelah itu masuk ke directory <code>template</code>, jika belum ada buatlah terlebih dahulu. Setelah itu buat file baru bernama <code>account_register.php</code>.
+            Kemudian isikan kode HTML dibawah ini kedalam file tersebut.
+          </p>
           <div class="macwindow">
             <div class="titlebar">
               <div class="buttons">
@@ -95,14 +200,15 @@
               <highlight-code lang="html">
                 &#x3C;html&#x3E;
                 &#x3C;body&#x3E;
-                &#x3C;p&#x3E;Hi {{first_name}},&#x3C;/p&#x3E;
-                &#x3C;p&#x3E;Thank you for using seme framework&#x3C;/p&#x3E;
+                &#x3C;p&#x3E;Hi {{full_name}},&#x3C;/p&#x3E;
+                &#x3C;p&#x3E;Thank you for using registering at {{site_name}}.&#x3C;/p&#x3E;
+                &#x3C;p&#x3E;You can clicking on this link {{dashboard_link}} to go to your dashboard.&#x3C;/p&#x3E;
                 &#x3C;/body&#x3E;
                 &#x3C;/html&#x3E;
               </highlight-code>
             </div>
           </div>
-          <p>Pada script HTML di atas, kita dapat melihat kode <b>{{first_name}}</b>. Anda dapat mengganti string ini dengan nama asli melalui skrip.</p>
+          <p>Pada script HTML di atas, kita dapat melihat kode <b>{{full_name}}</b>. Anda dapat mengganti string ini dengan nama asli melalui skrip PHP dengan menggunakan replacer Method.</p>
 
           <h3>Replacer Method</h3>
           <p>Metode ini memungkinkan penggantian string pada template email dengan pengkodean. Berikut adalah contohnya:</p>
@@ -126,15 +232,38 @@
             </div>
             <div class="maccontent">
               <highlight-code lang="php">
-                $replacer = array();
-                $replacer['first_name'] = 'Agus Setiawan';
-                $this-&#x3E;seme_email-&#x3E;replacer($replacer);
+                &#x3C;?php
+                Class EmailRegister extends \SENE_Controller{
+                  public function __construct(){
+                    $this-&#x3E;lib('seme_email');
+                  }
+                  public function index(){
+                    $replacer = array();
+                    $replacer['site_name'] = 'Example Website';
+                    $replacer['full_name'] = 'Agus Setiawan';
+                    $replacer['dashboard_link'] = base_url('dashboard/');
+
+                    $this-&#x3E;seme_email-&#x3E;flush();
+                    $this-&#x3E;seme_email-&#x3E;replyto('Support Example Website', 'support@cenah.co.id');
+                    $this-&#x3E;seme_email-&#x3E;from('noreply@example.com', 'Adry from Example Website');
+                    $this-&#x3E;seme_email-&#x3E;subject('Registration Successful');
+                    $this-&#x3E;seme_email-&#x3E;to('agus.setiawan@example.com', 'Agus Setiawan');
+                    $this-&#x3E;seme_email-&#x3E;template('account_register');
+                    $this-&#x3E;seme_email-&#x3E;replacer($replacer);
+                    $this-&#x3E;seme_email-&#x3E;send();
+
+                    // opsinal untuk melihat log dari proses kirim email ini
+                    dd($this-&#x3E;seme_email-&#x3E;getLog());
+                  }
+                }
               </highlight-code>
             </div>
           </div>
-          <p>Jika contoh ini digabungkan dengan template email di atas, Anda dapat mengirim email dengan <b>{{first_name}}</b> diganti dengan <b>Agus Setiawan</b>.</p>
+          <p>Jika contoh ini digabungkan dengan template email di atas, Anda dapat mengirim email dengan <b>{{full_name}}</b> diganti dengan <b>Agus Setiawan</b>.</p>
           <h3>Flush Metode</h3>
-          <p>Gunakan metode ini untuk menghapus properti yang ditetapkan yang digunakan sebelumnya.</p>
+          <p>Gunakan metode ini untuk menghapus nilai dan properti yang telah ditetapkan yang digunakan sebelumnya.</p>
+          <h3>Preview Metode</h3>
+          <p>Gunakan metode ini untuk menampilkan ke layar email template yang telah di proses oleh library Seme Email.</p>
           <hr>
           <h2>Catatan Khusus</h2>
           <p>Mohon lebih diperhatikan jika ingin mengirim email dengan mengikuti panduan komunitas untuk penggunaan email. Jika email Anda selalu dikirim ke spam, Anda harus menggunakan domain asli dan email yang benar-benar berfungsi.</p>
@@ -175,6 +304,9 @@ export default {
   layout: 'id',
   data() {
     return {
+      full_name: '{{full_name}}',
+      site_name: '{{site_name}}',
+      dashboard_link: '{{dashboard_link}}',
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Perpustakaan Seme Email',
@@ -249,7 +381,7 @@ export default {
         ],
         "dateCreated": "2021-08-11T19:52:38+07:00",
         "datePublished": "2021-08-11T19:52:38+07:00",
-        "dateModified": "2021-06-25T17:13:04+07:00",
+        "dateModified": "2023-07-04T23:13:04+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

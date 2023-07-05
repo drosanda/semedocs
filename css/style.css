@@ -12,6 +12,10 @@ aside .menu-list a:hover, aside .menu-list a:focus {
     background-color: #ed6f75;
     color: #ffffff;
 }
+table.table.table-bordered
+{
+  border: 1px #ededed solid;
+}
 footer, .footer {
   color: #dcdcdc;
   background-color: #bf3e44;
