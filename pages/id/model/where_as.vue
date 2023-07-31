@@ -42,7 +42,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;where_as(string $column_name, mixed $filter_value [, string $operator = 'AND' [, string $relation_operator = '=' [, int $open_bracket = 0 [, int $open_bracket = 0 ]]]]): $this-&#x3E;db
+                  $this-&#x3E;db-&#x3E;where_as(string $column_name, mixed $filter_value [, string $operator = 'AND' [, string $relation_operator = '=' [, int $open_bracket = 0 [, int $close_bracket = 0 ]]]]): $this-&#x3E;db
                 </highlight-code>
               </div>
             </div>
@@ -313,7 +313,7 @@ export default {
       ],
       "dateCreated": "2022-12-05T19:04:00+07:00",
       "datePublished": "2022-12-05T19:04:00+07:00",
-      "dateModified": "2022-12-05T19:04:00+07:00",
+      "dateModified": "2023-07-31T22:31:00+07:00",
       "author": {
         "@type": "Person",
         "gender": "Male",

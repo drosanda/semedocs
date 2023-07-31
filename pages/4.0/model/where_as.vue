@@ -13,8 +13,75 @@
         <div class="column">
           <div class="content">
             <h1 class="">Where AS Method</h1>
+            <p>
+              Here is the basic usage <code>where_as</code> method from <code>$db</code> property on <code>SENE_Model</code> class.
+            </p>
+
+            <h2>Basic Usage</h2>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  $this-&#x3E;db-&#x3E;where(string $column_name, mixed $filter_value [, string $operator = 'AND' [, string $relation_operator = '=' [, int $open_bracket = 0 [, int $close_bracket = 0 ]]]]): $this-&#x3E;db
+                </highlight-code>
+              </div>
+            </div>
+
             <p>The <code>where_as</code> method is part of database class builder for filtering data compatible with WHERE Clause on SQL. This method support chained, and has flow from top to bottom while bracket are used. The <b>difference</b> is this method does not automatically escaped</p>
 
+            
+            <h3>Parameters</h3>
+            <p>Where AS method has 2 required parameters that is <b>column name</b> and <b>value</b>, another parameters are optional. Here is the completed parameters can be used by where methods</p>
+            
+            <h3>$column_name</h3>
+            <p>Column name required for filtering data from table. The columname should exist on selected table. This method has unescaped value.</p>
+            <h3>$filter_value</h3>
+            <p>Value required for matched with data on table. This method has unescaped value.</p>
+            <h3>$operator</h3>
+            <p>Default value is AND, this parameter useful for filtering data for multiple condition. Available value <b>AND</b> or <b>OR</b>. Value of this parameter is not case sensitive.</p>
+            <h3>$relation_operator</h3>
+            <p>Value required for matched $column_name with value. Available value:</p>
+            <ul>
+              <li>=</li>
+              <li>&lt;</li>
+              <li>&gt;</li>
+              <li>&lt;=</li>
+              <li>&gt;=</li>
+              <li>&lt;&gt;</li>
+              <li>like</li>
+              <li>like%</li>
+              <li>%like</li>
+              <li>%like%</li>
+              <li>notlike</li>
+              <li>notlike%</li>
+              <li>%notlike</li>
+              <li>%notlike%</li>
+            </ul>
+            <p>Value of this parameter is not case sensitive.</p>
+            <h3>$open_bracket</h3>
+            <p>Required for adding bracket for prioritize condition filtering, default value 0. Available value <b>1</b> and <b>0</b>.</p>
+            <h3>$close_bracket</h3>
+            <p>Required for adding bracket for prioritize condition filtering, default value 0. Available value <b>1</b> and <b>0</b>.</p>
+            
+            <h2>Example</h2>
+            <p>
+              Here is the basic example using <code>where_as</code> method in a model class.
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -62,71 +129,7 @@
                 </highlight-code>
               </div>
             </div>
-            <h2>Parameters</h2>
-            <p>Where method has 2 required parameters that is <b>column name</b> and <b>value</b>, another parameters are optional. Here is the completed parameters can be used by where methods</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;where(
-                  COLUMN_NAME,
-                  VALUE,
-                  &#x22; AND | OR &#x22;,
-                  &#x22;= | != | &#x3C;= | &#x3E;= | &#x3C; | &#x3E; | &#x3C;&#x3E; |
-                  like | like% | %like | %like% |
-                  notlike | notlike% |%notlike | %notlike%
-                  &#x22;,
-                  OPENBRACKET,
-                  CLOSEBRACKET
-                  );
-                </highlight-code>
-              </div>
-            </div>
-            <h3>COLUMN_NAME</h3>
-            <p>Column name required for filtering data from table. The columname should exist on selected table. This method has unescaped value.</p>
-            <h3>VALUE</h3>
-            <p>Value required for matched with data on table. This method has unescaped value.</p>
-            <h3>Combining Method</h3>
-            <p>Default value is AND, this parameter useful for filtering data for multiple condition. Available value <b>AND</b> or <b>OR</b>. Value of this parameter is not case sensitive.</p>
-            <h3>Relational Operator</h3>
-            <p>Value required for matched COLUMN_NAME with value. Available value:</p>
-            <ul>
-              <li>=</li>
-              <li>&lt;</li>
-              <li>&gt;</li>
-              <li>&lt;=</li>
-              <li>&gt;=</li>
-              <li>&lt;&gt;</li>
-              <li>like</li>
-              <li>like%</li>
-              <li>%like</li>
-              <li>%like%</li>
-              <li>notlike</li>
-              <li>notlike%</li>
-              <li>%notlike</li>
-              <li>%notlike%</li>
-            </ul>
-            <p>Value of this parameter is not case sensitive.</p>
-            <h3>OPEN BRACKET</h3>
-            <p>Required for adding bracket for prioritize condition filtering, default value 0. Available value <b>1</b> and <b>0</b>.</p>
-            <h3>CLOSE BRACKET</h3>
-            <p>Required for adding bracket for prioritize condition filtering, default value 0. Available value <b>1</b> and <b>0</b>.</p>
-            <h2>Escaping Value</h2>
+            <h3>Escaping The Value</h3>
             <p>Escaping value is required for string matching. Here is the example</p>
             <div class="macwindow">
               <div class="titlebar">
@@ -251,7 +254,7 @@ export default {
         ],
         "dateCreated": "2021-07-17T1:15:00+07:00",
         "datePublished": "2021-07-17T11:15:00+07:00",
-        "dateModified": "2021-07-17T11:26:00+07:00",
+        "dateModified": "2023-07-31T11:56:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
