@@ -144,7 +144,7 @@
                   &#160;&#160;&#160;&#160;&#160;├── navbar.php
                   &#160;&#160;&#160;&#160;&#160;├── sidebar.php
                   &#160;&#160;&#160;&#160;&#160;├── sidebar_alt.php
-                  &#160;&#160;&#160;&#160;&#160;├── sidebar_alt_chat.php
+                  &#160;&#160;&#160;&#160;&#160;├── foot.php
                   &#160;&#160;&#160;&#160;&#160;└── footer.php
                 </highlight-code>
               </div>
@@ -159,11 +159,12 @@
               </div>
             </div>
 
-            <h3>Pembuatan File theme.json &amp; script.json</h3>
+            <h3>Pembuatan File script.json &amp; theme.json</h3>
             <p>
-              File <code>theme.json</code> digunakan untuk mendefinisikan css apa saja yang akan digunakan oleh tema.
-              Buka file yang terletak di <code>app/view/admin/theme.json</code>.
-              apabila belum ada, silakan buat file tersebut dan <i>paste</i>-kan isinya dari kode dibawah ini.
+              File <code>script.json</code> digunakan untuk mendefinisikan file JavaScript (JS) apa saja yang akan digunakan oleh tema.
+              Buka file yang terletak di <code>app/view/admin/script.json</code>.
+              File ini akan eksekusi pada bagian akhir sebelum tutup BODY pada html.
+              Apabila belum ada, silakan buat file tersebut dan <i>paste</i>-kan isinya dari kode dibawah ini.
             </p>
 
             <div class="macwindow">
@@ -205,12 +206,10 @@
               </div>
             </div>
             <p>
-              Pelajari selengkapnya tentang <NuxtLink to="/id/view/theme_json/" target="_blank">theme.json <i class="fa fa-window-restore"></i></NuxtLink>.
-            </p>
-            <p>
-              Kemudian setelah itu kita akan membuat File <code>script.json</code> digunakan untuk mendefinisikan file javascript apa saja yang akan digunakan oleh tema.
-              Seme Framework akan menentukan skrip mana yang akan dimuat. Buka file yang terletak di <code>app/view/admin/script.json</code>.
-              apabila belum ada, silakan buat file tersebut dan <i>paste</i>-kan isinya dari kode dibawah ini.
+              Kemudian setelah itu kita akan membuat File <code>theme.json</code> digunakan untuk mendefinisikan file CSS apa saja yang akan digunakan oleh tema. 
+              Buka file yang terletak di <code>app/view/admin/theme.json</code>.
+              File ini akan eksekusi pada bagian HEAD html.
+              Apabila belum ada, silakan buat file tersebut dan <i>paste</i>-kan isinya dari kode dibawah ini.
             </p>
 
             <div class="macwindow">
@@ -430,7 +429,7 @@
                 <li>navbar.php, ini digunakan untuk menyimpan konten menu navigation bar</li>
                 <li>sidebar.php, ini digunakan untuk menyimpan konten menu pada menu samping kiri</li>
                 <li>sidebar_alt.php, ini digunakan untuk menyimpan konten menu pada menu samping kanan (alternatif)</li>
-                <li>sidebar_alt_chat.php, ini digunakan untuk menyimpan konten chat</li>
+                <li>foot.php, ini digunakan untuk menyimpan komponen navigation tambahan seperti <em>back to top</em></li>
                 <li>footer.php, ini digunakan untuk menyimpan informasi pada bagian akhir (bawah) halaman</li>
               </ul>
             </p>
@@ -852,7 +851,7 @@
             </div>
             
             <p>
-              Kemudian sekarang akan membuat untuk wrapper untuk footer, di <code>app/view/admin/page/html/sidebar_alt.php</code>, buatlah file tersebut kemudian copy <i>paste</i>-kan isinya dari kode dibawah ini.
+              Kemudian sekarang akan membuat untuk wrapper untuk footer, di <code>app/view/admin/page/html/foot.php</code>, buatlah file tersebut kemudian copy <i>paste</i>-kan isinya dari kode dibawah ini.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -965,8 +964,8 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="html">
-&#x3C;footer class=&#x22;clearfix&#x22;&#x3E;
-&#x9;&#x3C;div class=&#x22;pull-right&#x22; style=&#x22;color: rgba(0,0,0,0.1);&#x22;&#x3E;
+                  &#x3C;footer class=&#x22;clearfix&#x22;&#x3E;
+&#x9;&#x3C;div class=&#x22;rainbow pull-right&#x22;&#x3E;
 &#x9;&#x9;Made with &#x3C;i class=&#x22;fa fa-heart text-danger&#x22;&#x3E;&#x3C;/i&#x3E; by &#x3C;a href=&#x22;https://cenah.co.id&#x22; target=&#x22;_blank&#x22;&#x3E;cenah.co.id&#x3C;/a&#x3E;. 
 &#x9;&#x3C;/div&#x3E;
 &#x9;&#x3C;div class=&#x22;pull-left&#x22;&#x3E;
@@ -1040,9 +1039,10 @@
             </div>
 
             <h5>Implementasi di Controller</h5>
-            <p>Setelah membuat tema, beserta isinya sekarang saatnya untuk integrasikan semuanya, mulai dari Controller sampai dengan view.</p>
-            <p>Untuk melakukannya, buka file <code>app/controller/admin/home.php</code> kemudian <b>ganti</b> (<em>edit</em>) isinya dengan menggunakan kode dibawah ini:</p>
-
+            <p>
+              Setelah membuat tema, beserta isinya sekarang saatnya untuk integrasikan semuanya, mulai dari Controller sampai dengan view.
+              Untuk melakukannya, buka file <code>app/controller/admin/home.php</code> kemudian <b>ganti</b> (<em>edit</em>) isinya dengan menggunakan kode dibawah ini:
+            </p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -1095,6 +1095,15 @@ class Home extends \SENE_Controller
                 </highlight-code>
               </div>
             </div>
+            <div class="message is-info">
+              <div class="message-body">
+                <p>
+                  Pada class controller ini kita masih <code>extends</code> dari <code>SENE_Controller</code>.
+                  Nanti di tutorial selanjutnya, kita akan merubahnya
+                </p>
+              </div>
+            </div>
+
             <h5>Melihat hasilnya</h5>
             <p>Untuk melihat hasil dari pembuatan tema ini, cukup buka alamat <code>http://localhost/seme_framework/admin/</code> melalui google chrome atau firefox.</p>
             <p>Kemudian, kita lihat hasilnya apakah sama seperti <i>screenshot</i> dibawah ini.</p>

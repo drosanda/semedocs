@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id">4.0.3 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/tutorial">Tutorial</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/tutorial/introduction">admin</NuxtLink></li>
+          <li class=""><NuxtLink to="/id/tutorial/admin/introduction/">admin</NuxtLink></li>
           <li class="unavailable">Login</li>
         </ul>
       </nav>
@@ -15,19 +15,67 @@
           <div class="content">
             <h1 class="">Membuat Halaman Login untuk Admin</h1>
             <p>
-              Pada tutorial kali ini akan dibahas pembuatan login untuk admin.
-              Yang dibahas pada tutorial ini adalah:
+              Pada tutorial kali ini akan dibahas pembuatan login untuk admin. 
+              Kurang lebih contoh tampilan jadinya seperti ini.
             </p>
-            <ul>
+            
+            <div class="" style="padding: 7%;">
+              <amp-img layout="responsive" width="1155px" height="818px" :src="loginAdminExample" style="box-shadow: 3px 4px 33px -9px rgba(0,0,0,0.72); -webkit-box-shadow: 3px 4px 33px -9px rgba(0,0,0,0.72); -moz-box-shadow: 3px 4px 33px -9px rgba(0,0,0,0.72);"></amp-img>
+            </div>
+            <p>
+              Untuk membuatnya, kita akan melalui tahapan-tahapan sebagai berikut:
+            </p>
+            <ol>
               <li>Setup JI Model dan JI Controller</li>
               <li>Pembuatan table a_pengguna dan sample isinya</li>
               <li>Pembuatan concern dan model a_pengguna</li>
               <li>Pembuatan controller login dan logout</li>
               <li>Pembuatan view login</li>
               <li>Penambahan validasi &#x22;sudah login&#x22; pada controller</li>
-            </ul>
+            </ol>
+            <p>
+              Kemudian untuk struktur filenya seperti ini:
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  app/
+                  ├── controller/
+                  │&#160;└── admin/
+                  │&#160;&#160;├── login.php
+                  │&#160;&#160;├── logout.php
+                  │&#160;&#160;└── home.php
+                  └── view/
+                  &#160;└── admin/
+                  &#160;&#160;├── login
+                  &#160;&#160;│ ├── home.php
+                  &#160;&#160;│ └── home_bottom.php
+                  &#160;&#160;├── home
+                  &#160;&#160;│ ├── home.php
+                  &#160;&#160;│ └── home_bottom.php
+                  &#160;&#160;└── page/
+                  &#160;&#160;&#160;└── login.php
+                </highlight-code>
+              </div>
+            </div>
 
-            <h2>Setup JI Model dan JI Controller</h2>
+            <h2 id="part1">Setup JI Model dan JI Controller</h2>
             <p>
               JI Controller dan JI Model digunakan sebagai class helper untuk fungsi-fungsi yang akan tersedia secara umum baik pada controller maupun model.
               Sekarang kita akan merubah pengaturan terlebih dahulu, supaya seme framework memanggil JI_Model dan JI_Controller.
@@ -52,7 +100,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-$core_prefix = &#x27;ji_&#x27;;
+                  $core_prefix = &#x27;ji_&#x27;;
 $core_controller = &#x27;controller&#x27;;
 $core_model = &#x27;model&#x27;;
                 </highlight-code>
@@ -88,7 +136,6 @@ $semevar[&#x27;admin_site_title_suffix&#x27;] = &#x27; - &#x27;.$semevar[&#x27;a
                 </highlight-code>
               </div>
             </div>
-
 
             <p>
               Kemudian setelah itu kita akan buat file baru di <code>app/core/ji_controller.php</code>, isikan seperti code dibawah ini.
@@ -323,7 +370,7 @@ class JI_Model extends \SENE_Model
               </div>
             </div>
 
-            <h2>Pembuatan table a_pengguna dan sample isinya</h2>
+            <h2 id="part2">Pembuatan table a_pengguna dan sample isinya</h2>
             <p>
               Pertama-tama kita akan membuat tabel baru untuk penyimpanan data <b>pengguna admin</b>.
               Data user pada tutorial kali ini akan disimpan dalam sebuah tabel bernama <code>a_pengguna</code>.
@@ -426,9 +473,9 @@ values(
                 </div>
             </div>
 
-            <h2>Pembuatan concern dan model <code>a_pengguna</code></h2>
+            <h2 id="part3">Pembuatan concern dan model <code>a_pengguna</code></h2>
             <p>
-              Setelah mengimport tabel <code>a_pengguna</code> kedalam database, sekarang saatnya membuat model untuk tabel <code>a_pengguna</code>.
+              Setelah mengimport tabel <code>a_pengguna</code> kedalam database, sekarang saatnya membuat <code>concern class</code> untuk tabel <code>a_pengguna</code>.
               Caranya buat file baru di <code>app/model/a_pengguna_concern.php</code>, kemudian <i>copy paste</i> kode dibawah ini dan simpan perubahan pada file tersebut.
             </p>
             <div class="macwindow">
@@ -536,8 +583,73 @@ class A_Pengguna_Model extends \Model\A_Pengguna_Concern
             <h2>Membuat View dan Controller untuk halaman Login</h2>
             <p>
               Sekarang kita akan bikin view untuk tampilan login beserta controllernya (login &amp; logout).
-              Pertama-tama kita akan buat dulu view nya.
-              Buatlah file baru di <code>app/view/admin/login/home.php</code>, kemudian <em>copy</em> <em>paste</em> kode dibawah ini.
+              Pertama-tama kita akan buat dulu layout view untuk login.
+              Buatlah file baru di <code>app/view/admin/page/login.php</code>, isikan seperti code dibawah ini.
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="html">
+                  &#x3C;!DOCTYPE html&#x3E;
+&#x3C;html class=&#x22;no-js&#x22; lang=&#x22;en&#x22;&#x3E;
+&#x9;&#x3C;?php $this-&#x3E;getThemeElement(&#x22;page/html/head&#x22;,$__forward); ?&#x3E;
+&#x9;&#x3C;body&#x3E;
+&#x9;&#x9;&#x3C;!-- Main Container --&#x3E;
+&#x9;&#x9;&#x3C;?php $this-&#x3E;getThemeContent(); ?&#x3E;
+&#x9;&#x9;&#x3C;!-- Main Container End --&#x3E;
+
+&#x9;&#x9;&#x3C;!-- jQuery, Bootstrap.js, jQuery plugins and Custom JS code --&#x3E;
+&#x9;&#x9;&#x3C;?php $this-&#x3E;getJsFooter(); ?&#x3E;
+
+&#x9;&#x9;&#x3C;!-- Load and execute javascript code used only in this page --&#x3E;
+&#x9;&#x9;&#x3C;script&#x3E;
+&#x9;&#x9;var base_url = &#x27;&#x3C;?=base_url_admin()?&#x3E;&#x27;;
+&#x9;&#x9;var Login = function(){
+&#x9;&#x9;&#x9;return {
+&#x9;&#x9;&#x9;&#x9;init: function(){
+
+&#x9;&#x9;&#x9;&#x9;}
+&#x9;&#x9;&#x9;}
+&#x9;&#x9;}();
+&#x9;&#x9;&#x9;$(document).ready(function(e){
+&#x9;&#x9;&#x9;&#x9;&#x3C;?php $this-&#x3E;getJsReady(); ?&#x3E;
+&#x9;&#x9;&#x9;});
+&#x9;&#x9;&#x9;&#x3C;?php $this-&#x3E;getJsContent(); ?&#x3E;
+&#x9;&#x9;&#x3C;/script&#x3E;
+&#x9;&#x3C;/body&#x3E;
+&#x3C;/html&#x3E;
+                </highlight-code>
+              </div>
+            </div>
+
+            <div class="message is-info">
+              <div class="message-body">
+                <p>
+                  Alasan membuat layout baru adalah supaya wrapper HTML untuk login
+                  memiliki desain yang berbeda dengan tampilan admin.
+                </p>
+              </div>
+            </div>
+
+            <p>
+              Kemudian sekarang kita akan buat form login.
+              Buatlah file baru di <code>app/view/admin/login/home.php</code>,
+              <em>copy</em> <em>paste</em> isinya dengan kode dibawah ini.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -925,6 +1037,14 @@ class Home extends \JI_Controller
                 </highlight-code>
               </div>
             </div>
+            <div class="message is-info">
+              <div class="message-body">
+                <p>
+                  Pada class controller ini kita sudah <code>extends</code> dari <code>JI_Controller</code> tidak seperti
+                  pada tutorial sebelumnya masih menggunakan class default dari Seme Framework.
+                </p>
+              </div>
+            </div>
             
             <h2>Selesai...!</h2>
             <p>
@@ -956,8 +1076,8 @@ class Home extends \JI_Controller
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/id/tutorial/send-email" class="btn">
-            Tutorial: Kirim Email
+          <nuxt-link to="/id/tutorial/admin/perusahaan-master-data" class="btn">
+            Tutorial: Modul Master Data Perusahaan
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
