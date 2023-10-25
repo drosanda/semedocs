@@ -1307,7 +1307,7 @@ class MasterData extends \JI_Controller
               </div>
 
               <p>
-                Lalu kita buat komponen untuk list option di modul perusahaan saja, filenya ada di <code>app/view/admin/perusahaan/company/_option_utype.php</code>,
+                Lalu kita buat komponen untuk list option di modul perusahaan saja, filenya ada di <code>app/view/admin/perusahaan/masterdata/_option_utype.php</code>,
                 kemudian <em>copy paste</em> kode dibawah ini
               </p>
               <div class="macwindow">
