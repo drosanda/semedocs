@@ -1243,38 +1243,7 @@ class MasterData extends \JI_Controller
                   </highlight-code>
                 </div>
               </div>
-
-              <p>
-                Selanjutnya komponen untuk button simpan yang akan digunakan oleh setiap isian form.
-                Buatlah file baru di <code>app/view/admin/page/component/simpan_button.php</code>,
-                kemudian <em>copy paste</em> kode dibawah ini
-              </p>
-              <div class="macwindow">
-                <div class="titlebar">
-                  <div class="buttons">
-                    <div class="close">
-                      <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                      <!-- close button link -->
-                    </div>
-                    <div class="minimize">
-                      <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                      <!-- minimize button link -->
-                    </div>
-                    <div class="zoom">
-                      <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                      <!-- zoom button link -->
-                    </div>
-                  </div>
-                </div>
-                <div class="maccontent">
-                  <highlight-code lang="html">
-                    &#x3C;button type=&#x22;submit&#x22; class=&#x22;btn btn-primary btn-submit&#x22;&#x3E;
-    Simpan &#x3C;i class=&#x22;fa fa-save icon-submit&#x22;&#x3E;&#x3C;/i&#x3E;
-&#x3C;/button&#x3E;
-                  </highlight-code>
-                </div>
-              </div>
-
+              
               <p>
                 Selanjutnya komponen untuk button simpan yang akan digunakan oleh setiap isian form.
                 Buatlah file baru di <code>app/view/admin/page/component/simpan_button.php</code>,
