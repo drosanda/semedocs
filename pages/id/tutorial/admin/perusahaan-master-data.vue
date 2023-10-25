@@ -77,6 +77,7 @@
                     &#160;&#160;│&#160;&#160;&#160;&#160;└── sidebar.php
                     &#160;&#160;└── perusahaan/
                     &#160;&#160;&#160;&#160;└── masterdata/
+                    &#160;&#160;&#160;&#160;&#160;&#160;├── _option_utype.php
                     &#160;&#160;&#160;&#160;&#160;&#160;├── baru_bottom.php
                     &#160;&#160;&#160;&#160;&#160;&#160;├── baru_modal.php
                     &#160;&#160;&#160;&#160;&#160;&#160;├── baru.php
@@ -1306,6 +1307,35 @@ class MasterData extends \JI_Controller
               </div>
 
               <p>
+                Lalu kita buat komponen untuk list option di modul perusahaan saja, filenya ada di <code>app/view/admin/perusahaan/company/_option_utype.php</code>,
+                kemudian <em>copy paste</em> kode dibawah ini
+              </p>
+              <div class="macwindow">
+                <div class="titlebar">
+                  <div class="buttons">
+                    <div class="close">
+                      <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                      <!-- close button link -->
+                    </div>
+                    <div class="minimize">
+                      <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                      <!-- minimize button link -->
+                    </div>
+                    <div class="zoom">
+                      <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                      <!-- zoom button link -->
+                    </div>
+                  </div>
+                </div>
+                <div class="maccontent">
+                  <highlight-code lang="html">
+                    &#x3C;option value=&#x22;Pusat&#x22;&#x3E;Pusat&#x3C;/option&#x3E;
+&#x3C;option value=&#x22;Cabang&#x22;&#x3E;Cabang&#x3C;/option&#x3E;
+                  </highlight-code>
+                </div>
+              </div>
+
+              <p>
                 Terakhir komponen untuk button simpan perubahan yang akan digunakan oleh setiap isian form.
                 Buatlah file baru di <code>app/view/admin/page/component/simpan_perubahan_button.php</code>,
                 kemudian <em>copy paste</em> kode dibawah ini
@@ -2414,9 +2444,9 @@ $(&#x22;#form_edit&#x22;).on(&#x22;submit&#x22;,function(e){
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-09-24T22:53:01+07:00",
-        "datePublished": "2021-09-24T22:53:01+07:00",
-        "dateModified": "2021-09-25T22:53:01+07:00",
+        "dateCreated": "2023-10-24T22:53:01+07:00",
+        "datePublished": "2023-10-24T22:53:01+07:00",
+        "dateModified": "2023-10-25T22:53:01+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
