@@ -292,6 +292,50 @@
             </div>
           </div>
 
+          <h2 id="fungsi_redir" class="">Metode <code>{{redir}}</code> (Redirect)</h2>
+          <p>
+            Metode <code>{{redir}}</code> digunakan untuk mengalihkan halaman web pada suatu halaman yang sama atau halaman lain.
+            Pada metode ini terdiri dari 3 parameter yaitu:
+            <ul>
+                <li><code>target_url</code> *wajib diisi, dimana berisi alamat url lengkap.</li>
+                <li><code>waiting_time</code> default: 0, berisi waktu tunggu dalam satuan detik.</li>
+                <li><code>redirect_method</code> default: 0, jenis atau metode untuk melakukan proses redirect. Jika nilainya 0 maka akan menggunakan redirect header PHP selain itu akan menggunakan redirect meta http.</li>
+            </ul>
+          </p>
+
+          <h3 class="">Contoh Penggunaan metode <code>redir</code></h3>
+          <p>
+            Berikut ini adalah contoh penggunaan dari metode <code>redir</code>:
+          </p>
+          <div class="macwindow">
+            <div class="titlebar">
+              <div class="buttons">
+                <div class="close">
+                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                  <!-- close button link -->
+                </div>
+                <div class="minimize">
+                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                  <!-- minimize button link -->
+                </div>
+                <div class="zoom">
+                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                  <!-- zoom button link -->
+                </div>
+              </div>
+            </div>
+            <div class="maccontent">
+              <highlight-code lang="php">
+                ...
+                redir(base_url('login'));
+                ...
+                ...
+                redir(base_url('login'), 5, 1);
+                ...
+              </highlight-code>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -390,7 +434,7 @@ export default {
         ],
         "dateCreated": "2021-08-11T19:52:38+07:00",
         "datePublished": "2021-08-11T19:52:38+07:00",
-        "dateModified": "2022-10-11T08:57:00+07:00",
+        "dateModified": "2024-06-11T14:40:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

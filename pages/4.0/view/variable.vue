@@ -7,55 +7,19 @@
           <li class=""><NuxtLink to="/4.0">4.0.3</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0/view">View</NuxtLink></li>
           <li class="unavailable">Variable</li>
-          <li class="unavailable">base_url</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">The <code>{{base_url}}</code> Variable</h1>
+            <h1 class="">Variable for Template in Seme Framework View</h1>
             <p>
-              Seme Framework support <code>{{base_url}}</code> keyword for replacing the keyword with <code>$site</code> value in <NuxtLink to="/4.0/configuration/">Seme Framework Configuration</NuxtLink>.
-            </p>
-
-            <h2 class="">The Configuration</h2>
-            <p>
-              The BASE URL purpose is to get base url value from the configuration. Here is example codes on development.php file.
-            </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  ...
-                  $site = &#x27;http://localhost/seme_framework/&#x27;;
-                  ...
-                </highlight-code>
-              </div>
-            </div>
-
-            <h2 class="">How It Works</h2>
-            <p>
-              This <code>{{base_url}}</code> keyword only processed on <code>theme.json</code> and <code>script.json</code> files.
-            </p>
-
-            <h2 class="">Fallback</h2>
-            <p>
-              If configuration fails, this will be replaced by empty string.
+              There is some variables that defined in Seme Framework.
+              <ul>
+                <li><code>{{base_url}}</code>, use for replace the base_url in theme.json dan script.json file.</li>
+                <li><code>{{cdn_url}}</code> use for replace the cdn_url in theme.json dan script.json file.</li>
+                <li><code>$__forward</code> forward all defined variables in current view to another view element.</li>
+              </ul>
             </p>
 
           </div>
@@ -65,14 +29,14 @@
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/4.0/view/variable" class="btn">
+          <nuxt-link to="/4.0/view/" class="btn">
             <i class="fa fa-chevron-left"></i>
             View
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/4.0/view/cdn_url" class="btn">
-            cdn_url
+          <nuxt-link to="/4.0/view/base_url" class="btn">
+            base_url
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
@@ -90,8 +54,8 @@ export default {
       cdn_url: '{{cdn_url}}',
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'The {{base_url}} Variable',
-      description: 'Learn how to use the {{base_url}} variable for script.json and theme.json in Seme Framework 4.',
+      title: 'Variable in Seme Framework View',
+      description: 'Learn more about variable in theme.json and script.json.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -104,10 +68,6 @@ export default {
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0/view',
           text: 'View'
-        },
-        {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0/view/variable',
-          text: 'Variable'
         }
       ],
     }
@@ -162,7 +122,7 @@ export default {
         ],
         "dateCreated": "2021-07-18T10:31:00+07:00",
         "datePublished": "2021-07-18T10:32:00+07:00",
-        "dateModified": "2024-06-11T17:30:31+07:00",
+        "dateModified": "2024-06-11T17:27:31+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

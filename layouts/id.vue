@@ -92,8 +92,7 @@
           <li>
             <nuxt-link to="/id/view">View</nuxt-link>
             <ul>
-              <li><nuxt-link to="/id/view/base_url">base_url</nuxt-link></li>
-              <li><nuxt-link to="/id/view/cdn_url">cdn_url</nuxt-link></li>
+              <li><nuxt-link to="/id/view/variable">Variabel</nuxt-link></li>
               <li><nuxt-link to="/id/view/theme_json">theme_json</nuxt-link></li>
               <li><nuxt-link to="/id/view/script_json">script_json</nuxt-link></li>
               <li><nuxt-link to="/id/view/theme">Membuat Tema</nuxt-link></li>
@@ -165,8 +164,8 @@
     <footer class="footer">
       <div class="container">
         <div class="content has-text-centered">
-          <p class="">Copyright &copy; 2014-2022. Dibuat sepenuh cinta di Bandung, Indonesia oleh Daeng Rosanda, S.Kom.</p>
-          <p><small>Terakhir Diperbarui 12 Januari 2023 | <NuxtLink to="/privacy-policy">Privacy Policy</NuxtLink> | <NuxtLink to="/term-condition">Term &amp; Condition</NuxtLink></small></p>
+          <p class="">Copyright &copy; 2014-2024. Dibuat sepenuh cinta di Bandung, Indonesia oleh Daeng Rosanda, S.Kom.</p>
+          <p><small>Terakhir Diperbarui 12 Juni 2024 | <NuxtLink to="/privacy-policy">Privacy Policy</NuxtLink> | <NuxtLink to="/term-condition">Term &amp; Condition</NuxtLink></small></p>
         </div>
       </div>
     </footer>

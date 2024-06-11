@@ -7,82 +7,20 @@
           <li class=""><NuxtLink to="/id/">4.0.3 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/view/">View</NuxtLink></li>
           <li class="unavailable">Variabel</li>
-          <li class="unavailable">cdn_url</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Variabel <code>{{cdn_url}}</code></h1>
+            <h1 class="">Variabel pada View dan Template</h1>
             <p>
-              Variabel <code>{{cdn_url}}</code> digunakan untuk menggantikan nilai tersebut dengan nilai yang ada pada <NuxtLink to="/id/configuration/">Pengaturan Seme Framework</NuxtLink> dalam nilai variabel <code>$cdn_url</code>.
+              Beberapa variabel telah disediakan untuk memudahkan dalam penggunaan view dan template di Seme Framework.
+              <ul>
+                <li><code>{{base_url}}</code>, digunakan untuk mengganti nilai base_url pada theme.json dan script.json.</li>
+                <li><code>{{cdn_url}}</code> digunakan untuk mengganti nilai base_url pada theme.json dan script.json.</li>
+                <li><code>$__forward</code> isi data dari variabel view sebelumnya akan diteruskan pada halaman baru.</li>
+              </ul>
             </p>
-
-            <h2 class="">Contoh Pengaturan</h2>
-            <p>
-              Nilai dari CDN URL diambil dari pengaturan Seme Framework, berikut ini adalah contoh pengaturan dari file development.php.
-            </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  ...
-                  $cdn_url = &#x27;https://cdn.cenah.co.id/&#x27;;
-                  ...
-                </highlight-code>
-              </div>
-            </div>
-
-            <h2 class="">Cara Kerja</h2>
-            <p>
-              Kode <code>{{cdn_url}}</code> hanya akan diproses ketika digunakan dalam file <code>theme.json</code> dan <code>script.json</code>.
-            </p>
-
-            <h2 class="">Fallback</h2>
-            <p>
-              Apabila pengaturan gagal diambil, maka nilai akan digantikan dari isi variabel <code>$base_url</code>.
-            </p>
-
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  ...
-                  $site = &#x27;http://localhost/seme_framework/&#x27;;
-                  ...
-                </highlight-code>
-              </div>
-            </div>
 
           </div>
         </div>
@@ -91,14 +29,14 @@
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/id/view/base_url/" class="btn">
+          <nuxt-link to="/id/view/" class="btn">
             <i class="fa fa-chevron-left"></i>
-            base_url
+            View
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/id/view/redir_method" class="btn">
-            redir
+          <nuxt-link to="/id/view/base_url" class="btn">
+            base_url
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
@@ -116,8 +54,8 @@ export default {
       cdn_url: '{{cdn_url}}',
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'Variabel {{cdn_url}}',
-      description: 'Pelajari selengkapnya tentang penggunaan Variabel {{cdn_url}} pada theme.json atau script json di Seme Framework 4.',
+      title: 'Variabel pada View dan Template',
+      description: 'Pelajari selengkapnya tentang penggunaan Variabel pada View dan Template di Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -130,10 +68,6 @@ export default {
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/view',
           text: 'View'
-        },
-        {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/view/variable',
-          text: 'Variabel'
         }
       ],
     }
@@ -189,9 +123,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-19T20:31:00+07:00",
-        "datePublished": "2021-07-19T20:32:00+07:00",
-        "dateModified": "2021-07-19T23:18:31+07:00",
+        "dateCreated": "2024-06-11T14:27:00+07:00",
+        "datePublished": "2024-067-11T14:27:00+07:00",
+        "dateModified": "2024-06-11T14:38:27+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
