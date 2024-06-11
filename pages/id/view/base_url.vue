@@ -6,15 +6,16 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.3 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/view/">View</NuxtLink></li>
+          <li class="unavailable">Variabel</li>
           <li class="unavailable">base_url</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Kode <code>{{base_url}}</code></h1>
+            <h1 class="">Variabel <code>{{base_url}}</code></h1>
             <p>
-              Kode <code>{{base_url}}</code> digunakan untuk menggantikan nilai tersebut dengan nilai yang ada pada <NuxtLink to="/id/configuration/">Pengaturan Seme Framework</NuxtLink> dalam nilai variabel <code>$site</code>.
+              Variabel <code>{{base_url}}</code> digunakan untuk menggantikan nilai tersebut dengan nilai yang ada pada <NuxtLink to="/id/configuration/">Pengaturan Seme Framework</NuxtLink> dalam nilai variabel <code>$site</code>.
             </p>
 
             <h2 class="">Contoh Pengaturan</h2>
@@ -64,9 +65,9 @@
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/id/view/" class="btn">
+          <nuxt-link to="/id/view/variable" class="btn">
             <i class="fa fa-chevron-left"></i>
-            View
+            Variabel
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
@@ -89,8 +90,8 @@ export default {
       cdn_url: '{{cdn_url}}',
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'Kode {{base_url}}',
-      description: 'Pelajari selengkapnya tentang penggunaan kode {{base_url}} pada Seme Framework 4.',
+      title: 'Variabel {{base_url}}',
+      description: 'Pelajari selengkapnya tentang penggunaan Variabel {{base_url}} pada theme.json atau script json di Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -103,6 +104,10 @@ export default {
         {
           url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/view',
           text: 'View'
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/view/variable',
+          text: 'Variabel'
         }
       ],
     }

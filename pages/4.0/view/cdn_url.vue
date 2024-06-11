@@ -6,13 +6,14 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0">4.0.3</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0/view">View</NuxtLink></li>
+          <li class="unavailable">Variable</li>
           <li class="unavailable">cdn_url</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">The <code>{{cdn_url}}</code> Keyword</h1>
+            <h1 class="">The <code>{{cdn_url}}</code> Variable</h1>
             <p>
               Seme Framework support <code>{{cdn_url}}</code> keyword for replacing the keyword with <code>$cdn_url</code> value in <NuxtLink to="/4.0/configuration/">Seme Framework Configuration</NuxtLink>.
             </p>
@@ -115,8 +116,8 @@ export default {
       cdn_url: '{{cdn_url}}',
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'The {{cdn_url}} keyword',
-      description: 'Learn how to use The {{cdn_url}} keyword on Seme Framework 4.',
+      title: 'The {{cdn_url}} Variable',
+      description: 'Learn how to use the {{cdn_url}} variable for script.json and theme.json in Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

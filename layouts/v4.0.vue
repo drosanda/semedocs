@@ -85,6 +85,7 @@
           <li>
             <nuxt-link to="/4.0/view">View</nuxt-link>
             <ul>
+              <li><nuxt-link to="/4.0/view/variable">Variable</nuxt-link></li>
               <li><nuxt-link to="/4.0/view/theme">Themes</nuxt-link></li>
               <li><nuxt-link to="/4.0/view/layout">Layout</nuxt-link></li>
               <li><nuxt-link to="/4.0/view/base_url">base_url</nuxt-link></li>
@@ -180,8 +181,8 @@
     <footer class="footer">
       <div class="container">
         <div class="content has-text-centered">
-          <p class="">Copyright &copy; 2014-2023. Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
-          <p><small>Last updated on Jan 12, 2023 | <NuxtLink to="/privacy-policy">Privacy Policy</NuxtLink> | <NuxtLink to="/term-condition">Term &amp; Condition</NuxtLink></small></p>
+          <p class="">Copyright &copy; 2014-2024. Made with Love in Bandung, Indonesia by Daeng Rosanda, S.Kom.</p>
+          <p><small>Last updated on Jan 12, 2024 | <NuxtLink to="/privacy-policy">Privacy Policy</NuxtLink> | <NuxtLink to="/term-condition">Term &amp; Condition</NuxtLink></small></p>
         </div>
       </div>
     </footer>

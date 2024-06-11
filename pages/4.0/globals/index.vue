@@ -121,6 +121,50 @@
                 </highlight-code>
               </div>
             </div>
+
+            <h2 id="fungsi_redir" class="">Redir Method (Redirect)</h2>
+            <p>
+              <code>{{redir}}</code> method purpose for redirecting current page in a controller to another url.
+              This method has 3 parameters:
+              <ul>
+                  <li><code>target_url</code> *mandatory, contains string of target URL.</li>
+                  <li><code>waiting_time</code> default: 0, wait time before redirect in second(s).</li>
+                  <li><code>redirect_method</code> default: 0, if 1 redirect method using HTML otherwise using PHP header.</li>
+              </ul>
+            </p>
+
+            <h3 class="">Example</h3>
+            <p>
+              Here is the example for redir method:
+            </p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  ...
+                  redir(base_url('login'));
+                  ...
+                  ...
+                  redir(base_url('login'), 5, 1);
+                  ...
+                </highlight-code>
+              </div>
+            </div>
             
           </div>
         </div>
@@ -150,6 +194,7 @@ export default {
   layout: 'v4.0',
   data (){
     return {
+      redir: 'redir',
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
       title: 'Global Variables and Functions',
@@ -217,7 +262,7 @@ export default {
         ],
         "dateCreated": "2021-08-11T19:52:38+07:00",
         "datePublished": "2021-08-11T19:52:38+07:00",
-        "dateModified": "2022-10-11T08:57:00+07:00",
+        "dateModified": "2024-06-11T17:22:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

@@ -240,14 +240,14 @@
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/id/model/where/" class="btn">
+          <nuxt-link to="/id/model/where" class="btn">
           <i class="fa fa-chevron-left"></i>
             Model Where
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/id/view/base_url/" class="btn">
-            base_url
+          <nuxt-link to="/id/view/variable" class="btn">
+            Variabel
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
