@@ -1648,17 +1648,7 @@ class Logout extends \JI_Controller
                   </section>
                   
                   
-                  <h3>View</h3>
-                  <p>
-                    The view is contains many html files and 2 json files that will be used to display the application.
-                    The pattern of view we split is by point of view. Lets say, in our application there will be general user and administrator user.
-                    So, for the view we will splitted it by point of view.
-                    Here is the example of directory structure.
-                  </p>
-                  <pre>
-app/view/admin
-app/view/front
-                  </pre>
+                  
                 </section>
 
 
