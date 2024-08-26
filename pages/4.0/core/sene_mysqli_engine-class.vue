@@ -5,20 +5,20 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0">4.0.3</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0/model">Model</NuxtLink></li>
-          <li class="unavailable">Order By</li>
+          <li class=""><NuxtLink to="/4.0/core/">Core</NuxtLink></li>
+          <li class="unavailable">sene_mysqli_engine Class</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Order By Method</h1>
-            <p>The <code>order_by</code> method is part of database class builder for sorting result query.</p>
-
-            <h2>Basic Usage</h2>
+            <h1 class="">sene_mysqli_engine Class</h1>
             <p>
-              Here is the basic usage <code>order_by</code> method from <code>$db</code> property on <NuxtLink to="/4.0/model/#SENE_Model" target="_blank">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
+              The <code>sene_mysqli_engine</code> class is a custom-built engine for interacting with MySQL and MariaDB databases. It provides a set of methods to perform various database operations such as querying, inserting, updating, and deleting data.
             </p>
+
+            <h2>Class Synopsis</h2>
+            
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -37,73 +37,92 @@
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;order_by(string $column_name, string $sort_direction): $this-&#x3E;db
-                </highlight-code>
-              </div>
-            </div>
-            <h2>Parameters</h2>
-            <p>This method has 2 required parameters.</p>
-            <h3>$column_name</h3>
-            <p>The <b>$column_name</b> value can be filled by column name or function string.</p>
-            <h3>$sort_direction</h3>
-            <p>
-              The <b>$sort_direction</b> value can be string like:
-              <ul>
-                <li><code>asc</code> for ascending or,</li>
-                <li><code>desc</code> for descending</li>
-              </ul>
-            </p>
+                <highlight-code lang="php">class SENE_MySQLi_Engine
+{
+    // properties
+    protected static $__instance;
+    public $__mysqli;
+    protected $koneksi;
+    protected $fieldname = array();
+    protected $fieldvalue = array();
+    public $last_id = 0;
+    public $in_select = &#x27;&#x27;;
+    public $in_where = &#x27;&#x27;;
+    public $in_order = &#x27;&#x27;;
+    public $in_group = &#x27;&#x27;;
+    public $table = &#x27;&#x27;;
+    public $is_flush = &#x27;&#x27;;
+    public $is_cache = &#x27;&#x27;;
+    public $page = &#x27;&#x27;;
+    public $pagesize = &#x27;&#x27;;
+    public $cache_save = &#x27;&#x27;;
+    public $cache_flush = &#x27;&#x27;;
+    public $is_limit=0;
+    public $tis_limit=0;
+    public $limit_a=0;
+    public $limit_b=0;
+    public $as_from=0;
+    public $join=0;
+    public $in_join=0;
+    public $join_multi=0;
+    public $in_join_multi=0;
+    public $query_last;
+    public $union;
+    public $is_debug;
 
-            <h2>Example</h2>
-            <p>
-              For example we assumed want to retrieve newest articles from blog table.
-            </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  &lt;?php
-                  class Blog_Model extends \SENE_Model{
-                    public $tbl = &#039;blog&#039;;
-                    public $tbl_as = &#039;b&#039;;
-                    public function __construct(){
-                      parent::__construct();
-                    }
-                    public function getLatest($di){
-                      $this-&gt;db-&gt;order_by(&quot;create_date&quot;,&quot;desc&quot;);
-                      return $this-&gt;db-&gt;get();
-                    }
-                  }
+    //methods
+    public function __construct();
+
+    private function has_bracket_open(int $flag): self;
+    private function has_bracket_close(int $flag): self;
+
+    public function autocommit(int $var): int;
+    public function begin(): int;
+    public function commit(): int;
+    public function rollback(): int;
+    public function savepoint(): int;
+
+    public function exec(string $sql): int;
+    public function query(string $sql): array;
+
+    public function lastId(): int;
+    public function esc(string $value): string;
+    
+    public function insert(string $table_name, array $data_to_insert, [int $array_of_array_flag = 0 [, int $debug_flag=0]]): string;
+    public function update(string $table_name, array $data_to_update [, int $debug_flag=0]): string;
+    public function delete(string $table_name [, int $debug_flag=0]): string;
+
+    public function select(string $column_name [, string $column_name_alias]): self;
+    public function select_as(string $column_name, string $column_name_alias): self;
+    public function from(string $table_name [, string $table_name_alias]): self;
+    public function join(string $table2, string $table2_alias, string $table2_column_to_joined, string $table1_alias, string $table1_column_to_joined [, string $join_type=&#x27;&#x27;]): self;
+
+    public function between(string $column_name, string $value_from, string $value_to): self;
+    public function where(string $column_name, mixed $filter_value [, string $operator = &#x27;AND&#x27; [, string $relation_operator = &#x27;=&#x27; [, int $bracket_open = 0 [, int $bracket_close = 0 ]]]]): self;
+    public function where_as(string $column_name, mixed $filter_value [, string $operator = &#x27;AND&#x27; [, string $relation_operator = &#x27;=&#x27; [, int $bracket_open = 0 [, int $bracket_close = 0 ]]]]): self;
+    public function where_in(string $column_name, array $array_selector[, int $where_not_in_flag=0]): self;
+    public function order_by(string $column_name, string $sort_direction): self;
+    public function limit(int $offset, int $count): self;
+    public function page(int $page, int $page_size): self;
+    public function flushQuery(): self;
+
+    public function get(string $result_type [, int $debug_flag=0]): self;
+    public function get_first(int $result_type [, int $debug_flag=0]): self;
+}
                 </highlight-code>
               </div>
             </div>
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
-                <nuxt-link to="/4.0/model/limit/" class="btn">
+                <nuxt-link to="/4.0/core/sene_model-class/" class="btn">
                   <i class="fa fa-chevron-left"></i>
-                  limit Method
+                  sene_model class
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
-                <nuxt-link to="/4.0/model/page/" class="btn">
-                  page Method
+                <nuxt-link to="/4.0/core//" class="btn">
+                  Core
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
@@ -123,8 +142,8 @@ export default {
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'Order By Method',
-      description: 'Learn more about order_by method from $db property on SENE_Model class for Seme Framework 4.',
+      title: 'SENE_MySQLi_Engine Class',
+      description: 'Learn more about properti and method of SENE_MySQLi_Engine Class on Seme Framework 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
@@ -135,8 +154,8 @@ export default {
           text: '4.0'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0/model',
-          text: 'Model'
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0/core',
+          text: 'core'
         }
       ],
     }
@@ -189,9 +208,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-12T21:33:00+07:00",
-        "datePublished": "2021-07-12T21:33:00+07:00",
-        "dateModified": "2021-07-12T21:34:00+07:00",
+        "dateCreated": "2024-08-26T02:57:00+07:00",
+        "datePublished": "22024-08-26T02:57:00+07:00",
+        "dateModified": "2024-08-26T02:57:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

@@ -57,6 +57,7 @@
               <li><nuxt-link to="/4.0/model/between">between</nuxt-link></li>
               <li><nuxt-link to="/4.0/model/composite_create">composite_create</nuxt-link></li>
               <li><nuxt-link to="/4.0/model/delete">delete</nuxt-link></li>
+              <li><nuxt-link to="/4.0/model/esc">esc</nuxt-link></li>
               <li><nuxt-link to="/4.0/model/exec">exec</nuxt-link></li>
               <li><nuxt-link to="/4.0/model/from">from</nuxt-link></li>
               <li><nuxt-link to="/4.0/model/get_first">get_first</nuxt-link></li>
@@ -125,7 +126,6 @@
               <li><nuxt-link to="/4.0/controller/putjscontent">putJsContent</nuxt-link></li>
               <li><nuxt-link to="/4.0/controller/putjsfooter">putJsFooter</nuxt-link></li>
               <li><nuxt-link to="/4.0/controller/putjsready">putJsReady</nuxt-link></li>
-              <li><nuxt-link to="/4.0/controller/putthemecontent">putThemeContent</nuxt-link></li>
               <li><nuxt-link to="/4.0/controller/render">render</nuxt-link></li>
               <li><nuxt-link to="/4.0/controller/resetthemecontent">resetThemeContent</nuxt-link></li>
               <li><nuxt-link to="/4.0/controller/session">session</nuxt-link></li>
@@ -153,6 +153,8 @@
             <ul>
               <li><nuxt-link to="/4.0/core/controller">Controller</nuxt-link></li>
               <li><nuxt-link to="/4.0/core/model">Model</nuxt-link></li>
+              <li><nuxt-link to="/4.0/core/sene_model-class">sene_model class</nuxt-link></li>
+              <li><nuxt-link to="/4.0/core/sene_mysqli_engine-class">sene_mysqli_engine class</nuxt-link></li>
             </ul>
           </li>
           <li><nuxt-link to="/issue">Issue</nuxt-link></li>

@@ -12,8 +12,14 @@
         <div class="column">
           <div class="content">
             <h1 class="">Requirements</h1>
-            <p>This framework runs fine at PHP 5.6, but PHP 7.4.x is recommended regarding to its security performance.</p>
-            <p>Also, Seme Framework requires some PHP extension including:</p>
+            <p>
+              Seme Framework can run on PHP version from 5.4 to 8.2. But, not working on Php version 8.0. Also Seme Framework rely on MySQLi extension for database connection. So, Seme Framework will support all databases that supported by MySQLi extension.
+            /p>
+            <h2>Additional Requirements</h2>
+            <p>
+              For quick development, we recommend you to use <a href="https://www.apachefriends.org/download.html" target="_blank">XAMPP</a> for local server. And then [Visual Studio Code](https://code.visualstudio.com/download) as your IDE. and then [CMDER](https://cmder.app/) for command line emulator on Windows.
+              And last <a href="https://git-scm.com/downloads" target="_blank">git</a> as repository manager.
+            </p>
             <ul>
               <li>MySQLi</li>
               <li>JSON</li>

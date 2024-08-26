@@ -22,18 +22,18 @@ export default {
       { hid: 'theme-color', property: 'theme-color', content: '#fb898f'},
       { hid: 'og:title', name: 'og:description', content: 'Seme Framework Documentation'},
       { hid: 'og:description', name: 'og:description', content: 'Deployable and lightweight PHP MVC framework that suitable for small and medium web app'},
-      { hid: 'og:image', name: 'og:image', content: (process.env.CDN_URL || 'http://localhost:3001')+'/fbshare.png'}
+      { hid: 'og:image', name: 'og:image', content: (process.env.CDN_URL || 'http://localhost:'+(process.env.PORT || '3001'))+'/fbshare.png'}
     ],
     link: [
       { rel: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' },
-      { rel: 'icon', type: 'image/x-icon', href: (process.env.CDN_URL || 'http://localhost:3001')+'/favicon.ico'},
-      { rel: 'shortcut icon', type: 'image/x-icon', href: (process.env.CDN_URL || 'http://localhost:3001')+'/favicon.ico'}
+      { rel: 'icon', type: 'image/x-icon', href: (process.env.CDN_URL || 'http://localhost:'+(process.env.PORT || '3001'))+'/favicon.ico'},
+      { rel: 'shortcut icon', type: 'image/x-icon', href: (process.env.CDN_URL || 'http://localhost:'+(process.env.PORT || '3001'))+'/favicon.ico'}
     ]
   },
   pwa: {
     meta: {
       ogImage: {
-        path: (process.env.CDN_URL || 'http://localhost:3001')+'/icon.png',
+        path: (process.env.CDN_URL || 'http://localhost:'+(process.env.PORT || '3001'))+'/icon.png',
         width: '1480px',
         height: '1038px',
         type: 'image/png'
@@ -53,10 +53,10 @@ export default {
   target: 'server',
 
   server: {
-    port: 3001
+    port: process.env.PORT || 3001,
   },
   build: {
-    buildPath: process.env.CDN_URL || 'http://localhost:3001',
+    buildPath: process.env.CDN_URL || 'http://localhost:'+(process.env.PORT || '3001'),
     analyze: false,
     maxChunkSize: 300000,
     extend(config, ctx) {
@@ -79,12 +79,12 @@ export default {
     }
   },
   amp: {
-    origin: process.env.BASE_URL || 'http://localhost:3001',
+    origin: process.env.BASE_URL || 'http://localhost:'+(process.env.PORT || '3001'),
     mode: 'only', //could use `only` or `false` as well,
     css: '~/css/app.amp.css'
   },
   sitemap: {
-    hostname: process.env.ORIGIN_URL || 'http://localhost:3001',
+    hostname: process.env.ORIGIN_URL || 'http://localhost:'+(process.env.PORT || '3001'),
     gzip: false
   },
   components: true

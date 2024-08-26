@@ -75,9 +75,9 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  class Blog_Model extends SENE_Model{
-                    var $tbl = &#x27;blog&#x27;;
-                    var $tbl_as = &#x27;b&#x27;;
+                  class Blog_Model extends \SENE_Model{
+                    public $tbl = &#x27;blog&#x27;;
+                    public $tbl_as = &#x27;b&#x27;;
                     public function __construct(){
                       &#x9; parent::__construct();
                     }

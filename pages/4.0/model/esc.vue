@@ -14,7 +14,9 @@ e<template>
           <div class="content">
             <h1 class="">Esc Method</h1>
             <p>
-              The <code>esc</code> method is used to process <a href="https://en.wikipedia.org/wiki/Escape_character" target="_blank">escape character <i class="fa fa-external-link"></i></a> while value passed <code>Query Builder</code> and will execute the PHP MySQLi command::<a href="https://www.php.net/manual /en/mysqli.real-escape-string.php" target="_blank">real_escape_string <i class="fa fa-external-link"></i></a>.
+              The <code>sene_mysqli_engine::esc</code> is used to escape and return string or array values, making them suitable for use in SQL queries. This ensures that user input and other data are properly sanitized before being inserted into a database. This method is part of Query Method builder. 
+              
+              All input value that passed to this will added <a href="https://en.wikipedia.org/wiki/Escape_character" target="_blank">escape character <i class="fa fa-external-link"></i></a> by executing PHP MySQLi::<a href="https://www.php.net/manual /en/mysqli.real-escape-string.php" target="_blank">real_escape_string <i class="fa fa-external-link"></i></a>.
             </p>
 
             <h2>Basic Usage</h2>
@@ -40,17 +42,17 @@ e<template>
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;esc(mixed $val): mixed
+                  $this-&#x3E;db-&#x3E;esc(string $value): mixed
                 </highlight-code>
               </div>
             </div>
 
             <h3>Parameters</h3>
             <p>
-              The esc method required only 1 parameter, it is <b>$val</b>.
+              This method only required 1 parameter
             </p>
 
-            <h4>$val</h4>
+            <h4>$value</h4>
             <p>
               Can contain <code>int</code> or <code>string</code> to be <code>escaped</code>.
             </p>
@@ -79,11 +81,11 @@ e<template>
               <div class="maccontent">
                 <highlight-code lang="php">
                   &#x3C;?php
-                  class D_Order_Model extends SENE_Model{
-                    var $tbl = &#x27;d_order&#x27;;
-                    var $tbl_as = &#x27;dor&#x27;;
-                    var $tbl2 = &#x27;d_order_detail&#x27;;
-                    var $tbl2_as = &#x27;dod&#x27;;
+                  class D_Order_Model extends \SENE_Model {
+                    public $tbl = &#x27;d_order&#x27;;
+                    public $tbl_as = &#x27;dor&#x27;;
+                    public $tbl2 = &#x27;d_order_detail&#x27;;
+                    public $tbl2_as = &#x27;dod&#x27;;
 
                     public function __construct(){
                       parent::__construct();
@@ -95,7 +97,6 @@ e<template>
                       $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;tbl_as.kode&#x22;, $this-&#x3E;db-&#x3E;esc($kode));
                       return $this-&#x3E;db-&#x3E;get();
                     }
-                    ...
                   }
                 </highlight-code>
               </div>

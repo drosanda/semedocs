@@ -94,12 +94,13 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   &#x3C;?php
-                  class Blog_Model extends SENE_Model{
-                    var $tbl = 'd_order';
-                    var $tbl_as = 'dor';
+                  class Blog_Model extends \SENE_Model{
+                    public $tbl = 'd_order';
+                    public $tbl_as = 'dor';
+                    
                     public function __construct(){
                       parent::__construct();
-                      $this->db->from($this->tbl,$this->tbl_as);
+                      $this->db->from($this->tbl, $this->tbl_as);
                     }
 
                     /**

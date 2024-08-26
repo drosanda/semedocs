@@ -45,7 +45,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;limit(int $a, int $b): $this-&#x3E;db
+                  $this-&#x3E;db-&#x3E;limit(int $offset, int $count): $this-&#x3E;db
                 </highlight-code>
               </div>
             </div>
@@ -55,14 +55,14 @@
               Metode ini memiliki 2 parameter wajib.
             </p>
 
-            <h4>$a</h4>
+            <h4>$offset</h4>
             <p>
-              Nilai dari parameter <b>$a</b> dapat berisi integer positif dengan nilai mulai dari <code>0</code> untuk batas awal data.
+              Nilai dari parameter <b>$offset</b> dapat berisi integer positif dengan nilai mulai dari <code>0</code> untuk batas awal data.
             </p>
 
-            <h4>$b</h4>
+            <h4>$count</h4>
             <p>
-              Nilai dari parameter <b>$b</b> dapat berisi integer positif dengan nilai mulai dari <code>0</code> untuk batas akhir data.
+              Nilai dari parameter <b>$count</b> dapat berisi integer positif dengan nilai mulai dari <code>0</code> untuk batas akhir data.
             </p>
 
             <h2>Contoh Penggunaan</h2>
@@ -224,7 +224,7 @@ export default {
         ],
         "dateCreated": "2021-08-03T10:24:00+07:00",
         "datePublished": "2021-08-03T10:24:00+07:00",
-        "dateModified": "2021-08-03T10:24:00+07:00",
+        "dateModified": "2024-08-26T10:00:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

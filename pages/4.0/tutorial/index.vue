@@ -12,8 +12,9 @@
         <div class="column">
           <div class="content">
             <h1 class="">Tutorial</h1>
-            <p>This tutorial is intended to introduce you to the Seme Framework and the basic principles of MVC architecture. It will show you how a basic Seme Framework application is constructed in step-by-step.</p>
             <p>
+              This tutorial is intended to introduce you to the Seme Framework and the basic principles of MVC architecture.
+              It will show you how a basic Seme Framework application is constructed in step-by-step.
               The objectives of this tutorial is how to use the framework with real life examples.
               So, developer can implemented all features that existed on Seme Framework such as:
             </p>
@@ -29,6 +30,7 @@
             </ul>
             <p>The entire tutorial is split up over several pages. Each explaining a small part of the functionality of the Seme Framework. You’ll go through the following pages:</p>
             <ul>
+              <li><NuxtLink to="/4.0/tutorial/quick-start/">Quick Start</NuxtLink>, will describe quick start tutorial from scratch.</li>
               <li><NuxtLink to="/4.0/tutorial/introduction/">Introduction</NuxtLink>, which gives you an overview of what to expect.</li>
               <li><NuxtLink to="/4.0/tutorial/get-data/">Theme and layout</NuxtLink>, which will teach you the basics of creating view using Seme Framework.</li>
               <li><NuxtLink to="/4.0/tutorial/basic-api/">Building API</NuxtLink>, this will introduce more about database, controller, and model.</li>
