@@ -180,8 +180,8 @@
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
-                <nuxt-link to="/4.0/core/" class="btn">
-                  Core
+                <nuxt-link to="/4.0/core/sene_model-class/" class="btn">
+                  sene_model Class
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
               </div>
