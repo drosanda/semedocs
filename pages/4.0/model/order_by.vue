@@ -38,7 +38,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;group_by(string $column_name, string $sort_direction): $this-&#x3E;db
+                  $this-&#x3E;db-&#x3E;order_by(string $column_name, string $sort_direction): $this-&#x3E;db
                 </highlight-code>
               </div>
             </div>
@@ -79,9 +79,9 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   &lt;?php
-                  class Blog_Model extends SENE_Model{
-                    var $tbl = &#039;blog&#039;;
-                    var $tbl_as = &#039;b&#039;;
+                  class Blog_Model extends \SENE_Model{
+                    public $tbl = &#039;blog&#039;;
+                    public $tbl_as = &#039;b&#039;;
                     public function __construct(){
                       parent::__construct();
                     }
