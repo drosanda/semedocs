@@ -14,8 +14,7 @@
           <div class="content">
             <h1 class="">From Method</h1>
             <p>
-              <b>From</b> method is part of database class builder for selecting table with its alias.
-              This method support chaining method.
+              The from method is used to specify the table from which data will be selected in a database query. This method is part of SENE_Model class and can be combined with other Query Builder methods to build complex queries.
             </p>
 
             <h2>Basic Usage</h2>
@@ -82,7 +81,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  class Blog_Model extends SENE_Model{
+                  class Blog_Model extends \SENE_Model{
                     var $tbl = &#x27;blog&#x27;;
                     var $tbl_as = &#x27;b&#x27;;
                     public function __construct(){

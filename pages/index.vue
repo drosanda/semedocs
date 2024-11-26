@@ -33,7 +33,7 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   &#x3C;?php
-                  class Product extends SENE_Controller
+                  class Product extends \SENE_Controller
                   {
                     public $user_login=0;
 

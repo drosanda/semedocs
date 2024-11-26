@@ -14,8 +14,8 @@
           <div class="content">
             <h1 class="">Select Method</h1>
             <p>
-              The <code>select</code> method purpose is for filtering data from query result by executing <code>SELECT</code> SQL command.
-              This method will put the result SQL command on Query Builder can combined with another Query Builder methods.
+              The select method purpose is to select columns from a table.
+              This method is part of SENE_Model class and can be combined with other Query Builder methods to build complex queries.
             </p>
 
             <h2>Basic Usage</h2>
@@ -77,7 +77,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  class D_Blog_Model extends SENE_Model{
+                  class D_Blog_Model extends \SENE_Model{
                     var $tbl = &#x27;d_blog&#x27;;
                     var $tbl_as = &#x27;b&#x27;;
                     public function __construct(){
