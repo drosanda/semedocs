@@ -14,8 +14,10 @@
           <div class="content">
             <h1 class="">Metode Load</h1>
             <p>
-              Metode <code>load</code> digunakan untuk memanggil model kedalam controller menjadi sebuah properti didalam controller tersebut.
-              Nama dari propertinya juga bisa diatur melalui parameter alias dalam metode ini.
+              Metode <code>load</code> digunakan untuk memanggil file model atau file library pada saat dalam konteks Controller.
+              Di metode ini juga mengizinkan untuk menginstansiasi file yang dipanggil menjadi sebuah object.
+              Secara default, nama dari object yang telah terinstansiasi akan sama dengan nama file dengan huruf kecil.
+              Bisa juga diganti nama object dengan nama yang diinginkan atau diberikan alias.
             </p>
 
             <h2>Bentuk Umum</h2>
@@ -41,27 +43,30 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;load(string $model_location[, string $alias])
+                  $this-&#x3E;load(string $filename_location[, string $alias=''[, string $load_type='model']]):self
                 </highlight-code>
               </div>
             </div>
 
             <h3>Parameter</h3>
             <p>
-              Metode load terdiri dari 2 parameter yaitu <code>model_location</code> dan <code>$alias</code>.
+              Metode load terdiri dari 3 parameter yaitu <code>filename_location</code>, <code>$alias</code>, dan jenis pemanggilan <code>$load_type</code>.
             </p>
 
-            <h4>$model_location</h4>
+            <h4>$filename_location</h4>
             <p>
-              Lokasi file model selalu relatif ke direktori <code>app/model</code>.
-              Jadi, jika ingin memanggil model <code>api/hello_model</code> maka lokasinya ada di <code>app/model/api/hello_model.php</code>.
-              Dan, didalam controller akan ada properti baru bernama <code>hello_model</code> yang sama dengan nama file model namun tanpa akhiran <code>.php</code>.
+              Contains the name of the file to be called without the <code>.php</code> ending.
             </p>
 
-            <h3>$model_alias</h3>
+            <h3>$alias</h3>
             <p>
-              Model alias digunakan untuk merubah nama properti yang dibuat secara otomatis melalui metode <code>load</code> yang ada didalam controller.
-              Jadi, jika ingin menyederhanakan properti <code>hello_model</code> menjadi <code>h</code> saja, cukup tambahkan parameter ke-2 didalam methode load.
+              Nama alias dari object yang telah dipanggil kedalam controller.
+              Jika diberi string kosong, maka akan menggunakan nama file tanpa akhiran <code>.php</code> sebagai nama object.
+            </p>
+
+            <h3>$load_type</h3>
+            <p>
+              Jenis pemanggilan dari file yang akan dipanggil yaitu "model", "lib" atau "". Jika string kosong, maka akan memanggil library tapi tanpa di instansiasi menjadi sebuah object.
             </p>
 
             <h2>Contoh Penggunaan</h2>
@@ -86,7 +91,7 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   &#x3C;?php
-                  class Blog extends SENE_Controller {
+                  class Blog extends \SENE_Controller {
                     public function __construct(){
                       parent::__construct();
                       $this-&#x3E;load(&#x27;api/hello_model&#x27;,&#x27;h&#x27;);
@@ -221,7 +226,7 @@ export default {
         ],
         "dateCreated": "2021-08-08T10:51:15+07:00",
         "datePublished": "2021-08-08T10:51:15+07:00",
-        "dateModified": "2021-08-08T10:51:15+07:00",
+        "dateModified": "2024-12-03T20:22:34+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
