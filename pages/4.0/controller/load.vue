@@ -14,8 +14,7 @@
           <div class="content">
             <h1 class="">Load Method</h1>
             <p>
-              The <code>load</code> method purpose purpose is for loading a <NuxtLink to="/4.0/model/">Model Class <i class="fa fa-window-restore"></i></NuxtLink> by generating (<em>instantiating</em>) a new property inside current controller class.
-              The new property name will be same as model filename without <code>.php</code> extension in <b>lowercase</b>.
+              The <code>load</code> method is used to call a model file or a library file while in the Controller context. This method also allows to instantiate the called file into an object. By default, the name of the instantiated object will be the same as the file name in lowercase. You can also replace the object name with the desired name or give it an alias.
             </p>
 
             <h3>Basic Usage</h3>
@@ -41,16 +40,16 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;load(string $model_filename [, string $alias]): void
+                  $this-&#x3E;load(string $filename_location[, string $alias=''[, string $load_type='model']]):self
                 </highlight-code>
               </div>
             </div>
 
             <h3>Parameters</h3>
             <p>
-              This method has 1 required parameter and 1 optional parameter.
+              This method has 1 required parameter and 2 optional parameters.
             </p>
-            <h4>$model_filename</h4>
+            <h4>$filename_location</h4>
             <p>
               The <code>$model_filename</code> value can be contain a string of model filename.
               File location always relatives to <code>app/model</code> directory.
@@ -60,7 +59,13 @@
 
             <h4>$alias</h4>
             <p>
-              The <code>$alias</code> value can be contain a string that override the name of property that instantiated by this method.
+              The alias name of the object that has been called into the controller.
+              If given an empty string, it will use the file name without the <code>.php</code> suffix as the object name.
+            </p>
+
+            <h3>$load_type</h3>
+            <p>
+              The type of call from the file to be called is "model", "lib" or "". If the string is empty, it will call the library but without instantiating it into an object.
             </p>
 
             <h2>Example</h2>
@@ -87,7 +92,7 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   &#x3C;?php
-                  class Blog extends SENE_Controller {
+                  class Blog extends \SENE_Controller {
                     public function __construct(){
                       parent::__construct();
                       $this-&#x3E;load(&#x27;hello_model&#x27;);
@@ -104,7 +109,7 @@
 
             <h3>With Alias</h3>
             <p>
-              On this example, will show the implementation of <code>load</code> method with an alias.
+              On this example, will show the implementation of <code>load</code> method using alias.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -126,7 +131,7 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   &#x3C;?php
-                  class Blog extends SENE_Controller {
+                  class Blog extends \SENE_Controller {
                     public function __construct(){
                       parent::__construct();
                       $this-&#x3E;load(&#x27;api/hello_model&#x27;,&#x27;hm&#x27;);
@@ -172,7 +177,7 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   &#x3C;?php
-                  class Blog extends SENE_Controller {
+                  class Blog extends \SENE_Controller {
                     public function __construct(){
                       parent::__construct();
                       $this-&#x3E;load(&#x27;api/hello_model&#x27;);
@@ -297,7 +302,7 @@ export default {
       ],
       "dateCreated": "2021-08-04T16:02:34+07:00",
       "datePublished": "2021-08-04T16:02:34+07:00",
-      "dateModified": "2022-03-08T20:22:34+07:00",
+      "dateModified": "2024-12-03T20:22:34+07:00",
       "author": {
         "@type": "Person",
         "gender": "Male",
