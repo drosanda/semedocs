@@ -5,6 +5,9 @@ Author: Daeng Rosanda
 Date Created: 2024-11-26
 Last Updated: 2024-11-26
 -->
+
+[Seme Framework](../../index.md) > [en](../index.md) > [model](index.md) > from
+
 # from()
 The from method is used to specify the table from which data will be selected in a database query. This method is part of SENE_Model class and can be combined with other Query Builder methods to build complex queries.
 

@@ -5,6 +5,8 @@ Penulis: Daeng Rosanda
 Dibuat pada tanggal: 2024-11-26
 Diperbaru pada tanggal: 2024-11-26
 -->
+[Seme Framework](../../seme_framework.md) > [id](../index.md) > [controller](index.md) > [load](load.md)
+
 
 # Metode Load
 Metode load digunakan untuk memanggil file model atau file library pada saat dalam konteks Controller. Di metode ini juga mengizinkan untuk menginstansiasi file yang dipanggil menjadi sebuah object. Secara default, nama dari object yang telah terinstansiasi akan sama dengan nama file dengan huruf kecil. Bisa juga diganti nama object dengan nama yang diinginkan atau diberikan alias.
