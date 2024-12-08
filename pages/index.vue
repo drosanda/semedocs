@@ -86,7 +86,7 @@
                 <NuxtLink to="#ql">Quick Links</NuxtLink>
               </li>
               <li>
-                <NuxtLink to="#kf">Key Feature</NuxtLink>
+                <NuxtLink to="#key_features">Key Feature</NuxtLink>
               </li>
               <li>
                 <NuxtLink to="#how_work">How the Seme Framework Works</NuxtLink>
@@ -124,9 +124,9 @@
                </nuxt-link>
              </div>
 
-             <h2 id="kf">Key Feature</h2>
+             <h2 id="key_features">Key Features</h2>
              <p>
-               Here are some reasons why you should use the Seme Framework:
+              The Seme Framework is built on PHP and designed for ease of use. Here are some reasons why it's a great choice for your next project:
              </p>
              <ol>
                <li>
