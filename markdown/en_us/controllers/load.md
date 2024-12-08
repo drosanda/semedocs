@@ -6,6 +6,8 @@ Date Created: 2024-11-26
 Last Updated: 2024-11-26
 -->
 
+[Seme Framework](../../index.md) > [en](../index.md) > [controller](index.md) > load
+
 # Load Method
 The load method is used to call a model file or a library file while in the Controller context. This method also allows to instantiate the called file into an object. By default, the name of the instantiated object will be the same as the file name in lowercase. You can also replace the object name with the desired name or give it an alias.
 
