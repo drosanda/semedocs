@@ -14,11 +14,22 @@
           <div class="content">
             <h1 class="">Kirim Email</h1>
             <p>
-              Halaman not found merupakan halaman yang di desain untuk menangani <code>fallback</code> ketika URL yang diminta tidak ada atau tidak ditemukan dalam <code>app/controller</code>.
-              Pada tutorial kali ini kita akan membuat Halaman notfound dengan menggunakan tampilan materializeCSS.
-              Jadi, pastikan untuk menyelesaikan tutorial <NuxtLink to="/id/tutorial/introduction/#part2">Pengenalan bagian 2</NuxtLink> sebelum melanjutkan tutorial ini.
-              Sehingga pengaturan view, view component, beserta temanya sudah disetel dan berjalan dengan baik.
+              Mengirim email merupakan salah satu langkah yang sudah umum ada pada aplikasi berbasis web digunakan untuk membuat fitur lupa password, verifikasi email, dan notifikasi.
+              Di Seme Framework sudah ada library untuk mengirim email. Namun, pastikan juga aplikasi sudah terinstall <code>send_mail</code> pada server.
+              Pada library Seme Email ini juga tidak ada dukungan untuk menggunakan SMTP custom maupun library lainnya.
+              Jadi yang harus di setting itu nanti akan ada di aplikasi send_mailnya, bukan di level code.
             </p>
+            
+            <div class="message is-info">
+              <div class="message-body">
+                <p>
+                 Aplikasi biasa diinstall aplikasi untuk mengirim email di server.
+                 <ul>
+                  
+                 </ul>
+                </p>
+              </div>
+            </div>
 
             <amp-img layout="responsive" width="1656" height="594" :src="notfoundex" alt="Notfound page example"></amp-img>
 
