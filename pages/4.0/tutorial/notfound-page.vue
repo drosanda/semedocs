@@ -4,29 +4,28 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/">4.0.3 (Bahasa)</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/tutorial/">Tutorial</NuxtLink></li>
-          <li class="unavailable">Halaman Notfound</li>
+          <li class=""><NuxtLink to="/4.0/">4.0.3 (Bahasa)</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0/tutorial/">Tutorial</NuxtLink></li>
+          <li class="unavailable">Not Found Page</li>
         </ul>
       </nav>
       <div>
         <div class="column">
           <div class="content">
-            <h1 class="">Halaman Notfound</h1>
+            <h1 class="">Create Not found page</h1>
             <p>
-              Halaman not found merupakan halaman yang di desain untuk menangani <code>fallback</code> ketika URL yang diminta tidak ada atau tidak ditemukan dalam <code>app/controller</code>.
-              Pada tutorial kali ini kita akan membuat Halaman notfound dengan menggunakan tampilan materializeCSS.
-              Jadi, pastikan untuk menyelesaikan tutorial <NuxtLink to="/id/tutorial/introduction/#part2">Pengenalan bagian 2</NuxtLink> sebelum melanjutkan tutorial ini.
-              Sehingga pengaturan view, view component, beserta temanya sudah disetel dan berjalan dengan baik.
+              The "Not Found" page is a designed page to handle fallback when the requested URL does not exist or is not found in app/controller. In this tutorial, we will create a Not Found page using MaterializeCSS design. 
+              Therefore, make sure to complete <NuxtLink to="/4.0/tutorial/introduction/#part2">Tutorial Part 2 on Introduction</NuxtLink> before proceeding with this tutorial. 
+              So that the view settings, view components, as well as themes have been set up and are running smoothly.
             </p>
 
             <amp-img layout="responsive" width="1656" height="594" :src="notfoundex" alt="Notfound page example"></amp-img>
 
-            <h2>Membuat layout</h2>
+            <h2>Create HTML Layout</h2>
             <p>
-              Pertama-tama kita akan membuat layout khusus untuk <code>notfound</code>.
-              Biasanya, halaman notfound ini memiliki struktur HTML yang berbeda dengan halaman lainnya, sehingga harus memiliki layout khusus.
-              Buat file baru di <code>app/view/front/page/notfound.php</code> untuk layout notfound.
+              First, we will create a special layout for the Not Found page.
+               Usually, this Not Found page has a different HTML structure compared to other pages, so it should have a special layout.
+              Create a new file in <code>app/view/front/page/notfound.php</code> for the Not Found layout.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -79,9 +78,9 @@
               </div>
             </div>
 
-            <h2>Menyesuaikan Controller Notfound</h2>
+            <h2>Adjusment for Notfound controller</h2>
             <p>
-              Setelah layoutnya selesai, tinggal penyesuaian di <code>app/controller/notfound.php</code>.
+              After we created the html layout. Now, we need to create or edit the notfound controller at <code>app/controller/notfound.php</code>.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -132,9 +131,9 @@ class NotFound extends \SENE_Controller
             </div>
 
 
-            <h2>Mencoba halaman notfound</h2>
+            <h2>Test the notfound page</h2>
             <p>
-              Untuk mencoba halaman notfound, cukup ketikan sembarang URL setelah base_url-nya. Lihat contoh dibawah ini:
+              To test the notfound page that we have created before. We can test it using randomized url after the base_url. As you can see on this example below:
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -167,13 +166,13 @@ class NotFound extends \SENE_Controller
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/id/tutorial/introduction/" class="btn">
+          <nuxt-link to="/4.0/tutorial/introduction/" class="btn">
             <i class="fa fa-chevron-left"></i>
             Tutorial: Introduction
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/id/tutorial/navigation/" class="btn">
+          <nuxt-link to="/4.0/tutorial/navigation/" class="btn">
             Tutorial: Navigation
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
@@ -199,11 +198,11 @@ export default {
           text: 'Seme Framework',
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0',
           text: 'ID',
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/tutorial',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0/tutorial',
           text: 'Tutorial',
         }
       ],
@@ -212,7 +211,7 @@ export default {
   head() {
     return {
       htmlAttrs: {
-        lang: 'id'
+        lang: 'en'
       },
       title: this.title+this.suffix,
       meta: [
@@ -261,9 +260,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-25T11:11:11+07:00",
-        "datePublished": "2021-07-25T11:11:11+07:00",
-        "dateModified": "2021-07-25T11:11:11+07:00",
+        "dateCreated": "2025-01-15T11:11:11+07:00",
+        "datePublished": "2025-01-15T11:11:11+07:00",
+        "dateModified": "2025-01-15T11:11:11+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
