@@ -18,7 +18,6 @@
               Tujuan dari tutorial ini adalah, bagaimana berinteraksi dengan View dan Controller. Interaksi model akan dibahas pada tutorial berikutnya.
             </p>
 
-            <amp-img layout="responsive" width="874" height="804px" :src="helloWorld" alt="Seme Framework hello world controller"></amp-img>
             <hr>
             <p><b>Baiklah kita mulai!</b></p>
             <hr>
@@ -61,7 +60,7 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   &#x3C;?php
-                  class Home extends SENE_Controller
+                  class Home extends \SENE_Controller
                   {
                     public function __construct()
                     {
@@ -96,7 +95,7 @@
 
             <div class="message is-success">
               <div class="message-body">
-                <p>Tutorial ini menggunakan <a href="https://materializecss.com/" target="_blank">materializeCSS <i class="fa fa-external-link"></i></a> sebagai library CSS-nya.</p>
+                <p>Tutorial ini menggunakan bootstrap versi 3 setelah sebelumnya menggunakan <a href="https://materializecss.com/" target="_blank">materializeCSS <i class="fa fa-external-link"></i></a> sebagai library CSS-nya.</p>
               </div>
             </div>
             <h4>Membuat tema: <u>front</u>.</h4>
@@ -120,26 +119,26 @@
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="php">
+                <highlight-code lang="shell">
                   app/
-                  └── view/
-                  &#160;└── front/
-                  &#160;&#160;├── home
-                  &#160;&#160;│ ├── home.php
-                  &#160;&#160;│ └── home_bottom.php
-                  &#160;&#160;├── theme.json
-                  &#160;&#160;├── script.json
-                  &#160;&#160;└── page/
-                  &#160;&#160;&#160;├── col-1.php
-                  &#160;&#160;&#160;└── html/
-                  &#160;&#160;&#160;&#160;&#160;└── head.php
+&#x2514;&#x2500;&#x2500; view/
+    &#x2514;&#x2500;&#x2500; front/
+        &#x251C;&#x2500;&#x2500; home/
+        &#x2502;   &#x251C;&#x2500;&#x2500; home.php
+        &#x2502;   &#x2514;&#x2500;&#x2500; home_bottom.php
+        &#x251C;&#x2500;&#x2500; theme.json
+        &#x251C;&#x2500;&#x2500; script.json
+        &#x2514;&#x2500;&#x2500; page/
+            &#x251C;&#x2500;&#x2500; col-1.php
+            &#x2514;&#x2500;&#x2500; partials/
+                &#x2514;&#x2500;&#x2500; head.php
                 </highlight-code>
               </div>
             </div>
 
             <p>Periksa direktori <code>app/view/front/</code> apabila belum ada, silakan buat direktori tersebut.</p>
             <p>Periksa direktori <code>app/view/front/page/</code> apabila belum ada, silakan buat direktori tersebut.</p>
-            <p>Periksa direktori <code>app/view/front/page/html/</code> apabila belum ada, silakan buat direktori tersebut.</p>
+            <p>Periksa direktori <code>app/view/front/page/partials/</code> apabila belum ada, silakan buat direktori tersebut.</p>
 
             <h5>File theme.json</h5>
             <p>
@@ -166,20 +165,31 @@
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="php">
+                <highlight-code lang="javascript">
                   {
-                    &#x22;link&#x22;:
-                    [
-                    {
-                      &#x22;rel&#x22;: &#x22;stylesheet&#x22;,
-                      &#x22;href&#x22;: &#x22;https://fonts.googleapis.com/icon?family=Material+Icons&#x22;
-                    },
-                    {
-                      &#x22;rel&#x22;: &#x22;stylesheet&#x22;,
-                      &#x22;href&#x22;: &#x22;https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css&#x22;
-                    }
-                    ]
-                  }
+    &#x22;link&#x22;: [
+        {
+            &#x22;rel&#x22;: &#x22;stylesheet&#x22;,
+            &#x22;href&#x22;: &#x22;https://skin-cenah.b-cdn.net/css/bootstrap.min.css&#x22;
+        },
+        {
+            &#x22;rel&#x22;: &#x22;stylesheet&#x22;,
+            &#x22;href&#x22;: &#x22;https://skin-cenah.b-cdn.net/css/plugins.css&#x22;
+        },
+        {
+            &#x22;rel&#x22;: &#x22;stylesheet&#x22;,
+            &#x22;href&#x22;: &#x22;https://skin-cenah.b-cdn.net/css/main.css&#x22;
+        },
+        {
+            &#x22;rel&#x22;: &#x22;stylesheet&#x22;,
+            &#x22;href&#x22;: &#x22;https://skin-cenah.b-cdn.net/css/themes.css&#x22;
+        },
+        {
+            &#x22;rel&#x22;: &#x22;stylesheet&#x22;,
+            &#x22;href&#x22;: &#x22;https://skin-cenah.b-cdn.net/css/themes/erplite.css&#x22;
+        }
+    ]
+}
                 </highlight-code>
               </div>
             </div>
@@ -212,18 +222,23 @@
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="php">
+                <highlight-code lang="javascript">
                   {
-                    &#x22;script&#x22;:
-                    [
-                    {
-                      &#x22;src&#x22;: &#x22;https://code.jquery.com/jquery-3.5.1.min.js&#x22;
-                    },
-                    {
-                      &#x22;src&#x22;: &#x22;https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js&#x22;
-                    }
-                    ]
-                  }
+  &#x22;script&#x22;: [
+    {
+      &#x22;src&#x22;: &#x22;https://skin-cenah.b-cdn.net/js/vendor/jquery.min.js&#x22;
+    },
+    {
+      &#x22;src&#x22;: &#x22;https://skin-cenah.b-cdn.net/js/vendor/bootstrap.min.js&#x22;
+    },
+    {
+      &#x22;src&#x22;: &#x22;https://skin-cenah.b-cdn.net/js/plugins.js?v=0.0.2&#x22;
+    },
+    {
+      &#x22;src&#x22;: &#x22;https://skin-cenah.b-cdn.net/js/app.js&#x22;
+    }
+  ]
+}
                 </highlight-code>
               </div>
             </div>
@@ -259,7 +274,7 @@
                 <highlight-code lang="html">
                   &#x3C;!DOCTYPE html&#x3E;
                   &#x3C;html&#x3E;
-                    &#x3C;?php $this-&#x3E;getThemeElement(&#x27;page/html/head&#x27;, $__forward) ?&#x3E;
+                    &#x3C;?php $this-&#x3E;getThemeElement(&#x27;page/partials/head&#x27;, $__forward) ?&#x3E;
                     &#x3C;body&#x3E;
                       &#x3C;?php $this-&#x3E;getThemeContent() ?&#x3E;
 
@@ -289,7 +304,7 @@
 
             <h5>Pemisahan bagian HEAD dari HTML</h5>
             <p>Dengan menggunakan Seme Framework memungkinkan untuk memisahkan komponen html untuk memaksimalkan penggunaan kembali komponen HTML tersebut.</p>
-            <p>Untuk melakukannya, buka file yang terletak di <code>app/view/front/page/html/head.php</code>.</p>
+            <p>Untuk melakukannya, buka file yang terletak di <code>app/view/front/page/partials/head.php</code>.</p>
             <p>apabila belum ada, silakan buat file tersebut dan <i>paste</i>-kan isinya dari kode dibawah ini.</p>
 
             <div class="macwindow">
@@ -312,27 +327,25 @@
               <div class="maccontent">
                 <highlight-code lang="html">
                   &#x3C;head&#x3E;
-                    &#x3C;meta charset=&#x22;utf-8&#x22;&#x3E;
-                    &#x3C;meta name=&#x22;viewport&#x22; content=&#x22;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&#x22;&#x3E;
-
-                    &#x3C;title&#x3E;&#x3C;?=$this-&#x3E;getTitle()?&#x3E;&#x3C;/title&#x3E;
-
-                    &#x3C;meta name=&#x22;description&#x22; content=&#x22;&#x3C;?=$this-&#x3E;getDescription()?&#x3E;&#x22;&#x3E;
-                    &#x3C;meta name=&#x22;keyword&#x22; content=&#x22;&#x3C;?=$this-&#x3E;getKeyword()?&#x3E;&#x22;/&#x3E;
-                    &#x3C;meta name=&#x22;author&#x22; content=&#x22;&#x3C;?=$this-&#x3E;getAuthor()?&#x3E;&#x22;&#x3E;
-                    &#x3C;meta name=&#x22;robots&#x22; content=&#x22;&#x3C;?=$this-&#x3E;getRobots()?&#x3E;&#x22; /&#x3E;
-
-                    &#x3C;!-- Icons --&#x3E;
-                    &#x3C;!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers --&#x3E;
-                    &#x3C;link rel=&#x22;shortcut icon&#x22; href=&#x22;&#x3C;?=$this-&#x3E;getIcon()?&#x3E;&#x22;&#x3E;
-                    &#x3C;!-- END Icons --&#x3E;
-
-                    &#x3C;meta name=&#x22;msapplication-TileColor&#x22; content=&#x22;#353769&#x22;&#x3E;
-                    &#x3C;meta name=&#x22;theme-color&#x22; content=&#x22;#353769&#x22;&#x3E;
-                    &#x3C;?php $this-&#x3E;getAdditionalBefore()?&#x3E;
-                    &#x3C;?php $this-&#x3E;getAdditional()?&#x3E;
-                    &#x3C;?php $this-&#x3E;getAdditionalAfter()?&#x3E;
-                  &#x3C;/head&#x3E;
+    &#x3C;meta charset=&#x22;utf-8&#x22;&#x3E;
+    &#x3C;meta name=&#x22;viewport&#x22; content=&#x22;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&#x22;&#x3E;
+    &#x3C;title&#x3E;&#x3C;?=$this-&#x3E;getTitle()?&#x3E;&#x3C;/title&#x3E;
+    &#x3C;meta name=&#x22;description&#x22; content=&#x22;&#x3C;?=$this-&#x3E;getDescription()?&#x3E;&#x22;&#x3E;
+    &#x3C;meta name=&#x22;keyword&#x22; content=&#x22;&#x3C;?=$this-&#x3E;getKeyword()?&#x3E;&#x22;/&#x3E;
+    &#x3C;meta name=&#x22;author&#x22; content=&#x22;&#x3C;?=$this-&#x3E;getAuthor()?&#x3E;&#x22;&#x3E;
+    &#x3C;meta name=&#x22;robots&#x22; content=&#x22;&#x3C;?=$this-&#x3E;getRobots()?&#x3E;&#x22; /&#x3E;
+    &#x3C;!-- Icons --&#x3E;
+    &#x3C;!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers --&#x3E;
+    &#x3C;link rel=&#x22;shortcut icon&#x22; href=&#x22;&#x3C;?=$this-&#x3E;getIcon()?&#x3E;&#x22; /&#x3E;
+    &#x3C;!-- END Icons --&#x3E;
+    &#x3C;!-- Stylesheets --&#x3E;
+    &#x3C;!-- END Stylesheets --&#x3E;
+    &#x3C;?php $this-&#x3E;getAdditionalBefore()?&#x3E;
+    &#x3C;?php $this-&#x3E;getAdditional()?&#x3E;
+    &#x3C;?php $this-&#x3E;getAdditionalAfter()?&#x3E;
+    &#x3C;!-- Modernizr (browser feature detection library) --&#x3E;
+    &#x3C;script src=&#x22;https://skin.cenah.co.id/js/vendor/modernizr.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;/head&#x3E;
                 </highlight-code>
               </div>
             </div>
@@ -379,21 +392,21 @@
               <div class="maccontent">
                 <highlight-code lang="html">
                   &#x3C;div class=&#x22;container&#x22;&#x3E;
-                    &#x3C;div class=&#x22;row&#x22;&#x3E;
-                      &#x3C;div class=&#x22;col m12 s12&#x22;&#x3E;
-                        &#x3C;div class=&#x22;card rounded preload-any&#x22;&#x3E;
-                          &#x3C;div class=&#x22;card-content &#x22;&#x3E;
-                            &#x3C;span class=&#x22;card-title&#x22;&#x3E;&#x3C;?=$hello?&#x3E; passed to view&#x3C;/span&#x3E;
-                              &#x3C;p&#x3E;This is from view only&#x3C;/p&#x3E;
-                              &#x3C;br&#x3E;
-                              &#x3C;div class=&#x22;btn-group&#x22;&#x3E;
-                              &#x26;nbsp;
-                            &#x3C;/div&#x3E;
-                          &#x3C;/div&#x3E;
-                        &#x3C;/div&#x3E;
-                      &#x3C;/div&#x3E;
-                    &#x3C;/div&#x3E;
-                  &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;row&#x22;&#x3E;
+        &#x3C;div class=&#x22;col-md-12 col-sm-12&#x22;&#x3E;
+            &#x3C;div class=&#x22;panel panel-default rounded&#x22;&#x3E;
+                &#x3C;div class=&#x22;panel-heading&#x22;&#x3E;
+                    &#x3C;h3 class=&#x22;panel-title&#x22;&#x3E;&#x3C;?=$hello?&#x3E; passed to view&#x3C;/h3&#x3E;
+                &#x3C;/div&#x3E;
+                &#x3C;div class=&#x22;panel-body&#x22;&#x3E;
+                    &#x3C;p&#x3E;This is from view only&#x3C;/p&#x3E;
+                    &#x3C;br&#x3E;
+                    &#x3C;div class=&#x22;btn-group&#x22;&#x3E;&#x3C;/div&#x3E;
+                &#x3C;/div&#x3E;
+            &#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
                 </highlight-code>
               </div>
             </div>
@@ -422,7 +435,7 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   &#x3C;?php
-                  class Home extends SENE_Controller
+                  class Home extends \SENE_Controller
                   {
                     public function __construct()
                     {
@@ -508,7 +521,7 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   &#x3C;?php
-                  class Home extends SENE_Controller
+                  class Home extends \SENE_Controller
                   {
                     public function __construct()
                     {
