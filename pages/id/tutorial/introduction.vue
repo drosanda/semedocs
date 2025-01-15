@@ -128,8 +128,8 @@
         &#x2502;   &#x2514;&#x2500;&#x2500; home_bottom.php
         &#x251C;&#x2500;&#x2500; theme.json
         &#x251C;&#x2500;&#x2500; script.json
-        &#x2514;&#x2500;&#x2500; page/
-            &#x251C;&#x2500;&#x2500; col-1.php
+        &#x2514;&#x2500;&#x2500; layout/
+            &#x251C;&#x2500;&#x2500; one_column.php
             &#x2514;&#x2500;&#x2500; partials/
                 &#x2514;&#x2500;&#x2500; head.php
                 </highlight-code>
@@ -137,8 +137,8 @@
             </div>
 
             <p>Periksa direktori <code>app/view/front/</code> apabila belum ada, silakan buat direktori tersebut.</p>
-            <p>Periksa direktori <code>app/view/front/page/</code> apabila belum ada, silakan buat direktori tersebut.</p>
-            <p>Periksa direktori <code>app/view/front/page/partials/</code> apabila belum ada, silakan buat direktori tersebut.</p>
+            <p>Periksa direktori <code>app/view/front/layout/</code> apabila belum ada, silakan buat direktori tersebut.</p>
+            <p>Periksa direktori <code>app/view/front/layout/partials/</code> apabila belum ada, silakan buat direktori tersebut.</p>
 
             <h5>File theme.json</h5>
             <p>
@@ -249,7 +249,7 @@
             <h5>Membuat layout HTML utama</h5>
             <p>
               Seme Framework mendukung tata letak utama HTML untuk rendering html, javascript, dan konten.
-              Buka file yang terletak di <code>app/view/front/page/col-1.php</code>.
+              Buka file yang terletak di <code>app/view/front/layout/one_column.php</code>.
               Apabila belum ada, silakan buat file tersebut dan <i>paste</i>-kan isinya dari kode dibawah ini.
             </p>
 
@@ -273,23 +273,24 @@
               <div class="maccontent">
                 <highlight-code lang="html">
                   &#x3C;!DOCTYPE html&#x3E;
-                  &#x3C;html&#x3E;
-                    &#x3C;?php $this-&#x3E;getThemeElement(&#x27;page/partials/head&#x27;, $__forward) ?&#x3E;
-                    &#x3C;body&#x3E;
-                      &#x3C;?php $this-&#x3E;getThemeContent() ?&#x3E;
+&#x3C;html&#x3E;
+  &#x3C;!-- load head.php file as partial html element --&#x3E;
+  &#x3C;?php $this-&#x3E;getThemeElement(&#x27;layout/partials/head&#x27;, $__forward) ?&#x3E;
+  &#x3C;body&#x3E;
+    &#x3C;?php $this-&#x3E;getThemeContent() ?&#x3E;
 
-                      &#x3C;!-- jQuery, Bootstrap.js, jQuery plugins and Custom JS code --&#x3E;
-                      &#x3C;?php $this-&#x3E;getJsFooter(); ?&#x3E;
+    &#x3C;!-- jQuery, Bootstrap.js, jQuery plugins and Custom JS code --&#x3E;
+    &#x3C;?php $this-&#x3E;getJsFooter(); ?&#x3E;
 
-                      &#x3C;!-- Load and execute javascript code used only in this page --&#x3E;
-                      &#x3C;script&#x3E;
-                        $(document).ready(function(e){
-                          &#x3C;?php $this-&#x3E;getJsReady(); ?&#x3E;
-                        });
-                        &#x3C;?php $this-&#x3E;getJsContent(); ?&#x3E;
-                      &#x3C;/script&#x3E;
-                    &#x3C;/body&#x3E;
-                  &#x3C;/html&#x3E;
+    &#x3C;!-- Load and execute javascript code used only in this page --&#x3E;
+    &#x3C;script&#x3E;
+      $(document).ready(function(e){
+        &#x3C;?php $this-&#x3E;getJsReady(); ?&#x3E;
+      });
+      &#x3C;?php $this-&#x3E;getJsContent(); ?&#x3E;
+    &#x3C;/script&#x3E;
+  &#x3C;/body&#x3E;
+&#x3C;/html&#x3E;
                 </highlight-code>
               </div>
             </div>
@@ -304,7 +305,7 @@
 
             <h5>Pemisahan bagian HEAD dari HTML</h5>
             <p>Dengan menggunakan Seme Framework memungkinkan untuk memisahkan komponen html untuk memaksimalkan penggunaan kembali komponen HTML tersebut.</p>
-            <p>Untuk melakukannya, buka file yang terletak di <code>app/view/front/page/partials/head.php</code>.</p>
+            <p>Untuk melakukannya, buka file yang terletak di <code>app/view/front/layout/partials/head.php</code>.</p>
             <p>apabila belum ada, silakan buat file tersebut dan <i>paste</i>-kan isinya dari kode dibawah ini.</p>
 
             <div class="macwindow">
@@ -355,7 +356,7 @@
                 <ol>
                   <li><code>theme.json</code>,</li>
                   <li><code>script.json</code>,</li>
-                  <li>dan sebuah file untuk layout HTML. Contoh: <code>page/col-1.php</code> </li>
+                  <li>dan sebuah file untuk layout HTML. Contoh: <code>layout/one_column.php</code> </li>
                 </ol>
                 <p>Jadi, kita harus meletakkan variabel apa pun yang akan ditampilkan dalam array tunggal.</p>
               </div>
@@ -454,7 +455,7 @@
 
                       $this-&#x3E;putThemeContent(&#x22;home/home&#x22;,$data); //pass data to view
 
-                      $this-&#x3E;loadLayout(&#x22;col-1&#x22;,$data);
+                      $this-&#x3E;loadLayout(&#x22;one_column&#x22;,$data);
                       $this-&#x3E;render();
                     }
                   }
@@ -541,7 +542,7 @@
                       $this-&#x3E;putThemeContent(&#x22;home/home&#x22;,$data); //pass data to view
                       $this-&#x3E;putJsContent(&#x22;home/home_bottom&#x22;,$data); //pass data to view
 
-                      $this-&#x3E;loadLayout(&#x22;col-1&#x22;,$data);
+                      $this-&#x3E;loadLayout(&#x22;one_column&#x22;,$data);
                       $this-&#x3E;render();
                     }
                   }
@@ -660,7 +661,7 @@ export default {
         ],
         "dateCreated": "2021-08-11T19:52:38+07:00",
         "datePublished": "2021-08-11T19:52:38+07:00",
-        "dateModified": "2021-07-25T11:11:11+07:00",
+        "dateModified": "2025-01-15T18:11:11+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

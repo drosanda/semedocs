@@ -117,21 +117,21 @@
                   app/
 &#x2514;&#x2500;&#x2500; view/
     &#x2514;&#x2500;&#x2500; front/
-        &#x251C;&#x2500;&#x2500; partials/
+        &#x251C;&#x2500;&#x2500; home/
         &#x2502;   &#x251C;&#x2500;&#x2500; home.php
         &#x2502;   &#x2514;&#x2500;&#x2500; home_bottom.php
         &#x251C;&#x2500;&#x2500; theme.json
         &#x251C;&#x2500;&#x2500; script.json
-        &#x2514;&#x2500;&#x2500; page/
-            &#x251C;&#x2500;&#x2500; col-1.php
+        &#x2514;&#x2500;&#x2500; layout/
+            &#x251C;&#x2500;&#x2500; one_column.php
             &#x2514;&#x2500;&#x2500; partials/
                 &#x2514;&#x2500;&#x2500; head.php
                 </highlight-code>
               </div>
             </div>
             <p>Check the <code>app/view/front/</code> directory, create directory if does not exists.</p>
-            <p>Check the <code>app/view/front/page/</code> directory, create directory if does not exists.</p>
-            <p>Check the <code>app/view/front/page/partials/</code> directory, create directory if does not exists.</p>
+            <p>Check the <code>app/view/front/layout/</code> directory, create directory if does not exists.</p>
+            <p>Check the <code>app/view/front/layout/partials/</code> directory, create directory if does not exists.</p>
 
             <h5>File theme.json</h5>
             <p>
@@ -242,7 +242,7 @@
             <h5>Create HTML Main layout</h5>
             <p>
               Seme Framework support HTML main layout for rendering html, javascript, and content.
-              Open files located at <code>app/view/front/page/col-1.php</code>.
+              Open files located at <code>app/view/front/layout/one_column.php</code>.
               If the file does not exists, create one. And then, put this code on it.
             </p>
 
@@ -266,23 +266,24 @@
               <div class="maccontent">
                 <highlight-code lang="html">
                   &#x3C;!DOCTYPE html&#x3E;
-                  &#x3C;html&#x3E;
-                    &#x3C;?php $this-&#x3E;getThemeElement(&#x27;page/partials/head&#x27;, $__forward) ?&#x3E;
-                    &#x3C;body&#x3E;
-                      &#x3C;?php $this-&#x3E;getThemeContent() ?&#x3E;
+&#x3C;html&#x3E;
+  &#x3C;!-- load head.php file as partial html element --&#x3E;
+  &#x3C;?php $this-&#x3E;getThemeElement(&#x27;layout/partials/head&#x27;, $__forward) ?&#x3E;
+  &#x3C;body&#x3E;
+    &#x3C;?php $this-&#x3E;getThemeContent() ?&#x3E;
 
-                      &#x3C;!-- jQuery, Bootstrap.js, jQuery plugins and Custom JS code --&#x3E;
-                      &#x3C;?php $this-&#x3E;getJsFooter(); ?&#x3E;
+    &#x3C;!-- jQuery, Bootstrap.js, jQuery plugins and Custom JS code --&#x3E;
+    &#x3C;?php $this-&#x3E;getJsFooter(); ?&#x3E;
 
-                      &#x3C;!-- Load and execute javascript code used only in this page --&#x3E;
-                      &#x3C;script&#x3E;
-                        $(document).ready(function(e){
-                          &#x3C;?php $this-&#x3E;getJsReady(); ?&#x3E;
-                        });
-                        &#x3C;?php $this-&#x3E;getJsContent(); ?&#x3E;
-                      &#x3C;/script&#x3E;
-                    &#x3C;/body&#x3E;
-                    &#x3C;/html&#x3E;
+    &#x3C;!-- Load and execute javascript code used only in this page --&#x3E;
+    &#x3C;script&#x3E;
+      $(document).ready(function(e){
+        &#x3C;?php $this-&#x3E;getJsReady(); ?&#x3E;
+      });
+      &#x3C;?php $this-&#x3E;getJsContent(); ?&#x3E;
+    &#x3C;/script&#x3E;
+  &#x3C;/body&#x3E;
+&#x3C;/html&#x3E;
                   </highlight-code>
                 </div>
               </div>
@@ -298,7 +299,7 @@
               <h5 id="view_html_head">Separated HTML head</h5>
               <p>
                 Seme Framework support separated layout element for maximizing reusable components.
-                To do so open files located at <code>app/view/front/page/partials/head.php</code>.
+                To do so open files located at <code>app/view/front/layout/partials/head.php</code>.
                 If the file does not exists, create one. And then, put this code on it.
               </p>
 
@@ -351,7 +352,7 @@
                   <ol>
                     <li><code>theme.json</code>,</li>
                     <li><code>script.json</code>,</li>
-                    <li>and a layout <code>page/col-1.php</code> </li>
+                    <li>and a layout <code>layout/one_column.php</code> </li>
                   </ol>
                   <p>So, we have to put any variable that will pass into view in single array.</p>
                 </div>
@@ -454,7 +455,7 @@
 
                         $this-&#x3E;putThemeContent(&#x22;home/home&#x22;,$data); //pass data to view
 
-                        $this-&#x3E;loadLayout(&#x22;col-1&#x22;,$data);
+                        $this-&#x3E;loadLayout(&#x22;one_column&#x22;,$data);
                         $this-&#x3E;render();
                       }
                     }
@@ -540,7 +541,7 @@
                         $this-&#x3E;putThemeContent(&#x22;home/home&#x22;,$data); //pass data to view
                         $this-&#x3E;putJsContent(&#x22;home/home_bottom&#x22;,$data); //pass data to view
 
-                        $this-&#x3E;loadLayout(&#x22;col-1&#x22;,$data);
+                        $this-&#x3E;loadLayout(&#x22;one_column&#x22;,$data);
                         $this-&#x3E;render();
                       }
                     }
@@ -569,8 +570,8 @@
             </nuxt-link>
           </div>
           <div class="nav-bottom-right">
-            <nuxt-link to="/4.0/tutorial/get-data/" class="btn">
-              Tutorial: Get Data
+            <nuxt-link to="/4.0/tutorial/notfound-page/" class="btn">
+              Customize Notfound Page
               <i class="fa fa-chevron-right"></i>
             </nuxt-link>
           </div>
