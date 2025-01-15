@@ -26,7 +26,7 @@
             <p>
               Pertama-tama kita akan membuat layout khusus untuk <code>notfound</code>.
               Biasanya, halaman notfound ini memiliki struktur HTML yang berbeda dengan halaman lainnya, sehingga harus memiliki layout khusus.
-              Buat file baru di <code>app/view/front/page/notfound.php</code> untuk layout notfound.
+              Buat file baru di <code>app/view/front/layout/error_404.php</code> untuk layout notfound.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -49,8 +49,8 @@
                 <highlight-code lang="html">
 &#x3C;!DOCTYPE html&#x3E;
 &#x3C;html&#x3E;
-  &#x3C;?php $this-&#x3E;getThemeElement(&#x27;page/html/head&#x27;, $__forward) ?&#x3E;
-  &#x3C;body&#x3E;
+  &#x3C;?php $this-&#x3E;getThemeElement(&#x27;layout/partials/head&#x27;, $__forward) ?&#x3E;
+  &#x3C;body style=&#x22;background-color: khaki;&#x22;&#x3E;
 
     &#x3C;div class=&#x22;container&#x22;&#x3E;
       &#x3C;div class=&#x22;row&#x22;&#x3E;
@@ -123,7 +123,7 @@ class NotFound extends \SENE_Controller
         header(&#x22;HTTP/1.0 404 Not Found&#x22;);
         $this-&#x3E;setTheme(&#x27;front&#x27;);
         $this-&#x3E;setTitle(&#x27;Notfound - Error 404&#x27;);
-        $this-&#x3E;loadLayout(&#x22;notfound&#x22;,$data);
+        $this-&#x3E;loadLayout(&#x22;error_404&#x22;,$data);
         $this-&#x3E;render();
     }
 }
@@ -263,7 +263,7 @@ export default {
         ],
         "dateCreated": "2021-07-25T11:11:11+07:00",
         "datePublished": "2021-07-25T11:11:11+07:00",
-        "dateModified": "2021-07-25T11:11:11+07:00",
+        "dateModified": "2025-01-15T20:40:11+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

@@ -4,7 +4,7 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0/">4.0.3 (Bahasa)</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0/">4.0.3</NuxtLink></li>
           <li class=""><NuxtLink to="/4.0/tutorial/">Tutorial</NuxtLink></li>
           <li class="unavailable">Not Found Page</li>
         </ul>
@@ -25,7 +25,7 @@
             <p>
               First, we will create a special layout for the Not Found page.
                Usually, this Not Found page has a different HTML structure compared to other pages, so it should have a special layout.
-              Create a new file in <code>app/view/front/page/notfound.php</code> for the Not Found layout.
+              Create a new file in <code>app/view/front/layout/error_404.php</code> for the Not Found layout.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -48,8 +48,8 @@
                 <highlight-code lang="html">
 &#x3C;!DOCTYPE html&#x3E;
 &#x3C;html&#x3E;
-  &#x3C;?php $this-&#x3E;getThemeElement(&#x27;page/html/head&#x27;, $__forward) ?&#x3E;
-  &#x3C;body&#x3E;
+  &#x3C;?php $this-&#x3E;getThemeElement(&#x27;layout/partials/head&#x27;, $__forward) ?&#x3E;
+  &#x3C;body style=&#x22;background-color: khaki;&#x22;&#x3E;
 
     &#x3C;div class=&#x22;container&#x22;&#x3E;
       &#x3C;div class=&#x22;row&#x22;&#x3E;
@@ -122,7 +122,7 @@ class NotFound extends \SENE_Controller
         header(&#x22;HTTP/1.0 404 Not Found&#x22;);
         $this-&#x3E;setTheme(&#x27;front&#x27;);
         $this-&#x3E;setTitle(&#x27;Notfound - Error 404&#x27;);
-        $this-&#x3E;loadLayout(&#x22;notfound&#x22;,$data);
+        $this-&#x3E;loadLayout(&#x22;error_404&#x22;,$data);
         $this-&#x3E;render();
     }
 }
@@ -189,8 +189,8 @@ export default {
     return {
       name: 'Seme Framework 4 Tutorial',
       suffix: ' - Seme Framework 4 Tutorial',
-      title: 'Halaman Notfound',
-      description: 'Pelajari tutorial pembuatan halaman 404 notfound untuk Seme Framework 4',
+      title: 'Customize Notfound Page',
+      description: 'Learn about Customize Notfound Page using Seme Framework 4.',
       notfoundex: require('~/assets/img/tutorial/notfound/notfound-page-example.png'),
       breadcrumbs: [
         {
@@ -262,7 +262,7 @@ export default {
         ],
         "dateCreated": "2025-01-15T11:11:11+07:00",
         "datePublished": "2025-01-15T11:11:11+07:00",
-        "dateModified": "2025-01-15T11:11:11+07:00",
+        "dateModified": "2025-01-15T20:41:11+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
