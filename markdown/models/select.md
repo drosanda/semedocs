@@ -6,28 +6,31 @@ Date Created: 2024-11-26
 Last Updated: 2024-11-26
 -->
 
-# select()
+# Seme Framework
+## Model
+### Query Builder
+#### select()
 The select method purpose is to select columns from a table. This method is part of SENE_Model class and can be combined with other Query Builder methods to build complex queries.
 
-## Syntax
+##### Syntax
 Filters data from query result by executing SELECT SQL command. This method is part of the Query Builder pattern and can be combined with other Query Builder methods.
 
-## Syntax
+##### Syntax
 ```php
-$this->db->select(string $column_name): $this->db
+$this->db->select(string $column_name="*"): $this->db
 ```
 
-## Parameters
+##### Parameters
 - `$column_name` (string, required): The column name to select from the table
   - Can be a single column name
   - Can use `*` wildcard to select all columns
 
-## Return Value
+##### Return Value
 Returns the database object instance for method chaining.
 
-## Examples
+##### Examples
 
-### Example 1: Select All Columns
+###### Example 1: Select All Columns using wildcard
 ```php
 class D_Blog_Model extends \SENE_Model {
     var $tbl = 'd_blog';
@@ -45,7 +48,7 @@ Generated SQL:
 SELECT * FROM `d_blog`;
 ```
 
-### Example 2: Select Specific Columns
+###### Example 2: Select Specific Columns
 ```php
 public function getById($id) {
     $this->db->select("id");
@@ -61,9 +64,7 @@ Generated SQL:
 SELECT `id`, `title`, `content` FROM `d_order` WHERE `id` = 53;
 ```
 
-## Notes
+### Notes
 - Can be called multiple times to select different columns
 - Must be used with `from()` method to specify the table
 - Commonly used with other query builder methods like `where()`, `limit()`, etc.
-
-Would you like me to explain any specific aspect of the `select` method in more detail?

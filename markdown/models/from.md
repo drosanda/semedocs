@@ -5,24 +5,28 @@ Author: Daeng Rosanda
 Date Created: 2024-11-26
 Last Updated: 2024-11-26
 -->
-# from()
+# Seme Framework
+## Model
+### Query Builder
+
+#### from()
 The from method is used to specify the table from which data will be selected in a database query. This method is part of SENE_Model class and can be combined with other Query Builder methods to build complex queries.
 
-## Syntax
+##### Syntax
 ```php
 $this->db->from(string $table_name[, string $table_alias=""]): $this->db
 ```
 
-## Parameters
+##### Parameters
 - `$table_name` (string, required): The name of the database table
 - `$table_alias` (string, optional): An alias for the table name, required when using JOIN methods
 
-## Return Value
+##### Return Value
 Returns the database object instance for method chaining.
 
-## Examples
+##### Examples
 
-### Example 1: Basic Usage
+###### Example 1: Basic Usage
 ```php
 class Blog_Model extends \SENE_Model {
     var $tbl = 'blog';
@@ -39,7 +43,7 @@ Generated SQL:
 SELECT * FROM `blog` AS `b`;
 ```
 
-### Example 2: Without Alias
+###### Example 2: Without Alias
 ```php
 public function getAll() {
     $this->db->from('blog');
@@ -51,7 +55,7 @@ Generated SQL:
 SELECT * FROM `blog`;
 ```
 
-## Notes
+##### Notes
 - Must be used after `select()` method if specific columns are needed
 - Table alias is required when using JOIN operations
 - Can be chained with other query builder methods
