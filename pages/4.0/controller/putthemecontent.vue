@@ -14,8 +14,7 @@
           <div class="content">
             <h1 class="">putThemeContent Method</h1>
             <p>
-              The <code>putThemeContent</code> method used for load a view component file in current theme.
-              This method support stack for loading another view component.
+              The putThemeContent() method injects view content into a layout within the current theme. It supports nested view component loading and variable passing.
             </p>
 
             <h2>Basic Usage</h2>
@@ -39,35 +38,95 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this->putThemeContent(string $content_location[, array $data]): $this
+                  protected function putThemeContent(string $view_file_path = &#x27;&#x27;, array $forwarded_data = []): mixed
                 </highlight-code>
               </div>
             </div>
             <h3>Parameters</h3>
             <p>
-              This method has required 1 parameter that is $content_location.
+              This method has required 1 parameter that is $view_file_path.
             </p>
-            <h4>$content_location</h4>
+            <h4>$view_file_path</h4>
             <p>
-              The <code>$content_location</code> value can be a string that indicates view component location related to current theme.
-              This value does not need <code>.php</code> suffix.
+              Relative theme location filename without .php extension.
             </p>
 
-            <h4>$data</h4>
+            <h4>$forwarded_data</h4>
             <p>
-              The <code>$data</code> values contain <code>array of array</code> that will be passed to view as a variable.
-              The <code>array key</code> from this value will be parsed as name of a variable.
+              Associative array of data to pass to the view. This parameter was optional.
             </p>
 
-            <h2>Example</h2>
+            <h3>Return Value</h3>
+            <ul>
+              <li>Returns 0 on successful view injection</li>
+              <li>Returns instance of current class ($this) on failure</li>
+              <li>Triggers E_USER_ERROR if view file cannot be loaded</li>
+            </ul>
+
+            <h3>Behavior</h3>
+            <ul>
+              <li>Constructs full view path using theme directory</li>
+              <li>Checks if view file exists</li>
+              <li>Creates temporary session storage for passed variables</li>
+              <li>Extracts variables into current scope</li>
+              <li>Buffers view content using output buffering</li>
+              <li>Appends buffered content to theme content</li>
+              <li>Cleans up temporary session data</li>
+            </ul>
+
+            <h3>Error Handling</h3>
+            <p>The method will trigger a user error if:</p>
+            <ul>
+              <li>The specified view file does not exist</li>
+              <li>The full path cannot be constructed</li>
+            </ul>
+
+            <h2>Examples</h2>
             <p>
               Here is the example implementation of putThemeContent method.
             </p>
 
-            <h3>File and Directory structures</h3>
-            <p>
-              Before implementing the codes, we have to understand the file and directory structure that will used in example.
-            </p>
+            <h3>Example 1: Basic Usage, Directory Structure, and html view example code</h3>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">
+                  class Home extends \SENE_Controller {
+    public function __construct() {
+        parent::__construct();
+        $this-&#x3E;setTheme(&#x27;front&#x27;);
+    }
+
+    public function index() {
+        $data = [
+            &#x27;title&#x27; =&#x3E; &#x27;Welcome&#x27;
+        ];
+        $this-&#x3E;putThemeContent(&#x22;home/home&#x22;, $data);  // this method will be loaded views under app/view/front/home/bottom.php
+        $this-&#x3E;putJsContent(&#x22;home/home_bottom&#x22;, $data);
+        $this-&#x3E;loadLayout(&#x27;single_column_layout&#x27;, $data);
+        $this-&#x3E;render();
+    }
+}
+                </highlight-code>
+              </div>
+            </div>
+
+            <p>Directory structure</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -88,64 +147,16 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   app/
-                  └── view/
-                   └── front/
-                    ├──  home/
-                    | ├──  slider.php
-                    | └──  three_values.php
-                    └──  page
-                      └──  col-1.php
+&#x2514;&#x2500;&#x2500; view/
+    &#x2514;&#x2500;&#x2500; front/
+        &#x2514;&#x2500;&#x2500; home/
+            &#x2514;&#x2500;&#x2500; home.php
                 </highlight-code>
               </div>
             </div>
 
-            <h3>The Controller</h3>
-            <p>
-              On this code example shows implementation of putThemeContent method and how to passing variable to it.
-            </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  class Home extends SENE_Controller
-                  {
-                    public function __construct()
-                    {
-                      parent::__construct();
-                      $this-&#x3E;setTheme(&#x27;homepage&#x27;);
-                    }
-                    public function index()
-                    {
-                      $data = array();
-                      $data['example'] = 'this is example';
-                      $this-&#x3E;putThemeContent(&#x27;home/slider&#x27;,$data);
-                      $this-&#x3E;putThemeContent(&#x27;home/three_values&#x27;,$data);
-                      $this-&#x3E;loadLayout(&#x27;col-1&#x27;,$data);
-                    }
-                  }
-                </highlight-code>
-              </div>
-            </div>
-
-            <h3>View component</h3>
-            <p>
-              From this example, how view called <code>$data</code> as a variable on <code>home/slider.php</code> view component source codes.
-            </p>
+            <p>Example of app/view/front/home/home.php file content</p>
+            
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -165,12 +176,21 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="html">
-                  &#x3C;div&#x3E;
-                    &#x3C;h1&#x3E;This is parsed value from data &#x3C;?=$example?&#x3E;&#x3C;/h1&#x3E;
-                  &#x3C;/div&#x3E;
+                  &#x3C;header&#x3E;
+    &#x3C;h1&#x3E;&#x3C;?= $title ?&#x3E;&#x3C;/h1&#x3E;
+&#x3C;/header&#x3E;
                 </highlight-code>
               </div>
             </div>
+
+            <h2>Notes</h2>
+            <ul>
+              <li>View files must have .php extension</li>
+              <li>View paths are relative to the theme directory</li>
+              <li>Variables passed in $forwarded_data array become available in view scope</li>
+              <li>Content is buffered and not immediately output</li>
+              <li>Must call render method to display collected content</li>
+            </ul>
 
             <div class="message is-info">
               <div class="message-body">
@@ -283,7 +303,7 @@ export default {
         ],
         "dateCreated": "2021-07-31T12:13:14+07:00",
         "datePublished": "2021-07-31T12:13:14+07:00",
-        "dateModified": "2021-07-31T12:13:14+07:00",
+        "dateModified": "2025-02-21T23:13:14+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
