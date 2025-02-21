@@ -26,7 +26,7 @@
               <li>MariaDB version 5.5.x melalui driver MySQLi</li>
               <li>MariaDB version 10.x.x melalui driver MySQLi</li>
             </ul>
-            <p>Koneksi ke database tidak akan berjalan dengan lancar sebelum pengaturan database dilakukan dengan baik baik dan benar.</p>
+            <p>Koneksi ke database tidak akan berjalan dengan lancar sebelum pengaturan database dilakukan dengan benar.</p>
 
             <h2>IDE atau Text Editor</h2>
             <p>IDE atau Editor Teks diperlukan untuk mengimplementasikan kode ke dalam Seme Framework. Anda dapat memilih IDE apa pun tetapi Seme Framework dibangun dengan menggunakan:</p>
