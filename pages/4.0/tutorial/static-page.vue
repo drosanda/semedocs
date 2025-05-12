@@ -12,33 +12,15 @@
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Static Page</h1>
-            <p>Application Programming Interface (API) ussually built by developer for bridging frontend and backend.</p>
-            <p>Seme Framework has functionality that can support for building API.</p>
-            <p>In this tutorial you will learn about how to:</p>
-            <ul>
-              <li>Setup the json output using library.</li>
-              <li>Create core controller for reusable function.</li>
-              <li>Collect and input from form data and URI request.</li>
-              <li>Do the Create, Retrieve, Update and Delete (CRUD) process to database.</li>
-              <li>Test the API.</li>
-            </ul>
-
-            <h2>Prerequisited</h2>
-            <p>For best result of this tutorial, you have to setup or installed the followings item:</p>
-            <ul>
-              <li>Running Apache and MySQL</li>
-              <li>An IDE or Text Editor</li>
-              <li>A Browser</li>
-              <li><NuxtLink to="/4.0/tutorial/introduction">Completed the first tutorial</NuxtLink></li>
-              <li><NuxtLink to="/4.0/tutorial/get-data">Completed the Get Data tutorial</NuxtLink></li>
-            </ul>
-            <p>Okay, lets get started!</p>
-
-            <h2>The Structure</h2>
-            <p>Before we proceed to coding phase, we have to learn about the directory and api result structure that we used to building the API.</p>
-            <h3>Directory Structure</h3>
-            <p>Here is the structure that we have to use.</p>
+            <h1 class="">Create Static Page in Seme Framework</h1>
+            <p><em>Note: This tutorial assumes you&rsquo;ve downloaded and installed the Seme Framework in your development environment with correct configuration.</em></p>
+            <h2>Prepare your environment</h2>
+            <p>Development environment is the first step before we can run Seme Framework on your computer. Depends on what operating system (OS) that you have like Windows, Mac, or Linux this will have different action that we need to do. But, on this tutorial guide I will assume using Windows as operating system. Then, you need to download install XAMPP, you can skip this part if you already have XAMPP installed. After that, we need Git to be installed on your computer to download Seme Framework, you can skip this if you already have. Also you need text editor like VSCode. After all of that, we can proceed to next step.</p>
+            <h3>Run the XAMPP</h3>
+            <p>We use XAMPP because it was available to Windows, Linux, and then Mac as a software bundle that we can download and install manually and its free. After we download the XAMPP, then we installed it then the new menu will be shown in Start Menu called XAMPP Control Panel on start menu (Windows) or from launchpad (Linux / Mac). Click on start button for Apache and MySQL.</p>
+            <h3>Download the Seme Framework</h3>
+            <p>After git and XAMPP was installed, now we can download the Seme Framework through powershell. Please open powershell (Windows) or we , then type:</p>
+            
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -57,60 +39,22 @@
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="php">
-- app
--- controller
---- api
----- home.php
----- apikey.php
--- model
---- api
----- a_apikey_model.php
-</highlight-code>
-</div>
-</div>
-            <p>We have to separated controller and the model too for avoiding mistake by add new directory to model and controller.</p>
-            <h3>API response structure</h3>
-            <p>There is many standard format for API response structure, but we use the most basic API structure on this tutorial.</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
+                <highlight-code lang="php">C: #can be skipped on non Windows operating system
+
+cd \xampp\htdocs
+git clone git@github.com:drosanda/seme-framework.git seme_framework
+                </highlight-code>
               </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-{
-  &#x22;status&#x22;: 200,
-  &#x22;message&#x22;: &#x22;Success&#x22;,
-  &#x22;data&#x22;: []
-}
-</highlight-code>
-</div>
-</div>
-            <div class="message is-info">
-<div class="message-body">
-              <p>While creating API, we doesn&#x27;t need the view, because API result will be rendered on controller.</p>
             </div>
-          </div>
+            <p>Now, the Seme Framework was installed inside htdocs folder called seme_framework.</p>
+            
+            <h3>Check The Seme Framework is Run or Not</h3>
+            <p>Open browser like Google Chrome or Firefox, and then fill the address bar with http://localhost/seme_framework. It should be show a line of text like this: "Thank you for using Seme Framework".</p>
+            
+            <h2>Create a Controller for Static Page</h2>
+            <p>After we finished setup the Seme Framework, now we are ready to do some code by creating new controller to handle static page. A controller is simply a class that helps delegate work. It is the glue of your web application.</p>
 
-            <h2>Coding Phase</h2>
-            <p>After understranding the structure, its time to implement the codes.</p>
-
-            <h3>Create the default API</h3>
-            <p>First thing first we have to create default API response for test basic functionality and basic api result structure.</p>
-            <p>Create new directory under <code>app/controller/</code> named <code>api</code> and then create a file named <code>home.php</code>.</p>
+            <p>For example, when a call is made to:</p>
             <div class="macwindow">
               <div class="titlebar">
                 <div class="buttons">
@@ -129,458 +73,413 @@
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="php">
-&#x3C;?php
-class Home extends SENE_Controller
-{
-  public function __construct()
-  {
-    parent::__construct();
-    $this-&#x3E;lib(&#x22;sene_json_engine&#x22;, &#x22;json&#x22;);
-  }
-  public function index(){
-    $data = array();
-    $data[&#x27;status&#x27;] = 404;
-    $data[&#x27;message&#x27;] = &#x27;Not found&#x27;;
-    $data[&#x27;data&#x27;] = array();
-    $this-&#x3E;json-&#x3E;out($data);
-  }
-}
-</highlight-code>
-</div>
-</div>
-            <p>To test the functionality, just open <code>localhost/seme_framework/api/</code>.</p>
-
-            <h3>Create the model</h3>
-            <p>We have to create the model for communicating between PHP Server and Database server.</p>
-            <p>Create new directory under <code>model</code> named <code>api</code>, and then create a file named <code>a_apikey_model.php</code>.</p>
-            <p>In the model we have to add some method such as insert, update, delete, get by id, get all data.</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
+                <highlight-code lang="php">http://example.com/blog/detail/10
+                </highlight-code>
               </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-&#x3C;?php
-class A_ApiKey_Model extends SENE_Model
-{
-  public $tbl = &#x27;a_apikey&#x27;;
-  public $tbl_as = &#x27;ak&#x27;;
-
-  public function __construct()
-  {
-    parent::__construct();
-    $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl, $this-&#x3E;tbl_as);
-  }
-
-  /**
-   * Start transaction
-   * @return boolean      1 success, false failed
-   */
-  public function trans_start()
-  {
-    $r = $this-&#x3E;db-&#x3E;autocommit(0);
-    if ($r) {
-      return $this-&#x3E;db-&#x3E;begin();
-    }
-    return false;
-  }
-
-  /**
-   * Commit transaction
-   * @return boolean      1 success, false failed
-   */
-  public function trans_commit()
-  {
-    return $this-&#x3E;db-&#x3E;commit();
-  }
-
-  /**
-   * Rollback transaction
-   * @return boolean      1 success, false failed
-   */
-  public function trans_rollback()
-  {
-    return $this-&#x3E;db-&#x3E;rollback();
-  }
-
-  /**
-   * Close / End transaction
-   * @return boolean      1 success, false failed
-   */
-  public function trans_end()
-  {
-    return $this-&#x3E;db-&#x3E;autocommit(1);
-  }
-
-  /**
-   * get last ID before insert
-   * @param  int $nation_code    Nation Code or Country Code
-   * @return int                 last id, 0 failed
-   */
-  public function getLastId($nation_code)
-  {
-    $this-&#x3E;db-&#x3E;select_as(&#x22;COALESCE(MAX($this-&#x3E;tbl_as.id),0)+1&#x22;, &#x22;last_id&#x22;, 0);
-    $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl, $this-&#x3E;tbl_as);
-    $this-&#x3E;db-&#x3E;where(&#x22;nation_code&#x22;, $nation_code);
-    $d = $this-&#x3E;db-&#x3E;get_first(&#x27;&#x27;, 0);
-    if (isset($d-&#x3E;last_id)) {
-      return $d-&#x3E;last_id;
-    }
-    return 0;
-  }
-
-  /**
-   * Insert data to a table row
-   * @param  array   $di    key value pair for inserting data to a table
-   * @return boolean        1 success, false failed
-   */
-  public function set($di)
-  {
-    return $this-&#x3E;db-&#x3E;insert($this-&#x3E;tbl, $di);
-  }
-
-  /**
-   * Update data in a table row
-   * @param  array   $nation_code     Nation Code or Country Code
-   * @param  array   $id              ID from a table
-   * @return boolean                  1 success, false failed
-   */
-  public function update($nation_code, $id, $du)
-  {
-    $this-&#x3E;db-&#x3E;where(&#x27;nation_code&#x27;, $nation_code);
-    $this-&#x3E;db-&#x3E;where(&#x27;id&#x27;, $id);
-    return $this-&#x3E;db-&#x3E;update($this-&#x3E;tbl, $du);
-  }
-
-  /**
-   * Delete data in a table row
-   * @param  array   $nation_code     Nation Code or Country Code
-   * @param  array   $id              ID from a table
-   * @return boolean                  1 success, false failed
-   */
-  public function del($nation_code, $id)
-  {
-    $this-&#x3E;db-&#x3E;where(&#x27;nation_code&#x27;, $nation_code);
-    $this-&#x3E;db-&#x3E;where(&#x27;id&#x27;, $id);
-    return $this-&#x3E;db-&#x3E;delete($this-&#x3E;tbl);
-  }
-
-  /**
-   * Retrieve all rows
-   * @return array        Array of object
-   */
-  public function get()
-  {
-    return $this-&#x3E;db-&#x3E;get();
-  }
-
-  /**
-   * [getById description]
-   * @param  int    $nation_code Nation Code or Country Code
-   * @param  int    $id          ID from a table
-   * @return object              Success if return Single row data object, otherwise return empty object
-   */
-  public function getById($nation_code,$id)
-  {
-    $this-&#x3E;db-&#x3E;where(&#x27;nation_code&#x27;, $nation_code);
-    $this-&#x3E;db-&#x3E;where(&#x27;id&#x27;, $id);
-    return $this-&#x3E;db-&#x3E;get_first();
-  }
-}
-</highlight-code>
-</div>
-</div>
-
-            <h3>Create the controller for apikey</h3>
-            <p>After create model, now we have to create controller for CRUD.</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-&#x3C;?php
-class Home extends SENE_Controller
-{
-  public function __construct()
-  {
-    parent::__construct();
-    $this-&#x3E;load(&#x22;a_apikey_model&#x22;, &#x22;aakm&#x22;);
-    $this-&#x3E;lib(&#x22;sene_json_engine&#x22;, &#x22;json&#x22;);
-  }
-  public function index(){
-    $data = array();
-    $data[&#x27;status&#x27;] = 200;
-    $data[&#x27;message&#x27;] = &#x27;Success&#x27;;
-    $data[&#x27;data&#x27;] = $this-&#x3E;aakm-&#x3E;get();
-    $this-&#x3E;json-&#x3E;out($data);
-  }
-
-  public function detail($id){
-    $data = array();
-    $id = (int) $id;
-    if($id&#x3C;=0){
-      $data[&#x27;status&#x27;] = 800;
-      $data[&#x27;message&#x27;] = &#x27;invalid ID&#x27;;
-      $this-&#x3E;json-&#x3E;out($data);
-    }
-
-    $aakm = $this-&#x3E;aakm-&#x3E;getById($id);
-    if(!isset($aakm-&#x3E;id)){
-      $data[&#x27;status&#x27;] = 804;
-      $data[&#x27;message&#x27;] = &#x27;Data with supplied ID not found&#x27;;
-      $this-&#x3E;json-&#x3E;out($data);
-    }else{
-      $data[&#x27;status&#x27;] = 200;
-      $data[&#x27;message&#x27;] = &#x27;Success&#x27;;
-      $data[&#x27;data&#x27;] = $aakm;
-      $this-&#x3E;json-&#x3E;out($data);
-    }
-  }
-
-  public function create(){
-    $data = array();
-    $data[&#x27;status&#x27;] = 549;
-    $data[&#x27;message&#x27;] = &#x27;one or more parameter are required&#x27;;
-    $data[&#x27;data&#x27;] = array();
-
-    //collect input
-    $nation_code = $this-&#x3E;input-&#x3E;post(&#x27;nation_code&#x27;);
-    $code = $this-&#x3E;input-&#x3E;post(&#x27;code&#x27;);
-    $name = $this-&#x3E;input-&#x3E;post(&#x27;name&#x27;);
-    $is_active = (int) $this-&#x3E;input-&#x3E;post(&#x27;is_active&#x27;);
-
-    //validation
-    if(strlen($nation_code)==0){
-      $data[&#x27;status&#x27;] = 801;
-      $data[&#x27;message&#x27;] = &#x27;invalid nation_code&#x27;;
-      $this-&#x3E;json-&#x3E;out($data);
-    }
-    if(strlen($code)==0){
-      $data[&#x27;status&#x27;] = 801;
-      $data[&#x27;message&#x27;] = &#x27;invalid code&#x27;;
-      $this-&#x3E;json-&#x3E;out($data);
-    }
-    if(strlen($name)==0){
-      $data[&#x27;status&#x27;] = 802;
-      $data[&#x27;message&#x27;] = &#x27;invalid name&#x27;;
-      $this-&#x3E;json-&#x3E;out($data);
-    }
-    if($is_active&#x3C;0){
-      $data[&#x27;status&#x27;] = 803;
-      $data[&#x27;message&#x27;] = &#x27;invalid is_active&#x27;;
-      $this-&#x3E;json-&#x3E;out($data);
-    }
-
-    //transaction open
-    $this-&#x3E;aakm-&#x3E;trans_start();
-
-    //data input
-    $di = array();
-    $di[&#x27;nation_code&#x27;] = $nation_code;
-    $di[&#x27;id&#x27;] = $this-&#x3E;aakm-&#x3E;getLastId($nation_code);
-    $di[&#x27;code&#x27;] = $code;
-    $di[&#x27;name&#x27;] = $name;
-    $di[&#x27;cdate&#x27;] = &#x27;NOW()&#x27;;
-    $di[&#x27;ldate&#x27;] = &#x27;NOW()&#x27;;
-    $di[&#x27;is_active&#x27;] = $is_active;
-
-    $res = $this-&#x3E;aakm-&#x3E;set($di);
-    if($res){
-      $data[&#x27;status&#x27;] = 200;
-      $data[&#x27;message&#x27;] = &#x27;success&#x27;;
-      $data[&#x27;data&#x27;] = $this-&#x3E;aakm-&#x3E;get();
-      $this-&#x3E;aakm-&#x3E;trans_commit();
-    }else{
-      $data[&#x27;status&#x27;] = 900;
-      $data[&#x27;message&#x27;] = &#x27;insert data failed&#x27;;
-      $this-&#x3E;aakm-&#x3E;trans_rollback();
-    }
-
-    //transaction closed
-    $this-&#x3E;aakm-&#x3E;trans_end();
-
-    //render response
-    $this-&#x3E;json-&#x3E;out($data);
-  }
-
-  public function edit($nation_code,$id){
-    $data = array();
-    $data[&#x27;status&#x27;] = 549;
-    $data[&#x27;message&#x27;] = &#x27;one or more parameter are required&#x27;;
-    $data[&#x27;data&#x27;] = array();
-
-    $nation_code = $this-&#x3E;input-&#x3E;post(&#x27;nation_code&#x27;);
-    if(strlen($nation_code)==0){
-      $data[&#x27;status&#x27;] = 801;
-      $data[&#x27;message&#x27;] = &#x27;invalid nation_code&#x27;;
-      $this-&#x3E;json-&#x3E;out($data);
-    }
-
-    $id = (int) $id;
-    if($id&#x3C;=0){
-      $data[&#x27;status&#x27;] = 800;
-      $data[&#x27;message&#x27;] = &#x27;invalid ID&#x27;;
-      $this-&#x3E;json-&#x3E;out($data);
-    }
-
-    $aakm = $this-&#x3E;aakm-&#x3E;getById($nation_code,$id);
-    if(!isset($aakm-&#x3E;id)){
-      $data[&#x27;status&#x27;] = 804;
-      $data[&#x27;message&#x27;] = &#x27;Data with supplied ID not found&#x27;;
-      $this-&#x3E;json-&#x3E;out($data);
-    }
-
-    //collect input
-    $code = $this-&#x3E;input-&#x3E;post(&#x27;code&#x27;);
-    $name = $this-&#x3E;input-&#x3E;post(&#x27;name&#x27;);
-    $is_active = (int) $this-&#x3E;input-&#x3E;post(&#x27;is_active&#x27;);
-
-    //validation
-    if(strlen($code)==0){
-      $data[&#x27;status&#x27;] = 801;
-      $data[&#x27;message&#x27;] = &#x27;invalid code&#x27;;
-      $this-&#x3E;json-&#x3E;out($data);
-    }
-    if(strlen($name)==0){
-      $data[&#x27;status&#x27;] = 802;
-      $data[&#x27;message&#x27;] = &#x27;invalid name&#x27;;
-      $this-&#x3E;json-&#x3E;out($data);
-    }
-    if($is_active&#x3C;0){
-      $data[&#x27;status&#x27;] = 803;
-      $data[&#x27;message&#x27;] = &#x27;invalid is_active&#x27;;
-      $this-&#x3E;json-&#x3E;out($data);
-    }
-
-    //data update
-    $du = array();
-    $du[&#x27;nation_code&#x27;] = $nation_code;
-    $du[&#x27;code&#x27;] = $code;
-    $du[&#x27;name&#x27;] = $name;
-    $du[&#x27;ldate&#x27;] = &#x27;NOW()&#x27;;
-    $du[&#x27;is_active&#x27;] = $is_active;
-
-    $res = $this-&#x3E;aakm-&#x3E;update($nation_code,$id,$du);
-    if($res){
-      $data[&#x27;status&#x27;] = 200;
-      $data[&#x27;message&#x27;] = &#x27;success&#x27;;
-      $data[&#x27;data&#x27;] = $this-&#x3E;aakm-&#x3E;get();
-    }else{
-      $data[&#x27;status&#x27;] = 900;
-      $data[&#x27;message&#x27;] = &#x27;update data failed&#x27;;
-    }
-    $this-&#x3E;json-&#x3E;out($data);
-  }
-
-  public function delete($nation_code,$id){
-    $data = array();
-    $data[&#x27;status&#x27;] = 549;
-    $data[&#x27;message&#x27;] = &#x27;one or more parameter are required&#x27;;
-    $data[&#x27;data&#x27;] = array();
-
-    $nation_code = $this-&#x3E;input-&#x3E;post(&#x27;nation_code&#x27;);
-    if(strlen($nation_code)==0){
-      $data[&#x27;status&#x27;] = 801;
-      $data[&#x27;message&#x27;] = &#x27;invalid nation_code&#x27;;
-      $this-&#x3E;json-&#x3E;out($data);
-    }
-
-    $id = (int) $id;
-    if($id&#x3C;=0){
-      $data[&#x27;status&#x27;] = 800;
-      $data[&#x27;message&#x27;] = &#x27;invalid ID&#x27;;
-      $this-&#x3E;json-&#x3E;out($data);
-    }
-
-    $aakm = $this-&#x3E;aakm-&#x3E;getById($nation_code,$id);
-    if(!isset($aakm-&#x3E;id)){
-      $data[&#x27;status&#x27;] = 804;
-      $data[&#x27;message&#x27;] = &#x27;Data with supplied ID not found&#x27;;
-      $this-&#x3E;json-&#x3E;out($data);
-    }
-
-    $res = $this-&#x3E;aakm-&#x3E;del($nation_code,$id);
-    if($res){
-      $data[&#x27;status&#x27;] = 200;
-      $data[&#x27;message&#x27;] = &#x27;success&#x27;;
-      $data[&#x27;data&#x27;] = $this-&#x3E;aakm-&#x3E;get();
-    }else{
-      $data[&#x27;status&#x27;] = 900;
-      $data[&#x27;message&#x27;] = &#x27;delete data failed&#x27;;
-    }
-    $this-&#x3E;json-&#x3E;out($data);
-  }
-}
-</highlight-code>
-</div>
-</div>
-
-            <h2>Test the API</h2>
-            <p>After Completed the code, we can test the code by using <a href="https://www.postman.com/downloads/" target="_blank">Postman</a> or create own test runner.</p>
-
-            <div class="message is-info">
-<div class="message-body">
-              <p>Seme Framework has supported for creating own test runner for testing the API.</p>
             </div>
-          </div>
 
-            <h3>Test apikey List</h3>
-            <p>To test apikey list, you can open url directly in your browser to <code>localhost/seme_framework/api/apikey/</code>.</p>
-            <p>But, for another another function you have to tested it by using runner.</p>
-            <p>Here is some example for testing API through Postman.</p>
+            <p>We might imagine that there is a controller named "blog". The method being called on blog would be "detail". The blog method’s job could be to get the blog with article id 10, and render them on the page. Very often in MVC, you’ll see URL patterns that match:</p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">http://example.com/[controller-class]/[controller-method]/[arguments]
+                </highlight-code>
+              </div>
+            </div>
+            <p>As URL schemes become more complex, this may change. But for now, this is all we will need to know.</p>
+            <p>Create a file at `app/controller/blog.php` with the following code.</p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">&lt;?php
+class Blog extends \SENE_Controller
+{
+    public function __construct()
+    {
+        parent::__construct();
+        $this-&gt;setTheme(&apos;front&apos;);
+    }
+    public function index()
+    {
+        $data = array();
+        $this-&gt;setTitle(&quot;List of Blog Articles&quot;);
+        $this-&gt;putThemeContent(&quot;blog/home&quot;, $data);
+        $this-&gt;loadLayout(&apos;single_column&apos;, $data);
+        $this-&gt;render();
+    }
+    public function detail($id=&quot;&quot;)
+    {
+        $data = array();
+        $data[&apos;id&apos;] = (int) $id;
+        $this-&gt;setTitle(&quot;A Blog Detail with specified ID&quot;);
+        $this-&gt;putThemeContent(&quot;blog/detail&quot;, $data);
+        $this-&gt;loadLayout(&apos;single_column&apos;, $data);
+        $this-&gt;render();
+    }
+}
+                </highlight-code>
+              </div>
+            </div>
+            
+            <p>You have created a class named Blog, with a index method and detail method that accepts one argument named $id. The Blog class is extending the SENE_Controller class. This means that the new pages class can access the methods and variables defined in the SENE_Controller class (kero/sine/SENE_Controller.php).</p>
+            <p>The controller is what will become the center of every request to your web application. In very technical Seme Framework discussions, it may be referred to as the super object. Like any php class, you refer to it within your controllers as $this. Referring to $this is how you will load model, views, library and generally command the Seme Framework.</p>
+            <p>Now you have created your first controller contains 2 methods, it is time to make some basic page template. </p>
+            <h2>Web Page Template for View Component</h2>
+            <p>We will be creating a web page template called "front". To make the page template is working in Seme Framework, we need to create several files.</p>
+            
+            <p>Create the a file to load all required css files at app/view/front/theme.json and add the following code:</p>
 
-            <h4>Create</h4>
-            <p>The test result for create data</p>
-            <amp-img layout="responsive" width="1682px" height="1166px" alt="create data" :src="pcrt"></amp-img>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">{
+    &quot;link&quot;:
+    [
+      {&quot;rel&quot;: &quot;stylesheet&quot;, &quot;href&quot;: &quot;https://skin-cenah.b-cdn.net/css/bootstrap.min.css&quot;},
+      {&quot;rel&quot;: &quot;stylesheet&quot;, &quot;href&quot;: &quot;https://skin-cenah.b-cdn.net/css/plugins.css&quot;},
+      {&quot;rel&quot;: &quot;stylesheet&quot;, &quot;href&quot;: &quot;https://skin-cenah.b-cdn.net/css/main.css&quot;},
+      {&quot;rel&quot;: &quot;stylesheet&quot;, &quot;href&quot;: &quot;https://skin-cenah.b-cdn.net/css/themes.css&quot;},
+      {&quot;rel&quot;: &quot;stylesheet&quot;, &quot;href&quot;: &quot;https://skin-cenah.b-cdn.net/css/themes/erplite.css&quot;}
+    ]
+}
+                </highlight-code>
+              </div>
+            </div>
 
-            <h4>Edit</h4>
-            <p>The test result for edit data</p>
-            <amp-img layout="responsive" width="1340px" height="1116px" alt="edit data" :src="pedit"></amp-img>
+            <p>Then, we create create a file to load all required javascript files at app/view/front/script.json and add the following code:</p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="php">{
+    &quot;script&quot;:
+    [
+      {&quot;src&quot;: &quot;https://skin-cenah.b-cdn.net/js/vendor/jquery.min.js&quot;},
+      {&quot;src&quot;: &quot;https://skin-cenah.b-cdn.net/js/vendor/bootstrap.min.js&quot;},
+      {&quot;src&quot;: &quot;https://skin-cenah.b-cdn.net/js/plugins.js&quot;},
+      {&quot;src&quot;: &quot;https://skin-cenah.b-cdn.net/js/app.js&quot;}
+    ]
+}
+                </highlight-code>
+              </div>
+            </div>
 
-            <h4>Delete</h4>
-            <p>The test result for delete data</p>
-            <amp-img layout="responsive" width="1336px" height="1106px" alt="delete data" :src="pdel"></amp-img>
+            <p>After we load all javascript and css files, now we need to create a layout file at app/view/front/page/single_column.php and add the following code:</p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="html">&lt;!DOCTYPE html&gt;
+&lt;html class=&quot;no-js&quot; lang=&quot;en&quot;&gt;
+&#x9;&lt;?php $this-&gt;getThemeElement(&quot;page/html/head&quot;,$__forward); ?&gt;
+&#x9;&lt;body&gt;
+&#x9;&#x9;&lt;div id=&quot;page-wrapper&quot; class=&quot;page-loading&quot;&gt;
+&#x9;&#x9;&#x9;&lt;div class=&quot;preloader themed-background&quot;&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;h1 class=&quot;push-top-bottom text-light text-center&quot; &gt;
+                    &lt;strong&gt;Seme Framework&lt;/strong&gt;
+                    &lt;br&gt;
+                    &lt;small&gt;Loading...&lt;/small&gt;
+                &lt;/h1&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;div class=&quot;inner&quot;&gt;
+&#x9;&#x9;&#x9;&#x9;&#x9;&lt;h3 class=&quot;text-light visible-lt-ie10&quot;&gt;&lt;strong&gt;Loading..&lt;/strong&gt;&lt;/h3&gt;
+&#x9;&#x9;&#x9;&#x9;&#x9;&lt;div class=&quot;preloader-spinner hidden-lt-ie10&quot;&gt;&lt;/div&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;/div&gt;
+&#x9;&#x9;&#x9;&lt;/div&gt;
+&#x9;&#x9;&#x9;
+            &lt;div id=&quot;page-container&quot; class=&quot;sidebar-mini sidebar-visible-lg-mini&quot;&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;div id=&quot;main-container&quot;&gt;
+&#x9;&#x9;&#x9;&#x9;&#x9;&lt;?php $this-&gt;getThemeContent(); ?&gt;
+&#x9;&#x9;&#x9;&#x9;&#x9;&lt;?php $this-&gt;getThemeElement(&quot;page/html/footer&quot;,$__forward); ?&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;/div&gt;
+&#x9;&#x9;&#x9;&lt;/div&gt;
+&#x9;&#x9;&lt;/div&gt;
+&#x9;&#x9;&lt;div id=&quot;modal-preloader&quot; class=&quot;modal fade&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-hidden=&quot;true&quot;&gt;
+&#x9;&#x9;&#x9;&lt;div class=&quot;modal-dialog slideInDown animated&quot;&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;div class=&quot;modal-content&quot; style=&quot;background-color: #000;color: #fff;&quot;&gt;
+&#x9;&#x9;&#x9;&#x9;&#x9;&lt;div class=&quot;modal-header text-center&quot; style=&quot;border: none;&quot;&gt;
+&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;h2 class=&quot;modal-title&quot;&gt;&lt;i class=&quot;fa fa-spin fa-refresh&quot;&gt;&lt;/i&gt; Loading...&lt;/h2&gt;
+&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/div&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;/div&gt;
+&#x9;&#x9;&#x9;&lt;/div&gt;
+&#x9;&#x9;&lt;/div&gt;
+&#x9;&#x9;&lt;?php $this-&gt;getJsFooter(); ?&gt;
+&#x9;&#x9;&lt;script&gt;
+&#x9;&#x9;&#x9;$(document).ready(function(e){
+&#x9;&#x9;&#x9;&#x9;&lt;?php $this-&gt;getJsReady(); ?&gt;
+&#x9;&#x9;&#x9;});
+&#x9;&#x9;&#x9;&lt;?php $this-&gt;getJsContent(); ?&gt;
+&#x9;&#x9;&lt;/script&gt;
+&#x9;&lt;/body&gt;
+&lt;/html&gt;
+                </highlight-code>
+              </div>
+            </div>
 
-            <p>Well done, if you facing any problem do not hestitate to open the <a href="https://github.com/drosanda/seme-framework/issues/new" target="_blank">issue</a> on our github page.</p>
+            <p>Now, we are ready to add another html template at app/view/front/page/html/head.php and add the following code:</p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="html">&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot;&gt;
+    &lt;title&gt;&lt;?=$this-&gt;getTitle()?&gt;&lt;/title&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;&lt;?=$this-&gt;getDescription()?&gt;&quot;&gt;
+    &lt;meta name=&quot;keyword&quot; content=&quot;&lt;?=$this-&gt;getKeyword()?&gt;&quot;/&gt;
+    &lt;meta name=&quot;author&quot; content=&quot;&lt;?=$this-&gt;getAuthor()?&gt;&quot;&gt;
+    &lt;meta name=&quot;robots&quot; content=&quot;&lt;?=$this-&gt;getRobots()?&gt;&quot; /&gt;
+    &lt;link rel=&quot;shortcut icon&quot; href=&quot;&lt;?=$this-&gt;getIcon()?&gt;&quot; /&gt;
+    &lt;?php $this-&gt;getAdditionalBefore()?&gt;
+    &lt;?php $this-&gt;getAdditional()?&gt;
+    &lt;?php $this-&gt;getAdditionalAfter()?&gt;
+    &lt;script src=&quot;&lt;?=$this-&gt;cdn_url(&quot;skin/admin/&quot;)?&gt;js/vendor/modernizr.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+                </highlight-code>
+              </div>
+            </div>
+
+            <p>The head.php file will wrap all html codes under <head></head> tag. This file will be also loaded in single_column.php layout using this code `<?php $this->getThemeElement("page/html/head",$__forward); ?>`. Then, the other file that we will create at app/view/front/page/footer.php and add the following code:</p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="html">&lt;footer class=&quot;clearfix&quot;&gt;
+&#x9;&lt;div class=&quot;pull-right&quot;&gt;
+&#x9;&#x9;Made with &lt;i class=&quot;fa fa-heart text-danger&quot;&gt;&lt;/i&gt; by &lt;a href=&quot;https://cenah.co.id&quot; target=&quot;_blank&quot;&gt;cenah.co.id&lt;/a&gt;. 
+&#x9;&lt;/div&gt;
+&#x9;&lt;div class=&quot;pull-left&quot;&gt;
+&#x9;&#x9;Seme Framework - version 4 &amp;copy; &lt;?=date(&quot;Y&quot;)?&gt;
+&#x9;&lt;/div&gt;
+&lt;/footer&gt;
+                </highlight-code>
+              </div>
+            </div>
+
+            <h3>Static page example for Blog controller</h3>
+            <p>Earlier you set up a controller for blog with 2 methods inside of that. Now, we are going to create a view for the blog main page first at app/view/front/blog/home.php and add the following code:</p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="html">&lt;div id=&quot;page-content&quot;&gt;
+&#x9;&lt;div class=&quot;content-header&quot;&gt;
+&#x9;&#x9;&lt;div class=&quot;header-section&quot;&gt;
+&#x9;&#x9;&#x9;&lt;h1&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;i class=&quot;gi gi-show_big_thumbnails&quot;&gt;&lt;/i&gt; Static Content Example
+                &lt;br&gt;
+                &lt;small&gt;This is the default content in app/view/front/blog/home.php&lt;/small&gt;
+&#x9;&#x9;&#x9;&lt;/h1&gt;
+&#x9;&#x9;&lt;/div&gt;
+&#x9;&lt;/div&gt;
+&#x9;&lt;ul class=&quot;breadcrumb breadcrumb-top&quot;&gt;
+&#x9;&#x9;&lt;li&gt;&lt;a href=&quot;&lt;?=base_url()?&gt;&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+&#x9;&#x9;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+&#x9;&lt;/ul&gt;
+&#x9;&lt;div class=&quot;block full block-alt-noborder&quot;&gt;
+&#x9;&#x9;&lt;h3 class=&quot;sub-header text-center&quot;&gt;
+            &lt;strong&gt;Static Content Example&lt;/strong&gt; for layout demostration
+        &lt;/h3&gt;
+&#x9;&#x9;&lt;div class=&quot;row&quot;&gt;
+&#x9;&#x9;&#x9;&lt;div class=&quot;col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2&quot;&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;article&gt;
+&#x9;&#x9;&#x9;&#x9;&#x9;&lt;h1&gt;&lt;a href=&quot;&lt;?=base_url(&apos;blog/detail/&apos;)?&gt;&quot;&gt;First Article&lt;/a&gt;&lt;/h1&gt;
+                    &lt;p&gt;First article description&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;/article&gt;
+                &lt;article&gt;
+&#x9;&#x9;&#x9;&#x9;&#x9;&lt;h1&gt;&lt;a href=&quot;&lt;?=base_url(&apos;blog/detail/&apos;)?&gt;&quot;&gt;Second Article&lt;/a&gt;&lt;/h1&gt;
+                    &lt;p&gt;Second article description&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;/article&gt;
+&#x9;&#x9;&#x9;&lt;/div&gt;
+&#x9;&#x9;&lt;/div&gt;
+&#x9;&lt;/div&gt;
+&lt;/div&gt;
+                </highlight-code>
+              </div>
+            </div>
+
+            <p>Then we will create another file at app/view/front/blog/detail.php and add the following code:</p>
+            <div class="macwindow">
+              <div class="titlebar">
+                <div class="buttons">
+                  <div class="close">
+                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+                    <!-- close button link -->
+                  </div>
+                  <div class="minimize">
+                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+                    <!-- minimize button link -->
+                  </div>
+                  <div class="zoom">
+                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+                    <!-- zoom button link -->
+                  </div>
+                </div>
+              </div>
+              <div class="maccontent">
+                <highlight-code lang="html">&lt;div id=&quot;page-content&quot;&gt;
+&#x9;&lt;div class=&quot;content-header&quot;&gt;
+&#x9;&#x9;&lt;div class=&quot;header-section&quot;&gt;
+&#x9;&#x9;&#x9;&lt;h1&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;i class=&quot;gi gi-show_big_thumbnails&quot;&gt;&lt;/i&gt; Static Content Example
+                &lt;br&gt;
+                &lt;small&gt;This is the default content in app/view/front/blog/detail.php&lt;/small&gt;
+&#x9;&#x9;&#x9;&lt;/h1&gt;
+&#x9;&#x9;&lt;/div&gt;
+&#x9;&lt;/div&gt;
+&#x9;&lt;ul class=&quot;breadcrumb breadcrumb-top&quot;&gt;
+&#x9;&#x9;&lt;li&gt;&lt;a href=&quot;&lt;?=base_url()?&gt;&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+&#x9;&#x9;&lt;li&gt;&lt;a href=&quot;&lt;?=base_url(&apos;blog&apos;)?&gt;&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+&#x9;&#x9;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Detail&lt;/a&gt;&lt;/li&gt;
+&#x9;&lt;/ul&gt;
+&#x9;&lt;div class=&quot;block full block-alt-noborder&quot;&gt;
+&#x9;&#x9;&lt;h3 class=&quot;sub-header text-center&quot;&gt;
+            &lt;strong&gt;Static Content Example&lt;/strong&gt; for layout demostration
+        &lt;/h3&gt;
+&#x9;&#x9;&lt;div class=&quot;row&quot;&gt;
+&#x9;&#x9;&#x9;&lt;div class=&quot;col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2&quot;&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;article&gt;
+&#x9;&#x9;&#x9;&#x9;&#x9;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices, justo vel imperdiet gravida, urna ligula hendrerit nibh, ac cursus nibh sapien in purus.&lt;/p&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;/article&gt;
+&#x9;&#x9;&#x9;&lt;/div&gt;
+&#x9;&#x9;&lt;/div&gt;
+&#x9;&lt;/div&gt;
+&lt;/div&gt;
+                </highlight-code>
+              </div>
+            </div>
+
+            <h2>Trying our Code</h2>
+            <p>Assuming the Seme Framework was running using XAMPP and installed at c:\xampp\htdocs\seme_framework. So, your URL will be http://localhost/seme_framework. Now, Try to open http://localhost/seme_framework/blog in the web browser. If you see the web page like what we create before, then you have completely finished this tutorial.</p>
+
+            <h2>Troubleshooting</h2>
+            <p>Question: I see not found page, what should I do?</p>
+            <p>Answer: Please check you base_url configuration at app/config/development.php. Make sure, the base url are exactly same with the installed directory and the development environment. For example, on this case we using XAMPP as development environment then Seme Framework is installed at c:\xampp\htdocs\seme_framework. So, the base_url should be `http://localhost/seme_framework`.</p>
 
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
-                <nuxt-link to="/4.0/tutorial/get-data/" class="btn">
+                <nuxt-link to="/4.0/tutorial/quick-start/" class="btn">
                   <i class="fa fa-chevron-left"></i>
                   Tutorial: Get Data
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
-                <nuxt-link to="/4.0/uri_routing/" class="btn">
+                <nuxt-link to="/4.0/introduction/" class="btn">
                   Uri Routing
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
@@ -590,7 +489,6 @@ class Home extends SENE_Controller
           </div>
         </div>
       </div>
-
 
     </div>
   </div>
@@ -602,8 +500,8 @@ export default {
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'Tutorial: Static Page',
-      description: 'Learn more about creating a static page using Seme Framework 4.',
+      title: 'Tutorial: Create Static Page',
+      description: 'Learn more how to creating a static page using Seme Framework 4.',
       pcrt: require('~/assets/img/tutorial/basic-api/postman-create.png'),
       pedit: require('~/assets/img/tutorial/basic-api/postman-edit.png'),
       pdel: require('~/assets/img/tutorial/basic-api/postman-delete.png'),
@@ -674,7 +572,7 @@ export default {
         ],
         "dateCreated": "2021-07-14T10:12:00+07:00",
         "datePublished": "2021-07-14T10:12:00+07:00",
-        "dateModified": "2021-07-14T19:46:00+07:00",
+        "dateModified": "2025-05-12T13:46:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
