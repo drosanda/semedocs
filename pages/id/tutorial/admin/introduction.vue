@@ -61,7 +61,7 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   &#x3C;?php
-                  class Home extends SENE_Controller
+                  class Home extends \SENE_Controller
                   {
                     public function __construct()
                     {
@@ -102,7 +102,7 @@
               </div>
             </div>
             <p>
-              Berikut ini adalah gambaran struktur file yang akan kita buat untuk membuat tema dan tampilan di admin
+              Berikut ini adalah gambaran struktur file yang akan kita buat untuk membuat tema dan tampilan di admin:
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -122,30 +122,31 @@
                 </div>
               </div>
               <div class="maccontent">
-                <highlight-code lang="php">
+                <highlight-code lang="shell">
                   app/
-                  ├── controller/
-                  │&#160;└── admin/
-                  │&#160;&#160;└── home.php
-                  └── view/
-                  &#160;└── admin/
-                  &#160;&#160;├── home
-                  &#160;&#160;│ ├── home.php
-                  &#160;&#160;│ └── home_bottom.php
-                  &#160;&#160;├── theme.json
-                  &#160;&#160;├── script.json
-                  &#160;&#160;└── page/
-                  &#160;&#160;&#160;├── col-1.php
-                  &#160;&#160;&#160;├── col-2-left.php
-                  &#160;&#160;&#160;└── html/
-                  &#160;&#160;&#160;&#160;&#160;├── head.php
-                  &#160;&#160;&#160;&#160;&#160;├── header.php
-                  &#160;&#160;&#160;&#160;&#160;├── global_message.php
-                  &#160;&#160;&#160;&#160;&#160;├── navbar.php
-                  &#160;&#160;&#160;&#160;&#160;├── sidebar.php
-                  &#160;&#160;&#160;&#160;&#160;├── sidebar_alt.php
-                  &#160;&#160;&#160;&#160;&#160;├── foot.php
-                  &#160;&#160;&#160;&#160;&#160;└── footer.php
+&#x251C;&#x2500;&#x2500; controller/
+&#x2502;   &#x2514;&#x2500;&#x2500; admin/
+&#x2502;       &#x2514;&#x2500;&#x2500; home.php
+&#x2514;&#x2500;&#x2500; view/
+    &#x251C;&#x2500;&#x2500; admin/
+    &#x2502;   &#x251C;&#x2500;&#x2500; home/
+    &#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; home.php
+    &#x2502;   &#x2502;   &#x2514;&#x2500;&#x2500; home_bottom.php
+    &#x2502;   &#x251C;&#x2500;&#x2500; theme.json
+    &#x2502;   &#x251C;&#x2500;&#x2500; script.json
+    &#x2502;   &#x2514;&#x2500;&#x2500; partials/
+    &#x2502;       &#x251C;&#x2500;&#x2500; col-1.php
+    &#x2502;       &#x251C;&#x2500;&#x2500; col-2-left.php
+    &#x2502;       &#x251C;&#x2500;&#x2500; head.php
+    &#x2502;       &#x251C;&#x2500;&#x2500; header.php
+    &#x2502;       &#x251C;&#x2500;&#x2500; global_message.php
+    &#x2502;       &#x251C;&#x2500;&#x2500; navbar.php
+    &#x2502;       &#x251C;&#x2500;&#x2500; sidebar.php
+    &#x2502;       &#x251C;&#x2500;&#x2500; sidebar_alt.php
+    &#x2502;       &#x251C;&#x2500;&#x2500; foot.php
+    &#x2502;       &#x2514;&#x2500;&#x2500; footer.php
+    &#x2514;&#x2500;&#x2500; front/
+        &#x2514;&#x2500;&#x2500; ....
                 </highlight-code>
               </div>
             </div>
@@ -155,7 +156,7 @@
                 <p>Periksa direktori <code>app/controller/admin/</code> apabila belum ada, silakan buat direktori tersebut.</p>
                 <p>Periksa direktori <code>app/view/admin/</code> apabila belum ada, silakan buat direktori tersebut.</p>
                 <p>Periksa direktori <code>app/view/admin/page/</code> apabila belum ada, silakan buat direktori tersebut.</p>
-                <p>Periksa direktori <code>app/view/admin/page/html/</code> apabila belum ada, silakan buat direktori tersebut.</p>
+                <p>Periksa direktori <code>app/view/admin/page/partials/</code> apabila belum ada, silakan buat direktori tersebut.</p>
               </div>
             </div>
 
@@ -290,7 +291,7 @@
                 <highlight-code lang="html">
 &#x3C;!DOCTYPE html&#x3E;
 &#x3C;html class=&#x22;no-js&#x22; lang=&#x22;en&#x22;&#x3E;
-&#x9;&#x3C;?php $this-&#x3E;getThemeElement(&#x22;page/html/head&#x22;,$__forward); ?&#x3E;
+&#x9;&#x3C;?php $this-&#x3E;getThemeElement(&#x22;page/partials/head&#x22;,$__forward); ?&#x3E;
 &#x9;&#x3C;body&#x3E;
 &#x9;&#x9;&#x3C;!-- Main Container --&#x3E;
 &#x9;&#x9;&#x3C;?php $this-&#x3E;getThemeContent(); ?&#x3E;
@@ -342,7 +343,7 @@
                 <highlight-code lang="html">
 &#x3C;!DOCTYPE html&#x3E;
 &#x3C;html class=&#x22;no-js&#x22; lang=&#x22;en&#x22;&#x3E;
-&#x9;&#x3C;?php $this-&#x3E;getThemeElement(&#x22;page/html/head&#x22;,$__forward); ?&#x3E;
+&#x9;&#x3C;?php $this-&#x3E;getThemeElement(&#x22;page/partials/head&#x22;,$__forward); ?&#x3E;
 &#x9;&#x3C;body&#x3E;
 &#x9;&#x9;&#x3C;!-- Page Wrapper --&#x3E;
 &#x9;&#x9;&#x3C;div id=&#x22;page-wrapper&#x22; class=&#x22;page-loading&#x22;&#x3E;
@@ -357,24 +358,24 @@
 &#x9;&#x9;&#x9;&#x3C;!-- END Preloader --&#x3E;
 &#x9;&#x9;&#x9;&#x3C;div id=&#x22;page-container&#x22; class=&#x22;sidebar-mini sidebar-visible-lg-mini&#x22;&#x3E;
 &#x9;&#x9;&#x9;&#x9;&#x3C;!-- Alternative Sidebar --&#x3E;
-&#x9;&#x9;&#x9;&#x9;&#x3C;?php $this-&#x3E;getThemeElement(&#x22;page/html/sidebar_alt&#x22;,$__forward); ?&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;?php $this-&#x3E;getThemeElement(&#x22;page/partials/sidebar_alt&#x22;,$__forward); ?&#x3E;
 &#x9;&#x9;&#x9;&#x9;&#x3C;!-- END Alternative Sidebar --&#x3E;
 &#x9;&#x9;&#x9;&#x9;&#x3C;!-- Main Sidebar --&#x3E;
-&#x9;&#x9;&#x9;&#x9;&#x3C;?php $this-&#x3E;getThemeElement(&#x22;page/html/sidebar&#x22;,$__forward); ?&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;?php $this-&#x3E;getThemeElement(&#x22;page/partials/sidebar&#x22;,$__forward); ?&#x3E;
 &#x9;&#x9;&#x9;&#x9;&#x3C;!-- END Main Sidebar --&#x3E;
 &#x9;&#x9;&#x9;&#x9;&#x3C;!-- Main Container --&#x3E;
 &#x9;&#x9;&#x9;&#x9;&#x3C;div id=&#x22;main-container&#x22;&#x3E;
 &#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;!-- Header --&#x3E;
-&#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;?php $this-&#x3E;getThemeElement(&#x22;page/html/header&#x22;,$__forward); ?&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;?php $this-&#x3E;getThemeElement(&#x22;page/partials/header&#x22;,$__forward); ?&#x3E;
 &#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;!-- END Header --&#x3E;
 &#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;!-- Main Container --&#x3E;
 &#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;!-- Global Message --&#x3E;
-&#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;?php $this-&#x3E;getThemeElement(&#x22;page/html/global_message&#x22;,$__forward); ?&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;?php $this-&#x3E;getThemeElement(&#x22;page/partials/global_message&#x22;,$__forward); ?&#x3E;
 &#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;!-- Global Message --&#x3E;
 &#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;?php $this-&#x3E;getThemeContent(); ?&#x3E;
 &#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;!-- Main Container End --&#x3E;
 &#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;!-- Footer --&#x3E;
-&#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;?php $this-&#x3E;getThemeElement(&#x22;page/html/footer&#x22;,$__forward); ?&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;?php $this-&#x3E;getThemeElement(&#x22;page/partials/footer&#x22;,$__forward); ?&#x3E;
 &#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;!-- End Footer --&#x3E;
 &#x9;&#x9;&#x9;&#x9;&#x3C;/div&#x3E;
 &#x9;&#x9;&#x9;&#x9;&#x3C;!-- End Main Container --&#x3E;
@@ -383,7 +384,7 @@
 &#x9;&#x9;&#x3C;/div&#x3E;
 &#x9;&#x9;&#x3C;!-- End Page Wrapper --&#x3E;
 &#x9;&#x9;&#x3C;!-- Foot --&#x3E;
-&#x9;&#x9;&#x3C;?php $this-&#x3E;getThemeElement(&#x22;page/html/foot&#x22;,$__forward); ?&#x3E;
+&#x9;&#x9;&#x3C;?php $this-&#x3E;getThemeElement(&#x22;page/partials/foot&#x22;,$__forward); ?&#x3E;
 &#x9;&#x9;&#x3C;!-- End Foot --&#x3E;
 &#x9;&#x9;&#x3C;div id=&#x22;modal-preloader&#x22; class=&#x22;modal fade&#x22; tabindex=&#x22;-1&#x22; role=&#x22;dialog&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
 &#x9;&#x9;&#x9;&#x3C;div class=&#x22;modal-dialog slideInDown animated&#x22;&#x3E;
@@ -434,7 +435,7 @@
               </ul>
             </p>
             <p>
-              Pertama-tama kita akan memisahakna bagian HEAD dari HTML yang akan disimpan pada file ini <code>app/view/admin/page/html/head.php</code>.
+              Pertama-tama kita akan memisahakna bagian HEAD dari HTML yang akan disimpan pada file ini <code>app/view/admin/page/partials/head.php</code>.
               Apabila belum ada, silakan buat file tersebut dan copy <i>paste</i>-kan isinya dari kode dibawah ini.
             </p>
 
@@ -475,14 +476,14 @@
     &#x3C;?php $this-&#x3E;getAdditional()?&#x3E;
     &#x3C;?php $this-&#x3E;getAdditionalAfter()?&#x3E;
     &#x3C;!-- Modernizr (browser feature detection library) --&#x3E;
-    &#x3C;script src=&#x22;&#x3C;?=$this-&#x3E;cdn_url(&#x22;skin/admin/&#x22;)?&#x3E;js/vendor/modernizr.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+    &#x3C;script src=&#x22;https://skin.cenah.co.id/js/vendor/modernizr.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
 &#x3C;/head&#x3E;
                 </highlight-code>
               </div>
             </div>
             
             <p>
-              Kemudian sekarang kita akan memisahkan bagian untuk komponen header <code>app/view/admin/page/html/header.php</code>.
+              Kemudian sekarang kita akan memisahkan bagian untuk komponen header <code>app/view/admin/page/partials/header.php</code>.
               Silakasn Copy-Paste kode dibawah ini.
             </p>
 
@@ -595,7 +596,7 @@
             </div>
 
             <p>
-              Setelah itu untuk component global message ada di <code>app/view/admin/page/html/global_message.php</code>.
+              Setelah itu untuk component global message ada di <code>app/view/admin/page/partials/global_message.php</code>.
               Apabila belum ada, silakan buat file tersebut dan copy <i>paste</i>-kan isinya dari kode dibawah ini.
             </p>
             <div class="macwindow">
@@ -637,7 +638,7 @@
             </div>
             
             <p>
-              Kemudian ini untuk component navigation bar di <code>app/view/admin/page/html/navbar.php</code>.
+              Kemudian ini untuk component navigation bar di <code>app/view/admin/page/partials/navbar.php</code>.
               Apabila belum ada, silakan buat file tersebut dan copy <i>paste</i>-kan isinya dari kode dibawah ini.
             </p>
             <div class="macwindow">
@@ -704,7 +705,7 @@
             </div>
             
             <p>
-              Setelahnya untuk component sidebar menu yang akan ditampilkan pada samping kiri halaman admin. Untuk kodenya ada di <code>app/view/admin/page/html/sidebar.php</code>.
+              Setelahnya untuk component sidebar menu yang akan ditampilkan pada samping kiri halaman admin. Untuk kodenya ada di <code>app/view/admin/page/partials/sidebar.php</code>.
               Apabila belum ada, silakan buat file tersebut dan copy <i>paste</i>-kan isinya dari kode dibawah ini.
             </p>
             <div class="macwindow">
@@ -815,7 +816,7 @@
             <p>
               Kemudian sekarang akan membuat untuk sidebar alternatif.
               File ini tidak akan kita gunakan terlebih dahulu, tapi akan di persiapkan untuk tutorial selanjutnya.
-              Apabila belum ada, silakan buat file tersebut di <code>app/view/admin/page/html/sidebar_alt.php</code>, kemudian copy <i>paste</i>-kan isinya dari kode dibawah ini.
+              Apabila belum ada, silakan buat file tersebut di <code>app/view/admin/page/partials/sidebar_alt.php</code>, kemudian copy <i>paste</i>-kan isinya dari kode dibawah ini.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -851,7 +852,7 @@
             </div>
             
             <p>
-              Kemudian sekarang akan membuat untuk wrapper untuk footer, di <code>app/view/admin/page/html/foot.php</code>, buatlah file tersebut kemudian copy <i>paste</i>-kan isinya dari kode dibawah ini.
+              Kemudian sekarang akan membuat untuk wrapper untuk footer, di <code>app/view/admin/page/partials/foot.php</code>, buatlah file tersebut kemudian copy <i>paste</i>-kan isinya dari kode dibawah ini.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -943,7 +944,7 @@
             </div>
             
             <p>
-              Terakhir, kita akan membuat footer untuk halaman admin di <code>app/view/admin/page/html/footer.php</code>. Silakan copy <i>paste</i>-kan isinya dari kode dibawah ini.
+              Terakhir, kita akan membuat footer untuk halaman admin di <code>app/view/admin/page/partials/footer.php</code>. Silakan copy <i>paste</i>-kan isinya dari kode dibawah ini.
             </p>
             <div class="macwindow">
               <div class="titlebar">

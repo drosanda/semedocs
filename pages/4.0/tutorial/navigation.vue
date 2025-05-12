@@ -4,29 +4,28 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/">4.0.3 (Bahasa)</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/tutorial/">Tutorial</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0/">4.0.3</NuxtLink></li>
+          <li class=""><NuxtLink to="/4.0/tutorial/">Tutorial</NuxtLink></li>
           <li class="unavailable">Navigation</li>
         </ul>
       </nav>
       <div>
         <div class="column">
           <div class="content">
-            <h1 class="">Membuat Navigation</h1>
+            <h1 class="">Create Web Page Navigation</h1>
             <p>
-              Navigation digunakan dalam situs web untuk berpindah dari satu halaman ke halaman lainnya.
-              Navigation ini biasanya terletak bagian atas halaman web.
-              Pada tutorial kali ini kita akan membuat <code>view component</code> navigation bar dengan menggunakan tampilan materializeCSS.
-              Jadi, pastikan untuk menyelesaikan tutorial <NuxtLink to="/id/tutorial/introduction/#part2">Pengenalan bagian 2</NuxtLink> sebelum melanjutkan tutorial ini.
-              Sehingga pengaturan view, view component, beserta temanya sudah disetel dan berjalan dengan baik.
+              Navigation is used in websites to navigate from one page to another.
+              This navigation is usually located at the top of the webpage.
+              In this tutorial, we will create a <code>view component</code> navigation bar using Bootstrap 3 CSS.
+              So, make sure you have completed the second part of the Introduction tutorial at <NuxtLink to="/4.0/tutorial/introduction/#part2">Introduction Part 2</NuxtLink> before continuing with this tutorial.
+              Thus, the view settings, view components, and theme should already be set up and running well.
             </p>
 
             <amp-img layout="responsive" width="2356" height="624" :src="navbar" alt="Navigation bar example"></amp-img>
 
-            <h2>Membuat View Component</h2>
+            <h2>Create Navigation Bar</h2>
             <p>
-              Pertama-tama kita akan membuat view component khusus untuk <code>navigation bar</code> di <code>app/view/layout/partials/navbar.php</code>.
-              Berikut ini adalah kode sumbernya.
+              Now, we will create a new file on <code>app/view/front/layout/partials/navbar.php</code> with contains navbar bootstrap 3 CSS.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -67,10 +66,9 @@
               </div>
             </div>
 
-            <h2>Panggil elemen navbar di layout <code>one_column</code></h2>
+            <h2>Load navbar into <code>one_column</code> layout</h2>
             <p>
-              Setelah view component-nya selesai, sekarang panggil view component tersebut melaui layout <code>one_column.php</code>.
-              Berikut ini adalah kode sumbernya
+              Now, we need to load the navbar into a <code>one_column.php</code> layout using this code below.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -117,9 +115,9 @@
               </div>
             </div>
 
-            <h2>Mencoba tampilan navbar</h2>
+            <h2>Test integration of navbar</h2>
             <p>
-              Untuk mencoba halaman dengan view component navbar, cukup ketikan buka url seperti dibawah ini.
+              Now, its time to test the navbar was loaded properly or not by opening this url on your web browser
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -146,22 +144,22 @@
             </div>
 
 
-            <h2>Referensi</h2>
+            <h2>Reference</h2>
             <p>
-              Berikut ini adalah referensi fungsi yang digunakan dalam tutorial ini.
+              Here is the references:
             </p>
             <ol>
               <li>
                 <a href="https://www.w3schools.com/bootstrap/bootstrap_navbar.asp" target="_blank">Navbar Bootstrap 3 <i class="fa fa-external-link"></i></a>
               </li>
               <li>
-                <NuxtLink to="/id/controller/getthemeelement/" target="_blank">getThemeElement <i class="fa fa-window-restore"></i></NuxtLink>
+                <NuxtLink to="/4.0/controller/getthemeelement/" target="_blank">getThemeElement <i class="fa fa-window-restore"></i></NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/id/controller/loadlayout/" target="_blank">loadLayout <i class="fa fa-window-restore"></i></NuxtLink>
+                <NuxtLink to="/4.0/controller/loadlayout/" target="_blank">loadLayout <i class="fa fa-window-restore"></i></NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/id/view/theme/" target="_blank">View Theme <i class="fa fa-window-restore"></i></NuxtLink>
+                <NuxtLink to="/4.0/view/theme/" target="_blank">View Theme <i class="fa fa-window-restore"></i></NuxtLink>
               </li>
             </ol>
 
@@ -171,13 +169,13 @@
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/id/tutorial" class="btn">
+          <nuxt-link to="/4.0/tutorial" class="btn">
             <i class="fa fa-chevron-left"></i>
             Tutorial: Notfound Page
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/id/tutorial/login-register" class="btn">
+          <nuxt-link to="/4.0/tutorial/login-register" class="btn">
             Tutorial: Login Register
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
@@ -194,8 +192,8 @@ export default {
     return {
       name: 'Seme Framework 4 Tutorial',
       suffix: ' - Seme Framework 4 Tutorial',
-      title: 'Membuat Navigation',
-      description: 'Mari kita pelajari tutorial pembuatan navigation bar menggunakan Seme Framework 4',
+      title: 'Create Navigation',
+      description: 'Learn how to create navigation on Seme Framework 4',
       navbar: require('~/assets/img/tutorial/navigation/navigation-bar.png'),
       breadcrumbs: [
         {
@@ -207,7 +205,7 @@ export default {
           text: 'ID',
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/tutorial',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0/tutorial',
           text: 'Tutorial',
         }
       ],
@@ -264,9 +262,9 @@ export default {
       "image": [
         (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
       ],
-      "dateCreated": "2021-07-25T16:53:01+07:00",
-      "datePublished": "2021-07-25T16:53:01+07:00",
-      "dateModified": "2025-01-15T21:03:01+07:00",
+      "dateCreated": "2025-01-15T16:53:01+07:00",
+      "datePublished": "2025-01-15T16:53:01+07:00",
+      "dateModified": "2025-01-15T21:53:01+07:00",
       "author": {
         "@type": "Person",
         "gender": "Male",
