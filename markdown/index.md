@@ -1,3 +1,10 @@
+<!--
+Document Type: Technical Documentation
+Purpose: Seme Framework Documentation
+Author: Daeng Rosanda 
+Date Created: 2024-11-26
+Last Updated: 2024-11-26
+-->
 [Seme Framework](#)
 
 # Seme Framework
