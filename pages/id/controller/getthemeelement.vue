@@ -4,49 +4,50 @@
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0">4.0.3</NuxtLink></li>
-          <li class=""><NuxtLink to="/4.0/controller">Controller</NuxtLink></li>
-          <li class="unavailable">getThemeElement method</li>
+          <li class=""><NuxtLink to="/id">4.0.3 (Bahasa)</NuxtLink></li>
+          <li class=""><NuxtLink to="/id/controller">Controller</NuxtLink></li>
+          <li class="unavailable">getThemeElement</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">getThemeElement method</h1>
+            <h1 class="">Metode getThemeElement</h1>
             <p>
-              The getThemeElement method will <code>echo</code> the buffered view components that from another view component.
+              Metode <code>getThemeElement</code> digunakan untuk menaggil html elemen atau komponen html yang sudah kita buat sebelumnya kedalam suatu file yang ada didalam <em>view</em>.
             </p>
 
-            <h2>Basic Usage</h2>
-            <p>The basic usage for getThemeElement method.</p>
+            <h2>Bentuk Umum</h2>
+            <p>
+              Berikut ini bentuk umum penggunaan metode <code>getThemeElement</code> dari kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
+            </p>
             <MacWindowCodeSnippet lang="php">
               getThemeElement(string $view_location [,array $__forward=array() [, int $cacheable=0]]): $this
             </MacWindowCodeSnippet>
 
-            <h3>Parameters</h3>
+            <h3>Parameter</h3>
             <p>
-              There is 2 required parameters and 1 optional parameter.
+              Metode ini terdiri 2 parameter wajib dan 1 parameter opsional.
             </p>
 
             <h4>$view_location</h4>
             <p>
-              Location relatives to a theme and file name of view without .php suffix.
+              Lokasi file html berekstensi php yang sudah kita definisikan. File ini relatif terhadap tema yang di definisikan pada controller.
             </p>
 
             <h4>$__forward</h4>
             <p>
-              Data that will be passed to buffered view component.
+              Variable global yang sudah terdefinisi dan bisa diteruskan ke html view yang akan dipanggil.
             </p>
 
             <h4>$cacheable</h4>
             <p>
-              This parameter value allowed the buffered view cached with expected time value in second(s).
+              Parameter opsional untuk menentukan bahwa komponen html yang dipanggil sudah dalam kondisi ter<em>cache</em>.
             </p>
-
-            <h2>Example Usage</h2>
+            
+            <h2>Contoh Penggunaan</h2>
             <p>
-              Usually this method called inside a layout file. Here is the basic example for <code>getThemeElement</code> method.
-              Here is the content of <code>col-1.php</code> layout file.
+              Metode ini dapat digunakan di dalam layout file seperti didalam file <code>page/col-1.php</code>.
             </p>
             <MacWindowCodeSnippet lang="php">
               &#x3C;!DOCTYPE html&#x3E;
@@ -59,7 +60,7 @@
             </MacWindowCodeSnippet>
 
             <p>
-              Here is the full file and directory structures for <code>page/html/head</code>.
+              Ini adalah struktur <em>file</em> dan direktori untuk <code>page/html/head</code>.
             </p>
             <MacWindowCodeSnippet lang="shell">
 seme-framework/
@@ -71,10 +72,10 @@ seme-framework/
 &#x2502; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#x2514;&#x2500;&#x2500; html/
 &#x2502; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#x2514;&#x2500;&#x2500; head.php
             </MacWindowCodeSnippet>
-
             <p>
-              And then here is the example content of <code>page/html/head</code>.
+              Kemudian ini adalah contoh kode dari <code>page/html/head.php</code>
             </p>
+            
             <MacWindowCodeSnippet lang="php">
 &#x3C;head&#x3E;
   &#x3C;!-- Basic page needs --&#x3E;
@@ -103,13 +104,13 @@ seme-framework/
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">
-                <nuxt-link to="/4.0/controller/getshortcuticon/" class="btn">
+                <nuxt-link to="/id/controller/getshortcuticon/" class="btn">
                   <i class="fa fa-chevron-left"></i>
                   getShortcutIcon
                 </nuxt-link>
               </div>
               <div class="nav-bottom-right">
-                <nuxt-link to="/4.0/controller/getTitle/" class="btn">
+                <nuxt-link to="/id/controller/gettitle/" class="btn">
                   getTitle
                   <i class="fa fa-chevron-right"></i>
                 </nuxt-link>
@@ -125,24 +126,24 @@ seme-framework/
 </template>
 <script>
 export default {
-  layout: 'v4.0',
+  layout: 'id',
   data (){
     return {
       name: 'Seme Framework 4',
       suffix: ' - Seme Framework 4',
-      title: 'getThemeElement method',
-      description: 'Learn more about getThemeElement method on SENE_Controller class Seme Framework.',
+      title: 'Metode getThemeElement',
+      description: 'Pelajari selengkapnya tentang metode getThemeElement dari SENE_Controller di Seme Framework versi 4.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',
           text: 'Seme Framework'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0',
-          text: '4.0'
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id',
+          text: 'ID'
         },
         {
-          url: (process.env.BASE_URL || 'http://localhost:3001')+'/4.0/controller',
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/controller',
           text: 'Controller'
         }
       ],
@@ -196,9 +197,9 @@ export default {
         "image": [
           (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
         ],
-        "dateCreated": "2021-07-24T11:41:00+07:00",
-        "datePublished": "2021-07-24T11:42:00+07:00",
-        "dateModified": "2021-07-24T11:42:00+07:00",
+        "dateCreated": "2025-06-06T16:57:00+07:00",
+        "datePublished": "2025-06-06T16:57:00+07:00",
+        "dateModified": "2025-06-06T20:56:00+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",
