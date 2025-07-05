@@ -304,8 +304,8 @@
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/4.0/configuration/" class="btn">
-            Configuration
+          <nuxt-link to="/4.0/directory_structure/" class="btn">
+            Directory Structure
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
@@ -390,7 +390,7 @@
           ],
           "dateCreated": "2021-08-20T22:43:00+07:00",
           "datePublished": "2021-08-20T22:43:00+07:00",
-          "dateModified": "2021-08-20T22:43:00+07:00",
+          "dateModified": "2025-07-02T22:43:00+07:00",
           "author": {
             "@type": "Person",
             "gender": "Male",

@@ -14,14 +14,29 @@
           <div class="content">
             <h1 class="">Session Configuration</h1>
             <p>
-              The session key configuration requires for isolating the session used by another apps.
+              The session key configuration requires for isolating the session used by another apps on same server.
               This value is mandatory, the filling value can be random or the desired value as long as has unique value.
-              Example <code>$saltkey = &#x27;s3mEFr4&#x27;;</code>.
+              This session key will be aded to <code>$_SESSION</code> automatically.
             </p>
-            <p>This session key will be aded to <code>$_SESSION</code> automatically.</p>
+            <p>Example <code>$saltkey = &#x27;s3mEFr4&#x27;;</code>.</p>
+            <p>The  <code>$saltkey</code> value setting is in each settings file. See the sample settings code snippet below.</p>
+            <p>Learn more about the <code>$_SESSION</code> at <a href="https://www.php.net/manual/en/reserved.variables.session" target="_blank">php.net SESSION <i class="fa fa-external-link"></i></a>.</p>
+
             <p>For further information how to use session using Seme Framework, please read <NuxtLink to="/4.0/controller/session/">how to use Session on Controller</NuxtLink>.</p>
             <hr>
+            <div class="message is-info">
+              <div class="message-body">
+                <p><b>Caution</b></p>
+                <p>Please make sure the <code>$saltkey</code> value has been changed and has unique key with the other project.</p>
+              </div>
+            </div>
 
+            <div class="message is-success">
+              <div class="message-body">
+                <p><b>Tips</b></p>
+                <p>If you can't decide to fill <code>$saltkey</code> value, you can add your project name with year number as suffix.</p>
+              </div>
+            </div>
 
           </div>
 
@@ -30,14 +45,14 @@
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/4.0/configuration/routes/" class="btn">
+          <nuxt-link to="/4.0/configuration/url/" class="btn">
           <i class="fa fa-chevron-left"></i>
-            Routes
+            URL Configuration
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/4.0/configuration/url/" class="btn">
-            URL
+          <nuxt-link to="/4.0/configuration/routes/" class="btn">
+            Routes Configuration
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>

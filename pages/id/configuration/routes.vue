@@ -310,14 +310,14 @@
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/id/configuration/environment/" class="btn">
+          <nuxt-link to="/id/configuration/session/" class="btn">
             <i class="fa fa-chevron-left"></i>
-            Environment
+            Pengaturan Session
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/id/configuration/session/" class="btn">
-            Session
+          <nuxt-link to="/id/configuration/environment/" class="btn">
+            Pengaturan Environment
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>

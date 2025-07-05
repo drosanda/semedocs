@@ -29,33 +29,15 @@
               </div>
             </div>
             <p>
-              Contoh pengisian <code>$site</code> dalam potongan kode:
+              Berikut ini adalah beberapa contoh untuk pengisian nilai dari pada <code>$site</code>:
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  $site = &#x22;http://localhost/seme-framework/&#x22;;
-                  $site = &#x22;https://www.example.com/&#x22;;
-                  $site = &#x22;http://localhost:8080/&#x22;;
-                </highlight-code>
-              </div>
-            </div>
+            
+            <MacWindowCodeSnippet lang="php">
+              $site = &#x22;http://localhost/seme-framework/&#x22;;
+              $site = &#x22;https://www.example.com/&#x22;;
+              $site = &#x22;http://localhost:8080/&#x22;;
+              $site = &#x22;http://&#x22;.$_SERVER[&#x27;HTTP_HOST&#x27;].&#x22;/seme_framework/&#x22;;
+            </MacWindowCodeSnippet>
 
             <div class="message is-info">
               <div class="message-body">
@@ -71,38 +53,18 @@
               </div>
             </div>
 
-            <h2>URL Rahasia Admin</h2>
+            <h2>URL Spesial untuk Admin</h2>
             <p>Konfigurasi url dasar khusus untuk admin yang mengarah ke <code>app/controller/admin/*</code>.</p>
             <p>Nilai defaultnya adalah <code>$admin_secret_url = &#x27;admin&#x27;;</code>.</p>
             <p>Ini akan relatif terhadap nilai <code>$site</code>.</p>
             <p>
               Contoh dalam kode:
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  $admin_secret_url = &#x22;admin&#x22;;
-                  $admin_secret_url = &#x22;boss&#x22;;
-                  $admin_secret_url = &#x22;manajer&#x22;;
-                </highlight-code>
-              </div>
-            </div>
+            <MacWindowCodeSnippet lang="php">
+              $admin_secret_url = &#x22;admin&#x22;;
+              $admin_secret_url = &#x22;boss&#x22;;
+              $admin_secret_url = &#x22;manajer&#x22;;
+            </MacWindowCodeSnippet>
 
             <div class="message is-info">
               <div class="message-body">
@@ -137,29 +99,12 @@
             <p>
               Contoh:
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  $cdn_url = &#x22;http://cdn.cenah.co.id/seme-framework/&#x22;;
-                </highlight-code>
-              </div>
-            </div>
+            
+            <MacWindowCodeSnippet lang="php">
+              $admin_secret_url = &#x22;admin&#x22;;
+              $admin_secret_url = &#x22;boss&#x22;;
+              $admin_secret_url = &#x22;manajer&#x22;;
+            </MacWindowCodeSnippet>
 
             <div class="message is-info">
               <div class="message-body">
@@ -179,14 +124,14 @@
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/id/configuration/session/" class="btn">
+          <nuxt-link to="/id/configuration/db-connection/" class="btn">
             <i class="fa fa-chevron-left"></i>
-            Session
+            Pengaturan Koneksi DB
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/id/configuration/" class="btn">
-            Pengaturan
+          <nuxt-link to="/id/configuration/session/" class="btn">
+            Pengaturan Session
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
@@ -274,7 +219,7 @@ export default {
         ],
         "dateCreated": "2021-08-11T19:52:38+07:00",
         "datePublished": "2021-08-11T19:52:38+07:00",
-        "dateModified": "2021-06-25T09:19:03+07:00",
+        "dateModified": "2025-07-06T01:27:17+07:00",
         "author": {
           "@type": "Person",
           "gender": "Male",

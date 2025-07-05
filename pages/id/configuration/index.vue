@@ -89,14 +89,14 @@
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/id/downloads/" class="btn">
+          <nuxt-link to="/id/directory_structure/" class="btn">
           <i class="fa fa-chevron-left"></i>
-            Download dan Install
+            Struktur file dan directory
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/id/tutorial/" class="btn">
-            Tutorial
+          <nuxt-link to="/id/configuration/db-connection/" class="btn">
+            Pengaturan Koneksi DB
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
@@ -179,7 +179,7 @@
           ],
           "dateCreated": "2021-08-11T19:52:38+07:00",
           "datePublished": "2021-08-11T19:52:38+07:00",
-          "dateModified": "2022-01-10T19:21:00+07:00",
+          "dateModified": "2025-07-06T01:45:43+07:00",
           "author": {
             "@type": "Person",
             "gender": "Male",

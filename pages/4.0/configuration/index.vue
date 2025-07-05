@@ -34,6 +34,14 @@
               The content of each files can be differents each others depends on your requirements.
               Learn more about <NuxtLink to="/4.0/configuration/environment/">Environment Configuration</NuxtLink>.
             </p>
+            <div class="message is-info">
+              <div class="message-body">
+                <p>
+                  By default Seme Framework only includes <code>development.php</code> for the development stage. 
+                  You can create a new file named <code>staging.php</code> or even <code>production.php</code> on the production server.
+                </p>
+              </div>
+            </div>
             <hr>
 
             <h2>Basic configuration</h2>

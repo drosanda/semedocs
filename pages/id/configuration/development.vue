@@ -27,9 +27,9 @@
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/id/configuration/db-connection/" class="btn">
+          <nuxt-link to="/id/configuration/environment/" class="btn">
             <i class="fa fa-chevron-left"></i>
-            Koneksi DB
+            Pengaturan Environment
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">

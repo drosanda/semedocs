@@ -114,14 +114,14 @@
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/4.0/configuration/db-connection/" class="btn">
+          <nuxt-link to="/4.0/configuration/routes/" class="btn">
           <i class="fa fa-chevron-left"></i>
-            Basic Configuration
+            Routes Configuration
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/4.0/configuration/routes/" class="btn">
-            Routes
+          <nuxt-link to="/4.0/configuration/development/" class="btn">
+            Development Environment Configuration
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
