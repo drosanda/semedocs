@@ -16,6 +16,7 @@
             <p>
               Konfigurasi kunci sesi memerlukan untuk mengisolasi sesi yang digunakan oleh aplikasi lain.
               Nilai ini bersifat wajib, nilai pengisiannya bisa acak atau nilai yang diinginkan asalkan memiliki nilai unik.
+              Kunci sesi ini akan di tambahkan sebagai array index pada <code>$_SESSION</code> secara otomatis.
             </p>
             <p>
               Contoh <code>$saltkey = &#x27;s3mEFr4&#x27;;</code>.
@@ -80,14 +81,14 @@
 
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/id/configuration/db-connection/" class="btn">
+          <nuxt-link to="/id/configuration/url/" class="btn">
             <i class="fa fa-chevron-left"></i>
-            DB connection
+            Pengaturan URL
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/id/configuration/url/" class="btn">
-            URL
+          <nuxt-link to="/id/configuration/routes/" class="btn">
+            Pengaturan Rute
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>

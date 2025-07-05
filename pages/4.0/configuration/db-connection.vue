@@ -14,10 +14,8 @@
           <div class="content">
             <h1 class="">Database Connection Configuration</h1>
             <p>
-              Seme Framework has ability for open connection to database.
-            </p>
-            <p>
-              Database connection configuration existed on <code>$db</code> array values, separated by 7 keys.
+              Seme Framework has the ability to open direct connections to database applications such as MySQL or Maria DB through the MySQLi extension. 
+              Database connection settings are in app/config/development.php in the $db array, which consists of 7 setting keys.
             </p>
 
             <h2>$db['host']</h2>
@@ -47,7 +45,7 @@
 
             <h2>$db['charset']</h2>
             <p>
-              The character set used by database server connection. The value can be <code>latin1</code> or <code>utf8</code>.
+              The character set or encoding used for database connections. This setting is very important, especially for multibyte data storage, such as storing Arabic or Japanese script. The contents of this key array can be <code>latin1</code> or <code>utf8mb4</code> according to the needs of the character settings.
             </p>
 
             <h2>$db['engine']</h2>
@@ -71,8 +69,8 @@
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/4.0/configuration/environment/" class="btn">
-            Environment
+          <nuxt-link to="/4.0/configuration/url/" class="btn">
+            URL Configuration
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>

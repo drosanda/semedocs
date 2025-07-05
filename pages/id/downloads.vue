@@ -306,8 +306,8 @@
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/id/configuration" class="btn">
-            Pengaturan
+          <nuxt-link to="/id/directory_structure" class="btn">
+            Struktur File dan Direktory
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
@@ -393,7 +393,7 @@
           ],
           "dateCreated": "2021-08-07T12:13:43+07:00",
           "datePublished": "2021-08-07T12:13:43+07:00",
-          "dateModified": "2021-08-07T12:13:43+07:00",
+          "dateModified": "2025-07-06T01:45:43+07:00",
           "author": {
             "@type": "Person",
             "gender": "Male",

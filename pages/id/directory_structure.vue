@@ -5,74 +5,64 @@
         <ul class="breadcrumbs">
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.3 (Bahasa)</NuxtLink></li>
-          <li class=""><NuxtLink to="/id/configuration">Pengaturan</NuxtLink></li>
-          <li class="unavailable">Koneksi Database</li>
+          <li class="unavailable">Struktur File dan Direktori</li>
         </ul>
       </nav>
-      <div class="columns">
-        <div class="column">
-          <div class="content">
-            <h1 class="">Pengaturan Koneksi Database</h1>
-            <p>
-              Seme Framework memiliki kemampuan untuk membuka sambungan langsung terhadap aplikasi database seperti MySQL atau Maria DB melalui ekstensi MySQLi.
-              Pengaturan koneksi database ada di dalam <code>app/config/development.php</code> pada array <code>$db</code>, yang terdiri atas 7 kunci pengaturan.
-            </p>
-
-            <h2>$db['host']</h2>
-            <p>
-              Alamat aplikasi database server yang digunakan untuk membuka koneksi ke aplikasi database. Dapat diisi dengan <code>localhost</code> atau <code>127.0.01</code> atau dengan alamat lainnya sesuai dengan pengaturan database.
-            </p>
-
-            <h2>$db['user']</h2>
-            <p>
-              Nama pengguna yang digunakan untuk membuka koneksi ke aplikasi database.
-            </p>
-
-            <h2>$db['pass']</h2>
-            <p>
-              Kata sandi atau <i>password</i> yang digunakan untuk membuka koneksi ke aplikasi database.
-            </p>
-
-            <h2>$db['name']</h2>
-            <p>
-              Nama database yang akan digunakan didalam aplikasi database server.
-            </p>
-
-            <h2>$db['port']</h2>
-            <p>
-              Aplikasi database menggunakan <i>PORT</i> tertentu pada TCP sebagai jalur komunikasi data. Nilai default dari array key ini adalah <code>$db[&#x27;port&#x27;] = &#x27;3306&#x27;;</code>.
-            </p>
-
-            <h2>$db['charset']</h2>
-            <p>
-              Set karakter atau pengkodean yang digunakan untuk koneksi database. Pengaturan ini sangat penting, terutama untuk penyimpan data <i>multibyte</i>, seperti untuk menyimpan tulisan arab atau jepang. 
-              Isi dari array key ini dapat berupa <code>latin1</code> atau <code>utf8mb4</code> sesuai dengan kebutuhan setelan karakternya.
-            </p>
-
-            <h2>$db['engine']</h2>
-            <p>
-              <i>Database Engine</i>, pada versi 4 hanya menggunakan ekstensi <code>MySQLi</code>, jadi nilai dari array kunci ini hanya <code>$db[&#x27;engine&#x27;] = &#x27;mysqli&#x27;;</code>.
-            </p>
-
-            <hr>
-
-
-          </div>
-
+      <div class="column">
+        <div class="content">
+          <h1 class="">Struktur File dan Direktori</h1>
+          <p>
+            Berikut ini adalah struktur file dan direktori yang ada pada Seme Framework 4.
+          </p>
+          <MacWindowCodeSnippet lang="php">
+              seme-framework/
+&#x251C;&#x2500;&#x2500; app/                    # Application directory
+&#x2502;   &#x251C;&#x2500;&#x2500; cache/             # Cache storage
+&#x2502;   &#x251C;&#x2500;&#x2500; config/            # Configuration files
+&#x2502;   &#x2502;   &#x2514;&#x2500;&#x2500; development.php
+&#x2502;   &#x251C;&#x2500;&#x2500; controller/        # Controller files
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; home.php      # Default home controller
+&#x2502;   &#x2502;   &#x2514;&#x2500;&#x2500; notfound.php  # 404 handler
+&#x2502;   &#x251C;&#x2500;&#x2500; core/             # Core application files
+&#x2502;   &#x251C;&#x2500;&#x2500; model/            # Model files
+&#x2502;   &#x2514;&#x2500;&#x2500; view/             # View files
+&#x251C;&#x2500;&#x2500; kero/                  # Framework core directory
+&#x2502;   &#x251C;&#x2500;&#x2500; bin/              # Command line tools
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; docs.sh       # Documentation generator
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; scan.sh       # Code scanner
+&#x2502;   &#x2502;   &#x2514;&#x2500;&#x2500; test.sh       # Testing utility
+&#x2502;   &#x251C;&#x2500;&#x2500; lib/              # Library files
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; conumtext.php
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; seme_dateindo.php
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; seme_email.php
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; seme_fpdf.php
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; seme_log.php
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; seme_page_fpdf.php
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; seme_purifier.php
+&#x2502;   &#x2502;   &#x2514;&#x2500;&#x2500; sene_json_engine.php
+&#x2502;   &#x251C;&#x2500;&#x2500; sine/             # Core framework components
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; SENE_Controller.php
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; SENE_Engine.php
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; SENE_Input.php
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; SENE_Model.php
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; SENE_MySQLi_Engine.php
+&#x2502;   &#x2502;   &#x2514;&#x2500;&#x2500; SENE_Runner.php
+&#x2502;   &#x2514;&#x2500;&#x2500; Functions.php      # Global helper functions
+&#x2514;&#x2500;&#x2500; index.php             # Application entry point
+          </MacWindowCodeSnippet>
         </div>
       </div>
 
-
       <div class="nav-bottom">
         <div class="nav-bottom-left">
-          <nuxt-link to="/id/configuration/" class="btn">
+          <nuxt-link to="/id/downloads" class="btn">
           <i class="fa fa-chevron-left"></i>
-            Pengaturan
+            Unduh
           </nuxt-link>
         </div>
         <div class="nav-bottom-right">
-          <nuxt-link to="/id/configuration/url/" class="btn">
-            Pengaturan URL
+          <nuxt-link to="/id/configuration" class="btn">
+            Pengaturan
             <i class="fa fa-chevron-right"></i>
           </nuxt-link>
         </div>
@@ -84,12 +74,12 @@
 <script>
   export default {
     layout: 'id',
-    data (){
+    data() {
       return {
         name: 'Seme Framework 4',
         suffix: ' - Seme Framework 4',
-        title: 'Pengaturan koneksi DB',
-        description: 'Pelajari selengkapnya tentang pengaturan koneksi database untuk Seme Framework 4',
+        title: 'Struktur Direktori dan File',
+        description: 'Pelajari selengkapnya tentang Struktur Direktori dan File di Seme Framework 4',
         breadcrumbs: [
           {
             url: process.env.BASE_URL || 'http://localhost:3001',
@@ -98,10 +88,6 @@
           {
             url: (process.env.BASE_URL || 'http://localhost:3001')+'/id',
             text: 'ID',
-          },
-          {
-            url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/configuration',
-            text: 'Pengaturan',
           }
         ]
       }
@@ -157,9 +143,9 @@
           "image": [
             (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
           ],
-          "dateCreated": "2021-08-11T19:52:38+07:00",
-          "datePublished": "2021-08-11T19:52:38+07:00",
-          "dateModified": "2021-06-23T01:04:00+07:00",
+          "dateCreated": "2025-07-06T01:13:43+07:00",
+          "datePublished": "2025-07-06T01:13:43+07:00",
+          "dateModified": "2025-07-06T01:13:43+07:00",
           "author": {
             "@type": "Person",
             "gender": "Male",
