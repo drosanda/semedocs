@@ -150,19 +150,19 @@
                 <highlight-code lang="php">
                   &#x3C;?php
                   class A_ApiKey_Model extends JI_Model{
-                    var $tbl = &#x27;a_apikey&#x27;;
-                    var $tbl_as = &#x27;aak&#x27;;
+                    var $table = &#x27;a_apikey&#x27;;
+                    var $table_alias = &#x27;aak&#x27;;
                     public function __construct(){
                       parent::__construct();
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;table,$this-&#x3E;table_alias);
                     }
                     ...
                     public function get(){
                       $this-&#x3E;db-&#x3E;select(&#x27;nation_code&#x27;)
                         -&#x3E;select(&#x27;id&#x27;)
-                        -&#x3E;select_as($this-&#x3E;__decrypt(&#x22;$this-&#x3E;tbl_as.str&#x22;), &#x22;str&#x22;, 0)
+                        -&#x3E;select_as($this-&#x3E;__decrypt(&#x22;$this-&#x3E;table_alias.str&#x22;), &#x22;str&#x22;, 0)
                         -&#x3E;select(&#x27;is_active&#x27;);
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;table,$this-&#x3E;table_alias);
                       $this-&#x3E;db-&#x3E;where(&#x22;is_active&#x22;,1);
                       return $this-&#x3E;db-&#x3E;get(&#x27;&#x27;,0);
                     }

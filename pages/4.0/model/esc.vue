@@ -82,19 +82,19 @@ e<template>
                 <highlight-code lang="php">
                   &#x3C;?php
                   class D_Order_Model extends \SENE_Model {
-                    public $tbl = &#x27;d_order&#x27;;
-                    public $tbl_as = &#x27;dor&#x27;;
-                    public $tbl2 = &#x27;d_order_detail&#x27;;
-                    public $tbl2_as = &#x27;dod&#x27;;
+                    public $table = &#x27;d_order&#x27;;
+                    public $table_alias = &#x27;dor&#x27;;
+                    public $table2 = &#x27;d_order_detail&#x27;;
+                    public $table2_alias = &#x27;dod&#x27;;
 
                     public function __construct(){
                       parent::__construct();
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;table,$this-&#x3E;table_alias);
                     }
                     public function getByKode($kode){
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
-                      $this-&#x3E;db-&#x3E;join($this-&#x3E;tbl2, $this-&#x3E;tbl2_as, &#x27;id&#x27;, $this-&#x3E;tbl_as, &#x27;d_order_id&#x27;, &#x27;&#x27;);
-                      $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;tbl_as.kode&#x22;, $this-&#x3E;db-&#x3E;esc($kode));
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;table,$this-&#x3E;table_alias);
+                      $this-&#x3E;db-&#x3E;join($this-&#x3E;table2, $this-&#x3E;table2_alias, &#x27;id&#x27;, $this-&#x3E;table_alias, &#x27;d_order_id&#x27;, &#x27;&#x27;);
+                      $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;table_alias.kode&#x22;, $this-&#x3E;db-&#x3E;esc($kode));
                       return $this-&#x3E;db-&#x3E;get();
                     }
                   }

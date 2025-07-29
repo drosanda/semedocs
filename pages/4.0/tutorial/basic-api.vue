@@ -185,13 +185,13 @@
                   &#x3C;?php
                   class A_ApiKey_Model extends SENE_Model
                   {
-                    public $tbl = &#x27;a_apikey&#x27;;
-                    public $tbl_as = &#x27;ak&#x27;;
+                    public $table = &#x27;a_apikey&#x27;;
+                    public $table_alias = &#x27;ak&#x27;;
 
                     public function __construct()
                     {
                       parent::__construct();
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl, $this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;table, $this-&#x3E;table_alias);
                     }
 
                     /**
@@ -241,8 +241,8 @@
                     */
                     public function getLastId($nation_code)
                     {
-                      $this-&#x3E;db-&#x3E;select_as(&#x22;COALESCE(MAX($this-&#x3E;tbl_as.id),0)+1&#x22;, &#x22;last_id&#x22;, 0);
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl, $this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;select_as(&#x22;COALESCE(MAX($this-&#x3E;table_alias.id),0)+1&#x22;, &#x22;last_id&#x22;, 0);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;table, $this-&#x3E;table_alias);
                       $this-&#x3E;db-&#x3E;where(&#x22;nation_code&#x22;, $nation_code);
                       $d = $this-&#x3E;db-&#x3E;get_first(&#x27;&#x27;, 0);
                       if (isset($d-&#x3E;last_id)) {
@@ -258,7 +258,7 @@
                     */
                     public function set($di)
                     {
-                      return $this-&#x3E;db-&#x3E;insert($this-&#x3E;tbl, $di);
+                      return $this-&#x3E;db-&#x3E;insert($this-&#x3E;table, $di);
                     }
 
                     /**
@@ -271,7 +271,7 @@
                     {
                       $this-&#x3E;db-&#x3E;where(&#x27;nation_code&#x27;, $nation_code);
                       $this-&#x3E;db-&#x3E;where(&#x27;id&#x27;, $id);
-                      return $this-&#x3E;db-&#x3E;update($this-&#x3E;tbl, $du);
+                      return $this-&#x3E;db-&#x3E;update($this-&#x3E;table, $du);
                     }
 
                     /**
@@ -284,7 +284,7 @@
                     {
                       $this-&#x3E;db-&#x3E;where(&#x27;nation_code&#x27;, $nation_code);
                       $this-&#x3E;db-&#x3E;where(&#x27;id&#x27;, $id);
-                      return $this-&#x3E;db-&#x3E;delete($this-&#x3E;tbl);
+                      return $this-&#x3E;db-&#x3E;delete($this-&#x3E;table);
                     }
 
                     /**

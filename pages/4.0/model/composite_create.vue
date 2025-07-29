@@ -40,7 +40,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;composite_create(string $TBL1_COLUMN_1, string $OPERATOR, string $TBL2_COLUMN_1): compositeObject;
+                  $this-&#x3E;db-&#x3E;composite_create(string $table1_COLUMN_1, string $OPERATOR, string $table2_COLUMN_1): compositeObject;
                 </highlight-code>
               </div>
             </div>
@@ -48,7 +48,7 @@
             <h3>Parameters</h3>
             <p>composite_create method has 3 required parameters and will returned join composite object</p>
 
-            <h4>$TBL1_COLUMN_1</h4>
+            <h4>$table1_COLUMN_1</h4>
             <p>Column name for first table.</p>
 
             <h4>$OPERATOR</h4>
@@ -60,7 +60,7 @@
               </ul>
             </p>
 
-            <h4>$TBL2_COLUMN_1</h4>
+            <h4>$table2_COLUMN_1</h4>
             <p>Column name for second table.</p>
 
             <div class="message is-info">
@@ -93,24 +93,24 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   class D_Sales_Model extends SENE_Model{
-                    var $tbl = &#x27;d_sales&#x27;;
-                    var $tbl_as = &#x27;dsl&#x27;;
-                    var $tbl2 = &#x27;b_seller&#x27;;
-                    var $tbl2_as = &#x27;bs&#x27;;
+                    var $table = &#x27;d_sales&#x27;;
+                    var $table_alias = &#x27;dsl&#x27;;
+                    var $table2 = &#x27;b_seller&#x27;;
+                    var $table2_alias = &#x27;bs&#x27;;
 
                     public function __construct(){
                       parent::__construct();
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;table,$this-&#x3E;table_alias);
                     }
-                    private function __joinTbl2(){
+                    private function __jointable2(){
                       $composites = array();
-                      $composites[] = $this-&#x3E;db-&#x3E;composite_create(&#x22;$this-&#x3E;tbl_as.nation_code&#x22;,&#x22;=&#x22;,&#x22;$this-&#x3E;tbl_as.nation_code&#x22;);
-                      $composites[] = $this-&#x3E;db-&#x3E;composite_create(&#x22;$this-&#x3E;tbl_as.b_seller_id&#x22;,&#x22;=&#x22;,&#x22;$this-&#x3E;tbl_as.id&#x22;);
+                      $composites[] = $this-&#x3E;db-&#x3E;composite_create(&#x22;$this-&#x3E;table_alias.nation_code&#x22;,&#x22;=&#x22;,&#x22;$this-&#x3E;table_alias.nation_code&#x22;);
+                      $composites[] = $this-&#x3E;db-&#x3E;composite_create(&#x22;$this-&#x3E;table_alias.b_seller_id&#x22;,&#x22;=&#x22;,&#x22;$this-&#x3E;table_alias.id&#x22;);
                       return $composites;
                     }
                     public function getByOrderId($id){
-                      $this-&#x3E;db-&#x3E;join_composite($this-&#x3E;tbl2,$this-&#x3E;tbl2_as,$this-&#x3E;__joinTbl2(),&#x22;inner&#x22;);
-                      $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;tbl_as.id&#x22;,$this-&#x3E;db-&#x3E;esc($id));
+                      $this-&#x3E;db-&#x3E;join_composite($this-&#x3E;table2,$this-&#x3E;table2_alias,$this-&#x3E;__jointable2(),&#x22;inner&#x22;);
+                      $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;table_alias.id&#x22;,$this-&#x3E;db-&#x3E;esc($id));
                       return $this-&#x3E;db-&#x3E;get_first();
                     }
                   }

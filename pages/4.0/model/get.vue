@@ -90,15 +90,15 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   class D_Blog_Model extends SENE_Model{
-                    var $tbl = &#x27;blog&#x27;;
-                    var $tbl_as = &#x27;b&#x27;;
+                    var $table = &#x27;blog&#x27;;
+                    var $table_alias = &#x27;b&#x27;;
 
                     public function __construct(){
                       parent::__construct();
                     }
                     ...
                     public function getSearch($keyword){
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;table,$this-&#x3E;table_alias);
                       $this-&#x3E;db-&#x3E;where(&#x22;title&#x22;, ($keyword), &#x22;OR&#x22;, &#x22;%like%&#x22;, 1, 0);
                       $this-&#x3E;db-&#x3E;where(&#x22;content&#x22;, ($keyword), &#x22;AND&#x22;, &#x22;%like%&#x22;, 0, 1);
                       $this-&#x3E;db-&#x3E;where(&#x22;is_published&#x22;, $this-&#x3E;db-&#x3E;esc(1));

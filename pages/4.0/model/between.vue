@@ -95,12 +95,12 @@
                 <highlight-code lang="php">
                   &#x3C;?php
                   class Blog_Model extends \SENE_Model{
-                    public $tbl = 'd_order';
-                    public $tbl_as = 'dor';
+                    public $table = 'd_order';
+                    public $table_alias = 'dor';
                     
                     public function __construct(){
                       parent::__construct();
-                      $this->db->from($this->tbl, $this->tbl_as);
+                      $this->db->from($this->table, $this->table_alias);
                     }
 
                     /**
@@ -111,11 +111,11 @@
                     */
                     public function getByDateRange($sdate,$edate){
                       if (strlen($sdate)==10 &#x26;&#x26; strlen($edate)==10) {
-                        $this-&#x3E;db-&#x3E;between(&#x22;$this-&#x3E;tbl_as.cdate&#x22;, &#x22;&#x27;$sdate&#x27;&#x22;, &#x22;&#x27;$edate 23:59:59&#x27;&#x22;);
+                        $this-&#x3E;db-&#x3E;between(&#x22;$this-&#x3E;table_alias.cdate&#x22;, &#x22;&#x27;$sdate&#x27;&#x22;, &#x22;&#x27;$edate 23:59:59&#x27;&#x22;);
                       }elseif(strlen($sdate)==10 &#x26;&#x26; strlen($edate)!=10){
-                        $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;tbl_as.cdate&#x22;, &#x22;&#x27;$sdate&#x27;&#x22;, &#x22;AND&#x22;, &#x27;&#x3C;=&#x27;);
+                        $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;table_alias.cdate&#x22;, &#x22;&#x27;$sdate&#x27;&#x22;, &#x22;AND&#x22;, &#x27;&#x3C;=&#x27;);
                       }elseif(strlen($sdate)!=10 &#x26;&#x26; strlen($edate)==10){
-                        $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;tbl_as.cdate&#x22;, &#x22;&#x27;$edate&#x27;&#x22;, &#x22;AND&#x22;, &#x27;&#x3E;=&#x27;);
+                        $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;table_alias.cdate&#x22;, &#x22;&#x27;$edate&#x27;&#x22;, &#x22;AND&#x22;, &#x27;&#x3E;=&#x27;);
                       }
                       return $this-&#x3E;db-&#x3E;get();
                     }
@@ -128,11 +128,11 @@
                     */
                     public function getByDateTimeRange($sdate,$edate){
                       if (strlen($sdate)==10 &#x26;&#x26; strlen($edate)==10) {
-                        $this-&#x3E;db-&#x3E;between(&#x22;$this-&#x3E;tbl_as.pubdt&#x22;, &#x22;(&#x27;$sdate 00:00:00&#x27;)&#x22;, &#x22;(&#x27;$edate 23:59:59&#x27;)&#x22;);
+                        $this-&#x3E;db-&#x3E;between(&#x22;$this-&#x3E;table_alias.pubdt&#x22;, &#x22;(&#x27;$sdate 00:00:00&#x27;)&#x22;, &#x22;(&#x27;$edate 23:59:59&#x27;)&#x22;);
                       }elseif(strlen($sdate)==10 &#x26;&#x26; strlen($edate)!=10){
-                        $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;tbl_as.pubdt&#x22;, &#x22;(&#x27;$sdate 00:00:00&#x27;)&#x22;, &#x22;AND&#x22;, &#x27;&#x3C;=&#x27;);
+                        $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;table_alias.pubdt&#x22;, &#x22;(&#x27;$sdate 00:00:00&#x27;)&#x22;, &#x22;AND&#x22;, &#x27;&#x3C;=&#x27;);
                       }elseif(strlen($sdate)!=10 &#x26;&#x26; strlen($edate)==10){
-                        $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;tbl_as.pubdt&#x22;, &#x22;(&#x27;$edate 23:59:59&#x27;)&#x22;, &#x22;AND&#x22;, &#x27;&#x3E;=&#x27;);
+                        $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;table_alias.pubdt&#x22;, &#x22;(&#x27;$edate 23:59:59&#x27;)&#x22;, &#x22;AND&#x22;, &#x27;&#x3E;=&#x27;);
                       }
                       return $this-&#x3E;db-&#x3E;get();
                     }

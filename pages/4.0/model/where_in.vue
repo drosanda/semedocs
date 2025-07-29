@@ -82,19 +82,19 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   class Blog_Model extends SENE_Model{
-                    var $tbl = &#x27;d_order&#x27;;
-                    var $tbl_as = &#x27;dor&#x27;;
-                    var $tbl2 = &#x27;b_user&#x27;;
-                    var $tbl2_as = &#x27;bu&#x27;;
+                    var $table = &#x27;d_order&#x27;;
+                    var $table_alias = &#x27;dor&#x27;;
+                    var $table2 = &#x27;b_user&#x27;;
+                    var $table2_alias = &#x27;bu&#x27;;
                     public function __construct(){
                       parent::__construct();
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;table,$this-&#x3E;table_alias);
                     }
                     public function Ids($ids){
-                      $this-&#x3E;db-&#x3E;select(&#x22;$this-&#x3E;tbl_as.*, $this-tbl_as.status_text&#x22;,&#x27;status_text&#x27;,0);
-                      $this-&#x3E;db-&#x3E;select(&#x22;$this-&#x3E;tbl2_as.fname&#x22;,&#x27;fname&#x27;,0);
-                      $this-&#x3E;db-&#x3E;select(&#x22;$this-&#x3E;tbl2_as.email&#x22;,&#x27;email&#x27;,0);
-                      $this-&#x3E;db-&#x3E;where_in(&#x22;$this-&#x3E;tbl_as.id&#x22;, $ids);
+                      $this-&#x3E;db-&#x3E;select(&#x22;$this-&#x3E;table_alias.*, $this-table_alias.status_text&#x22;,&#x27;status_text&#x27;,0);
+                      $this-&#x3E;db-&#x3E;select(&#x22;$this-&#x3E;table2_alias.fname&#x22;,&#x27;fname&#x27;,0);
+                      $this-&#x3E;db-&#x3E;select(&#x22;$this-&#x3E;table2_alias.email&#x22;,&#x27;email&#x27;,0);
+                      $this-&#x3E;db-&#x3E;where_in(&#x22;$this-&#x3E;table_alias.id&#x22;, $ids);
                       return $this-&#x3E;db-&#x3E;get();
                     }
                   }

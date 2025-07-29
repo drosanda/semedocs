@@ -33,12 +33,12 @@ Returns the database object instance for method chaining.
 ###### Example 1: Select All Columns using wildcard
 ```php
 class D_Blog_Model extends \SENE_Model {
-    var $tbl = 'd_blog';
-    var $tbl_as = 'b';
+    var $table = 'd_blog';
+    var $table_alias = 'b';
     
     public function getList() {
         $this->db->select("*");
-        $this->db->from($this->tbl, $this->tbl_as);
+        $this->db->from($this->table, $this->table_alias);
         return $this->db->get();
     }
 }
@@ -54,7 +54,7 @@ public function getById($id) {
     $this->db->select("id");
     $this->db->select("title");
     $this->db->select("content");
-    $this->db->from($this->tbl, $this->tbl_as);
+    $this->db->from($this->table, $this->table_alias);
     $this->db->where_as("id", $id);
     return $this->db->get_first();
 }

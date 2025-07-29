@@ -94,15 +94,15 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   class Blog_Model extends SENE_Model{
-                    var $tbl = &#x27;blog&#x27;;
-                    var $tbl_as = &#x27;b&#x27;;
+                    var $table = &#x27;blog&#x27;;
+                    var $table_alias = &#x27;b&#x27;;
 
                     public function __construct(){
                       parent::__construct();
                     }
                     ...
                     public function inserts($dis){
-                      $this-&#x3E;db-&#x3E;insert_batch($ths-&#x3E;tbl,$dis);
+                      $this-&#x3E;db-&#x3E;insert_batch($ths-&#x3E;table,$dis);
                     }
                     ...
                   }

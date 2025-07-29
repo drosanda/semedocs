@@ -81,15 +81,15 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   class Blog_Model extends SENE_Model{
-                    var $tbl = &#x27;d_order&#x27;;
-                    var $tbl_as = &#x27;dor&#x27;;
+                    var $table = &#x27;d_order&#x27;;
+                    var $table_alias = &#x27;dor&#x27;;
                     public function __construct(){
                       parent::__construct();
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;table,$this-&#x3E;table_alias);
                     }
                     public function delete($id){
                       $this-&#x3E;db-&#x3E;where(&#x22;id&#x22;,$id);
-                      return $this-&#x3E;db-&#x3E;delete($this-&#x3E;tbl);
+                      return $this-&#x3E;db-&#x3E;delete($this-&#x3E;table);
                     }
                   }
                 </highlight-code>
