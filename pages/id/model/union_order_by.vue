@@ -82,12 +82,12 @@
                 <highlight-code lang="php">
                   &#x3C;?php
                   class Blog_Model extends SENE_Model{
-                    var $tbl = &#x27;d_blog&#x27;;
-                    var $tbl_as = &#x27;b&#x27;;
+                    var $table = &#x27;d_blog&#x27;;
+                    var $table_alias = &#x27;b&#x27;;
 
                     public function __construct(){
                       parent::__construct();
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;table,$this-&#x3E;table_alias);
                     }
                     public function searchByScore($keyword){
                       $this-&#x3E;db-&#x3E;union_flush();
@@ -98,7 +98,7 @@
                       $this-&#x3E;db-&#x3E;select(&#x27;excerpt&#x27;);
                       $this-&#x3E;db-&#x3E;select(&#x27;date_modified&#x27;);
                       $this-&#x3E;db-&#x3E;select_as(&#x22;3&#x22;,&#x27;score&#x27;);
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;table,$this-&#x3E;table_alias);
                       $this-&#x3E;db-&#x3E;where(&#x27;title&#x27;,$keyword,&#x27;or&#x27;,&#x27;like&#x27;,1,0);
                       $this-&#x3E;db-&#x3E;where(&#x27;excerpt&#x27;,$keyword,&#x27;or&#x27;,&#x27;like&#x27;,0,1);
                       $this-&#x3E;db-&#x3E;union_create();
@@ -109,7 +109,7 @@
                       $this-&#x3E;db-&#x3E;select(&#x27;excerpt&#x27;);
                       $this-&#x3E;db-&#x3E;select(&#x27;date_modified&#x27;);
                       $this-&#x3E;db-&#x3E;select_as(&#x22;2&#x22;,&#x27;score&#x27;);
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;table,$this-&#x3E;table_alias);
                       $this-&#x3E;db-&#x3E;where(&#x27;title&#x27;,$keyword,&#x27;or&#x27;,&#x27;like%&#x27;,1,0);
                       $this-&#x3E;db-&#x3E;where(&#x27;excerpt&#x27;,$keyword,&#x27;or&#x27;,&#x27;like%&#x27;,0,1);
                       $this-&#x3E;db-&#x3E;union_create();
@@ -120,7 +120,7 @@
                       $this-&#x3E;db-&#x3E;select(&#x27;excerpt&#x27;);
                       $this-&#x3E;db-&#x3E;select(&#x27;date_modified&#x27;);
                       $this-&#x3E;db-&#x3E;select_as(&#x22;1&#x22;,&#x27;score&#x27;);
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;table,$this-&#x3E;table_alias);
                       $this-&#x3E;db-&#x3E;where(&#x27;title&#x27;,$keyword,&#x27;or&#x27;,&#x27;%like&#x27;,1,0);
                       $this-&#x3E;db-&#x3E;where(&#x27;excerpt&#x27;,$keyword,&#x27;or&#x27;,&#x27;%like&#x27;,0,1);
                       $this-&#x3E;db-&#x3E;union_create();
@@ -131,7 +131,7 @@
                       $this-&#x3E;db-&#x3E;select(&#x27;excerpt&#x27;);
                       $this-&#x3E;db-&#x3E;select(&#x27;date_modified&#x27;);
                       $this-&#x3E;db-&#x3E;select_as(&#x22;0&#x22;,&#x27;score&#x27;);
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;table,$this-&#x3E;table_alias);
                       $this-&#x3E;db-&#x3E;where(&#x27;title&#x27;,$keyword,&#x27;or&#x27;,&#x27;%like%&#x27;,1,0);
                       $this-&#x3E;db-&#x3E;where(&#x27;excerpt&#x27;,$keyword,&#x27;or&#x27;,&#x27;%like%&#x27;,0,1);
                       $this-&#x3E;db-&#x3E;union_create();

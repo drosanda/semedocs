@@ -75,16 +75,16 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   class C_Produk_Model extends SENE_Model {
-                    var $tbl = &#x27;c_produk&#x27;;
-                    var $tbl_as = &#x27;cp&#x27;;
+                    var $table = &#x27;c_produk&#x27;;
+                    var $table_alias = &#x27;cp&#x27;;
 
                     public function __construct(){
                       parent::__construct();
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;table,$this-&#x3E;table_alias);
                     }
                     ...
                     public function unpublishOldProduct($id){
-                      $sql = &#x27;UPDATE &#x27;.$this-&#x3E;tbl.&#x27; SET is_published = 0 WHERE DATE(date_created) &#x3C; DATE(&#x22;2019-01-01&#x22;)&#x27;;
+                      $sql = &#x27;UPDATE &#x27;.$this-&#x3E;table.&#x27; SET is_published = 0 WHERE DATE(date_created) &#x3C; DATE(&#x22;2019-01-01&#x22;)&#x27;;
                       return $this-&#x3E;db-&#x3E;exec($sql);
                     }
                     ...

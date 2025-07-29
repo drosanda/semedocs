@@ -82,27 +82,27 @@
 &#x3C;?php
 class A_ApiKey_Model extends SENE_Model
 {
-    public $tbl = &#x27;a_apikey&#x27;;
-    public $tbl_as = &#x27;ak&#x27;;
+    public $table = &#x27;a_apikey&#x27;;
+    public $table_alias = &#x27;ak&#x27;;
 
     public function __construct()
     {
         parent::__construct();
-        $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl, $this-&#x3E;tbl_as);
+        $this-&#x3E;db-&#x3E;from($this-&#x3E;table, $this-&#x3E;table_alias);
     }
     public function set($di)
     {
-        return $this-&#x3E;db-&#x3E;insert($this-&#x3E;tbl,$di);
+        return $this-&#x3E;db-&#x3E;insert($this-&#x3E;table,$di);
     }
     public function update($id,$du)
     {
         $this-&#x3E;db-&#x3E;where(&#x27;id&#x27;,$id);
-        return $this-&#x3E;db-&#x3E;update($this-&#x3E;tbl,$du);
+        return $this-&#x3E;db-&#x3E;update($this-&#x3E;table,$du);
     }
     public function del($id,$du)
     {
         $this-&#x3E;db-&#x3E;where(&#x27;id&#x27;,$id);
-        return $this-&#x3E;db-&#x3E;delete($this-&#x3E;tbl);
+        return $this-&#x3E;db-&#x3E;delete($this-&#x3E;table);
     }
     public function get()
     {

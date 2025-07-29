@@ -78,14 +78,14 @@
                 <highlight-code lang="php">
                   &lt;?php
                   class Blog_Model extends SENE_Model{
-                    var $tbl = &#039;blog&#039;;
-                    var $tbl_as = &#039;b&#039;;
+                    var $table = &#039;blog&#039;;
+                    var $table_alias = &#039;b&#039;;
                     public function __construct(){
                       parent::__construct();
                     }
                     public function showFirstPagePer5Rows(){
                       $this-&gt;db-&gt;select(&quot;*&quot;);
-                      $this-&gt;db-&gt;from($this-&gt;tbl,$this-&gt;tbl_as);
+                      $this-&gt;db-&gt;from($this-&gt;table,$this-&gt;table_alias);
                       $this-&gt;db-&gt;order_by(&quot;date_create&quot;,&quot;desc&quot;);
                       $this-&gt;db-&gt;page(1,5);
                       return $this-&gt;db-&gt;get();

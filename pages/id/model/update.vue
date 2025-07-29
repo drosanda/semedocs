@@ -97,14 +97,14 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   class Blog_Model extends SENE_Model{
-                    var $tbl = &#x27;blog&#x27;;
-                    var $tbl_as = &#x27;b&#x27;;
+                    var $table = &#x27;blog&#x27;;
+                    var $table_alias = &#x27;b&#x27;;
                     public function __construct(){
                       &#x9; parent::__construct();
                     }
                     public function update($id,$du){
                       $this-&#x3E;db-&#x3E;where(&#x22;id&#x22;,$id);
-                      $this-&#x3E;db-&#x3E;update($ths-&#x3E;tbl,$du);
+                      $this-&#x3E;db-&#x3E;update($ths-&#x3E;table,$du);
                     }
                   }
                 </highlight-code>
