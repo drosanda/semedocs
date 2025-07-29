@@ -33,7 +33,8 @@
     "nuxt": "^2.15.3",
     "nuxt-highlightjs": "^1.0.1",
     "nuxt-jsonld": "^1.5.1",
-    "vue-highlight.js": "^4.0.1-beta"
+    "vue-highlight.js": "^4.0.1-beta",
+    "yarn": "^1.22.22"
   },
   "devDependencies": {
     "@nuxt/components": "^2.2.1",

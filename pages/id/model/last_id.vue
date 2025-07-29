@@ -77,15 +77,15 @@
                 <highlight-code lang="php">
                   &#x3C;?php
                   class D_Order_Model extends SENE_Model{
-                    var $tbl = &#x27;d_order&#x27;;
-                    var $tbl_as = &#x27;dor&#x27;;
+                    var $table = &#x27;d_order&#x27;;
+                    var $table_alias = &#x27;dor&#x27;;
 
                     public function __construct(){
                       &#x9; parent::__construct();
                     }
                     ...
                     public function set($di){
-                      $this-&#x3E;db-&#x3E;insert($ths-&#x3E;tbl,$di);
+                      $this-&#x3E;db-&#x3E;insert($ths-&#x3E;table,$di);
                       return $this-&#x3E;db-&#x3E;lastId();
                     }
                     ...
@@ -117,15 +117,15 @@
                 <highlight-code lang="php">
                   &#x3C;?php
                   class D_Order_Detail_Model extends SENE_Model{
-                    var $tbl = &#x27;d_order_detail&#x27;;
-                    var $tbl_as = &#x27;dod&#x27;;
+                    var $table = &#x27;d_order_detail&#x27;;
+                    var $table_alias = &#x27;dod&#x27;;
 
                     public function __construct(){
                       parent::__construct();
                     }
                     ...
                     public function set($dis){
-                      return $this-&#x3E;db-&#x3E;insert_multi($ths-&#x3E;tbl,$dis);
+                      return $this-&#x3E;db-&#x3E;insert_multi($ths-&#x3E;table,$dis);
                     }
                     ...
                   }

@@ -243,19 +243,19 @@ register_namespace(__NAMESPACE__);
  */
 class A_Company_Concern extends \JI_Model
 {
-    public $tbl = &#x27;a_company&#x27;;
-    public $tbl_as = &#x27;ac&#x27;;
+    public $table = &#x27;a_company&#x27;;
+    public $table_alias = &#x27;ac&#x27;;
 
     public function __construct()
     {
         parent::__construct();
-        $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl, $this-&#x3E;tbl_as);
+        $this-&#x3E;db-&#x3E;from($this-&#x3E;table, $this-&#x3E;table_alias);
     }
 
     protected function filter_utype($utype=&#x27;&#x27;)
     {
         if (strlen($utype)) {
-            $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;tbl_as.utype&#x22;,  $this-&#x3E;db-&#x3E;esc($utype));
+            $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;table_alias.utype&#x22;,  $this-&#x3E;db-&#x3E;esc($utype));
         }
 
         return $this;
@@ -264,7 +264,7 @@ class A_Company_Concern extends \JI_Model
     protected function filter_is_active($is_active=&#x27;&#x27;)
     {
         if (strlen($is_active)) {
-            $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;tbl_as.is_active&#x22;, $this-&#x3E;db-&#x3E;esc($is_active));
+            $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;table_alias.is_active&#x22;, $this-&#x3E;db-&#x3E;esc($is_active));
         }
 
         return $this;
@@ -274,9 +274,9 @@ class A_Company_Concern extends \JI_Model
     {
         if (strlen($keyword) &#x3E; 2) {
             $this-&#x3E;db
-                -&#x3E;where_as(&#x22;$this-&#x3E;tbl_as.kode&#x22;, $keyword, &#x27;OR&#x27;, &#x27;%like%&#x27;, 1, 0)
-                -&#x3E;where_as(&#x22;$this-&#x3E;tbl_as.nama&#x22;, $keyword, &#x27;OR&#x27;, &#x27;%like%&#x27;, 0, 0)
-                -&#x3E;where_as(&#x22;$this-&#x3E;tbl_as.telp&#x22;, $keyword, &#x27;and&#x27;, &#x27;%like%&#x27;, 0, 1);
+                -&#x3E;where_as(&#x22;$this-&#x3E;table_alias.kode&#x22;, $keyword, &#x27;OR&#x27;, &#x27;%like%&#x27;, 1, 0)
+                -&#x3E;where_as(&#x22;$this-&#x3E;table_alias.nama&#x22;, $keyword, &#x27;OR&#x27;, &#x27;%like%&#x27;, 0, 0)
+                -&#x3E;where_as(&#x22;$this-&#x3E;table_alias.telp&#x22;, $keyword, &#x27;and&#x27;, &#x27;%like%&#x27;, 0, 1);
         }
 
         return $this;
@@ -345,7 +345,7 @@ class A_Company_Model extends \Model\A_Company_Concern
     public function count($keyword, $utype, $is_active)
     {
         $this-&#x3E;db-&#x3E;select_as(&#x22;COUNT(1)&#x22;, &#x27;total&#x27;);
-        $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl, $this-&#x3E;tbl_as);
+        $this-&#x3E;db-&#x3E;from($this-&#x3E;table, $this-&#x3E;table_alias);
         $this-&#x3E;filter($keyword, $utype, $is_active);
         $result = $this-&#x3E;db-&#x3E;get_first();
         if (isset($result-&#x3E;total)) {
@@ -358,15 +358,15 @@ class A_Company_Model extends \Model\A_Company_Concern
     public function data($page, $pagesize, $sorting_column, $sorting_direction, $keyword, $utype, $is_active)
     {
         $this-&#x3E;db
-            -&#x3E;select_as(&#x22;$this-&#x3E;tbl_as.id&#x22;, &#x27;id&#x27;)
-            -&#x3E;select_as(&#x22;$this-&#x3E;tbl_as.utype&#x22;, &#x27;utype&#x27;)
-            -&#x3E;select_as(&#x22;$this-&#x3E;tbl_as.kode&#x22;, &#x27;kode&#x27;)
-            -&#x3E;select_as(&#x22;$this-&#x3E;tbl_as.nama&#x22;, &#x27;nama&#x27;)
-            -&#x3E;select_as(&#x22;CONCAT($this-&#x3E;tbl_as.kabkota, &#x27; &#x27;, $this-&#x3E;tbl_as.provinsi)&#x22;, &#x27;alamat&#x27;)
-            -&#x3E;select_as(&#x22;$this-&#x3E;tbl_as.telp&#x22;, &#x27;telp&#x27;)
-            -&#x3E;select_as(&#x22;$this-&#x3E;tbl_as.is_active&#x22;, &#x27;is_active&#x27;)
-            -&#x3E;select_as(&#x22;$this-&#x3E;tbl_as.is_deleted&#x22;, &#x27;is_deleted&#x27;);
-        $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl, $this-&#x3E;tbl_as);
+            -&#x3E;select_as(&#x22;$this-&#x3E;table_alias.id&#x22;, &#x27;id&#x27;)
+            -&#x3E;select_as(&#x22;$this-&#x3E;table_alias.utype&#x22;, &#x27;utype&#x27;)
+            -&#x3E;select_as(&#x22;$this-&#x3E;table_alias.kode&#x22;, &#x27;kode&#x27;)
+            -&#x3E;select_as(&#x22;$this-&#x3E;table_alias.nama&#x22;, &#x27;nama&#x27;)
+            -&#x3E;select_as(&#x22;CONCAT($this-&#x3E;table_alias.kabkota, &#x27; &#x27;, $this-&#x3E;table_alias.provinsi)&#x22;, &#x27;alamat&#x27;)
+            -&#x3E;select_as(&#x22;$this-&#x3E;table_alias.telp&#x22;, &#x27;telp&#x27;)
+            -&#x3E;select_as(&#x22;$this-&#x3E;table_alias.is_active&#x22;, &#x27;is_active&#x27;)
+            -&#x3E;select_as(&#x22;$this-&#x3E;table_alias.is_deleted&#x22;, &#x27;is_deleted&#x27;);
+        $this-&#x3E;db-&#x3E;from($this-&#x3E;table, $this-&#x3E;table_alias);
         $this-&#x3E;filter($keyword, $utype, $is_active);
         $this-&#x3E;db-&#x3E;order_by($sorting_column, $sorting_direction)-&#x3E;limit($page, $pagesize);
 
@@ -730,10 +730,10 @@ class JI_Controller extends \SENE_Controller
 class JI_Model extends \SENE_Model
 {
     /** @var string  */
-    public $tbl;
+    public $table;
 
     /** @var string  */
-    public $tbl_as;
+    public $table_alias;
 
     public function __construct()
     {
@@ -748,7 +748,7 @@ class JI_Model extends \SENE_Model
      */
     public function set($d)
     {
-        $this-&#x3E;db-&#x3E;insert($this-&#x3E;tbl, $d, 0, 0);
+        $this-&#x3E;db-&#x3E;insert($this-&#x3E;table, $d, 0, 0);
         return $this-&#x3E;db-&#x3E;last_id;
     }
 
@@ -761,7 +761,7 @@ class JI_Model extends \SENE_Model
     public function update($id, $d)
     {
         $this-&#x3E;db-&#x3E;where(&#x22;id&#x22;, $id);
-        return $this-&#x3E;db-&#x3E;update($this-&#x3E;tbl, $d, 0);
+        return $this-&#x3E;db-&#x3E;update($this-&#x3E;table, $d, 0);
     }
 
     /**
@@ -773,7 +773,7 @@ class JI_Model extends \SENE_Model
     public function del($id)
     {
         $this-&#x3E;db-&#x3E;where(&#x22;id&#x22;, $id);
-        return $this-&#x3E;db-&#x3E;delete($this-&#x3E;tbl);
+        return $this-&#x3E;db-&#x3E;delete($this-&#x3E;table);
     }
 
     /**
@@ -785,7 +785,7 @@ class JI_Model extends \SENE_Model
     public function id($id)
     {
         $this-&#x3E;db-&#x3E;where(&#x22;id&#x22;, $id);
-        return $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl, $this-&#x3E;tbl_as)-&#x3E;get_first(&#x27;&#x27;, 0);
+        return $this-&#x3E;db-&#x3E;from($this-&#x3E;table, $this-&#x3E;table_alias)-&#x3E;get_first(&#x27;&#x27;, 0);
     }
 
     /**
@@ -1038,34 +1038,34 @@ class MasterData extends \JI_Controller
     private function sorting_column($column_number)
     {
         // define all table aliases here
-        $tbl_as = $this-&#x3E;acm-&#x3E;tbl_as;
+        $table_alias = $this-&#x3E;acm-&#x3E;table_alias;
 
         // translate number column from datatable request to
         //   column name
         switch ($column_number) {
             case 0:
-                $sorting_column = &#x22;$tbl_as.id&#x22;;
+                $sorting_column = &#x22;$table_alias.id&#x22;;
                 break;
             case 1:
-                $sorting_column = &#x22;$tbl_as.utype&#x22;;
+                $sorting_column = &#x22;$table_alias.utype&#x22;;
                 break;
             case 2:
-                $sorting_column = &#x22;$tbl_as.kode&#x22;;
+                $sorting_column = &#x22;$table_alias.kode&#x22;;
                 break;
             case 3:
-                $sorting_column = &#x22;$tbl_as.nama&#x22;;
+                $sorting_column = &#x22;$table_alias.nama&#x22;;
                 break;
             case 4:
-                $sorting_column = &#x22;concat($tbl_as.kabkota, &#x27; &#x27;, $tbl_as.provinsi)&#x22;;
+                $sorting_column = &#x22;concat($table_alias.kabkota, &#x27; &#x27;, $table_alias.provinsi)&#x22;;
                 break;
             case 5:
-                $sorting_column = &#x22;$tbl_as.telp&#x22;;
+                $sorting_column = &#x22;$table_alias.telp&#x22;;
                 break;
             case 6:
-                $sorting_column = &#x22;$tbl_as.is_active&#x22;;
+                $sorting_column = &#x22;$table_alias.is_active&#x22;;
                 break;
             default:
-                $sorting_column = &#x22;$tbl_as.id&#x22;;
+                $sorting_column = &#x22;$table_alias.id&#x22;;
         }
 
         return $sorting_column;

@@ -120,30 +120,30 @@
                 <highlight-code lang="php">
                   &#x3C;?php
                   class D_Order_Model extends SENE_Model{
-                    var $tbl = &#x27;d_order&#x27;;
-                    var $tbl_as = &#x27;dor&#x27;;
-                    var $tbl2 = &#x27;d_order_detail&#x27;;
-                    var $tbl2_as = &#x27;dod&#x27;;
-                    var $tbl3 = &#x27;c_produk&#x27;;
-                    var $tbl3_as = &#x27;cp&#x27;;
+                    var $table = &#x27;d_order&#x27;;
+                    var $table_alias = &#x27;dor&#x27;;
+                    var $table2 = &#x27;d_order_detail&#x27;;
+                    var $table2_alias = &#x27;dod&#x27;;
+                    var $table3 = &#x27;c_produk&#x27;;
+                    var $table3_alias = &#x27;cp&#x27;;
 
                     public function __construct(){
                       parent::__construct();
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;table,$this-&#x3E;table_alias);
                     }
                     public function getByOrderId($d_order_id){
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
-                      $this-&#x3E;db-&#x3E;join($this-&#x3E;tbl2, $this-&#x3E;tbl2_as, &#x27;id&#x27;, $this-&#x3E;tbl_as, &#x27;d_order_id&#x27;, &#x27;left&#x27;);
-                      $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;tbl_as.d_order_id&#x22;, $this-&#x3E;db-&#x3E;esc($d_order_id));
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;table,$this-&#x3E;table_alias);
+                      $this-&#x3E;db-&#x3E;join($this-&#x3E;table2, $this-&#x3E;table2_alias, &#x27;id&#x27;, $this-&#x3E;table_alias, &#x27;d_order_id&#x27;, &#x27;left&#x27;);
+                      $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;table_alias.d_order_id&#x22;, $this-&#x3E;db-&#x3E;esc($d_order_id));
                       return $this-&#x3E;db-&#x3E;get();
                     }
                     public function getDetailJasaForDrDashboard(){
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl, $this-&#x3E;tbl_as);
-                      $this-&#x3E;db-&#x3E;join($this-&#x3E;tbl2, $this-&#x3E;tbl2_as, &#x27;id&#x27;, $this-&#x3E;tbl_as, &#x27;d_order_id&#x27;, &#x27;&#x27;);
-                      $this-&#x3E;db-&#x3E;join($this-&#x3E;tbl3, $this-&#x3E;tbl3_as, &#x27;id&#x27;, $this-&#x3E;tbl_as, &#x27;c_produk_id&#x27;, &#x27;left&#x27;);
-                      $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;tbl2_as.utype&#x22;,$this-&#x3E;db-&#x3E;esc(&#x27;order_selesai&#x27;));
-                      $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;tbl3_as.jenis_paket&#x22;, &#x27;IS NULL&#x27;);
-                      $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;tbl_as.sdate&#x22;, &#x27;IS NOT NULL&#x27;);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;table, $this-&#x3E;table_alias);
+                      $this-&#x3E;db-&#x3E;join($this-&#x3E;table2, $this-&#x3E;table2_alias, &#x27;id&#x27;, $this-&#x3E;table_alias, &#x27;d_order_id&#x27;, &#x27;&#x27;);
+                      $this-&#x3E;db-&#x3E;join($this-&#x3E;table3, $this-&#x3E;table3_alias, &#x27;id&#x27;, $this-&#x3E;table_alias, &#x27;c_produk_id&#x27;, &#x27;left&#x27;);
+                      $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;table2_alias.utype&#x22;,$this-&#x3E;db-&#x3E;esc(&#x27;order_selesai&#x27;));
+                      $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;table3_alias.jenis_paket&#x22;, &#x27;IS NULL&#x27;);
+                      $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;table_alias.sdate&#x22;, &#x27;IS NOT NULL&#x27;);
                       return $this-&#x3E;db-&#x3E;get(&#x27;&#x27;,0);
                     }
                   }

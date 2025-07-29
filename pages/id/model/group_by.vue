@@ -79,15 +79,15 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   class Blog_Model extends SENE_Model{
-                    var $tbl = &#x27;blog&#x27;;
-                    var $tbl_as = &#x27;b&#x27;;
+                    var $table = &#x27;blog&#x27;;
+                    var $table_alias = &#x27;b&#x27;;
                     public function __construct(){
                       &#x9; parent::__construct();
                     }
                     public function countByCategory(){
                       $this-&#x3E;db-&#x3E;select_as(&#x22;COUNT(*)&#x22;,&#x27;total&#x27;,0);
                       $this-&#x3E;db-&#x3E;select_as(&#x22;category&#x22;,&#x27;category&#x27;,0);
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;table,$this-&#x3E;table_alias);
                       $this-&#x3E;db-&#x3E;group_by(&#x22;category&#x22;);
                       return $this-&#x3E;db-&#x3E;get();
                     }

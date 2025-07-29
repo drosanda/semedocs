@@ -75,17 +75,17 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   class C_Produk_Model extends SENE_Model {
-                    var $tbl = &#x27;c_produk&#x27;;
-                    var $tbl_as = &#x27;cp&#x27;;
+                    var $table = &#x27;c_produk&#x27;;
+                    var $table_alias = &#x27;cp&#x27;;
 
                     public function __construct(){
                       parent::__construct();
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;table,$this-&#x3E;table_alias);
                     }
                     ...
                     public function getLatePublish($id){
                       $sql = &#x27;SELECT `title`, `pubdt` AS 'datePublished'
-                      FROM &#x27;.$this-&#x3E;tbl.&#x27; &#x27;.$this-&#x3E;tbl_as.&#x27;
+                      FROM &#x27;.$this-&#x3E;table.&#x27; &#x27;.$this-&#x3E;table_alias.&#x27;
                       WHERE is_published = 1
                       ORDER BY cdate DESC
                       LIMIT 0,1;&#x27;;

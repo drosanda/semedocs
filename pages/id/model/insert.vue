@@ -104,13 +104,13 @@
                 <highlight-code lang="php">
                   &#x3C;?php
                   class Blog_Model extends SENE_Model{
-                    var $tbl = &#x27;blog&#x27;;
-                    var $tbl_as = &#x27;b&#x27;;
+                    var $table = &#x27;blog&#x27;;
+                    var $table_alias = &#x27;b&#x27;;
                     public function __construct(){
                       &#x9; parent::__construct();
                     }
                     public function insert($di){
-                      $this-&#x3E;db-&#x3E;insert($ths-&#x3E;tbl,$di);
+                      $this-&#x3E;db-&#x3E;insert($ths-&#x3E;table,$di);
                     }
                   }
                 </highlight-code>
@@ -185,8 +185,8 @@
                 <highlight-code lang="php">
                   &#x3C;?php
                   class Blog_Model extends SENE_Model{
-                    var $tbl = &#x27;blog&#x27;;
-                    var $tbl_as = &#x27;b&#x27;;
+                    var $table = &#x27;blog&#x27;;
+                    var $table_alias = &#x27;b&#x27;;
                     public function __construct(){
                       &#x9; parent::__construct();
                     }
@@ -208,7 +208,7 @@
                       &#x27;id&#x27; =&#x3E; &#x27;null&#x27;,
                       &#x27;nama&#x27; =&#x3E; &#x27;Loan&#x27;
                       );
-                      $this-&#x3E;db-&#x3E;insert($ths-&#x3E;tbl, $dis, 1);
+                      $this-&#x3E;db-&#x3E;insert($ths-&#x3E;table, $dis, 1);
                     }
                   }
                 </highlight-code>

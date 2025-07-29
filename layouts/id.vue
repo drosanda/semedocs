@@ -144,6 +144,9 @@
               <li><nuxt-link to="/id/core/model">Model</nuxt-link></li>
             </ul>
           </li>
+          <li>
+            <nuxt-link to="/id/abac">ABAC</nuxt-link>
+          </li>
         </ul>
         <br>
         <br>

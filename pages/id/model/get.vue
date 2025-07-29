@@ -87,8 +87,8 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   class Blog_Model extends SENE_Model{
-                    var $tbl = &#x27;blog&#x27;;
-                    var $tbl_as = &#x27;b&#x27;;
+                    var $table = &#x27;blog&#x27;;
+                    var $table_alias = &#x27;b&#x27;;
                     public function __construct(){
                       &#x9; parent::__construct();
                     }
@@ -96,21 +96,21 @@
                       $this-&#x3E;db-&#x3E;select(&#x22;id&#x22;);
                       $this-&#x3E;db-&#x3E;select(&#x22;title&#x22;);
                       $this-&#x3E;db-&#x3E;select(&#x22;content&#x22;);
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;table,$this-&#x3E;table_alias);
                       return $this-&#x3E;db-&#x3E;get();
                     }
                     public function getListArray(){
                       $this-&#x3E;db-&#x3E;select(&#x22;id&#x22;);
                       $this-&#x3E;db-&#x3E;select(&#x22;title&#x22;);
                       $this-&#x3E;db-&#x3E;select(&#x22;content&#x22;);
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;table,$this-&#x3E;table_alias);
                       return $this-&#x3E;db-&#x3E;get(&#x27;array&#x27;);
                     }
                     public function getListDebugQuery($id){
                       $this-&#x3E;db-&#x3E;select(&#x22;id&#x22;);
                       $this-&#x3E;db-&#x3E;select(&#x22;title&#x22;);
                       $this-&#x3E;db-&#x3E;select(&#x22;content&#x22;);
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;table,$this-&#x3E;table_alias);
                       return $this-&#x3E;db-&#x3E;get(&#x27;array&#x27;,1);
                     }
                   }
