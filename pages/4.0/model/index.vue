@@ -39,11 +39,11 @@
                 <highlight-code lang="php">
                   &#x3C;?php
                   class Blog_Model extends SENE_Model{
-                    var $tbl = &#x27;blog&#x27;;
-                    var $tbl_as = &#x27;b&#x27;;
+                    var $table = &#x27;blog&#x27;;
+                    var $table_alias = &#x27;b&#x27;;
                     public function __construct(){
                       parent::__construct();
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;table,$this-&#x3E;table_alias);
                     }
                   }
                 </highlight-code>
@@ -142,7 +142,7 @@
             </p>
 
             <h2 id="query_builder">Using Query Builder</h2>
-            <p>Seme Framework model allowed you to use our query builder method that can help reuse your code in for another model. So, you can simply use copy-paste and change the <code>$tbl</code> properties of your class model. Here is the example:</p>
+            <p>Seme Framework model allowed you to use our query builder method that can help reuse your code in for another model. So, you can simply use copy-paste and change the <code>$table</code> properties of your class model. Here is the example:</p>
 
             <div class="macwindow">
               <div class="titlebar">
@@ -165,39 +165,39 @@
                 <highlight-code lang="php">
                   &#x3C;?php
                   class Blog_Model extends SENE_Model{
-                    var $tbl = &#x27;blog&#x27;;
-                    var $tbl_as = &#x27;b&#x27;;
+                    var $table = &#x27;blog&#x27;;
+                    var $table_alias = &#x27;b&#x27;;
 
                     public function __construct(){
                       parent::__construct();
                     }
                     public function getAll(){
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;table,$this-&#x3E;table_alias);
                       return $this-&#x3E;db-&#x3E;get();
                     }
                     public function countAll(){
                       $this-&#x3E;db-&#x3E;select_as(&#x27;COUNT(*)&#x27;,&#x27;total&#x27;,0);
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;table,$this-&#x3E;table_alias);
                       $d = $this-&#x3E;db-&#x3E;get_first();
                       if(isset($d-&#x3E;total)) return $d-&#x3E;total;
                       return 0;
                     }
                     public function getById($id){
                       $this-&#x3E;db-&#x3E;where(&#x27;id&#x27;,$id);
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;table,$this-&#x3E;table_alias);
                       return $this-&#x3E;db-&#x3E;get_first();
                     }
                     public function set($di=array()){
-                      $this-&#x3E;db-&#x3E;insert($this-&#x3E;tbl,$di);
+                      $this-&#x3E;db-&#x3E;insert($this-&#x3E;table,$di);
                       return $this-&#x3E;db-&#x3E;last_id;
                     }
                     public function update($id,$du=array()){
                       $this-&#x3E;db-&#x3E;where(&#x27;id&#x27;,$id);
-                      return $this-&#x3E;db-&#x3E;update($this-&#x3E;tbl,$du);
+                      return $this-&#x3E;db-&#x3E;update($this-&#x3E;table,$du);
                     }
                     public function del($id){
                       $this-&#x3E;db-&#x3E;where(&#x22;id&#x22;,$id);
-                      return $this-&#x3E;db-&#x3E;delete($this-&#x3E;tbl);
+                      return $this-&#x3E;db-&#x3E;delete($this-&#x3E;table);
                     }
                   }
                 </highlight-code>
@@ -209,9 +209,9 @@
             <ul>
               <li>$this-&#x3E;db-&#x3E;get(&#x27;object&#x27;,<code>1</code>)</li>
               <li>$this-&#x3E;db-&#x3E;get_first(&#x27;object&#x27;,<code>1</code>)</li>
-              <li>$this-&#x3E;db-&#x3E;insert($this-&#x3E;tbl,$di,0,<code>1</code>)</li>
-              <li>$this-&#x3E;db-&#x3E;update($this-&#x3E;tbl,<code>1</code>);</li>
-              <li>$this-&#x3E;db-&#x3E;delete($this-&#x3E;tbl,<code>1</code>);</li>
+              <li>$this-&#x3E;db-&#x3E;insert($this-&#x3E;table,$di,0,<code>1</code>)</li>
+              <li>$this-&#x3E;db-&#x3E;update($this-&#x3E;table,<code>1</code>);</li>
+              <li>$this-&#x3E;db-&#x3E;delete($this-&#x3E;table,<code>1</code>);</li>
             </ul>
 
           </div>

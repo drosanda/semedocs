@@ -110,13 +110,13 @@
                 <highlight-code lang="php">
                   &#x3C;?php
                   class Blog_Model extends SENE_Model{
-                    var $tbl = &#x27;blog&#x27;;
-                    var $tbl_as = &#x27;b&#x27;;
+                    var $table = &#x27;blog&#x27;;
+                    var $table_alias = &#x27;b&#x27;;
                     public function __construct(){
                       parent::__construct();
                     }
                     public function insert($di){
-                      $this-&#x3E;db-&#x3E;insert($ths-&#x3E;tbl,$di);
+                      $this-&#x3E;db-&#x3E;insert($ths-&#x3E;table,$di);
                     }
                   }
                 </highlight-code>

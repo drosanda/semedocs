@@ -81,21 +81,21 @@
                 <highlight-code lang="php">
                   &lt;?php
                   class D_Blog_Model extends SENE_Model{
-                    var $tbl = &#039;d_blog&#039;;
-                    var $tbl_as = &#039;b&#039;;
+                    var $table = &#039;d_blog&#039;;
+                    var $table_alias = &#039;b&#039;;
                     public function __construct(){
                       parent::__construct();
                     }
                     public function latest(){
                       $this-&gt;db-&gt;select(&quot;*&quot;);
-                      $this-&gt;db-&gt;from($this-&gt;tbl,$this-&gt;tbl_as);
+                      $this-&gt;db-&gt;from($this-&gt;table,$this-&gt;table_alias);
                       $this-&gt;db-&gt;order_by(&quot;date_create&quot;,&quot;desc&quot;);
                       $this-&gt;db-&gt;limit(0,5);
                       return $this-&gt;db-&gt;get();
                     }
                     public function latest3ExceptTheFirst(){
                       $this-&gt;db-&gt;select(&quot;*&quot;);
-                      $this-&gt;db-&gt;from($this-&gt;tbl,$this-&gt;tbl_as);
+                      $this-&gt;db-&gt;from($this-&gt;table,$this-&gt;table_alias);
                       $this-&gt;db-&gt;order_by(&quot;date_create&quot;,&quot;desc&quot;);
                       $this-&gt;db-&gt;limit(1,4);
                       return $this-&gt;db-&gt;get();

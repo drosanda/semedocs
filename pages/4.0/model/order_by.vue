@@ -80,8 +80,8 @@
                 <highlight-code lang="php">
                   &lt;?php
                   class Blog_Model extends \SENE_Model{
-                    public $tbl = &#039;blog&#039;;
-                    public $tbl_as = &#039;b&#039;;
+                    public $table = &#039;blog&#039;;
+                    public $table_alias = &#039;b&#039;;
                     public function __construct(){
                       parent::__construct();
                     }

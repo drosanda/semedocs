@@ -89,14 +89,14 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   class D_Blog_Model extends SENE_Model{
-                    var $tbl = &#x27;blog&#x27;;
-                    var $tbl_as = &#x27;b&#x27;;
+                    var $table = &#x27;blog&#x27;;
+                    var $table_alias = &#x27;b&#x27;;
 
                     public function __construct(){
                       parent::__construct();
                     }
                     public function getBySlug($slug){
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;table,$this-&#x3E;table_alias);
                       $this-&#x3E;db-&#x3E;where(&#x22;slug&#x22;, $this-&#x3E;db-&#x3E;esc($slug));
                       return $this-&#x3E;db-&#x3E;get_first();
                     }

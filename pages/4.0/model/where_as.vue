@@ -102,26 +102,26 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   class Blog_Model extends SENE_Model{
-                    var $tbl = &#x27;d_order&#x27;;
-                    var $tbl_as = &#x27;dor&#x27;;
-                    var $tbl2 = &#x27;b_user&#x27;;
-                    var $tbl2_as = &#x27;bu&#x27;;
+                    var $table = &#x27;d_order&#x27;;
+                    var $table_alias = &#x27;dor&#x27;;
+                    var $table2 = &#x27;b_user&#x27;;
+                    var $table2_alias = &#x27;bu&#x27;;
                     public function __construct(){
                       parent::__construct();
-                      $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl,$this-&#x3E;tbl_as);
+                      $this-&#x3E;db-&#x3E;from($this-&#x3E;table,$this-&#x3E;table_alias);
                     }
                     public function getNow($id){
-                      $this-&#x3E;db-&#x3E;select(&#x22;$this-&#x3E;tbl2_as.fname&#x22;,&#x27;fname&#x27;,0);
-                      $this-&#x3E;db-&#x3E;select(&#x22;$this-&#x3E;tbl_as.date_order&#x22;,&#x27;date_order&#x27;,0);
-                      $this-&#x3E;db-&#x3E;join($this-&#x3E;tbl2,$this-&#x3E;tbl2_as,&#x27;id&#x27;,$this-&#x3E;tbl_as,&#x27;b_user_id&#x27;,&#x27;&#x27;);
-                      $this-&#x3E;db-&#x3E;where_as(&#x22;DATE($this-&#x3E;tbl_as.date_order)&#x22;,&#x22;CURRENT_DATE()&#x22;,&#x22;AND&#x22;,&#x22;=&#x22;,0,0);
+                      $this-&#x3E;db-&#x3E;select(&#x22;$this-&#x3E;table2_alias.fname&#x22;,&#x27;fname&#x27;,0);
+                      $this-&#x3E;db-&#x3E;select(&#x22;$this-&#x3E;table_alias.date_order&#x22;,&#x27;date_order&#x27;,0);
+                      $this-&#x3E;db-&#x3E;join($this-&#x3E;table2,$this-&#x3E;table2_alias,&#x27;id&#x27;,$this-&#x3E;table_alias,&#x27;b_user_id&#x27;,&#x27;&#x27;);
+                      $this-&#x3E;db-&#x3E;where_as(&#x22;DATE($this-&#x3E;table_alias.date_order)&#x22;,&#x22;CURRENT_DATE()&#x22;,&#x22;AND&#x22;,&#x22;=&#x22;,0,0);
                       return $this-&#x3E;db-&#x3E;get();
                     }
                     public function getYesterday($b_user_id){
-                      $this-&#x3E;db-&#x3E;select(&#x22;$this-&#x3E;tbl_as.*, $this-tbl_as.status_text&#x22;,&#x27;status_text&#x27;,0);
-                      $this-&#x3E;db-&#x3E;select(&#x22;$this-&#x3E;tbl2_as.fname&#x22;,&#x27;fname&#x27;,0);
-                      $this-&#x3E;db-&#x3E;select(&#x22;$this-&#x3E;tbl2_as.email&#x22;,&#x27;email&#x27;,0);
-                      $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;tbl_as.status_text&#x22;,$this-&#x3E;db-&#x3E;esc(&#x22;order_invoice&#x22;),&#x22;AND&#x22;,&#x22;=&#x22;,0,0);
+                      $this-&#x3E;db-&#x3E;select(&#x22;$this-&#x3E;table_alias.*, $this-table_alias.status_text&#x22;,&#x27;status_text&#x27;,0);
+                      $this-&#x3E;db-&#x3E;select(&#x22;$this-&#x3E;table2_alias.fname&#x22;,&#x27;fname&#x27;,0);
+                      $this-&#x3E;db-&#x3E;select(&#x22;$this-&#x3E;table2_alias.email&#x22;,&#x27;email&#x27;,0);
+                      $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;table_alias.status_text&#x22;,$this-&#x3E;db-&#x3E;esc(&#x22;order_invoice&#x22;),&#x22;AND&#x22;,&#x22;=&#x22;,0,0);
                       $this-&#x3E;db-&#x3E;where_as(&#x22;DATE(date_order)&#x22;,&#x22;DATE_SUB(CURRENT_DATE(), INTERVAL 1 DAY)&#x22;,&#x22;AND&#x22;,&#x22;=&#x22;,0,0);
                       return $this-&#x3E;db-&#x3E;get();
                     }
@@ -150,7 +150,7 @@
               </div>
               <div class="maccontent">
                 <highlight-code lang="php">
-                  $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;tbl_as.status_text&#x22;,$this-&#x3E;db-&#x3E;esc(&#x22;order_completed&#x22;));
+                  $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;table_alias.status_text&#x22;,$this-&#x3E;db-&#x3E;esc(&#x22;order_completed&#x22;));
                 </highlight-code>
               </div>
             </div>

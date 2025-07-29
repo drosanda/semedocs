@@ -28,11 +28,11 @@ Returns the database object instance for method chaining.
 ###### Example 1: Basic Usage
 ```php
 class Blog_Model extends \SENE_Model {
-    var $tbl = 'blog';
-    var $tbl_as = 'b';
+    var $table = 'blog';
+    var $table_alias = 'b';
     
     public function countList() {
-        $this->db->from($this->tbl, $this->tbl_as);
+        $this->db->from($this->table, $this->table_alias;
         return $this->db->get();
     }
 }

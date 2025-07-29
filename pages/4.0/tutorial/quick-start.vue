@@ -967,10 +967,10 @@ class JI_Controller extends \SENE_Controller
 class JI_Model extends \SENE_Model
 {
     /** @var string  */
-    public $tbl;
+    public $table;
 
     /** @var string  */
-    public $tbl_as;
+    public $table_alias;
 
     public function __construct()
     {
@@ -985,7 +985,7 @@ class JI_Model extends \SENE_Model
      */
     public function set($d)
     {
-        $this-&#x3E;db-&#x3E;insert($this-&#x3E;tbl, $d, 0, 0);
+        $this-&#x3E;db-&#x3E;insert($this-&#x3E;table, $d, 0, 0);
         return $this-&#x3E;db-&#x3E;last_id;
     }
 
@@ -998,7 +998,7 @@ class JI_Model extends \SENE_Model
     public function update($id, $d)
     {
         $this-&#x3E;db-&#x3E;where(&#x22;id&#x22;, $id);
-        return $this-&#x3E;db-&#x3E;update($this-&#x3E;tbl, $d, 0);
+        return $this-&#x3E;db-&#x3E;update($this-&#x3E;table, $d, 0);
     }
 
     /**
@@ -1010,7 +1010,7 @@ class JI_Model extends \SENE_Model
     public function del($id)
     {
         $this-&#x3E;db-&#x3E;where(&#x22;id&#x22;, $id);
-        return $this-&#x3E;db-&#x3E;delete($this-&#x3E;tbl);
+        return $this-&#x3E;db-&#x3E;delete($this-&#x3E;table);
     }
 
     /**
@@ -1022,7 +1022,7 @@ class JI_Model extends \SENE_Model
     public function id($id)
     {
         $this-&#x3E;db-&#x3E;where(&#x22;id&#x22;, $id);
-        return $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl, $this-&#x3E;tbl_as)-&#x3E;get_first(&#x27;&#x27;, 0);
+        return $this-&#x3E;db-&#x3E;from($this-&#x3E;table, $this-&#x3E;table_alias)-&#x3E;get_first(&#x27;&#x27;, 0);
     }
 
     /**
@@ -1110,20 +1110,20 @@ register_namespace(__NAMESPACE__);
  */
 class A_Pengguna_Concern extends \JI_Model
 {
-    public $tbl = &#x27;a_pengguna&#x27;;
-    public $tbl_as = &#x27;ap&#x27;;
+    public $table = &#x27;a_pengguna&#x27;;
+    public $table_alias = &#x27;ap&#x27;;
 
     public function __construct()
     {
         parent::__construct();
-        $this-&#x3E;db-&#x3E;from($this-&#x3E;tbl, $this-&#x3E;tbl_as);
+        $this-&#x3E;db-&#x3E;from($this-&#x3E;table, $this-&#x3E;table_alias);
     }
 
     public function username($username)
     {
         return $this-&#x3E;db
-            -&#x3E;from($this-&#x3E;tbl, $this-&#x3E;tbl_as)
-            -&#x3E;where(&#x22;$this-&#x3E;tbl_as.username&#x22;, $username, &#x27;AND&#x27;, &#x27;LIKE&#x27;)
+            -&#x3E;from($this-&#x3E;table, $this-&#x3E;table_alias)
+            -&#x3E;where(&#x22;$this-&#x3E;table_alias.username&#x22;, $username, &#x27;AND&#x27;, &#x27;LIKE&#x27;)
             -&#x3E;get_first(&#x27;object&#x27;, 0);
     }
 }
