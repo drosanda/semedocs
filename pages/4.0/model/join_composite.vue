@@ -92,10 +92,10 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   class D_Sales_Model extends SENE_Model{
-                    var $table = &#x27;d_sales&#x27;;
-                    var $table_alias = &#x27;dsl&#x27;;
-                    var $table2 = &#x27;b_seller&#x27;;
-                    var $table2_alias = &#x27;bs&#x27;;
+                    public $table = &#x27;d_sales&#x27;;
+                    public $table_alias = &#x27;dsl&#x27;;
+                    public $table2 = &#x27;b_seller&#x27;;
+                    public $table2_alias = &#x27;bs&#x27;;
 
                     public function __construct(){
                       parent::__construct();

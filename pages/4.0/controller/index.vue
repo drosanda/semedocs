@@ -276,8 +276,8 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   class Home extends SENE_Controller{
-                    var $public_var = &#x27;Yi-Ha!&#x27;;
-                    var $__underWear = &#x27;My Private Things&#x27;;
+                    public $public_var = &#x27;Yi-Ha!&#x27;;
+                    public $__underWear = &#x27;My Private Things&#x27;;
                     public function __construct(){
                       parent::__construct();
                     }
