@@ -102,10 +102,10 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   class Blog_Model extends SENE_Model{
-                    var $table = &#x27;d_order&#x27;;
-                    var $table_alias = &#x27;dor&#x27;;
-                    var $table2 = &#x27;b_user&#x27;;
-                    var $table2_alias = &#x27;bu&#x27;;
+                    public $table = &#x27;d_order&#x27;;
+                    public $table_alias = &#x27;dor&#x27;;
+                    public $table2 = &#x27;b_user&#x27;;
+                    public $table2_alias = &#x27;bu&#x27;;
                     public function __construct(){
                       parent::__construct();
                       $this-&#x3E;db-&#x3E;from($this-&#x3E;table,$this-&#x3E;table_alias);

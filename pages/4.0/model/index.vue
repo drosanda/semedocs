@@ -39,8 +39,8 @@
                 <highlight-code lang="php">
                   &#x3C;?php
                   class Blog_Model extends SENE_Model{
-                    var $table = &#x27;blog&#x27;;
-                    var $table_alias = &#x27;b&#x27;;
+                    public $table = &#x27;blog&#x27;;
+                    public $table_alias = &#x27;b&#x27;;
                     public function __construct(){
                       parent::__construct();
                       $this-&#x3E;db-&#x3E;from($this-&#x3E;table,$this-&#x3E;table_alias);
@@ -89,7 +89,7 @@
 
             <h2 id="SENE_Model">SENE_Model Class</h2>
             <p>
-              SENE_Model class is a base class that has various functions (methods) in it for communication purposes with database systems for web-based application development using the Seme Framework.
+              SENE_Model class is a base class that has publicious functions (methods) in it for communication purposes with database systems for web-based application development using the Seme Framework.
               There are many methods and properties already available in this SENE_Model class.
             </p>
 
@@ -165,8 +165,8 @@
                 <highlight-code lang="php">
                   &#x3C;?php
                   class Blog_Model extends SENE_Model{
-                    var $table = &#x27;blog&#x27;;
-                    var $table_alias = &#x27;b&#x27;;
+                    public $table = &#x27;blog&#x27;;
+                    public $table_alias = &#x27;b&#x27;;
 
                     public function __construct(){
                       parent::__construct();

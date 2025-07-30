@@ -75,8 +75,8 @@
               <div class="maccontent">
                 <highlight-code lang="php">
                   class C_Produk_Model extends SENE_Model {
-                    var $table = &#x27;c_produk&#x27;;
-                    var $table_alias = &#x27;cp&#x27;;
+                    public $table = &#x27;c_produk&#x27;;
+                    public $table_alias = &#x27;cp&#x27;;
 
                     public function __construct(){
                       parent::__construct();

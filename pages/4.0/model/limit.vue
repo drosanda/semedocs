@@ -81,8 +81,8 @@
                 <highlight-code lang="php">
                   &lt;?php
                   class D_Blog_Model extends SENE_Model{
-                    var $table = &#039;d_blog&#039;;
-                    var $table_alias = &#039;b&#039;;
+                    public $table = &#039;d_blog&#039;;
+                    public $table_alias = &#039;b&#039;;
                     public function __construct(){
                       parent::__construct();
                     }

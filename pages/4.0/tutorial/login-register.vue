@@ -55,12 +55,12 @@ SET time_zone = &#x22;+00:00&#x22;;
 DROP TABLE IF EXISTS &#x60;b_user&#x60;;
 CREATE TABLE &#x60;b_user&#x60; (
   &#x60;id&#x60; int(6) unsigned NOT NULL AUTO_INCREMENT,
-  &#x60;email&#x60; varchar(255) DEFAULT NULL,
-  &#x60;password&#x60; varchar(255) NOT NULL,
-  &#x60;nama&#x60; varchar(78) DEFAULT NULL,
-  &#x60;alamat&#x60; varchar(78) DEFAULT NULL,
+  &#x60;email&#x60; publicchar(255) DEFAULT NULL,
+  &#x60;password&#x60; publicchar(255) NOT NULL,
+  &#x60;nama&#x60; publicchar(78) DEFAULT NULL,
+  &#x60;alamat&#x60; publicchar(78) DEFAULT NULL,
   &#x60;cdate&#x60; datetime DEFAULT NULL,
-  &#x60;foto&#x60; varchar(255) DEFAULT NULL,
+  &#x60;foto&#x60; publicchar(255) DEFAULT NULL,
   &#x60;is_active&#x60; int(1) unsigned DEFAULT 1,
   PRIMARY KEY (&#x60;id&#x60;),
   KEY &#x60;email&#x60; (&#x60;email&#x60;)
@@ -96,8 +96,8 @@ SET FOREIGN_KEY_CHECKS=1;
                 <highlight-code lang="php">
                   &#x3C;?php
                   class B_User_Model extends SENE_Model{
-                    var $table = &#x27;b_user&#x27;;
-                    var $table_alias = &#x27;bu&#x27;;
+                    public $table = &#x27;b_user&#x27;;
+                    public $table_alias = &#x27;bu&#x27;;
 
                     public function __construct(){
                       parent::__construct();
@@ -233,8 +233,8 @@ class JI_Controller extends SENE_Controller
                   /* == Core Configuration == */
                   /* register your core class, and put it on: */
                   /*   - app/core/ */
-                  /* all var $core_* value in lower case string*/
-                  /* @var string */
+                  /* all public $core_* value in lower case string*/
+                  /* @public string */
                   /****************************/
                   $core_prefix = &#x27;ji_&#x27;;
                   $core_controller = &#x27;controller&#x27;;
