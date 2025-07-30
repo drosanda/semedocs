@@ -300,8 +300,8 @@
 &#x9;&#x9;&#x3C;?php $this-&#x3E;getJsFooter(); ?&#x3E;
 &#x9;&#x9;&#x3C;!-- Load and execute javascript code used only in this page --&#x3E;
 &#x9;&#x9;&#x3C;script&#x3E;
-&#x9;&#x9;var base_url = &#x27;&#x3C;?=base_url_admin()?&#x3E;&#x27;;
-&#x9;&#x9;var Login = function(){
+&#x9;&#x9;public base_url = &#x27;&#x3C;?=base_url_admin()?&#x3E;&#x27;;
+&#x9;&#x9;public Login = function(){
 &#x9;&#x9;&#x9;return {
 &#x9;&#x9;&#x9;&#x9;init: function(){
 &#x9;&#x9;&#x9;&#x9;}
@@ -401,14 +401,14 @@
 &#x9;&#x9;&#x3C;?php $this-&#x3E;getJsFooter(); ?&#x3E;
 &#x9;&#x9;&#x3C;!-- Load and execute javascript code used only in this page --&#x3E;
 &#x9;&#x9;&#x3C;script&#x3E;
-&#x9;&#x9;&#x9;var from_user_id = &#x27;&#x27;;
-&#x9;&#x9;&#x9;var from_user_nama = &#x27;&#x27;;
-&#x9;&#x9;&#x9;var to_user_id = &#x27;&#x27;;
-&#x9;&#x9;&#x9;var to_user_nama = &#x27;&#x27;;
-&#x9;&#x9;&#x9;var chat_active = 1;
-&#x9;&#x9;&#x9;var last_pesan_id = 0;
-&#x9;&#x9;&#x9;var iterator = 1;
-&#x9;&#x9;&#x9;var base_url = &#x27;&#x3C;?=base_url_admin()?&#x3E;&#x27;;
+&#x9;&#x9;&#x9;public from_user_id = &#x27;&#x27;;
+&#x9;&#x9;&#x9;public from_user_nama = &#x27;&#x27;;
+&#x9;&#x9;&#x9;public to_user_id = &#x27;&#x27;;
+&#x9;&#x9;&#x9;public to_user_nama = &#x27;&#x27;;
+&#x9;&#x9;&#x9;public chat_active = 1;
+&#x9;&#x9;&#x9;public last_pesan_id = 0;
+&#x9;&#x9;&#x9;public iterator = 1;
+&#x9;&#x9;&#x9;public base_url = &#x27;&#x3C;?=base_url_admin()?&#x3E;&#x27;;
 &#x9;&#x9;&#x9;$(document).ready(function(e){
 &#x9;&#x9;&#x9;&#x9;&#x3C;?php $this-&#x3E;getJsReady(); ?&#x3E;
 &#x9;&#x9;&#x9;});

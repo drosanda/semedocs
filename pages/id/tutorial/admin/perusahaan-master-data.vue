@@ -1538,8 +1538,8 @@ class MasterData extends \JI_Controller
                 </div>
                 <div class="maccontent">
                   <highlight-code lang="javascript">
-                    var drTable = {};
-var ieid = &#x27;&#x27;;
+                    public drTable = {};
+public ieid = &#x27;&#x27;;
 
 App.datatables();
 
@@ -1574,7 +1574,7 @@ if(jQuery(&#x27;#drTable&#x27;).length&#x3E;0){
 &#x9;&#x9;&#x9;&#x9;&#x9;$(&#x27;#drTable &#x3E; tbody&#x27;).off(&#x27;click&#x27;, &#x27;tr&#x27;);
 &#x9;&#x9;&#x9;&#x9;&#x9;$(&#x27;#drTable &#x3E; tbody&#x27;).on(&#x27;click&#x27;, &#x27;tr&#x27;, function (e) {
 &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;e.preventDefault();
-&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;var id = $(this).find(&#x22;td&#x22;).html();
+&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;public id = $(this).find(&#x22;td&#x22;).html();
 &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ieid = id;
 &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;$(&#x22;#adetail&#x22;).attr(&#x22;href&#x22;,&#x22;&#x3C;?=base_url_admin(&#x27;perusahaan/masterdata/detail/&#x27;)?&#x3E;&#x22;+ieid);
 &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;$(&#x22;#aedit&#x22;).attr(&#x22;href&#x22;,&#x22;&#x3C;?=base_url_admin(&#x27;perusahaan/masterdata/edit/&#x27;)?&#x3E;&#x22;+ieid);
@@ -1799,8 +1799,8 @@ $(&#x22;#bhapus&#x22;).on(&#x22;click&#x22;,function(e){
 &#x9;e.preventDefault();
 &#x9;$().btnSubmit();
 
-&#x9;var fd = new FormData($(this)[0]);
-&#x9;var url = &#x27;&#x3C;?= base_url(&#x22;api_admin/perusahaan/masterdata/baru/&#x22;)?&#x3E;&#x27;;
+&#x9;public fd = new FormData($(this)[0]);
+&#x9;public url = &#x27;&#x3C;?= base_url(&#x22;api_admin/perusahaan/masterdata/baru/&#x22;)?&#x3E;&#x27;;
 &#x9;$.ajax({
 &#x9;&#x9;type: $(this).attr(&#x27;method&#x27;),
 &#x9;&#x9;url: url,
@@ -1995,7 +1995,7 @@ $(&#x22;#bhapus&#x22;).on(&#x22;click&#x22;,function(e){
                 <div class="maccontent">
                   <highlight-code lang="javascript">
                     // fill data
-var data_fill = &#x3C;?=json_encode($acm)?&#x3E;;
+public data_fill = &#x3C;?=json_encode($acm)?&#x3E;;
 $.each(data_fill, function(k,v){
 &#x9;$(&#x22;#ie&#x22;+k).val(v);
 });
@@ -2005,8 +2005,8 @@ $(&#x22;#form_edit&#x22;).on(&#x22;submit&#x22;,function(e){
 &#x9;e.preventDefault();
 &#x9;$().btnSubmit();
 
-&#x9;var fd = new FormData($(this)[0]);
-&#x9;var url = &#x27;&#x3C;?=base_url(&#x22;api_admin/perusahaan/masterdata/edit/&#x22;.$acm-&#x3E;id)?&#x3E;&#x27;;
+&#x9;public fd = new FormData($(this)[0]);
+&#x9;public url = &#x27;&#x3C;?=base_url(&#x22;api_admin/perusahaan/masterdata/edit/&#x22;.$acm-&#x3E;id)?&#x3E;&#x27;;
 
 &#x9;$.ajax({
 &#x9;&#x9;type: $(this).attr(&#x27;method&#x27;),

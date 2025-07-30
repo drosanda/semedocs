@@ -97,8 +97,8 @@ SET FOREIGN_KEY_CHECKS=1;
                 <highlight-code lang="php">
                   &#x3C;?php
                   class B_User_Model extends SENE_Model{
-                    var $table = &#x27;b_user&#x27;;
-                    var $table_alias = &#x27;bu&#x27;;
+                    public $table = &#x27;b_user&#x27;;
+                    public $table_alias = &#x27;bu&#x27;;
 
                     public function __construct(){
                       parent::__construct();

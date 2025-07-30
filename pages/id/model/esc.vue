@@ -80,10 +80,10 @@
                 <highlight-code lang="php">
                   &#x3C;?php
                   class D_Order_Model extends SENE_Model{
-                    var $table = &#x27;d_order&#x27;;
-                    var $table_alias = &#x27;dor&#x27;;
-                    var $table2 = &#x27;d_order_detail&#x27;;
-                    var $table2_alias = &#x27;dod&#x27;;
+                    public $table = &#x27;d_order&#x27;;
+                    public $table_alias = &#x27;dor&#x27;;
+                    public $table2 = &#x27;d_order_detail&#x27;;
+                    public $table2_alias = &#x27;dod&#x27;;
 
                     public function __construct(){
                       parent::__construct();

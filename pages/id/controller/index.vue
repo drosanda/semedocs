@@ -479,8 +479,9 @@ class Notfound extends SENE_Controller{
               <div class="maccontent">
                 <highlight-code lang="php">&lt;?php
 class Home extends SENE_Controller{
-  var $public_var = &#039;Yi-Ha!&#039;
-  var $__underWear = &#039;My Private Things&#039;
+  public $public_variable = &#039;Yi-Ha!&#039;
+  public $__underWear = &#039;My Private Things&#039;
+
   public function __construct(){
     parent::__construct();
   }
