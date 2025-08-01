@@ -27,6 +27,7 @@
               <li><NuxtLink to="/id/tutorial/basic-routing/">Dasar Perutean</NuxtLink></li>
               <li><NuxtLink to="/id/tutorial/basic-static/">Pembuatan dan Perpindahan antar halaman statis</NuxtLink></li>
               <li><NuxtLink to="/id/tutorial/basic-form/">Penggunaan Form HTML dan Prosesnya</NuxtLink></li>
+              <li><NuxtLink to="/id/tutorial/xls-download-tutorial/">Membuat CRUD dan Download XLS</NuxtLink></li>
             </ul>
             <h2>Tutorial Praktek</h2>
             <p>
