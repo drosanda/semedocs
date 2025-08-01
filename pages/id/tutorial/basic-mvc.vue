@@ -108,7 +108,7 @@
                 <highlight-code lang="php">
                   &#x3C;?php
                   class Nama_Kelas_Panjang_Sekali {
-                    var $ini_properti;
+                    public $ini_properti;
 
                     public function metode1(){
                       $ini_variabel = 'Hello';
@@ -178,8 +178,8 @@
                 <highlight-code lang="php">
                   &#x3C;?php
                   class Nama_Kelas_Panjang_Sekali {
-                    var $properti_ke1;
-                    var $properti_ke2;
+                    public $properti_ke1;
+                    public $properti_ke2;
 
                     public function nama_metode(){
                       //isi kode php
@@ -227,7 +227,7 @@
                 <highlight-code lang="php">
                   &#x3C;?php
                   private class Nama_Kelas_Panjang_Sekali {
-                    var $properti_ke1;
+                    public $properti_ke1;
                     private $__properti_ke2;
 
                     public function nama_metode_public(){

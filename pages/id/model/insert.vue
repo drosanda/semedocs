@@ -104,8 +104,8 @@
                 <highlight-code lang="php">
                   &#x3C;?php
                   class Blog_Model extends SENE_Model{
-                    var $table = &#x27;blog&#x27;;
-                    var $table_alias = &#x27;b&#x27;;
+                    public $table = &#x27;blog&#x27;;
+                    public $table_alias = &#x27;b&#x27;;
                     public function __construct(){
                       &#x9; parent::__construct();
                     }
@@ -185,8 +185,9 @@
                 <highlight-code lang="php">
                   &#x3C;?php
                   class Blog_Model extends SENE_Model{
-                    var $table = &#x27;blog&#x27;;
-                    var $table_alias = &#x27;b&#x27;;
+                    public $table = &#x27;blog&#x27;;
+                    public $table_alias = &#x27;b&#x27;;
+                    
                     public function __construct(){
                       &#x9; parent::__construct();
                     }

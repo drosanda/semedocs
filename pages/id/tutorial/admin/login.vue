@@ -618,8 +618,8 @@ class A_Pengguna_Model extends \Model\A_Pengguna_Concern
 
 &#x9;&#x9;&#x3C;!-- Load and execute javascript code used only in this page --&#x3E;
 &#x9;&#x9;&#x3C;script&#x3E;
-&#x9;&#x9;var base_url = &#x27;&#x3C;?=base_url_admin()?&#x3E;&#x27;;
-&#x9;&#x9;var Login = function(){
+&#x9;&#x9;public base_url = &#x27;&#x3C;?=base_url_admin()?&#x3E;&#x27;;
+&#x9;&#x9;public Login = function(){
 &#x9;&#x9;&#x9;return {
 &#x9;&#x9;&#x9;&#x9;init: function(){
 
