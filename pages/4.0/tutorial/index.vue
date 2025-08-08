@@ -35,6 +35,8 @@
               <li><NuxtLink to="/4.0/tutorial/introduction/">Introduction</NuxtLink>, which gives you an overview of what to expect.</li>
               <li><NuxtLink to="/4.0/tutorial/get-data/">Theme and layout</NuxtLink>, which will teach you the basics of creating view using Seme Framework.</li>
               <li><NuxtLink to="/4.0/tutorial/basic-api/">Building API</NuxtLink>, this will introduce more about database, controller, and model.</li>
+              <li><NuxtLink to="/4.0/tutorial/xls-download-tutorial/">Creating and Downloading XLS</NuxtLink></li>
+              <li><NuxtLink to="/4.0/tutorial/qrcode/">How to Display QR Code</NuxtLink></li>
             </ul>
             <p>Enjoy your exploration of the Seme Framework.</p>
           </div>

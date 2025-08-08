@@ -6,24 +6,24 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.3 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/tutorial/">Tutorial</NuxtLink></li>
-          <li class="unavailable">Menampilkan QR Code</li>
+          <li class="unavailable">Displaying QR Code</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Panduan Lengkap Cara Menampilkan QR Code</h1>
+            <h1 class="">How to Display QR Code</h1>
             <p>
-              QR Code atau Quick Response Code adalah kode matriks 2D yang bisa menyimpan informasi dalam bentuk visual.
-              QR Code sering digunakan untuk menyimpan berbagai informasi seperti informasi URL website, Wi-Fi, pembayaran digital, aplikasi, dan lainnya.
-              Penggunaan QR Code sangatlah mudah, cukup dengan menggunakan kamera ponsel atau aplikasi pembaca QR Code untuk memindai, maka secara otomatis informasi
-              yang ada di dalamnya akan ditampilkan. Di bawah ini merupakan panduan untuk menampilkan QR Code.
+              QR Code, or Quick Response Code, is a type of 2D matrix barcode that can store information in a visual format.
+              QR Codes are commonly used to store various types of data such as website URLs, Wi-Fi credentials, digital payments, app links, and more.
+              Using a QR Code is very simple, just use your phones camera or a QR code scanner app to scan it, and the embedded information will be displayed automatically.
+              Below is a guide on how to display a QR Code.
             </p>
-            <h2>Membuat Controller</h2>
+            <h2>Create a Controller</h2>
             <p>
-              Kali ini Kita akan membuat qrcode untuk otorisasi perusahaan. Sebagai contoh, buat file baru di dalam folder
-              <code>app/controller/admin/perusahaan/masterdata.php</code>. Kemudian, tuliskan kode ini didalam file <code>masterdata.php</code> dan simpan.
-              Pastikan Anda menyimpan kode di dalam file yang sesuai dengan kebutuhan Anda, tidak perlu sama dengan contoh yang diberikan.
+              This time, we will generate a QR code for company authorization. As an example, create a new file in the folder
+              <code>app/controller/admin/company/masterdata.php</code>. Then, Write this code into a file <code>masterdata.php</code> and save it.
+              Make sure to save the code in a file that suits your needs, it doesn't have to be the same as the example provided.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -46,14 +46,14 @@
                 <highlight-code lang="php">
                 <?php
                 /**
-                * Main Controller Class for Perusahaan Master Data
+                * Main Controller Class for Company Master Data
                 *   on PoV Admin
                 *
                 * Mostly for this controller will resulting HTTP Body Content in HTML format
                 *
                 * @version 1.0.0
                 *
-                * @package Controller\Admin\Perusahaan\MasterData
+                * @package Controller\Admin\Company\MasterData
                 * @since 1.0.0
                 */
                 class MasterData extends JI_Controller
@@ -65,8 +65,8 @@
                         $this->lib("seme_purifier");
                         $this->load("a_company_concern");
                         $this->load("admin/a_company_model", 'acm');
-                        $this->current_parent = 'perusahaan';
-                        $this->current_page = 'perusahaan_masterdata';
+                        $this->current_parent = 'company';
+                        $this->current_page = 'company_masterdata';
                     }
                     public function index()
                     {
@@ -76,11 +76,11 @@
                             die();
                         }
 
-                        $this->setTitle('Perusahaan: Master Data '.$this->config_semevar("admin_site_suffix"));
+                        $this->setTitle('Company: Master Data '.$this->config_semevar("admin_site_suffix"));
 
-                        $this->putThemeContent("perusahaan/masterdata/home_modal", $data);
-                        $this->putThemeContent("perusahaan/masterdata/home", $data);
-                        $this->putJsContent("perusahaan/masterdata/home_bottom", $data);
+                        $this->putThemeContent("company/masterdata/home_modal", $data);
+                        $this->putThemeContent("company/masterdata/home", $data);
+                        $this->putJsContent("company/masterdata/home_bottom", $data);
                         $this->loadLayout('col-2-left', $data);
 
                         $this->render();
@@ -90,11 +90,11 @@
               </div>
             </div>
 
-            <h2>Membuat Controller API</h2>
+            <h2>Create a API Controller</h2>
             <p>
-              Kemudian, buat file di dalam API untuk menyimpan logic yang diperlukan. Buat file di dalam folder
-              <code>app/controller/api_admin/perusahaan/masterdata.php</code>. Kemudian, tuliskan kode ini didalam file <code>masterdata.php</code> dan simpan.
-              Pastikan Anda menyimpan kode di dalam file yang sesuai dengan kebutuhan Anda, tidak perlu sama dengan contoh yang diberikan.
+              Then, create a file within the API to store the required logic. Create a file in the folder
+              <code>app/controller/api_admin/company/masterdata.php</code>. And write this code into a file <code>masterdata.php</code> and save it.
+              Make sure to save the code in a file that suits your needs, it doesn't have to be the same as the example provided.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -117,14 +117,14 @@
                 <highlight-code lang="php">
                 <?php
                 /**
-                * Main Controller Class for Perusahaan Master Data
+                * Main Controller Class for Company Master Data
                 *   on PoV API Admin
                 *
                 * Mostly for this controller will resulting HTTP Body Content in HTML format
                 *
                 * @version 1.0.0
                 *
-                * @package Controller\Admin\API\Perusahaan
+                * @package Controller\Admin\API\Company
                 * @since 1.0.0
                 */
                 class MasterData extends \JI_Controller
@@ -157,34 +157,34 @@
                         return $token;
                     }
 
-                    public function otorisasi($id)
+                    public function authorization($id)
                     {
                         $d = $this->__init();
                         $data = new stdClass();
                         if (!$this->admin_login) {
                             $this->status = 400;
-                            $this->message = 'Harus login';
-                            header("HTTP/1.0 400 Harus login");
+                            $this->message = 'Login is required';
+                            header("HTTP/1.0 400 Login is required");
                             $this->__json_out($data);
                             die();
                         }
                         $id = (int) $id;
                         if ($id <= 0) {
                             $this->status = 1;
-                            $this->message = 'ID Perusahaan tidak valid';
+                            $this->message = 'Company ID is invalid';
                             $this->__json_out($data);
                             die();
                         }
                         $acm = $this->acm->getById($id);
                         if (!isset($acm->id)) {
                             $this->status = 2;
-                            $this->message = 'Data perusahaan tidak dapat ditemukan';
+                            $this->message = 'Company data not found';
                             $this->__json_out($data);
                             die();
                         }
                         if (empty($acm->is_active)) {
                             $this->status = 3;
-                            $this->message = 'Perusahaan sudah tidak aktif';
+                            $this->message = 'The company is no longer active.';
                             $this->__json_out($data);
                             die();
                         }
@@ -202,7 +202,7 @@
                         $data->api_mobile_token_svg = base_url($svgurl);
 
                         $this->status = 200;
-                        $this->message = 'Berhasil';
+                        $this->message = 'Success';
                         $this->__json_out2($data);
                     }
                 }
@@ -210,11 +210,11 @@
               </div>
             </div>
 
-            <h2>Menambahkan Kode pada JI_Controller</h2>
+            <h2>Add the code to JI_Controller</h2>
             <p>
-              Karena pada file API function otorisasi memakai kode <code>json_out2</code>, yang berarti kode <code>json_out2</code> digunakan
-              untuk mengirimkan data dalam format JSON sebagai respons dari API, maka Kita harus memasukkan kode tersebut ke dalam <code>ji_controller</code>. Simpan kode di bawah ini
-              ke dalam <code>app/core/ji_controller.php</code>
+              Since the authorization function in the API file uses the <code>json_out2</code> method, which means <code>json_out2</code> is used
+              to send data in JSON format as a response from the API, we need to include that code in the <code>JI_Controller</code>. 
+              Save the code below to <code>app/core/ji_controller.php</code>.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -250,7 +250,7 @@
             </div>
 
             <p>
-              Tambahkan kode ini juga dibawah kode <code>class JI_Controller extends \SENE_Controller</code>.
+              Add this code below after the code <code>class JI_Controller extends \SENE_Controller</code>.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -276,11 +276,11 @@
               </div>
             </div>
 
-            <h2>Membuat Model</h2>
+            <h2>Create a Model</h2>
             <p>
-              Sekarang Kita akan membuat model yang digunakan untuk menyimpan, mengambil, dan menampilkan data. Kita akan membuat dua model,
-              satu untuk admin dan satu untuk API. Pertama, buat file di <code>app/model/admin/a_company_model.php</code>.
-              Perlu diingat kembali, untuk penamaan file dan lokasi penyimpanan kode harus disesuaikan dengan kebutuhan sendiri.
+              Now we will create a model that used to store, retrieve, and display data. We will create two models,
+              one for admin and one for API. First, create a file in <code>app/model/admin/a_company_model.php</code>.
+              Keep in mind that the file naming and storage location must be adjusted according to your own needs.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -325,7 +325,7 @@
               </div>
             </div>
             <p>
-              Selanjutnya, buat file di dalam <code>app/model/api_admin/a_company_model.php</code>.
+              Next, crete a file into <code>app/model/api_admin/a_company_model.php</code>.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -369,11 +369,10 @@
                       private function filter_keyword($keyword = '')
                       {
                           if (strlen($keyword) > 0) {
-                              $this->db->where_as("$this->tbl_as.nama", $keyword, "OR", "%like%", 1, 0);
-                              $this->db->where_as("$this->tbl_as.kode", $keyword, "OR", "%like%", 0, 0);
-                              $this->db->where_as("$this->tbl_as.telp", $keyword, "OR", "%like%", 0, 0);
-                              $this->db->where_as("$this->tbl_as.kabkota", $keyword, "OR", "%like%", 0, 0);
-                              $this->db->where_as("$this->tbl_as.provinsi", $keyword, "OR", "%like%", 0, 1);
+                              $this->db->where_as("$this->tbl_as.name", $keyword, "OR", "%like%", 1, 0);
+                              $this->db->where_as("$this->tbl_as.code", $keyword, "OR", "%like%", 0, 0);
+                              $this->db->where_as("$this->tbl_as.phone_number", $keyword, "OR", "%like%", 0, 0);
+                              $this->db->where_as("$this->tbl_as.address", $keyword, "OR", "%like%", 0, 1);
                           }
                       }
 
@@ -382,10 +381,10 @@
                           $this->db->flushQuery();
                           $this->db->select_as("$this->tbl_as.id", "id", 0);
                           $this->db->select_as("$this->tbl_as.utype", "utype", 0);
-                          $this->db->select_as("$this->tbl_as.kode", "kode", 0);
-                          $this->db->select_as("$this->tbl_as.nama", "nama", 0);
-                          $this->db->select_as("CONCAT($this->tbl_as.provinsi,' - ',kabkota)", "Alamat", 0);
-                          $this->db->select_as("$this->tbl_as.telp", "telp", 0);
+                          $this->db->select_as("$this->tbl_as.code", "code", 0);
+                          $this->db->select_as("$this->tbl_as.name", "name", 0);
+                          $this->db->select_as("$this->tbl_as.address", "address", 0);
+                          $this->db->select_as("$this->tbl_as.phone_number", "phone_number", 0);
                           $this->db->select_as("$this->tbl_as.is_active", "is_active", 0);
                           $this->db->select_as("$this->tbl_as.is_deleted", "is_deleted", 0);
                           $this->db->from($this->tbl, $this->tbl_as);
@@ -417,11 +416,11 @@
               </div>
             </div>
 
-            <h2>Membuat View</h2>
+            <h2>Create a View</h2>
             <p>
-              Langkah selanjutnya adalah membuat view yang akan terbagi menjadi 3 bagian, yaitu file <code>home.php</code>, <code>home_modal.php</code>, 
-              dan <code>home_bottom.php</code>. Pertama, buatlah file di dalam <code>app/view/admin/perusahaan/masterdata/home.php</code>. 
-              Selalu pastikan Anda menyimpan kode di dalam file yang sesuai dengan kebutuhan Anda, tidak perlu sama dengan contoh yang diberikan.
+              The next step is to create a view that will be divided into three parts, the files is <code>home.php</code>,
+              <code>home_modal.php</code>, and <code>home_bottom.php</code>. First, create the file inside <code>app/view/admin/company/masterdata/home.php</code>.
+              Always ensure that you save the code in a file that suits your needs; it doesn't have to be the same as the provided example.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -449,14 +448,14 @@
                         &lt;div class="col-md-6"&gt;&amp;nbsp;&lt;/div&gt;
                         &lt;div class="col-md-6"&gt;
                           &lt;div class="btn-group pull-right"&gt;
-                            &lt;a id="" href="<?=base_url_admin('perusahaan/masterdata/baru/')?>" class="btn btn-info"&gt;&lt;i class="fa fa-plus"&gt;&lt;/i&gt; Baru&lt;/a&gt;
+                            &lt;a id="" href="<?=base_url_admin('company/masterdata/baru/')?>" class="btn btn-info"&gt;&lt;i class="fa fa-plus"&gt;&lt;/i&gt; New&lt;/a&gt;
                           &lt;/div&gt;
                         &lt;/div&gt;
                       &lt;/div&gt;
                     &lt;/div&gt;
                     &lt;ul class="breadcrumb breadcrumb-top"&gt;
                       &lt;li&gt;Admin&lt;/li&gt;
-                      &lt;li&gt;Perusahaan&lt;/li&gt;
+                      &lt;li&gt;Company&lt;/li&gt;
                       &lt;li&gt;Master Data&lt;/li&gt;
                     &lt;/ul&gt;
                     &lt;!-- END Static Layout Header --&gt;
@@ -464,23 +463,23 @@
                     &lt;!-- Content --&gt;
                     &lt;div class="block full"&gt;
                       &lt;div class="block-title"&gt;
-                        &lt;h4&gt;&lt;strong&gt;Master Data Perusahaan&lt;/strong&gt;&lt;/h4&gt;
+                        &lt;h4&gt;&lt;strong&gt;Company Master Data&lt;/strong&gt;&lt;/h4&gt;
                       &lt;/div&gt;
 
                       &lt;div class="row row-filter"&gt;
                         &lt;div class="col-md-5"&gt;
-                          &lt;label&gt;Jenis&lt;/label&gt;
+                          &lt;label&gt;Type of Company&lt;/label&gt;
                           &lt;select id="fl_utype" class="form-control"&gt;
-                            &lt;option value=""&gt;-- Semua --&lt;/option&gt;
-                            &lt;?php $this-&gt;getThemeElement('perusahaan/masterdata/_option_utype', $__forward); ?&gt;
+                            &lt;option value=""&gt;-- All --&lt;/option&gt;
+                            &lt;?php $this-&gt;getThemeElement('company/masterdata/_option_utype', $__forward); ?&gt;
                           &lt;/select&gt;
                         &lt;/div&gt;
                         &lt;div class="col-md-5"&gt;
                           &lt;label&gt;Status&lt;/label&gt;
                           &lt;select id="fl_is_active" class="form-control"&gt;
-                            &lt;option value=""&gt;-- Semua --&lt;/option&gt;
-                            &lt;option value="1"&gt;Aktif&lt;/option&gt;
-                            &lt;option value="0"&gt;Tidak Aktif&lt;/option&gt;
+                            &lt;option value=""&gt;-- All --&lt;/option&gt;
+                            &lt;option value="1"&gt;Active&lt;/option&gt;
+                            &lt;option value="0"&gt;Inactive&lt;/option&gt;
                           &lt;/select&gt;
                         &lt;/div&gt;
                         &lt;div class="col-md-1"&gt;&amp;nbsp;&lt;/div&gt;
@@ -497,11 +496,11 @@
                           &lt;thead&gt;
                             &lt;tr&gt;
                               &lt;th class="text-center"&gt;ID&lt;/th&gt;
-                              &lt;th&gt;Jenis&lt;/th&gt;
-                              &lt;th&gt;Kode&lt;/th&gt;
-                              &lt;th&gt;Nama&lt;/th&gt;
-                              &lt;th&gt;Alamat&lt;/th&gt;
-                              &lt;th&gt;Telp&lt;/th&gt;
+                              &lt;th&gt;Type&lt;/th&gt;
+                              &lt;th&gt;Code&lt;/th&gt;
+                              &lt;th&gt;Name&lt;/th&gt;
+                              &lt;th&gt;Address&lt;/th&gt;
+                              &lt;th&gt;Phone Number&lt;/th&gt;
                               &lt;th&gt;Status&lt;/th&gt;
                             &lt;/tr&gt;
                           &lt;/thead&gt;
@@ -517,7 +516,7 @@
             </div>
 
             <p>
-              Lalu yang kedua, buat file di dalam <code>app/view/admin/perusahaan/masterdata/home_modal.php</code>.
+              Then secondly, crate a file inside <code>app/view/admin/company/masterdata/home_modal.php</code>.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -545,7 +544,7 @@
 
                         &lt;!-- Modal Header --&gt;
                         &lt;div class="modal-header text-center"&gt;
-                          &lt;h2 class="modal-title">Pilihan&lt;/h2&gt;
+                          &lt;h2 class="modal-title">Choose&lt;/h2&gt;
                         &lt;/div&gt;
                         &lt;!-- END Modal Header --&gt;
 
@@ -553,13 +552,13 @@
                         &lt;div class="modal-body"&gt;
                           &lt;div class="row"&gt;
                             &lt;div class="col-xs-12 btn-group-vertical"&gt;
-                              &lt;a id="aotorisasi" href="#" class="btn btn-info text-left" target="_blank"&gt;&lt;i class="fa fa-qrcode"&gt;&lt;/i&gt; Otorisasi&lt;/a&gt;
+                              &lt;a id="aauthorization" href="#" class="btn btn-info text-left" target="_blank"&gt;&lt;i class="fa fa-qrcode"&gt;&lt;/i&gt; Authorization&lt;/a&gt;
                             &lt;/div&gt;
                           &lt;/div&gt;
                           &lt;div class="row" style="margin-top: 1em;"&gt;
                             &lt;div class="col-md-12" style="border-top: 1px #afafaf dashed;"&gt;&nbsp;&lt;/div&gt;
                             &lt;div class="col-xs-12 btn-group-vertical" style=""&gt;
-                              &lt;button type="button" class="btn btn-default btn-block text-left" data-dismiss="modal"&gt;&lt;i class="fa fa-times"&gt;&lt;/i&gt; Tutup&lt;/button&gt;
+                              &lt;button type="button" class="btn btn-default btn-block text-left" data-dismiss="modal"&gt;&lt;i class="fa fa-times"&gt;&lt;/i&gt; Close&lt;/button&gt;
                             &lt;/div&gt;
                           &lt;/div&gt;
                           &lt;!-- END Modal Body --&gt;
@@ -568,14 +567,14 @@
                     &lt;/div&gt;
                   &lt;/div&gt;
 
-                  &lt;!-- modal otorisasi --&gt;
-                  &lt;div id="modal_otorisasi" class="modal fade " tabindex="-1" role="dialog" aria-hidden="true"&gt;
+                  &lt;!-- modal authorization --&gt;
+                  &lt;div id="modal_authorization" class="modal fade " tabindex="-1" role="dialog" aria-hidden="true"&gt;
                     &lt;div class="modal-dialog modal-sm"&gt;
                       &lt;div class="modal-content"&gt;
 
                         &lt;!-- Modal Header --&gt;
                         &lt;div class="modal-header text-center"&gt;
-                          &lt;h3 class="modal-title"&gt;Scan Untuk Identifikasi Perusahaan&lt;/h3&gt;
+                          &lt;h3 class="modal-title"&gt;Scan for Company Identification&lt;/h3&gt;
                         &lt;/div&gt;
                         &lt;!-- END Modal Header --&gt;
 
@@ -596,7 +595,7 @@
             </div>
 
             <p>
-              Ketiga, buat file di dalam <code>app/view/admin/perusahaan/masterdata/home_bottom.php</code>.
+              Third, create a file inside <code>app/view/admin/company/masterdata/home_bottom.php</code>.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -630,7 +629,7 @@
                         "responsive"	  	: true,
                         "bProcessing"		: true,
                         "bServerSide"		: true,
-                        "sAjaxSource"		: "<?=base_url('api_admin/perusahaan/masterdata/')?>",
+                        "sAjaxSource"		: "<?=base_url('api_admin/company/masterdata/')?>",
                         "fnServerParams": function ( aoData ) {
                           aoData.push(
                             { "name": "utype", "value": $("#fl_utype").val() },
@@ -658,30 +657,30 @@
 
                             fnCallback(response);
                           }).fail(function (response, status, headers, config) {
-                            gritter("&lt;h4&gt;Error&lt;/h4&gt;&lt;p&gt;Tidak dapat mengambil data sekarang, silahkan coba lagi nanti&lt;/p&gt;",'warning');
+                            gritter("&lt;h4&gt;Error&lt;/h4&gt;&lt;p&gt;Unable to retrieve data right now. Please try again later.&lt;/p&gt;",'warning');
                             $().btnSubmit('done');
                           });
                         },
                     });
 
-                    // pencarian data default text
-                    $('.dataTables_filter input').attr('placeholder', 'Cari');
+                    // default text search
+                    $('.dataTables_filter input').attr('placeholder', 'Search');
                     $("#filter_button").on("click",function(e){
                       e.preventDefault();
                       drTable.ajax.reload();
                     });
                   }
 
-                  $("#aotorisasi").on("click",function(e){
+                  $("#aauthorization").on("click",function(e){
                       $("#modal_option").modal("hide");
                       e.preventDefault();
                       NProgress.start();
-                      $.get("<?=base_url("api_admin/perusahaan/masterdata/otorisasi/")?>"+ieid+"/").done(function(dt){
+                      $.get("<?=base_url("api_admin/company/masterdata/authorization/")?>"+ieid+"/").done(function(dt){
                         if(dt.status == 200){
                           $("#api_mobile_token_svg").attr("src",dt.data.api_mobile_token_svg);
                           setTimeout(function(){
                             NProgress.done();
-                            $("#modal_otorisasi").modal("show");
+                            $("#modal_authorization").modal("show");
                           },1000);
                         }else{
                           NProgress.done();
@@ -696,9 +695,9 @@
             </div>
 
             <p>
-              Terakhir, buatlah file di dalam folder <code>kero/lib/seme_qrcode.php</code> dan download composer untuk memasukkan serta
-              menampilkan qrcode. Download bisa melalui link berikut <a href="https://getcomposer.org/download/">composer <i class="fa fa-external-link"></i></a>. Dan jangan lupa untuk membuat
-              folder <code>media/company</code> seperti yang diarahkan pada kode <code>public $media = 'media/company/';</code> di bawah ini.
+              Last, create a file inside the folder <code>kero/lib/seme_qrcode.php</code> and download Composer to include and display the QR code. 
+              You can download it using the following link <a href="https://getcomposer.org/download/">composer <i class="fa fa-external-link"></i></a>. 
+              Also, don't forget to create the <code>media/company</code> folder as specified by the code <code>public $media = 'media/company/';</code> below.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -753,7 +752,7 @@
               The result of the above steps will be as shown in the  <i>screenshot</i> below.
             </p>
             <div class="" style="padding: 7%;">
-              <amp-img layout="responsive" width="1024px" height="675px" :src="qrcode" style="box-shadow: 3px 4px 33px -9px rgba(0,0,0,0.72); -webkit-box-shadow: 3px 4px 33px -9px rgba(0,0,0,0.72); -moz-box-shadow: 3px 4px 33px -9px rgba(0,0,0,0.72);"></amp-img>
+              <amp-img layout="responsive" width="1000px" height="675px" :src="qrcode" style="box-shadow: 3px 4px 33px -9px rgba(0,0,0,0.72); -webkit-box-shadow: 3px 4px 33px -9px rgba(0,0,0,0.72); -moz-box-shadow: 3px 4px 33px -9px rgba(0,0,0,0.72);"></amp-img>
             </div>
 
           </div>
@@ -769,9 +768,9 @@ export default {
     return {
       name: 'Seme Framework 4 Tutorial',
       suffix: ' - Seme Framework 4 Tutorial',
-      title: 'Panduan Lengkap Cara Menampilkan QRCode',
-      description: 'Tutorial belajar singkat cara menampilkan qrcode',
-      qrcode: require('~/assets/img/tutorial/qrcode-id.png'),
+      title: 'How to Display QR Code',
+      description: 'Short tutorial on how to display a QR code',
+      qrcode: require('~/assets/img/tutorial/qrcode-en.png'),
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

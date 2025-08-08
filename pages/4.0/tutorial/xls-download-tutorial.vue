@@ -6,24 +6,23 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/id/">4.0.3 (Bahasa)</NuxtLink></li>
           <li class=""><NuxtLink to="/id/tutorial/">Tutorial</NuxtLink></li>
-          <li class="unavailable">Tutorial Download XLS</li>
+          <li class="unavailable">Downloading XLS Tutorials</li>
         </ul>
       </nav>
       <div class="columns">
         <div class="column">
           <div class="content">
-            <h1 class="">Membuat CRUD dan Download XLS</h1>
+            <h1 class="">Create CRUD and Downloading XLS</h1>
             <p>
-              Download XLS merupakan fitur yang digunakan untuk mengunduh file dengan ekstensi <strong>.xls</strong> atau sering disebut dengan file spreadsheet (Excel).
-              Pembuatan fitur ini diharapkan dapat memudahkan user dalam pengambilan data yang sudah diolah dalam bentuk excel.
+              The Download XLS feature is used to download files with the <strong>.xls</strong> extension, commonly known as a spreadsheet (Excel) file. 
+              The creation of this feature is intended to make it easier for users to retrieve processed data in Excel format.
             </p>
 
-            <h2>Membuat Controller</h2>
+            <h2>Create a Controller</h2>
             <p>
-              Sebagai contoh Kita akan membuat xls untuk data pengiriman barang. Pertama, buat file baru di dalam 
-              <code>app/controller/laporan/pengiriman.php</code> untuk membuat Controller xls data pengiriman barang.
-              Kemudian, tuliskan kode ini didalam file <code>pengiriman.php</code> dan simpan.
-              Pastikan Anda menyimpan kode di dalam file yang sesuai dengan kebutuhan Anda, tidak perlu sama dengan contoh yang diberikan.
+              For example, we will create an XLS file for shipment data. First, create a new file inside <code>app/controller/laporan/pengiriman.php</code> 
+              to build the Controller for the shipment data XLS. Then, write this code into the <code>pengiriman.php</code> file and save it. 
+              Make sure to save the code in a file that suits your needs, it doesn't have to be the same as the provided example.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -268,12 +267,12 @@
               </div>
             </div>
 
-            <h2>Membuat Model</h2>
+            <h2>Create a Model</h2>
             <p>
-              Sekarang Kita akan membuat model untuk mengelola data dari bentuk kode program menjadi data yang bisa di ekspor ke dalam bentuk file excel. 
-              Selain itu, pembuatan kode model ini juga bertujuan untuk membuat dan mengatur relasi tabel sesuai dengan kebutuhan data yang diperlukan untuk diolah.
-              Buat file di dalam <code>app/model/d_kirim_model.php</code>. Kemudian, tuliskan kode ini didalam file <code>d_kirim_model.php</code> dan simpan.
-              Pastikan Anda menyimpan kode di dalam file yang sesuai dengan kebutuhan Anda, tidak perlu sama dengan contoh yang diberikan.
+              Now, we will create a model to manage data by converting program code into data that can be exported into an Excel file. 
+              Additionally, the purpose of creating this model code is to establish and manage table relationships based on the data requirements for processing. 
+              Create a file inside <code>app/model/d_kirim_model.php</code>. Then, write this code into the <code>d_kirim_model.php</code> file and save it. 
+              Make sure to save the code in a file that suits your needs, it doesn't have to be the same as the provided example.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -378,12 +377,11 @@
               </div>
             </div>
 
-            <h2>Membuat View</h2>
+            <h2>Create a View</h2>
             <p>
-              Terakhir, Kita akan membuat view yang digunakan untuk menampilkan tampilan (UI) ke pengguna. Dalam Kode kali ini, view akan dibuat
-              untuk menampilkan data rentang tanggal, sehingga pengguna bisa mendownload data sesuai dengan tanggal yang diperlukan.
-              Buat file di dalam <code>app/view/laporan/pengiriman/home.php</code>. Kemudian, tuliskan kode ini didalam file <code>home.php</code> dan simpan.
-              Pastikan Anda menyimpan kode di dalam file yang sesuai dengan kebutuhan Anda, tidak perlu sama dengan contoh yang diberikan.
+              Next, we will create a view to display the user interface (UI) to the users. In this code, the view will be created to display data based on the date range, 
+              allowing users to download data according to the required date. Create a file inside <code>app/view/laporan/pengiriman/home.php</code>. 
+              Then, write this code into the <code>home.php</code> file and save it. Make sure to save the code in a file that suits your needs, it doesn't have to be the same as the provided example.
             </p>
             <div class="macwindow">
                 <div class="titlebar">
@@ -491,9 +489,9 @@
             </div>
 
             <p>
-              Kemudian, buat file di dalam <code>app/view/laporan/pengiriman/home_bottom.php</code> untuk menyimpan kode Javascript. 
-              Kode ini digunakan untuk membuat halaman web menjadi lebih interaktif dan dinamis. Tuliskan kode didalam file <code>home_bottom.php</code> dan simpan.
-              Pastikan Anda menyimpan kode di dalam file yang sesuai dengan kebutuhan Anda, tidak perlu sama dengan contoh yang diberikan.
+              Next, create a file inside <code>app/view/laporan/pengiriman/home_bottom.php</code> to store the Javascript code. 
+              This code is used to make the web page more interactive and dynamic. Write this code into the <code>home_bottom.php</code> file and save it. 
+              Make sure to save the code in a file that suits your needs, it doesn't have to be the same as the provided example.
             </p>
             <div class="macwindow">
               <div class="titlebar">
@@ -537,8 +535,8 @@
             </div>
 
             <p>
-              Mari Kita lihat hasil akhir dari pembuatan download XLS ini melalui google chrome atau firefox. 
-              Apakah sama dengan hasil <i>screenshot</i> dibawah ini.
+              Last, Finally, let's see the end result of the XLS download feature by testing it in Google Chrome or Firefox. 
+              Does it match the result in the <i>screenshot</i> below or not.
             </p>
             <div class="" style="padding: 7%;">
               <amp-img layout="responsive" width="1372px" height="675px" :src="downloadxls" style="box-shadow: 3px 4px 33px -9px rgba(0,0,0,0.72); -webkit-box-shadow: 3px 4px 33px -9px rgba(0,0,0,0.72); -moz-box-shadow: 3px 4px 33px -9px rgba(0,0,0,0.72);"></amp-img>
@@ -556,8 +554,8 @@ export default {
     return {
       name: "Seme Framework 4 Tutorial",
       suffix: " - Seme Framework 4 Tutorial",
-      title: "Tutorial Download XLS",
-      description: "Tutorial membuat download XLS.",
+      title: "Downloading XLS Tutorials",
+      description: "How to create a download XLS.",
       downloadxls: require('~/assets/img/tutorial/download-xls.png'),
       breadcrumbs: [
         {
