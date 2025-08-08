@@ -750,7 +750,7 @@
             </div>
 
             <p> 
-              The result of the above steps will be as shown in the  <i>screenshot</i> below.
+              Hasil dari langkah-langkah di atas akan ditampilkan seperti pada  <i>screenshot</i> di bawah ini.
             </p>
             <div class="" style="padding: 7%;">
               <amp-img layout="responsive" width="1024px" height="675px" :src="qrcode" style="box-shadow: 3px 4px 33px -9px rgba(0,0,0,0.72); -webkit-box-shadow: 3px 4px 33px -9px rgba(0,0,0,0.72); -moz-box-shadow: 3px 4px 33px -9px rgba(0,0,0,0.72);"></amp-img>
