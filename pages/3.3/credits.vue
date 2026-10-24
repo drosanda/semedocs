@@ -34,7 +34,7 @@
 </template>
 <script>
   export default {
-    layout: 'v3.3.0',
+    layout: 'v3.3',
     data() {
       return {
         title: 'Seme Framework v3.3.0 Documentation'

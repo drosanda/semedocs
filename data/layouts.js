@@ -25,10 +25,10 @@ export default {
     footer: { copyright: `Copyright © 2014-2022. ${MADE_EN}`, updated: 'Last updated on March 8, 2022', links: true }
   },
   'v4.0': {
-    title: 'Seme Framework v4.0.0 Documentation',
-    description: 'Learn more about Seme Framework version 4.0.0 trough this documentation',
+    title: `Seme Framework v${latest} Documentation`,
+    description: `Learn more about Seme Framework version ${latest} trough this documentation`,
     suffix: 'Seme Framework',
-    badge: { version: '4.0.0', lang: 'en' },
+    badge: { version: latest, lang: 'en' },
     search: true,
     analytics: true,
     nav: v4Nav('/4.0'),
@@ -38,7 +38,7 @@ export default {
     title: 'Seme Framework 4 Bahasa Indonesia',
     description: 'Dokumentasi Seme Framework 4 Bahasa Indonesia',
     suffix: 'Seme Framework',
-    badge: { version: '4.0.0', lang: 'id' },
+    badge: { version: latest, lang: 'id' },
     search: true,
     analytics: true,
     nav: idNav('/id'),
@@ -56,7 +56,7 @@ export default {
     title: 'Seme Framework v3.0.0 Documentation',
     description: 'Learn more about Seme Framework version 3.0.0 trough this documentation',
     suffix: 'Seme Framework',
-    badge: { version: '4.0.0', lang: 'id' },
+    badge: { version: '3.0.0', lang: 'id' },
     analytics: true,
     nav: v30,
     footer: { copyright: `Copyright © 2014-2021. ${MADE_ID}`, updated: 'Diperbarui tanggal 1 Juni 2021' }
