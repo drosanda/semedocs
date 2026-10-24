@@ -14,126 +14,46 @@
           <div class="content">
             <h1 class="">Configuration: config.php</h1>
             <p>In general configuration, you can change the default value of base url.</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   $site = &#x27;http://&#x27;.$_SERVER[&#x27;HTTP_HOST&#x27;].&#x27;/&#x27;;
 
                   $sene_method = &#x27;PATH_INFO&#x27;;//REQUEST_URI,PATH_INFO,ORIG_PATH_INFO
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p>The <code>$site</code> variable should have trailing slash on last char to work properly.</p>
             <p>The <code>$sene_method</code> variable PATH_INFO value used on Localhost environment like on XAMPP. REQUEST_URI value used on Server Production like Nginx, Apache2, or Litespeed. This configuration also depend on <b>.htaccess</b> file and server configuration.</p>
 
             <h2 class="">The .htaccess</h2>
             <p>Here is the example of .htaccess file if used on root folder.</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   RewriteEngine on
                   RewriteCond $1 !^(index\.php|resources|robots\.txt)
                   RewriteCond %{REQUEST_FILENAME} !-f
                   RewriteCond %{REQUEST_FILENAME} !-d
                   RewriteRule ^(.*)$ index.php/$1 [L,QSA]
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <hr>
             <h3>Sub Directory</h3>
             <p>The .htaccess on subfolder if the default one not working, you can use this option.</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">RewriteEngine on
+            <MacWindowCodeSnippet lang="php">RewriteEngine on
                   RewriteBase /appfolder/
                   RewriteCond $1 !^(index\.php|resources|robots\.txt)
                   RewriteCond %{REQUEST_FILENAME} !-f
                   RewriteCond %{REQUEST_FILENAME} !-d
                   RewriteRule . /appfolder/index.php/$1 [L]
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <hr>
             <h2>Nginx Configuration</h2>
             <p>If you using nginx, you can just add this code to <b>location /</b>. Before that, you have to define index first and then ad try_files on location /.</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   #define index first if not yet
                   index index.php;
                   location / {
                     #autoindex on;
                     try_files $uri $uri/ /index.php?$args;
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
           </div>
         </div>

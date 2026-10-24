@@ -23,25 +23,7 @@
               <li>Execute the parent constructor in your model constructor.</li>
             </ol>
             <p>Example:</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   class Name_Table_Model extends SENE_Model{
                     var $tbl = &#x27;name_tabel&#x27;;
                     var $tbl_as = &#x27;nt&#x27;;
@@ -51,31 +33,11 @@
                     }
                     //execute your method below
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <hr>
             <h2>Get Table Result</h2>
             <p>To obtain data from table, you can simply use manual query or query builder. Here is the example</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   class Name_Table_Model extends SENE_Model{
                     var $tbl = &#x27;name_tabel&#x27;;
                     var $tbl_as = &#x27;nt&#x27;;
@@ -93,33 +55,13 @@
                       return $this-&#x3E;db-&#x3E;query($sql);
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>The get method will return the array of object from table_name using query builder style. But getRawSQL get the array of object through raw SQL query.</p>
             <hr>
 
             <h2>Insert Data to Table</h2>
             <p>Adding data to table simply using query builder style or raw query style</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   class Name_Table_Model extends SENE_Model{
                     var $tbl = &#x27;name_tabel&#x27;;
                     var $tbl_as = &#x27;nt&#x27;;
@@ -150,33 +92,13 @@
                       }
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>All method will return integer more than 0 if executed properly and will return 0 or FALSE if failed. This method also return the last inserted ID to column. So you can expand your implementation future.</p>
             <hr>
 
             <h2>Update Data on Table</h2>
             <p>To change data on table simply using query builder style or raw query style</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   class Name_Table_Model extends SENE_Model{
                     var $tbl = &#x27;name_tabel&#x27;;
                     var $tbl_as = &#x27;nt&#x27;;
@@ -200,33 +122,13 @@
                       return $this-&#x3E;db-&#x3E;exec($sql);
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>All method will return integer more than 0 if executed properly and will return 0 or FALSE if failed.</p>
             <hr>
 
             <h2>Delete Data on Table</h2>
             <p>To delete data on table simply using query builder style or raw query style</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   class Name_Table_Model extends SENE_Model{
                     var $tbl = &#x27;name_tabel&#x27;;
                     var $tbl_as = &#x27;nt&#x27;;
@@ -247,9 +149,7 @@
                       return $this-&#x3E;db-&#x3E;exec($sql);
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>All method will return integer more than 0 if executed properly and will return 0 or FALSE if failed.</p>
             <hr>
           </div>

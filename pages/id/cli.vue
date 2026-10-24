@@ -23,29 +23,9 @@
               Barulah, setelah itu bisa mengeksekusi CLI. Lihat contoh perintah dibawah ini untuk lebih memahami.
             </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   php index.php [controller | [directory in controller [controller]]] [method] [param1] [param2]...[paramN]
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>Untuk mac dan linux ada sedikit perbedaan dalam perpindahan direktori, namun untuk proses ekeskusinya sama.</p>
 
             <h2>Persyaratan</h2>
@@ -62,29 +42,9 @@
 
             <h3>CronJob</h3>
             <p>Dalam contoh cronjob ini, diasumsikan ada Controller didalam direktori <code>api_cron</code> dengan nama kelas <code>produk</code> dan memiliki metode <code>update_stok()</code></p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   0 4 * * * /usr/bin/php /var/www/html/index.php api_cron produk update_stok
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>Anda dapat menyesuaikan <code>/usr/bin/php</code> tergantung pada sistem Anda.</p>
 
           </div>

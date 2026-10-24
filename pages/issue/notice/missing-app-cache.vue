@@ -17,31 +17,11 @@
             <p>But, this directory for now is not auto generated so you have to created manually the <code>cache</code> directory.</p>
             <p>Example error message</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
 Notice: Missing app/cache in /Application/xampp/htdocs/seme-frmamework
 Notice: Missing app/cache in D:\xampp\htdocs\seme-framework
 Notice: Missing app/cache in /opt/lampp/htdocs/seme-framework
-</highlight-code>
-</div>
-</div>
+</MacWindowCodeSnippet>
             <h2>Solution</h2>
             <p>Create manually the directory <code>app/cache</code>.</p>
           </div>

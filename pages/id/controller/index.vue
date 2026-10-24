@@ -63,25 +63,7 @@
             <p>
               Setiap kelas controller wajib mendeklarasikan konstruktor kelas, berikut ini adalah contoh kodenya.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &lt;?php
                   class Home extends SENE_Controller{
                     // WAJIB konstruktor kelas
@@ -91,9 +73,7 @@
                     }
                     ...
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3 id="rule_inherit">Metode Index</h3>
             <p>
@@ -120,25 +100,7 @@
               Dan 1 tingkat lebih dalam juga untuk direktori spesial admin.
               Berikut ini adalah contoh susunan file dan direktori untuk controller.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   app/
                   └── controller/
                    ├── admin/
@@ -157,33 +119,13 @@
                    |── register.php
                    |── forgot.php
                    └── about.php
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2 id="contoh_benar_salah">Contoh Benar Salah Syarat Controller</h2>
             <p>
               Berikut ini adalah berbagai contoh untuk salah atau benar pemenuhan syarat dari penamaan file dan kelas controller.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   /**
                   * CONTOH BENAR
                   * -nama file:
@@ -287,9 +229,7 @@
                       echo &#x27;Thankyou for using Seme Framewrok&#x27;;
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2>Cara Kerja</h2>
             <p>
@@ -297,55 +237,15 @@
               Biasanya ada hubungan satu-ke-satu antara string URL dan kelas/metode pengontrol yang sesuai.
               Segmen dalam URI biasanya mengikuti pola ini:
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   example.com/class/method/parameter1/parameter2/.../parameterN
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>
               Atau apabila menggunakan direktori:
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   example.com/directory/class/method/parameter1/parameter2/.../parameterN
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>
               Seme Framework hanya akan memuat pengontrol dengan nama file dan nama kelasnya cocok.
               Namun, Seme Framework memiliki dukungan untuk <NuxtLink to="/id/configuration/routes/">Pemetaan Ulang Kontroler URI</NuxtLink>.
@@ -375,25 +275,7 @@
 
             <h4>Controller Default</h4>
             <p>Berikut ini adalah source code dari kelas home:</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
 &lt;?php
 class Home extends SENE_Controller{
   public function __construct(){
@@ -403,32 +285,12 @@ class Home extends SENE_Controller{
     echo &#x27;Thankyou for using Seme Framewrok&#x27;;
   }
 }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h4>Controller untuk error 404 (not found)</h4>
             <p>Controller not found biasanya digunakan untuk aplikasi berbasis web karena mungkin saja ada kesalah URL atau data di aplikasi sudah dihapus atau disembunyikan.</p>
             <p>Controller not found ini sangat penting untuk menghasilkan pengalaman yang baik terhadap pengguna.</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">&lt;?php
+            <MacWindowCodeSnippet lang="php">&lt;?php
 class Notfound extends SENE_Controller{
   public function __construct(){
     parent::__construct();
@@ -438,9 +300,7 @@ class Notfound extends SENE_Controller{
     echo &#x27;404 Notfound&#x27;;
   }
 }
-</highlight-code>
-</div>
-</div>
+</MacWindowCodeSnippet>
 
             <div class="message is-info">
               <div class="message-body">
@@ -459,25 +319,7 @@ class Notfound extends SENE_Controller{
             <h2>Pembatasan akses pada method dan properti</h2>
             <p>Seme Framework telah mendukung deklrasi untuk private method, private properti, protected method dan protected properti.</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">&lt;?php
+            <MacWindowCodeSnippet lang="php">&lt;?php
 class Home extends SENE_Controller{
   public $public_variable = &#039;Yi-Ha!&#039;
   public $__underWear = &#039;My Private Things&#039;
@@ -492,9 +334,7 @@ class Home extends SENE_Controller{
     echo &#039;not found&#039;
   }
 }
-</highlight-code>
-</div>
-</div>
+</MacWindowCodeSnippet>
             <div class="message is-info">
               <div class="message-body">
                 <p><b>Asal kamu tahu</b></p>

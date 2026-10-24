@@ -13,25 +13,7 @@
             <h1 class="is-size-1"><span> Seme Framework </span></h1>
             <h2 class="tagline">Web Framework for Veteran PHP Programmer</h2>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   class Product extends \SENE_Controller
                   {
@@ -65,9 +47,7 @@
                       $this-&#x3E;render();
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p id="abstract">
              Seme Framework are bunch of codes that made from PHP, suitable for creating up to medium scale web based applications without started from scratch.
              This framework is <code>lightweight</code> just from <code>development phase</code> until the applications are in <code>production phase</code>.

@@ -23,25 +23,7 @@
 
             <h3>Create the View File</h3>
             <p>First create view file in <code>app/view/template.php</code> and fill it with this example html code.</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">
+            <MacWindowCodeSnippet lang="html">
                   &#x3C;html&#x3E;
                   &#x3C;head&#x3E;
                     &#x3C;title&#x3E;Seme Framework Template&#x3C;/title&#x3E;
@@ -50,30 +32,10 @@
                     &#x3C;h1&#x3E;Yi-ha this is your first view!&#x3C;/h1&#x3E;
                   &#x3C;/body&#x3E;
                   &#x3C;/html&#x3E;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p>After that, edit the home controller in <code>app/controller/home.php</code> change to this example.</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   class Home extends SENE_Controller{
                     public function __construct(){
@@ -84,9 +46,7 @@
                       $this-&#x3E;render(); //this function allow to show view to browser
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>
               Load the view file and render the web page by opened the controller file through uri browser.
               Assuming the <code>base_url</code> value is <code>localhost/seme_framework/</code>.
@@ -101,25 +61,7 @@
 
             <h3>Modify the View File</h3>
             <p>First modify the view file that we create before in <code>app/view/template.php</code> and fill it with this example code. We can change the title on html page by using this example code.</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">
+            <MacWindowCodeSnippet lang="html">
                   &#x3C;html&#x3E;
                   &#x3C;head&#x3E;
                     &#x3C;title&#x3E;&#x3C;?php echo $title; ?&#x3E;&#x3C;/title&#x3E;
@@ -133,32 +75,12 @@
                     &#x3C;/ul&#x3E;
                   &#x3C;/body&#x3E;
                   &#x3C;/html&#x3E;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p>
               After that, edit the home controller in <code>app/controller/home.php</code> change to this example. We declare the <code>$data</code> variable as array, and then put all values you want to pass to <code>$data</code> variable with this array key.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   class Home extends SENE_Controller{
                     public function __construct(){
@@ -169,9 +91,7 @@
                       $this-&#x3E;render(); //this function allow to show view to browser
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>In controller, array key of <code>$data</code> variable will be plain variable when in view mode. For example <code>$data['content']</code> will be <code>$content</code> if we want to echoing in view. Visit the web page by opened through browser and see what happened.</p>
 
             <h3>What if we pass the array values</h3>
@@ -182,25 +102,7 @@
 
             <h3>Create Theme</h3>
             <p>Navigate to app/view create one folder name it <i>front</i>. And then create new file <code>themes.json</code> and <code>script.json</code>. themes.json contain array of string in JSON format will be loaded in head tag on layout. Same as themes.json, script.json contain about html script tag that loaded just before close body tag in layout. Leave it empty, because the framework only detect a folder in view which is contain script.json and theme.json. Here is the structure of Seme Framework Themes.</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   /
                   ├── app/
                   │ └── view/
@@ -219,33 +121,13 @@
                      ├── css/
                      ├── img/
                      └── js/
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p>
               Create new folder <i>page</i> under <code>app/view/front</code> and then create layout file with php extension, name it <code>col-1.php</code>.
               Then use this code.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">
+            <MacWindowCodeSnippet lang="html">
                   &#x3C;!DOCTYPE html&#x3E;
                   &#x3C;html lang=&#x22;en&#x22;&#x3E;
                   &#x3C;head&#x3E;
@@ -271,32 +153,12 @@
                     &#x3C;/script&#x3E;
                   &#x3C;/body&#x3E;
                   &#x3C;/html&#x3E;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <h3>Loading Layout</h3>
             <p>
               After theme is set, now start load themes in our controller.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   class Home extends SENE_Controller{
                     public function __construct(){
@@ -320,9 +182,7 @@
                       $this-&#x3E;render(); //this function allow to show view to browser
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>
               Thats it.
             </p>

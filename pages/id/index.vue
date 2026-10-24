@@ -13,25 +13,7 @@
           <div class="content">
             <h1 class="is-size-1"><span> Seme Framework 4 </span></h1>
             <h2 style="margin: 0.5em 0; padding: 0; line-height: 1;">Web Framework untuk Veteran</h2>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   class Product extends \SENE_Controller
                   {
@@ -65,9 +47,7 @@
                       $this-&#x3E;render();
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p id="intro">
               Seme Framework merupakan kumpulan kode yang dibuat menggunakan PHP untuk pembuatan aplikasi berbasis web skala kecil sampai dengan skala menengah tanpa harus <em>ngoding</em> dari nol.

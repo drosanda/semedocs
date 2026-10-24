@@ -85,25 +85,7 @@
           <p>
             Berikut ini adalah contoh ilustrasi lokasi file dan direktori untuk kelas model
           </p>
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
               app/
               └── model/
                 ├── front/
@@ -112,9 +94,7 @@
                 └── admin/
                   ├── user_model.php
                   └── blog_model.php
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
 
           <h3 id="aturan_penamaan">Aturan Penamaan</h3>
           <p>
@@ -157,25 +137,7 @@
             Setiap kelas model wajib mendeklarasikan <code>konstruktor kelas</code> dan <code>costructor parent</code>-nya.
           </p>
 
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
                 &#x3C;?php
                 class Blog_Model extends SENE_Model{
                   public $table = &#x27;blog&#x27;;
@@ -186,9 +148,7 @@
                   }
                   ...
                 }
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
 
           <h2 id="SENE_Model">Kelas SENE_Model</h2>
           <p>
@@ -201,25 +161,7 @@
             Berikut ini adalah sinopsis atau gambaran isi kelas SENE_Model.
           </p>
 
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
                 abstract class SENE_Model
                 {
                     public $db;
@@ -233,9 +175,7 @@
                     public function __decrypt($val) { ... }
                     public function __decrypt($val) { ... }
                 }
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
 
 					<h3 id="properti_db">Properti $db</h3>
 					<p>
@@ -285,25 +225,7 @@
           <p>
             Berikut ini adalah beberapa cara penggunaan untuk Query Builder.
           </p>
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
 &#x3C;?php
 class Blog_Model extends SENE_Model{
   public $table = &#x27;blog&#x27;;
@@ -341,9 +263,7 @@ class Blog_Model extends SENE_Model{
     return $this-&#x3E;db-&#x3E;delete($this-&#x3E;table);
   }
 }
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
 
 					<h3 id="debug_sql">Debug SQL</h3>
 					<p>

@@ -26,25 +26,7 @@
               Untuk lebih jelasnya lihat contoh pengaturannya.
             </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   ...
                   /**
                    * Site Base URL with http:// or https:// prefix and trailing slash
@@ -52,34 +34,14 @@
                    */
                   $site = &#x22;http://localhost/seme_framework/&#x22;;
                   ...
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2>Membuat Controller Produk</h2>
             <p>
               Buat file baru di dalam <code>app/controller/produk.php</code> untuk membuat Controller produk.
               Kemudian, tuliskan kode ini didalam file <code>produk.php</code> dan simpan.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   <?php
                   class Produk extends SENE_Controller {
                     public function __construct(){
@@ -89,9 +51,7 @@
                       echo 'Nanti halaman produk akan tampil disini';
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>
               Setelah itu buka Browser, kemudian buka alamat <code>localhost/seme_framework/produk/</code> dan tekan enter untuk membuka halaman tersebut. Apabila, muncul tulisan seperti yang ada dicontroller berarti anda telah berhasil halaman baru.
             </p>
@@ -101,25 +61,7 @@
               Sekarang kita akan mencoba untuk menambahkan link dengan tag <code>&#x3C;a href=&#x22;...&#x22;&#x3E;...&#x3C;/a&#x3E;</code> supaya dapat mengarah ke halaman Produk.
               Untuk itu, kita akan merubah file <code>app/controller/home.php</code> kemudian ubah isi file tersebut menjadi sama seperti contoh kode dibawah ini.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   class Home extends SENE_Controller {
                     public function __construct(){
@@ -131,9 +73,7 @@
                       echo &#x27;Menuju ke halaman &#x3C;a href=&#x22;&#x27;.base_url().&#x27;produk&#x22;&#x3E;produk&#x3C;/a&#x3E;&#x27;;
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>
               Setelah itu buka Browser, kemudian buka alamat <code>localhost/seme_framework/</code> dan tekan enter untuk membuka halaman tersebut. Apabila, muncul tulisan seperti yang ada di controller home berarti anda telah berhasil merubah controller Home.
             </p>
@@ -144,25 +84,7 @@
               Dan tidak lupa juga untuk menambahkan link kembali ke halaman utama juga dengan tag <code>&#x3C;a href=&#x22;...&#x22;&#x3E;...&#x3C;/a&#x3E;</code>.
               Untuk itu buka file <code>app/controller/produk.php</code> dan ganti isinya seperti contoh kode dibawah ini.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   <?php
                   class Produk extends SENE_Controller {
                     public function __construct(){
@@ -176,9 +98,7 @@
                       echo &#x27;Kembali ke &#x3C;a href=&#x22;&#x27;.base_url().&#x27;&#x22;&#x3E;Halaman Utama&#x3C;/a&#x3E;&#x27;;
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>
               Setelah itu buka Browser, kemudian buka alamat <code>localhost/seme_framework/produk/</code> dan tekan enter untuk membuka halaman tersebut. Apabila, muncul tulisan seperti yang ada di controller home berarti anda telah berhasil merubah controller Home.
             </p>
@@ -193,25 +113,7 @@
               Sekarang kita akan mencoba untuk menambahkan judul dengan tag <code>&#x3C;h1&#x3E;...&#x3C;/h1&#x3E;</code> dan <code>&#x3C;p&#x3E;...&#x3C;/p&#x3E;</code> untuk sub judulnya.
               Untuk itu, kita akan merubah file <code>app/controller/home.php</code> kemudian ubah isi file tersebut menjadi sama seperti contoh kode dibawah ini.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   class Home extends SENE_Controller {
                     public function __construct(){
@@ -224,9 +126,7 @@
                       echo &#x27;Lihat &#x3C;a href=&#x22;&#x27;.base_url().&#x27;produk&#x22;&#x3E;Produk&#x3C;/a&#x3E;&#x27;;
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>
               Setelah itu buka Browser, kemudian buka alamat <code>localhost/seme_framework/</code> dan tekan enter untuk membuka halaman tersebut. Apabila, muncul tulisan seperti yang ada di controller home berarti anda telah berhasil merubah controller Home.
             </p>
@@ -236,25 +136,7 @@
               Sekarang kita akan menambahkan 2 metode baru, yaitu metode <code>a()</code> dan <code>b()</code> pada kelas <code>Produk</code>.
               Sekarang ganti isi file <code>app/controller/produk.php</code> dengan kode sumber seperti dibawah ini.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   <?php
                   class Produk extends SENE_Controller {
                     public function __construct(){
@@ -283,9 +165,7 @@
                       echo &#x27;Kembali ke &#x3C;a href=&#x22;&#x27;.base_url().&#x27;produk&#x22;&#x3E;Produk&#x3C;/a&#x3E;&#x27;;
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>
               Setelah itu buka Browser, kemudian buka alamat <code>localhost/seme_framework/produk/</code> dan tekan enter untuk membuka halaman tersebut. Apabila, muncul tulisan seperti yang ada di controller home berarti anda telah berhasil merubah controller Home.
             </p>
@@ -310,25 +190,7 @@
               Setelah itu ganti nama kelas dan controller <code>Produk</code> menjadi <code>Home</code>, begitu juga dengan nama filenya menjadi <code>app/controller/produk/home.php</code>
               Untuk lebih lengkapnya, bisa lihat contoh kode dibawah ini.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   <?php
                   class Home extends SENE_Controller {
                     public function __construct(){
@@ -342,9 +204,7 @@
                       echo &#x27;Kembali ke &#x3C;a href=&#x22;&#x27;.base_url().&#x27;&#x22;&#x3E;Halaman Utama&#x3C;/a&#x3E;&#x27;;
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>Pergeseran Peta Segmen URL</h3>
             <p>
@@ -357,25 +217,7 @@
             <p>
               Sekarang kita akan membuat kelas A untuk detail produk A, buat file baru dan simpan didalam <code>app/controlller/produk/a.php</code>.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   <?php
                   class A extends SENE_Controller {
                     public function __construct(){
@@ -390,33 +232,13 @@
                       echo &#x27;Kembali ke &#x3C;a href=&#x22;&#x27;.base_url().&#x27;produk&#x22;&#x3E;Produk&#x3C;/a&#x3E;&#x27;;
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>Membuat Kelas B</h3>
             <p>
               Sekarang kita akan membuat kelas B untuk detail produk B, buat file baru dan simpan didalam <code>app/controlller/produk/b.php</code>.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   <?php
                   class B extends SENE_Controller {
                     public function __construct(){
@@ -430,9 +252,7 @@
                       echo &#x27;Kembali ke &#x3C;a href=&#x22;&#x27;.base_url().&#x27;produk&#x22;&#x3E;Produk&#x3C;/a&#x3E;&#x27;;
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p>
               Setelah itu buka Browser, kemudian buka alamat <code>localhost/seme_framework/produk/</code> dan tekan enter untuk membuka halaman tersebut. Apabila, muncul tulisan seperti yang ada di controller home berarti anda telah berhasil merubah controller Home.

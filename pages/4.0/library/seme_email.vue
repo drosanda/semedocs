@@ -17,25 +17,7 @@
             
             <h2>Class Structure</h2>
             <p>Here is the Structure of Seme Email Class.</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   Class Seme_Email {
                     public $log;
@@ -66,9 +48,7 @@
 
                     public function preview(): void {}
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <hr>
 
             <h2>Basic Usage</h2>
@@ -78,25 +58,7 @@
               The following is a basic example of implementing the Seme Email code in a Controller.
               Please create a new file under <code>app/controller</code> named it <code>emailregister.php</code>, then copy paste this HTML code below into that file.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   Class EmailRegister extends \SENE_Controller{
                     public function __construct(){
@@ -116,9 +78,7 @@
                       dd($this-&#x3E;seme_email-&#x3E;getLog());
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>To run the process of sending email, you can simply call this class via the browser. Example: http://localhost/seme_framework/emailregister.</p>
             <h3>From Method</h3>
             <p>This method mandatory for declare origin of email. Required two parameter, first parameter is email and the second parameter is name of sender.</p>
@@ -132,25 +92,7 @@
               You can replace the string by using replacer method for creating dynamic email. Here is the example of HTML email template:
             </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">
+            <MacWindowCodeSnippet lang="html">
                   &#x3C;html&#x3E;
                   &#x3C;body&#x3E;
                   &#x3C;p&#x3E;Hi {{full_name}},&#x3C;/p&#x3E;
@@ -158,32 +100,12 @@
                   &#x3C;p&#x3E;You can clicking on this link {{dashboard_link}} to go to your dashboard.&#x3C;/p&#x3E;
                   &#x3C;/body&#x3E;
                   &#x3C;/html&#x3E;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>On HTML script above, we can see the <b>{{first_name}}</b> code. You can replace this string with real name through the script.</p>
             <h3>Replacer Method</h3>
             <p>This method allow replacing string on email template with coding. Here is the example:</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                 &#x3C;?php
                 Class EmailRegister extends \SENE_Controller{
                   public function __construct(){
@@ -209,9 +131,7 @@
                     dd($this-&#x3E;seme_email-&#x3E;getLog());
                   }
                 }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>If this example combined with email template above, you can send email with <b>{{first_name}}</b> replaced by <b>Agus Setiawan</b>.</p>
             <h3>Flush method</h3>
             <p>Use this method for clearing assigned properties used before.</p>

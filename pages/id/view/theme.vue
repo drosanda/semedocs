@@ -45,25 +45,7 @@
               Berikut ini adalah contoh ilustrasi struktur file dan direktori untuk view komponen yang spesifik dalam sebuah tema.
             </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   app/
                   └── view/
                   &#160;└── front/ ( untuk tema)
@@ -82,9 +64,7 @@
                   &#160;&#160;&#160; ├── home.php
                   &#160;&#160;&#160; ├── home_modal.php
                   &#160;&#160;&#160; └── home_bottom.php
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2 class="">Komponen <em>Reusable</em></h2>
             <p>
@@ -105,25 +85,7 @@
               Kemudian, sebuah tema tampilan dikatakan valid jika memiliki file <NuxtLink to="/id/view/script_json">script.json</NuxtLink>, <NuxtLink to="/id/view/theme_json">theme.json</NuxtLink> dan sebuah direktori <code>page</code> yang berisi file layout.
               Untuk lebih jelasnya bisa dilihat pada ilustrasi struktur file dan direktori dibawah ini.
             </p>
-            <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                 app/
                 └── view/
                 &#160;└── [THEME_NAME]/
@@ -131,9 +93,7 @@
                 &#160;&#160;├── script.json
                 &#160;&#160;└── page/
                 &#160;&#160;&#160;└── col-1.php
-              </highlight-code>
-            </div>
-            </div>
+              </MacWindowCodeSnippet>
 
             <h4>Syarat Direktori Tema</h4>
             <p>
@@ -153,25 +113,7 @@
             <p>
               Berikut ini adalah contoh <em>source code</em> untuk file layout <code>col-1.php</code>.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">
+            <MacWindowCodeSnippet lang="html">
                   &#x3C;!DOCTYPE html&#x3E;
                   &#x3C;html&#x3E;
                   &#x20;&#x3C;head&#x3E;
@@ -196,9 +138,7 @@
                   &#x20;&#x3C;/script&#x3E;
                   &#x3C;/body&#x3E;
                   &#x3C;/html&#x3E;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h4>Syarat theme.json</h4>
             <p>
@@ -211,25 +151,7 @@
             <p>
               Berikut ini adalah contoh <em>source code</em> untuk file <code>theme.json</code> untuk Seme Framework minimal versi 4.0.2.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="javascript">
+            <MacWindowCodeSnippet lang="javascript">
                   {
                     &#x22;link&#x22;:
                     [
@@ -247,9 +169,7 @@
                       }
                     ]
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <div class="message is-success">
               <div class="message-body">
                 <p><b>Pelajari selengkapnya</b></p>
@@ -270,25 +190,7 @@
             <p>
               Berikut ini adalah contoh <em>source code</em> untuk file <code>script.json</code> untuk Seme Framework minimal versi 4.0.2.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="javascript">
+            <MacWindowCodeSnippet lang="javascript">
                   {
                     &#x22;script&#x22;:
                     [
@@ -303,9 +205,7 @@
                       }
                     ]
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <div class="message is-success">
               <div class="message-body">
                 <p><b>Pelajari selengkapnya</b></p>

@@ -37,25 +37,7 @@
               <p>
                 Kemudian untuk file yang akan diubah atau dibuat baru melingkupi:
               </p>
-              <div class="macwindow">
-                <div class="titlebar">
-                  <div class="buttons">
-                    <div class="close">
-                      <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                      <!-- close button link -->
-                    </div>
-                    <div class="minimize">
-                      <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                      <!-- minimize button link -->
-                    </div>
-                    <div class="zoom">
-                      <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                      <!-- zoom button link -->
-                    </div>
-                  </div>
-                </div>
-                <div class="maccontent">
-                  <highlight-code lang="php">
+              <MacWindowCodeSnippet lang="php">
                     app/
                     ├── core/
                     │&#160;└── ji_controller.php
@@ -90,9 +72,7 @@
                     &#160;&#160;&#160;&#160;&#160;&#160;├── home_bottom.php
                     &#160;&#160;&#160;&#160;&#160;&#160;├── home_modal.php
                     &#160;&#160;&#160;&#160;&#160;&#160;└── home.php
-                  </highlight-code>
-                </div>
-              </div>
+                  </MacWindowCodeSnippet>
   
               <h2 id="part1">Pembuatan table a_company dan sample isinya</h2>
               <p>
@@ -101,25 +81,7 @@
                 Pastikan database sudah dibuat sebelumnya dan juga sudah terpilih.
                 Kemudian <i>Copy paste</i> kode SQL dibawah ini dan jalankan di <b>PhpMyAdmin</b> atau <b>MySQL</b> <i>query</i>-nya langsung untuk membuat tabel secara otomatis.
               </p>
-              <div class="macwindow">
-                <div class="titlebar">
-                  <div class="buttons">
-                    <div class="close">
-                      <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                      <!-- close button link -->
-                    </div>
-                    <div class="minimize">
-                      <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                      <!-- minimize button link -->
-                    </div>
-                    <div class="zoom">
-                      <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                      <!-- zoom button link -->
-                    </div>
-                  </div>
-                </div>
-                <div class="maccontent">
-                  <highlight-code lang="sql">
+              <MacWindowCodeSnippet lang="sql">
                     SET FOREIGN_KEY_CHECKS=0;
 SET SQL_MODE = &#x22;NO_AUTO_VALUE_ON_ZERO&#x22;;
 SET time_zone = &#x22;+00:00&#x22;;
@@ -145,32 +107,12 @@ CREATE TABLE &#x60;a_company&#x60; (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 SET FOREIGN_KEY_CHECKS=1;
-                  </highlight-code>
-                </div>
-              </div>
+                  </MacWindowCodeSnippet>
   
               <p>
                 Kemudian setelah itu, kita akan masukan 2 sample data perusahaan, <i>Copy paste</i> kode SQL dibawah ini dan jalankan di <b>PhpMyAdmin</b> atau <b>MySQL</b> <i>query</i>-nya langsung untuk menambahkan user admin baru.
               </p>
-              <div class="macwindow">
-                <div class="titlebar">
-                  <div class="buttons">
-                    <div class="close">
-                      <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                      <!-- close button link -->
-                    </div>
-                    <div class="minimize">
-                      <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                      <!-- minimize button link -->
-                    </div>
-                    <div class="zoom">
-                      <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                      <!-- zoom button link -->
-                    </div>
-                  </div>
-                </div>
-                <div class="maccontent">
-                  <highlight-code lang="sql">
+              <MacWindowCodeSnippet lang="sql">
                     insert into &#x60;a_company&#x60;(
   &#x9;utype,
   &#x9;kode,
@@ -200,34 +142,14 @@ SET FOREIGN_KEY_CHECKS=1;
   &#x9;&#x27;Jawa Barat&#x27;,
   &#x9;&#x27;Kab. Bandung&#x27;
   );
-                  </highlight-code>
-                </div>
-              </div>
+                  </MacWindowCodeSnippet>
   
               <h2 id="part3">Pembuatan concern dan model <code>a_company</code></h2>
               <p>
                 Setelah mengimport tabel <code>a_company</code> kedalam database, sekarang saatnya membuat <code>concern class</code> untuk tabel <code>a_company</code>.
                 Caranya buat file baru di <code>app/model/a_company_concern.php</code>, kemudian <i>copy paste</i> kode dibawah ini dan simpan perubahan pada file tersebut.
               </p>
-              <div class="macwindow">
-                <div class="titlebar">
-                  <div class="buttons">
-                    <div class="close">
-                      <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                      <!-- close button link -->
-                    </div>
-                    <div class="minimize">
-                      <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                      <!-- minimize button link -->
-                    </div>
-                    <div class="zoom">
-                      <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                      <!-- zoom button link -->
-                    </div>
-                  </div>
-                </div>
-                <div class="maccontent">
-                  <highlight-code lang="php">
+              <MacWindowCodeSnippet lang="php">
                     &#x3C;?php
 namespace Model;
 
@@ -282,9 +204,7 @@ class A_Company_Concern extends \JI_Model
         return $this;
     }
 }
-                  </highlight-code>
-                </div>
-              </div>
+                  </MacWindowCodeSnippet>
               
               <h3>Pembuatan Model a_company untuk PoV API Admin</h3>
               <p>
@@ -294,25 +214,7 @@ class A_Company_Concern extends \JI_Model
                 unutk itu buatlah file baru di <code>app/model/api_admin/a_company_model.php</code>, 
                 kemudian <i>copy paste</i> kode dibawah ini dan simpan perubahan pada file tersebut.
               </p>
-              <div class="macwindow">
-                <div class="titlebar">
-                  <div class="buttons">
-                    <div class="close">
-                      <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                      <!-- close button link -->
-                    </div>
-                    <div class="minimize">
-                      <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                      <!-- minimize button link -->
-                    </div>
-                    <div class="zoom">
-                      <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                      <!-- zoom button link -->
-                    </div>
-                  </div>
-                </div>
-                <div class="maccontent">
-                  <highlight-code lang="php">
+              <MacWindowCodeSnippet lang="php">
                     &#x3C;?php
 namespace Model\Admin\API;
 
@@ -373,9 +275,7 @@ class A_Company_Model extends \Model\A_Company_Concern
         return $this-&#x3E;db-&#x3E;get();
     }
 }
-                  </highlight-code>
-                </div>
-              </div>
+                  </MacWindowCodeSnippet>
               
               <h3>Pembuatan Model a_company untuk PoV Admin</h3>
               <p>
@@ -384,25 +284,7 @@ class A_Company_Model extends \Model\A_Company_Concern
                 Buat lagi file baru di <code>app/model/admin/a_company_model.php</code>,
                 kemudian <i>copy paste</i> kode dibawah ini dan simpan perubahan pada file tersebut.
               </p>
-              <div class="macwindow">
-                <div class="titlebar">
-                  <div class="buttons">
-                    <div class="close">
-                      <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                      <!-- close button link -->
-                    </div>
-                    <div class="minimize">
-                      <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                      <!-- minimize button link -->
-                    </div>
-                    <div class="zoom">
-                      <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                      <!-- zoom button link -->
-                    </div>
-                  </div>
-                </div>
-                <div class="maccontent">
-                  <highlight-code lang="php">
+              <MacWindowCodeSnippet lang="php">
                     &#x3C;?php
 namespace Model\Admin;
 
@@ -423,9 +305,7 @@ class A_Company_Model extends \Model\A_Company_Concern
         parent::__construct();
     }
 }
-                  </highlight-code>
-                </div>
-              </div>
+                  </MacWindowCodeSnippet>
               
               <h2>Penyesuaian kode di JI_Controller dan JI_Model</h2>
               <p>
@@ -439,25 +319,7 @@ class A_Company_Model extends \Model\A_Company_Concern
               <p>
                 Sekarang kita ubah code pada <code>app/core/ji_controller.php</code>, menjadi seperti ini:
               </p>
-              <div class="macwindow">
-                <div class="titlebar">
-                  <div class="buttons">
-                    <div class="close">
-                      <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                      <!-- close button link -->
-                    </div>
-                    <div class="minimize">
-                      <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                      <!-- minimize button link -->
-                    </div>
-                    <div class="zoom">
-                      <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                      <!-- zoom button link -->
-                    </div>
-                  </div>
-                </div>
-                <div class="maccontent">
-                  <highlight-code lang="php">
+              <MacWindowCodeSnippet lang="php">
                     &#x3C;?php
 /**
  * Core class for all controller
@@ -692,33 +554,13 @@ class JI_Controller extends \SENE_Controller
 
     public function index() { }
 }
-                  </highlight-code>
-                </div>
-              </div>
+                  </MacWindowCodeSnippet>
               
               <p>
                 Kemudian untuk file <code>app/core/ji_model.php</code>, buatlah menjadi seperti ini.
               </p>
   
-              <div class="macwindow">
-                <div class="titlebar">
-                  <div class="buttons">
-                    <div class="close">
-                      <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                      <!-- close button link -->
-                    </div>
-                    <div class="minimize">
-                      <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                      <!-- minimize button link -->
-                    </div>
-                    <div class="zoom">
-                      <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                      <!-- zoom button link -->
-                    </div>
-                  </div>
-                </div>
-                <div class="maccontent">
-                  <highlight-code lang="php">
+              <MacWindowCodeSnippet lang="php">
                     &#x3C;?php
 /**
 * Define all general method for all tables
@@ -828,9 +670,7 @@ class JI_Model extends \SENE_Model
         return $this-&#x3E;db-&#x3E;autocommit(1);
     }
 }
-                  </highlight-code>
-                </div>
-              </div>
+                  </MacWindowCodeSnippet>
 
               <h2>Membuat Controller untuk halaman perusahaan master data</h2>
               <p>
@@ -844,25 +684,7 @@ class JI_Model extends \SENE_Model
                 Pada versi admin hanya digunakan untuk memanggil view saja, mari kita buat file di <code>app/controller/admin/perusahaan/masterdata.php</code>,
                 dan <em>copy</em> <em>paste</em> kode dibawah ini
               </p>
-              <div class="macwindow">
-                <div class="titlebar">
-                  <div class="buttons">
-                    <div class="close">
-                      <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                      <!-- close button link -->
-                    </div>
-                    <div class="minimize">
-                      <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                      <!-- minimize button link -->
-                    </div>
-                    <div class="zoom">
-                      <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                      <!-- zoom button link -->
-                    </div>
-                  </div>
-                </div>
-                <div class="maccontent">
-                  <highlight-code lang="php">
+              <MacWindowCodeSnippet lang="php">
                     &#x3C;?php
 /**
 * Main Controller Class for Perusahaan Master Data
@@ -975,9 +797,7 @@ class MasterData extends JI_Controller
         $this-&#x3E;render();
     }
 }
-                  </highlight-code>
-                </div>
-              </div>
+                  </MacWindowCodeSnippet>
 
               <h3>Controller untuk PoV API Admin</h3>
               <p>
@@ -987,25 +807,7 @@ class MasterData extends JI_Controller
                 lalu <em>copy</em> <em>paste</em> kode dibawah ini
               </p>
   
-              <div class="macwindow">
-                <div class="titlebar">
-                  <div class="buttons">
-                    <div class="close">
-                      <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                      <!-- close button link -->
-                    </div>
-                    <div class="minimize">
-                      <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                      <!-- minimize button link -->
-                    </div>
-                    <div class="zoom">
-                      <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                      <!-- zoom button link -->
-                    </div>
-                  </div>
-                </div>
-                <div class="maccontent">
-                  <highlight-code lang="php">
+              <MacWindowCodeSnippet lang="php">
                     &#x3C;?php
 /**
 * Main Controller Class for Perusahaan Master Data
@@ -1202,9 +1004,7 @@ class MasterData extends \JI_Controller
     }
     
 }
-                  </highlight-code>
-                </div>
-              </div>
+                  </MacWindowCodeSnippet>
               
               <h2>Membuat Komponen HTML dan View untuk Halaman Master Data Perusahaan</h2>
               <p>
@@ -1218,122 +1018,42 @@ class MasterData extends \JI_Controller
                 Buatlah file baru di <code>app/view/admin/page/component/filter_button.php</code>,
                 kemudian <em>copy paste</em> kode dibawah ini
               </p>
-              <div class="macwindow">
-                <div class="titlebar">
-                  <div class="buttons">
-                    <div class="close">
-                      <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                      <!-- close button link -->
-                    </div>
-                    <div class="minimize">
-                      <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                      <!-- minimize button link -->
-                    </div>
-                    <div class="zoom">
-                      <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                      <!-- zoom button link -->
-                    </div>
-                  </div>
-                </div>
-                <div class="maccontent">
-                  <highlight-code lang="html">
+              <MacWindowCodeSnippet lang="html">
                     &#x3C;button id=&#x22;filter_button&#x22; class=&#x22;btn btn-info btn-alt btn-block btn-submit&#x22;&#x3E;
     Filter &#x3C;i class=&#x22;fa fa-filter icon-submit&#x22;&#x3E;&#x3C;/i&#x3E;
 &#x3C;/button&#x3E;
-                  </highlight-code>
-                </div>
-              </div>
+                  </MacWindowCodeSnippet>
               
               <p>
                 Selanjutnya komponen untuk button simpan yang akan digunakan oleh setiap isian form.
                 Buatlah file baru di <code>app/view/admin/page/component/simpan_button.php</code>,
                 kemudian <em>copy paste</em> kode dibawah ini
               </p>
-              <div class="macwindow">
-                <div class="titlebar">
-                  <div class="buttons">
-                    <div class="close">
-                      <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                      <!-- close button link -->
-                    </div>
-                    <div class="minimize">
-                      <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                      <!-- minimize button link -->
-                    </div>
-                    <div class="zoom">
-                      <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                      <!-- zoom button link -->
-                    </div>
-                  </div>
-                </div>
-                <div class="maccontent">
-                  <highlight-code lang="html">
+              <MacWindowCodeSnippet lang="html">
                     &#x3C;button type=&#x22;submit&#x22; class=&#x22;btn btn-primary btn-submit&#x22;&#x3E;
     Simpan &#x3C;i class=&#x22;fa fa-save icon-submit&#x22;&#x3E;&#x3C;/i&#x3E;
 &#x3C;/button&#x3E;
-                  </highlight-code>
-                </div>
-              </div>
+                  </MacWindowCodeSnippet>
 
               <p>
                 Lalu kita buat komponen untuk list option di modul perusahaan saja, filenya ada di <code>app/view/admin/perusahaan/masterdata/_option_utype.php</code>,
                 kemudian <em>copy paste</em> kode dibawah ini
               </p>
-              <div class="macwindow">
-                <div class="titlebar">
-                  <div class="buttons">
-                    <div class="close">
-                      <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                      <!-- close button link -->
-                    </div>
-                    <div class="minimize">
-                      <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                      <!-- minimize button link -->
-                    </div>
-                    <div class="zoom">
-                      <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                      <!-- zoom button link -->
-                    </div>
-                  </div>
-                </div>
-                <div class="maccontent">
-                  <highlight-code lang="html">
+              <MacWindowCodeSnippet lang="html">
                     &#x3C;option value=&#x22;Pusat&#x22;&#x3E;Pusat&#x3C;/option&#x3E;
 &#x3C;option value=&#x22;Cabang&#x22;&#x3E;Cabang&#x3C;/option&#x3E;
-                  </highlight-code>
-                </div>
-              </div>
+                  </MacWindowCodeSnippet>
 
               <p>
                 Terakhir komponen untuk button simpan perubahan yang akan digunakan oleh setiap isian form.
                 Buatlah file baru di <code>app/view/admin/page/component/simpan_perubahan_button.php</code>,
                 kemudian <em>copy paste</em> kode dibawah ini
               </p>
-              <div class="macwindow">
-                <div class="titlebar">
-                  <div class="buttons">
-                    <div class="close">
-                      <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                      <!-- close button link -->
-                    </div>
-                    <div class="minimize">
-                      <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                      <!-- minimize button link -->
-                    </div>
-                    <div class="zoom">
-                      <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                      <!-- zoom button link -->
-                    </div>
-                  </div>
-                </div>
-                <div class="maccontent">
-                  <highlight-code lang="html">
+              <MacWindowCodeSnippet lang="html">
                     &#x3C;button type=&#x22;submit&#x22; class=&#x22;btn btn-primary btn-submit&#x22;&#x3E;
     Simpan Perubahan &#x3C;i class=&#x22;fa fa-save icon-submit&#x22;&#x3E;&#x3C;/i&#x3E;
 &#x3C;/button&#x3E;
-                  </highlight-code>
-                </div>
-              </div>
+                  </MacWindowCodeSnippet>
 
               <h3>View HTML untuk Home di Master Data Perusahaan</h3>
               <p>
@@ -1355,25 +1075,7 @@ class MasterData extends \JI_Controller
                 seperti biasa <em>copy paste</em> kode dibawah ini.
               </p>
   
-              <div class="macwindow">
-                <div class="titlebar">
-                  <div class="buttons">
-                    <div class="close">
-                      <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                      <!-- close button link -->
-                    </div>
-                    <div class="minimize">
-                      <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                      <!-- minimize button link -->
-                    </div>
-                    <div class="zoom">
-                      <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                      <!-- zoom button link -->
-                    </div>
-                  </div>
-                </div>
-                <div class="maccontent">
-                  <highlight-code lang="html">
+              <MacWindowCodeSnippet lang="html">
                     &#x3C;div id=&#x22;page-content&#x22;&#x3E;
 &#x9;&#x3C;!-- Static Layout Header --&#x3E;
 &#x9;&#x3C;div class=&#x22;content-header&#x22;&#x3E;
@@ -1445,9 +1147,7 @@ class MasterData extends \JI_Controller
 &#x9;&#x3C;/div&#x3E;
 &#x9;&#x3C;!-- END Content --&#x3E;
 &#x3C;/div&#x3E;
-                  </highlight-code>
-                </div>
-              </div>
+                  </MacWindowCodeSnippet>
               
               <p>
                 Selanjutnya kode untuk view modal. Pada file view modal ini digunakan untuk menyimpan komponen modal (<em>Pop Up</em>) menu pilihan
@@ -1456,25 +1156,7 @@ class MasterData extends \JI_Controller
                 Kemudian <em>copy paste</em> kode dibawah ini.
               </p>
   
-              <div class="macwindow">
-                <div class="titlebar">
-                  <div class="buttons">
-                    <div class="close">
-                      <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                      <!-- close button link -->
-                    </div>
-                    <div class="minimize">
-                      <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                      <!-- minimize button link -->
-                    </div>
-                    <div class="zoom">
-                      <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                      <!-- zoom button link -->
-                    </div>
-                  </div>
-                </div>
-                <div class="maccontent">
-                  <highlight-code lang="html">
+              <MacWindowCodeSnippet lang="html">
                     &#x3C;!-- modal option --&#x3E;
 &#x3C;div id=&#x22;modal_option&#x22; class=&#x22;modal fade &#x22; tabindex=&#x22;-1&#x22; role=&#x22;dialog&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
 &#x9;&#x3C;div class=&#x22;modal-dialog modal-sm&#x22;&#x3E;
@@ -1507,9 +1189,7 @@ class MasterData extends \JI_Controller
 &#x9;&#x3C;/div&#x3E;
 &#x3C;/div&#x3E;
 
-                  </highlight-code>
-                </div>
-              </div>
+                  </MacWindowCodeSnippet>
               
               <p>
                 Terakhir kita akan membuat code JavaScript supaya datatablenya dapat tampil dan
@@ -1519,25 +1199,7 @@ class MasterData extends \JI_Controller
                 Kemudian <em>copy paste</em> kode dibawah ini.
               </p>
   
-              <div class="macwindow">
-                <div class="titlebar">
-                  <div class="buttons">
-                    <div class="close">
-                      <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                      <!-- close button link -->
-                    </div>
-                    <div class="minimize">
-                      <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                      <!-- minimize button link -->
-                    </div>
-                    <div class="zoom">
-                      <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                      <!-- zoom button link -->
-                    </div>
-                  </div>
-                </div>
-                <div class="maccontent">
-                  <highlight-code lang="javascript">
+              <MacWindowCodeSnippet lang="javascript">
                     public drTable = {};
 public ieid = &#x27;&#x27;;
 
@@ -1631,9 +1293,7 @@ $(&#x22;#bhapus&#x22;).on(&#x22;click&#x22;,function(e){
 &#x9;&#x9;}
 &#x9;}
 });
-                  </highlight-code>
-                </div>
-              </div>
+                  </MacWindowCodeSnippet>
               
               <h3>View HTML untuk Form Tambah Data Baru di Master Data Perusahaan</h3>
               <p>
@@ -1652,25 +1312,7 @@ $(&#x22;#bhapus&#x22;).on(&#x22;click&#x22;,function(e){
                 seperti biasa <em>copy paste</em> kode dibawah ini.
               </p>
   
-              <div class="macwindow">
-                <div class="titlebar">
-                  <div class="buttons">
-                    <div class="close">
-                      <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                      <!-- close button link -->
-                    </div>
-                    <div class="minimize">
-                      <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                      <!-- minimize button link -->
-                    </div>
-                    <div class="zoom">
-                      <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                      <!-- zoom button link -->
-                    </div>
-                  </div>
-                </div>
-                <div class="maccontent">
-                  <highlight-code lang="html">
+              <MacWindowCodeSnippet lang="html">
                     
 &#x3C;div id=&#x22;page-content&#x22;&#x3E;
 &#x9;&#x3C;!-- Static Layout Header --&#x3E;
@@ -1759,9 +1401,7 @@ $(&#x22;#bhapus&#x22;).on(&#x22;click&#x22;,function(e){
 &#x9;&#x9;&#x3C;/form&#x3E;
 &#x9;&#x3C;/div&#x3E;
 &#x3C;/div&#x3E;
-                  </highlight-code>
-                </div>
-              </div>
+                  </MacWindowCodeSnippet>
               
               <p>
                 Sementara untuk file modal kita tidak pakai untuk saat ini, jadi cukup buat file baru saja di 
@@ -1776,25 +1416,7 @@ $(&#x22;#bhapus&#x22;).on(&#x22;click&#x22;,function(e){
                 Kemudian <em>copy paste</em> isinya dari kode dibawah ini.
               </p>
   
-              <div class="macwindow">
-                <div class="titlebar">
-                  <div class="buttons">
-                    <div class="close">
-                      <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                      <!-- close button link -->
-                    </div>
-                    <div class="minimize">
-                      <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                      <!-- minimize button link -->
-                    </div>
-                    <div class="zoom">
-                      <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                      <!-- zoom button link -->
-                    </div>
-                  </div>
-                </div>
-                <div class="maccontent">
-                  <highlight-code lang="javascript">
+              <MacWindowCodeSnippet lang="javascript">
                     $(&#x22;#form_tambah&#x22;).on(&#x22;submit&#x22;,function(e){
 &#x9;e.preventDefault();
 &#x9;$().btnSubmit();
@@ -1828,9 +1450,7 @@ $(&#x22;#bhapus&#x22;).on(&#x22;click&#x22;,function(e){
 &#x9;&#x9;}
 &#x9;});
 });
-                  </highlight-code>
-                </div>
-              </div>
+                  </MacWindowCodeSnippet>
               
               <h3>View HTML untuk Form Edit Data di Master Data Perusahaan</h3>
               <p>
@@ -1851,25 +1471,7 @@ $(&#x22;#bhapus&#x22;).on(&#x22;click&#x22;,function(e){
                 seperti biasa <em>copy paste</em> kode dibawah ini.
               </p>
   
-              <div class="macwindow">
-                <div class="titlebar">
-                  <div class="buttons">
-                    <div class="close">
-                      <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                      <!-- close button link -->
-                    </div>
-                    <div class="minimize">
-                      <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                      <!-- minimize button link -->
-                    </div>
-                    <div class="zoom">
-                      <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                      <!-- zoom button link -->
-                    </div>
-                  </div>
-                </div>
-                <div class="maccontent">
-                  <highlight-code lang="html">
+              <MacWindowCodeSnippet lang="html">
                     &#x3C;div id=&#x22;page-content&#x22;&#x3E;
 &#x9;&#x3C;!-- Static Layout Header --&#x3E;
 &#x9;&#x3C;div class=&#x22;content-header&#x22;&#x3E;
@@ -1957,9 +1559,7 @@ $(&#x22;#bhapus&#x22;).on(&#x22;click&#x22;,function(e){
 &#x9;&#x9;&#x3C;/form&#x3E;
 &#x9;&#x3C;/div&#x3E;
 &#x3C;/div&#x3E;
-                  </highlight-code>
-                </div>
-              </div>
+                  </MacWindowCodeSnippet>
               
               <p>
                 Sementara untuk file modal kita tidak pakai untuk saat ini, jadi cukup buat file baru saja di 
@@ -1975,25 +1575,7 @@ $(&#x22;#bhapus&#x22;).on(&#x22;click&#x22;,function(e){
                 Kemudian <em>copy paste</em> isinya dari kode dibawah ini.
               </p>
   
-              <div class="macwindow">
-                <div class="titlebar">
-                  <div class="buttons">
-                    <div class="close">
-                      <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                      <!-- close button link -->
-                    </div>
-                    <div class="minimize">
-                      <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                      <!-- minimize button link -->
-                    </div>
-                    <div class="zoom">
-                      <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                      <!-- zoom button link -->
-                    </div>
-                  </div>
-                </div>
-                <div class="maccontent">
-                  <highlight-code lang="javascript">
+              <MacWindowCodeSnippet lang="javascript">
                     // fill data
 public data_fill = &#x3C;?=json_encode($acm)?&#x3E;;
 $.each(data_fill, function(k,v){
@@ -2036,9 +1618,7 @@ $(&#x22;#form_edit&#x22;).on(&#x22;submit&#x22;,function(e){
 &#x9;});
 
 });
-                  </highlight-code>
-                </div>
-              </div>
+                  </MacWindowCodeSnippet>
               
               <h3>View HTML untuk Detail Data di Master Data Perusahaan</h3>
               <p>
@@ -2056,25 +1636,7 @@ $(&#x22;#form_edit&#x22;).on(&#x22;submit&#x22;,function(e){
                 seperti biasa <em>copy paste</em> kode dibawah ini.
               </p>
   
-              <div class="macwindow">
-                <div class="titlebar">
-                  <div class="buttons">
-                    <div class="close">
-                      <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                      <!-- close button link -->
-                    </div>
-                    <div class="minimize">
-                      <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                      <!-- minimize button link -->
-                    </div>
-                    <div class="zoom">
-                      <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                      <!-- zoom button link -->
-                    </div>
-                  </div>
-                </div>
-                <div class="maccontent">
-                  <highlight-code lang="html">
+              <MacWindowCodeSnippet lang="html">
                     &#x3C;div id=&#x22;page-content&#x22;&#x3E;
 &#x9;&#x3C;!-- Static Layout Header --&#x3E;
 &#x9;&#x3C;div class=&#x22;content-header&#x22;&#x3E;
@@ -2149,9 +1711,7 @@ $(&#x22;#form_edit&#x22;).on(&#x22;submit&#x22;,function(e){
 &#x9;&#x9;&#x3C;/div&#x3E;
 &#x9;&#x3C;/div&#x3E;
 &#x3C;/div&#x3E;
-                  </highlight-code>
-                </div>
-              </div>
+                  </MacWindowCodeSnippet>
               
               <p>
                 Sementara untuk file bottom kita tidak pakai untuk saat ini, jadi cukup buat file baru saja di 
@@ -2173,25 +1733,7 @@ $(&#x22;#form_edit&#x22;).on(&#x22;submit&#x22;,function(e){
                 Karena sekarang kita belum menerapkan metode <em>Authorization</em> pada aplikasi yang kita bikin,
                 editlah file <code>app/view/admin/page/html/sidebar.php</code>, buatlah jadi seperti ini.
               </p>
-              <div class="macwindow">
-                <div class="titlebar">
-                  <div class="buttons">
-                    <div class="close">
-                      <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                      <!-- close button link -->
-                    </div>
-                    <div class="minimize">
-                      <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                      <!-- minimize button link -->
-                    </div>
-                    <div class="zoom">
-                      <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                      <!-- zoom button link -->
-                    </div>
-                  </div>
-                </div>
-                <div class="maccontent">
-                  <highlight-code lang="html">
+              <MacWindowCodeSnippet lang="html">
                     &#x3C;?php
 &#x9;$admin_name = $sess-&#x3E;admin-&#x3E;username ?? &#x27;&#x27;;
 &#x9;if(isset($sess-&#x3E;admin-&#x3E;nama)) if(strlen($sess-&#x3E;admin-&#x3E;nama)&#x3E;1) $admin_name = $sess-&#x3E;admin-&#x3E;nama;
@@ -2274,9 +1816,7 @@ $(&#x22;#form_edit&#x22;).on(&#x22;submit&#x22;,function(e){
 &#x9;&#x3C;/div&#x3E;
 &#x9;&#x3C;!-- END Wrapper for scrolling functionality --&#x3E;
 &#x3C;/div&#x3E;
-                  </highlight-code>
-                </div>
-              </div>
+                  </MacWindowCodeSnippet>
               
               <p>
                 Setelah selesai nanti bisa kita lihat, menu baru bernama perusahaan dan ada sub menu di bawahnya bernama master data perusahaan.

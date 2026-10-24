@@ -60,25 +60,7 @@
 
             <p>Mari kita buat file baru bernama <code>a_apikey_model.php</code> untuk tabel <b>a_apikey</b> didalam direktori <code>app/model/</code>, dan kemudian masukkan kode ini ke file Anda.</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
 &#x3C;?php
 class A_ApiKey_Model extends SENE_Model
 {
@@ -114,34 +96,14 @@ class A_ApiKey_Model extends SENE_Model
         return $this-&#x3E;db-&#x3E;get_first();
     }
 }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>Edit File Controller</h3>
             <p>Dari tutorial pertama, kami telah membuat pengontrol yang terletak di dalam direktori <code>app/controller/home.php</code>. Untuk menyelesaikan tutorial ini, kita harus menambahkan dan merubah beberapa dengan kode-kode tertentu.</p>
 
             <p>Pertama, kita harus buka file <code>home.php</code> yang ada di dalam direktori <code>app/controller</code>. Setelah itu, kita harus mendapatkan data dan memasukkannya ke dalam variabel bernama <code>$data[&#x27;aakm&#x27;]</code>.</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
 &#x3C;?php
 class Home extends SENE_Controller
 {
@@ -168,33 +130,13 @@ class Home extends SENE_Controller
     $this-&#x3E;render();
   }
 }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>Edit View</h3>
             <p>Dari tutorial pertama, kami telah membuat tampilan yang terletak di <code>app/view/front/home/home.php</code>. Kemudian edit kode yang ada didalam file tersebut supaya bisa menampilkan data.</p>
             <p>Pertama, kita harus menelusuri array yang berisi dari variabel <code>$aakm</code> dan letakkan hasilnya dalam template html. Template html ini nantinya akan dibuat menjadi tampilan <a href="https://materializecss.com/cards.html" target="_blank">kartu / card dari MaterializeCSS</a>.</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">
+            <MacWindowCodeSnippet lang="html">
 &#x3C;div class=&#x22;container&#x22;&#x3E;
   &#x3C;div class=&#x22;row&#x22;&#x3E;
     &#x3C;?php foreach($aakm as $aak) { ?&#x3E;
@@ -215,9 +157,7 @@ class Home extends SENE_Controller
   &#x3C;/div&#x3E;
 &#x3C;/div&#x3E;
 
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2>Hasil Akhir</h2>
             <p>Apabila kita buka alamat <code>http://localhost/seme_framework/</code> melalui browser, maka akan menampilkan seperti apa yang ada didalam screenshot dibawah ini. Apabila tampilannya sudah sama persis, maka tutorial ini sudah berhasil dikuasai.</p>

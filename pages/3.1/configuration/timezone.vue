@@ -15,30 +15,10 @@
             <h1 class="">Configuration: timezone.php</h1>
             <p>The timezone configuration located at <code>app/config/timezone.php</code> please change it. The default timezone in this framework is GMT+7.</p>
             <h2>Example</h2>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   date_default_timezone_set(&#x27;Asia/Jakarta&#x27;);
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>Timezone value refer to this link <a href="https://www.php.net/manual/en/timezones.php" target="_blank">https://www.php.net/manual/en/timezones.php</a></p>
           </div>
         </div>

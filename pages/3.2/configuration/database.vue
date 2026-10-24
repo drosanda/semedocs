@@ -14,34 +14,14 @@
           <div class="content">
             <h1 class="">Configuration: database.php</h1>
             <p>Like other framework, Seme Framework has single configuration for connecting to MySQL or MariaDB. Currently available engine is MySQLi.</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   $db['host']  = "localhost";
                   $db['user']  = "root";
                   $db['pass']  = "";
                   $db['name']  = "database_name";
                   $db['engine']= "mysqli"; //available mysqli only
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
           </div>
         </div>
       </div>

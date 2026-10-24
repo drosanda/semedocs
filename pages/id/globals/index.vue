@@ -22,56 +22,16 @@
             <h3>Parameter</h3>
             <p>Fungsi ini membutuhkan satu parameter opsional yaitu $url_component.</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   base_url(string $url_component): string
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>Contoh Penggunaan</h3>
             <p>Berikut ini cara penggunaan dasar untuk fungsi base_url(), diasumsikan nilai dari <code>$site</code> adalah <code>http://www.example.com/</code>.</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   base_url(&#x27;user/profile/123&#x27;);
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p>
               Akan mengembalikan nilai berupa string, <code>http://www.example.com/user/profile/123</code>.
@@ -83,57 +43,17 @@
             <h3>Parameter</h3>
             <p>Fungsi ini membutuhkan satu parameter opsional yaitu $url_component.</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   base_url_admin(string $url_component): string
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>Contoh Penggunaan</h3>
             <p>
               Berikut ini cara penggunaan dasar untuk fungsi base_url_admin(), diasumsikan nilai dari <code>$site</code> adalah <code>http://www.example.com/</code> dan nilai dari <code>$admin_secret_url</code> adalah <code>mastermind</code>.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   base_url_admin(&#x27;user/profile/123&#x27;);
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
           </p>
           <p>
             Akan mengembalikan nilai berupa string, <code>http://www.example.com/mastermind/user/profile/123</code>.
@@ -145,58 +65,18 @@
           <h3>Parameter</h3>
           <p>Fungsi ini membutuhkan satu parameter wajib yaitu $data.</p>
 
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
                 dd(mixed $data): void
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
 
           <h2>SENE_Controller::debug()</h2>
           <p>Fungsi global sama seperti <code>dd()</code> yang akan meng-<code>echo</code>-kan nilai dari suatu variabel yang dilewatkan kedalam fungsi ini sehingga mudah dibaca oleh developer.</p>
           <h3>Parameter</h3>
           <p>Fungsi ini membutuhkan satu parameter wajib yaitu $data.</p>
 
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
                 SENE_Controller::debug(mixed $data): void
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
 
           <h2>$__forward</h2>
           <p>Variabel <code>$__forward</code> ini digunakan untuk melanjutkan data yang dilewatkan dari dalam View (komponen tema) ke View (komponen tema) lainnya.</p>
@@ -204,25 +84,7 @@
           <h3>Contoh Penggunaan</h3>
           <p>Asumsikan kita memiliki struktur direktori seperti ini</p>
 
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
                 app/
                 └── view/
                  └── front/
@@ -232,65 +94,23 @@
                   │   ├── navbar.php
                   │   └── foter.php
                   └── col-1.php
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
 
           <p>Pada col-1.php kita akan memanggil <code>html/header.php</code> dan dari sana akan memanggil  <code>html/navbar.php</code>.</p>
 
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
                 Ilustrasi
                 header.php &#x3C;----- navbar.php
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
 
           <p>Supaya semua isi variabel yang dilewatkan kedalam <code>html/header.php</code> bisa dilewatkan kedalam <code>html/header.php</code> maka diperlukan <code>$__forward</code>.</p>
           <p>Setelah itu dari sisi kode-nya.</p>
 
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
                 &#x3C;?php
                 $this-&#x3E;getThemeElement(&#x27;page/html/navbar&#x27;, $__forward);
                 ?&#x3E;
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
 
           <h2 id="fungsi_redir" class="">Metode <code>{{redir}}</code> (Redirect)</h2>
           <p>
@@ -307,34 +127,14 @@
           <p>
             Berikut ini adalah contoh penggunaan dari metode <code>redir</code>:
           </p>
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
                 ...
                 redir(base_url('login'));
                 ...
                 ...
                 redir(base_url('login'), 5, 1);
                 ...
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
 
         </div>
       </div>

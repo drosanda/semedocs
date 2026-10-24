@@ -28,25 +28,7 @@
             </ul>
             <p>Contoh memuat perpustakaan json di kelas <code>app/controller/home.php</code>:</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">&#x3C;?php
+            <MacWindowCodeSnippet lang="php">&#x3C;?php
 Class Home extends SENE_Controller {
   $this-&#x3E;lib('sene_json_engine','sene_json');
   public function __construct(){
@@ -60,9 +42,7 @@ Class Home extends SENE_Controller {
     $this-&#x3E;sene_json-&#x3E;out($data);
   }
 }
-          </highlight-code>
-        </div>
-        </div>
+          </MacWindowCodeSnippet>
          <p>Setelah itu Anda dapat membuka base_url Anda di browser dan melihat apa yang Anda dapatkan.</p>
          <h2>Daftar Perpustakaan</h2>
          <p>Berikut adalah daftar library yang saat ini ada di Seme Framework:</p>

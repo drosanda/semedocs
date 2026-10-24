@@ -44,25 +44,7 @@
               Dengan adanya kode pembuka dan kode penutup, PHP dapat digabungkan dengan HTML secara langsung sehingga bisa menampilkan bagian-bagian halaman yang berasal dari PHP.
               Untuk lebih jelasnya, bisa dilihat pada potongan kode contoh ini.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   echo &#x27;ini dari PHP&#x27;;
                   ?&#x3E;
@@ -71,9 +53,7 @@
                   echo &#x27;balik lagi dari PHP&#x27;;
 
                   //baris terakhir tidak pakai penutup kode PHP
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>Menulis Komentar di dalam PHP</h3>
             <p>
@@ -88,30 +68,10 @@
               Untuk menuliskan komentar perbaris ini, cukup ketik <code>//</code> (dua kali garis miring) pada baris yang ingin dikomentari.
               Contoh kode untuk penulisan komentar.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   // ini komentar kode dalam baris ini tidak akan dieksekusi
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h4>Penulisan Komentar per blok</h4>
             <p>
@@ -119,34 +79,14 @@
               Untuk menuliskan komentar perblok ini ada kode pembukanya yaitu <code>/**</code> sedangkan penutup komentarnya yaitu <code>*/</code>.
               Contoh kode untuk penulisan komentar perblok.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   /**
                    Ini adalah komentar panjang sekali
                    Pokoknya, kalau yang baca komentar ini pasti ngerti
                    Semoga cepet bisa memahami tulisan ini
                   */
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>Kaidah tangan kanan</h3>
             <p>
@@ -157,25 +97,7 @@
             <p>
               Berikut ini adalah contoh kode untuk pembuktian konsep atau kaidah tangan kanan.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   //contoh variabel
                   $a = 6;
                   //$a akan berisi 6
@@ -187,9 +109,7 @@
                   // Properti $a akan berisi 7
                   $this->b = $a;
                   // Properti $b akan nilai yang sama dengan nilai dari variabel $a
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>Fungsi bawaan atau (<em>Built-in functions</em>)</h3>
             <p>
@@ -252,25 +172,7 @@
             <p>
               Untuk lebih memperjelas perbedaan ruang lingkup lokal, bisa dilihat dalam potongan kode ini.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   $pariabel_gelobal = 'Dunia';
                   function percobaan(){
                     $pariabel_lokal = 'Halo '.$pariabel_gelobal;
@@ -284,9 +186,7 @@
                   echo $pariabel_lokal;
                   // akan menimbulkan error
                   // karena $pariabel_lokal hanya ada dalam badan fungsi
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>
               Untuk contoh perbedaan ruang lingkup ketika ngoding metode kelas, akan dibahas pada Tutorial <b>Basic MVC</b> (setelah tutorial ini).
             </p>
@@ -302,147 +202,49 @@
               <code>int</code> atau <code>integer</code>, untuk menyimpan data angka genap tanpa pecahan dari mulai negatif sampai positif. seperti 0, -1, 2, 1000, -781 dan seterusnya.
               Integer dalam PHP cukup disebuts dengan <code>int</code> saja dalam huruf kecil (lowercase).
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   $ini_integer = 1;
                   $ini_integer_juga = -199;
                   $ini_integer_lagi = 27;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>Float</h3>
             <p>
               <code>float</code> tipe data untuk menyimpan angka genap dan pecahan dari mulai negatif sampai positif. Untuk penulisan tanda desimalnya menggunakan <b>titik (.)</b> bukan <u>koma (,)</u>. Contoh <code>0.99</code>, <code>-2.75</code>, <code>0.00</code>, <code>1.10009</code> dan lainnya.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   $ini_float = -1;
                   $ini_float_juga = -1.99;
                   $ini_float_lagi = 27.0091;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>String</h3>
             <p>
               <code>string</code> tipe data untuk menyimpan huruf dan angka. Biasanya untuk penulisannya diapit oleh tanda kutip satu (&#x27;) maupun tanda kutip dua (&#x22;). Contoh <code>&#x22;Ruli&#x22;</code>, <code>&#x27;Sandi&#x27;</code>, <code>&#x27;Hari Jum\&#x27;at&#x27;</code>, <code>&#x22;mamah berkata, \&#x22;cepat Pulang\&#x22;&#x22;</code> dan lain-lain.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   $ini_string = &#x27;Halo aku Sandi&#x27;;
                   $ini_string_juga = &#x22;Hi, gw Ruli!&#x22;;
                   $ini_string_lagi = &#x27;Sekarang hari Jum\&#x27;at&#x27;;
                   $awas_ini_string = &#x22;Ibu berteriak,\&#x22;Maliiiinggg....!!!\&#x22;&#x22;;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>Boolean</h3>
             <p>
               <code>bool</code> atau <code>boolean</code> tipe data ini hanya memiliki dua nilai, yaitu 1 dan 0. Dalam penyebutan lainnya juga bisa diartikan dengan <code>TRUE</code> untuk nilai 1 atau <code>FALSE</code> untuk nilai 0.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   $is_lunas = 1;
                   $is_lulus = 0;
                   $sudah_dibayar = TRUE;
                   $is_active = FALSE;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>Array</h3>
             <p>
               <code>array</code> merupakan tipe data yang dapat menampung banyak isi. Bisa terdiri dari banyak integer yang disebut dengan <b>Array of Integer</b>, kemudian untuk array yang berisi array disebut dengan <b>Array of Array</b>, sementara array yang berisi object disebut dengan <b>Array of Object</b> dan istilah array lainnya.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   //contoh array of string
                   $anggota = array();
                   //array akan diisi
@@ -453,9 +255,7 @@
                   $anggota[] = &#x27;Iqbal&#x27;;
                   //sekarang $anggota berisi string &#x27;Sandi&#x27;, &#x27;Ruli&#x27; dan &#x27;Iqbal&#x27;
                   //isi data sebelumnya tidak tertimpa
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h4>Cara ngoding array</h4>
             <p>
@@ -476,33 +276,13 @@
               Untuk lebih lengkapnya bisa dilihat dari contoh potongan kode dibawah ini.
             </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   //contoh pengisian kunci dalam array
                   $anggota = array();
                   $anggota[&#x27;pertama&#x27;] = &#x27;Sandi&#x27;;
                   $anggota[&#x27;kedua&#x27;] = &#x27;Ruli&#x27;;
                   $anggota[&#x27;ketiga&#x27;] = &#x27;Iqbal&#x27;;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h4>Cara pemanggilan array</h4>
             <p>
@@ -512,25 +292,7 @@
               Kita akan mencoba menampilkan nilai array dengan fungsi <code>echo</code>
             </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   //contoh pemanggilan nilai dalam array
                   $anggota = array();
                   $anggota[&#x27;pertama&#x27;] = &#x27;Sandi&#x27;;
@@ -542,9 +304,7 @@
                   // jadi
                   echo $anggota[&#x27;kedua&#x27;];
                   // ini akan menampilkan Ruli di layar
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h4>Cara mengetahui isi kunci dan isi nilai seluruh array</h4>
             <p>
@@ -558,25 +318,7 @@
               Baca selengkapnya tentang <NuxtLink to="/id/globals/" target="_blank"> fungsi DD() <i class="fa fa-external-link"></i></NuxtLink>.
             </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   class Home extends SENE_Controller {
                     ...
@@ -596,41 +338,19 @@
                     dd($anggota);
                     ...
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>Object</h3>
             <p>
               <code>object</code> merupakan tipe data yang terdiri dari properti dan method. Untuk isi dan properti dan method dari object ini bergantung pada kelas yang dibuat object-nya. Untuk object akan dibahas pada tutorial selanjutnya mengenai MVC.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   //contoh penggunaan object
                   $anggota = new stdClass();
                   $anggota->pertama = &#x27;Sandi&#x27;;
                   $anggota->kedua = &#x27;Ruli&#x27;;
                   $anggota->ketiga = &#x27;Iqbal&#x27;;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h4>Cara ngoding object</h4>
             <p>
@@ -658,25 +378,7 @@
               Kita akan mencoba menampilkan nilai object dengan fungsi <code>echo</code>
             </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   //contoh pemanggilan nilai dalam object
                   $anggota = new stdClass();
                   $anggota->pertama = &#x27;Sandi&#x27;;
@@ -688,9 +390,7 @@
                   // jadi
                   echo $anggota->ketiga;
                   // ini akan menampilkan Iqbal di layar
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h4>Cara mengetahui isi kunci dan isi nilai seluruh object</h4>
             <p>
@@ -699,25 +399,7 @@
               Baca selengkapnya tentang <NuxtLink to="/id/globals/" target="_blank"> fungsi DD() <i class="fa fa-external-link"></i></NuxtLink>.
             </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   class Anggota extends SENE_Controller {
                     ...
@@ -730,33 +412,13 @@
                     dd($anggota);
                     ...
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>Mixed</h3>
             <p>
               <code>mixed</code> merupakan tipe data khusus yang hanya ada di PHP. Tipe data ini akan mengizinkan diisi dengan tipe data apapun. Seperti <code>string</code> kemudian ditimpa dengan <code>int</code> dan seterusnya.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   $asalnya_int = 50;
                   //akan diisi string
                   $asalnya_int = &#x27;50&#x27;;
@@ -770,9 +432,7 @@
                   $asalnya_int = new stdClass();
                   //sekarang $asalnya_int berisi object kosong;
                   //isi data sebelumnya tidak tertimpa
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <div class="message is-info">
               <div class="message-body">
                 <p><b>Asal kamu tahu</b></p>
@@ -794,25 +454,7 @@
               Sementara, nama variabel didalam bahasa pemrograman PHP diawali dengan tanda dollar atau <code>$</code>.
               Untuk lebih lengkapnya mari kita lihat contoh kode dibawah ini.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   $nama_variabel = 1;
                   // ini artinya ada variabel bernama nama_variabel berisi INT 1
                   $int_bukan = &#x27;1&#x27;;
@@ -821,39 +463,17 @@
                   // ini artinya ada variabel bernama str_lagi berisi STRING &#x22;Hello World&#x22;
                   $contoh_ke_4 = &#x22;Hello World&#x22;;
                   // ini artinya ada variabel bernama str_lagi berisi STRING &#x22;Hello World&#x22;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>
               Untuk nama variabel, tidak boleh diawali oleh angka, hanya bisa diawali huruf, baru bisa ditambahkan dengan angka.
               Untuk contoh <b>salahnya penulisan variabel</b> lihat kode dibawah ini.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   $1ap = 1;
                   //penamaan variabel salah, karena diawali angka 1
                   $sudah lunas = TRUE;
                   //penamaan variabel salah, karena ada spasi
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>
               Untuk nama variabel, tidak boleh diawali oleh angka, hanya bisa diawali huruf, baru bisa ditambahkan dengan angka.
               Kemudian, untuk pembuatan variabel juga tidak boleh menggunakan karakter khusus, selain underscore.
@@ -894,25 +514,7 @@
             <p>
               Berikut ini adalah contoh kode untuk setiap operator.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   $a = 1;
                   $b = 2;
                   $c = $a+$b;
@@ -939,34 +541,14 @@
                   $c = $a%$b;
                   // nilai $c adalah INT 1
                   // karena 2 bagi 1 menghasilkan sisa 1.
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <h3>Operator untuk String</h3>
             <p>
               Tipe data String memiliki operator khusus yaitu titik (.).
               Operator ini digunakan untuk menggabungkan 2 string atau lebih.
               Lihat contoh kode untuk lebih jelasnya.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   $a = &#x27;Hallo&#x27;;
                   $b = &#x27;Dunia&#x27;;
                   $c = $a.$b;
@@ -987,9 +569,7 @@
                   $a = &#x27;Hallo&#x27;;
                   $a .= &#x27; Dunia&#x27;;
                   // nilai $a adalah String &#x27;Halo Dunia&#x27;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2>Logika Percabangan</h2>
             <p>
@@ -1024,25 +604,7 @@
             <p>
               Contoh kode untuk perbandingan nilai dari variabel dan nilai langsung beserta cara bacanya.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   // Contoh perbandingan menggunakan variabel
                   $a = 1;
                   $b = 2;
@@ -1071,9 +633,7 @@
                   // Apakah 7 lebih besar dari variabel 6?
                   // jika benar jalankan perintah echo &#x27;7 tidak lebih besar dari 6&#x27;;
                   // lainnya (jika salah maksudnya) jalankan perintah echo &#x27;7 lebih besar dari 6&#x27;;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <div class="message is-info">
               <div class="message-body">
@@ -1089,25 +649,7 @@
               Berikut ini adalah contoh Logika Percabangan lebih dari satu.
             </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-              <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                 // Contoh Logika percabangan Majemuk
                 $status_transaksi = &#x27;berhasil&#x27;;
                 if($status_transaksi == &#x27;berhasil&#x27;){
@@ -1126,34 +668,14 @@
                 // jika benar jalankan perintah echo &#x27;Status Transaksi: Gagal&#x27;;
                 // lainnya (jika tidak memenuhi kriteria if maupun if else)
                 // jalankan echo &#x27;Status Transaksi: Tidak diketahui&#x27;;
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
 
           <h3>Logika Percabangan lebih dari satu kondisi</h3>
           <p>
             Berikut ini adalah contoh Logika Percabangan lebih dari satu kondisi.
           </p>
 
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-            <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
               // Contoh Logika Percabangan lebih dari satu kondisi
               $status_transaksi = &#x27;berhasil&#x27;;
               $penjual_aktif = 1;
@@ -1168,9 +690,7 @@
               }else{
                 echo &#x27;Status Transaksi: Tidak diketahui&#x27;;
               }
-            </highlight-code>
-          </div>
-        </div>
+            </MacWindowCodeSnippet>
 
           <h2>Perulangan</h2>
           <p>
@@ -1189,25 +709,7 @@
           <p>
             Berikut ini adalah contoh kode untuk penelusuran array dengan foreach.
           </p>
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
                 // contoh sederhana
                 $anggota = array();
                 $anggota[&#x27;pertama&#x27;] = &#x27;Sandi&#x27;;
@@ -1243,9 +745,7 @@
                   // ditambah nilai yang baru dengan kunci array otomatis
                   // tanpa harus merubah kode foreach
                 }
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
 
           <h3>Perulangan dengan For</h3>
           <p>
@@ -1257,25 +757,7 @@
             Berikut ini adalah contoh kode untuk penelusuran array dengan for.
           </p>
 
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
                 // contoh sederhana
                 $anggota = array();
                 $anggota[] = &#x27;Sandi&#x27;;
@@ -1315,9 +797,7 @@
                   // dan ke-7 index nya bukan integer
                 }
                 //jadi lebih mudah pakai foreach kan
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
 
 
 
@@ -1325,25 +805,7 @@
           <p>
             Berikut ini adalah contoh kode untuk penelusuran array dengan foreach tapi pemanggilan arraynya menggunakan kunci array.
           </p>
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
                 // contoh sederhana
                 $anggota = array();
                 $anggota[] = &#x27;Sandi&#x27;;
@@ -1369,9 +831,7 @@
                   // array key bukan integer pun tidak akan menimbulkan error
                   // jadi pakai foreach lebih mudah
                 }
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
 
           <h2>Kesimpulan</h2>
           <p>

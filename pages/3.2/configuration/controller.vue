@@ -16,25 +16,7 @@
             <p>
               On this configuration file you can change the default value of controller and then manipulate the url routing.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   $default_controller=&#x27;home&#x27;;
                   $notfound_controller=&#x27;notfound&#x27;;
@@ -53,9 +35,7 @@
                   $routes[&#x27;dukungan/kebijakan-privasi&#x27;] = &#x27;dukungan/kebijakan_privasi&#x27;;
                   $routes[&#x27;dukungan/syarat-ketentuan&#x27;] = &#x27;dukungan/syarat_ketentuan&#x27;;
                   //$routes[&#x27;produk/(:any)/(:any)&#x27;] = &#x27;produk/detail/index/$1/$2&#x27;;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>The sequences of routes variable determines priority for each route. Learn more about remapping <NuxtLink to="/3.2/uri-routing">URI Routing</NuxtLink>.</p>
           </div>
         </div>
