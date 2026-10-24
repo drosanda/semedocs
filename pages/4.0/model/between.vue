@@ -24,29 +24,28 @@
             </p>
 
             <MacWindowCodeSnippet lang="php">
-                  $this->db->between(string $column_name, string $value_from, string $value_to): $this->db
+                  $this-&#x3E;db-&#x3E;between(string $column_name, string $value_from, string $value_to): $this-&#x3E;db
                 </MacWindowCodeSnippet>
 
             <h3>Parameters</h3>
             <p>
-              Where method has 2 required parameters that is <b>column name</b> and <b>value</b>, another parameters are optional.
-              Here is the completed parameters can be used by where methods.
+              The <code>between</code> method has 3 required parameters: <b>$column_name</b>, <b>$value_from</b>, and <b>$value_to</b>.
             </p>
 
             <h4>$column_name</h4>
             <p>
-              The <code>$column_name</code> value is required for filtering data from table.
+              The <code>$column_name</code> is the name of the column used to filter data from the table.
               This parameter value is automatically escaped.
             </p>
 
-            <h3>$value_from</h3>
+            <h4>$value_from</h4>
             <p>
-              The <code>$value_from</code> can contain about start value for filtering data by between method.
+              The <code>$value_from</code> is the start value of the range to be matched against <code>$column_name</code>.
             </p>
 
-            <h3>$value_to</h3>
+            <h4>$value_to</h4>
             <p>
-              The <code>$value_to</code> can contain about end value for filtering data by between method.
+              The <code>$value_to</code> is the end value of the range to be matched against <code>$column_name</code>.
             </p>
 
             <h2>Example</h2>

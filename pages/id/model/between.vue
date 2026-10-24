@@ -46,7 +46,7 @@
             </p>
             <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
-                  class Blog_Model extends SENE_Model{
+                  class Blog_Model extends \SENE_Model{
                     public $table = &#x27;d_order&#x27;;
                     public $table_alias = &#x27;dor&#x27;;
                     
