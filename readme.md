@@ -42,7 +42,6 @@ All are optional; defaults point to `http://localhost:$PORT`.
     parent::__construct();
   </MacWindowCodeSnippet>
   ```
-- `markdown/` – `@nuxt/content` pages.
 
 ## License
 This source code under MIT license.

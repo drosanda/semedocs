@@ -24,7 +24,6 @@
   },
   "homepage": "https://github.com/drosanda/semedocs#readme",
   "dependencies": {
-    "@nuxt/content": "^1.14.0",
     "@nuxtjs/amp": "^0.5.4",
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/sitemap": "^2.4.0",
