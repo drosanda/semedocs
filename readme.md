@@ -33,7 +33,9 @@ All are optional; defaults point to `http://localhost:$PORT`.
 
 ## Project structure
 - `pages/<version>/` – documentation pages per Seme version (`3.0`–`4.0`); `pages/id/` is the Indonesian version.
-- `layouts/` – one layout per version.
+- `layouts/` – one tiny file per layout name that pages reference (`layout: 'v4.0'`); each just renders `<DocLayout name="...">`.
+- `components/DocLayout.vue` – the shared page shell (sidebar, footer, head/meta). Per-layout settings live in `data/layouts.js`.
+- `data/nav/` – sidebar menus as data; `data/versions.js` holds the release number and the shared "Versions" menu. To add a page to a sidebar, edit the matching file in `data/nav/`.
 - `components/MacWindowCodeSnippet.vue` – code block with the Mac window frame. Use it for every code sample:
   ```vue
   <MacWindowCodeSnippet lang="php">
