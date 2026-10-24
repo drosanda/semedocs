@@ -18,7 +18,7 @@ class Home extends SENE_Controller{
 	public function __construct(){
 		parent::__construct();
 	}
-	private funtion __init(){
+	private function __init(){
 		$data = array();
 		$sess = $this->getKey();
 		if(!isset($sess->user_login)) $sess->user_login = 0;

@@ -154,7 +154,7 @@
             <h2>Access Methods</h2>
             <p>Seme Framework supported access method for public and private declaration.</p>
             <h3>Private Properties and Methods</h3>
-            <p>Seme Framework allow your method in Private or in Protected mode. The Private or Protected mode cant be executed through URI request. Or you can use double underscore (__) means as Private properties or methods.</p>
+            <p>Seme Framework allows your method in Private or in Protected mode. The Private or Protected mode cannot be executed through URI request. Or you can use double underscore (__) means as Private properties or methods.</p>
 
             <MacWindowCodeSnippet lang="php">
                   class Home extends SENE_Controller{

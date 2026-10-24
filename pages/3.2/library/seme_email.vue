@@ -20,7 +20,7 @@
             <MacWindowCodeSnippet lang="php">
                   $this-&#x3E;lib(&#x27;seme_email&#x27;);
                 </MacWindowCodeSnippet>
-            <p>You can put libary loader in constructor of controller or on each method in your controller.</p>
+            <p>You can put library loader in constructor of controller or on each method in your controller.</p>
             <h2>Basic Usage</h2>
             <p>Seme Email has some method, here is the list of common methods:</p>
             <MacWindowCodeSnippet lang="php">

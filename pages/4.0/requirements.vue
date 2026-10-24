@@ -32,7 +32,7 @@
               <li>MariaDB version 5.5.x via the MySQLi drivers</li>
               <li>MariaDB version 10.x.x via the MySQLi drivers</li>
             </ul>
-            <p>Since the framework requires the working connection to a MySQL database, it wont work unless you setup the database connection.</p>
+            <p>Since the framework requires the working connection to a MySQL database, it will not work unless you setup the database connection.</p>
 
             <h2>IDE or Text Editor</h2>
             <p>An IDE or Text Editor are required for implementing codes into Seme Framework. You can choose any IDE but Seme Framework was built by using:</p>

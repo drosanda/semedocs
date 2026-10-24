@@ -13,7 +13,7 @@
         <div class="column">
           <div class="content">
             <h1 class="">Configuration: database.php</h1>
-            <p>Like other framework, Seme Framework has single configuration for connecting to MySQL or MariaDB. Currently available engine is MySQLi.</p>
+            <p>Like other frameworks, Seme Framework has single configuration for connecting to MySQL or MariaDB. Currently available engine is MySQLi.</p>
             <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   $db['host']  = "localhost";

@@ -15,7 +15,7 @@
             <h1>Hello From Model</h1>
             <p>On this tutorial we will learn, how to interacted with model from controller.</p>
             <p>First, open files located at <code>app/model/hello_model.php</code>.</p>
-            <p>If the file doesnt exists, create one.</p>
+            <p>If the file does not exist, create one.</p>
             <p>And then, put this code on it.</p>
 
             <MacWindowCodeSnippet lang="php">

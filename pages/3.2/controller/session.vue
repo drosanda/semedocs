@@ -14,7 +14,7 @@
           <div class="content">
             <h1 class="">Using Session</h1>
             <p>
-              Seme Framework comes with builtin session manager which stored to <code>$_SESSION</code> array with randomize string that define through <NuxtLink to="/3.2/configuration/session/">configuration</NuxtLink>.
+              Seme Framework comes with built-in session manager which stored to <code>$_SESSION</code> array with randomize string that define through <NuxtLink to="/3.2/configuration/session/">configuration</NuxtLink>.
             </p>
 
             <h2>Method <code>setKey()</code></h2>
@@ -36,7 +36,7 @@
                     public function __construct(){
                       parent::__construct();
                     }
-                    private funtion __init(){
+                    private function __init(){
                       &#x9;$data = array();
                       &#x9;$sess = $this-&#x3E;getKey();
                       &#x9;if(!isset($sess-&#x3E;user_login)) $sess-&#x3E;user_login = 0;

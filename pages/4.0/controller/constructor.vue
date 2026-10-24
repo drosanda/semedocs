@@ -15,12 +15,12 @@
             <h1 class="">Constructor method</h1>
             <p>
               The Constructor method will loaded all parent class that required for a controller.
-              This is method is very important for Seme Framework Controller.
+              This method is very important for Seme Framework Controller.
               Usually the parent constructor are executed after class constructor.
             </p>
             <div class="message is-info">
               <div class="message-body">
-                <p>If the constructor method is missed, you maybe get unexpected result.</p>
+                <p>If the constructor method is missed, you may get unexpected result.</p>
               </div>
             </div>
 
@@ -33,7 +33,7 @@
                 </MacWindowCodeSnippet>
             <h3>Parameters</h3>
 
-            <p>This method doenst need any parameter.</p>
+            <p>This method does not need any parameter.</p>
 
             <h2>Example</h2>
             <p>Here is the full example usage for <code>__construct</code> method.</p>

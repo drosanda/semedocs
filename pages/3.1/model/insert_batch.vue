@@ -38,7 +38,7 @@
               The <code>$data_inserts</code> value can contain 2 dimension array.
               The first dimension array are the data sequencer. Each data sequencer contain an array with <code>key value pair</code>.
               The <code>array key</code> refer to column name of the table and the value refer to value that will be inserted.
-              This value supported MySQL builtin functions and values, such as:
+              This value supported MySQL built-in functions and values, such as:
               <ul>
                 <li><code>NOW()</code></li>
                 <li><code>NULL</code></li>

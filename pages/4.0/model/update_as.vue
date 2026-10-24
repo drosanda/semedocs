@@ -50,7 +50,7 @@
             <p>
               The <code>$data_update</code> value can contain key value pair in array and automatically <code>escaped</code>.
               The key refer to column name of the table and the value refer to value that will be inserted.
-              This value supported MySQL builtin functions and values, such as:
+              This value supported MySQL built-in functions and values, such as:
               <ul>
                 <li><code>NOW()</code></li>
                 <li><code>NULL</code></li>

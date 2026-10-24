@@ -25,7 +25,7 @@
                   $this-&#x3E;db-&#x3E;lastId(): integer
                 </MacWindowCodeSnippet>
             <h3>Parameters</h3>
-            <p>This method doenst need any parameter.</p>
+            <p>This method does not need any parameter.</p>
 
             <h2>Example</h2>
             <p>

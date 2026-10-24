@@ -24,7 +24,7 @@ could not find model admin/b_user_model on D:/XAMPP/htdocs/seme_framework/app/mo
 </MacWindowCodeSnippet>
 
             <h2>Solution</h2>
-            <p>Create manually the model file same as model name name under<code>app/model/</code>.</p>
+            <p>Create manually the model file same as model name under<code>app/model/</code>.</p>
             <p>If the model loader has path, you have to checked the directory are existed or not.</p>
             <p>If the directory is missing, you have to created it manually.</p>
             <p>Please make sure the filename and with its extension are not contain symbol and whitespace(s).</p>

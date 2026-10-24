@@ -20,7 +20,7 @@
             <MacWindowCodeSnippet lang="php">
                   $this->lib('seme_log');
                 </MacWindowCodeSnippet>
-            <p>You can put libary loader in constructor of controller or on each method in your controller.</p>
+            <p>You can put library loader in constructor of controller or on each method in your controller.</p>
             <h2>Basic Usage</h2>
             <p>Seme Log only have one method called <b>write</b> for writting log into file log. Here is the example:</p>
             <MacWindowCodeSnippet lang="php">

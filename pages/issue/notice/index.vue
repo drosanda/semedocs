@@ -12,7 +12,7 @@
         <div class="column">
           <div class="content">
             <h1>Error Notice List</h1>
-            <p>Here is the list of known notice message that ussually occured in Seme Framework</p>
+            <p>Here is the list of known notice message that usually occurred in Seme Framework</p>
             <ul>
               <li><NuxtLink to="/issue/notice/missing-app-cache">Notice: Missing app/cache</NuxtLink></li>
               <li><NuxtLink to="/issue/notice/missing-kero-bin">Notice: Missing kero/bin</NuxtLink></li>
@@ -51,7 +51,7 @@ export default {
       name: 'Seme Framework Issue',
       suffix: ' - Seme Framework Issue',
       title: 'Error Notice',
-      description: 'Here is the list of Error Notice that commonly occured while using Seme Framework.',
+      description: 'Here is the list of Error Notice that commonly occurred while using Seme Framework.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

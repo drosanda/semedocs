@@ -92,7 +92,7 @@ export default {
     return {
       name: 'Seme Docs',
       title: 'Seme Framework Documentation',
-      description: 'Deployable and lightweight PHP MVC framework that suitable for small and medium web app',
+      description: 'Deployable and lightweight PHP MVC framework that is suitable for small and medium web app',
       logo: require('~/static/logo.png'),
       ga: (process.env.ORIGIN_URL || 'http://localhost:3001/')+'ga.json',
       breadcrumbs: [

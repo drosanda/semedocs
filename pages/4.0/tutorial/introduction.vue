@@ -33,9 +33,9 @@
 
             <h3>Controller</h3>
             <p>
-              On Seme Framework, the default controller named <code>home.php</code> with its class name name <code>Home</code> too.
+              On Seme Framework, the default controller named <code>home.php</code> with its class name <code>Home</code> too.
               First, open files located at <code>app/controller/home.php</code>.
-              If the file doesnt exists, create one.
+              If the file does not exist, create one.
             </p>
 
             <MacWindowCodeSnippet lang="php">

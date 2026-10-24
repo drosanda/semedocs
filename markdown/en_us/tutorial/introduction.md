@@ -18,7 +18,7 @@ Hello World is often used to illustrate the basic syntax of a programming langua
 We assumed that you put Seme Framework which is described In the Download & Install  page. After that, start the XAMPP and open http://localhost/seme_framework.
 
 ## Controller
-On Seme Framework, the default controller named home.php with its class name name Home too. First, open files located at `app/controller/home.php`. If the file doesnt exists, create one.
+On Seme Framework, the default controller named home.php with its class name Home too. First, open files located at `app/controller/home.php`. If the file does not exist, create one.
 
 ```php
 <?php

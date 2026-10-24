@@ -26,7 +26,7 @@
                     public function __construct(){
                       parent::__construct();
                     }
-                    private funtion __init(){
+                    private function __init(){
                       &#x9;$data = array();
                       &#x9;$sess = $this-&#x3E;getKey();
                       &#x9;if(!isset($sess-&#x3E;user_login)) $sess-&#x3E;user_login = 0;

@@ -82,7 +82,7 @@
 
                   # now compressing the Seme Framework files and directories
                   zip -r9 --exclude="*.git" --exclude="v4.zip" --exclude="*node_modules*" v4.zip .
-                  # at the end of command contain dot (.) dont missed it
+                  # at the end of command contain dot (.) do not missed it
                   #   will produce zip file on
                   #     /Applications/XAMPP/htdocs/seme_framework/v4.zip
                 </MacWindowCodeSnippet>
@@ -102,7 +102,7 @@
 
                   # now compressing the Seme Framework files and directories
                   zip -r9 --exclude="*.git" --exclude="v4.zip" --exclude="*node_modules*" v4.zip .
-                  # at the end of command contain dot (.) dont missed it
+                  # at the end of command contain dot (.) do not missed it
                   #   will produce zip file on
                   #     /opt/lampp/htdocs/seme_framework/v4.zip
                 </MacWindowCodeSnippet>

@@ -23,7 +23,7 @@ Missing theme directory for frontend
 </MacWindowCodeSnippet>
 
             <h2>Solution</h2>
-            <p>Create manually the directory same as theme name name under<code>app/view/</code>.</p>
+            <p>Create manually the directory same as theme name under<code>app/view/</code>.</p>
           </div>
         </div>
       </div>

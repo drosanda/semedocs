@@ -12,7 +12,7 @@
         <div class="column">
           <div class="content">
             <h1>[1024] could not find model</h1>
-            <p>Could not find model [model_name] it was occured when model file cannot be loaded from controller.</p>
+            <p>Could not find model [model_name] it was occurred when model file cannot be loaded from controller.</p>
 
             <p>Example error message</p>
             <MacWindowCodeSnippet lang="php">

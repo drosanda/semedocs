@@ -18,7 +18,7 @@
             </p>
             <div class="message is-info">
               <div class="message-body">
-                <p>If the constructor method is missed, you maybe get blank result.</p>
+                <p>If the constructor method is missed, you may get blank result.</p>
               </div>
             </div>
 

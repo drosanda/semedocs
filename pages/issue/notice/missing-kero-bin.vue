@@ -18,7 +18,7 @@
 
             <div class="message is-info">
               <div class="message-body">
-                <p>This only occured on Seme Framework version 4.x.x.</p>
+                <p>This only occurred on Seme Framework version 4.x.x.</p>
               </div>
             </div>
 

@@ -22,7 +22,7 @@
                   $notfound_controller=&#x27;notfound&#x27;;
 
                   //override default routing
-                  //make sure dont add any traing slash in array key of routes
+                  //make sure do not add any trailing slash in array key of routes
 
                   //example $routes[&#x27;produk/(:any)&#x27;] = &#x27;produk/detail/index/$1&#x27;;
                   //example $routes[&#x27;blog/id/(:num)/(:any)&#x27;] = &#x27;blog/detail/index/$1/$2&#x27;;

@@ -53,7 +53,7 @@
 
             <h2>Basic Usage</h2>
             <p>
-              You can put libary loader in constructor of controller or on each method in your controller.
+              You can put library loader in constructor of controller or on each method in your controller.
               To use the Seme Email library, you can add a few lines of code to a controller in the Seme Framework. 
               The following is a basic example of implementing the Seme Email code in a Controller.
               Please create a new file under <code>app/controller</code> named it <code>emailregister.php</code>, then copy paste this HTML code below into that file.
