@@ -1,0 +1,237 @@
+<template>
+  <div class="section">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul class="breadcrumbs">
+          <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
+          <li class=""><NuxtLink to="/id">4.0.3 (Bahasa)</NuxtLink></li>
+          <li class=""><NuxtLink to="/id/controller">Controller</NuxtLink></li>
+          <li class="unavailable">getJsReady</li>
+        </ul>
+      </nav>
+      <div class="columns">
+        <div class="column">
+          <div class="content">
+            <h1 class="">Metode getJsReady</h1>
+            <p>
+              Metode <code>getJsReady</code> digunakan untuk mengambil view component javascript yang tersimpan dari metode <NuxtLink to="/id/controller/putjsready">putJsReady <i class="fa fa-window-restore"></i></NuxtLink>.
+              Pastikan untuk memanggil metode ini hanya didalam block <a href="https://stackoverflow.com/questions/3698200/window-onload-vs-document-ready#answer-3698214" target="_blank">document ready <i class="fa fa-external-link"></i></a> javascript.
+            </p>
+
+            <h2>Bentuk Umum</h2>
+            <p>
+              Berikut ini adalah bentuk umum metode <code>getJsReady</code> dari kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
+            </p>
+            <MacWindowCodeSnippet lang="php">
+                  $this-&#x3E;getJsReady(): string
+                </MacWindowCodeSnippet>
+
+            <h3>Parameter</h3>
+            <p>
+              Metode ini tidak memiliki parameter.
+            </p>
+
+            <h2>Contoh</h2>
+            <p>
+              Biasanya metode ini hanya dipanggil didalam file layout atau didalam view component.
+              Berikut ini adalah contoh penggunaanya pada file layout <code>col-1.php</code>.
+            </p>
+            <MacWindowCodeSnippet lang="html">
+                  &#x3C;!DOCTYPE html&#x3E;
+                  &#x3C;html&#x3E;
+                  &#x3C;head&#x3E;
+                    &#x3C;title&#x3E;Test&#x3C;/title&#x3E;
+                  &#x3C;/head&#x3E;
+                  &#x3C;body&#x3E;
+                    &#x3C;script&#x3E;
+                    $(document).ready(function(e){
+                      &#x3C;?php $this-&#x3E;getJsReady(); ?&#x3E;
+                    });
+                    &#x3C;/script&#x3E;
+                  &#x3C;/body&#x3E;
+                  &#x3C;/html&#x3E;
+                </MacWindowCodeSnippet>
+
+            <h3>Contoh struktur file dan direktori</h3>
+            <p>
+              Sementara, untuk struktur file dan direktorinya.
+            </p>
+            <MacWindowCodeSnippet lang="php">
+                  app/
+                  ├── controller/
+                  |&#160;├── home.php
+                  |&#160;└── home_bottom.php
+                  └── view/
+                  &#160;└── front/
+                  &#160;&#160;└── page/
+                  &#160;&#160;&#160;└── col-1.php
+                </MacWindowCodeSnippet>
+
+            <h3>Contoh source code pada kelas Controller</h3>
+            <p>
+              Ini adalah contoh kode untuk penggunaan di controllernya.
+            </p>
+            <MacWindowCodeSnippet lang="php">
+                  class Home extends SENE_Controller
+                  {
+                    public function __construct()
+                    {
+                      parent::__construct();
+                      $this-&#x3E;setTheme(&#x27;front&#x27;);
+                    }
+                    public function index()
+                    {
+                      $data = array();
+                      $data['admin_name'] = 'Daeng';
+                      $this-&#x3E;putJsReady(&#x27;home/home_bottom&#x27;,$data);
+                      ...
+                    }
+                  }
+                </MacWindowCodeSnippet>
+            <h3>Contoh isi home_bottom.php</h3>
+            <p>
+              Berikut ini adalah contoh isi source code untuk <code>home_bottom.php</code> yang berisi kode JavaScript.
+            </p>
+            <MacWindowCodeSnippet lang="javascript">
+                  alert(&#x27;&#x3C;?php echo $admin_name?&#x3E;&#x27;);
+                </MacWindowCodeSnippet>
+            <br>
+            <p>
+              Variabel <code>$data</code> yang diteruskan ke metode <code>putJsContent</code>, telah diekstraksi menjadi variabel asli tergantung pada nama kunci array.
+              Dalam hal ini, <code>$data[&#x27;admin_name&#x27;]</code> diubah menjadi <code>$admin_name</code> jika dipanggil di dalam file <code>home_bottom.php</code>.
+            </p>
+
+            <div class="nav-bottom">
+              <div class="nav-bottom-left">
+                <nuxt-link to="/id/controller/getjsfooter" class="btn">
+                  <i class="fa fa-chevron-left"></i>
+                  Metode Get JS Footer
+                </nuxt-link>
+              </div>
+              <div class="nav-bottom-right">
+                <nuxt-link to="/id/controller/getkey" class="btn">
+                  Metode Get Key
+                  <i class="fa fa-chevron-right"></i>
+                </nuxt-link>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</template>
+<script setup>
+definePageMeta({ layout: 'id' })
+</script>
+<script>
+export default {
+  data (){
+    return {
+      name: 'Seme Framework 4',
+      suffix: ' - Seme Framework 4',
+      title: 'Metode getJsReady',
+      description: 'Pelajari selengkapnya tentang metode getJsReady dari SENE_Controller di Seme Framework versi 4.',
+      btiex: '/img/controller/browser-title-example.png',
+      breadcrumbs: [
+        {
+          url: process.env.BASE_URL || 'http://localhost:3001',
+          text: 'Seme Framework'
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id',
+          text: 'ID'
+        },
+        {
+          url: (process.env.BASE_URL || 'http://localhost:3001')+'/id/controller',
+          text: 'Controller'
+        }
+      ],
+    }
+  },
+  head() {
+    return {
+      htmlAttrs: {
+        lang: 'id'
+      },
+      title: this.title+this.suffix,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.name+': '+this.title
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.description
+        }
+      ]
+    }
+  },
+  jsonld() {
+    this.breadcrumbs.push({url: (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path, text: this.title });
+    const items = this.breadcrumbs.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@id': item.url,
+        name: item.text,
+      },
+    }));
+    return [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: items,
+      },
+      {
+        "@type": "NewsArticle",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": (process.env.BASE_URL || 'http://localhost:3001')+this.$route.path.replace(/\/+$/, '') + '/'
+        },
+        "headline": (this.headline || this.title),
+        "image": [
+          (process.env.CDN_URL || 'http://localhost:3001')+'/logo.png'
+        ],
+        "dateCreated": "2021-08-16T08:47:00+07:00",
+        "datePublished": "2021-08-16T08:47:00+07:00",
+        "dateModified": "2021-08-16T08:47:00+07:00",
+        "author": {
+          "@type": "Person",
+          "gender": "Male",
+          "name": "Daeng Rosanda, S.Kom",
+          "alternateName": "Daeng Rosanda",
+          "jobTitle": "Founder",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Cipta Esensi Merenah",
+            "email": "hi@cenah.co.id"
+          }
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Cipta Esensi Merenah",
+          "description": "Cipta Esensi Merenah (Cenah) is software house company focused on developing web-based application from Bandung, Indonesia.",
+          "logo": {
+            "@type": "ImageObject",
+            "name": "logo Cipta Esensi Merenah",
+            "url": "https://cdn.cenah.co.id/_nuxt/img/logo-wide.5420183.png",
+            "width": "256px",
+            "height": "62px"
+          }
+        },
+        "description": this.description
+      }
+    ];
+  }
+}
+</script>
