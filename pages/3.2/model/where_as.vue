@@ -15,25 +15,7 @@
             <h1 class="">Where AS Method</h1>
             <p>The <code>where_as</code> method is part of database class builder for filtering data compatible with WHERE Clause on SQL. This method support chained, and has flow from top to bottom while bracket are used. The <b>difference</b> is this method does not automatically escaped</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   class Blog_Model extends SENE_Model{
                     var $tbl = &#x27;d_order&#x27;;
                     var $tbl_as = &#x27;dor&#x27;;
@@ -59,30 +41,10 @@
                       return $this-&#x3E;db-&#x3E;get();
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <h2>Parameters</h2>
             <p>Where method has 2 required parameters that is <b>column name</b> and <b>value</b>, another parameters are optional. Here is the completed parameters can be used by where methods</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   $this-&#x3E;db-&#x3E;where(
                   COLUMN_NAME,
                   VALUE,
@@ -94,9 +56,7 @@
                   OPENBRACKET,
                   CLOSEBRACKET
                   );
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <h3>COLUMN_NAME</h3>
             <p>Column name required for filtering data from table. The columname should exist on selected table. This method has unescaped value.</p>
             <h3>VALUE</h3>
@@ -128,29 +88,9 @@
             <p>Required for adding bracket for prioritize condition filtering, default value 0. Available value <b>1</b> and <b>0</b>.</p>
             <h2>Escaping Value</h2>
             <p>Escaping value is required for string matching. Here is the example</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   $this-&#x3E;db-&#x3E;where_as(&#x22;$this-&#x3E;tbl_as.status_text&#x22;,$this-&#x3E;db-&#x3E;esc(&#x22;order_completed&#x22;));
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <h2>Basic Where Condition</h2>
             <p>For basic usage, Seme Framework has basic where method called <NuxtLink to="/3.2/model/where/">where method</NuxtLink>.</p>
 

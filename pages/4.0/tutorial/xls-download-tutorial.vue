@@ -24,25 +24,7 @@
               to build the Controller for the shipment data XLS. Then, write this code into the <code>pengiriman.php</code> file and save it. 
               Make sure to save the code in a file that suits your needs, it doesn't have to be the same as the provided example.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   <?php
                     //loading library
                     $vendorDirPath = (SEMEROOT . 'kero/lib/phpoffice/vendor/');
@@ -263,9 +245,7 @@
                             $this->__forceDownload($save_dir . '/' . $save_file . '.xlsx');
                         }
                     }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2>Create a Model</h2>
             <p>
@@ -274,25 +254,7 @@
               Create a file inside <code>app/model/d_kirim_model.php</code>. Then, write this code into the <code>d_kirim_model.php</code> file and save it. 
               Make sure to save the code in a file that suits your needs, it doesn't have to be the same as the provided example.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                     <?php
                     /**
                     * Model untuk table d_kirim_model
@@ -373,9 +335,7 @@
                             return $this->db->get("object", 0);
                         }
                     }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2>Create a View</h2>
             <p>
@@ -383,23 +343,7 @@
               allowing users to download data according to the required date. Create a file inside <code>app/view/laporan/pengiriman/home.php</code>. 
               Then, write this code into the <code>home.php</code> file and save it. Make sure to save the code in a file that suits your needs, it doesn't have to be the same as the provided example.
             </p>
-            <div class="macwindow">
-                <div class="titlebar">
-                    <div class="buttons">
-                    <div class="close">
-                        <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    </div>
-                    <div class="minimize">
-                        <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    </div>
-                    <div class="zoom">
-                        <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="maccontent">
-                    <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                     &lt;style&gt;
                     .panel {
                         padding: 0 1em;
@@ -484,34 +428,14 @@
                             &lt;/div&gt;
                         &lt;/div&gt;
                     &lt;/div&gt;
-                    </highlight-code>
-                </div>
-            </div>
+                    </MacWindowCodeSnippet>
 
             <p>
               Next, create a file inside <code>app/view/laporan/pengiriman/home_bottom.php</code> to store the Javascript code. 
               This code is used to make the web page more interactive and dynamic. Write this code into the <code>home_bottom.php</code> file and save it. 
               Make sure to save the code in a file that suits your needs, it doesn't have to be the same as the provided example.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                 $('#button_xls').on('click',function(e){
                     e.preventDefault();
                     $('.btn-submit').prop('disabled',true);
@@ -530,9 +454,7 @@
                         window.location = url;
                     },999);
                 });
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p>
               Last, Finally, let's see the end result of the XLS download feature by testing it in Google Chrome or Firefox. 

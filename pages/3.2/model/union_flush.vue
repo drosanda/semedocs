@@ -21,29 +21,9 @@
             <p>
               Here is the basic usage <code>union_flush</code> method from <code>$db</code> property on <NuxtLink to="/3.2/model/#SENE_Model" target="_blank">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   $this-&#x3E;db-&#x3E;union_flush(): $this-&#x3E;db
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <h3>Parameters</h3>
             <p>This method does not need any parameter.</p>
 

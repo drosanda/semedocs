@@ -21,29 +21,9 @@
             <p>
               Here is the basic usage <code>load</code> method from <NuxtLink to="/4.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> class.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   $this-&#x3E;load(string $filename_location[, string $alias=''[, string $load_type='model']]):self
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>Parameters</h3>
             <p>
@@ -72,25 +52,7 @@
             <p>
               On this example, will show the implementation of <code>load</code> method without an alias.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   class Blog extends \SENE_Controller {
                     public function __construct(){
@@ -103,33 +65,13 @@
                       die();
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>With Alias</h3>
             <p>
               On this example, will show the implementation of <code>load</code> method using alias.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   class Blog extends \SENE_Controller {
                     public function __construct(){
@@ -142,9 +84,7 @@
                       die();
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <div class="message is-success">
               <div class="message-body">
                 <p><b>Tips</b></p>
@@ -157,25 +97,7 @@
             <p>
               On this example, will show the implementation of <code>load</code> method loading a model inside a directory and without an alias.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   class Blog extends \SENE_Controller {
                     public function __construct(){
@@ -188,9 +110,7 @@
                       die();
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <div class="message is-warning">
               <div class="message-body">

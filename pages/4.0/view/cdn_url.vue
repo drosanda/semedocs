@@ -22,31 +22,11 @@
             <p>
               The CDN URL purpose is to create base url for CDN usage. Here is example codes on development.php file.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   ...
                   $cdn_url = &#x27;https://cdn.cenah.co.id/&#x27;;
                   ...
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2 class="">How It Works</h2>
             <p>
@@ -58,31 +38,11 @@
               If the value from configuration is empty, the <code>$base_url</code> value from Seme Framework configuration will be used as default value.
             </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   ...
                   $site = &#x27;http://localhost/seme_framework/&#x27;;
                   ...
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
           </div>
         </div>

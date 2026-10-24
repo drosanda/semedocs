@@ -31,50 +31,12 @@
             <h2>Penggunaan Dasar</h2>
             <p>Berikut ini adalah contoh penggunaan dasar metode Constructor dalam bentuk kode</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   parent::__construct();
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p>Kemudian, ini adalah contoh utuhnya:</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   class Blog extends SENE_Controller {
                     public function __construct(){
@@ -84,9 +46,7 @@
                       echo 'Hi, I am run properly!';
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <div class="message is-info">
               <div class="message-body">

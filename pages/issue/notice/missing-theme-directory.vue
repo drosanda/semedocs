@@ -16,34 +16,14 @@
             <p>Seme framework has theme directory under <code>app/view</code>, so you have to checked it for supplied theme name existed or not.</p>
 
             <p>Example error message</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
 Missing theme directory for front
 Missing theme directory for admin
 Missing theme directory for frontend
-</highlight-code>
-</div>
-</div>
+</MacWindowCodeSnippet>
 
             <h2>Solution</h2>
-            <p>Create manually the directory same as theme name name under<code>app/view/</code>.</p>
+            <p>Create manually the directory same as theme name under<code>app/view/</code>.</p>
           </div>
         </div>
       </div>

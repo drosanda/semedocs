@@ -33,25 +33,7 @@
             <p>
               Here is the files and directories example for specific view component.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   app/
                   └── view/
                   &#160;└── front/
@@ -70,9 +52,7 @@
                   &#160;&#160;&#160; ├── home.php
                   &#160;&#160;&#160; ├── home_modal.php
                   &#160;&#160;&#160; └── home_bottom.php
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2 class="">The Reusable View Component(s)</h2>
             <p>
@@ -90,25 +70,7 @@
               And then Seme Framework theme requires a directory named <code>page</code>, a <code>layout file</code> inside page directory, <code>script.json</code> file, and <code>theme.json</code> file.
               For more detailed information you can see the directory structure ilustration below.
             </p>
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
                 app/
                 └── view/
                 &#160;└── [THEME_NAME]/
@@ -116,9 +78,7 @@
                 &#160;&#160;├── script.json
                 &#160;&#160;└── page/
                 &#160;&#160;&#160;└── col-1.php
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
 
           <h4>Theme Directory Name Rules</h4>
           <p>
@@ -134,25 +94,7 @@
           <p>
             Here is the example codes for a layout file named <code>col-1.php</code> file.
           </p>
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="html">
+          <MacWindowCodeSnippet lang="html">
                 &#x3C;!DOCTYPE html&#x3E;
                 &#x3C;html&#x3E;
                 &#x20;&#x3C;head&#x3E;
@@ -177,9 +119,7 @@
                 &#x20;&#x3C;/script&#x3E;
                 &#x3C;/body&#x3E;
                 &#x3C;/html&#x3E;
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
 
           <h4>theme.json File</h4>
           <p>
@@ -191,25 +131,7 @@
           <p>
             Here is the example codes for theme.json file using <b>json object</b>, this method only supported from Seme Framework 4.0.2 above.
           </p>
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="javascript">
+          <MacWindowCodeSnippet lang="javascript">
                 {
                   &#x22;link&#x22;:
                   [
@@ -227,9 +149,7 @@
                     }
                   ]
                 }
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
 
           <h4>script.json File</h4>
           <p>
@@ -242,25 +162,7 @@
             Here is the example codes for script.json file using <b>json object</b>,
             This method only supported from Seme Framework 4.0.2 above.
           </p>
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="javascript">
+          <MacWindowCodeSnippet lang="javascript">
                 {
                   &#x22;script&#x22;:
                   [
@@ -275,9 +177,7 @@
                     }
                   ]
                 }
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
 
           <h4>Using <code>{{cdn_url}}</code> and <code>{{base_url}}</code> Keyword</h4>
           <p>

@@ -22,29 +22,9 @@
             <p>
               Berikut ini adalah bentuk umum metode <code>group_by</code> dari properti <code>$db</code> di kelas <NuxtLink to="/id/model/#SENE_Model">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   $this-&#x3E;db-&#x3E;group_by(string $expression): $this-&#x3E;db
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <h3>Parameter</h3>
             <p>
               Metode ini memiliki 1 parameter wajib.
@@ -59,25 +39,7 @@
             <p>
               Berikut ini adalah contoh penggunaan metode <code>group_by</code> dalam sebuah kelas model.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   class Blog_Model extends SENE_Model{
                     public $table = &#x27;blog&#x27;;
                     public $table_alias = &#x27;b&#x27;;
@@ -93,9 +55,7 @@
                       return $this-&#x3E;db-&#x3E;get();
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
           </div>
         </div>

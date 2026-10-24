@@ -25,25 +25,7 @@
             <p>
               Here is the class synopsis of <code>SENE_Input</code>.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   class SENE_Input {
                     ...
                     public function post(string $k, $d = 0){ ... }
@@ -51,9 +33,7 @@
                     public function request(string $k, $d = 0){ ... }
                     ...
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2 id="get">Get method</h2>
             <p>
@@ -65,29 +45,9 @@
             <p>
               This is the basic usage <code>get</code> method from <NuxtLink to="/3.2/controller/input/#SENE_Input">$input <i class="fa fa-window-maximize"></i></NuxtLink> property on <NuxtLink to="/3.2/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   $this-&#x3E;input-&#x3E;get($keyname [, $default_value=0]) : mixed
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h4>Parameters</h4>
             <p>
@@ -106,25 +66,7 @@
 
             <h4 id="get_example">Example</h4>
             <p>Here is the example <code>get</code> method in a controller class.</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   class Product extends SENE_Controller{
                     public function __construct(){
                       parent::__construct();
@@ -138,9 +80,7 @@
                     }
                     ...
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2 id="post">Post Method</h2>
             <p>
@@ -153,29 +93,9 @@
             <p>
               This is the basic usage <code>post</code> method from <NuxtLink to="/3.2/controller/input/#SENE_Input">$input <i class="fa fa-window-maximize"></i></NuxtLink> property on <NuxtLink to="/3.2/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   $this-&#x3E;input-&#x3E;post($keyname [, $default_value=0]) : mixed
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h4>Parameters</h4>
             <p>
@@ -194,25 +114,7 @@
 
             <h4 id="post_example">Example</h4>
             <p>Here is the example <code>post</code> method in a controller class.</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   class Product extends SENE_Controller{
                     public function __construct(){
                       parent::__construct();
@@ -228,33 +130,13 @@
                     }
                     ...
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h5>HTML Form Example</h5>
             <p>
               here is the HTML form example for testing with controller example.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">
+            <MacWindowCodeSnippet lang="html">
                   ...
                   &#x3C;form action=&#x22;&#x3C;?=base_url(&#x27;product/submit&#x27;)?&#x3E;&#x22; method=&#x22;post&#x22; enctype=&#x22;multipart/form-data&#x22;&#x3E;
                     &#x3C;input type=&#x22;text&#x22; name=&#x22;name&#x22; /&#x3E;
@@ -264,9 +146,7 @@
                     &#x3C;/select&#x3E;
                   &#x3C;/form&#x3E;
                   ...
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2>Request method</h2>
             <p>
@@ -279,29 +159,9 @@
             <p>
               This is the basic usage <code>request</code> method from <NuxtLink to="/3.2/controller/input/#SENE_Input">$input <i class="fa fa-window-maximize"></i></NuxtLink> property on <NuxtLink to="/3.2/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   $this-&#x3E;input-&#x3E;request($keyname [, $default_value=0]) : mixed
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h4>Parameters</h4>
             <p>
@@ -320,25 +180,7 @@
 
             <h4>Request Method Example</h4>
             <p>Here is the example <code>request</code> method in a controller class.</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   class Review extends SENE_Controller{
                     public function __construct(){
                       parent::__construct();
@@ -351,9 +193,7 @@
                     }
                     ...
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2>Handling File Upload</h2>
             <p>
@@ -367,25 +207,7 @@
               <li>Library <NuxtLink to="/3.2/library/wideimage/">WideImage</NuxtLink>,</li>
               <li>Directory <code>media/upload/</code> with write access permission.</li>
             </ul>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   ...
                   public function __construct(){
                     parent:: __construct();
@@ -394,31 +216,11 @@
                     $this-&#x3E;lib(&#x22;wideimage&#x22;, 'inc');
                   }
                   ..
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>Create private method for upload image</h3>
             <p>This is full example for upload image and then create thumbnail using <code>WideImage</code> for image resizer.</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   /**
                   * Method for handling file upload
                   * Only allowed .png, .jpeg, .jpg, .gif extension
@@ -564,9 +366,7 @@
                     }
                     return $sc;
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>Example Implementation</h3>
             <p>
@@ -574,25 +374,7 @@
               On this example, the <code>$keyname</code> value is <code>foto</code> also this $keyname value should be send by multipart/form-data on HTML form or API Request like <code>curl</code>.
             </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   ...
                   $sc = $this-&#x3E;__uploadImagex(&#x22;foto&#x22;,$id,&#x22;1&#x22;);
                   if(!is_object($sc)) $sc = new stdClass();
@@ -607,9 +389,7 @@
                     ....
                   }
                   ...
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
           </div>
         </div>

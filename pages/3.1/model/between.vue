@@ -6,7 +6,7 @@
           <li class=""><NuxtLink to="/">Seme Framework</NuxtLink></li>
           <li class=""><NuxtLink to="/3.1/">3.1.x</NuxtLink></li>
           <li class=""><NuxtLink to="/3.1/model">Model</NuxtLink></li>
-          <li class="unavailable">Between Method</li>
+          <li class="unavailable">Between</li>
         </ul>
       </nav>
       <div class="columns">
@@ -18,27 +18,9 @@
               The purpose of this method is to filter data that is compatible with the BETWEEN command in SQL.
             </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
-                  class Blog_Model extends SENE_Model{
+                  class Blog_Model extends \SENE_Model{
                     var $tbl = 'd_order';
                     var $tbl_as = 'dor';
                     public function __construct(){
@@ -80,42 +62,20 @@
                       return $this-&#x3E;db-&#x3E;get();
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2>Parameters</h2>
-            <p>Where method has 2 required parameters that is <b>column name</b> and <b>value</b>, another parameters are optional. Here is the completed parameters can be used by where methods</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <p>The between method has 3 required parameters: <b>column name</b>, <b>start value</b>, and <b>end value</b>.</p>
+            <MacWindowCodeSnippet lang="php">
                   $this->db->between( COLUMN_NAME, VALUE_FROM, VALUE_TO): $this->db
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>COLUMN_NAME</h3>
             <p>Column name required for filtering data from table. The columname should exist on selected table. This method has automatically escaped.</p>
             <h3>VALUE_FROM</h3>
-            <p>Value required for matched with data against COLUMN_NAME.</p>
+            <p>The start value of the range to be matched against COLUMN_NAME.</p>
             <h3>VALUE_TO</h3>
-            <p>Value required for matched with data against COLUMN_NAME.</p>
+            <p>The end value of the range to be matched against COLUMN_NAME.</p>
 
             <div class="message is-info">
               <div class="message-body">

@@ -42,25 +42,7 @@
             <h3>Struktur Direktori</h3>
             <p>Berikut adalah struktur yang harus kita ketahui dan digunakan.</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   - app
                   -- controller
                   --- api
@@ -69,42 +51,20 @@
                   -- model
                   --- api
                   ---- a_apikey_model.php
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p>Kita harus memisahkan controller dan model juga untuk menghindari kesalahan dengan menambahkan direktori baru ke model dan controller.</p>
 
             <h3>Struktur respons API </h3>
             <p>Ada banyak format standar untuk struktur respons API, tetapi kami menggunakan struktur API paling dasar pada tutorial ini.</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   {
                     &#x22;status&#x22;: 200,
                     &#x22;message&#x22;: &#x22;Success&#x22;,
                     &#x22;data&#x22;: []
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <div class="message is-info">
               <div class="message-body">
@@ -120,25 +80,7 @@
             <p>Buat direktori baru bernama <code>api</code> di dalam <code>app/controller/</code>.</p>
             <p>Kemudian setelah itu dalam direktori baru tadi buat file baru bernama <code>home.php</code>.</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   class Home extends SENE_Controller
                   {
@@ -155,9 +97,7 @@
                       $this-&#x3E;json-&#x3E;out($data);
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>Kelas controller yang berisi kode ini merupakan kelas yang disusun dengan kode dasar untuk pembuatan API.</p>
             <p>Untuk menguji fungsionalitasnya, cukup buka <code>http://localhost/seme_framework/api/</code> melalui browser dan akan menghasilkan respon <code>not found</code> dengan <code>status 404</code>.</p>
 
@@ -166,25 +106,7 @@
             <p>Buat direktori baru bernama <code>api</code> di dalam <code>app/model/</code>. Kemudian buat file baru bernama <code>a_apikey_model.php</code> di dalam direktori baru tersebut.</p>
             <p>Dalam model kita harus menambahkan beberapa metode seperti <strong>insert</strong>, <strong>update</strong>, <strong>delete</strong>, <strong>get by id</strong>, <strong>get all data</strong>, dan metode lainnya.</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   class A_ApiKey_Model extends SENE_Model
                   {
@@ -312,9 +234,7 @@
                       return $this-&#x3E;db-&#x3E;get_first();
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>Membuat kelas Controller</h3>
             <p>Setelah membuat kelas model, sekarang kita akan mencoba membuat kelas controller. Kelas controller ini nantinya akan digunakan untuk mengeksekusi CRUD.</p>
@@ -327,25 +247,7 @@
               </div>
             </div>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   class ApiKey extends SENE_Controller
                   {
@@ -559,9 +461,7 @@
                       $this-&#x3E;json-&#x3E;out($data);
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2>Menguji hasil pembuatan API</h2>
             <p>Setelah menyelesaikan kode, kita dapat menguji kode dengan menggunakan Postman. Apabila anda sudah memiliki kemapuan berlebih, bisa juga dicoba dengan menggunakan runner test sendiri ataupun aplikasi testing API lainnya.</p>

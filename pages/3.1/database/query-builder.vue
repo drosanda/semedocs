@@ -17,162 +17,42 @@
 
           <h2 class="">Selecting Data</h2>
           <p>The following functions allow you to build <strong>SQL SELECT</strong> statements. Selecting all column (*)</p>
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
                 $this-&#x3E;db-&#x3E;select(); //means select *
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
 
           <h3>Selecting Certain Columns</h3>
           <p>For selecting some columns, you can use <b>select</b> method from db class as many as columns you want selected.</p>
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
                 $this-&#x3E;db-&#x3E;select(&#x27;column_name&#x27;);
                 $this-&#x3E;db-&#x3E;select(&#x27;column_name2&#x27;);
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
           <h3>Selecting aliased Data</h3>
           <p>For selecting aliased data, simply use select_as method.</p>
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
                 $this-&#x3E;db-&#x3E;select(&#x27;column_name&#x27;,&#x27;cn&#x27;);
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
           <h3>Selecting function aliased Data</h3>
           <p>For selecting function aliased data, simply use select_as method with add false (0) to third parameter.</p>
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
                 $this-&#x3E;db-&#x3E;select(&#x27;CONCAT(column_name,&#x22; &#x22;,column_name2)&#x27;,&#x27;cn&#x27;,0);
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
           <p>Third parameter means we do not strip any function that exist in select.</p>
           <hr>
           <h2 class="">Choose Table</h2>
           <p>After selecting columns, we have to select the table using method <b>from</b>.</p>
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
                 $this-&#x3E;db-&#x3E;from(&#x27;table_name&#x27;,&#x27;tbl_alias&#x27;);
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
           <p>Table alias is mandatory if we want to use JOIN method.</p>
           <hr>
           <h2 class="">Join Table</h2>
           <p>After selecting columns, we have to select the table using method <b>from</b>.</p>
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
                 $this-&#x3E;db-&#x3E;join(&#x27;table_name2&#x27;,&#x27;tbl_alias2&#x27;,
                 &#x27;table_name2_column&#x27;,&#x27;table_name&#x27;,
                 &#x27;table_name_column&#x27;,[left|right]);
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
           <p>Table join consist of 6 parameters:
             <ol>
               <li>Table to be joined</li>
@@ -186,29 +66,9 @@
           <hr>
           <h2 class="">Order By</h2>
           <p>Sorting the result data.</p>
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
                 $this-&#x3E;db-&#x3E;order_by(&#x27;column_name&#x27;,[asc | desc]);
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
           <p>Order By consist of 2 parameters:
             <ol>
               <li>The column name</li>
@@ -218,84 +78,24 @@
           <hr>
           <h2 class="">Group By</h2>
           <p>Grouping data.</p>
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
                 $this-&#x3E;db-&#x3E;group_by(&#x27;column_name&#x27;);
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
           <p>This method only take one parameter, the coloumn name you want to grouped.</p>
           <hr>
           <h2 class="">Limit</h2>
           <p>Limiting the result.</p>
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
                 $this-&#x3E;db-&#x3E;limit([number of result]);
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
           <p>This method only take one parameter, the number of result you desired.</p>
           <hr>
 
           <h2 class="">Paging</h2>
           <p>Create ranged limit or paging.</p>
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
                 $this-&#x3E;db-&#x3E;page([page_number],[page size]);
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
           <p>Order By consist of 2 parameters:
             <ol>
               <li>Page Number, starting from 1.</li>
@@ -305,29 +105,9 @@
           <hr>
           <h2 class="">Get Result</h2>
           <p>By Default method get from seme framework return the array of object result.</p>
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
                 $this-&#x3E;db-&#x3E;get([array | object],[0 | 1]);
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
           <p>Method get By consist of 2 parameters:
             <ol>
               <li>The type of result, array or object. Default object.</li>
@@ -339,29 +119,9 @@
 
           <h2 class="">Get Single Result</h2>
           <p>Get only one row result, simply use get_first method.</p>
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
                 $this-&#x3E;db-&#x3E;get_first([array | object],[0 | 1]);
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
           <p>Order By consist of 2 parameters:
             <ol>
               <li>The type of result, array or object. Default object.</li>
@@ -373,29 +133,9 @@
 
           <h2 class="">Condition: Where</h2>
           <p>Filtered query result using where syntax SQL.</p>
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
                 $this-&#x3E;db-&#x3E;where($params,$params2=&#x22;&#x22;,$operand=&#x22;AND&#x22;,$comp=&#x22;=&#x22;,$bracket=0,$bracket2=0);
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
           <p>Method where consist of 6 parameters:
             <ol>
               <li>Parameter-1 contain table field (key) string or name value pair array.</li>
@@ -427,29 +167,9 @@
 
           <h2 class="">Condition: Where_As</h2>
           <p>Filtered query result using where syntax SQL. But this query not automatically escaped query. So please be avoiding security breach by using db Escape method.</p>
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
                 $this-&#x3E;db-&#x3E;where_as($params,$params2=&#x22;&#x22;,$operand=&#x22;AND&#x22;,$comp=&#x22;=&#x22;,$bracket=0,$bracket2=0);
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
           <p>Method where_as consist of 6 parameters:
             <ol>
               <li>Parameter-1 contain table field (key) string or name value pair array.</li>
@@ -480,29 +200,9 @@
           <hr>
           <h2 class="">Condition: Where_In</h2>
           <p>Filtered query result using Where In SQL syntax.</p>
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
                 $this-&#x3E;db-&#x3E;where_in($tbl_key,$arr_values=array(),$is_not=&#x22;0&#x22;,$comp=&#x22;AND&#x22;);
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
           <p>Method where_in consist of 4 parameters:
             <ol>
               <li>Parameter-1 contain table field (key) string to be filtered in.</li>
@@ -515,84 +215,24 @@
           <hr>
           <h2 class="">Escape</h2>
           <p>Escapes special characters in a string for use in an SQL statement. Especially used in where_as parameter-2. Make your input charset friendly.</p>
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
                 $this-&#x3E;db-&#x3E;esc($str);
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
           <p>Consist of 1 parameters contain about unescaped string. Returned escaped string.</p>
           <hr>
           <h2 class="">Database Character Set</h2>
           <p>Seme Framework has supported for advanced character set like UTF8MB4 which is can be applied for MySQL 5.6 or higher. Default charset connection is UTF8.</p>
           <h3>Set Character Set</h3>
           <p>Setup or change character set can be applied using setCharSet method.</p>
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
                 $this-&#x3E;db-&#x3E;setCharSet($charset);
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
           <p>Consist of 1 parameters contain about unescaped string. Returned true if success otherwise will triggered error.</p>
           <h3>Get Character Set</h3>
           <p>Get current character set.</p>
-          <div class="macwindow">
-            <div class="titlebar">
-              <div class="buttons">
-                <div class="close">
-                  <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                  <!-- close button link -->
-                </div>
-                <div class="minimize">
-                  <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                  <!-- minimize button link -->
-                </div>
-                <div class="zoom">
-                  <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                  <!-- zoom button link -->
-                </div>
-              </div>
-            </div>
-            <div class="maccontent">
-              <highlight-code lang="php">
+          <MacWindowCodeSnippet lang="php">
                 $this-&#x3E;db-&#x3E;getCharSet();
-              </highlight-code>
-            </div>
-          </div>
+              </MacWindowCodeSnippet>
           <p>Returned character set name if success otherwise will triggered error.</p>
           <hr>
         </div>

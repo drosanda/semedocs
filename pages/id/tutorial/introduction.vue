@@ -40,25 +40,7 @@
               Pertama, buka file yang terletak di <code>app/controller/home.php</code>.
               Apabila tidak ada file atau direktori tersebut, buatlah terlebih dahulu.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   class Home extends \SENE_Controller
                   {
@@ -71,9 +53,7 @@
                       echo 'Hello World!';
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p>Kemudian buka alamat <code>http://localhost/seme_framework</code>, itu seharusnya sudah memunculkan Hello World! langsung dari kelas home.php controller.</p>
             <amp-img layout="responsive" width="774px" height="262px" alt="Hello World" :src="hellowWorld2" ></amp-img>
@@ -101,25 +81,7 @@
             <h4>Membuat tema: <u>front</u>.</h4>
             <p>Sebelum memulai, kita harus memahami struktur direktori tema.</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="shell">
+            <MacWindowCodeSnippet lang="shell">
                   app/
 &#x2514;&#x2500;&#x2500; view/
     &#x2514;&#x2500;&#x2500; front/
@@ -132,9 +94,7 @@
             &#x251C;&#x2500;&#x2500; one_column.php
             &#x2514;&#x2500;&#x2500; partials/
                 &#x2514;&#x2500;&#x2500; head.php
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p>Periksa direktori <code>app/view/front/</code> apabila belum ada, silakan buat direktori tersebut.</p>
             <p>Periksa direktori <code>app/view/front/layout/</code> apabila belum ada, silakan buat direktori tersebut.</p>
@@ -147,25 +107,7 @@
               apabila belum ada, silakan buat file tersebut dan <i>paste</i>-kan isinya dari kode dibawah ini.
             </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="javascript">
+            <MacWindowCodeSnippet lang="javascript">
                   {
     &#x22;link&#x22;: [
         {
@@ -190,9 +132,7 @@
         }
     ]
 }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>
               Pelajari selengkapnya tentang <NuxtLink to="/id/view/theme_json/" target="_blank">theme.json <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
@@ -204,25 +144,7 @@
               apabila belum ada, silakan buat file tersebut dan <i>paste</i>-kan isinya dari kode dibawah ini.
             </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="javascript">
+            <MacWindowCodeSnippet lang="javascript">
                   {
   &#x22;script&#x22;: [
     {
@@ -239,9 +161,7 @@
     }
   ]
 }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>
               Pelajari selengkapnya tentang <NuxtLink to="/id/view/script_json/" target="_blank">script.json <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
@@ -253,25 +173,7 @@
               Apabila belum ada, silakan buat file tersebut dan <i>paste</i>-kan isinya dari kode dibawah ini.
             </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">
+            <MacWindowCodeSnippet lang="html">
                   &#x3C;!DOCTYPE html&#x3E;
 &#x3C;html&#x3E;
   &#x3C;!-- load head.php file as partial html element --&#x3E;
@@ -291,9 +193,7 @@
     &#x3C;/script&#x3E;
   &#x3C;/body&#x3E;
 &#x3C;/html&#x3E;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <div class="message is-info">
               <div class="message-body">
@@ -308,25 +208,7 @@
             <p>Untuk melakukannya, buka file yang terletak di <code>app/view/front/layout/partials/head.php</code>.</p>
             <p>apabila belum ada, silakan buat file tersebut dan <i>paste</i>-kan isinya dari kode dibawah ini.</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">
+            <MacWindowCodeSnippet lang="html">
                   &#x3C;head&#x3E;
     &#x3C;meta charset=&#x22;utf-8&#x22;&#x3E;
     &#x3C;meta name=&#x22;viewport&#x22; content=&#x22;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&#x22;&#x3E;
@@ -347,9 +229,7 @@
     &#x3C;!-- Modernizr (browser feature detection library) --&#x3E;
     &#x3C;script src=&#x22;https://skin.cenah.co.id/js/vendor/modernizr.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
 &#x3C;/head&#x3E;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <div class="message is-info">
               <div class="message-body">
                 <p>Pengaturan tema di Seme Framework membutuhkan file dibawah ini supaya dapat berjalan dengan baik:</p>
@@ -373,25 +253,7 @@
             <p>Untuk melakukanya, buka file yang terletak di <code>app/view/front/home/home.php</code>.</p>
             <p>Apabila file tersebut belum ada, silakan buat file-nya dulu, kemudian <i>paste</i>-kan kode dibawah ini.</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">
+            <MacWindowCodeSnippet lang="html">
                   &#x3C;div class=&#x22;container&#x22;&#x3E;
     &#x3C;div class=&#x22;row&#x22;&#x3E;
         &#x3C;div class=&#x22;col-md-12 col-sm-12&#x22;&#x3E;
@@ -408,33 +270,13 @@
         &#x3C;/div&#x3E;
     &#x3C;/div&#x3E;
 &#x3C;/div&#x3E;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h5>Implementasi di Controller</h5>
             <p>Setelah membuat tema, beserta isinya sekarang saatnya untuk integrasikan semuanya, mulai dari Controller sampai dengan view.</p>
             <p>Untuk melakukannya, buka file <code>app/controller/home.php</code> kemudian <b>ganti</b> (<em>edit</em>) isinya dengan menggunakan kode dibawah ini:</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   class Home extends \SENE_Controller
                   {
@@ -459,9 +301,7 @@
                       $this-&#x3E;render();
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <h5>Melihat hasilnya</h5>
             <p>Untuk melihat hasil dari pembuatan tema ini, cukup buka alamat <code>http://localhost/seme_framework</code> melalui google chrome atau firefox.</p>
             <p>Kemudian, kita lihat hasilnya apakah sama seperti <i>screenshot</i> dibawah ini.</p>
@@ -476,51 +316,13 @@
               Dan kemudian tambahkan kode ini di atasnya.
             </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   alert(&#x27;This is Hello World from app/view/home/home_bottom.php&#x27;);
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p>Setelah itu, kita harus memuat tombol beranda dari <code>app/controller/home.php</code>.</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   class Home extends \SENE_Controller
                   {
@@ -546,9 +348,7 @@
                       $this-&#x3E;render();
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>
               Untuk mengujinya, buka <code>http://localhost/seme_framework</code> menggunakan browser.
               Apabila sudah benar, itu akan menampilkan sebuah <em>alert</em>, kemudian menampilkan H1 dengan konten Hello World dari tampilan dan menggunakan tema.

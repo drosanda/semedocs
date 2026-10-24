@@ -22,29 +22,9 @@
             <p>
               Berikut ini adalah bentuk umum metode <code>putThemeContent</code> dari kelas <NuxtLink to="/id/controller/#SENE_Controller" target="_blank">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   $thi-&#x3E;putThemeContent(string $content_location[, array $data=array()]): controllerObject
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <h3>Parameter</h3>
             <p>
               Metode ini memiliki 1 paremeter wajib yaitu $content_location.
@@ -70,25 +50,7 @@
             <p>
               Sebelum memahami penggunaan kode, pahami terlebih dahulu ilustrasi struktur file dan direktorinya.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   app/
                   └── view/
                    └── front/
@@ -97,34 +59,14 @@
                     | └──  three_values.php
                     └──  page
                       └──  col-1.php
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>Contoh Controller</h3>
             <p>
               Berikut ini adalah contoh kode penggunaan metode <code>putThemeContent</code> pada controller home.
               Pada controller, ada variabel <code>$data</code> yang akan dikirim ke view.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   class Home extends SENE_Controller
                   {
                     public function __construct()
@@ -141,40 +83,18 @@
                       $this-&#x3E;loadLayout(&#x27;col-1&#x27;,$data);
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>Contoh View Compoent</h3>
             <p>
               Berikut ini adalah contoh isi dari  file <code>home/slider.php</code>.
               Dari contoh ini kita akan melihat bagaimana isi dari parameter <code>$data</code> array key-nya akan dipecah menajdi variabel biasa.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">
+            <MacWindowCodeSnippet lang="html">
                   &#x3C;div&#x3E;
                     &#x3C;h1&#x3E;This is parsed example &#x3C;?=$contoh?&#x3E;&#x3C;/h1&#x3E;
                   &#x3C;/div&#x3E;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <div class="message is-info">
               <div class="message-body">

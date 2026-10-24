@@ -21,29 +21,9 @@
             <p>
               Berikut ini bentuk umum penggunaan metode <code>cdn_url</code> dari kelas <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   $this-&#x3E;cdn_url(string $location): controllerObject
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>Parameter</h3>
             <p>Metode cdn_url miliki 1 parameter, yakni $location.</p>
@@ -55,64 +35,24 @@
             <p>
               Nilai dari CDN URL diambil dari pengaturan Seme Framework, berikut ini adalah contoh pengaturan dari file development.php.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   ...
                   $cdn_url = &#x27;https://cdn.cenah.co.id/&#x27;;
                   ...
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2>Contoh Penggunaan</h2>
             <p>
               Berikut ini adalah contoh potongan kode untuk penggunaan metode cdn_url pada templat view.
             </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">
+            <MacWindowCodeSnippet lang="html">
                   ...
                   &#x3C;div class=&#x22;logo-container&#x22;&#x3E;
                     &#x3C;img src=&#x22;&#x3C;?=$this-&#x3E;cdn_url(&#x27;assets/images/logo-cenah.png&#x27;)?&#x3E;&#x22; class=&#x22;logo-fluid&#x22; alt=&#x22;logo Cipta Esensi Merenah&#x22; /&#x3E;
                   &#x3C;/div&#x3E;
                   ...
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">

@@ -43,30 +43,10 @@
                Assume XAMPP is installed in drive <code>D:</code>.
                So, for <code>extract</code> purposes the zip file is:
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   # Windows
                   D:\xampp\htdocs\seme_framework
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>
               If there is no <code>seme_framework</code> folder, create it first. After that, extract the downloaded zip file into it.
             </p>
@@ -76,30 +56,10 @@
               According to the requirements page, in this example we will use XAMPP.
                Assume XAMPP is already installed, for the purpose of <code>extract</code> the zip file is:
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   # Mac
                   /Applications/XAMPP/htdocs/seme_framework
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>
               If there is no <code>seme_framework</code> directory, create it first, then extract the downloaded zip file into it.
             </p>
@@ -109,30 +69,10 @@
               According to the requirements page, in this example we will use XAMPP.
                Assume XAMPP is already installed, for the purpose of <code>extract</code> the zip file is:
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   # Linux
                   /opt/lampp/htdocs/seme_framework
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>
               If there is no <code>seme_framework</code> directory, create it first, then extract the downloaded zip file into it.
             </p>
@@ -153,25 +93,7 @@
                First of all open <code>CMD</code> or <code>CMDER</code> or another terminal application like <code>PowerShell</code>.
                After that type the following command:
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   # Change drive
                   D:
 
@@ -187,34 +109,14 @@
 
                   # start download from github using git clone
                   git clone git@github.com:drosanda/seme-framework.git seme_framework
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h5 id="2_2">2.2. for Mac</h5>
             <p>
               According to the requirements page, make sure <b>XAMPP</b> and <b>git</b> are installed on the Mac.
                First open <code>terminal</code>, then after that type the following command:
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   # change to htdocs directory
                   cd /Applications/XAMPP/htdocs
 
@@ -226,34 +128,14 @@
 
                   # download from github using git clone
                   git clone git@github.com:drosanda/seme-framework.git seme_framework
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h5 id="2_3">2.3 for Linux</h5>
             <p>
               According to the requirements page, make sure <b>XAMPP</b> and <b>git</b> are installed on Linux.
                First open <code>terminal</code>, then after that type the following command:
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   # change to htdocs directory
                   cd /opt/lampp/htdocs
 
@@ -265,9 +147,7 @@
 
                   # download from github using git clone
                   git clone git@github.com:drosanda/seme-framework.git seme_framework
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2>Running Test</h2>
             <p>

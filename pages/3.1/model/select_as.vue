@@ -19,29 +19,9 @@
             <p>
               Here is the basic usage <code>select_as</code> method from <code>$db</code> property on <NuxtLink to="/3.1/model/#SENE_Model">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   $this-&#x3E;db-&#x3E;select_as(string $col_name, string $alias [, bool $is_esc=0]): $this-&#x3E;db
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <h3>Parameters</h3>
             <p>Update method has 2 required parameters and 1 optional parameter.</p>
             <h4>$col_name</h4>
@@ -53,25 +33,7 @@
 
             <h2>Example</h2>
             <p>For the example we assumed want to select a colum in a table with <code>select_as</code> method.</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   class Blog_Model extends SENE_Model{
                     var $tbl = &#x27;blog&#x27;;
                     var $tbl_as = &#x27;b&#x27;;
@@ -85,9 +47,7 @@
                       return $this-&#x3E;db-&#x3E;get_first();
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
 
           </div>

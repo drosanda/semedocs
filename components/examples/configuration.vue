@@ -156,7 +156,7 @@ $core_model = &#x27;&#x27;;
 /********************************/
 /* == Controller Configuration == */
 /* register your onboarding (main) controller */
-/*   - make sure dont add any traing slash in array key of routes */
+/*   - make sure do not add any trailing slash in array key of routes */
 /*   - all var $controller_* value in lower case string */
 /*   - example $routes[&#x27;produk/(:any)&#x27;] = &#x27;produk/detail/index/$1&#x27; */
 /*   - example example $routes[&#x27;blog/id/(:num)/(:any)&#x27;] = &#x27;blog/detail/index/$1/$2&#x27;&#x27; */
@@ -167,7 +167,7 @@ $controller_404=&#x27;notfound&#x27;;
 
 /********************************/
 /* == Controller Re-Routing Configuration == */
-/* make sure dont add any traing slash in array key of routes */
+/* make sure do not add any trailing slash in array key of routes */
 /* @var array of string */
 /****************************/
 // $routes[&#x27;produk/(:any)&#x27;] = &#x27;produk/detail/index/$1&#x27;;

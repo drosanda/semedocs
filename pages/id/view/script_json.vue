@@ -22,34 +22,14 @@
             <p>
               Lokasi file ini ada di dalam direktori tema.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   app/
                   └── view/
                    └── [THEME_NAME]/
                     ├──  ...
                     ├──  script.json
                     └──  ...
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2 class="">Cara kerja</h2>
             <p>
@@ -60,33 +40,13 @@
             <p>
               Berikut ini adalah cara penggunaan file script.json dengan json string.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="javascript">
+            <MacWindowCodeSnippet lang="javascript">
                   [
                     &#x22;&#x3C;script src=\&#x22;{{base_url}}skin/front/js/nprogress.js\&#x22;&#x3E;&#x3C;/script&#x3E;&#x22;,
                     &#x22;&#x3C;script src=\&#x22;{{base_url}}skin/front/js/moment.min.js\&#x22;&#x3E;&#x3C;/script&#x3E;&#x22;,
                     &#x22;&#x3C;script src=\&#x22;{{base_url}}skin/front/js/moment-with-locales.min.js\&#x22;&#x3E;&#x3C;/script&#x3E;&#x22;
                   ]
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h5>Cara penggunaan dengan JSON Object</h5>
             <p>
@@ -95,25 +55,7 @@
             <p>
               Cara ini baru tersedia mulai dari versi Seme Framework 4.0.2.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="javascript">
+            <MacWindowCodeSnippet lang="javascript">
                   {
                     &#x22;script&#x22;:
                     [
@@ -128,9 +70,7 @@
                       }
                     ]
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2>Penggunaan kode <code>{{cdn_url}}</code> dan <code>{{base_url}}</code></h2>
             <p>

@@ -34,25 +34,7 @@
               Maka, pada pengaturan corenya cukup diisi sesuai dengan nama filenya, tanpa akhiran <code>.php</code>.
               Untuk lebih jelasnya, lihat contoh kode pengaturan dibawah ini.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   ...
 
                   /********************************/
@@ -67,65 +49,25 @@
                   $core_model = &#x27;model&#x27;;
 
                   ...
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>Struktur file dan direktori</h3>
             <p>
               Setelah pengaturannya dibuat, kita akan membuat file core berdasarkan struktur file dan direktori seperti ini.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   app/
                   └── core/
                    |── ji_controller.php
                    └── ji_model.php
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>File <code>JI_Controller.php</code></h3>
             <p>
               Pada contoh ini, kita akan menambahkan metode baru buatan sendiri yaitu metode <code>__json_out</code> kedalam kelas <code>JI_Controller</code>.
               Kemudian, jangan lupa juga untuk menambahkan metode <code>__construct</code> dan method <code>index</code>, karena diperlukan dari abstract class <NuxtLink to="/id/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   /**
                    * Main controller: contains about methods and protperties that automtically included after extending in a class
@@ -160,9 +102,7 @@
                     //required function from abstract class
                     public function index(){ }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>File <code>JI_Model.php</code></h3>
             <p>
@@ -170,25 +110,7 @@
               Metode <code>__encrypt</code> digunakan untuk mengenkripsi data dengan AES_ENCRYPT.
               Sementara, metode <code>__decrypt</code> digunakan untuk mengenkripsi data dengan AES_DECRYPT.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   class JI_Model extends SENE_Model
                   {
@@ -217,9 +139,7 @@
                           return &#x27;AES_DECRYPT(&#x27;.$key.&#x27;,&#x22;&#x27;.$this-&#x3E;db-&#x3E;enckey.&#x27;&#x22;)&#x27;;
                       }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2>Referensi Luar</h2>
             <p>

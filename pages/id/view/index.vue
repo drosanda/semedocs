@@ -23,25 +23,7 @@
               Sebelum melanjutkan ke pembahasan selanjutnya, alangkah lebih baik kita mempelari contoh struktur file direktori untuk vew.
             </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   app/
                   └── view/
                   &#160;├── front/
@@ -57,9 +39,7 @@
                   &#160;|&#160;&#160;&#160;&#160;└── head.php
                   &#160;├── template.php ( tanpa tema)
                   &#160;└── login.php ( tanpa tema)
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
 
   					<h2>Cara Memanggil File View</h2>
@@ -74,25 +54,7 @@
               Pertama-tama buat file baru di <code>app/view/template.php</code>.
               Kemudian isikan <i>source code</i> seperti ini pada file tersebut:
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">
+            <MacWindowCodeSnippet lang="html">
                   &#x3C;html&#x3E;
                     &#x3C;head&#x3E;
                       &#x3C;title&#x3E;Seme Framework Template&#x3C;/title&#x3E;
@@ -101,30 +63,10 @@
                       &#x3C;h1&#x3E;Yi-ha this is your first view!&#x3C;/h1&#x3E;
                     &#x3C;/body&#x3E;
                   &#x3C;/html&#x3E;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p>Kemudian, setelah itu edit controller Home yang ada di <code>app/controller/home.php</code> dan ganti isiinya menjadi seperti <i>source code</i> seperti ini:</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   class Home extends SENE_Controller{
                     public function __construct(){
@@ -134,9 +76,7 @@
                       $this-&#x3E;view(&#x27;template&#x27;);
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
   					<p>Jika telah selesai, cobalah buka alamat <code>http://localhost/seme_framework/</code> apakah akan muncul seperti HTML yang sudah disetel sebelumnya?</p>
 
             <hr>
@@ -155,25 +95,7 @@
               Pertama-tama buat file view didalam direktori <code>app/view/template2.php</code>.
               Kemudian tambahkan <i>source code</i> seperti ini:
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">
+            <MacWindowCodeSnippet lang="html">
                   &#x3C;html&#x3E;
                     &#x3C;head&#x3E;
                       &#x3C;title&#x3E;Seme Framework Template 2&#x3C;/title&#x3E;
@@ -182,32 +104,12 @@
                       &#x3C;h1&#x3E;Halo &#x3C;?=$nama?&#x3E;! Gimana kabar? Sehat?&#x3C;/h1&#x3E;
                     &#x3C;/body&#x3E;
                   &#x3C;/html&#x3E;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p>
               Kemudian, setelah itu edit controller Home yang ada di <code>app/controller/home.php</code> dan ganti isiinya menjadi seperti <i>source code</i> seperti ini:
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   class Home extends SENE_Controller{
                     public function __construct(){
@@ -219,9 +121,7 @@
                       $this-&#x3E;view(&#x27;template2&#x27;, $data);
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
   					<p>
               Jika telah selesai, cobalah buka alamat <code>http://localhost/seme_framework/</code> apakah akan muncul seperti HTML yang sudah disetel sebelumnya?
             </p>

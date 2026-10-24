@@ -21,31 +21,11 @@
             <h3>Download the Seme Framework</h3>
             <p>After git and XAMPP was installed, now we can download the Seme Framework through powershell. Please open powershell (Windows) or we , then type:</p>
             
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">C: #can be skipped on non Windows operating system
+            <MacWindowCodeSnippet lang="php">C: #can be skipped on non Windows operating system
 
 cd \xampp\htdocs
 git clone git@github.com:drosanda/seme-framework.git seme_framework
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>Now, the Seme Framework was installed inside htdocs folder called seme_framework.</p>
             
             <h3>Check The Seme Framework is Run or Not</h3>
@@ -55,73 +35,15 @@ git clone git@github.com:drosanda/seme-framework.git seme_framework
             <p>After we finished setup the Seme Framework, now we are ready to do some code by creating new controller to handle static page. A controller is simply a class that helps delegate work. It is the glue of your web application.</p>
 
             <p>For example, when a call is made to:</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">http://example.com/blog/detail/10
-                </highlight-code>
-              </div>
-            </div>
+            <MacWindowCodeSnippet lang="php">http://example.com/blog/detail/10
+                </MacWindowCodeSnippet>
 
             <p>We might imagine that there is a controller named "blog". The method being called on blog would be "detail". The blog method’s job could be to get the blog with article id 10, and render them on the page. Very often in MVC, you’ll see URL patterns that match:</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">http://example.com/[controller-class]/[controller-method]/[arguments]
-                </highlight-code>
-              </div>
-            </div>
+            <MacWindowCodeSnippet lang="php">http://example.com/[controller-class]/[controller-method]/[arguments]
+                </MacWindowCodeSnippet>
             <p>As URL schemes become more complex, this may change. But for now, this is all we will need to know.</p>
             <p>Create a file at `app/controller/blog.php` with the following code.</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">&lt;?php
+            <MacWindowCodeSnippet lang="php">&lt;?php
 class Blog extends \SENE_Controller
 {
     public function __construct()
@@ -147,9 +69,7 @@ class Blog extends \SENE_Controller
         $this-&gt;render();
     }
 }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             
             <p>You have created a class named Blog, with a index method and detail method that accepts one argument named $id. The Blog class is extending the SENE_Controller class. This means that the new pages class can access the methods and variables defined in the SENE_Controller class (kero/sine/SENE_Controller.php).</p>
             <p>The controller is what will become the center of every request to your web application. In very technical Seme Framework discussions, it may be referred to as the super object. Like any php class, you refer to it within your controllers as $this. Referring to $this is how you will load model, views, library and generally command the Seme Framework.</p>
@@ -159,25 +79,7 @@ class Blog extends \SENE_Controller
             
             <p>Create the a file to load all required css files at app/view/front/theme.json and add the following code:</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">{
+            <MacWindowCodeSnippet lang="php">{
     &quot;link&quot;:
     [
       {&quot;rel&quot;: &quot;stylesheet&quot;, &quot;href&quot;: &quot;https://skin-cenah.b-cdn.net/css/bootstrap.min.css&quot;},
@@ -187,30 +89,10 @@ class Blog extends \SENE_Controller
       {&quot;rel&quot;: &quot;stylesheet&quot;, &quot;href&quot;: &quot;https://skin-cenah.b-cdn.net/css/themes/erplite.css&quot;}
     ]
 }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p>Then, we create create a file to load all required javascript files at app/view/front/script.json and add the following code:</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">{
+            <MacWindowCodeSnippet lang="php">{
     &quot;script&quot;:
     [
       {&quot;src&quot;: &quot;https://skin-cenah.b-cdn.net/js/vendor/jquery.min.js&quot;},
@@ -219,30 +101,10 @@ class Blog extends \SENE_Controller
       {&quot;src&quot;: &quot;https://skin-cenah.b-cdn.net/js/app.js&quot;}
     ]
 }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p>After we load all javascript and css files, now we need to create a layout file at app/view/front/page/single_column.php and add the following code:</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">&lt;!DOCTYPE html&gt;
+            <MacWindowCodeSnippet lang="html">&lt;!DOCTYPE html&gt;
 &lt;html class=&quot;no-js&quot; lang=&quot;en&quot;&gt;
 &#x9;&lt;?php $this-&gt;getThemeElement(&quot;page/html/head&quot;,$__forward); ?&gt;
 &#x9;&lt;body&gt;
@@ -284,30 +146,10 @@ class Blog extends \SENE_Controller
 &#x9;&#x9;&lt;/script&gt;
 &#x9;&lt;/body&gt;
 &lt;/html&gt;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p>Now, we are ready to add another html template at app/view/front/page/html/head.php and add the following code:</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">&lt;head&gt;
+            <MacWindowCodeSnippet lang="html">&lt;head&gt;
     &lt;meta charset=&quot;utf-8&quot;&gt;
     &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot;&gt;
     &lt;title&gt;&lt;?=$this-&gt;getTitle()?&gt;&lt;/title&gt;
@@ -321,30 +163,10 @@ class Blog extends \SENE_Controller
     &lt;?php $this-&gt;getAdditionalAfter()?&gt;
     &lt;script src=&quot;&lt;?=$this-&gt;cdn_url(&quot;skin/admin/&quot;)?&gt;js/vendor/modernizr.min.js&quot;&gt;&lt;/script&gt;
 &lt;/head&gt;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p>The head.php file will wrap all html codes under <head></head> tag. This file will be also loaded in single_column.php layout using this code `<?php $this->getThemeElement("page/html/head",$__forward); ?>`. Then, the other file that we will create at app/view/front/page/footer.php and add the following code:</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">&lt;footer class=&quot;clearfix&quot;&gt;
+            <MacWindowCodeSnippet lang="html">&lt;footer class=&quot;clearfix&quot;&gt;
 &#x9;&lt;div class=&quot;pull-right&quot;&gt;
 &#x9;&#x9;Made with &lt;i class=&quot;fa fa-heart text-danger&quot;&gt;&lt;/i&gt; by &lt;a href=&quot;https://cenah.co.id&quot; target=&quot;_blank&quot;&gt;cenah.co.id&lt;/a&gt;. 
 &#x9;&lt;/div&gt;
@@ -352,31 +174,11 @@ class Blog extends \SENE_Controller
 &#x9;&#x9;Seme Framework - version 4 &amp;copy; &lt;?=date(&quot;Y&quot;)?&gt;
 &#x9;&lt;/div&gt;
 &lt;/footer&gt;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>Static page example for Blog controller</h3>
             <p>Earlier you set up a controller for blog with 2 methods inside of that. Now, we are going to create a view for the blog main page first at app/view/front/blog/home.php and add the following code:</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">&lt;div id=&quot;page-content&quot;&gt;
+            <MacWindowCodeSnippet lang="html">&lt;div id=&quot;page-content&quot;&gt;
 &#x9;&lt;div class=&quot;content-header&quot;&gt;
 &#x9;&#x9;&lt;div class=&quot;header-section&quot;&gt;
 &#x9;&#x9;&#x9;&lt;h1&gt;
@@ -408,30 +210,10 @@ class Blog extends \SENE_Controller
 &#x9;&#x9;&lt;/div&gt;
 &#x9;&lt;/div&gt;
 &lt;/div&gt;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p>Then we will create another file at app/view/front/blog/detail.php and add the following code:</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">&lt;div id=&quot;page-content&quot;&gt;
+            <MacWindowCodeSnippet lang="html">&lt;div id=&quot;page-content&quot;&gt;
 &#x9;&lt;div class=&quot;content-header&quot;&gt;
 &#x9;&#x9;&lt;div class=&quot;header-section&quot;&gt;
 &#x9;&#x9;&#x9;&lt;h1&gt;
@@ -459,9 +241,7 @@ class Blog extends \SENE_Controller
 &#x9;&#x9;&lt;/div&gt;
 &#x9;&lt;/div&gt;
 &lt;/div&gt;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2>Trying our Code</h2>
             <p>Assuming the Seme Framework was running using XAMPP and installed at c:\xampp\htdocs\seme_framework. So, your URL will be http://localhost/seme_framework. Now, Try to open http://localhost/seme_framework/blog in the web browser. If you see the web page like what we create before, then you have completely finished this tutorial.</p>

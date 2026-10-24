@@ -12,7 +12,7 @@
         <div class="column">
           <div class="content">
             <h1>Troubleshooting List</h1>
-            <p>Here is the list of known troubleshoot that ussually occured in Seme Framework</p>
+            <p>Here is the list of known troubleshoot that usually occurred in Seme Framework</p>
             <ul>
               <li><NuxtLink to="/issue/troubleshooting/log-all-query">How to log all query</NuxtLink></li>
             </ul>

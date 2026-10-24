@@ -8,7 +8,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    // https://go.nuxtjs.dev/content
+    // exposes .env variables to the app
     '@nuxtjs/dotenv',
     '@nuxtjs/amp',
     '@nuxtjs/sitemap'
@@ -16,13 +16,13 @@ export default {
   head: {
     meta: [
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Deployable and lightweight PHP MVC framework that suitable for small and medium web app' },
+      { hid: 'description', name: 'description', content: 'Deployable and lightweight PHP MVC framework that is suitable for small and medium web app' },
       { hid: 'robots1', name: 'robots', content: 'INDEX,FOLLOW'},
       { hid: 'fbid', property: 'fb:app_id', content: '918859565356038'},
       { hid: 'theme-color', property: 'theme-color', content: '#fb898f'},
-      { hid: 'og:title', name: 'og:description', content: 'Seme Framework Documentation'},
-      { hid: 'og:description', name: 'og:description', content: 'Deployable and lightweight PHP MVC framework that suitable for small and medium web app'},
-      { hid: 'og:image', name: 'og:image', content: (process.env.CDN_URL || 'http://localhost:'+(process.env.PORT || '3001'))+'/fbshare.png'}
+      { hid: 'og:title', property: 'og:title', content: 'Seme Framework Documentation'},
+      { hid: 'og:description', property: 'og:description', content: 'Deployable and lightweight PHP MVC framework that is suitable for small and medium web app'},
+      { hid: 'og:image', property: 'og:image', content: (process.env.CDN_URL || 'http://localhost:'+(process.env.PORT || '3001'))+'/fbshare.png'}
     ],
     link: [
       { rel: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' },
@@ -56,13 +56,12 @@ export default {
     port: process.env.PORT || 3001,
   },
   build: {
-    buildPath: process.env.CDN_URL || 'http://localhost:'+(process.env.PORT || '3001'),
     analyze: false,
     maxChunkSize: 300000,
     extend(config, ctx) {
       config.node = {
         fs: 'empty'
-      },
+      }
       config.module.rules.push({
         test: /\.(ogg|mp3|wav|mpe?g)$/i,
         loader: 'file-loader',

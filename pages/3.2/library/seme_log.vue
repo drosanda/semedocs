@@ -17,51 +17,13 @@
             <hr>
             <h2>How to use</h2>
             <p>First we have to loaded library by using library loaded:</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   $this->lib('seme_log');
-                </highlight-code>
-              </div>
-            </div>
-            <p>You can put libary loader in constructor of controller or on each method in your controller.</p>
+                </MacWindowCodeSnippet>
+            <p>You can put library loader in constructor of controller or on each method in your controller.</p>
             <h2>Basic Usage</h2>
             <p>Seme Log only have one method called <b>write</b> for writting log into file log. Here is the example:</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   Class Product extends SENE_Controller{
                     public function __construct(){
                       $this-&#x3E;lib(&#x27;seme_log&#x27;);
@@ -70,34 +32,12 @@
                       $this-&#x3E;seme_log-&#x3E;write(&#x22;Produk::index called&#x22;);
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>And then this is the result if we open file seme.log</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   2019-08-06 10:22:22 - Produk::index called
                   2019-08-06 10:22:25 - Produk::index called
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <h3>Advanced Result</h3>
             <p>If you used *nix Operating System, you can <code>tail -f seme.log</code> for realtime view log.</p>
 

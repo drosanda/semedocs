@@ -12,7 +12,7 @@
           <div class="content">
             <h1>Issue</h1>
             <p>
-              Like other framework, Seme Framework has builtin error message. Here is the list of issue that commonly occured while using Seme Framework.
+              Like other frameworks, Seme Framework has built-in error message. Here is the list of issue that commonly occurred while using Seme Framework.
             </p>
             <ul>
               <li>
@@ -70,7 +70,7 @@ export default {
       name: 'Seme Framework',
       suffix: ' - Seme Framework',
       title: 'Issue',
-      description: 'Here is the list of issue that commonly occured while using Seme Framework.',
+      description: 'Here is the list of issue that commonly occurred while using Seme Framework.',
       breadcrumbs: [
         {
           url: process.env.BASE_URL || 'http://localhost:3001',

@@ -17,34 +17,14 @@
 
             <p><strong>Example error message</strong></p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
 could not find model b_user_model on D:/XAMPP/htdocs/seme_framework/app/model/b_user_model.php
 could not find model api/b_user_model on D:/XAMPP/htdocs/seme_framework/app/model/api/b_user_model.php
 could not find model admin/b_user_model on D:/XAMPP/htdocs/seme_framework/app/model/admin/b_user_model.php
-</highlight-code>
-</div>
-</div>
+</MacWindowCodeSnippet>
 
             <h2>Solution</h2>
-            <p>Create manually the model file same as model name name under<code>app/model/</code>.</p>
+            <p>Create manually the model file same as model name under<code>app/model/</code>.</p>
             <p>If the model loader has path, you have to checked the directory are existed or not.</p>
             <p>If the directory is missing, you have to created it manually.</p>
             <p>Please make sure the filename and with its extension are not contain symbol and whitespace(s).</p>

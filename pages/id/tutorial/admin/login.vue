@@ -36,25 +36,7 @@
             <p>
               Kemudian untuk struktur filenya seperti ini:
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   app/
                   ├── controller/
                   │&#160;└── admin/
@@ -71,9 +53,7 @@
                   &#160;&#160;│ └── home_bottom.php
                   &#160;&#160;└── page/
                   &#160;&#160;&#160;└── login.php
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2 id="part1">Setup JI Model dan JI Controller</h2>
             <p>
@@ -81,84 +61,26 @@
               Sekarang kita akan merubah pengaturan terlebih dahulu, supaya seme framework memanggil JI_Model dan JI_Controller.
               Edit file <code>app/config/development.php</code> kemudian ganti pada bagian <code>core_prefix</code> menjadi seperti dibawah ini
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   $core_prefix = &#x27;ji_&#x27;;
 $core_controller = &#x27;controller&#x27;;
 $core_model = &#x27;model&#x27;;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p>
               Masih di file <code>app/config/development.php</code> lompati ke akhir file, kemudian tambahkan code dibawah ini ini:
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   $semevar[&#x27;site_title&#x27;] = &#x27;Seme Framework&#x27;;
 $semevar[&#x27;site_version&#x27;] = &#x27;1.0.0&#x27;;
 $semevar[&#x27;admin_site_title&#x27;] = &#x27;Admin Page&#x27;;
 $semevar[&#x27;admin_site_title_suffix&#x27;] = &#x27; - &#x27;.$semevar[&#x27;admin_site_title&#x27;];
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p>
               Kemudian setelah itu kita akan buat file baru di <code>app/core/ji_controller.php</code>, isikan seperti code dibawah ini.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
 /**
  * Core class for all controller
@@ -231,32 +153,12 @@ class JI_Controller extends \SENE_Controller
 
     public function index() { }
 }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             
             <p>
               Selanjutnya adalah file <code>app/core/ji_model.php</code>, buatlah dan isi seperti code dibawah ini.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
 /**
 * Define all general method for all tables
@@ -366,9 +268,7 @@ class JI_Model extends \SENE_Model
         return $this-&#x3E;db-&#x3E;autocommit(1);
     }
 }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2 id="part2">Pembuatan table a_pengguna dan sample isinya</h2>
             <p>
@@ -377,25 +277,7 @@ class JI_Model extends \SENE_Model
               Pastikan database sudah dibuat sebelumnya dan juga sudah terpilih.
               Kemudian <i>Copy paste</i> kode SQL dibawah ini dan jalankan di <b>PhpMyAdmin</b> atau <b>MySQL</b> <i>query</i>-nya langsung untuk membuat tabel secara otomatis.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="sql">
+            <MacWindowCodeSnippet lang="sql">
 SET FOREIGN_KEY_CHECKS=0;
 SET SQL_MODE = &#x22;NO_AUTO_VALUE_ON_ZERO&#x22;;
 SET time_zone = &#x22;+00:00&#x22;;
@@ -411,33 +293,13 @@ CREATE TABLE &#x60;a_pengguna&#x60; (
   UNIQUE KEY &#x60;a_pengguna_un&#x60; (&#x60;username&#x60;)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 SET FOREIGN_KEY_CHECKS=1;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p>
               Kemudian setelah itu, kita akan masukan 1 sample akun admin dengan username <code>mimind</code> dan passwordnya itu adalah <code>admin123*</code>.
               Kemudian <i>Copy paste</i> kode SQL dibawah ini dan jalankan di <b>PhpMyAdmin</b> atau <b>MySQL</b> <i>query</i>-nya langsung untuk menambahkan user admin baru.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="sql">
+            <MacWindowCodeSnippet lang="sql">
                   insert into &#x60;a_pengguna&#x60;(
 &#x9;id,
 &#x9;username,
@@ -451,9 +313,7 @@ values(
 &#x9;NOW(),
 &#x9;null
 );
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <div class="message is-danger">
                 <div class="message-body">
@@ -478,25 +338,7 @@ values(
               Setelah mengimport tabel <code>a_pengguna</code> kedalam database, sekarang saatnya membuat <code>concern class</code> untuk tabel <code>a_pengguna</code>.
               Caranya buat file baru di <code>app/model/a_pengguna_concern.php</code>, kemudian <i>copy paste</i> kode dibawah ini dan simpan perubahan pada file tersebut.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
 namespace Model;
 
@@ -529,33 +371,13 @@ class A_Pengguna_Concern extends \JI_Model
             -&#x3E;get_first(&#x27;object&#x27;, 0);
     }
 }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>
               Kemudian sekarang membuat model untuk ruang lingkup admin saja. Ini berarti model file yang ini hanya akan dipakai dibawah <code>controller/admin/</code> saja.
               Hal ini dilakukan supaya kode dapat dimaintenance dengan mudah apabila nanti ada perubahan.
               Selanjutnya kita akan buat file baru di <code>app/model/admin/a_pengguna_model.php</code>, kemudian <i>copy paste</i> kode dibawah ini dan simpan perubahan pada file tersebut.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
 namespace Model\Admin;
 
@@ -576,9 +398,7 @@ class A_Pengguna_Model extends \Model\A_Pengguna_Concern
         parent::__construct();
     }
 }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2>Membuat View dan Controller untuk halaman Login</h2>
             <p>
@@ -586,25 +406,7 @@ class A_Pengguna_Model extends \Model\A_Pengguna_Concern
               Pertama-tama kita akan buat dulu layout view untuk login.
               Buatlah file baru di <code>app/view/admin/page/login.php</code>, isikan seperti code dibawah ini.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">
+            <MacWindowCodeSnippet lang="html">
                   &#x3C;!DOCTYPE html&#x3E;
 &#x3C;html class=&#x22;no-js&#x22; lang=&#x22;en&#x22;&#x3E;
 &#x9;&#x3C;?php $this-&#x3E;getThemeElement(&#x22;page/html/head&#x22;,$__forward); ?&#x3E;
@@ -633,9 +435,7 @@ class A_Pengguna_Model extends \Model\A_Pengguna_Concern
 &#x9;&#x9;&#x3C;/script&#x3E;
 &#x9;&#x3C;/body&#x3E;
 &#x3C;/html&#x3E;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <div class="message is-info">
               <div class="message-body">
@@ -651,25 +451,7 @@ class A_Pengguna_Model extends \Model\A_Pengguna_Concern
               Buatlah file baru di <code>app/view/admin/login/home.php</code>,
               <em>copy</em> <em>paste</em> isinya dengan kode dibawah ini.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">
+            <MacWindowCodeSnippet lang="html">
                   &#x3C;!-- Login Full Background --&#x3E;
 &#x3C;!-- For best results use an image with a resolution of 1280x1280 pixels (prefer a blurred image for smaller file size) --&#x3E;
 &#x3C;img src=&#x22;https://seme-framework-storage.b-cdn.net/images/background-login-3.jpg&#x22; alt=&#x22;Login Full Background&#x22; class=&#x22;full-bg animation-pulseSlow&#x22;&#x3E;
@@ -719,9 +501,7 @@ class A_Pengguna_Model extends \Model\A_Pengguna_Concern
     &#x3C;!-- END Login Block --&#x3E;
 &#x3C;/div&#x3E;
 &#x3C;!-- END Login Container --&#x3E;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             
             <p>
               Kemudian buat lagi file baru di <code>app/view/admin/login/home_bottom.php</code>, biarkan kosong saja file tersebut.
@@ -741,25 +521,7 @@ class A_Pengguna_Model extends \Model\A_Pengguna_Concern
               Kemudian <em>copy</em> <em>paste</em> kode dibawah ini.
             </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
 /**
 * Controller Class
@@ -794,9 +556,7 @@ class Logout extends \JI_Controller
         redir(base_url_admin(&#x22;login&#x22;), 0, 1);
     }
 }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             
             <p>
               Setelah itu kita akan membuat controller untuk login. Pada controller kali ini, ada 2 fungsi utama yaitu menampilkan form login (halaman login).
@@ -805,25 +565,7 @@ class Logout extends \JI_Controller
               Sekarang kita akan buat file baru di <code>app/controller/admin/login.php</code>, kemudian <em>copy</em> <em>paste</em> kode dibawah ini.
             </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
 class Login extends \JI_Controller
 {
@@ -967,9 +709,7 @@ class Login extends \JI_Controller
         }
 &#x9;}
 }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2>Penambahan validasi sudah login pada controller</h2>
             <p>
@@ -979,25 +719,7 @@ class Login extends \JI_Controller
               Mari kita lihat code dibawah ini, kemudian sesuaikanlah kodenya seperti dibawah ini.
             </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
 /**
 * Main Controller Class
@@ -1034,9 +756,7 @@ class Home extends \JI_Controller
         $this-&#x3E;render();
     }
 }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <div class="message is-info">
               <div class="message-body">
                 <p>

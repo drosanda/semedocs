@@ -16,31 +16,11 @@
             <p>Seme framework has supported library directory under <code>kero/lib</code>, so you have to checked it for supplied library name or path with its library name are exist.</p>
 
             <p>Example error message</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
 could not find model b_user_model on D:/XAMPP/htdocs/seme_framework/app/model/b_user_model.php
 could not find model api/b_user_model on D:/XAMPP/htdocs/seme_framework/app/model/api/b_user_model.php
 could not find model admin/b_user_model on D:/XAMPP/htdocs/seme_framework/app/model/admin/b_user_model.php
-</highlight-code>
-</div>
-</div>
+</MacWindowCodeSnippet>
 
             <h2>Solution</h2>
             <p>Check the library are existed on <code>kero/lib/</code>.</p>
@@ -49,25 +29,7 @@ could not find model admin/b_user_model on D:/XAMPP/htdocs/seme_framework/app/mo
             <h3>Example PHPOffice/Spreadsheet library loader</h3>
             <p>Some library cannot be loaded by Seme Framework library loader, you have to included it manually using its namespace.</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">&#x3C;?php
+            <MacWindowCodeSnippet lang="php">&#x3C;?php
 //loading library
 $vendorDirPath = (SEMEROOT.&#x27;kero/lib/phpoffice/vendor/&#x27;);
 $vendorDirPath = realpath($vendorDirPath);
@@ -107,9 +69,7 @@ class Home extends SENE_Controller
   }
 }
 
-</highlight-code>
-</div>
-</div>
+</MacWindowCodeSnippet>
 
           </div>
         </div>

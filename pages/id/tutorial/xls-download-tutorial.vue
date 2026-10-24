@@ -25,25 +25,7 @@
               Kemudian, tuliskan kode ini didalam file <code>pengiriman.php</code> dan simpan.
               Pastikan Anda menyimpan kode di dalam file yang sesuai dengan kebutuhan Anda, tidak perlu sama dengan contoh yang diberikan.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   <?php
                     //loading library
                     $vendorDirPath = (SEMEROOT . 'kero/lib/phpoffice/vendor/');
@@ -264,9 +246,7 @@
                             $this->__forceDownload($save_dir . '/' . $save_file . '.xlsx');
                         }
                     }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2>Membuat Model</h2>
             <p>
@@ -275,25 +255,7 @@
               Buat file di dalam <code>app/model/d_kirim_model.php</code>. Kemudian, tuliskan kode ini didalam file <code>d_kirim_model.php</code> dan simpan.
               Pastikan Anda menyimpan kode di dalam file yang sesuai dengan kebutuhan Anda, tidak perlu sama dengan contoh yang diberikan.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                     <?php
                     /**
                     * Model untuk table d_kirim_model
@@ -374,9 +336,7 @@
                             return $this->db->get("object", 0);
                         }
                     }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2>Membuat View</h2>
             <p>
@@ -385,23 +345,7 @@
               Buat file di dalam <code>app/view/laporan/pengiriman/home.php</code>. Kemudian, tuliskan kode ini didalam file <code>home.php</code> dan simpan.
               Pastikan Anda menyimpan kode di dalam file yang sesuai dengan kebutuhan Anda, tidak perlu sama dengan contoh yang diberikan.
             </p>
-            <div class="macwindow">
-                <div class="titlebar">
-                    <div class="buttons">
-                    <div class="close">
-                        <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    </div>
-                    <div class="minimize">
-                        <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    </div>
-                    <div class="zoom">
-                        <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="maccontent">
-                    <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                     &lt;style&gt;
                     .panel {
                         padding: 0 1em;
@@ -486,34 +430,14 @@
                             &lt;/div&gt;
                         &lt;/div&gt;
                     &lt;/div&gt;
-                    </highlight-code>
-                </div>
-            </div>
+                    </MacWindowCodeSnippet>
 
             <p>
               Kemudian, buat file di dalam <code>app/view/laporan/pengiriman/home_bottom.php</code> untuk menyimpan kode Javascript. 
               Kode ini digunakan untuk membuat halaman web menjadi lebih interaktif dan dinamis. Tuliskan kode didalam file <code>home_bottom.php</code> dan simpan.
               Pastikan Anda menyimpan kode di dalam file yang sesuai dengan kebutuhan Anda, tidak perlu sama dengan contoh yang diberikan.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                 $('#button_xls').on('click',function(e){
                     e.preventDefault();
                     $('.btn-submit').prop('disabled',true);
@@ -532,9 +456,7 @@
                         window.location = url;
                     },999);
                 });
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p>
               Mari Kita lihat hasil akhir dari pembuatan download XLS ini melalui google chrome atau firefox. 

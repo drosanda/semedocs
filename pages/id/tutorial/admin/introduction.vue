@@ -41,25 +41,7 @@
               Pertama, buka file yang terletak di <code>app/controller/admin/home.php</code>.
               Apabila tidak ada file atau direktori tersebut, buatlah terlebih dahulu.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   class Home extends \SENE_Controller
                   {
@@ -72,9 +54,7 @@
                       echo 'Admin Hello World!';
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p>
               Setelah itu, jalankan XAMPP dan buka <code>http://localhost/seme_framework/adminxx</code> melalui google chrome atau firefox.
@@ -104,25 +84,7 @@
             <p>
               Berikut ini adalah gambaran struktur file yang akan kita buat untuk membuat tema dan tampilan di admin:
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="shell">
+            <MacWindowCodeSnippet lang="shell">
                   app/
 &#x251C;&#x2500;&#x2500; controller/
 &#x2502;   &#x2514;&#x2500;&#x2500; admin/
@@ -147,9 +109,7 @@
     &#x2502;       &#x2514;&#x2500;&#x2500; footer.php
     &#x2514;&#x2500;&#x2500; front/
         &#x2514;&#x2500;&#x2500; ....
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <div class="message is-info">
               <div class="message-body">
@@ -168,25 +128,7 @@
               Apabila belum ada, silakan buat file tersebut dan <i>paste</i>-kan isinya dari kode dibawah ini.
             </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
 {
   &#x22;script&#x22;: [
     {
@@ -203,9 +145,7 @@
     }
   ]
 }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>
               Kemudian setelah itu kita akan membuat File <code>theme.json</code> digunakan untuk mendefinisikan file CSS apa saja yang akan digunakan oleh tema. 
               Buka file yang terletak di <code>app/view/admin/theme.json</code>.
@@ -213,25 +153,7 @@
               Apabila belum ada, silakan buat file tersebut dan <i>paste</i>-kan isinya dari kode dibawah ini.
             </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
 {
     &#x22;link&#x22;: [
         {
@@ -256,9 +178,7 @@
         }
     ]
 }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>
               Pelajari selengkapnya tentang <NuxtLink to="/id/view/script_json/" target="_blank">script.json <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
@@ -270,25 +190,7 @@
               Kemudian copy <i>paste</i>-kan isinya dari kode dibawah ini.
             </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">
+            <MacWindowCodeSnippet lang="html">
 &#x3C;!DOCTYPE html&#x3E;
 &#x3C;html class=&#x22;no-js&#x22; lang=&#x22;en&#x22;&#x3E;
 &#x9;&#x3C;?php $this-&#x3E;getThemeElement(&#x22;page/partials/head&#x22;,$__forward); ?&#x3E;
@@ -314,33 +216,13 @@
 &#x9;&#x9;&#x3C;/script&#x3E;
 &#x9;&#x3C;/body&#x3E;
 &#x3C;/html&#x3E;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p>
               Setelah itu kita akan membuat layout 2 kolom dengan menu di samping kiri pada file <code>app/view/admin/page/col-2-left.php</code>.
               Jika belum ada file-nya, buatlah file tersebut kemudian copy <i>paste</i>-kan isinya dari kode dibawah ini.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">
+            <MacWindowCodeSnippet lang="html">
 &#x3C;!DOCTYPE html&#x3E;
 &#x3C;html class=&#x22;no-js&#x22; lang=&#x22;en&#x22;&#x3E;
 &#x9;&#x3C;?php $this-&#x3E;getThemeElement(&#x22;page/partials/head&#x22;,$__forward); ?&#x3E;
@@ -416,9 +298,7 @@
 &#x9;&#x9;&#x3C;/script&#x3E;
 &#x9;&#x3C;/body&#x3E;
 &#x3C;/html&#x3E;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>Pemisahan bagian / component HTML</h3>
             <p>
@@ -439,25 +319,7 @@
               Apabila belum ada, silakan buat file tersebut dan copy <i>paste</i>-kan isinya dari kode dibawah ini.
             </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">
+            <MacWindowCodeSnippet lang="html">
 &#x3C;head&#x3E;
     &#x3C;meta charset=&#x22;utf-8&#x22;&#x3E;
     &#x3C;meta name=&#x22;viewport&#x22; content=&#x22;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&#x22;&#x3E;
@@ -478,34 +340,14 @@
     &#x3C;!-- Modernizr (browser feature detection library) --&#x3E;
     &#x3C;script src=&#x22;https://skin.cenah.co.id/js/vendor/modernizr.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
 &#x3C;/head&#x3E;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             
             <p>
               Kemudian sekarang kita akan memisahkan bagian untuk komponen header <code>app/view/admin/page/partials/header.php</code>.
               Silakasn Copy-Paste kode dibawah ini.
             </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">
+            <MacWindowCodeSnippet lang="html">
 &#x3C;?php
 &#x9;$admin_foto = &#x27;&#x27;;
 &#x9;if(isset($sess-&#x3E;admin-&#x3E;foto))$admin_foto = $sess-&#x3E;admin-&#x3E;foto;
@@ -591,33 +433,13 @@
 &#x9;&#x3C;!-- END Right Header Navigation --&#x3E;
 &#x3C;/header&#x3E;
 
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p>
               Setelah itu untuk component global message ada di <code>app/view/admin/page/partials/global_message.php</code>.
               Apabila belum ada, silakan buat file tersebut dan copy <i>paste</i>-kan isinya dari kode dibawah ini.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">
+            <MacWindowCodeSnippet lang="html">
 &#x3C;div id=&#x22;global_message_danger&#x22; class=&#x22;alert alert-danger&#x22; role=&#x22;alert&#x22; style=&#x22;display:none;&#x22;&#x3E;
     &#x3C;span class=&#x22;glyphicon glyphicon-exclamation-sign&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/span&#x3E;
     &#x3C;span class=&#x22;sr-only&#x22;&#x3E;Error:&#x3C;/span&#x3E;
@@ -633,33 +455,13 @@
     &#x3C;span class=&#x22;sr-only&#x22;&#x3E;Berhasil:&#x3C;/span&#x3E;
     &#x3C;span id=&#x22;global_message_success_text&#x22;&#x3E;Enter a valid email address&#x3C;/span&#x3E;
 &#x3C;/div&#x3E;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             
             <p>
               Kemudian ini untuk component navigation bar di <code>app/view/admin/page/partials/navbar.php</code>.
               Apabila belum ada, silakan buat file tersebut dan copy <i>paste</i>-kan isinya dari kode dibawah ini.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">
+            <MacWindowCodeSnippet lang="html">
 &#x3C;nav class=&#x22;navbar navbar-default&#x22;&#x3E;
   &#x3C;div class=&#x22;container-fluid&#x22;&#x3E;
     &#x3C;!-- Brand and toggle get grouped for better mobile display --&#x3E;
@@ -700,33 +502,13 @@
     &#x3C;/div&#x3E;&#x3C;!-- /.navbar-collapse --&#x3E;
   &#x3C;/div&#x3E;&#x3C;!-- /.container-fluid --&#x3E;
 &#x3C;/nav&#x3E;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             
             <p>
               Setelahnya untuk component sidebar menu yang akan ditampilkan pada samping kiri halaman admin. Untuk kodenya ada di <code>app/view/admin/page/partials/sidebar.php</code>.
               Apabila belum ada, silakan buat file tersebut dan copy <i>paste</i>-kan isinya dari kode dibawah ini.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">
+            <MacWindowCodeSnippet lang="html">
 &#x3C;?php
 &#x9;$admin_name = $sess-&#x3E;admin-&#x3E;username ?? &#x27;&#x27;;
 &#x9;if(isset($sess-&#x3E;admin-&#x3E;nama)) if(strlen($sess-&#x3E;admin-&#x3E;nama)&#x3E;1) $admin_name = $sess-&#x3E;admin-&#x3E;nama;
@@ -809,34 +591,14 @@
 &#x9;&#x3C;/div&#x3E;
 &#x9;&#x3C;!-- END Wrapper for scrolling functionality --&#x3E;
 &#x3C;/div&#x3E;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             
             <p>
               Kemudian sekarang akan membuat untuk sidebar alternatif.
               File ini tidak akan kita gunakan terlebih dahulu, tapi akan di persiapkan untuk tutorial selanjutnya.
               Apabila belum ada, silakan buat file tersebut di <code>app/view/admin/page/partials/sidebar_alt.php</code>, kemudian copy <i>paste</i>-kan isinya dari kode dibawah ini.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">
+            <MacWindowCodeSnippet lang="html">
 &#x3C;div id=&#x22;sidebar-alt&#x22;&#x3E;
 &#x9;&#x3C;!-- Wrapper for scrolling functionality --&#x3E;
 &#x9;&#x3C;div id=&#x22;sidebar-alt-scroll&#x22;&#x3E;
@@ -847,32 +609,12 @@
 &#x9;&#x3C;/div&#x3E;
 &#x9;&#x3C;!-- END Wrapper for scrolling functionality --&#x3E;
 &#x3C;/div&#x3E;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             
             <p>
               Kemudian sekarang akan membuat untuk wrapper untuk footer, di <code>app/view/admin/page/partials/foot.php</code>, buatlah file tersebut kemudian copy <i>paste</i>-kan isinya dari kode dibawah ini.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">
+            <MacWindowCodeSnippet lang="html">
 &#x3C;!-- Scroll to top link, initialized in js/app.js - scrollToTop() --&#x3E;
 &#x3C;a href=&#x22;#&#x22; id=&#x22;to-top&#x22;&#x3E;&#x3C;i class=&#x22;fa fa-angle-double-up&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;/a&#x3E;
 &#x3C;!-- User Settings, modal which opens from Settings link (found in top right user menu) and the Cog link (found in sidebar user info) --&#x3E;
@@ -939,32 +681,12 @@
 &#x9;&#x3C;/div&#x3E;
 &#x3C;/div&#x3E;
 &#x3C;!-- END User Settings --&#x3E;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             
             <p>
               Terakhir, kita akan membuat footer untuk halaman admin di <code>app/view/admin/page/partials/footer.php</code>. Silakan copy <i>paste</i>-kan isinya dari kode dibawah ini.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">
+            <MacWindowCodeSnippet lang="html">
                   &#x3C;footer class=&#x22;clearfix&#x22;&#x3E;
 &#x9;&#x3C;div class=&#x22;rainbow pull-right&#x22;&#x3E;
 &#x9;&#x9;Made with &#x3C;i class=&#x22;fa fa-heart text-danger&#x22;&#x3E;&#x3C;/i&#x3E; by &#x3C;a href=&#x22;https://cenah.co.id&#x22; target=&#x22;_blank&#x22;&#x3E;cenah.co.id&#x3C;/a&#x3E;. 
@@ -973,9 +695,7 @@
 &#x9;&#x9;Seme Framework version 4 - Admin &#x26;copy; &#x3C;?=date(&#x22;Y&#x22;)?&#x3E;
 &#x9;&#x3C;/div&#x3E;
 &#x3C;/footer&#x3E;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>Membuat sample kontent untuk tema Admin</h3>
             <p>
@@ -983,25 +703,7 @@
               Halaman utama ini nantinya kita akan isi dengan dashboard pada tutorial selanjutnya.
             </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">
+            <MacWindowCodeSnippet lang="html">
 &#x3C;div id=&#x22;page-content&#x22;&#x3E;
 &#x9;&#x3C;!-- Static Layout Header --&#x3E;
 &#x9;&#x3C;div class=&#x22;content-header&#x22;&#x3E;
@@ -1035,34 +737,14 @@
 &#x9;&#x3C;/div&#x3E;
 &#x9;&#x3C;!-- END Dummy Content --&#x3E;
 &#x3C;/div&#x3E;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h5>Implementasi di Controller</h5>
             <p>
               Setelah membuat tema, beserta isinya sekarang saatnya untuk integrasikan semuanya, mulai dari Controller sampai dengan view.
               Untuk melakukannya, buka file <code>app/controller/admin/home.php</code> kemudian <b>ganti</b> (<em>edit</em>) isinya dengan menggunakan kode dibawah ini:
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
 &#x3C;?php
 /**
 * Main Controller Class
@@ -1093,9 +775,7 @@ class Home extends \SENE_Controller
         $this-&#x3E;render();
     }
 }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <div class="message is-info">
               <div class="message-body">
                 <p>

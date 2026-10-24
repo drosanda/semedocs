@@ -32,29 +32,9 @@
             <p>
               Here is the basic usage <code>update_as</code> method from <code>$db</code> property on <NuxtLink to="/4.0/model/#SENE_Model">SENE_Model <i class="fa fa-window-restore"></i></NuxtLink> class.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   $this-&#x3E;db-&#x3E;update_as(string $table_name, array $data_update, [bool $is_debug=0]): bool
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>Parameters</h3>
             <p>
@@ -70,7 +50,7 @@
             <p>
               The <code>$data_update</code> value can contain key value pair in array and automatically <code>escaped</code>.
               The key refer to column name of the table and the value refer to value that will be inserted.
-              This value supported MySQL builtin functions and values, such as:
+              This value supported MySQL built-in functions and values, such as:
               <ul>
                 <li><code>NOW()</code></li>
                 <li><code>NULL</code></li>
@@ -90,25 +70,7 @@
               On this example, we want to update value a column named <code>revision_count</code> with it is own increment.
               Here is the examples usage <code>update_as</code> in a model class.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   class Blog_Model extends SENE_Model{
                     public $table = &#x27;blog&#x27;;
@@ -122,31 +84,11 @@
                       $this-&#x3E;db-&#x3E;update_as($ths-&#x3E;table,$du);
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>Controller class example</h3>
             <p>And then this is controller class example using the model class example</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   class Blog extends SENE_Controller{
                     public function __construct(){
                       parent::__construct();
@@ -164,33 +106,13 @@
                       }
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>Generated SQL</h3>
             <p>
               Here is the generated SQL command from method <code>update_as</code>.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="sql">
+            <MacWindowCodeSnippet lang="sql">
                   UPDATE
                     `d_order`
                   SET
@@ -198,9 +120,7 @@
                     revision_count = `revision_count`+1
                   WHERE
                     `id` = 1;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
 
           </div>

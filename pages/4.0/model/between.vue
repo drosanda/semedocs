@@ -23,50 +23,29 @@
               Here is the basic usage of <code>between</code> method is from <code>SENE_Model</code> class.
             </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
-                  $this->db->between(string $column_name, string $value_from, string $value_to): $this->db
-                </highlight-code>
-              </div>
-            </div>
+            <MacWindowCodeSnippet lang="php">
+                  $this-&#x3E;db-&#x3E;between(string $column_name, string $value_from, string $value_to): $this-&#x3E;db
+                </MacWindowCodeSnippet>
 
             <h3>Parameters</h3>
             <p>
-              Where method has 2 required parameters that is <b>column name</b> and <b>value</b>, another parameters are optional.
-              Here is the completed parameters can be used by where methods.
+              The <code>between</code> method has 3 required parameters: <b>$column_name</b>, <b>$value_from</b>, and <b>$value_to</b>.
             </p>
 
             <h4>$column_name</h4>
             <p>
-              The <code>$column_name</code> value is required for filtering data from table.
+              The <code>$column_name</code> is the name of the column used to filter data from the table.
               This parameter value is automatically escaped.
             </p>
 
-            <h3>$value_from</h3>
+            <h4>$value_from</h4>
             <p>
-              The <code>$value_from</code> can contain about start value for filtering data by between method.
+              The <code>$value_from</code> is the start value of the range to be matched against <code>$column_name</code>.
             </p>
 
-            <h3>$value_to</h3>
+            <h4>$value_to</h4>
             <p>
-              The <code>$value_to</code> can contain about end value for filtering data by between method.
+              The <code>$value_to</code> is the end value of the range to be matched against <code>$column_name</code>.
             </p>
 
             <h2>Example</h2>
@@ -74,25 +53,7 @@
               Here is the basic example that used in a model class.
             </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   class Blog_Model extends \SENE_Model{
                     public $table = 'd_order';
@@ -137,9 +98,7 @@
                       return $this-&#x3E;db-&#x3E;get();
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
 
 

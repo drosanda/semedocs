@@ -28,7 +28,7 @@
             <hr>
             <div class="columns">
               <div class="column"><i>Deployable</i>. Single file configuration for development, staging and production. So you can deploy apps into server git support.</div>
-              <div class="column"><i>Libraries</i>. Dont worry with libraries, as long as you can use Composer. You can put any composer project into kero/lib directory.</div>
+              <div class="column"><i>Libraries</i>. Do not worry with libraries, as long as you can use Composer. You can put any composer project into kero/lib directory.</div>
               <div class="column"><i>Admin Friendly</i>. Seme Framework has specaial re-routing feature for admin page, without refactoring the MVC. And re-routing for any purpose.</div>
               <div class="column"><i>Optimized</i>. With combination of XDebug and qcachegrind Seme Framework has optimized little by little.</div>
             </div>

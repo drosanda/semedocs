@@ -62,25 +62,7 @@
 
             <p>Lets created new file named <code>a_apikey_model.php</code> for <b>table a_apikey</b> under <code>app/model/</code>, and then put this codes to your file.</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">&#x3C;?php
+            <MacWindowCodeSnippet lang="php">&#x3C;?php
 class A_ApiKey_Model extends SENE_Model
 {
     public $table = &#x27;a_apikey&#x27;;
@@ -115,33 +97,13 @@ class A_ApiKey_Model extends SENE_Model
         return $this-&#x3E;db-&#x3E;get_first();
     }
 }
-</highlight-code>
-</div>
-</div>
+</MacWindowCodeSnippet>
 
             <h3>Edit Controller</h3>
             <p>From the first tutorial, we have created a controller located at <code>app/controller/home.php</code>. For achieving this tutorial, we have to modified the codes.</p>
             <p>First, we have to load new file that we created before <code>a_apikey_model</code>. After that, we have to get the data and put into a variable named <code>$data[&#x27;aakm&#x27;]</code>.</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
 &#x3C;?php
 class Home extends SENE_Controller
 {
@@ -168,33 +130,13 @@ class Home extends SENE_Controller
     $this-&#x3E;render();
   }
 }
-</highlight-code>
-</div>
-</div>
+</MacWindowCodeSnippet>
 
             <h3>Edit View</h3>
             <p>From the first tutorial, we have created view located at <code>app/view/front/home/home.php</code>. For achieving this tutorial, we have to modified the codes for viewing the data properly.</p>
             <p>First, we have to iterating the array of <code>$aakm</code> and put result on card type html.</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">
+            <MacWindowCodeSnippet lang="html">
 &#x3C;div class=&#x22;container&#x22;&#x3E;
   &#x3C;div class=&#x22;row&#x22;&#x3E;
     &#x3C;?php foreach($aakm as $aak) { ?&#x3E;
@@ -215,9 +157,7 @@ class Home extends SENE_Controller
   &#x3C;/div&#x3E;
 &#x3C;/div&#x3E;
 
-</highlight-code>
-</div>
-</div>
+</MacWindowCodeSnippet>
 
             <h2>Result</h2>
             <p>If you open the <code>http://localhost/seme_framework</code> and view same as screenshot before, so you are achieved this tutorial successfully.</p>

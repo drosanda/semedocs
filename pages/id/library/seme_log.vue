@@ -23,25 +23,7 @@
             <h2>Penggunaan Dasar</h2>
              <p>Seme Log hanya memiliki satu metode yang disebut <b>write</b> untuk menulis log ke dalam file log. Ini contohnya:</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   Class Product extends SEME_Controller{
                     public function __construct(){
@@ -50,35 +32,13 @@
                     public function index(){
                       $this-&#x3E;seme_log-&#x3E;write("Produk::index called");
                     }
-                  }</highlight-code>
-                </div>
-              </div>
+                  }</MacWindowCodeSnippet>
               <p>Dan inilah hasilnya jika kita membuka file <code>seme.log</code></p>
 
-              <div class="macwindow">
-                <div class="titlebar">
-                  <div class="buttons">
-                    <div class="close">
-                      <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                      <!-- close button link -->
-                    </div>
-                    <div class="minimize">
-                      <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                      <!-- minimize button link -->
-                    </div>
-                    <div class="zoom">
-                      <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                      <!-- zoom button link -->
-                    </div>
-                  </div>
-                </div>
-                <div class="maccontent">
-                  <highlight-code lang="php">
+              <MacWindowCodeSnippet lang="php">
                     2019-08-06 10:22:22 - Produk::index called
                     2019-08-06 10:22:25 - Produk::index called
-                  </highlight-code>
-                </div>
-              </div>
+                  </MacWindowCodeSnippet>
               <h3>Hasil Lanjutan</h3>
               <p>Jika Anda menggunakan Sistem Operasi *nix, Anda dapat menjalankan perintah <code>tail -f seme.log</code> untuk menampilkan log yang berjalan.</p>
 

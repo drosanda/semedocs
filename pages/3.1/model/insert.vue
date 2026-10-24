@@ -22,29 +22,9 @@
             <p>
               Here is the basic usage <code>insert</code> method from <code>$db</code> property on <code>SENE_Model</code> class.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   $this-&#x3E;db-&#x3E;insert(string $table_name, array $data_insert [, bool $mass_insert=0 [, bool $is_debug=0] ] ): bool
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>Parameters</h3>
             <p>Insert method has 2 required parameters that is <b>$table_name</b> and <b>$data_insert</b> in key value format.</p>
@@ -58,7 +38,7 @@
             <p>
               The <code>$data_insert</code> value can contain key value pair in array.
               The key refer to column name of the table and the value refer to value that will be inserted.
-              This value supported MySQL builtin functions and values, such as:
+              This value supported MySQL built-in functions and values, such as:
               <ul>
                 <li><code>NOW()</code></li>
                 <li><code>NULL</code></li>
@@ -90,25 +70,7 @@
             <p>
               Here is the source code example for <code>Blog_Model</code> class.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   class Blog_Model extends SENE_Model{
                     var $tbl = &#x27;blog&#x27;;
@@ -120,33 +82,13 @@
                       $this-&#x3E;db-&#x3E;insert($ths-&#x3E;tbl,$di);
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>The Controller Class Example</h3>
             <p>
               Here is the source code for controller class example using <code>insert</code> method.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;?php
                   class Blog extends SENE_Controller{
                     public function __construct(){
@@ -167,40 +109,18 @@
                       }
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>SQL Result</h3>
             <p>
               The following is the SQL command that generated from <code>Blog</code> controller while executing <code>insert</code> method.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="sql">
+            <MacWindowCodeSnippet lang="sql">
                   INSERT INTO blog (id,title,content,date_publish)
                   VALUES
                   (1,&#x22;Seme Blog!&#x22;,&#x22;Hello, welcome to Seme Blog&#x22;,NULL)
                   ;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
           </div>
         </div>

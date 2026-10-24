@@ -24,25 +24,7 @@
             <p>
               Pengaturan nilai <code>$saltkey</code> ini ada didalam setiap file pengaturan. Lihat potongan contoh kode pengaturan dibawah ini
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   .
                   .
                   .
@@ -54,9 +36,7 @@
                   .
                   .
                   .
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>Kunci sesi ini akan ditambahkan ke <code>$_SESSION</code> secara otomatis. Pelajari tentang <code>$_SESSION</code> di <a href="https://www.php.net/manual/en/reserved.variables.session" target="_blank">situs PHP dalam bahasa inggris <i class="fa fa-external-link"></i></a>.</p>
             <p>Untuk informasi lebih lanjut bagaimana menggunakan sesi menggunakan Seme Framework, silakan baca <NuxtLink to="/id/controller/session/">cara menggunakan Session di Controller</NuxtLink>.</p>
 

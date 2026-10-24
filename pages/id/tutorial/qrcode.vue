@@ -25,25 +25,7 @@
               <code>app/controller/admin/perusahaan/masterdata.php</code>. Kemudian, tuliskan kode ini didalam file <code>masterdata.php</code> dan simpan.
               Pastikan Anda menyimpan kode di dalam file yang sesuai dengan kebutuhan Anda, tidak perlu sama dengan contoh yang diberikan.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                 <?php
                 /**
                 * Main Controller Class for Perusahaan Master Data
@@ -86,9 +68,7 @@
                         $this->render();
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2>Membuat Controller API</h2>
             <p>
@@ -96,25 +76,7 @@
               <code>app/controller/api_admin/perusahaan/masterdata.php</code>. Kemudian, tuliskan kode ini didalam file <code>masterdata.php</code> dan simpan.
               Pastikan Anda menyimpan kode di dalam file yang sesuai dengan kebutuhan Anda, tidak perlu sama dengan contoh yang diberikan.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                 <?php
                 /**
                 * Main Controller Class for Perusahaan Master Data
@@ -206,9 +168,7 @@
                         $this->__json_out2($data);
                     }
                 }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2>Menambahkan Kode pada JI_Controller</h2>
             <p>
@@ -216,25 +176,7 @@
               untuk mengirimkan data dalam format JSON sebagai respons dari API, maka Kita harus memasukkan kode tersebut ke dalam <code>ji_controller</code>. Simpan kode di bawah ini
               ke dalam <code>app/core/ji_controller.php</code>
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                 public function __json_out2($dt)
                 {
                     $this->lib('sene_json_engine', 'sene_json');
@@ -245,36 +187,14 @@
                     $this->sene_json->out($data);
                     die();
                 }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p>
               Tambahkan kode ini juga dibawah kode <code>class JI_Controller extends \SENE_Controller</code>.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                 public $company_img = 'media/company/';
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2>Membuat Model</h2>
             <p>
@@ -282,25 +202,7 @@
               satu untuk admin dan satu untuk API. Pertama, buat file di <code>app/model/admin/a_company_model.php</code>.
               Perlu diingat kembali, untuk penamaan file dan lokasi penyimpanan kode harus disesuaikan dengan kebutuhan sendiri.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   <?php
                   namespace Model\Admin;
 
@@ -321,31 +223,11 @@
                           parent::__construct();
                       }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>
               Selanjutnya, buat file di dalam <code>app/model/api_admin/a_company_model.php</code>.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   <?php
                   namespace Model\Admin\API;
 
@@ -413,9 +295,7 @@
                           return $this->db->get_first();
                       }
                     }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2>Membuat View</h2>
             <p>
@@ -423,25 +303,7 @@
               dan <code>home_bottom.php</code>. Pertama, buatlah file di dalam <code>app/view/admin/perusahaan/masterdata/home.php</code>. 
               Selalu pastikan Anda menyimpan kode di dalam file yang sesuai dengan kebutuhan Anda, tidak perlu sama dengan contoh yang diberikan.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &lt;div id="page-content"&gt;
                     &lt;!-- Static Layout Header --&gt;
                     &lt;div class="content-header"&gt;
@@ -512,32 +374,12 @@
                     &lt;/div&gt;
                     &lt;!-- END Content --&gt;
                   &lt;/div&gt;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p>
               Lalu yang kedua, buat file di dalam <code>app/view/admin/perusahaan/masterdata/home_modal.php</code>.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &lt;!-- modal option --&gt;
                   &lt;div id="modal_option" class="modal fade " tabindex="-1" role="dialog" aria-hidden="true"&gt;
                     &lt;div class="modal-dialog modal-sm"&gt;
@@ -591,32 +433,12 @@
                       &lt;/div&gt;
                     &lt;/div&gt;
                   &lt;/div&gt;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p>
               Ketiga, buat file di dalam <code>app/view/admin/perusahaan/masterdata/home_bottom.php</code>.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   var drTable = {};
                   var ieid = '';
                   App.datatables();
@@ -691,34 +513,14 @@
                         NProgress.done();
                       });
                     });
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p>
               Terakhir, buatlah file di dalam folder <code>kero/lib/seme_qrcode.php</code> dan download composer untuk memasukkan serta
               menampilkan qrcode. Download bisa melalui link berikut <a href="https://getcomposer.org/download/">composer <i class="fa fa-external-link"></i></a>. Dan jangan lupa untuk membuat
               folder <code>media/company</code> seperti yang diarahkan pada kode <code>public $media = 'media/company/';</code> di bawah ini.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                 <?php
                 Class Seme_QRCode {
                   public $root = '';
@@ -745,9 +547,7 @@
                     return $this->media.$filename.".png";
                   }
                 }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p> 
               Hasil dari langkah-langkah di atas akan ditampilkan seperti pada  <i>screenshot</i> di bawah ini.

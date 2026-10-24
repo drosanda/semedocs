@@ -44,30 +44,10 @@
               Asumsikan XAMPP terinstall didalam drive <code>D:</code>.
               Maka, untuk tujuan <code>extract</code> file zipnya adalah:
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   # Contoh di windows
                   D:\xampp\htdocs\seme_framework
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>
               Apabila belum ada folder <code>seme_framework</code>, buatlah terlebih dahulu. Setelah itu barulahekstrak file zip hasil download tadi kedalamnya.
             </p>
@@ -77,30 +57,10 @@
               Sesuai dari halaman persyaratan, dalam contoh kali ini kita akan menggunakan XAMPP.
               Asumsikan XAMPP sudah terinstall, untuk tujuan <code>extract</code> file zipnya adalah:
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   # Contoh di Mac
                   /Applications/XAMPP/htdocs/seme_framework
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>
               Apabila belum ada direktori <code>seme_framework</code>, buatlah terlebih dahulu, setelah itu barulah ekstrak file zip hasil download tadi kedalamnya.
             </p>
@@ -110,30 +70,10 @@
               Sesuai dari halaman persyaratan, dalam contoh kali ini kita akan menggunakan XAMPP.
               Asumsikan XAMPP sudah terinstall, untuk tujuan <code>extract</code> file zipnya adalah:
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   # Contoh di Linux
                   /opt/lampp/htdocs/seme_framework
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>
               Apabila belum ada direktori <code>seme_framework</code>, buatlah terlebih dahulu, setelah itu barulah ekstrak file zip hasil download tadi kedalamnya.
             </p>
@@ -154,25 +94,7 @@
               Pertama-tama buka <code>CMD</code> atau <code>CMDER</code> atau aplikasi teminal lain seperti <code>PowerShell</code>.
               Setelah itu ketikan perintah berikut ini:
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   # pindah ke direktori D
                   D:
 
@@ -188,34 +110,14 @@
 
                   # download dari github melalui git
                   git clone git@github.com:drosanda/seme-framework.git seme_framework
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h5 id="2_2">2.2. untuk Mac</h5>
             <p>
               Sesuai dari halaman persyaratan, pastikan <b>XAMPP</b> dan <b>git</b> sudah terinstall di Mac.
               Pertama-tama buka <code>terminal</code>, kemudian setelah itu ketikan perintah berikut ini:
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   # pindah ke folder XAMPP/htdocs
                   cd /Applications/XAMPP/htdocs
 
@@ -228,34 +130,14 @@
 
                   # download dari github melalui git
                   git clone git@github.com:drosanda/seme-framework.git seme_framework
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h5 id="2_3">2.3 untuk Linux</h5>
             <p>
               Sesuai dari halaman persyaratan, pastikan <b>XAMPP</b> dan <b>git</b> sudah terinstall di Linux.
               Pertama-tama buka <code>terminal</code>, kemudian setelah itu ketikan perintah berikut ini:
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   # pindah ke folder htdocs
                   cd /opt/lampp/htdocs
 
@@ -268,9 +150,7 @@
 
                   # download dari github melalui git
                   git clone git@github.com:drosanda/seme-framework.git seme_framework
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2>Percobaan</h2>
             <p>

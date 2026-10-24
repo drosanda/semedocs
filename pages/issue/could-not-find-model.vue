@@ -12,36 +12,16 @@
         <div class="column">
           <div class="content">
             <h1>[1024] could not find model</h1>
-            <p>Could not find model [model_name] it was occured when model file cannot be loaded from controller.</p>
+            <p>Could not find model [model_name] it was occurred when model file cannot be loaded from controller.</p>
 
             <p>Example error message</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
 File: /Applications/XAMPP/xamppfiles/htdocs/seme-framework/kero/sine/SENE_Controller.php
 
 Line: 156
 
 Error: [1024] could not find model hello_model on /Applications/XAMPP/xamppfiles/htdocs/seme-framework/app/model/hello_model.php
-</highlight-code>
-</div>
-</div>
+</MacWindowCodeSnippet>
 
             <h2>Solution</h2>
             <p>Here is some options that can be done for solving this error.</p>

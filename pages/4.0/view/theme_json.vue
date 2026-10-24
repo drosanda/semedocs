@@ -22,34 +22,14 @@
             <p>
               The location of this file is inside a theme directory.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   app/
                   └── view/
                    └── [THEME_NAME]/
                     ├──  ...
                     ├──  theme.json
                     └──  ...
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2 class="">How It Works</h2>
             <p>
@@ -60,33 +40,13 @@
             <p>
               Here is the example codes for theme.json file using <b>json string</b>.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="javascript">
+            <MacWindowCodeSnippet lang="javascript">
                   [
                   &#x22;&#x3C;link rel=\&#x22;stylesheet\&#x22; href=\&#x22;&#x7B;&#x7B;base_url&#x7D;&#x7D;skin/front/css/nprogress.css\&#x22; /&#x3E;&#x22;,
                   &#x22;&#x3C;link rel=\&#x22;stylesheet\&#x22; href=\&#x22;https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css\&#x22; /&#x3E;&#x22;,
                   &#x22;&#x3C;link rel=\&#x22;stylesheet\&#x22; href=\&#x22;&#x7B;&#x7B;cdn_url&#x7D;&#x7D;assets/css/jquery.gritter.css\&#x22; /&#x3E;&#x22;
                   ]
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h5>Example Usage with JSON Object</h5>
             <p>
@@ -95,25 +55,7 @@
             <p>
               This method only supported from Seme Framework 4.0.2 above.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="javascript">
+            <MacWindowCodeSnippet lang="javascript">
                   {
                     &#x22;link&#x22;:
                     [
@@ -131,9 +73,7 @@
                       }
                     ]
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2>The <code>{{cdn_url}}</code> and <code>{{base_url}}</code> Keyword</h2>
             <p>

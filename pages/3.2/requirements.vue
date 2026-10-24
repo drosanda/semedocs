@@ -16,7 +16,7 @@
           <ul>
 						<li>MySQL (5.1+) via the mysqli drivers</li>
           </ul>
-					<p>Since the framework requires the working connection to a MySQL database, it wont work unless you setup the database connection.</p>
+					<p>Since the framework requires the working connection to a MySQL database, it will not work unless you setup the database connection.</p>
         </div>
       </div>
     </div>

@@ -15,25 +15,7 @@
 
               <h1 class="">Configuration: core.php</h1>
               <p>Core configuration purpose for registering your core component on Seme Framework. Core controller allowed you to extend the default class to your default core. Like SENE_Controller to JI_Controller for example. This configuration applies to core controller and core model.</p>
-              <div class="macwindow">
-                <div class="titlebar">
-                  <div class="buttons">
-                    <div class="close">
-                      <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                      <!-- close button link -->
-                    </div>
-                    <div class="minimize">
-                      <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                      <!-- minimize button link -->
-                    </div>
-                    <div class="zoom">
-                      <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                      <!-- zoom button link -->
-                    </div>
-                  </div>
-                </div>
-                <div class="maccontent">
-                  <highlight-code lang="php">
+              <MacWindowCodeSnippet lang="php">
                     &#x3C;?php
                     //register your core
                     //core folder app/core/
@@ -41,9 +23,7 @@
                     $core_prefix = &#x27;ji_&#x27;;
                     $core_controller = &#x27;controller&#x27;;
                     $core_model = &#x27;&#x27;;
-                  </highlight-code>
-                </div>
-              </div>
+                  </MacWindowCodeSnippet>
 
             </div>
           </div>

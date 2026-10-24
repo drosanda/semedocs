@@ -26,31 +26,13 @@
             <p>After that, start the XAMPP and open <code>http://localhost/seme_framework</code>.</p>
 
             <h3>Controller</h3>
-            <p>On Seme Framework, the default controller named <code>home.php</code> with its class name name <code>Home</code> too.</p>
+            <p>On Seme Framework, the default controller named <code>home.php</code> with its class name <code>Home</code> too.</p>
             <p>
               First, open files located at <code>app/controller/home.php</code>.
-              If the file doesnt exists, create one.
+              If the file does not exist, create one.
             </p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
 &#x3C;?php
 class Home extends SENE_Controller
 {
@@ -63,9 +45,7 @@ class Home extends SENE_Controller
         echo 'Hello World!';
     }
 }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p>And then open <code>http://localhost/seme_framework</code>, it should show Hello World!.</p>
             <amp-img layout="responsive" width="774px" height="262px" :src="hlWorld" alt="hello world result"></amp-img>
@@ -84,25 +64,7 @@ class Home extends SENE_Controller
             <h4>Create Theme: <u>front</u>.</h4>
             <p>Before start, we have to understand the theme directory structure.</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="plaintext">
+            <MacWindowCodeSnippet lang="plaintext">
 -| app/
 ---| view/
 -----| front/
@@ -112,9 +74,7 @@ class Home extends SENE_Controller
 ---------| col-1.php
 -----------| html/
 -------------| head.php
-              </highlight-code>
-              </div>
-            </div>
+              </MacWindowCodeSnippet>
             <p>Check the <code>app/view/front/</code> directory, create directory if does not exists.</p>
             <p>Check the <code>app/view/front/page/</code> directory, create directory if does not exists.</p>
             <p>Check the <code>app/view/front/page/html/</code> directory, create directory if does not exists.</p>
@@ -125,89 +85,31 @@ class Home extends SENE_Controller
             <p>If the file does not exists, create one. And then, put this code on it.</p>
 
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="javascript">
+            <MacWindowCodeSnippet lang="javascript">
 [
   &#x22;&#x3C;link rel=\&#x22;stylesheet\&#x22; href=\&#x22;https://fonts.googleapis.com/icon?family=Material+Icons\&#x22; \/&#x3E;&#x22;,
   &#x22;&#x3C;link rel=\&#x22;stylesheet\&#x22; href=\&#x22;https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css\&#x22; \/&#x3E;&#x22;
 ]
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h5>File script.json</h5>
             <p>File script.json purpose is to define the javascript that are required for creating the Theme.</p>
             <p>We will define the which scripts to load. Open files located at <code>app/view/front/script.json</code>.</p>
             <p>If the file does not exists, create one. And then, put this code on it.</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="javascript">
+            <MacWindowCodeSnippet lang="javascript">
 [
   &#x22;&#x3C;script src=\&#x22;https://code.jquery.com/jquery-3.5.1.min.js\&#x22;&#x3E;&#x3C;\/script&#x3E;&#x22;,
   &#x22;&#x3C;script src=\&#x22;https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js\&#x22;&#x3E;&#x3C;\/script&#x3E;&#x22;
 ]
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h5>Create HTML Main layout</h5>
             <p>Seme Framework support HTML main layout for rendering html, javascript, and content.</p>
             <p>Open files located at <code>app/view/front/page/col-1.php</code>.</p>
             <p>If the file does not exists, create one. And then, put this code on it.</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">
+            <MacWindowCodeSnippet lang="html">
 &#x3C;!DOCTYPE html&#x3E;
 &#x3C;html&#x3E;
   &#x3C;?php $this-&#x3E;getThemeElement(&#x27;page/html/head&#x27;, $__forward) ?&#x3E;
@@ -226,9 +128,7 @@ class Home extends SENE_Controller
   &#x9;&#x3C;/script&#x3E;
   &#x3C;/body&#x3E;
 &#x3C;/html&#x3E;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <div class="message is-info">
               <div class="message-body">
@@ -243,25 +143,7 @@ class Home extends SENE_Controller
             <p>To do so open files located at <code>app/view/front/page/html/head.php</code>.</p>
             <p>If the file does not exists, create one. And then, put this code on it.</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">
+            <MacWindowCodeSnippet lang="html">
                   &#x3C;head&#x3E;
 &#x9;&#x3C;meta charset=&#x22;utf-8&#x22;&#x3E;
 &#x9;&#x3C;meta name=&#x22;viewport&#x22; content=&#x22;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&#x22;&#x3E;
@@ -284,9 +166,7 @@ class Home extends SENE_Controller
 &#x9;&#x3C;?php $this-&#x3E;getAdditional()?&#x3E;
 &#x9;&#x3C;?php $this-&#x3E;getAdditionalAfter()?&#x3E;
 &#x3C;/head&#x3E;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <div class="message is-info">
 <div class="message-body">
@@ -311,25 +191,7 @@ class Home extends SENE_Controller
             <p>If the file does not exists, create one.</p>
             <p>And then, put this code on it.</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="html">
+            <MacWindowCodeSnippet lang="html">
                   &#x3C;div class=&#x22;container&#x22;&#x3E;
   &#x3C;div class=&#x22;row&#x22;&#x3E;
     &#x3C;div class=&#x22;col m12 s12&#x22;&#x3E;
@@ -346,33 +208,13 @@ class Home extends SENE_Controller
     &#x3C;/div&#x3E;
   &#x3C;/div&#x3E;
 &#x3C;/div&#x3E;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h5>Implement on the Controller</h5>
             <p>After creating a theme with its content, now we have to integrating it from controller.</p>
             <p>To do so, open <code>app/controller/home.php</code> and then change the source code with this code:</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
 &#x3C;?php
 class Home extends SENE_Controller
 {
@@ -397,9 +239,7 @@ class Home extends SENE_Controller
     $this-&#x3E;render();
   }
 }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <h5>Test the Result</h5>
             <p>For testing the result, open <code>http://localhost/seme_framework</code> from browser and then lets we see what we got.</p>
             <amp-img layout="responsive" width="2248px" height="618px" :src="intro6a"></amp-img>
@@ -413,25 +253,7 @@ class Home extends SENE_Controller
             <pre><code v-highlight class="javascript">alert(&#x27;This is Hello World from app/view/home/home_bottom.php&#x27;);</code></pre>
             <p>After that, we have to load the home bottom from <code>app/controller/home.php</code>.</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
 &#x3C;?php
 class Home extends SENE_Controller
 {
@@ -457,9 +279,7 @@ class Home extends SENE_Controller
     $this-&#x3E;render();
   }
 }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <p>To test it, open <code>http://localhost/seme_framework</code> using browser.</p>
             <p>It should show an alert, view with loaded CSS, and show H1 with content Hello World from view and using theme.</p>

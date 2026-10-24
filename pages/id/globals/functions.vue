@@ -21,57 +21,17 @@
             <p>
               Fungsi global <code>base_url()</code> digunakan untuk mengeluarkan nilai URL dasar yang telah di setel pada <NuxtLink to="/id/configuration/url">pengaturan URL Seme Framework <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   base_url(string $url_component=&#x27;&#x27;): string
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             
             <h2>Fungsi Base URL Admin</h2>
             <p>
               Fungsi global <code>base_url_admin()</code> digunakan untuk mengeluarkan nilai URL dasar yang telah di setel pada <NuxtLink to="/id/configuration/url">pengaturan URL Seme Framework <i class="fa fa-window-restore"></i></NuxtLink>.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   base_url_admin(string $url_component=&#x27;&#x27;): string
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
 
             <h2 id="fungsi_dd">Fungsi dd(mixed $data)</h2>
@@ -79,29 +39,9 @@
               Fungsi global sama seperti <code>debug()</code> yang akan meng-<code>echo</code>-kan nilai dari suatu variabel yang dilewatkan kedalam fungsi ini sehingga mudah dibaca oleh developer.
               Fungsi global ini hanya tersedia untuk Seme Framework versi 4.x.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   dd(mixed $data): void
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2 id="fungsi_redir" class="">Metode <code>{{redir}}</code> (Redirect)</h2>
               <p>
@@ -118,34 +58,14 @@
               <p>
                 Berikut ini adalah contoh penggunaan dari metode <code>redir</code>:
               </p>
-              <div class="macwindow">
-                <div class="titlebar">
-                  <div class="buttons">
-                    <div class="close">
-                      <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                      <!-- close button link -->
-                    </div>
-                    <div class="minimize">
-                      <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                      <!-- minimize button link -->
-                    </div>
-                    <div class="zoom">
-                      <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                      <!-- zoom button link -->
-                    </div>
-                  </div>
-                </div>
-                <div class="maccontent">
-                  <highlight-code lang="php">
+              <MacWindowCodeSnippet lang="php">
                     ...
                     redir(base_url('login'));
                     ...
                     ...
                     redir(base_url('login'), 5, 1);
                     ...
-                  </highlight-code>
-                </div>
-              </div>
+                  </MacWindowCodeSnippet>
           </div>
         </div>
 

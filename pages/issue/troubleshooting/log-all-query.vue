@@ -19,25 +19,7 @@
             <h2>Create the log writer Class</h2>
             <p>First thing first we have to create a class that can write log into a file. Lets say we created the Seme_Log2 class on <code>kero/lib/seme_log2.php</code>, and the here is the source code.</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">&lt;?php
+            <MacWindowCodeSnippet lang="php">&lt;?php
 class Seme_Log2 {
   var $directory = &#039;&#039;;
   var $filename = &#039;seme.log&#039;;
@@ -76,127 +58,45 @@ class Seme_Log2 {
   }
 }
 
-</highlight-code>
-</div>
-</div>
+</MacWindowCodeSnippet>
 
             <h2>Override the Class Model</h2>
             <p>Open <code>kero/sine/SENE_MySQLi_Engine.php</code> and then add the following codes.</p>
 
             <h3>After <code>exec</code> method</h3>
             <p>Find method exec on <code>kero/sine/SENE_MySQLi_Engine.php</code>, and then add this code.</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
 public function exec($sql){
 .
 .
 .
-</highlight-code>
-</div>
-</div>
+</MacWindowCodeSnippet>
 
-<div class="macwindow">
-  <div class="titlebar">
-    <div class="buttons">
-      <div class="close">
-        <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-        <!-- close button link -->
-      </div>
-      <div class="minimize">
-        <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-        <!-- minimize button link -->
-      </div>
-      <div class="zoom">
-        <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-        <!-- zoom button link -->
-      </div>
-    </div>
-  </div>
-  <div class="maccontent">
-    <highlight-code lang="php">
+<MacWindowCodeSnippet lang="php">
 if(!class_exists(&#039;Seme_Log2&#039;)) require_once(SENEROOT.&#039;kero/lib/seme_log2.php&#039;);
 $sl = new Seme_Log2();
 $sl-&gt;changeFilename(&#039;sql.log&#039;);
 $sl-&gt;write(&#039;SENE_MySQLi::exec -- &#039;.$sql);
 
-</highlight-code>
-</div>
-</div>
+</MacWindowCodeSnippet>
 
             <h3>After <code>query</code> method</h3>
             <p>Find method exec on <code>kero/sine/SENE_MySQLi_Engine.php</code>, and then add this code.</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
 .
 .
 .
 public function query($sql,$cache_enabled=0,$flushcache=0,$type=&quot;object&quot;){
 
-  </highlight-code>
-  </div>
-  </div>
+  </MacWindowCodeSnippet>
 
-  <div class="macwindow">
-    <div class="titlebar">
-      <div class="buttons">
-        <div class="close">
-          <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-          <!-- close button link -->
-        </div>
-        <div class="minimize">
-          <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-          <!-- minimize button link -->
-        </div>
-        <div class="zoom">
-          <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-          <!-- zoom button link -->
-        </div>
-      </div>
-    </div>
-    <div class="maccontent">
-      <highlight-code lang="php">
+  <MacWindowCodeSnippet lang="php">
 if(!class_exists(&#039;Seme_Log2&#039;)) require_once(SENEROOT.&#039;kero/lib/seme_log2.php&#039;);
 $sl = new Seme_Log2();
 $sl-&gt;changeFilename(&#039;sql.log&#039;);
 $sl-&gt;write(&#039;SENE_MySQLi::exec -- &#039;.$sql);
 
-</highlight-code>
-</div>
-</div>
+</MacWindowCodeSnippet>
 
             <h2>Conclusion</h2>
             <p>After modified the core library, we can view the query log through <code>sql.log</code>.</p>

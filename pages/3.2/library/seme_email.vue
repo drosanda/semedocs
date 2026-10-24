@@ -17,51 +17,13 @@
             <hr>
             <h2>How to use</h2>
             <p>First we have to loaded library by using library loaded:</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   $this-&#x3E;lib(&#x27;seme_email&#x27;);
-                </highlight-code>
-              </div>
-            </div>
-            <p>You can put libary loader in constructor of controller or on each method in your controller.</p>
+                </MacWindowCodeSnippet>
+            <p>You can put library loader in constructor of controller or on each method in your controller.</p>
             <h2>Basic Usage</h2>
             <p>Seme Email has some method, here is the list of common methods:</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   Class Product extends SEME_Controller{
                     public function __construct(){
                       $this-&#x3E;lib(&#x27;seme_log&#x27;);
@@ -81,9 +43,7 @@
                       $this-&#x3E;seme_email-&#x3E;send();
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>Seme Email has several methods that can used for sending email properly.</p>
             <h3>From Method</h3>
             <p>This method mandatory for declare origin of email. Required two parameter, first parameter is email and the second parameter is name of sender.</p>
@@ -94,63 +54,23 @@
             <h3>Template Method</h3>
             <p>This method only required if you one to create html formatted email. Default location about this file is in kero/lib/seme_email/template/. You can replace the string with "replacer" for creating dynamic email. Here is the example:</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   &#x3C;html&#x3E;
                   &#x3C;body&#x3E;
                   &#x3C;p&#x3E;Hi {{first_name}},&#x3C;/p&#x3E;
                   &#x3C;p&#x3E;Thank you for using seme framework&#x3C;/p&#x3E;
                   &#x3C;/body&#x3E;
                   &#x3C;/html&#x3E;
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>On HTML script above, we can see the <b>{{first_name}}</b> code. You can replace this string with real name through the script.</p>
             <h3>Replacer Method</h3>
             <p>This method allow replacing string on email template with coding. Here is the example:</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   $replacer = array();
                   $replacer[&#x27;first_name&#x27;] = &#x27;Agus Setiawan&#x27;;
                   $this-&#x3E;seme_email-&#x3E;replacer($replacer);
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>If this example combined with email template above, you can send email with <b>{{first_name}}</b> replaced by <b>Agus Setiawan</b>.</p>
             <h3>Flush method</h3>
             <p>Use this method for clearing assigned properties used before.</p>

@@ -21,30 +21,12 @@
             <p>
               Here is the example usage for <code>getKey()</code> method and <code>setKey()</code> method.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   class Home extends SENE_Controller{
                     public function __construct(){
                       parent::__construct();
                     }
-                    private funtion __init(){
+                    private function __init(){
                       &#x9;$data = array();
                       &#x9;$sess = $this-&#x3E;getKey();
                       &#x9;if(!isset($sess-&#x3E;user_login)) $sess-&#x3E;user_login = 0;
@@ -73,9 +55,7 @@
                       &#x9;$this-&#x3E;setKey($sess);
                     }
                   }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <div class="nav-bottom">
               <div class="nav-bottom-left">

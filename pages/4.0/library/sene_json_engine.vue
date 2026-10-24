@@ -21,25 +21,7 @@
             <p>
               The following is a synopsis for the <code>SENE_JSON_Engine</code> library.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
 class SENE_JSON_Engine
 {
   private function safe_json_encode($value){ .. }
@@ -48,9 +30,7 @@ class SENE_JSON_Engine
   private function log($str){ .. }
   public function out($data, $allowed="*"){ .. }
 }
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2>External References</h2>
             <p>

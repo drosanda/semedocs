@@ -10,10 +10,7 @@ Last Updated: 2024-11-26
 ## Model
 ### Query Builder
 #### select()
-The select method purpose is to select columns from a table. This method is part of SENE_Model class and can be combined with other Query Builder methods to build complex queries.
-
-##### Syntax
-Filters data from query result by executing SELECT SQL command. This method is part of the Query Builder pattern and can be combined with other Query Builder methods.
+The select method is used to select columns from a table. This method is part of SENE_Model class and can be combined with other Query Builder methods to build complex queries.
 
 ##### Syntax
 ```php
@@ -45,7 +42,7 @@ class D_Blog_Model extends \SENE_Model {
 ```
 Generated SQL:
 ```sql
-SELECT * FROM `d_blog`;
+SELECT * FROM `d_blog` AS `b`;
 ```
 
 ###### Example 2: Select Specific Columns
@@ -61,10 +58,10 @@ public function getById($id) {
 ```
 Generated SQL:
 ```sql
-SELECT `id`, `title`, `content` FROM `d_order` WHERE `id` = 53;
+SELECT `id`, `title`, `content` FROM `d_blog` AS `b` WHERE `id` = 53;
 ```
 
-### Notes
+##### Notes
 - Can be called multiple times to select different columns
 - Must be used with `from()` method to specify the table
 - Commonly used with other query builder methods like `where()`, `limit()`, etc.

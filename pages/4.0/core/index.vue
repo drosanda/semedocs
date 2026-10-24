@@ -35,25 +35,7 @@
         <p>
           Lets say, the prefix of core class is <code>ji_</code> and then the core controller class is <code>controller</code> and the model class is <code>model</code>.
         </p>
-        <div class="macwindow">
-          <div class="titlebar">
-            <div class="buttons">
-              <div class="close">
-                <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                <!-- close button link -->
-              </div>
-              <div class="minimize">
-                <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                <!-- minimize button link -->
-              </div>
-              <div class="zoom">
-                <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                <!-- zoom button link -->
-              </div>
-            </div>
-          </div>
-          <div class="maccontent">
-            <highlight-code lang="php">
+        <MacWindowCodeSnippet lang="php">
               ...
 
               /********************************/
@@ -68,34 +50,14 @@
               $core_model = &#x27;model&#x27;;
 
               ...
-            </highlight-code>
-          </div>
-        </div>
+            </MacWindowCodeSnippet>
 
         <h3>The <code>JI_Controller.php</code> file</h3>
         <p>
           On this example, we will add <code>__json_out</code> method to <code>JI_Controller</code> class.
           Do not forget to add <code>__construct</code> method and <code>index</code> method, because they are required from <NuxtLink to="/4.0/controller/#SENE_Controller">SENE_Controller <i class="fa fa-window-restore"></i></NuxtLink> abstract class.
         </p>
-        <div class="macwindow">
-          <div class="titlebar">
-            <div class="buttons">
-              <div class="close">
-                <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                <!-- close button link -->
-              </div>
-              <div class="minimize">
-                <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                <!-- minimize button link -->
-              </div>
-              <div class="zoom">
-                <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                <!-- zoom button link -->
-              </div>
-            </div>
-          </div>
-          <div class="maccontent">
-            <highlight-code lang="php">
+        <MacWindowCodeSnippet lang="php">
               &#x3C;?php
               /**
                * Main controller: contains about methods and protperties that automtically included after extending in a class
@@ -130,33 +92,13 @@
                 //required function from abstract class
                 public function index(){ }
               }
-            </highlight-code>
-          </div>
-        </div>
+            </MacWindowCodeSnippet>
 
         <h3>The <code>JI_Model.php</code> file</h3>
         <p>
           And then the source codes of <code>JI_Model.php</code> file.
         </p>
-        <div class="macwindow">
-          <div class="titlebar">
-            <div class="buttons">
-              <div class="close">
-                <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                <!-- close button link -->
-              </div>
-              <div class="minimize">
-                <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                <!-- minimize button link -->
-              </div>
-              <div class="zoom">
-                <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                <!-- zoom button link -->
-              </div>
-            </div>
-          </div>
-          <div class="maccontent">
-            <highlight-code lang="php">
+        <MacWindowCodeSnippet lang="php">
               &#x3C;?php
               class JI_Model extends SENE_Model
               {
@@ -185,9 +127,7 @@
                       return &#x27;AES_DECRYPT(&#x27;.$key.&#x27;,&#x22;&#x27;.$this-&#x3E;db-&#x3E;enckey.&#x27;&#x22;)&#x27;;
                   }
               }
-            </highlight-code>
-          </div>
-        </div>
+            </MacWindowCodeSnippet>
 
       </div>
     </div>

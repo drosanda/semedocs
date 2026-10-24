@@ -17,29 +17,9 @@
             <h2>Basic Usage</h2>
             <p>Please make sure you are in same directory with root framework directory</p>
 
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   php index.php [controller | [directory in controller [controller]]] [method] [param1] [param2]...[paramN]
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2>Example</h2>
             <p>
@@ -48,29 +28,9 @@
 
             <h3>CronJob</h3>
             <p>If you want integrating with cron job executed every 4am and want to executed method fix in class home inside api_cron directory.</p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   0 4 * * * /usr/bin/php /var/www/html/index.php api_cron home fix
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
             <p>You can adjusted the <code>/usr/bin/php</code> depends on your system.</p>
           </div>
         </div>

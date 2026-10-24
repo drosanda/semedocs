@@ -48,25 +48,7 @@
               Or you can skip, if you have already know how to compress the file and directory using 7-zip or other tools.
               Here is the example for compress file and directory using CMD and 7-Zip.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   # on this example
                   #  the Seme Framework located at
                   #    D:\XAMPP\htdocs\seme_framework
@@ -84,33 +66,13 @@
 
                   # this command will produce zip file at
                   #   D:\XAMPP\htdocs\seme_framework\v4.zip
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h3>Compress File on Mac</h3>
             <p>
               Here is the example for compress file and directory using terminal.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   # on this example
                   #  the Seme Framework located at
                   #    /Applications/XAMPP/htdocs/seme_framework
@@ -120,37 +82,17 @@
 
                   # now compressing the Seme Framework files and directories
                   zip -r9 --exclude="*.git" --exclude="v4.zip" --exclude="*node_modules*" v4.zip .
-                  # at the end of command contain dot (.) dont missed it
+                  # at the end of command contain dot (.) do not missed it
                   #   will produce zip file on
                   #     /Applications/XAMPP/htdocs/seme_framework/v4.zip
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
 
             <h3>Compress File on Linux</h3>
             <p>
               Here is the example for compress file and directory using terminal.
             </p>
-            <div class="macwindow">
-              <div class="titlebar">
-                <div class="buttons">
-                  <div class="close">
-                    <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-                    <!-- close button link -->
-                  </div>
-                  <div class="minimize">
-                    <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-                    <!-- minimize button link -->
-                  </div>
-                  <div class="zoom">
-                    <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-                    <!-- zoom button link -->
-                  </div>
-                </div>
-              </div>
-              <div class="maccontent">
-                <highlight-code lang="php">
+            <MacWindowCodeSnippet lang="php">
                   # on this example
                   #  the Seme Framework located at
                   #    /opt/lampp/htdocs/seme_framework
@@ -160,12 +102,10 @@
 
                   # now compressing the Seme Framework files and directories
                   zip -r9 --exclude="*.git" --exclude="v4.zip" --exclude="*node_modules*" v4.zip .
-                  # at the end of command contain dot (.) dont missed it
+                  # at the end of command contain dot (.) do not missed it
                   #   will produce zip file on
                   #     /opt/lampp/htdocs/seme_framework/v4.zip
-                </highlight-code>
-              </div>
-            </div>
+                </MacWindowCodeSnippet>
 
             <h2 id="upload">Uploading to Cpanel</h2>
             <p>
